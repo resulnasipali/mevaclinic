@@ -107,44 +107,108 @@ const BlogPost = () => {
               {/* Textual Content */}
               <div className="lg:w-3/4 order-1 lg:order-2">
                  <div className="prose prose-lg prose-slate max-w-none font-sans leading-relaxed text-gray-600">
-                    <p className="text-xl font-medium text-prime mb-8 leading-relaxed italic">
-                       {currentExcerpt}
-                    </p>
-                    
-                    <h2 className="text-3xl font-serif font-bold text-prime mt-12 mb-6">{isEn ? "Executive Clinical Summary" : "Sumar Clinic Executiv"}</h2>
-                    <p>
-                       {isEn 
-                         ? "This technical briefing explores the architectural advancements in current surgical protocols. By prioritizing tissue biological integration and utilizing high-definition intraoperative guidance systems, we achieve outcomes that were previously considered beyond the reach of standard medicine."
-                         : "Acest briefing tehnic explorează progresele arhitecturale în protocoalele chirurgicale actuale. Prin prioritizarea integrării biologice a țesuturilor și utilizarea sistemelor de ghidaj intraoperator de înaltă definiție, obținem rezultate care anterior erau considerate dincolo de medicina standard."}
-                    </p>
+                   <p className="text-xl font-medium text-prime mb-8 leading-relaxed italic">
+                     {currentExcerpt}
+                   </p>
 
-                    <div className="my-12 p-10 bg-[#0b1626] rounded-[2.5rem] text-white border border-white/5 relative overflow-hidden">
-                       <div className="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
-                       <BookOpen size={32} className="text-accent mb-6" />
-                       <h4 className="text-xl font-serif font-bold mb-4">{isEn ? "Clinical Technical Note" : "Notă Tehnică Clinică"}</h4>
-                       <p className="text-gray-400 text-sm leading-relaxed mb-0">
-                          {isEn 
-                            ? "Data derived from our internal 2025 performance audit indicates a 15% reduction in inflammatory response when following the S7 protocol combined with advanced exosome priming."
-                            : "Datele derivate din auditul nostru intern de performanță 2025 indică o reducere de 15% a răspunsului inflamator atunci când se urmează protocolul S7 combinat cu amorsarea avansată cu exozomi."}
-                       </p>
-                    </div>
+                   {/* IVF rich content */}
+                   {post.content ? (() => {
+                     const c = post.content[isEn ? 'en' : 'ro'];
+                     const cEn = post.content['en'];
+                     return (
+                       <>
+                         <p className="mb-8 text-gray-700 leading-relaxed">{c?.intro || cEn?.intro}</p>
 
-                    <h2 className="text-3xl font-serif font-bold text-prime mt-12 mb-6">{isEn ? "Conclusion and Next Steps" : "Concluzie și Pași Următori"}</h2>
-                    <p>
-                       {isEn 
-                         ? "The convergence of robotics and biology marks a new era for international patients traveling to Istanbul for complex procedures."
-                         : "Convergența roboticii și a biologiei marchează o nouă eră pentru pacienții internaționali care călătoresc la Istanbul pentru proceduri complexe."}
-                    </p>
+                         {/* Mid-article CTA */}
+                         <div className="my-10 p-8 bg-accent/10 border border-accent/20 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6">
+                           <div>
+                             <p className="font-bold text-prime text-lg">{isEn ? 'Ready to start your IVF journey?' : 'Gata să începeți parcursul FIV?'}</p>
+                             <p className="text-gray-500 text-sm mt-1">{isEn ? 'Free consultation · 24h response · Romanian coordinator' : 'Consultație gratuită · Răspuns în 24h · Coordonator român'}</p>
+                           </div>
+                           <Link to={isEn ? '/en/contact' : '/ro/contact'} className="bg-accent text-prime font-bold py-3 px-8 rounded-2xl shadow-lg hover:bg-prime hover:text-white transition-all whitespace-nowrap text-sm">
+                             {isEn ? 'Get Free Evaluation' : 'Obțineți Evaluare Gratuită'}
+                           </Link>
+                         </div>
+
+                         {/* Sections */}
+                         {cEn?.sections?.map((sec, i) => (
+                           <div key={i} className="mb-10">
+                             <h2 className="text-2xl font-serif font-bold text-prime mt-10 mb-5">{sec.heading}</h2>
+                             {sec.isTable && sec.tableData ? (
+                               <div className="overflow-x-auto rounded-2xl border border-gray-100 shadow-sm">
+                                 <table className="w-full text-sm">
+                                   <thead className="bg-[#0b1626] text-white">
+                                     <tr>{sec.tableData.headers.map((h, j) => <th key={j} className="px-5 py-4 text-left text-xs font-bold uppercase tracking-widest">{h}</th>)}</tr>
+                                   </thead>
+                                   <tbody>
+                                     {sec.tableData.rows.map((row, j) => (
+                                       <tr key={j} className={j % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                                         {row.map((cell, k) => <td key={k} className="px-5 py-4 font-medium text-gray-700">{cell}</td>)}
+                                       </tr>
+                                     ))}
+                                   </tbody>
+                                 </table>
+                               </div>
+                             ) : sec.isTimeline && sec.steps ? (
+                               <ol className="space-y-5 mt-4">
+                                 {sec.steps.map((s) => (
+                                   <li key={s.step} className="flex gap-5 items-start p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                                     <span className="w-9 h-9 rounded-full bg-accent text-prime font-black text-sm flex items-center justify-center shrink-0">{s.step}</span>
+                                     <div><p className="font-bold text-prime mb-1">{s.title}</p><p className="text-sm text-gray-600 leading-relaxed">{s.desc}</p></div>
+                                   </li>
+                                 ))}
+                               </ol>
+                             ) : (
+                               <p className="text-gray-700 leading-relaxed">{sec.body}</p>
+                             )}
+                           </div>
+                         ))}
+
+                         {/* FAQ */}
+                         {cEn?.faq?.length > 0 && (
+                           <>
+                             <h2 className="text-2xl font-serif font-bold text-prime mt-14 mb-6">{isEn ? 'Frequently Asked Questions' : 'Întrebări Frecvente'}</h2>
+                             <div className="space-y-3">
+                               {cEn.faq.map((item, i) => (
+                                 <details key={i} className="group border border-gray-100 rounded-2xl overflow-hidden">
+                                   <summary className="flex justify-between items-center px-6 py-5 cursor-pointer font-bold text-prime text-sm list-none">
+                                     {item.q}
+                                     <span className="ml-4 text-accent shrink-0 transition-transform group-open:rotate-45">+</span>
+                                   </summary>
+                                   <div className="px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-50 pt-4">{item.a}</div>
+                                 </details>
+                               ))}
+                             </div>
+                           </>
+                         )}
+                       </>
+                     );
+                   })() : (
+                     // Fallback for non-IVF posts
+                     <>
+                       <h2 className="text-3xl font-serif font-bold text-prime mt-12 mb-6">{isEn ? 'Executive Clinical Summary' : 'Sumar Clinic Executiv'}</h2>
+                       <p>{isEn ? 'This technical briefing explores the architectural advancements in current surgical protocols. By prioritizing tissue biological integration and utilizing high-definition intraoperative guidance systems, we achieve outcomes that were previously considered beyond the reach of standard medicine.' : 'Acest briefing tehnic explorează progresele arhitecturale în protocoalele chirurgicale actuale. Prin prioritizarea integrării biologice a țesuturilor și utilizarea sistemelor de ghidaj intraoperator de înaltă definiție, obținem rezultate care anterior erau considerate dincolo de medicina standard.'}</p>
+                       <div className="my-12 p-10 bg-[#0b1626] rounded-[2.5rem] text-white border border-white/5 relative overflow-hidden">
+                         <div className="absolute top-0 right-0 w-40 h-40 bg-accent/10 rounded-full blur-3xl -mr-20 -mt-20" />
+                         <BookOpen size={32} className="text-accent mb-6" />
+                         <h4 className="text-xl font-serif font-bold mb-4">{isEn ? 'Clinical Technical Note' : 'Notă Tehnică Clinică'}</h4>
+                         <p className="text-gray-400 text-sm leading-relaxed">{isEn ? 'Data derived from our internal 2025 performance audit indicates a 15% reduction in inflammatory response when following the S7 protocol combined with advanced exosome priming.' : 'Datele derivate din auditul nostru intern de performanță 2025 indică o reducere de 15% a răspunsului inflamator atunci când se urmează protocolul S7 combinat cu amorsarea avansată cu exozomi.'}</p>
+                       </div>
+                       <h2 className="text-3xl font-serif font-bold text-prime mt-12 mb-6">{isEn ? 'Conclusion and Next Steps' : 'Concluzie și Pași Următori'}</h2>
+                       <p>{isEn ? 'The convergence of robotics and biology marks a new era for international patients traveling to Istanbul for complex procedures.' : 'Convergența roboticii și a biologiei marchează o nouă eră pentru pacienții internaționali care călătoresc la Istanbul pentru proceduri complexe.'}</p>
+                     </>
+                   )}
                  </div>
 
+                 {/* End CTA */}
                  <div className="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
-                    <div className="text-center md:text-left">
-                       <h4 className="font-bold text-prime mb-1">{isEn ? "Ready for a deeper evaluation?" : "Ești gata pentru o evaluare mai profundă?"}</h4>
-                       <p className="text-sm text-gray-500">{isEn ? "Consult with our board regarding this specific topic." : "Consultă-te cu consiliul nostru despre acest subiect specific."}</p>
-                    </div>
-                    <Link to={isEn ? "/en/contact" : "/ro/contact"} className="bg-accent text-prime font-bold py-4 px-10 rounded-2xl shadow-xl hover:bg-prime hover:text-white transition-all whitespace-nowrap">
-                       {isEn ? "Book Board Consultation" : "Programează Consult de Consiliu"}
-                    </Link>
+                   <div className="text-center md:text-left">
+                     <h4 className="font-bold text-prime mb-1">{isEn ? 'Ready for a deeper evaluation?' : 'Ești gata pentru o evaluare mai profundă?'}</h4>
+                     <p className="text-sm text-gray-500">{isEn ? 'Consult with our board regarding this specific topic.' : 'Consultă-te cu consiliul nostru despre acest subiect specific.'}</p>
+                   </div>
+                   <Link to={isEn ? '/en/contact' : '/ro/contact'} className="bg-accent text-prime font-bold py-4 px-10 rounded-2xl shadow-xl hover:bg-prime hover:text-white transition-all whitespace-nowrap">
+                     {isEn ? 'Book Board Consultation' : 'Programează Consult de Consiliu'}
+                   </Link>
                  </div>
               </div>
            </div>
