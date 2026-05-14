@@ -128,7 +128,7 @@ const Header = () => {
       <header
         className="sticky top-0 left-0 right-0 z-[9999] transition-all duration-300 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.1)]"
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex items-center justify-between py-4">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex items-center justify-between h-16">
           {/* Brand - Full Logo: Meva Clinic with Smooth Scroll */}
           <Link 
             to={isEn ? '/en' : '/ro'} 
@@ -147,8 +147,8 @@ const Header = () => {
             </div>
           </Link>
 
-          {/* Desktop Nav - UI FIX: FLEX, GAP, NO OVERLAP */}
-          <nav className="hidden lg:flex items-center justify-center gap-8 mx-8">
+          {/* Desktop Nav */}
+          <nav className="hidden lg:flex items-center justify-center gap-6 flex-1 mx-8">
             {navLinks.map((link) => (
               <div key={link.name} className="relative group/nav">
                 {link.dropdown ? (
@@ -232,14 +232,14 @@ const Header = () => {
                )}
             </div>
 
-            {/* Sarı Free Consultation Button - BREATHING ROOM FIX */}
-            <button 
+            {/* Free Consultation — only on large screens to prevent overflow */}
+            <button
               onClick={() => setIsModalOpen(true)}
-              className="hidden sm:flex items-center gap-2 bg-accent text-prime px-8 py-3.5 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-prime hover:text-white transition-all shadow-lg hover:-translate-y-0.5 active:scale-95"
+              className="hidden lg:flex items-center gap-2 bg-accent text-prime px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-prime hover:text-white transition-all shadow-lg hover:-translate-y-0.5 active:scale-95 whitespace-nowrap shrink-0"
               aria-label="Request Free Consultation"
             >
-               <Phone size={14} />
-               {isEn ? 'Free Consultation' : 'Consultație Gratuită'}
+              <Phone size={14} />
+              {isEn ? 'Free Consultation' : 'Consultație Gratuită'}
             </button>
 
             {/* Mobile Menu Trigger */}

@@ -18,7 +18,7 @@ export const REVIEWERS = {
     image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=200',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
-    url: 'https://snazzy-palmier-4439dc.netlify.app/en/about-us',
+    url: 'https://www.mevaclinic.com/en/about-us',
   },
   hair: {
     name: 'Dr. Harun',
@@ -34,7 +34,7 @@ export const REVIEWERS = {
     image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
-    url: 'https://snazzy-palmier-4439dc.netlify.app/en/about-us',
+    url: 'https://www.mevaclinic.com/en/about-us',
   },
   oncology: {
     name: 'Dr. Mehmet Şahin',
@@ -48,7 +48,7 @@ export const REVIEWERS = {
     image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
-    url: 'https://snazzy-palmier-4439dc.netlify.app/en/about-us',
+    url: 'https://www.mevaclinic.com/en/about-us',
   },
   dental: {
     name: 'Dr. Ayşe Kaya',
@@ -62,7 +62,7 @@ export const REVIEWERS = {
     image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=200',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
-    url: 'https://snazzy-palmier-4439dc.netlify.app/en/about-us',
+    url: 'https://www.mevaclinic.com/en/about-us',
   },
   plastic: {
     name: 'Dr. Emre Yıldız',
@@ -76,7 +76,7 @@ export const REVIEWERS = {
     image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=200',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
-    url: 'https://snazzy-palmier-4439dc.netlify.app/en/about-us',
+    url: 'https://www.mevaclinic.com/en/about-us',
   },
   organ: {
     name: 'Dr. Fatih Arslan',
@@ -90,7 +90,7 @@ export const REVIEWERS = {
     image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
-    url: 'https://snazzy-palmier-4439dc.netlify.app/en/about-us',
+    url: 'https://www.mevaclinic.com/en/about-us',
   },
 };
 
@@ -119,11 +119,15 @@ const MedicalReviewer = ({ reviewer, isEn = false }) => {
         <div className="relative shrink-0">
           <img
             src={reviewer.image}
-            alt={name}
+            alt={`${name} — Meva Clinic Medical Specialist`}
             width="80"
             height="80"
             loading="lazy"
             decoding="async"
+            onError={(e) => {
+              e.currentTarget.onerror = null;
+              e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=80&background=0b1626&color=d4af37&bold=true&format=svg`;
+            }}
             className="w-20 h-20 rounded-2xl object-cover shadow-md border-2 border-white"
             itemProp="image"
           />
