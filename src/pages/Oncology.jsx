@@ -30,15 +30,19 @@ const oncologyRecoveryRo = [
 const faqEn = [
   { q: "What makes CyberKnife S7 unique?", a: "The S7 with VOLO Optimizer is the only robotic system capable of real-time tumor tracking and motion correction with ±0.5mm precision, allowing for higher doses without harming healthy tissue." },
   { q: "How does Radixact with Synchrony work?", a: "Synchrony technology uses AI to synchronize the radiation beam with the patient's breathing cycle, ensuring the target is hit even as it moves within the chest or abdomen." },
-  { q: "What is the Multidisciplinary Tumor Board?", a: "It is a collective intelligence engine where our surgical oncologists, radiation oncologists, and radiologists engineer a personalized treatment plan for each patient." },
-  { q: "Are treatments painful?", a: "No. These are non-invasive, robotic procedures that require no anesthesia, no incisions, and cause zero pain during the actual delivery." }
+  { q: "What is Immunotherapy and who qualifies?", a: "Immunotherapy uses checkpoint inhibitors (PD-1/PD-L1, CTLA-4) to unleash the immune system against cancer cells. Eligibility is determined by tumour PD-L1 expression, TMB (tumour mutational burden) and MSI status — all tested in our molecular pathology lab." },
+  { q: "What is PROTAC targeted therapy?", a: "PROteolysis TArgeting Chimeras (PROTACs) are bifunctional molecules that hijack the cell's own protein degradation machinery (ubiquitin-proteasome system) to destroy disease-causing oncoproteins — including those previously considered 'undruggable'. Unlike classic targeted therapy that inhibits proteins, PROTACs eliminate them entirely." },
+  { q: "What is the Multidisciplinary Tumor Board?", a: "A weekly case conference where surgical oncologists, radiation oncologists, medical oncologists, radiologists and pathologists jointly engineer a personalised treatment plan. All cases at Meva are board-reviewed before treatment initiation." },
+  { q: "Are robotic radiation treatments painful?", a: "No. CyberKnife and Radixact are non-invasive, non-surgical procedures requiring no anaesthesia, no incisions and causing zero pain during delivery." }
 ];
 
 const faqRo = [
-  { q: "Ce face CyberKnife S7 unic?", a: "Modelul S7 cu VOLO Optimizer este singurul sistem robotic capabil de urmărire tumorală în timp real și corecție a mișcării la o precizie de ±0.5mm." },
-  { q: "Cum funcționează Radixact cu Synchrony?", a: "Tehnologia Synchrony folosește AI pentru a sincroniza fasciculul de radiații cu ciclul respirator al pacientului, eliminând erorile cauzate de mișcare." },
-  { q: "Ce este Tumor Board-ul Multidisciplinar?", a: "Este un motor de inteligență colectivă unde oncologii, radiologii și chirurgii noștri proiectează un plan de tratament personalizat pentru fiecare caz." },
-  { q: "Tratamentele sunt dureroase?", a: "Nu. Acestea sunt proceduri robotice non-invazive care nu necesită anestezie, nu implică incizii și nu provoacă durere." }
+  { q: "Ce face CyberKnife S7 unic?", a: "Modelul S7 cu VOLO Optimizer este singurul sistem robotic capabil de urmărire tumorală în timp real și corecție a mișcării la o precizie de ±0,5mm, permițând doze mai mari fără a afecta țesuturile sănătoase." },
+  { q: "Cum funcționează Radixact cu Synchrony?", a: "Tehnologia Synchrony folosește AI pentru a sincroniza fasciculul de radiații cu ciclul respirator al pacientului, eliminând erorile cauzate de mișcare în piept sau abdomen." },
+  { q: "Ce este imunoterapia și cine este eligibil?", a: "Imunoterapia utilizează inhibitori ai punctelor de control imun (PD-1/PD-L1, CTLA-4) pentru a elibera sistemul imunitar împotriva celulelor canceroase. Eligibilitatea este determinată de expresia PD-L1 tumorală, TMB (povara mutațională tumorală) și statusul MSI — toate testate în laboratorul nostru de patologie moleculară." },
+  { q: "Ce este terapia țintită PROTAC?", a: "PROteolysis TArgeting Chimeras (PROTAC) sunt molecule bifuncționale care deturnează propria mașinărie de degradare a proteinelor a celulei (sistemul ubiquitin-proteazom) pentru a distruge oncoproteinele cauzatoare de boală — inclusiv cele considerate anterior 'nedrogabile'. Spre deosebire de terapia țintită clasică care inhibă proteinele, PROTAC le elimină complet." },
+  { q: "Ce este Tumor Board-ul Multidisciplinar?", a: "O conferință de caz săptămânală unde oncologii chirurgicali, oncologii de radioterapie, oncologii medicali, radiologii și patologii proiectează împreună un plan de tratament personalizat. Toate cazurile la Meva sunt revizuite de board înainte de inițierea tratamentului." },
+  { q: "Tratamentele cu radiații robotice sunt dureroase?", a: "Nu. CyberKnife și Radixact sunt proceduri non-invazive, non-chirurgicale care nu necesită anestezie, nu implică incizii și nu provoacă durere în timpul administrării." }
 ];
 
 const Oncology = ({ lang = 'ro' }) => {
@@ -89,31 +93,126 @@ const Oncology = ({ lang = 'ro' }) => {
 
         {/* Scientific Content Modules */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24">
-          <div className="lg:col-span-2 space-y-12">
-            <section className="animate-fade-up">
-              <h2 className="text-3xl font-serif font-bold text-prime mb-6 flex items-center gap-3">
-                <Microscope className="text-accent" />
-                {isEn ? "CyberKnife S7: Robotic Perfection" : "CyberKnife S7: Perfecțiune Robotică"}
+          <div className="lg:col-span-2 space-y-16">
+
+            {/* ── IMMUNOTHERAPY ── */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center"><Brain size={16} className="text-accent" /></div>
+                <span className="text-xs font-bold uppercase tracking-widest text-prime/50">{isEn ? 'Immunotherapy · Next-Generation Oncology' : 'Imunoterapie · Oncologie de Nouă Generație'}</span>
+              </div>
+              <h2 className="text-3xl font-serif font-bold text-prime mb-5">
+                {isEn ? 'Checkpoint Immunotherapy: Unleashing Your Immune System' : 'Imunoterapie Checkpoint: Eliberarea Sistemului Imunitar'}
               </h2>
-              <div className="prose prose-lg text-gray-600 font-sans leading-relaxed">
-                <p>
-                  {isEn 
-                    ? "The CyberKnife S7 System represents the pinnacle of robotic radiosurgery. Equipped with the VOLO Optimizer, it delivers ultra-precise radiation to tumors anywhere in the body. Unlike traditional radiation therapy, CyberKnife uses a robotic arm to deliver hundreds of beams from thousands of angles." 
-                    : "Sistemul CyberKnife S7 reprezintă vârful de gamă în radiochirurgia robotică. Echipat cu VOLO Optimizer, acesta livrează radiații ultra-precise tumorilor din orice parte a corpului. Spre deosebire de radioterapia tradițională, CyberKnife folosește un braț robotic."}
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>{isEn
+                  ? 'Cancer cells express surface proteins (PD-L1, CD47) that function as “don’t eat me” signals, effectively disabling cytotoxic T-lymphocytes that would otherwise destroy them. Immune checkpoint inhibitors — monoclonal antibodies targeting PD-1, PD-L1 and CTLA-4 receptors — block these evasion signals, restoring the immune system’s ability to recognise and eliminate malignant cells.'
+                  : 'Celulele canceroase exprimă proteine de suprafață (PD-L1, CD47) care funcționează ca semnale “nu mă mânca”, dezactivând efectiv limfocitele T citotoxice care altfel le-ar distruge. Inhibitorii punctelor de control imunitar — anticorpi monoclonali care țintesc receptorii PD-1, PD-L1 și CTLA-4 — blochează aceste semnale de evaziune, restabilind capacitatea sistemului imunitar de a recunoaște și elimina celulele maligne.'}
+                </p>
+                <p>{isEn
+                  ? 'Patient eligibility is determined by a comprehensive molecular tumour profiling panel: PD-L1 expression (TPS/CPS score), tumour mutational burden (TMB), microsatellite instability (MSI-H/dMMR) status, and NTRK/RET fusion screening. Our molecular pathology laboratory completes this panel within 5 working days.'
+                  : 'Eligibilitatea pacientului este determinată de un panel complet de profilare moleculară a tumorii: expresia PD-L1 (scor TPS/CPS), povara mutațională tumorală (TMB), statusul instabilității microsatelitare (MSI-H/dMMR) și screening pentru fuziunile NTRK/RET. Laboratorul nostru de patologie moleculară finalizează acest panel în 5 zile lucrătoare.'}
                 </p>
               </div>
+              <div className="mt-6 flex flex-wrap gap-4">
+                {[
+                  { val: '5 days', label: isEn ? 'Full molecular profiling panel' : 'Panel profilare moleculară complet' },
+                  { val: '40–60%', label: isEn ? 'Response rate in PD-L1 high tumours' : 'Rată răspuns tumori PD-L1 ridicate' },
+                  { val: 'JCI', label: isEn ? 'Accredited oncology protocols' : 'Protocoale oncologie acreditate' },
+                ].map(s => (
+                  <div key={s.val} className="flex-1 min-w-[140px] p-5 bg-prime rounded-2xl text-white">
+                    <p className="text-2xl font-black text-accent">{s.val}</p>
+                    <p className="text-xs text-gray-400 mt-1 leading-tight">{s.label}</p>
+                  </div>
+                ))}
+              </div>
             </section>
+
+            {/* ── PROTAC ── */}
+            <section>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center"><Microscope size={16} className="text-accent" /></div>
+                <span className="text-xs font-bold uppercase tracking-widest text-prime/50">{isEn ? 'PROTAC Technology · Targeted Protein Degradation' : 'Tehnologie PROTAC · Degradare Proteică Ȟintită'}</span>
+              </div>
+              <h2 className="text-3xl font-serif font-bold text-prime mb-5">
+                {isEn ? 'PROTAC: Eliminating the “Undruggable” Oncoproteins' : 'PROTAC: Eliminarea Oncoproteinelor “Nedrogabile”'}
+              </h2>
+              <div className="space-y-4 text-gray-600 leading-relaxed">
+                <p>{isEn
+                  ? 'Conventional targeted therapies inhibit oncoproteins by occupying their active site — but many of the most aggressive cancer drivers (KRAS G12C, β-catenin, STAT3) lack tractable binding pockets, making them resistant to classical small-molecule inhibitors. PROteolysis TArgeting Chimeras (PROTACs) circumvent this entirely.'
+                  : 'Terapiile țintite convenționale inhibă oncoproteinele ocupându-le situsul activ — dar mulți dintre cei mai agresivi motori oncogeni (KRAS G12C, β-catenină, STAT3) nu posedă buzunare de legare tractabile, făcându-i rezistenți la inhibitorii clasici de molecule mici. Chimerele de țintire a proteolizei (PROTAC) depășesc complet acest lucru.'}
+                </p>
+                <p>{isEn
+                  ? 'A PROTAC molecule is a bifunctional warhead: one arm binds the target oncoprotein, the other recruits an E3 ubiquitin ligase. This proximity triggers polyubiquitination of the target, flagging it for degradation by the 26S proteasome. Unlike classical inhibitors, a single PROTAC molecule can catalytically degrade multiple copies of its target — the “hook effect” — and remains unaffected by resistance mutations at the active site.'
+                  : 'O moleculă PROTAC este un focos bifuncțional: un braț leagă oncoproteină țintă, celălalt recrutează o E3 ubiquitin ligază. Această proximitate declansșează poliubiquitinarea țintei, marcand-o pentru degradare de către proteazomul 26S. Spre deosebire de inhibitorii clasici, o singură moleculă PROTAC poate degrada catalitic mai multe copii ale țintei sale — “efectul cârlig” — rămânând neafectat de mutațiile de rezistență la situsul activ.'}
+                </p>
+              </div>
+              <div className="mt-6 p-5 bg-gray-50 rounded-2xl border border-gray-100">
+                <p className="text-xs font-black uppercase tracking-widest text-prime/50 mb-3">{isEn ? 'Currently Available PROTAC Protocols at Meva' : 'Protocoale PROTAC Disponibile la Meva'}</p>
+                <div className="flex flex-wrap gap-2">
+                  {['ARV-471 (ER+ Breast Cancer)', 'ARV-110 (CRPC / Prostate)', 'KT-474 (IRAK4 — Haematological)', 'BRD4 PROTAC (TNBC)', 'Custom MDM2 Protocol'].map(p => (
+                    <span key={p} className="text-xs bg-white border border-gray-200 text-prime font-semibold px-3 py-1.5 rounded-full">{p}</span>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* ── TUMOR BOARD ── */}
+            <section className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center"><Shield size={16} className="text-prime" /></div>
+                <h2 className="text-xl font-serif font-bold text-prime">{isEn ? 'Multidisciplinary Tumor Board' : 'Tumor Board Multidisciplinar'}</h2>
+              </div>
+              <p className="text-gray-600 leading-relaxed mb-6">
+                {isEn
+                  ? 'Every Meva oncology patient is presented at a weekly multidisciplinary case conference before any treatment begins. The board comprises surgical oncologists, radiation oncologists, medical oncologists, diagnostic radiologists and molecular pathologists. Treatment decisions are consensus-based and documented per NCCN/ESMO guidelines.'
+                  : 'Fiecare pacient oncologic Meva este prezentat la o conferință de caz multidisciplinară săptămânală înainte de începerea oricărui tratament. Board-ul cuprinde oncologi chirurgicali, oncologi de radioterapie, oncologi medicali, radiologi diagnosticieni și patologi moleculari. Deciziile de tratament sunt bazate pe consens și documentate conform ghidurilor NCCN/ESMO.'}
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                {[
+                  { role: isEn?'Surgical Oncology':'Oncologie Chirurgicală', icon: '✂️' },
+                  { role: isEn?'Radiation Oncology':'Oncologie Radiație', icon: '⚡' },
+                  { role: isEn?'Medical Oncology':'Oncologie Medicală', icon: '💊' },
+                  { role: isEn?'Diagnostic Radiology':'Radiologie', icon: '🩻' },
+                  { role: isEn?'Molecular Pathology':'Patologie Moleculară', icon: '🔬' },
+                ].map(r => (
+                  <div key={r.role} className="text-center p-4 bg-white rounded-xl border border-gray-100">
+                    <p className="text-2xl mb-1">{r.icon}</p>
+                    <p className="text-xs font-bold text-prime leading-tight">{r.role}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+
           </div>
 
-          <div className="space-y-8">
-            <div className="bg-gray-50 p-8 rounded-[2rem] border border-gray-100 shadow-sm animate-fade-up">
-              <HeartPulse className="text-accent mb-4" size={32} />
-              <h3 className="text-xl font-bold text-prime mb-4">{isEn ? "JCI Safety Excellence" : "Excelență în Siguranță JCI"}</h3>
-              <p className="text-sm text-gray-500 leading-relaxed">
-                {isEn 
-                  ? "Our oncology department operates strictly under Joint Commission International protocols, ensuring double-verification of all dosimetry." 
-                  : "Departamentul nostru de oncologie operează strict sub protocoalele JCI, asigurând dubla verificare a tuturor dozimetriilor."}
-              </p>
+          {/* Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24 space-y-5">
+              <div className="bg-prime text-white rounded-[2rem] p-7 border border-white/5">
+                <h3 className="font-serif font-bold text-lg text-accent mb-5 border-b border-white/10 pb-4">
+                  {isEn ? 'Technology Stack' : 'Stack Tehnologic'}
+                </h3>
+                <div className="space-y-4">
+                  {[
+                    { icon: '🤖', label: 'CyberKnife S7 + VOLO Optimizer' },
+                    { icon: '⚡', label: 'Radixact + Synchrony AI' },
+                    { icon: '🧬', label: isEn?'Molecular PD-L1 / TMB / MSI Testing':'Testare Moleculară PD-L1/TMB/MSI' },
+                    { icon: '💊', label: isEn?'PROTAC Protocol Library':'Bibliotecă Protocol PROTAC' },
+                    { icon: '🏥', label: isEn?'JCI Accredited Oncology Centre':'Centru Oncologie Acreditat JCI' },
+                    { icon: '🌍', label: isEn?'NCCN / ESMO Guideline Adherence':'Aderare Ghiduri NCCN/ESMO' },
+                  ].map(item => (
+                    <div key={item.label} className="flex items-center gap-3 text-sm">
+                      <span className="text-xl">{item.icon}</span>
+                      <span className="text-gray-300">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <a href="https://wa.me/905324675941" target="_blank" rel="noreferrer"
+                className="flex items-center justify-center gap-2 w-full bg-[#25D366] text-white font-bold py-4 rounded-2xl hover:bg-green-500 transition-all text-sm shadow-lg">
+                📱 {isEn ? 'Oncology Second Opinion' : 'A Doua Opinie Oncologică'}
+              </a>
             </div>
           </div>
         </div>

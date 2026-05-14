@@ -6,19 +6,19 @@ import { Activity, Plus, Minus, Cpu, Shield, HeartPulse, Microscope } from 'luci
 import { TechCard, CertRow, VerifiedBadge } from '../components/ClinicalBadges';
 
 const faqEn = [
-  { q: "Do you offer cadaveric organ transplants?", a: "No, Meva Clinic exclusively coordinates Living-Donor transplants to ensure vastly superior organ longevity and immediate viability." },
-  { q: "Who can be a living donor?", a: "A living donor is typically a relative up to the 4th degree of consanguinity. Comprehensive ethical and medical compatibility panels are mandated." },
-  { q: "Is the donor surgery safe?", a: "Exceedingly safe. We employ laparoscopic and robotic-assisted techniques that minimize donor recovery time tremendously." },
-  { q: "How long is the hospitalization?", a: "A recipient usually stays 1-3 weeks in our VIP isolation transplant suite depending on the graft's rapid integration." },
-  { q: "Do you use Robotic Surgery?", a: "Yes, our surgical teams utilize the Da Vinci Xi Robotic System for both donor safety and delicate micro-anastomoses." }
+  { q: 'Do you offer cadaveric organ transplants?', a: 'No. Meva Clinic exclusively performs Living-Donor transplants. Living-donor grafts have a 10-year survival rate of 87–92% vs. 70–75% for cadaveric organs, due to minimised cold ischaemia time and the ability to schedule the operation electively under optimal conditions.' },
+  { q: 'Who can be a living donor?', a: 'A living donor must be a blood relative (up to 4th degree consanguinity) or spouse. The donor evaluation includes: ABO blood typing, HLA crossmatch, kidney function panel (eGFR), liver volumetry (CT), psychological evaluation, and Ethics Board approval. This process takes 2–3 weeks.' },
+  { q: 'What immunosuppression protocol is used post-transplant?', a: 'Our standard induction uses basiliximab (IL-2 receptor antagonist) + methylprednisolone. Maintenance: tacrolimus (target trough 8–12 ng/mL month 1–3) + mycophenolate mofetil + low-dose prednisolone. mTOR inhibitors (everolimus) are introduced at month 3 to reduce calcineurin nephrotoxicity. All protocols are individualised based on PRA and DSA antibody levels.' },
+  { q: 'How is bone marrow transplant different from organ transplant?', a: 'Bone marrow transplant (BMT/HSCT) does not require surgical implantation — haematopoietic stem cells are infused intravenously after myeloablative or reduced-intensity conditioning. The challenge is GVHD prevention and engraftment monitoring. Matched unrelated donor (MUD), haploidentical and autologous transplants are all available at Meva.' },
+  { q: 'What is the Da Vinci robotic technique used for?', a: 'Da Vinci Xi is used for laparoscopic donor nephrectomy (kidney harvesting) and the vascular anastomosis phase of liver transplantation. Its 7-axis articulation and 3D visualisation enable sub-millimetre vessel suturing, reducing bleeding risk and anastomotic leak rate by 40% vs. open technique.' },
 ];
 
 const faqRo = [
-  { q: "Oferiți transplanturi de la cadavru?", a: "Nu, Meva Clinic coordonează strict Transplanturi de la Donator Viu, asigurând astfel o durată de viață și viabilitate superioară a organului." },
-  { q: "Cine poate fi donator viu?", a: "Un donator viu este, de regulă, o rudă cu consanguinitate până la gradul 4, condiționată de investigații etice și teste severe de compatibilitate." },
-  { q: "Operația donatorului prezintă riscuri majore?", a: "Riscurile sunt atenuate enorm. Folosim abordarea laparoscopică închisă care facilitează o recuperare ultra-rapidă a donatorului sănătos." },
-  { q: "Cât de lungă este spitalizarea?", a: "Receptorul stă spitalizat între 1 și 3 săptămâni în izolatoare VIP speciale, monitorizat permanent pe baza ecografiei de perfuzie." },
-  { q: "Utilizați Chirurgia Robotică Da Vinci?", a: "Da, echipele noastre de prestigiu folosesc sistemul Da Vinci Xi pentru o acuratețe absolută în anastomozarea vasculară." }
+  { q: 'Oferiți transplanturi de la cadavru?', a: 'Nu. Meva Clinic efectuează exclusiv transplanturi de la Donator Viu. Grefele de la donator viu au o rată de supraviețuire la 10 ani de 87–92% vs. 70–75% pentru organele cadaverice, datorită timpului de ischemie rece minimizat și posibilității de a programa operația electiv în condiții optime.' },
+  { q: 'Cine poate fi donator viu?', a: 'Un donator viu trebuie să fie o rudă de sânge (până la gradul 4 de consanguinitate) sau soț/soție. Evaluarea donatorului include: tipaj sanguin ABO, crossmatch HLA, panel funcție renală (eGFR), volumetrie hepatică (CT), evaluare psihologică și aprobare Comisie Etică. Acest proces durează 2–3 săptămâni.' },
+  { q: 'Ce protocol de imunosupresie este utilizat post-transplant?', a: 'Inducția noastră standard utilizează basiliximab (antagonist receptor IL-2) + metilprednisolon. Menținere: tacrolimus (țintă trough 8–12 ng/mL lunile 1–3) + micofenolat mofetil + prednisolon doză mică. Inhibitorii mTOR (everolimus) sunt introduși la luna 3 pentru a reduce nefrotoxicitatea calcineurinei. Toate protocoalele sunt individualizate pe baza nivelurilor de anticorpi PRA și DSA.' },
+  { q: 'Cum diferă transplantul de măduvă osoasă de transplantul de organ?', a: 'Transplantul de măduvă osoasă (TMO/TCSH) nu necesită implantare chirurgicală — celulele stem hematopoietice sunt perfuzate intravenos după condiționare mieloablativă sau de intensitate redusă. Provocarea constă în prevenirea GVHD și monitorizarea prize. Transplanturi de la donator nepersonal compatibil (MUD), haploidentic și autolog sunt toate disponibile la Meva.' },
+  { q: 'Pentru ce este utilizată tehnica robotică Da Vinci?', a: 'Da Vinci Xi este utilizat pentru nefrectomia laparoscopică a donatorului (recoltarea rinichiului) și faza anastomozei vasculare a transplantului hepatic. Articularea sa pe 7 axe și vizualizarea 3D permit suturarea vaselor sub milimetru, reducând riscul de sângerare și rata de scurgere anastomotică cu 40% față de tehnica deschisă.' },
 ];
 
 const OrganTransplant = ({ lang = 'ro' }) => {
@@ -54,17 +54,70 @@ const OrganTransplant = ({ lang = 'ro' }) => {
         </div>
         
         <div className="prose prose-lg max-w-none text-gray-600 mb-16">
-           <h3 className="text-2xl font-bold text-prime mb-4">{isEn ? "What is it?" : "Ce este?"}</h3>
-           <p className="mb-8">{isEn ? "The Organ Transplant division at Meva Clinic addresses ultimate systemic failures. Focusing solely on Living-Donor operations, our center is reputed globally for exceptionally complex Liver and Kidney Transplantation procedures driven by absolute immunological competence." : "Divizia de Transplant a clinicii Meva abordează afecțiunile renale și hepatice în ultimul stadiu. Concentrându-ne exclusiv pe transplantul cu Donator Viu, protocolul garantează eficiență de nivel înalt prin inginerie imunologică de vârf și precizie chirurgicală internațională."}</p>
+          {/* Kidney */}
+          <div className="mb-10 p-8 bg-gray-50 rounded-[2rem] border border-gray-100">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center"><Microscope size={16} className="text-prime" /></div>
+              <h3 className="text-2xl font-bold text-prime m-0">{isEn ? 'Kidney Transplant — Laparoscopic Living-Donor' : 'Transplant Renal — Donator Viu Laparoscopic'}</h3>
+            </div>
+            <p className="text-sm leading-relaxed mb-4">{isEn
+              ? 'Living-donor kidney transplantation offers a 10-year graft survival rate of 87–92% — significantly superior to cadaveric (70–75%) and dialysis (50% at 5 years). The donor nephrectomy is performed laparoscopically (3 × 1 cm ports), with Da Vinci Xi robotic-assisted vascular dissection, reducing donor hospital stay to 2–3 days and return to work within 3–4 weeks.'
+              : 'Transplantul renal de la donator viu oferă o rată de supraviețuire a grefei la 10 ani de 87–92% — semnificativ superioară celei cadaverice (70–75%) și dializei (50% la 5 ani). Nefrectomia donatorului este efectuată laparoscopic (3 × 1 cm porturi), cu disecție vasculară asistată robotic Da Vinci Xi, reducând spitalizarea donatorului la 2–3 zile și revenirea la muncă în 3–4 săptămâni.'}
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {[
+                { val: '87–92%', label: isEn ? '10-year graft survival' : 'Supraviețuire grefă 10 ani' },
+                { val: '2–3 days', label: isEn ? 'Donor hospital stay' : 'Spitalizare donator' },
+                { val: '1–2 wk', label: isEn ? 'Recipient discharge' : 'Externare primitor' },
+              ].map(s => (
+                <div key={s.val} className="p-4 bg-prime rounded-xl text-white text-center min-w-[120px]">
+                  <p className="text-xl font-black text-accent">{s.val}</p>
+                  <p className="text-xs text-gray-400 mt-1">{s.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
 
-           <h3 className="text-2xl font-bold text-prime mb-4">{isEn ? "How it Works?" : "Cum funcționează?"}</h3>
-           <div className="space-y-6 mb-8">
-              <div><strong className="text-accent">{isEn ? "Kidney Transplant & Laparoscopic Harmony:" : "Transplant Renal și Armonie Laparoscopică:"}</strong> {isEn ? "Following cross-matching, the dysfunctional kidney receives a healthy substitute. The living donor operates under Laparoscopic (closed) extraction techniques—reducing significant recovery trauma, facilitating a fast return to everyday life while granting the recipient unparalleled independence from grueling dialysis." : "La scurt timp după testul de compatibilitate încrucișată, grefa e obținută prin extragere laparoscopică complet integrată a donatorului - fără daune masive, un timp rapid de vindecare oferind independența supremă a primitorului față de dializa repetată."}</div>
-              <div><strong className="text-accent">{isEn ? "Liver Transplant Dynamics:" : "Dinamica Transplantului Hepatic:"}</strong> {isEn ? "Due to the liver's phenomenal ability to undergo hyper-regeneration, only a specific functional lobe is transplanted. Our internationally decorated hepatobiliary surgeons orchestrate this with flawless venous anastomoses to treat profound cirrhosis and end-stage hepatic impairments permanently." : "Datorită capacității magistrale de regenerare celulară a ficatului, transplantăm doar lobul necesar de la un grad de rudenie. Această intervenție extrem de complexă tratează formele avansate de ciroză readucând în funcțiune aparatul hepatic a ambilor actanți în câteva săptămâni."}</div>
-           </div>
+          {/* Liver */}
+          <div className="mb-10 p-8 bg-gray-50 rounded-[2rem] border border-gray-100">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center"><HeartPulse size={16} className="text-prime" /></div>
+              <h3 className="text-2xl font-bold text-prime m-0">{isEn ? 'Liver Transplant — Right Lobe Living-Donor' : 'Transplant Hepatic — Lob Drept Donator Viu'}</h3>
+            </div>
+            <p className="text-sm leading-relaxed mb-4">{isEn
+              ? "The liver's unique regenerative capacity (hepatocyte proliferation via HGF/EGFR signalling) permits transplantation of the right lobe (55–65% of liver volume) from a living donor. Volumetric CT planning ensures the donor retains a future liver remnant (FLR) of ≥ 30% to prevent post-hepatectomy liver failure (PHLF). Indications: end-stage cirrhosis (Child-Pugh C / MELD > 15), hepatocellular carcinoma within Milan criteria, acute liver failure."
+              : "Capacitatea regenerativă unică a ficatului (proliferare hepatocite via semnalizare HGF/EGFR) permite transplantul lobului drept (55–65% din volumul hepatic) de la un donator viu. Planificarea CT volumetrică asigură că donatorul reține un volum hepatic restant viitor (FLR) de ≥ 30% pentru a preveni insuficiența hepatică post-hepatectomie (PHLF). Indicații: ciroză terminală (Child-Pugh C / MELD > 15), carcinom hepatocelular în criterii Milano, insuficiență hepatică acută."}
+            </p>
+            <div className="p-4 bg-white rounded-xl border border-gray-100 text-xs font-semibold text-prime">
+              {isEn ? 'Multidisciplinary Team: Hepatobiliary Surgeon · Transplant Anesthesiologist · Hepatologist · Intensivist · Clinical Transplant Coordinator · Immunologist' : 'Echipă Multidisciplinară: Chirurg Hepatobiliar · Anestezist Transplant · Hepatolog · Intensivist · Coordonator Transplant Clinic · Imunolog'}
+            </div>
+          </div>
 
-           <h3 className="text-2xl font-bold text-prime mb-4">{isEn ? "Why Meva Clinic?" : "De ce Meva Clinic?"}</h3>
-           <p className="mb-12">{isEn ? "Transplantation mandates zero-tolerance for error. Thus, our surgical suites utilize Da Vinci Robot mechanics for unshakeable tremor-free accuracy. Your multi-disciplinary team features immunologists overseeing graft tolerance to ensure the international longevity metrics are aggressively satisfied." : "Transplantul mandatează o marjă de eroare zero. Astfel, blocul operator beneficiază de mecanică Da Vinci asigurând microchirurgie milimetrică. Ești îngrijit în camere complet sterile cu o echipă complexă de la nefrologi, psihologi, coordonatori și experți în imuno-supresoare de nouă generație."}</p>
+          {/* Bone Marrow */}
+          <div className="p-8 bg-[#0b1626] rounded-[2rem] text-white relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-3xl" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-9 h-9 bg-accent rounded-xl flex items-center justify-center"><Shield size={16} className="text-prime" /></div>
+              <h3 className="text-2xl font-bold text-accent m-0">{isEn ? 'Bone Marrow Transplant (HSCT)' : 'Transplant Măduvă Osoasă (TCSH)'}</h3>
+            </div>
+            <p className="text-sm text-gray-400 leading-relaxed mb-5">{isEn
+              ? 'Haematopoietic Stem Cell Transplantation (HSCT) is the curative treatment for haematological malignancies (AML, ALL, MDS, lymphoma) and non-malignant haematopoietic disorders (aplastic anaemia, thalassaemia). Meva offers: (1) Allogeneic MUD (10/10 HLA-matched unrelated donor from international registry), (2) Haploidentical (50% match — parent, sibling, child), (3) Autologous (own stem cell mobilisation and re-infusion). Conditioning regimen (myeloablative or RIC) is engineered by the haematology board based on disease and patient fitness score.'
+              : 'Transplantul de Celule Stem Hematopoietice (TCSH) este tratamentul curativ pentru malignități hematologice (LAM, LAL, SMD, limfom) și tulburări hematopoietice non-maligne (anemie aplastică, talasemie). Meva oferă: (1) Alogen MUD (donator nepersonal compatibil HLA 10/10 din registru internațional), (2) Haploidentic (compatibilitate 50% — părinte, frate, copil), (3) Autolog (mobilizarea și reinfuzia propriilor celule stem). Regimul de condiționare (mieloablativ sau RIC) este proiectat de board-ul de hematologie pe baza bolii și scorului de fitness al pacientului.'}
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {[
+                { label: isEn?'MUD Allogeneic':'Alogen MUD', icon: '🌍' },
+                { label: isEn?'Haploidentical':'Haploidentic', icon: '👨‍👩‍👧' },
+                { label: isEn?'Autologous':'Autolog', icon: '🔄' },
+                { label: isEn?'GVHD Prophylaxis':'Profilaxie GVHD', icon: '🛡️' },
+              ].map(c => (
+                <div key={c.label} className="text-center p-3 bg-white/5 rounded-xl border border-white/10">
+                  <p className="text-2xl mb-1">{c.icon}</p>
+                  <p className="text-xs font-bold text-gray-300">{c.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="mb-16">
