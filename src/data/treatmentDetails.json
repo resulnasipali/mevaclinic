@@ -1,27 +1,38 @@
 [
   {
     "slug": "gastric-sleeve",
-    "title": "Operația de Gastric Sleeve (Micșorarea Stomacului)",
-    "title_en": "Gastric Sleeve Surgery (Stomach Reduction)",
-    "subtitle": "Slăbire Rapidă și Definitivă cu Dr. Hasan Erdem.",
-    "subtitle_en": "Rapid and Permanent Weight Loss with Dr. Hasan Erdem.",
+    "title": "Operația de Gastric Sleeve",
+    "title_en": "Gastric Sleeve Surgery",
+    "subtitle": "Slăbire Rapidă și Definitivă cu Dr. Cuma.",
+    "subtitle_en": "Rapid and Permanent Weight Loss with Dr. Cuma.",
     "description": "Intervenția de Gastric Sleeve presupune îndepărtarea a până la 80% din volumul stomacului prin chirurgie laparoscopică minim invazivă. Pachetul Meva Clinic include consultul complet, operația JCI, traducător român 24/7 și transferuri VIP.",
     "description_en": "Gastric Sleeve involves removing up to 80% of the stomach volume via minimally invasive laparoscopic surgery. Meva Clinic's package includes full consultation, JCI-accredited surgery, 24/7 English support, and VIP transfers.",
-    "details": {
-      "hospitalStay": "3 Nopți (Spital Privat)",
-      "hotelStay": "3 Nopți (Hotel 5 Stele)",
-      "anesthesia": "Generală",
-      "returnToWork": "7-10 Zile"
+    "doctorQuote": {
+      "text_en": "Gastric Sleeve is the most reliable metabolic intervention we have. In over 10,000 procedures, our patients achieve an average of 65–75% excess weight loss within 12 months — with a complication rate below 1%.",
+      "text_ro": "Gastric Sleeve este cea mai fiabilă intervenție metabolică pe care o avem. În peste 10.000 de proceduri, pacienții noștri obțin o pierdere medie de 65–75% din greutatea în exces în 12 luni — cu o rată de complicații sub 1%.",
+      "doctor": "Dr. Cuma",
+      "title_en": "Bariatric & Metabolic Surgery Specialist",
+      "title_ro": "Specialist în Chirurgie Bariatrică și Metabolică"
     },
-    "details_en": {
-      "hospitalStay": "3 Nights (Private Hospital)",
-      "hotelStay": "3 Nights (5-Star Hotel)",
-      "anesthesia": "General",
-      "returnToWork": "7-10 Days"
-    },
+    "steps": [
+      { "en": "Pre-operative blood tests and cardiac clearance", "ro": "Analize preoperatorii și evaluare cardiacă" },
+      { "en": "General anaesthesia administered by certified anaesthesiologist", "ro": "Anestezie generală administrată de anestezist certificat" },
+      { "en": "Laparoscopic resection of 80% stomach volume (45–75 min)", "ro": "Rezecție laparoscopică a 80% din stomac (45–75 min)" },
+      { "en": "2 nights ICU-monitored recovery in JCI hospital", "ro": "2 nopți recuperare monitorizată în spital acreditat JCI" },
+      { "en": "1-year remote follow-up with Meva nutritionist", "ro": "1 an follow-up la distanță cu nutriționistul Meva" }
+    ],
+    "advantages": [
+      { "en": "65–75% excess weight loss in 12 months", "ro": "65–75% pierdere a excesului de greutate în 12 luni" },
+      { "en": "Resolves Type 2 Diabetes in 80% of cases", "ro": "Rezolvă diabetul de tip 2 în 80% din cazuri" },
+      { "en": "No implants — purely anatomical reduction", "ro": "Fără implanturi — reducere pur anatomică" },
+      { "en": "Short hospital stay (2–3 nights)", "ro": "Spitalizare scurtă (2–3 nopți)" },
+      { "en": "40–60% cheaper than UK / Germany", "ro": "40–60% mai ieftin decât UK / Germania" }
+    ],
+    "details": { "hospitalStay": "3 Nopți", "hotelStay": "3 Nopți (Hotel 5★)", "anesthesia": "Generală", "returnToWork": "7-10 Zile" },
+    "details_en": { "hospitalStay": "3 Nights", "hotelStay": "3 Nights (5★ Hotel)", "anesthesia": "General", "returnToWork": "7-10 Days" },
     "heroImage": "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop",
     "scientificReferences": [
-      "Schauer, P. R., et al. (2025). 'Bariatric Surgery versus Intensive Medical Therapy for Diabetes'. New England Journal of Medicine.",
+      "Schauer, P. R., et al. (2025). 'Bariatric Surgery versus Intensive Medical Therapy for Diabetes'. NEJM.",
       "JCI Global Clinical Standards for Metabolic Surgery (2026 Edition)."
     ]
   },
@@ -31,20 +42,31 @@
     "title_en": "Gastric Bypass Istanbul",
     "subtitle": "Standardul de Aur în Bariatrie. Scapă de Diabetul de Tip 2.",
     "subtitle_en": "The Gold Standard in Bariatrics. Overcome Type 2 Diabetes.",
-    "description": "Gastric Bypass modifică anatomia tractului digestiv limitând și absorbția caloriilor, nu doar volumul alimentar. Ideal pentru obezitate morbidă sau pentru rezolvarea afecțiunilor metabolice extreme. Exclusiv prin Meva Clinic Istanbul.",
-    "description_en": "Gastric Bypass modifies digestive anatomy, limiting both calorie absorption and food volume. Ideal for morbid obesity or extreme metabolic conditions. Exclusively through Meva Clinic Istanbul.",
-    "details": {
-      "hospitalStay": "4 Nopți (Spital Privat)",
-      "hotelStay": "3 Nopți (Hotel 5 Stele)",
-      "anesthesia": "Generală",
-      "returnToWork": "10-14 Zile"
+    "description": "Gastric Bypass modifică anatomia tractului digestiv limitând și absorbția caloriilor, nu doar volumul alimentar. Ideal pentru obezitate morbidă sau pentru rezolvarea afecțiunilor metabolice extreme.",
+    "description_en": "Gastric Bypass modifies digestive anatomy, limiting both calorie absorption and food volume. Ideal for morbid obesity or extreme metabolic conditions.",
+    "doctorQuote": {
+      "text_en": "Gastric Bypass remains the gold standard for patients with BMI above 45 or significant metabolic co-morbidities. The Da Vinci robotic system allows us to perform this with sub-millimetre precision, dramatically reducing recovery time.",
+      "text_ro": "Gastric Bypass rămâne standardul de aur pentru pacienții cu IMC peste 45 sau comorbidități metabolice semnificative. Sistemul robotic Da Vinci ne permite să efectuăm aceasta cu precizie sub-milimetrică, reducând dramatic timpul de recuperare.",
+      "doctor": "Dr. Cuma",
+      "title_en": "Bariatric & Metabolic Surgery Specialist",
+      "title_ro": "Specialist în Chirurgie Bariatrică și Metabolică"
     },
-    "details_en": {
-      "hospitalStay": "4 Nights (Private Hospital)",
-      "hotelStay": "3 Nights (5-Star Hotel)",
-      "anesthesia": "General",
-      "returnToWork": "10-14 Days"
-    },
+    "steps": [
+      { "en": "Full metabolic panel and gastroscopy pre-operative", "ro": "Panel metabolic complet și gastroscopie preoperatorie" },
+      { "en": "Da Vinci robotic-assisted Roux-en-Y gastric bypass", "ro": "Bypass gastric Roux-en-Y asistat robotic Da Vinci" },
+      { "en": "Creation of small gastric pouch (30mL)", "ro": "Crearea unui mic buzunar gastric (30mL)" },
+      { "en": "3 nights private hospital recovery", "ro": "3 nopți recuperare în spital privat" },
+      { "en": "18-month dietary and metabolic follow-up", "ro": "18 luni follow-up alimentar și metabolic" }
+    ],
+    "advantages": [
+      { "en": "80%+ resolution of Type 2 Diabetes", "ro": "Rezoluție 80%+ a Diabetului de Tip 2" },
+      { "en": "75–85% excess weight loss", "ro": "75–85% pierdere a excesului de greutate" },
+      { "en": "Robotic precision — minimal blood loss", "ro": "Precizie robotică — pierdere minimă de sânge" },
+      { "en": "Durable results vs. sleeve (15+ years)", "ro": "Rezultate durabile vs. sleeve (15+ ani)" },
+      { "en": "Resolves sleep apnoea and hypertension", "ro": "Rezolvă apneea în somn și hipertensiunea" }
+    ],
+    "details": { "hospitalStay": "4 Nopți", "hotelStay": "3 Nopți (Hotel 5★)", "anesthesia": "Generală", "returnToWork": "10-14 Zile" },
+    "details_en": { "hospitalStay": "4 Nights", "hotelStay": "3 Nights (5★ Hotel)", "anesthesia": "General", "returnToWork": "10-14 Days" },
     "heroImage": "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?q=80&w=2070&auto=format&fit=crop",
     "scientificReferences": [
       "IFSO World Congress Guidelines for Robotic Gastric Bypass (2026).",
@@ -57,24 +79,72 @@
     "title_en": "Gastric Balloon Implant (Non-Surgical)",
     "subtitle": "Alternativa Non-Chirurgicală pentru Slăbire Controlată.",
     "subtitle_en": "The Non-Surgical Alternative for Controlled Weight Loss.",
-    "description": "Balonul Gastric (Elipse/Allurion) este o capsulă înghițită sau un balon implantat endoscopic, care induce senzația de sațietate precoce. Nu lasă cicatrici și se elimină/extrage după 6 luni. Tratat în Istanbul cu protocol de vacanță inclus.",
-    "description_en": "The Gastric Balloon (Elipse/Allurion) is a swallowable capsule or endoscopically implanted balloon that induces early satiety. No scarring, removed after 6 months. Treated in Istanbul with a full holiday protocol included.",
-    "details": {
-      "hospitalStay": "Nu necesită",
-      "hotelStay": "2 Nopți (Hotel 5 Stele)",
-      "anesthesia": "Sedare Ușoară (După Caz)",
-      "returnToWork": "1-2 Zile"
+    "description": "Balonul Gastric (Elipse/Allurion) este o capsulă înghițită sau un balon implantat endoscopic, care induce senzația de sațietate precoce.",
+    "description_en": "The Gastric Balloon (Elipse/Allurion) is a swallowable capsule or endoscopically implanted balloon that induces early satiety. No scarring, removed after 6 months.",
+    "doctorQuote": {
+      "text_en": "For patients who are not yet surgical candidates, the Elipse balloon is a transformative bridge therapy. We see an average of 15–18kg loss in 6 months — enough to then qualify safely for sleeve if needed.",
+      "text_ro": "Pentru pacienții care nu sunt încă candidați chirurgicali, balonul Elipse este o terapie punte transformatoare. Vedem o pierdere medie de 15–18kg în 6 luni — suficient pentru a se califica apoi în siguranță pentru sleeve dacă este necesar.",
+      "doctor": "Dr. Cuma",
+      "title_en": "Bariatric & Metabolic Surgery Specialist",
+      "title_ro": "Specialist în Chirurgie Bariatrică și Metabolică"
     },
-    "details_en": {
-      "hospitalStay": "Not Required",
-      "hotelStay": "2 Nights (5-Star Hotel)",
-      "anesthesia": "Light Sedation (Case by Case)",
-      "returnToWork": "1-2 Days"
-    },
+    "steps": [
+      { "en": "Swallowable capsule or endoscopic balloon placement (20 min)", "ro": "Capsulă înghițibilă sau plasare endoscopică balon (20 min)" },
+      { "en": "Light sedation or no anaesthesia required", "ro": "Sedare ușoară sau fără anestezie necesară" },
+      { "en": "Balloon remains in stomach for 6 months", "ro": "Balonul rămâne în stomac timp de 6 luni" },
+      { "en": "Monthly dietitian check-ins via telemedicine", "ro": "Consultații lunare cu dieteticianul prin telemedicină" },
+      { "en": "Balloon passes naturally or is removed endoscopically", "ro": "Balonul se elimină natural sau este îndepărtat endoscopic" }
+    ],
+    "advantages": [
+      { "en": "No surgery, no scarring, no hospital stay", "ro": "Fără chirurgie, fără cicatrici, fără spitalizare" },
+      { "en": "15–18kg average loss in 6 months", "ro": "Pierdere medie 15–18kg în 6 luni" },
+      { "en": "Return to work same day or next day", "ro": "Revenire la muncă în aceeași zi sau a doua zi" },
+      { "en": "Ideal bridge to bariatric surgery", "ro": "Punte ideală spre chirurgia bariatrică" },
+      { "en": "Covered under Meva holiday package", "ro": "Inclus în pachetul de vacanță Meva" }
+    ],
+    "details": { "hospitalStay": "Nu necesită", "hotelStay": "2 Nopți (Hotel 5★)", "anesthesia": "Sedare Ușoară", "returnToWork": "1-2 Zile" },
+    "details_en": { "hospitalStay": "Not Required", "hotelStay": "2 Nights (5★ Hotel)", "anesthesia": "Light Sedation", "returnToWork": "1-2 Days" },
     "heroImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop",
     "scientificReferences": [
       "Sullivan, S., et al. (2024). 'Efficacy of Swallowable Gastric Balloons in Moderate Obesity'. Obesity Surgery Journal.",
-      "ASGE (American Society for Gastrointestinal Endoscopy) Guidelines on Intragastric Balloons."
+      "ASGE Guidelines on Intragastric Balloons."
+    ]
+  },
+  {
+    "slug": "hair-transplant",
+    "title": "Transplant de Păr Istanbul",
+    "title_en": "Hair Transplant Istanbul",
+    "subtitle": "Tehnica Sapphire FUE & DHI cu Dr. Harun.",
+    "subtitle_en": "Sapphire FUE & DHI Technique with Dr. Harun.",
+    "description": "Transplantul de păr prin tehnica Sapphire FUE și DHI garantează rezultate naturale fără cicatrici vizibile. Dr. Harun Alakaya a efectuat peste 12.000 de proceduri de succes.",
+    "description_en": "Hair transplantation via Sapphire FUE and DHI guarantees natural results with no visible scarring. Dr. Harun has performed over 12,000 successful procedures.",
+    "doctorQuote": {
+      "text_en": "The Sapphire FUE blade opens micro-channels with 40% less tissue trauma than steel blades. Combined with DHI's direct implantation, we achieve graft survival rates above 97% — and hairlines that are indistinguishable from natural growth.",
+      "text_ro": "Lama Sapphire FUE deschide micro-canale cu 40% mai puțin traumatism tisular față de lamele de oțel. Combinat cu implantarea directă DHI, obținem rate de supraviețuire a grefelor peste 97% — și linii ale părului indistinguibile de creșterea naturală.",
+      "doctor": "Dr. Harun",
+      "title_en": "Hair & Eyebrow Transplant Specialist · Sapphire FUE · DHI",
+      "title_ro": "Specialist Transplant Păr & Sprâncene · Sapphire FUE · DHI"
+    },
+    "steps": [
+      { "en": "Hairline design and graft count planning session", "ro": "Sesiune de design a liniei părului și planificare grefe" },
+      { "en": "Scalp anaesthesia (pain-free needle-free system)", "ro": "Anestezie a scalpului (sistem fără durere, fără ac)" },
+      { "en": "Sapphire FUE extraction of follicular units (4–8 hrs)", "ro": "Extracție Sapphire FUE a unităților foliculare (4–8 ore)" },
+      { "en": "DHI direct implantation with Choi pen", "ro": "Implantare directă DHI cu stiloul Choi" },
+      { "en": "12-month growth monitoring with photographic comparison", "ro": "Monitorizare creștere 12 luni cu comparație fotografică" }
+    ],
+    "advantages": [
+      { "en": "97%+ graft survival rate", "ro": "Rată de supraviețuire grefe 97%+" },
+      { "en": "Permanent, natural-looking results", "ro": "Rezultate permanente, cu aspect natural" },
+      { "en": "No linear scarring (FUE method)", "ro": "Fără cicatrici liniare (metoda FUE)" },
+      { "en": "Non-shaven options available", "ro": "Opțiuni disponibile fără ras" },
+      { "en": "Same-day discharge, back to work in 3 days", "ro": "Externare în aceeași zi, înapoi la muncă în 3 zile" }
+    ],
+    "details": { "hospitalStay": "Nu necesită (Clinică Ambulatorie)", "hotelStay": "3 Nopți (Hotel 5★)", "anesthesia": "Locală", "returnToWork": "3-5 Zile" },
+    "details_en": { "hospitalStay": "Not Required (Day Clinic)", "hotelStay": "3 Nights (5★ Hotel)", "anesthesia": "Local", "returnToWork": "3-5 Days" },
+    "heroImage": "https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=2070&auto=format&fit=crop",
+    "scientificReferences": [
+      "ISHRS (International Society of Hair Restoration Surgery) Practice Standards 2025.",
+      "Comparative Analysis of Sapphire vs Steel FUE Blades: Graft Survival and Patient Satisfaction. JHRS 2024."
     ]
   },
   {
@@ -83,20 +153,31 @@
     "title_en": "Premium Dental Implants",
     "subtitle": "Zâmbet Hollywoodian. Straumann & Nobel Biocare.",
     "subtitle_en": "Hollywood Smile. Featuring Straumann & Nobel Biocare.",
-    "description": "Reconstrucția maxilo-facială prin implanturi dentare folosește titan pur pentru siguranță și coroane de zirconiu ultra-rezistente. EACMFS Certified Doctors din Istanbul la o fracțiune din costul european. Zâmbește din nou cu încredere.",
-    "description_en": "Maxillofacial reconstruction using dental implants features pure titanium for safety and ultra-resistant zirconium crowns. EACMFS Certified Doctors in Istanbul at a fraction of European costs. Smile with confidence again.",
-    "details": {
-      "hospitalStay": "Nu necesită",
-      "hotelStay": "5 Nopți (Hotel 5 Stele)",
-      "anesthesia": "Locală",
-      "returnToWork": "Imediat"
+    "description": "Reconstrucția maxilo-facială prin implanturi dentare folosește titan pur pentru siguranță și coroane de zirconiu ultra-rezistente. EACMFS Certified Doctors din Istanbul la o fracțiune din costul european.",
+    "description_en": "Maxillofacial reconstruction using dental implants features pure titanium for safety and ultra-resistant zirconium crowns. EACMFS Certified Doctors in Istanbul at a fraction of European costs.",
+    "doctorQuote": {
+      "text_en": "With Straumann BLX implants and full-digital smile design, we can plan your entire reconstruction virtually before a single drill touches the bone. Same-day temporaries mean you leave Istanbul smiling.",
+      "text_ro": "Cu implanturi Straumann BLX și design digital complet al zâmbetului, putem planifica întreaga reconstrucție virtual înainte ca vreo freză să atingă osul. Coroanele temporare în aceeași zi înseamnă că plecați din Istanbul zâmbind.",
+      "doctor": "Dr. Ayşe Kaya",
+      "title_en": "Implantologist · ITI Fellow · Straumann Certified",
+      "title_ro": "Implantolog · Membră ITI · Certificată Straumann"
     },
-    "details_en": {
-      "hospitalStay": "Not Required",
-      "hotelStay": "5 Nights (5-Star Hotel)",
-      "anesthesia": "Local",
-      "returnToWork": "Immediate"
-    },
+    "steps": [
+      { "en": "3D CBCT scan and digital smile design", "ro": "Scanare 3D CBCT și design digital al zâmbetului" },
+      { "en": "Local anaesthesia — zero pain protocol", "ro": "Anestezie locală — protocol zero durere" },
+      { "en": "Titanium implant placement (Straumann / Nobel Biocare)", "ro": "Plasare implant titan (Straumann / Nobel Biocare)" },
+      { "en": "Zirconium crown fitting — same day temporary", "ro": "Montare coroană zirconiu — temporar în aceeași zi" },
+      { "en": "Final crown delivery (return visit or by mail)", "ro": "Livrare coroană finală (vizită returnare sau prin curier)" }
+    ],
+    "advantages": [
+      { "en": "40–60% cheaper than UK, Germany, Romania", "ro": "40–60% mai ieftin decât UK, Germania, România" },
+      { "en": "Straumann & Nobel Biocare — 15yr warranty", "ro": "Straumann & Nobel Biocare — garanție 15 ani" },
+      { "en": "Same-day temporary crowns", "ro": "Coroane temporare în aceeași zi" },
+      { "en": "All-on-4 / All-on-6 full arch available", "ro": "Disponibil All-on-4 / All-on-6 arc complet" },
+      { "en": "No hospital stay required", "ro": "Nu necesită spitalizare" }
+    ],
+    "details": { "hospitalStay": "Nu necesită", "hotelStay": "5 Nopți (Hotel 5★)", "anesthesia": "Locală", "returnToWork": "Imediat" },
+    "details_en": { "hospitalStay": "Not Required", "hotelStay": "5 Nights (5★ Hotel)", "anesthesia": "Local", "returnToWork": "Immediate" },
     "heroImage": "https://plus.unsplash.com/premium_photo-1664303498964-b8bfa93eff49?q=80&w=2070&auto=format&fit=crop",
     "scientificReferences": [
       "ITI (International Team for Implantology) Consensus Statement 2025.",
@@ -104,4 +185,3 @@
     ]
   }
 ]
-

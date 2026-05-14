@@ -40,6 +40,7 @@ const QuizPage = lazy(() => import('./pages/QuizPage'));
 const FAQPage = lazy(() => import('./pages/FAQPage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const ComparisonHub = lazy(() => import('./pages/ComparisonHub'));
+const TreatmentDetail = lazy(() => import('./pages/TreatmentDetail'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0b1626] flex items-center justify-center">
@@ -238,6 +239,9 @@ function App() {
                <Route path="/ro/politica-confidentialitate" element={<PrivacyPolicy />} />
                <Route path="/ro/comparatie-medicala" element={<ComparisonHub />} />
                <Route path="/ro/romani-istanbul" element={<RomaniaSpecial />} />
+               {/* IVF pages */}
+               <Route path="/ro/ivf-ciprul-de-nord" element={<TreatmentDetail />} />
+               <Route path="/ro/hair-transplant" element={<HairTransplant lang="ro" />} />
                {/* wildcard last */}
                <Route path="/ro/:slug" element={<TreatmentPage />} />
     
@@ -259,6 +263,8 @@ function App() {
                <Route path="/en/contact" element={<Contact />} />
                <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
                <Route path="/en/medical-comparison" element={<ComparisonHub />} />
+               {/* IVF pages */}
+               <Route path="/en/ivf-northern-cyprus" element={<TreatmentDetail />} />
                {/* wildcard last */}
                <Route path="/en/:slug" element={<TreatmentPage />} />
                
