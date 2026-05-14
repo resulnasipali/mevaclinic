@@ -401,4 +401,61 @@
     <lastmod>2026-05-04</lastmod>
   </url>
 
+  <!-- /treatments/:slug — Dynamic Treatment Detail Pages -->
+  <url>
+    <loc>https://www.mevaclinic.com/en/treatments/bariatric-surgery</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/bariatric-surgery" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/chirurgie-bariatrica" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mevaclinic.com/en/treatments/bariatric-surgery" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mevaclinic.com/ro/treatments/chirurgie-bariatrica</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/chirurgie-bariatrica" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/bariatric-surgery" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.mevaclinic.com/en/treatments/hair-transplant</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/hair-transplant" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/transplant-par" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mevaclinic.com/en/treatments/hair-transplant" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mevaclinic.com/ro/treatments/transplant-par</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/transplant-par" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/hair-transplant" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.mevaclinic.com/en/treatments/ivf-cyprus</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/ivf-cyprus" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/fiv-cipru" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mevaclinic.com/en/treatments/ivf-cyprus" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mevaclinic.com/ro/treatments/fiv-cipru</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/fiv-cipru" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/ivf-cyprus" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+
+  <url>
+    <loc>https://www.mevaclinic.com/en/treatments/dental-implants</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/dental-implants" />
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/implanturi-dentare" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.mevaclinic.com/en/treatments/dental-implants" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+  <url>
+    <loc>https://www.mevaclinic.com/ro/treatments/implanturi-dentare</loc>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro/treatments/implanturi-dentare" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en/treatments/dental-implants" />
+    <changefreq>monthly</changefreq><priority>0.9</priority><lastmod>2026-05-14</lastmod>
+  </url>
+
 </urlset>

@@ -20,6 +20,7 @@ import {
   Activity, Quote, Star, ShieldCheck, Phone
 } from 'lucide-react';
 import treatmentData from '../data/treatmentDetails.json';
+import { findTreatment } from '../data/treatmentsData';
 import DynamicSEO from '../components/DynamicSEO';
 import { REVIEWERS } from '../components/MedicalReviewer';
 import { PxTrack } from '../utils/pixel';
@@ -46,8 +47,11 @@ const TreatmentDetail = () => {
   const location = useLocation();
   const isEn = location.pathname.startsWith('/en');
 
-  // Find by slug — supports both EN and RO slugs
-  const treatment = treatmentData.find(t => t.slug === slug);
+  // 1. Try new canonical treatmentsData.js first
+  // 2. Fall back to legacy treatmentDetails.json
+  const tdNew  = findTreatment(slug);
+  const tdLeg  = !tdNew ? treatmentData.find(t => t.slug === slug) : null;
+  const treatment = tdNew || tdLeg;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -80,16 +84,28 @@ const TreatmentDetail = () => {
     );
   }
 
-  // Localised fields
-  const title       = isEn ? (treatment.title_en    || treatment.title)    : treatment.title;
-  const subtitle    = isEn ? (treatment.subtitle_en  || treatment.subtitle) : treatment.subtitle;
-  const description = isEn ? (treatment.description_en || treatment.description) : treatment.description;
-  const details     = isEn ? (treatment.details_en   || treatment.details)  : treatment.details;
-  const quote       = treatment.doctorQuote;
+  // Localised fields — handle both data shapes
+  const isNew = !!tdNew; // using treatmentsData.js
+
+  const title       = isNew ? tdNew.title[isEn ? 'en' : 'ro']       : (isEn ? treatment.title_en    : treatment.title);
+  const subtitle    = isNew ? tdNew.subtitle[isEn ? 'en' : 'ro']    : (isEn ? treatment.subtitle_en : treatment.subtitle);
+  const description = isNew ? tdNew.metaDescription[isEn ? 'en' : 'ro'] : (isEn ? treatment.description_en : treatment.description);
+  const details     = isNew ? tdNew.specs[isEn ? 'en' : 'ro']       : (isEn ? treatment.details_en  : treatment.details);
+  const quote       = isNew ? {
+    text_en: tdNew.doctorQuote?.en,
+    text_ro: tdNew.doctorQuote?.ro,
+    doctor: tdNew.doctorQuote?.doctor,
+    title_en: tdNew.doctorQuote?.specialty?.en,
+    title_ro: tdNew.doctorQuote?.specialty?.ro,
+  } : treatment.doctorQuote;
   const quoteText   = isEn ? quote?.text_en : quote?.text_ro;
   const doctorTitle = isEn ? quote?.title_en : quote?.title_ro;
-  const steps       = treatment.steps   || [];
-  const advantages  = treatment.advantages || [];
+  const steps       = isNew ? (tdNew.steps || [])      : (treatment.steps || []);
+  const advantages  = isNew ? (tdNew.advantages || []) : (treatment.advantages || []);
+  const refs        = isNew ? (tdNew.references || []) : (treatment.scientificReferences || []);
+  const heroImage   = isNew ? tdNew.heroImage : treatment.heroImage;
+  const seoSlug     = isNew ? (isEn ? `treatments/${tdNew.slug}` : `treatments/${tdNew.roSlug}`) : treatment.slug;
+  const keywords    = isNew ? tdNew.keywords : `${title}, Meva Clinic, Istanbul`;
 
   // Match reviewer photo
   const reviewerKey = slug.includes('gastric') || slug.includes('bypass') || slug.includes('balloon') ? 'bariatric'
@@ -125,8 +141,8 @@ const TreatmentDetail = () => {
       <DynamicSEO
         title={`${title} | Meva Clinic Istanbul`}
         description={description.substring(0, 155)}
-        path={isEn ? `/en/${treatment.slug}` : `/ro/${treatment.slug}`}
-        keywords={`${title}, Meva Clinic, Istanbul, medical tourism, ${isEn ? 'Turkey surgery' : 'chirurgie Turcia'}`}
+        path={isEn ? `/en/${seoSlug}` : `/ro/${seoSlug}`}
+        keywords={keywords}
         schemaType="MedicalProcedure"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
@@ -136,7 +152,7 @@ const TreatmentDetail = () => {
         {/* Background image */}
         <div className="absolute inset-0">
           <img
-            src={treatment.heroImage}
+            src={heroImage}
             alt={title}
             width="1920" height="1080"
             loading="eager"
@@ -320,14 +336,14 @@ const TreatmentDetail = () => {
               </div>
 
               {/* Scientific References */}
-              {treatment.scientificReferences?.length > 0 && (
+              {refs?.length > 0 && (
                 <div className="p-6 bg-gray-50 rounded-2xl border border-gray-100">
                   <p className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4 flex items-center gap-2">
                     <ShieldCheck size={13} className="text-accent" />
                     {isEn ? 'Scientific References' : 'Referințe Științifice'}
                   </p>
                   <ul className="space-y-2">
-                    {treatment.scientificReferences.map((ref, i) => (
+                    {refs.map((ref, i) => (
                       <li key={i} className="flex gap-3 text-xs text-gray-500 leading-relaxed">
                         <span className="text-accent font-bold shrink-0">[{i + 1}]</span>
                         {ref}
