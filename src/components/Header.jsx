@@ -94,7 +94,7 @@ const Header = () => {
         { name: isEn ? 'Bariatric Surgery' : 'Chirurgie Bariatrică', path: isEn ? '/en/gastric-sleeve' : '/ro/gastric-sleeve' },
         { name: isEn ? 'Hair Transplant' : 'Transplant de Păr', path: isEn ? '/en/hair-transplant' : '/ro/implant-par' },
         { name: isEn ? 'Oncology' : 'Oncologie Robotică', path: isEn ? '/en/oncology' : '/ro/oncologie' },
-        { name: isEn ? 'Dental Implants' : 'Implant Dentar', path: isEn ? '/en/implant-dentar' : '/ro/implant-dentar' },
+        { name: isEn ? 'Dental Implants' : 'Implant Dentar', path: isEn ? '/en/dental-implants' : '/ro/implant-dentar' },
         { name: isEn ? 'Plastic Surgery' : 'Chirurgie Plastică', path: isEn ? '/en/plastic-surgery' : '/ro/chirurgie-plastica' },
         { name: isEn ? 'Organ Transplant' : 'Transplant de Organe', path: isEn ? '/en/organ-transplant' : '/ro/transplant-organe' }
       ]

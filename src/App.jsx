@@ -43,9 +43,36 @@ const ComparisonHub = lazy(() => import('./pages/ComparisonHub'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0b1626] flex items-center justify-center">
-    <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin"></div>
+    <div className="w-12 h-12 border-4 border-accent border-t-transparent rounded-full animate-spin" />
   </div>
 );
+
+// Error Boundary — prevents a single lazy page crash from killing the entire app
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, info) {
+    // Safe logging — never crashes itself
+    try { console.error('[Meva ErrorBoundary]', error, info); } catch {}
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex flex-col items-center justify-center bg-white px-6 text-center">
+          <h1 className="text-3xl font-bold text-prime mb-4">Oops — something went wrong</h1>
+          <p className="text-gray-500 mb-8">Please refresh the page or go back to the homepage.</p>
+          <a href="/" className="bg-accent text-prime font-bold px-8 py-3 rounded-full">Go Home</a>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
 
 const HomePage = ({ lang = 'ro' }) => {
   const isEn = lang === 'en';
@@ -174,17 +201,20 @@ function App() {
         <Header />
         
         <main id="main-content">
-          <Suspense fallback={<LoadingFallback />}>
-            <Routes>
+          <ErrorBoundary>
+            <Suspense fallback={<LoadingFallback />}>
+              <Routes>
                <Route path="/" element={<HomePage lang="ro" />} />
                <Route path="/ro" element={<HomePage lang="ro" />} />
                <Route path="/en" element={<HomePage lang="en" />} />
                
+               {/* RO routes — specific before wildcard */}
                <Route path="/ro/despre-noi" element={<About />} />
                <Route path="/ro/gastric-sleeve" element={<Bariatric lang="ro" />} />
                <Route path="/ro/gastric-bypass" element={<Bariatric lang="ro" />} />
                <Route path="/ro/balon-gastric" element={<Bariatric lang="ro" />} />
                <Route path="/ro/implant-par" element={<HairTransplant lang="ro" />} />
+               <Route path="/ro/implant-sprancene" element={<EyebrowTransplant lang="ro" />} />
                <Route path="/ro/oncologie" element={<Oncology lang="ro" />} />
                <Route path="/ro/implant-dentar" element={<DentalImplants lang="ro" />} />
                <Route path="/ro/chirurgie-plastica" element={<PlasticSurgery lang="ro" />} />
@@ -193,35 +223,40 @@ function App() {
                <Route path="/ro/blog/:slug" element={<BlogPost />} />
                <Route path="/ro/quiz" element={<QuizPage lang="ro" />} />
                <Route path="/ro/faq" element={<FAQPage />} />
+               <Route path="/ro/contact" element={<Contact />} />
                <Route path="/ro/politica-confidentialitate" element={<PrivacyPolicy />} />
                <Route path="/ro/comparatie-medicala" element={<ComparisonHub />} />
+               <Route path="/ro/romani-istanbul" element={<RomaniaSpecial />} />
+               {/* wildcard last */}
                <Route path="/ro/:slug" element={<TreatmentPage />} />
-               <Route path="/ro/contact" element={<Contact />} />
     
+               {/* EN routes — specific before wildcard */}
                <Route path="/en/about-us" element={<About />} />
                <Route path="/en/gastric-sleeve" element={<Bariatric lang="en" />} />
                <Route path="/en/gastric-bypass" element={<Bariatric lang="en" />} />
                <Route path="/en/gastric-balloon" element={<Bariatric lang="en" />} />
                <Route path="/en/hair-transplant" element={<HairTransplant lang="en" />} />
+               <Route path="/en/eyebrow-transplant" element={<EyebrowTransplant lang="en" />} />
                <Route path="/en/oncology" element={<Oncology lang="en" />} />
                <Route path="/en/dental-implants" element={<DentalImplants lang="en" />} />
                <Route path="/en/plastic-surgery" element={<PlasticSurgery lang="en" />} />
-               <Route path="/en/eyebrow-transplant" element={<EyebrowTransplant lang="en" />} />
                <Route path="/en/organ-transplant" element={<OrganTransplant lang="en" />} />
                <Route path="/en/blog" element={<BlogArchive />} />
                <Route path="/en/blog/:slug" element={<BlogPost />} />
                <Route path="/en/quiz" element={<QuizPage lang="en" />} />
                <Route path="/en/faq" element={<FAQPage />} />
+               <Route path="/en/contact" element={<Contact />} />
                <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
                <Route path="/en/medical-comparison" element={<ComparisonHub />} />
+               {/* wildcard last */}
                <Route path="/en/:slug" element={<TreatmentPage />} />
-               <Route path="/en/contact" element={<Contact />} />
                
                <Route path="/concierge" element={<ConciergePage />} />
                <Route path="/ro/romani-istanbul" element={<RomaniaSpecial />} />
                <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+              </Routes>
+            </Suspense>
+          </ErrorBoundary>
         </main>
         
         <Footer />
