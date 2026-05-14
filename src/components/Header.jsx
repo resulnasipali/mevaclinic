@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, Globe, ChevronDown, Activity, ShieldCheck, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import AppointmentModal from './AppointmentModal';
@@ -21,9 +21,12 @@ const Header = () => {
 
   const getOppositeLangPath = () => {
     const rawPath = location.pathname;
-    const path = rawPath.endsWith('/') && rawPath.length > 1 ? rawPath.slice(0, -1) : rawPath;
-    
-    // Explicit mappings for static pages
+    // Normalize: strip trailing slash, treat empty/root as '/ro'
+    const path = (rawPath.endsWith('/') && rawPath.length > 1)
+      ? rawPath.slice(0, -1)
+      : rawPath || '/ro';
+
+    // Explicit static page mappings
     const mappings = {
       '/ro/despre-noi': '/en/about-us',
       '/en/about-us': '/ro/despre-noi',
@@ -49,6 +52,8 @@ const Header = () => {
       '/en/gastric-balloon': '/ro/balon-gastric',
       '/ro/implant-par': '/en/hair-transplant',
       '/en/hair-transplant': '/ro/implant-par',
+      '/ro/implant-sprancene': '/en/eyebrow-transplant',
+      '/en/eyebrow-transplant': '/ro/implant-sprancene',
       '/ro/oncologie': '/en/oncology',
       '/en/oncology': '/ro/oncologie',
       '/ro/implant-dentar': '/en/dental-implants',
@@ -56,21 +61,35 @@ const Header = () => {
       '/ro/chirurgie-plastica': '/en/plastic-surgery',
       '/en/plastic-surgery': '/ro/chirurgie-plastica',
       '/ro/transplant-organe': '/en/organ-transplant',
-      '/en/organ-transplant': '/ro/transplant-organe'
+      '/en/organ-transplant': '/ro/transplant-organe',
+      '/ro/romani-istanbul': '/en',
+      '/': '/en',
+      '/ro': '/en',
+      '/en': '/ro',
     };
 
     if (mappings[path]) return mappings[path];
 
-    // Dynamic pages (Blog posts, Treatment slugs)
+    // Dynamic (blog slugs, treatment slugs)
     if (path.startsWith('/ro/')) return path.replace('/ro/', '/en/');
     if (path.startsWith('/en/')) return path.replace('/en/', '/ro/');
 
-    // Roots
-    if (path === '/' || path === '/ro') return '/en';
-    if (path === '/en') return '/ro';
-
+    // Final fallback
     return isEn ? '/ro' : '/en';
   };
+
+  // Click-outside ref to close dropdowns
+  const menuRef = useRef(null);
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setLangMenu(false);
+        setTreatmentsMenu(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -169,37 +188,48 @@ const Header = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center gap-6 shrink-0">
-            {/* Language Switcher */}
-            <div className="relative">
-               <button 
-                 onClick={() => setLangMenu(!langMenu)}
+            <div className="relative" ref={menuRef}>
+               <button
+                 onClick={() => { setLangMenu(!langMenu); setTreatmentsMenu(false); }}
                  className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-gray-100 text-xs font-bold text-prime hover:border-accent transition-all focus:outline-none focus:ring-2 focus:ring-accent"
-                 aria-label={isEn ? `Language: English. Switch language` : `Limbă: Română. Schimbă limba`}
+                 aria-label={isEn ? 'Language: English. Switch language' : 'Limbă: Română. Schimbă limba'}
                  aria-expanded={langMenu}
                  aria-haspopup="listbox"
                >
-                  <Globe size={14} className="text-accent" />
-                  {isEn ? 'EN' : 'RO'}
-                  <ChevronDown size={12} className={`transition-transform duration-300 ${langMenu ? 'rotate-180' : ''}`} />
+                 <Globe size={14} className="text-accent" />
+                 {isEn ? 'EN' : 'RO'}
+                 <ChevronDown size={12} className={`transition-transform duration-300 ${langMenu ? 'rotate-180' : ''}`} />
                </button>
-                               {langMenu && (
-                  <div className="absolute top-full right-0 mt-4 w-40 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fade-up z-[5001]">
-                     <Link 
-                       to={isEn ? getOppositeLangPath() : location.pathname} 
-                       className={`flex items-center justify-between px-4 py-4 text-xs font-bold text-prime hover:bg-gray-50 border-b border-gray-50 ${!isEn ? 'bg-gray-50' : ''}`}
-                     >
-                        <span className="flex items-center gap-2">🇹🇷 Română</span>
-                        {!isEn && <ShieldCheck size={14} className="text-accent" />}
-                     </Link>
-                     <Link 
-                       to={!isEn ? getOppositeLangPath() : location.pathname} 
-                       className={`flex items-center justify-between px-4 py-4 text-xs font-bold text-prime hover:bg-gray-50 ${isEn ? 'bg-gray-50' : ''}`}
-                     >
-                        <span className="flex items-center gap-2">🇬🇧 English</span>
-                        {isEn && <ShieldCheck size={14} className="text-accent" />}
-                     </Link>
-                  </div>
-                )}
+               {langMenu && (
+                 <div
+                   role="listbox"
+                   aria-label="Select language"
+                   className="absolute top-full right-0 mt-3 w-44 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-[5001]"
+                 >
+                   {/* RO option */}
+                   <Link
+                     to={isEn ? getOppositeLangPath() : location.pathname}
+                     role="option"
+                     aria-selected={!isEn}
+                     onClick={() => setLangMenu(false)}
+                     className={`flex items-center justify-between px-5 py-4 text-xs font-bold text-prime hover:bg-gray-50 border-b border-gray-50 transition-colors ${!isEn ? 'bg-accent/10' : ''}`}
+                   >
+                     <span className="flex items-center gap-2">🇷🇴 Română</span>
+                     {!isEn && <ShieldCheck size={13} className="text-accent" />}
+                   </Link>
+                   {/* EN option */}
+                   <Link
+                     to={!isEn ? getOppositeLangPath() : location.pathname}
+                     role="option"
+                     aria-selected={isEn}
+                     onClick={() => setLangMenu(false)}
+                     className={`flex items-center justify-between px-5 py-4 text-xs font-bold text-prime hover:bg-gray-50 transition-colors ${isEn ? 'bg-accent/10' : ''}`}
+                   >
+                     <span className="flex items-center gap-2">🇬🇧 English</span>
+                     {isEn && <ShieldCheck size={13} className="text-accent" />}
+                   </Link>
+                 </div>
+               )}
             </div>
 
             {/* Sarı Free Consultation Button - BREATHING ROOM FIX */}
@@ -271,14 +301,33 @@ const Header = () => {
                   )}
                 </div>
               ))}
-              <button 
+              {/* Mobile Language Switcher */}
+              <div className="flex items-center gap-6 pt-4 border-t border-white/10">
+                <Link
+                  to={isEn ? getOppositeLangPath() : location.pathname}
+                  onClick={() => setIsOpen(false)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm transition-all ${!isEn ? 'bg-accent text-prime' : 'border border-white/20 text-white hover:border-accent'}`}
+                  aria-label="Switch to Romanian"
+                >
+                  🇷🇴 Română
+                </Link>
+                <Link
+                  to={!isEn ? getOppositeLangPath() : location.pathname}
+                  onClick={() => setIsOpen(false)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm transition-all ${isEn ? 'bg-accent text-prime' : 'border border-white/20 text-white hover:border-accent'}`}
+                  aria-label="Switch to English"
+                >
+                  🇬🇧 English
+                </Link>
+              </div>
+              <button
                 onClick={() => {
                   setIsOpen(false);
                   setIsModalOpen(true);
                 }}
                 className="w-full max-w-xs bg-accent text-prime font-bold py-5 rounded-2xl text-lg uppercase tracking-widest"
               >
-                 {isEn ? 'Consultation' : 'Consultație'}
+                {isEn ? 'Consultation' : 'Consultație'}
               </button>
            </div>
         </div>
