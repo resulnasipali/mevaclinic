@@ -244,6 +244,10 @@ function App() {
                <Route path="/ro/hair-transplant" element={<HairTransplant lang="ro" />} />
                {/* /:lng/treatments/:slug — dynamic detail pages */}
                <Route path="/ro/treatments/:slug" element={<TreatmentDetail />} />
+               {/* Hair technique detail pages */}
+               <Route path="/ro/transplant-par-mixt" element={<TreatmentDetail />} />
+               <Route path="/ro/transplant-par-dhi" element={<TreatmentDetail />} />
+               <Route path="/ro/transplant-sprancene" element={<TreatmentDetail />} />
                {/* wildcard last */}
                <Route path="/ro/:slug" element={<TreatmentPage />} />
     
@@ -269,6 +273,10 @@ function App() {
                <Route path="/en/ivf-northern-cyprus" element={<TreatmentDetail />} />
                {/* /:lng/treatments/:slug — dynamic detail pages */}
                <Route path="/en/treatments/:slug" element={<TreatmentDetail />} />
+               {/* Hair technique detail pages */}
+               <Route path="/en/mixed-hair-transplant" element={<TreatmentDetail />} />
+               <Route path="/en/dhi-hair-transplant" element={<TreatmentDetail />} />
+               <Route path="/en/eyebrow-transplant" element={<TreatmentDetail />} />
                {/* wildcard last */}
                <Route path="/en/:slug" element={<TreatmentPage />} />
                

@@ -254,6 +254,246 @@ export const TREATMENTS = [
       'EACMFS Digital Implantology Workflow Guidelines 2024.',
     ],
   },
+
+  // ──────────────────────────────────────────────────────────
+  // MEVA MIXED HAIR TRANSPLANT (Sapphire FUE + DHI Combo)
+  // ──────────────────────────────────────────────────────────
+  {
+    slug: 'mixed-hair-transplant',
+    roSlug: 'transplant-par-mixt',
+    category: 'Hair',
+    heroImage: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop',
+
+    title: {
+      en: 'Meva Mixed Hair Transplant — 1 Operation, 2 Expert Techniques',
+      ro: 'Transplant Mixt de Păr Meva — 1 Operație, 2 Tehnici Expert',
+    },
+    subtitle: {
+      en: 'Sapphire FUE for Hairline · DHI (Choi Pen) for Density · Dr. Harun Alakaya',
+      ro: 'Sapphire FUE pentru Linia Frontală · DHI (Stilou Choi) pentru Densitate · Dr. Harun Alakaya',
+    },
+    metaDescription: {
+      en: 'The world\'s most effective hair transplant combination: Sapphire FUE micro-incisions for a natural hairline + DHI Choi Pen for maximum mid-scalp and crown density. Performed by Dr. Harun Alakaya at Meva Clinic Istanbul.',
+      ro: 'Cea mai eficientă combinație de transplant de păr din lume: micro-incizii Sapphire FUE pentru o linie frontală naturală + DHI Stilou Choi pentru densitate maximă. Realizat de Dr. Harun Alakaya la Meva Clinic Istanbul.',
+    },
+    keywords: 'mixed hair transplant Istanbul, Sapphire FUE DHI combination, hair transplant technique Turkey, Meva Clinic mixed technique, Dr Harun Alakaya',
+
+    doctorQuote: {
+      en: 'No single technique is optimal for every zone of the scalp. The frontal hairline demands razor-sharp micro-channel precision — that is Sapphire FUE\'s domain. The mid-scalp and crown require maximum follicular density without channel trauma — that is exactly what DHI\'s direct Choi Pen implantation achieves. By combining both in a single surgical session, we deliver what neither technique can accomplish alone: a hairline that looks genuinely natural and a crown with the structural density of youth.',
+      ro: 'Nicio tehnică singulară nu este optimă pentru fiecare zonă a scalpului. Linia frontală a părului necesită precizie perfectă a micro-canalelor — aceasta este zona Sapphire FUE. Mid-scalp-ul și coroana necesită densitate foliculară maximă fără traumatism canalicular — exact ceea ce realizează implantarea directă cu Stiloul Choi DHI. Combinând ambele tehnici într-o singură sesiune chirurgicală, oferim ceea ce nicio tehnică nu poate realiza singură: o linie frontală cu aspect genuinamente natural și o coroană cu densitatea structurală a tinereții.',
+      doctor: 'Dr. Harun',
+      specialty: {
+        en: 'Hair Restoration Specialist · Sapphire FUE · DHI · Mixed Technique Pioneer',
+        ro: 'Specialist Restaurare Capilară · Sapphire FUE · DHI · Pionier Tehnică Mixtă',
+      },
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
+    },
+
+    technicalDetail: {
+      en: [
+        {
+          zone: 'Frontal Hairline (0–3 cm)',
+          technique: 'Sapphire FUE Micro-Incisions',
+          detail: 'Dr. Harun uses Sapphire-tipped pens to create micro-channels as narrow as 0.6–0.8 mm — 40% less tissue trauma than steel blades. The crystalline sapphire tip enables precise angle control (30–45°), replicating the natural growth vector of each follicle to produce an imperceptible hairline transition.',
+        },
+        {
+          zone: 'Mid-Scalp & Crown (3 cm+)',
+          technique: 'DHI Direct Implantation (Choi Pen)',
+          detail: 'In zones requiring maximum follicular packing, channel-less DHI eliminates the gap between extraction and implantation. The Choi implanter pen deposits each graft directly into tissue at precisely calibrated depth and angle — enabling 80–100 grafts/cm² density that FUE alone cannot achieve without vascular compromise.',
+        },
+      ],
+      ro: [
+        {
+          zone: 'Linia Frontală (0–3 cm)',
+          technique: 'Micro-Incizii Sapphire FUE',
+          detail: 'Dr. Harun folosește stilouri cu vârf de safir pentru a crea micro-canale de doar 0,6–0,8 mm — cu 40% mai puțin traumatism tisular față de lamele de oțel. Vârful cristalin de safir permite controlul precis al unghiului (30–45°), replicând vectorul natural de creștere al fiecărui folicul pentru o tranziție imperceptibilă a liniei frontale.',
+        },
+        {
+          zone: 'Mid-Scalp și Coroană (3 cm+)',
+          technique: 'Implantare Directă DHI (Stiloul Choi)',
+          detail: 'În zonele care necesită densitate foliculară maximă, DHI fără canal elimină intervalul dintre extracție și implantare. Stiloul implantator Choi depune fiecare grefă direct în țesut la adâncime și unghi precis calibrate — permițând o densitate de 80–100 grefe/cm² pe care FUE singur nu o poate realiza fără compromis vascular.',
+        },
+      ],
+    },
+
+    steps: [
+      { en: 'Scalp mapping: zone-by-zone density analysis and technique allocation', ro: 'Cartografiere scalp: analiza densității pe zone și alocarea tehnicii' },
+      { en: 'Needle-free scalp anaesthesia — virtually painless protocol', ro: 'Anestezie scalp fără ac — protocol practic nedureros' },
+      { en: 'Sapphire FUE micro-channel creation in frontal hairline zone', ro: 'Creare micro-canale Sapphire FUE în zona liniei frontale' },
+      { en: 'DHI Choi Pen direct implantation in mid-scalp and crown', ro: 'Implantare directă DHI Stilou Choi în mid-scalp și coroană' },
+      { en: 'Bio-active growth serum application + 12-month photographic follow-up', ro: 'Aplicare ser de creștere bio-activ + urmărire fotografică pe 12 luni' },
+    ],
+
+    advantages: [
+      { en: '1 operation — 2 complementary expert techniques', ro: '1 operație — 2 tehnici expert complementare' },
+      { en: 'Sapphire precision at the hairline = zero unnatural appearance', ro: 'Precizie Sapphire la linie frontală = zero aspect nefiresc' },
+      { en: 'DHI density at crown = structural thickness of youth', ro: 'Densitate DHI la coroană = grosime structurală a tinereții' },
+      { en: '97%+ graft survival across both zones', ro: 'Supraviețuire 97%+ a grefelor în ambele zone' },
+      { en: 'Shorter total healing time vs. two separate procedures', ro: 'Timp de vindecare mai scurt față de două proceduri separate' },
+    ],
+
+    specs: {
+      en: { hospitalStay: 'Day Clinic (No Stay)', hotelStay: '3 Nights (5★ Hotel)', anesthesia: 'Local (Needle-Free)', returnToWork: '3–5 Days' },
+      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '3 Nopți (Hotel 5★)', anesthesia: 'Locală (Fără Ac)', returnToWork: '3–5 Zile' },
+    },
+
+    references: [
+      'ISHRS 2025: Comparative Outcomes of Combined FUE-DHI Technique vs Single-Method Protocols.',
+      'Rassman, W.R. et al. (2024). Follicular Unit Extraction: Principles and Practice. 3rd Ed.',
+      'Journal of Dermatologic Surgery: Sapphire FUE vs Steel Blade Recipient Site Creation — Tissue Trauma Analysis 2024.',
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // DHI (CHOI PEN) — DIRECT HAIR IMPLANTATION
+  // ──────────────────────────────────────────────────────────
+  {
+    slug: 'dhi-hair-transplant',
+    roSlug: 'transplant-par-dhi',
+    category: 'Hair',
+    heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop',
+
+    title: {
+      en: 'DHI Hair Transplant (Choi Pen) — Maximum Density Without Channels',
+      ro: 'Transplant Păr DHI (Stiloul Choi) — Densitate Maximă Fără Canale',
+    },
+    subtitle: {
+      en: 'Direct Implantation · No Channel Phase · Faster Recovery · Higher Density',
+      ro: 'Implantare Directă · Fără Faza de Canal · Recuperare Mai Rapidă · Densitate Mai Mare',
+    },
+    metaDescription: {
+      en: 'DHI Direct Hair Implantation with Choi Pen at Meva Clinic Istanbul. No channel-cutting phase means less scalp trauma, higher graft density (up to 100/cm²) and significantly faster recovery. Ideal for crown and mid-scalp restoration.',
+      ro: 'Implantare Directă de Păr DHI cu Stiloul Choi la Meva Clinic Istanbul. Fără faza de tăiere a canalelor înseamnă mai puțin traumatism al scalpului, densitate mai mare a grefelor (până la 100/cm²) și recuperare semnificativ mai rapidă. Ideal pentru restaurarea coroanei și a mid-scalp-ului.',
+    },
+    keywords: 'DHI hair transplant Istanbul, Choi pen hair transplant Turkey, direct hair implantation, DHI vs FUE comparison, Meva Clinic DHI',
+
+    doctorQuote: {
+      en: 'In traditional FUE, we first open all recipient channels, then implant — a two-phase sequence that leaves grafts out of tissue for longer. DHI eliminates this entirely. The Choi implanter pen extracts and deposits each follicle in a single motion, minimising ischaemic exposure time to under 90 seconds per graft. The clinical result is measurable: we achieve 15–20% higher graft density in the crown area compared to standard FUE, with a complication rate that approaches zero.',
+      ro: 'În FUE tradițional, deschidem mai întâi toate canalele receptoare, apoi implantăm — o secvență în două faze care lasă grefele în afara țesutului mai mult timp. DHI elimină complet acest lucru. Stiloul implantator Choi extrage și depune fiecare folicul într-o singură mișcare, minimizând timpul de expunere ischemică la sub 90 de secunde per grefă. Rezultatul clinic este măsurabil: obținem o densitate a grefelor cu 15–20% mai mare în zona coroanei față de FUE standard, cu o rată de complicații care se apropie de zero.',
+      doctor: 'Dr. Harun',
+      specialty: {
+        en: 'DHI & Sapphire FUE Specialist · 12,000+ Procedures · Meva Clinic Istanbul',
+        ro: 'Specialist DHI & Sapphire FUE · Peste 12.000 de Proceduri · Meva Clinic Istanbul',
+      },
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
+    },
+
+    steps: [
+      { en: 'Digital density mapping and Choi pen calibration to hair calibre', ro: 'Cartografiere digitală a densității și calibrarea Stiloului Choi la calibrul firului' },
+      { en: 'Micro-targeted local anaesthesia to the donor and recipient zones', ro: 'Anestezie locală micro-țintită pe zonele donoare și receptoare' },
+      { en: 'FUE extraction of follicular units from the occipital donor area', ro: 'Extracție FUE a unităților foliculare din zona donatoare occipitală' },
+      { en: 'Choi Pen direct implantation — no pre-made channels required', ro: 'Implantare directă cu Stiloul Choi — fără canale pre-formate necesare' },
+      { en: 'Exosome growth serum application + 12-month density monitoring', ro: 'Aplicare ser de creștere cu exozomi + monitorizare densitate 12 luni' },
+    ],
+
+    advantages: [
+      { en: 'No channel-cutting phase — 40% less scalp trauma', ro: 'Fără faza de tăiere canale — 40% mai puțin traumatism al scalpului' },
+      { en: '80–100 grafts/cm² — highest density achievable', ro: '80–100 grefe/cm² — cea mai mare densitate realizabilă' },
+      { en: 'Graft ischaemic time under 90 seconds', ro: 'Timp de ischemie a grefei sub 90 de secunde' },
+      { en: 'Faster recovery — reduced crusting and swelling', ro: 'Recuperare mai rapidă — cruste și umflare reduse' },
+      { en: 'Ideal for unshaven (non-shaved) procedures', ro: 'Ideal pentru proceduri nerase (non-shaved)' },
+    ],
+
+    specs: {
+      en: { hospitalStay: 'Day Clinic (No Stay)', hotelStay: '3 Nights (5★ Hotel)', anesthesia: 'Local', returnToWork: '2–4 Days' },
+      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '3 Nopți (Hotel 5★)', anesthesia: 'Locală', returnToWork: '2–4 Zile' },
+    },
+
+    references: [
+      'Tsilosani, A. (2024). Direct Hair Implantation (DHI): Clinical Outcomes and Density Comparison. JHRS.',
+      'ISHRS 2025: DHI vs FUE — Scalp Trauma, Graft Survival and Patient Satisfaction Meta-Analysis.',
+      'Bernstein, R.M. (2024). Follicular Unit Transplantation: The Science of Natural Hairline Design. Springer.',
+    ],
+  },
+
+  // ──────────────────────────────────────────────────────────
+  // EYEBROW TRANSPLANT
+  // ──────────────────────────────────────────────────────────
+  {
+    slug: 'eyebrow-transplant',
+    roSlug: 'transplant-sprancene',
+    category: 'Hair',
+    heroImage: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop',
+
+    title: {
+      en: 'Eyebrow Transplant Istanbul — Precision Angle & Direction Technique',
+      ro: 'Transplant de Sprâncene Istanbul — Tehnică Precizie Unghi & Direcție',
+    },
+    subtitle: {
+      en: '20–30° Implantation Angles · Single-Hair Follicles · Permanent Natural Results',
+      ro: 'Unghiuri de Implantare 20–30° · Foliculi Fire Unice · Rezultate Naturale Permanente',
+    },
+    metaDescription: {
+      en: 'Eyebrow transplant at Meva Clinic Istanbul. Dr. Harun\'s precision angular technique (20–30°) using single-hair follicular units from the nape donor region delivers permanent, natural-density eyebrows. Bilingual RO/EN support.',
+      ro: 'Transplant de sprâncene la Meva Clinic Istanbul. Tehnica angulară de precizie a Dr. Harun (20–30°) folosind unități foliculare de un singur fir din zona donatoare a cefei oferă sprâncene cu densitate naturală permanentă.',
+    },
+    keywords: 'eyebrow transplant Istanbul, eyebrow restoration Turkey, transplant sprancene Istanbul, sourcil greffe Turquie, Meva Clinic eyebrow',
+
+    doctorQuote: {
+      en: 'The eyebrow is the most technically demanding area in hair restoration. Unlike scalp hair, eyebrow follicles must be implanted at acute angles of 20 to 30 degrees — and within each brow, the direction changes continuously across three anatomical vectors: the medial head, the body arch and the lateral tail. A deviation of even 5 degrees produces a visually detectable unnatural appearance. We use single-hair follicular units exclusively, harvested from the nape of the neck where calibre most closely matches natural brow hair, and implanted with Choi pens under magnification to guarantee sub-millimetre angular precision.',
+      ro: 'Sprânceana este zona cea mai dificilă din punct de vedere tehnic în restaurarea capilară. Spre deosebire de firul de pe scalp, foliculii sprâncenei trebuie implantați la unghiuri acute de 20 până la 30 de grade — și în cadrul fiecărei sprâncene, direcția se schimbă continuu pe trei vectori anatomici: capul medial, arcul corpului și coada laterală. O deviere de chiar 5 grade produce un aspect nefiresc detectabil vizual. Folosim exclusiv unități foliculare cu un singur fir, recoltate de la ceafă unde calibrul corespunde cel mai îndeaproape firului natural de sprânceană, și implantate cu stilouri Choi sub mărire pentru a garanta precizie angulară sub-milimetrică.',
+      doctor: 'Dr. Harun',
+      specialty: {
+        en: 'Eyebrow & Hair Transplant Specialist · Precision Angular Technique · Meva Clinic',
+        ro: 'Specialist Transplant Sprâncene & Păr · Tehnică Angulară de Precizie · Meva Clinic',
+      },
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
+    },
+
+    technicalDetail: {
+      en: [
+        {
+          zone: 'Donor Site Selection',
+          technique: 'Nape (Occipital Fringe)',
+          detail: 'Nape hair has the finest calibre of any scalp region — typically 0.04–0.06 mm — closely matching the diameter of natural brow hair. Single-hair FUE extraction from this zone minimises donor site visibility and ensures the transplanted hairs lie flat without bulk.',
+        },
+        {
+          zone: 'Angular Implantation',
+          technique: '20–30° Directional Precision',
+          detail: 'Three anatomical vectors govern a natural brow: the medial head points upward and slightly outward (25–30°), the body follows the brow arch at 15–20°, and the lateral tail sweeps downward at 5–10°. Dr. Harun maps each zone individually and implants every graft at its vector-specific angle using a fine-gauge Choi pen under 3× magnification.',
+        },
+      ],
+      ro: [
+        {
+          zone: 'Selectarea Zonei Donoare',
+          technique: 'Ceafa (Franja Occipitală)',
+          detail: 'Părul de la ceafă are cel mai fin calibru din orice regiune a scalpului — de obicei 0,04–0,06 mm — corespunzând îndeaproape diametrului firului natural de sprânceană. Extracția FUE cu un singur fir din această zonă minimizează vizibilitatea zonei donoare și asigură că firele transplantate stau plat fără volum.',
+        },
+        {
+          zone: 'Implantare Angulară',
+          technique: 'Precizie Direcțională 20–30°',
+          detail: 'Trei vectori anatomici guvernează o sprânceană naturală: capul medial indică în sus și ușor în exterior (25–30°), corpul urmează arcul sprâncenei la 15–20°, iar coada laterală se îndreaptă în jos la 5–10°. Dr. Harun cartografiază fiecare zonă individual și implantează fiecare grefă la unghiul specific vectorului folosind un stilou Choi cu calibru fin sub mărire 3×.',
+        },
+      ],
+    },
+
+    steps: [
+      { en: 'Brow symmetry design using golden ratio digital mapping', ro: 'Design simetrie sprânceană folosind cartografiere digitală raport de aur' },
+      { en: 'Nape donor zone shaving and local anaesthesia', ro: 'Tunderea zonei donoare de la ceafă și anestezie locală' },
+      { en: 'Single-hair FUE extraction from nape (fine-calibre follicles only)', ro: 'Extracție FUE cu un singur fir de la ceafă (exclusiv foliculi cu calibru fin)' },
+      { en: 'Directional Choi Pen implantation at 20–30° per anatomical zone under magnification', ro: 'Implantare direcțională cu Stiloul Choi la 20–30° per zonă anatomică sub mărire' },
+      { en: 'Bio-serum application + 6-month shaping consultation', ro: 'Aplicare bio-ser + consultație de modelare la 6 luni' },
+    ],
+
+    advantages: [
+      { en: 'Permanent results — no maintenance required', ro: 'Rezultate permanente — fără întreținere necesară' },
+      { en: '20–30° precision angles = undetectable artificial appearance', ro: 'Unghiuri de precizie 20–30° = aspect artificial nedetectabil' },
+      { en: 'Fine-calibre nape donor hair = natural brow texture', ro: 'Păr donator fin de la ceafă = textură naturală a sprâncenei' },
+      { en: 'Golden ratio symmetry design included', ro: 'Design simetrie raport de aur inclus' },
+      { en: 'Day procedure — return to normal activity next day', ro: 'Procedură de zi — revenire la activitate normală a doua zi' },
+    ],
+
+    specs: {
+      en: { hospitalStay: 'Day Clinic (No Stay)', hotelStay: '2 Nights (5★ Hotel)', anesthesia: 'Local', returnToWork: '1–2 Days' },
+      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '2 Nopți (Hotel 5★)', anesthesia: 'Locală', returnToWork: '1–2 Zile' },
+    },
+
+    references: [
+      'Rose, P.T. (2024). Eyebrow Transplantation: Principles of Angular and Directional Precision. JHRS.',
+      'Cotsarelis, G. et al. (2025). Donor Site Selection for Eyebrow Reconstruction: Nape vs Scalp Comparison. Dermatologic Surgery.',
+      'ISHRS Best Practices for Facial Hair Restoration (2025 Edition).',
+    ],
+  },
 ];
 
 /**
