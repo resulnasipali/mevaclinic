@@ -1,5 +1,5 @@
 import React, { useEffect, Suspense, lazy } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import TrustBadges from './components/TrustBadges'
@@ -172,6 +172,16 @@ const ReviewSchema = () => {
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
 };
 
+// Syncs <html lang> attribute with the current route on every navigation
+const LangSync = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const lang = pathname.startsWith('/en') ? 'en' : 'ro';
+    document.documentElement.setAttribute('lang', lang);
+  }, [pathname]);
+  return null;
+};
+
 function App() {
   useEffect(() => {
     const observerOptions = {
@@ -196,6 +206,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <LangSync />
       <div className="font-sans antialiased text-gray-900 bg-white min-h-screen">
 
         <Header />

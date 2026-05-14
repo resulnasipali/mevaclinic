@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ro">
+<html lang="ro" id="html-root">
   <head>
     <!-- Security: SPF & DMARC Infrastructure Preparation -->
     <!-- v=spf1 include:_spf.google.com ~all -->
@@ -47,7 +47,18 @@
 
     <meta charset="UTF-8" />
     <base href="/" />
+    <!-- Favicon: SVG primary + ICO fallback for browser compatibility -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <!-- Dynamic lang attribute: set from URL before React hydrates -->
+    <script>
+    (function(){
+      var p = window.location.pathname;
+      var lang = p.startsWith('/en') ? 'en' : 'ro';
+      document.getElementById('html-root').setAttribute('lang', lang);
+    })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
     <meta name="description" content="Meva Clinic Istanbul oferă pachete VIP all-inclusive pentru Gastric Sleeve și Bypass. Recuperare rapidă, experți de top și rezultate dovedite. Află prețul!" />
     

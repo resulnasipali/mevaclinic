@@ -125,8 +125,8 @@ const Header = () => {
   return (
     <>
       <TopBar />
-      <header 
-        className="sticky top-0 left-0 right-0 z-[9999] transition-all duration-300 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.1)] overflow-hidden"
+      <header
+        className="sticky top-0 left-0 right-0 z-[9999] transition-all duration-300 bg-white shadow-[0_2px_10px_rgba(0,0,0,0.1)]"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex items-center justify-between py-4">
           {/* Brand - Full Logo: Meva Clinic with Smooth Scroll */}

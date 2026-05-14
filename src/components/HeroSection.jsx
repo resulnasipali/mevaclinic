@@ -30,7 +30,7 @@ const HeroSection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10 w-full py-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start lg:items-center">
           
           {/* Content Column (7/12) */}
           <div className="lg:col-span-7 animate-fade-up">
@@ -74,8 +74,8 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Form Column (5/12) */}
-          <div className="lg:col-span-5 animate-fade-up [animation-delay:200ms]">
+          {/* Form Column (5/12) — order-last on mobile keeps H1 always above form */}
+          <div className="lg:col-span-5 animate-fade-up [animation-delay:200ms] relative z-10">
             <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 lg:p-10 border border-white/10 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-accent"></div>
 
