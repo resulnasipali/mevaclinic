@@ -1,0 +1,42 @@
+[
+  {
+    "id": "gastric_sleeve",
+    "title": "Gastric Sleeve",
+    "title_en": "Gastric Sleeve",
+    "description": "Procedura de micșorare a stomacului cu până la 80%, ideală pentru pacienții cu obezitate.",
+    "description_en": "Stomach reduction procedure by up to 80%, optimal for patients suffering from obesity.",
+    "slug_ro": "gastric-sleeve",
+    "slug_en": "gastric-sleeve",
+    "schemaType": "MedicalProcedure"
+  },
+  {
+    "id": "gastric_bypass",
+    "title": "Gastric Bypass",
+    "title_en": "Gastric Bypass",
+    "description": "Combinație între restricție și malabsorbție, standardul de aur în chirurgia bariatrică.",
+    "description_en": "A high-end combination of restriction and malabsorption, the gold standard in bariatric surgery.",
+    "slug_ro": "gastric-bypass",
+    "slug_en": "gastric-bypass",
+    "schemaType": "MedicalProcedure"
+  },
+  {
+    "id": "balon_gastric",
+    "title": "Balon Gastric",
+    "title_en": "Gastric Balloon",
+    "description": "Metodă non-chirurgicală, reversibilă pentru scădere în greutate rapidă și fără cicatrici.",
+    "description_en": "A non-surgical, completely reversible method for rapid weight loss without any scarring.",
+    "slug_ro": "balon-gastric",
+    "slug_en": "gastric-balloon",
+    "schemaType": "MedicalProcedure"
+  },
+  {
+    "id": "dental_implants",
+    "title": "Implanturi Dentare",
+    "title_en": "Dental Implants",
+    "description": "Zâmbet perfect cu implanturi premium și coroane dentare din zirconiu construite in 3D.",
+    "description_en": "Flawless smile with premium implants and 3D constructed zirconium dental crowns.",
+    "slug_ro": "implant-dentar",
+    "slug_en": "dental-implants",
+    "schemaType": "TherapeuticProcedure"
+  }
+]

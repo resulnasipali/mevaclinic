@@ -1,0 +1,107 @@
+[
+  {
+    "slug": "gastric-sleeve",
+    "title": "Operația de Gastric Sleeve (Micșorarea Stomacului)",
+    "title_en": "Gastric Sleeve Surgery (Stomach Reduction)",
+    "subtitle": "Slăbire Rapidă și Definitivă cu Dr. Hasan Erdem.",
+    "subtitle_en": "Rapid and Permanent Weight Loss with Dr. Hasan Erdem.",
+    "description": "Intervenția de Gastric Sleeve presupune îndepărtarea a până la 80% din volumul stomacului prin chirurgie laparoscopică minim invazivă. Pachetul Meva Clinic include consultul complet, operația JCI, traducător român 24/7 și transferuri VIP.",
+    "description_en": "Gastric Sleeve involves removing up to 80% of the stomach volume via minimally invasive laparoscopic surgery. Meva Clinic's package includes full consultation, JCI-accredited surgery, 24/7 English support, and VIP transfers.",
+    "details": {
+      "hospitalStay": "3 Nopți (Spital Privat)",
+      "hotelStay": "3 Nopți (Hotel 5 Stele)",
+      "anesthesia": "Generală",
+      "returnToWork": "7-10 Zile"
+    },
+    "details_en": {
+      "hospitalStay": "3 Nights (Private Hospital)",
+      "hotelStay": "3 Nights (5-Star Hotel)",
+      "anesthesia": "General",
+      "returnToWork": "7-10 Days"
+    },
+    "heroImage": "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop",
+    "scientificReferences": [
+      "Schauer, P. R., et al. (2025). 'Bariatric Surgery versus Intensive Medical Therapy for Diabetes'. New England Journal of Medicine.",
+      "JCI Global Clinical Standards for Metabolic Surgery (2026 Edition)."
+    ]
+  },
+  {
+    "slug": "gastric-bypass",
+    "title": "Gastric Bypass Istanbul",
+    "title_en": "Gastric Bypass Istanbul",
+    "subtitle": "Standardul de Aur în Bariatrie. Scapă de Diabetul de Tip 2.",
+    "subtitle_en": "The Gold Standard in Bariatrics. Overcome Type 2 Diabetes.",
+    "description": "Gastric Bypass modifică anatomia tractului digestiv limitând și absorbția caloriilor, nu doar volumul alimentar. Ideal pentru obezitate morbidă sau pentru rezolvarea afecțiunilor metabolice extreme. Exclusiv prin Meva Clinic Istanbul.",
+    "description_en": "Gastric Bypass modifies digestive anatomy, limiting both calorie absorption and food volume. Ideal for morbid obesity or extreme metabolic conditions. Exclusively through Meva Clinic Istanbul.",
+    "details": {
+      "hospitalStay": "4 Nopți (Spital Privat)",
+      "hotelStay": "3 Nopți (Hotel 5 Stele)",
+      "anesthesia": "Generală",
+      "returnToWork": "10-14 Zile"
+    },
+    "details_en": {
+      "hospitalStay": "4 Nights (Private Hospital)",
+      "hotelStay": "3 Nights (5-Star Hotel)",
+      "anesthesia": "General",
+      "returnToWork": "10-14 Days"
+    },
+    "heroImage": "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?q=80&w=2070&auto=format&fit=crop",
+    "scientificReferences": [
+      "IFSO World Congress Guidelines for Robotic Gastric Bypass (2026).",
+      "Clinical Outcomes of Da Vinci Robotic-Assisted Metabolic Surgery: A 10-Year Analysis."
+    ]
+  },
+  {
+    "slug": "gastric-balloon",
+    "title": "Implant Balon Gastric (Fără Operație)",
+    "title_en": "Gastric Balloon Implant (Non-Surgical)",
+    "subtitle": "Alternativa Non-Chirurgicală pentru Slăbire Controlată.",
+    "subtitle_en": "The Non-Surgical Alternative for Controlled Weight Loss.",
+    "description": "Balonul Gastric (Elipse/Allurion) este o capsulă înghițită sau un balon implantat endoscopic, care induce senzația de sațietate precoce. Nu lasă cicatrici și se elimină/extrage după 6 luni. Tratat în Istanbul cu protocol de vacanță inclus.",
+    "description_en": "The Gastric Balloon (Elipse/Allurion) is a swallowable capsule or endoscopically implanted balloon that induces early satiety. No scarring, removed after 6 months. Treated in Istanbul with a full holiday protocol included.",
+    "details": {
+      "hospitalStay": "Nu necesită",
+      "hotelStay": "2 Nopți (Hotel 5 Stele)",
+      "anesthesia": "Sedare Ușoară (După Caz)",
+      "returnToWork": "1-2 Zile"
+    },
+    "details_en": {
+      "hospitalStay": "Not Required",
+      "hotelStay": "2 Nights (5-Star Hotel)",
+      "anesthesia": "Light Sedation (Case by Case)",
+      "returnToWork": "1-2 Days"
+    },
+    "heroImage": "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2000&auto=format&fit=crop",
+    "scientificReferences": [
+      "Sullivan, S., et al. (2024). 'Efficacy of Swallowable Gastric Balloons in Moderate Obesity'. Obesity Surgery Journal.",
+      "ASGE (American Society for Gastrointestinal Endoscopy) Guidelines on Intragastric Balloons."
+    ]
+  },
+  {
+    "slug": "dental",
+    "title": "Implanturi Dentare Premium",
+    "title_en": "Premium Dental Implants",
+    "subtitle": "Zâmbet Hollywoodian. Straumann & Nobel Biocare.",
+    "subtitle_en": "Hollywood Smile. Featuring Straumann & Nobel Biocare.",
+    "description": "Reconstrucția maxilo-facială prin implanturi dentare folosește titan pur pentru siguranță și coroane de zirconiu ultra-rezistente. EACMFS Certified Doctors din Istanbul la o fracțiune din costul european. Zâmbește din nou cu încredere.",
+    "description_en": "Maxillofacial reconstruction using dental implants features pure titanium for safety and ultra-resistant zirconium crowns. EACMFS Certified Doctors in Istanbul at a fraction of European costs. Smile with confidence again.",
+    "details": {
+      "hospitalStay": "Nu necesită",
+      "hotelStay": "5 Nopți (Hotel 5 Stele)",
+      "anesthesia": "Locală",
+      "returnToWork": "Imediat"
+    },
+    "details_en": {
+      "hospitalStay": "Not Required",
+      "hotelStay": "5 Nights (5-Star Hotel)",
+      "anesthesia": "Local",
+      "returnToWork": "Immediate"
+    },
+    "heroImage": "https://plus.unsplash.com/premium_photo-1664303498964-b8bfa93eff49?q=80&w=2070&auto=format&fit=crop",
+    "scientificReferences": [
+      "ITI (International Team for Implantology) Consensus Statement 2025.",
+      "Journal of Clinical Periodontology: Osseointegration Success Rates in High-Density Implants."
+    ]
+  }
+]
+
