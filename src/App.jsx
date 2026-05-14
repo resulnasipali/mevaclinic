@@ -41,6 +41,7 @@ const FAQPage = lazy(() => import('./pages/FAQPage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const ComparisonHub = lazy(() => import('./pages/ComparisonHub'));
 const TreatmentDetail = lazy(() => import('./pages/TreatmentDetail'));
+const Andrology = lazy(() => import('./pages/Andrology'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0b1626] flex items-center justify-center">
@@ -239,6 +240,7 @@ function App() {
                <Route path="/ro/politica-confidentialitate" element={<PrivacyPolicy />} />
                <Route path="/ro/comparatie-medicala" element={<ComparisonHub />} />
                <Route path="/ro/romani-istanbul" element={<RomaniaSpecial />} />
+               <Route path="/ro/andrologie" element={<Andrology lang="ro" />} />
                {/* IVF pages */}
                <Route path="/ro/ivf-ciprul-de-nord" element={<TreatmentDetail />} />
                <Route path="/ro/hair-transplant" element={<HairTransplant lang="ro" />} />
@@ -269,6 +271,7 @@ function App() {
                <Route path="/en/contact" element={<Contact />} />
                <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
                <Route path="/en/medical-comparison" element={<ComparisonHub />} />
+               <Route path="/en/andrology" element={<Andrology lang="en" />} />
                {/* IVF pages */}
                <Route path="/en/ivf-northern-cyprus" element={<TreatmentDetail />} />
                {/* /:lng/treatments/:slug — dynamic detail pages */}
