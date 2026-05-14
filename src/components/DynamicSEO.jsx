@@ -17,13 +17,19 @@ const DynamicSEO = ({
   const isRo = path.startsWith('/ro') || path === '/';
   const isEn = path.startsWith('/en');
 
+  const routerLocation = useLocation();
+
   useEffect(() => {
-    pushToDataLayer('virtual_page_view', {
-      page_path: location.pathname,
-      page_title: title,
-      language: isEn ? 'en' : 'ro'
-    });
-  }, [location.pathname, title, isEn]);
+    try {
+      pushToDataLayer('virtual_page_view', {
+        page_path: routerLocation.pathname,
+        page_title: title,
+        language: isEn ? 'en' : 'ro'
+      });
+    } catch {
+      // Never crash the page due to analytics
+    }
+  }, [routerLocation.pathname, title, isEn]);
 
   // Derive the alternate language path
   let roPath = path;

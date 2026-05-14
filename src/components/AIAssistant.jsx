@@ -55,12 +55,16 @@ const AIAssistant = () => {
       medical_condition: formData.medicalCondition || 'Unspecified'
     };
 
-    emailjs.send(
-      'YOUR_SERVICE_ID', 
-      'YOUR_TEMPLATE_ID', 
-      templateParams,
-      'YOUR_PUBLIC_KEY' 
-    ).then((response) => {}).catch((err) => {});
+    // Safe EmailJS call — silently skips if ENV variables are not configured
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+    if (serviceId && templateId && publicKey) {
+      emailjs
+        .send(serviceId, templateId, templateParams, publicKey)
+        .catch(() => {}); // Ignore send errors — do not break UX
+    }
   };
 
   useEffect(() => {

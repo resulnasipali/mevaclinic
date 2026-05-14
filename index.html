@@ -6,11 +6,17 @@
     <!-- v=DMARC1; p=quarantine; rua=mailto:admin@mevaclinic.com; pct=100; -->
     
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+    <script>
+    (function(){
+      var gtmId = 'GTM-XXXXXXX'; // Replace with real GTM-XXXXX before go-live
+      if (!gtmId || gtmId === 'GTM-XXXXXXX') return; // Skip if not configured
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer',gtmId);
+    })();
+    </script>
     <!-- End Google Tag Manager -->
 
     <!-- Google Analytics (GA4) Placeholder -->
@@ -51,10 +57,10 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" /></noscript>
 
     <!-- Multilingual SEO tags -->
-    <link rel="alternate" hreflang="ro-RO" href="https://snazzy-palmier-4439dc.netlify.app/ro" />
-    <link rel="alternate" hreflang="ro" href="https://snazzy-palmier-4439dc.netlify.app/ro" />
-    <link rel="alternate" hreflang="en" href="https://snazzy-palmier-4439dc.netlify.app/en" />
-    <link rel="alternate" hreflang="x-default" href="https://snazzy-palmier-4439dc.netlify.app/ro" />
+    <link rel="alternate" hreflang="ro-RO" href="https://www.mevaclinic.com/ro" />
+    <link rel="alternate" hreflang="ro" href="https://www.mevaclinic.com/ro" />
+    <link rel="alternate" hreflang="en" href="https://www.mevaclinic.com/en" />
+    <link rel="alternate" hreflang="x-default" href="https://www.mevaclinic.com/ro" />
     
     <title>Meva Clinic - Chirurgie Bariatrică și Gastric Sleeve în Istanbul</title>
   </head>
@@ -68,8 +74,13 @@
     </a>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>
+    (function(){
+      var gtmId = 'GTM-XXXXXXX';
+      if (!gtmId || gtmId === 'GTM-XXXXXXX') return;
+      document.write('<noscript><iframe src="https://www.googletagmanager.com/ns.html?id='+gtmId+'" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>');
+    })();
+    </script>
     <!-- End Google Tag Manager (noscript) -->
     
     <div id="root"></div>
