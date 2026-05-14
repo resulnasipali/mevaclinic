@@ -14,7 +14,7 @@ const BlogArchive = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const categories = ['All', 'Hair Tech', 'Oncology', 'Regenerative', 'Safety', 'Concierge', 'Bariatric', 'Dental Tech', 'Transplant'];
+  const categories = ['All', 'IVF', 'Hair Tech', 'Oncology', 'Regenerative', 'Safety', 'Concierge', 'Bariatric', 'Dental Tech', 'Transplant'];
 
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title[isEn ? 'en' : 'ro'].toLowerCase().includes(searchTerm.toLowerCase()) || 

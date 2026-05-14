@@ -32,11 +32,34 @@ const BlogPost = () => {
 
   return (
     <div className="bg-white min-h-screen pt-24 pb-20 overflow-hidden">
-      <DynamicSEO 
+      <DynamicSEO
         title={`${currentTitle} | Meva Clinic Blog`}
         description={currentExcerpt}
         path={`${isEn ? '/en' : '/ro'}/blog/${post.slug}`}
+        keywords={post.keywords}
+        schemaType="BlogPosting"
       />
+      {/* BlogPosting structured data */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": currentTitle,
+        "description": currentExcerpt,
+        "image": post.image,
+        "datePublished": post.date,
+        "dateModified": post.date,
+        "author": { "@type": "Person", "name": post.author },
+        "publisher": {
+          "@type": "MedicalOrganization",
+          "name": "Meva Clinic",
+          "url": "https://www.mevaclinic.com",
+          "logo": { "@type": "ImageObject", "url": "https://www.mevaclinic.com/favicon.svg" }
+        },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.mevaclinic.com${isEn ? '/en' : '/ro'}/blog/${post.slug}` },
+        "keywords": post.keywords,
+        "timeRequired": post.readTime ? `PT${post.readTime}M` : undefined,
+        "articleSection": post.category
+      })}} />
 
       {/* Authority Header */}
       <section className="bg-[#0b1626] py-16 md:py-24 relative overflow-hidden">
