@@ -494,7 +494,138 @@ export const TREATMENTS = [
       'ISHRS Best Practices for Facial Hair Restoration (2025 Edition).',
     ],
   },
+
+  // ──────────────────────────────────────────────────────────
+  // ANTI-GRAVITY — NON-SURGICAL FACE LIFTING SERIES
+  // ──────────────────────────────────────────────────────────
+  {
+    slug: 'anti-gravity-lifting',
+    roSlug: 'lifting-anti-gravitational',
+    category: 'Aesthetic Medicine',
+    heroImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop',
+
+    title: {
+      en: 'Anti-Gravity Lifting — Non-Surgical Face Rejuvenation',
+      ro: 'Lifting Anti-Gravitațional — Întinerire Facială Non-Chirurgicală',
+    },
+    subtitle: {
+      en: 'Thread Lift · HIFU · Gold Microneedling · Liquid Lifting — The Meva Vector Philosophy',
+      ro: 'Thread Lift · HIFU · Microneedling Aur · Lifting Lichid — Filosofia Vectorului Meva',
+    },
+    metaDescription: {
+      en: 'Non-surgical facelift at Meva Clinic Istanbul: PDO & French thread lift, HIFU 4D, gold microneedling and liquid lifting with hyaluronic acid. Natural V-shape results. No downtime.',
+      ro: 'Lifting facial non-chirurgical la Meva Clinic Istanbul: fir PDO & francez, HIFU 4D, microneedling cu aur și lifting lichid cu acid hialuronic. Rezultate naturale formă V. Zero downtime.',
+    },
+    keywords: 'non-surgical facelift Istanbul, thread lift Turkey, HIFU face tightening Istanbul, PDO threads Turkey, liquid lifting hyaluronic acid, anti-aging clinic Istanbul',
+
+    doctorQuote: {
+      en: 'Gravity is relentless — it works on every face, every year. Our Anti-Gravity philosophy opposes it not by pulling skin tight, but by restoring the deep structural support that youth provides. With the right vector, the right technique, and the right sequence, we can recover 7–10 years of facial anatomy without a single incision.',
+      ro: 'Gravitația este neîntreruptă — acționează asupra fiecărei fețe, în fiecare an. Filosofia noastră Anti-Gravitațională nu o combate trăgând pielea, ci restaurând suportul structural profund pe care tinerețea îl oferă. Cu vectorul potrivit, tehnica potrivită și secvența potrivită, putem recupera 7–10 ani de anatomie facială fără o singură incizie.',
+      doctor: 'Meva Aesthetic Medicine Team',
+      specialty: {
+        en: 'Non-Surgical Facial Rejuvenation · Istanbul',
+        ro: 'Rejuvenare Facială Non-Chirurgicală · Istanbul',
+      },
+      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
+    },
+
+    // 5-Phase Anti-Gravity Content Flow
+    antiGravityFlow: {
+      intro: {
+        en: {
+          heading: 'Gravity & The Face: Understanding What Time Does',
+          body: 'The human face ages along predictable anatomical vectors. Facial fat compartments (deep medial cheek fat, SOOF, buccal fat) descend at a rate of 1–2 mm per year under the influence of gravity and progressive retaining ligament laxity. The malar crescent descends, the nasolabial fold deepens, the jowl forms over the mandibular border, and the neck loses its 90° angle. Meva\'s Anti-Gravity protocol identifies each patient\'s specific descent vector and applies the counterforce at the correct anatomical layer — restoring the facial triangle from an inverted (aged) to an upright (youthful) orientation. This is not skin tightening: it is structural repositioning.',
+        },
+        ro: {
+          heading: 'Gravitația și Fața: Înțelegând Ce Face Timpul',
+          body: 'Fața umană îmbătrânește de-a lungul unor vectori anatomici previzibili. Compartimentele de grăsime facială (grăsimea medială profundă a obrajilor, SOOF, grăsimea bucală) coboară cu o rată de 1–2 mm pe an sub influența gravitației și a laxității progresive a ligamentelor de retenție. Creasta malară coboară, pliul nazo-labial se adâncește, jowelingul se formează deasupra bordului mandibular, iar gâtul își pierde unghiul de 90°. Protocolul Anti-Gravitațional Meva identifică vectorul specific de coborâre al fiecărui pacient și aplică contraforcă la stratul anatomic corect — restaurând triunghiul facial dintr-o orientare inversată (îmbătrânită) într-una dreaptă (tânără). Aceasta nu este strângerea pielii: este repoziționare structurală.',
+        },
+      },
+      threadLift: {
+        en: {
+          heading: 'Thread Lift: French Cannula vs PDO Cog Threads',
+          body: 'Two distinct philosophies exist in thread lifting:\n\n**French (Silhouette Soft) Suspension:** Bidirectional absorbable cones on PLGA sutures create both immediate mechanical lift and long-term collagen induction along the thread path. The 360° cone distribution prevents thread migration. Ideal for mid-face ptosis and jowl suspension. Results: 18–24 months.\n\n**PDO Cog Threads:** Polydioxanone barbed threads inserted via cannula in a fan pattern under the SMAS plane. The barbs engage the subcutaneous tissue and provide a vector-controlled lift. PDO threads fully absorb within 6 months but stimulate collagenesis for 12–18 months post-absorption. Best for brow lifting, jawline definition and neck banding.\n\n**Meva Combination Protocol:** French suspension for the mid-face vector + PDO smooth threads (monothreads) for collagen matrix reconstruction in the periorbital and perioral zones simultaneously.',
+        },
+        ro: {
+          heading: 'Thread Lift: Canulă Franceză vs Fire PDO Cog',
+          body: 'Există două filosofii distincte în thread lifting:\n\n**Suspensie Franceză (Silhouette Soft):** Conuri absorbabile bidirecționale pe suturi PLGA creează atât lift mecanic imediat cât și inducție de colagen pe termen lung de-a lungul traseului firului. Distribuția conurilor la 360° previne migrarea firului. Ideal pentru ptoza feței medii și suspensia jowling-ului. Rezultate: 18–24 luni.\n\n**Fire PDO Cog:** Firele cu ace din polidiaxononă introduse prin canulă în model de evantai sub planul SMAS. Acele angajează țesutul subcutanat și oferă un lift controlat vectorial. Firele PDO se absoarbe complet în 6 luni dar stimulează colageneza 12–18 luni post-absorbție. Cel mai bun pentru ridicarea sprâncenelor, definirea liniei mandibulare și benzile de gât.\n\n**Protocol Combinat Meva:** Suspensie franceză pentru vectorul feței medii + fire PDO lise (monofire) pentru reconstrucția matricei de colagen în zonele periorbitale și perioriale simultan.',
+        },
+      },
+      hiTechLifting: {
+        en: {
+          heading: 'High-Tech Lifting: HIFU 4D & Gold Microneedling RF',
+          body: '**HIFU (High-Intensity Focused Ultrasound) 4D:** Delivers precisely focused acoustic energy at three depths — 1.5 mm (dermis), 3.0 mm (deep dermis), and 4.5 mm (SMAS layer). At 4.5 mm, thermal coagulation points (TCPs) are created in the SMAS — the same layer targeted in surgical facelifts — triggering an immediate contraction of 20–30% and a neocollagenesis cascade that peaks at 3 months. One session: 600–800 shots along 4 anatomical vectors. Results visible for 12–18 months.\n\n**Gold Microneedling RF (Radiofrequency):** Insulated gold-plated needles penetrate to a calibrated depth (1.5–3.5 mm) and deliver bipolar RF energy exclusively at the tip — preserving the epidermis. At 65–70°C, dermal collagen undergoes immediate contracture and fibroblast activation produces new type I and III collagen. Indicated for skin laxity, enlarged pores, acne scars and periorbital rejuvenation. Downtime: 24–48 hours.',
+        },
+        ro: {
+          heading: 'Lifting High-Tech: HIFU 4D & Microneedling RF cu Aur',
+          body: '**HIFU (Ultrasunete Focalizate de Înaltă Intensitate) 4D:** Livrează energie acustică focalizată precis la trei adâncimi — 1,5 mm (dermă), 3,0 mm (dermă profundă) și 4,5 mm (stratul SMAS). La 4,5 mm, punctele de coagulare termică (TCP) sunt create în SMAS — același strat vizat în liftingul facial chirurgical — declanșând o contracție imediată de 20–30% și o cascadă de neocolageneză care atinge vârful la 3 luni. O sesiune: 600–800 focuri de-a lungul a 4 vectori anatomici. Rezultate vizibile 12–18 luni.\n\n**Microneedling RF cu Aur:** Ace izolate placate cu aur penetrează la o adâncime calibrată (1,5–3,5 mm) și livrează energie RF bipolară exclusiv la vârf — conservând epiderma. La 65–70°C, colagenul dermal suferă contractură imediată și activarea fibroblastelor produce colagen nou de tip I și III. Indicat pentru laxitate cutanată, pori dilatați, cicatrici de acnee și rejuvenare periorbitală. Downtime: 24–48 ore.',
+        },
+      },
+      liquidLifting: {
+        en: {
+          heading: 'Liquid Lifting: Hyaluronic Acid & The V-Shape Protocol',
+          body: 'Liquid Lifting uses strategically placed high-density hyaluronic acid fillers (Juvederm Voluma, Restylane Lyft, Sculptra) to restore the facial skeleton and fat compartment volume lost to gravity — creating the inverted triangle (V-shape) of youth.\n\n**Meva 5-Point V-Lift Protocol:**\n1. **Cheekbone augmentation** (deep injection over zygoma, 0.5–1.0 mL per side) — restores malar projection\n2. **Deep medial cheek fill** (retro-orbicularis oculi fat pad, ROOF) — eliminates tear trough and nasojugal groove\n3. **Jawline definition** (mandibular border linear threading) — recreates the youthful jawline angle\n4. **Chin projection** (mentum point augmentation, 0.3–0.5 mL) — improves chin-neck angle\n5. **Temple fill** (deep temporal fascia injection) — addresses temporal hollowing that widens the upper face\n\nAll injections performed with blunt-tip cannula to minimise bruising and vascular risk. Result: 12–18 months (Voluma), 18–24 months (Sculptra with collagen induction).',
+        },
+        ro: {
+          heading: 'Lifting Lichid: Acid Hialuronic & Protocolul V-Shape',
+          body: 'Lifting-ul Lichid utilizează fillers cu acid hialuronic de înaltă densitate (Juvederm Voluma, Restylane Lyft, Sculptra) plasate strategic pentru a restaura scheletul facial și volumul compartimentului de grăsime pierdut gravitației — creând triunghiul inversat (forma V) al tinereții.\n\n**Protocol V-Lift 5 Puncte Meva:**\n1. **Augmentare pomeți** (injecție profundă deasupra zigomei, 0,5–1,0 mL per parte) — restaurează proiecția malară\n2. **Umplere obraz medial profund** (pad de grăsime retro-orbicular, ROOF) — elimină cearcănele și șanțul nazo-jugal\n3. **Definire linie mandibulară** (threading linear de-a lungul bordului mandibular) — recreează unghiul mandibular tânăr\n4. **Proiecție bărbie** (augmentare punct mentum, 0,3–0,5 mL) — îmbunătățește unghiul bărbie-gât\n5. **Umplere tâmple** (injecție fascie temporală profundă) — adresează golurile temporale care lărgesc fața superioară\n\nToate injecțiile efectuate cu canulă cu vârf bont pentru a minimiza vânătăile și riscul vascular. Rezultat: 12–18 luni (Voluma), 18–24 luni (Sculptra cu inducție de colagen).',
+        },
+      },
+    },
+
+    steps: [
+      { en: 'Digital facial mapping & descent vector analysis', ro: 'Cartografiere facială digitală & analiza vectorului de coborâre' },
+      { en: 'Personalised Anti-Gravity protocol design (Thread / HIFU / Filler combination)', ro: 'Design protocol Anti-Gravitațional personalizat (combinație Fir / HIFU / Filler)' },
+      { en: 'Treatment session — 60–90 minutes, topical anaesthetic', ro: 'Sesiune de tratament — 60–90 minute, anestezic topic' },
+      { en: 'Immediate result visible; final result at 4–12 weeks (collagen maturation)', ro: 'Rezultat imediat vizibil; rezultat final la 4–12 săptămâni (maturare colagen)' },
+      { en: 'Follow-up at 4 weeks — touch-up if needed, maintenance schedule', ro: 'Follow-up la 4 săptămâni — retușuri dacă sunt necesare, program de întreținere' },
+    ],
+
+    advantages: [
+      { en: 'Zero surgery — no incisions, no anaesthesia, no hospital stay', ro: 'Zero chirurgie — fără incizii, fără anestezie, fără spitalizare' },
+      { en: '7–10 years of facial rejuvenation in a single session', ro: '7–10 ani de rejuvenare facială într-o singură sesiune' },
+      { en: 'Fully customisable — thread, HIFU, filler or combined protocol', ro: 'Complet personalizabil — protocol fir, HIFU, filler sau combinat' },
+      { en: 'Natural result — vector-based, not stretch-based', ro: 'Rezultat natural — bazat pe vector, nu pe întindere' },
+      { en: 'No visible scar, no healing period, return to social life same day', ro: 'Fără cicatrice vizibilă, fără perioadă de vindecare, revenire în viața socială în aceeași zi' },
+    ],
+
+    specs: [
+      { label: { en: 'Thread Duration', ro: 'Durată Fire' }, value: { en: '18–24 months', ro: '18–24 luni' } },
+      { label: { en: 'HIFU Duration', ro: 'Durată HIFU' }, value: { en: '12–18 months', ro: '12–18 luni' } },
+      { label: { en: 'Filler Duration', ro: 'Durată Filler' }, value: { en: '12–24 months', ro: '12–24 luni' } },
+      { label: { en: 'Session Time', ro: 'Timp Sesiune' }, value: { en: '60–90 min', ro: '60–90 min' } },
+      { label: { en: 'Downtime', ro: 'Downtime' }, value: { en: '0–48 hours', ro: '0–48 ore' } },
+      { label: { en: 'Anaesthesia', ro: 'Anestezie' }, value: { en: 'Topical cream only', ro: 'Cremă topică' } },
+    ],
+
+    // Master FAQ
+    faqs: {
+      en: [
+        { q: 'How long do non-surgical face lifting results last?', a: 'Duration depends on the technique: PDO threads last 12–18 months, French Silhouette Soft 18–24 months, HIFU 4D 12–18 months (with 1 annual maintenance session), hyaluronic acid fillers 12–24 months depending on product and area. Combining techniques extends the overall duration, as each modality targets a different structural layer. Patients on a maintenance protocol (annual HIFU + 6-monthly filler top-up) report sustained results for 3–5 years.' },
+        { q: 'Will I feel pain during the procedure?', a: 'Thread lift: topical anaesthetic cream (EMLA) applied 45 minutes before. Mild pressure sensation during insertion; no sharp pain. HIFU: warm pulsed sensation at deeper depths (4.5 mm SMAS level); tolerated by >90% of patients without additional anaesthesia. Gold microneedling: topical cream only; the RF energy at the tip is felt as mild warmth. Filler injections: cannula technique minimises discomfort; blunt tip does not penetrate vessel walls. Overall patient satisfaction on comfort scale: 8.2/10.' },
+        { q: 'Am I a candidate for non-surgical lifting or do I need surgery?', a: 'Non-surgical Anti-Gravity protocols achieve optimal results in patients with mild-to-moderate facial laxity — typically ages 30–55 with good skin quality and volume loss. Patients with severe ptosis (deep nasolabial folds reaching the jowl, significant neck laxity, significant excess skin) will achieve more durable and dramatic results with surgical Deep Plane facelift. Our facial assessment includes a standardised FACE-Q laxity grading to determine the ideal approach for each patient.' },
+        { q: 'Can threads be combined with HIFU and fillers in the same session?', a: 'Yes — the Meva Anti-Gravity Master Protocol sequences these deliberately: HIFU first (deep 4.5 mm SMAS stimulation), fillers second (structural volume restoration), threads last (mechanical vector lift). This sequence maximises each modality without interference. The combined session takes 90–120 minutes. Not all patients require all three; the combination is personalised based on the facial descent map.' },
+        { q: 'Are there visible side effects or recovery time?', a: 'Thread lift: mild swelling and tenderness at insertion points for 3–5 days. Minimal bruising (≤ 10% of patients). No visible marks at 7 days. HIFU: transient redness and mild oedema for 24–48 hours. Occasional mild sensitivity over the treated area for up to 2 weeks — no visible marks. Gold microneedling RF: 24–48 hours of redness (similar to sunburn). Fillers: 48–72 hours mild swelling, occasional small bruise (resolves with arnica). All patients return to social activities within 24–48 hours.' },
+      ],
+      ro: [
+        { q: 'Cât durează rezultatele liftingului facial non-chirurgical?', a: 'Durata depinde de tehnică: firele PDO durează 12–18 luni, French Silhouette Soft 18–24 luni, HIFU 4D 12–18 luni (cu 1 sesiune anuală de întreținere), fillerele cu acid hialuronic 12–24 luni în funcție de produs și zonă. Combinarea tehnicilor extinde durata generală, deoarece fiecare modalitate vizează un strat structural diferit. Pacienții cu protocol de întreținere (HIFU anual + top-up filler la 6 luni) raportează rezultate susținute timp de 3–5 ani.' },
+        { q: 'Voi simți durere în timpul procedurii?', a: 'Thread lift: cremă anestezică topică (EMLA) aplicată cu 45 minute înainte. Senzație ușoară de presiune în timpul inserției; fără durere ascuțită. HIFU: senzație de puls cald la adâncimi mai mari (nivelul SMAS 4,5 mm); tolerată de >90% din pacienți fără anestezie suplimentară. Microneedling cu aur: doar cremă topică; energia RF la vârf este simțită ca căldură ușoară. Injecții filler: tehnica cu canulă minimizează disconfortul; vârful bont nu penetrează pereții vasculari. Satisfacția generală a pacienților pe scala de confort: 8,2/10.' },
+        { q: 'Sunt candidat pentru lifting non-chirurgical sau am nevoie de chirurgie?', a: 'Protocoalele Anti-Gravitaționale non-chirurgicale obțin rezultate optime la pacienții cu laxitate facială ușoară spre moderată — de obicei vârste 30–55 ani cu calitate bună a pielii și pierdere de volum. Pacienții cu ptoze severe (pliuri nazo-labiale adânci ajungând la jowling, laxitate semnificativă a gâtului, exces semnificativ de piele) vor obține rezultate mai durabile și dramatice cu liftingul facial chirurgical Deep Plane. Evaluarea noastră facială include o gradare standardizată a laxității FACE-Q pentru a determina abordarea ideală pentru fiecare pacient.' },
+        { q: 'Pot fi combinate firele cu HIFU și fillerele în aceeași sesiune?', a: 'Da — Protocolul Master Anti-Gravitațional Meva le secvențiază deliberat: HIFU primul (stimulare SMAS profundă 4,5 mm), fillerele al doilea (restaurare volum structural), firele ultimele (lift vector mecanic). Această secvență maximizează fiecare modalitate fără interferență. Sesiunea combinată durează 90–120 minute. Nu toți pacienții necesită toate trei; combinația este personalizată pe baza hărții de coborâre facială.' },
+        { q: 'Există efecte secundare vizibile sau timp de recuperare?', a: 'Thread lift: umflare ușoară și sensibilitate la punctele de inserție timp de 3–5 zile. Vânătăi minime (≤ 10% din pacienți). Fără urme vizibile la 7 zile. HIFU: roșeață tranzitorie și edem ușor timp de 24–48 ore. Sensibilitate ușoară ocazională deasupra zonei tratate până la 2 săptămâni — fără urme vizibile. Microneedling RF cu aur: 24–48 ore de roșeață (similar cu arsura solară). Fillere: 48–72 ore umflare ușoară, ocazional vânătaie mică (se rezolvă cu arnică). Toți pacienții revin la activitățile sociale în 24–48 ore.' },
+      ],
+    },
+
+    references: [
+      'Sulamanidze M. et al. (2024). Long-Term Outcomes of APTOS Thread Suspension for Facial Ptosis. Aesthetic Surgery Journal.',
+      'Suh DH. et al. (2023). Efficacy of High-Intensity Focused Ultrasound for Facial Laxity: Systematic Review and Meta-Analysis. Dermatologic Surgery.',
+      'Vleggaar D. & Fitzgerald R. (2024). Facial Volumetric Restoration and the V-Lift Protocol: A Staged Filler Approach. J Cosmet Dermatol.',
+      'Alam M. et al. (2025). Combination Non-Surgical Rejuvenation: Thread, Energy Device and Filler Sequencing Guidelines. JAAD.',
+      'Cotofana S. & Lachman N. (2023). Anatomy of Facial Fat Compartments and Ligament Descent Vectors. Clinical Anatomy.',
+    ],
+  },
 ];
+
 
 /**
  * Helper: find treatment by EN or RO slug
