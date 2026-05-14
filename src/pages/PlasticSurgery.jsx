@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Activity, Plus, Minus, Scissors, Zap, Shield, Sparkles, Ruler, Microscope } from 'lucide-react';
+import { Activity, Plus, Minus, Scissors, Zap, Shield, Sparkles, Ruler, Microscope, ChevronDown } from 'lucide-react';
+import PLASTIC from '../data/plasticData';
 import DoctorBadge from '../components/DoctorBadge';
 import PatientJourneyTimeline from '../components/PatientJourneyTimeline';
 import DynamicSEO from '../components/DynamicSEO';
@@ -36,9 +37,11 @@ const faqRo = [
 
 const PlasticSurgery = ({ lang = 'ro' }) => {
   const [activeFaq, setActiveFaq] = useState(0);
+  const [openTx, setOpenTx] = useState(null);
   const isEn = lang === 'en';
   useEffect(() => window.scrollTo(0, 0), [lang]);
   const faqs = isEn ? faqEn : faqRo;
+  const g = (obj) => obj[isEn ? 'en' : 'ro'];
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
@@ -73,83 +76,90 @@ const PlasticSurgery = ({ lang = 'ro' }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-24">
-          <div className="lg:col-span-2 space-y-12">
-            <section>
-              <h2 className="text-3xl font-serif font-bold text-prime mb-6 flex items-center gap-3">
-                <Microscope className="text-accent" />
-                {isEn ? "Deep Plane Facelift: The Anatomy of Longevity" : "Lifting Facial Deep Plane: Anatomia Longevității"}
-              </h2>
-              <div className="prose prose-lg text-gray-600 font-sans leading-relaxed">
-                <p>
-                  {isEn 
-                    ? "Unlike standard skin-only facelifts, the Deep Plane technique allows our surgeons to release the retaining ligaments and reposition the underlying structures (SMAS and fat pads) into a higher, more youthful position. By following a vertical vector rather than a horizontal pull, we achieve results that look entirely natural and can last up to 15 years." 
-                    : "Spre deosebire de liftingurile standard, tehnica Deep Plane permite chirurgilor noștri să elibereze ligamentele de susținere și să repoziționeze structurile musculare (SMAS) într-o poziție mai înaltă. Urmând un vector vertical, obținem rezultate naturale care durează până la 15 ani."}
+        {/* ── 15 TREATMENT CARDS ── */}
+        <div className="mb-24">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-prime mb-3">
+              {isEn ? '15 Aesthetic Procedures — Meva Clinic' : '15 Proceduri Estetice — Meva Clinic'}
+            </h2>
+            <p className="text-gray-500 max-w-2xl mx-auto">
+              {isEn
+                ? 'Select any procedure to see candidacy criteria, surgical technique and Meva quality standards.'
+                : 'Selectați orice procedură pentru a vedea criteriile de candidatură, tehnica chirurgicală și standardele de calitate Meva.'}
+            </p>
+          </div>
+
+          {/* Post-Bariatric Featured Banner */}
+          <div className="bg-[#0b1626] rounded-[2rem] p-8 mb-10 text-white relative overflow-hidden border border-accent/20">
+            <div className="absolute top-0 right-0 w-48 h-48 bg-accent/10 rounded-full blur-3xl" />
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+              <div className="text-5xl">⚕️</div>
+              <div className="flex-1">
+                <span className="text-accent font-black text-xs uppercase tracking-widest">
+                  {isEn ? 'Specialist Service · Post-Bariatric' : 'Serviciu Specialist · Post-Bariatric'}
+                </span>
+                <h3 className="text-2xl font-serif font-bold mt-2 mb-3">
+                  {isEn ? 'Post-Bariatric Body Contouring — Our Specialist Unit' : 'Conturare Corporală Post-Bariatrică — Unitatea Noastră Specialist'}
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed max-w-3xl">
+                  {isEn
+                    ? 'After Gastric Sleeve or Bypass, dramatic weight loss leaves excess skin on the abdomen, arms, thighs and breasts that no exercise can resolve. Our post-bariatric surgical team — directly coordinated with the bariatric unit — designs a staged body contouring plan starting with belt lipectomy (360° circumferential body lift), followed by brachioplasty, medial thigh lift and breast restoration. Timing is critical: we require 12–18 months post-surgery with stable weight for 6+ months before any contouring procedure. Progressive tension sutures reduce drain usage by 80%.'
+                    : 'După Gastric Sleeve sau Bypass, pierderea dramatică în greutate lasă exces de piele pe abdomen, brațe, coapse și sâni pe care niciun exercițiu nu îl poate rezolva. Echipa noastră chirurgicală post-bariatrică — coordonată direct cu unitatea bariatrică — proiectează un plan de conturare corporală etapizat începând cu belt lipectomy (body lift circumferențial 360°), urmat de brahioplastie, lifting medial al coapselor și restaurare mamară. Timing-ul este critic: necesităm 12–18 luni post-chirurgie cu greutate stabilă 6+ luni înainte de orice procedură de conturare. Suturile cu tensiune progresivă reduc utilizarea drenurilor cu 80%.'}
                 </p>
               </div>
-            </section>
-
-            <section>
-              <h2 className="text-3xl font-serif font-bold text-prime mb-6 flex items-center gap-3">
-                <Zap className="text-accent" />
-                {isEn ? "Atraumatic Rhinoplasty: The Piezo Advantage" : "Rinoplastie Atraumatică: Avantajul Piezo"}
-              </h2>
-              <div className="prose prose-lg text-gray-600 font-sans leading-relaxed">
-                <p>
-                  {isEn 
-                    ? "Ultrasonic Rhinoplasty (Piezo Surgery) is the gold standard for 2026. Instead of using traditional hammers and chisels, we use sound-wave-driven tips that selectively reshape the bone. This technology does not damage blood vessels or nerves, which means patients experience minimal to zero bruising and a significantly faster return to social life." 
-                    : "Rinoplastia Ultrasonică (Piezo Surgery) este standardul de aur pentru 2026. În loc de ciocane și dălți tradiționale, folosim unde sonore pentru a remodela osul selectiv. Această tehnologie nu distruge vasele de sânge, ceea ce înseamnă vânătăi minime spre zero."}
-                </p>
-              </div>
-            </section>
-
-            {/* Performance/Comparison Table */}
-            <div className="bg-gray-50 rounded-[2rem] p-8 border border-gray-100">
-               <h3 className="text-2xl font-serif font-bold text-prime mb-6 text-center">{isEn ? "Surgical Comparison Data" : "Date de Comparație Chirurgicală"}</h3>
-               <div className="overflow-x-auto">
-                 <table className="w-full text-sm text-left text-gray-500">
-                   <thead className="text-xs text-prime uppercase bg-gray-100">
-                     <tr>
-                       <th className="px-6 py-4">{isEn ? "Feature" : "Caracteristică"}</th>
-                       <th className="px-6 py-4">{isEn ? "Traditional Lift" : "Lifting Tradițional"}</th>
-                       <th className="px-6 py-4 text-accent">{isEn ? "Deep Plane Vertical" : "Deep Plane Vertical"}</th>
-                     </tr>
-                   </thead>
-                   <tbody className="divide-y divide-gray-200">
-                     <tr>
-                       <td className="px-6 py-4 font-bold">{isEn ? "Longevity" : "Longevitate"}</td>
-                       <td className="px-6 py-4">5-7 {isEn ? "Years" : "Ani"}</td>
-                       <td className="px-6 py-4 font-bold text-prime">12-15+ {isEn ? "Years" : "Ani"}</td>
-                     </tr>
-                     <tr>
-                       <td className="px-6 py-4 font-bold">{isEn ? "Appearance" : "Aspect"}</td>
-                       <td className="px-6 py-4">{isEn ? "Pulled / Horizontal" : "Tras / Orizontal"}</td>
-                       <td className="px-6 py-4 font-bold text-prime">{isEn ? "Natural / Vertical" : "Natural / Vertical"}</td>
-                     </tr>
-                     <tr>
-                       <td className="px-6 py-4 font-bold">{isEn ? "Bone Trauma (Rhino)" : "Traumă Osoasă"}</td>
-                       <td className="px-6 py-4">{isEn ? "Significant" : "Semnificativă"}</td>
-                       <td className="px-6 py-4 font-bold text-prime">{isEn ? "Zero (Ultrasonic)" : "Zero (Ultrasonic)"}</td>
-                     </tr>
-                   </tbody>
-                 </table>
-               </div>
             </div>
           </div>
 
-          <div className="space-y-8">
-            <LeadMagnetBox isEn={isEn} pdfLabel={isEn ? "Facelift Recovery Protocol 2026" : "Protocol Recuperare Facelift 2026"} />
-            <div className="bg-prime text-white p-8 rounded-[2rem] shadow-xl">
-               <Sparkles className="text-accent mb-4" size={32} />
-               <h3 className="text-xl font-bold mb-4">{isEn ? "ISAPS Certified" : "Certificat ISAPS"}</h3>
-               <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                 {isEn 
-                   ? "Our surgeons are members of the International Society of Aesthetic Plastic Surgery, adhering to the world's most rigorous clinical benchmarks." 
-                   : "Chirurgii noștri sunt membri ai Societății Internaționale de Chirurgie Plastică Estetică, respectând cele mai riguroase repere."}
-               </p>
-            </div>
+          {/* Accordion Grid */}
+          <div className="space-y-3">
+            {PLASTIC.map((tx) => (
+              <div key={tx.id} className="border border-gray-100 rounded-2xl overflow-hidden shadow-sm">
+                <button
+                  onClick={() => setOpenTx(openTx === tx.id ? null : tx.id)}
+                  className="w-full px-6 py-5 flex items-center gap-4 text-left bg-white hover:bg-gray-50 transition-colors group"
+                  aria-expanded={openTx === tx.id}
+                >
+                  <span className="text-2xl">{tx.icon}</span>
+                  <div className="flex-1">
+                    <p className="font-bold text-prime text-base leading-tight">{g(tx.name)}</p>
+                    <p className="text-xs text-accent font-semibold mt-0.5">{g(tx.tag)}</p>
+                  </div>
+                  <div className="flex items-center gap-3 shrink-0">
+                    <span className="hidden sm:block text-xs text-gray-400 bg-gray-100 px-3 py-1 rounded-full">
+                      {g(tx.recovery)} · {g(tx.stay)}
+                    </span>
+                    <ChevronDown size={18} className={`text-gray-400 transition-transform duration-300 ${openTx === tx.id ? 'rotate-180' : ''}`} />
+                  </div>
+                </button>
+
+                <div className={`overflow-hidden transition-all duration-300 ${openTx === tx.id ? 'max-h-[800px]' : 'max-h-0'}`}>
+                  <div className="px-6 pb-7 pt-2 bg-gray-50 grid grid-cols-1 md:grid-cols-3 gap-5">
+                    {/* Is this for me? */}
+                    <div className="bg-white rounded-xl p-5 border border-gray-100">
+                      <p className="text-accent font-black text-xs uppercase tracking-widest mb-2">🎯 {isEn ? 'Is This For Me?' : 'Este Potrivit pentru Mine?'}</p>
+                      <p className="text-sm text-gray-600 leading-relaxed">{g(tx.isForMe)}</p>
+                    </div>
+                    {/* Techniques */}
+                    <div className="bg-white rounded-xl p-5 border border-gray-100">
+                      <p className="text-prime font-black text-xs uppercase tracking-widest mb-2">⚡ {isEn ? 'Techniques' : 'Tehnici'}</p>
+                      <p className="text-sm text-gray-600 leading-relaxed">{g(tx.techniques)}</p>
+                    </div>
+                    {/* Meva Quality */}
+                    <div className="bg-white rounded-xl p-5 border border-gray-100">
+                      <p className="text-green-600 font-black text-xs uppercase tracking-widest mb-2">✅ {isEn ? 'Meva Quality' : 'Calitate Meva'}</p>
+                      <p className="text-sm text-gray-600 leading-relaxed">{g(tx.mevaQuality)}</p>
+                      <div className="flex gap-3 mt-4">
+                        <span className="text-xs bg-prime/5 text-prime font-bold px-3 py-1 rounded-full">{g(tx.recovery)}</span>
+                        <span className="text-xs bg-accent/10 text-prime font-bold px-3 py-1 rounded-full">{g(tx.stay)}</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
 
         <div className="mb-24">
           <h2 className="text-3xl font-serif font-bold text-prime mb-12 text-center">{isEn ? "Clinical Transformations" : "Transformări Clinice"}</h2>
