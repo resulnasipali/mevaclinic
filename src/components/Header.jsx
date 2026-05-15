@@ -7,17 +7,18 @@ import { treatmentsData } from '../data/treatmentsData';
 
 // ── Category configuration ─────────────────────────────────────────────────────
 const CATEGORY_CONFIG = {
-  'plastic-surgery': { icon: '✂️',  en: 'Plastic Surgery',          ro: 'Chirurgie Plastică',           col: 'left'  },
-  'bariatric':       { icon: '⚕️',  en: 'Bariatric Surgery',         ro: 'Chirurgie Bariatrică',          col: 'left'  },
-  'hair-transplant': { icon: '💇',  en: 'Hair & Brow Transplant',    ro: 'Păr & Sprâncene',               col: 'left'  },
-  'dental':          { icon: '🦷',  en: 'Dental Care',               ro: 'Stomatologie',                  col: 'left'  },
-  'andrology':       { icon: '👨‍⚕️', en: "Andrology & Men's Health", ro: 'Andrologie & Sănătate Masculină', col: 'right' },
-  'advanced':        { icon: '🧬',  en: 'Advanced Medicine',          ro: 'Medicină Avansată',             col: 'right' },
-  'anti-gravity':    { icon: '✨',  en: 'Anti-Gravity Suite',         ro: 'Suita Anti-Gravity',            col: 'right' },
+  'plastic':      { icon: '✂️',  en: 'Plastic Surgery',          ro: 'Chirurgie Plastică' },
+  'bariatric':    { icon: '⚕️',  en: 'Bariatric Surgery',         ro: 'Chirurgie Bariatrică' },
+  'hair':         { icon: '💇',  en: 'Hair & Brow Transplant',    ro: 'Păr & Sprâncene' },
+  'dental':       { icon: '🦷',  en: 'Dental Care',               ro: 'Stomatologie' },
+  'andrology':    { icon: '👨‍⚕️', en: "Andrology & Men's Health", ro: 'Andrologie & Sănătate Masculină' },
+  'ivf':          { icon: '🧬',  en: 'Reproductive Medicine',     ro: 'Medicină Reproductivă' },
+  'oncology':     { icon: '🔬',  en: 'Advanced Oncology',         ro: 'Oncologie Avansată' },
+  'anti-gravity': { icon: '✨',  en: 'Anti-Gravity Suite',         ro: 'Suita Anti-Gravity' },
 };
 
-const LEFT_CATEGORIES  = ['plastic-surgery', 'bariatric', 'hair-transplant', 'dental'];
-const RIGHT_CATEGORIES = ['andrology', 'advanced', 'anti-gravity'];
+const LEFT_CATEGORIES  = ['plastic', 'bariatric', 'hair', 'dental'];
+const RIGHT_CATEGORIES = ['andrology', 'ivf', 'oncology', 'anti-gravity'];
 
 // ── Safe title extractor ────────────────────────────────────────────────────────
 // Prevents "Objects are not valid as a React child" crash
@@ -43,18 +44,20 @@ const groupByCategory = () => {
 
 // ── CategoryColumn sub-component ───────────────────────────────────────────────
 const CategoryColumn = ({ categories, groups, isEn, onClose }) => (
-  <div className="flex flex-col gap-5">
+  <div className="flex flex-col gap-6">
     {categories.map((catKey) => {
       const cfg = CATEGORY_CONFIG[catKey];
       const items = groups[catKey] || [];
       if (!cfg || items.length === 0) return null;
 
+      const isAndrology = catKey === 'andrology';
+
       return (
-        <div key={catKey}>
+        <div key={catKey} className={isAndrology ? "bg-accent/5 -mx-3 p-4 rounded-2xl border border-accent/10" : ""}>
           {/* Category header */}
-          <div className="flex items-center gap-2 mb-2 px-1">
+          <div className="flex items-center gap-2 mb-3 px-1">
             <span className="text-base leading-none" role="img" aria-hidden="true">{cfg.icon}</span>
-            <p className="text-[10px] font-black uppercase tracking-[0.15em] text-accent">
+            <p className={`text-[10px] font-black uppercase tracking-[0.15em] ${isAndrology ? 'text-accent' : 'text-gray-400'}`}>
               {isEn ? cfg.en : cfg.ro}
             </p>
           </div>
@@ -63,15 +66,24 @@ const CategoryColumn = ({ categories, groups, isEn, onClose }) => (
           <div className="flex flex-col gap-0.5">
             {items.map((treatment) => {
               const title = getTitle(treatment.title, isEn);
+              const expertStr = typeof treatment.expert === 'object' 
+                ? treatment.expert[isEn ? 'en' : 'ro'] 
+                : (treatment.expert || 'Meva Specialist');
+
               return (
                 <Link
                   key={treatment.id}
                   to={`/${isEn ? 'en' : 'ro'}/treatments/${treatment.id}`}
                   onClick={onClose}
-                  className="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-[11px] font-semibold text-gray-600 hover:bg-accent/8 hover:text-prime transition-all"
+                  className="group flex flex-col gap-0.5 px-3 py-2 rounded-xl hover:bg-white/40 hover:shadow-sm transition-all"
                 >
-                  <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-accent transition-colors shrink-0" />
-                  <span className="leading-snug">{title}</span>
+                  <div className="flex items-center gap-2">
+                    <span className="w-1 h-1 rounded-full bg-accent/40 group-hover:bg-accent transition-colors shrink-0" />
+                    <span className="text-[11px] font-bold text-prime group-hover:text-accent transition-colors leading-snug">{title}</span>
+                  </div>
+                  <span className="pl-3 text-[9px] text-gray-400 font-medium uppercase tracking-wider">
+                    {expertStr}
+                  </span>
                 </Link>
               );
             })}

@@ -34,6 +34,8 @@ const FAQPage = lazy(() => import('./pages/FAQPage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const ComparisonHub = lazy(() => import('./pages/ComparisonHub'));
 const TreatmentDetail = lazy(() => import('./pages/TreatmentDetail'));
+const Bariatric = lazy(() => import('./pages/Bariatric'));
+const HairTransplant = lazy(() => import('./pages/HairTransplant'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0b1626] flex items-center justify-center">
