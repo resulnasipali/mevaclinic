@@ -110,15 +110,20 @@ const TreatmentDetail = () => {
   // Localised fields — handle both data shapes
   const isNew = !!tdNew; // using treatmentsData.js
 
-  const title       = isNew ? tdNew.title[isEn ? 'en' : 'ro'] : (isEn ? treatment.title_en : treatment.title);
-  const subtitle    = isNew ? tdNew.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? treatment.subtitle_en : treatment.subtitle);
-  const description = isNew ? tdNew.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? treatment.description_en : treatment.description);
+  const getSafeVal = (val, isEn) => {
+    if (!val) return '';
+    return typeof val === 'object' ? (val[isEn ? 'en' : 'ro'] || val) : val;
+  };
+
+  const title       = isNew ? getSafeVal(tdNew.title, isEn) : (isEn ? treatment.title_en : treatment.title);
+  const subtitle    = isNew ? getSafeVal(tdNew.shortDesc, isEn) : (isEn ? treatment.subtitle_en : treatment.subtitle);
+  const description = isNew ? getSafeVal(tdNew.shortDesc, isEn) : (isEn ? treatment.description_en : treatment.description);
   
   // New Master Fields
-  const isThisForMe = isNew ? tdNew.isThisForMe[isEn ? 'en' : 'ro'] : [];
-  const theProcedure = isNew ? tdNew.theProcedure[isEn ? 'en' : 'ro'] : "";
-  const mevaAdvantage = isNew ? tdNew.mevaAdvantage[isEn ? 'en' : 'ro'] : "";
-  const faqItems = isNew ? tdNew.faq[isEn ? 'en' : 'ro'] : [];
+  const isThisForMe = isNew ? (getSafeVal(tdNew.isThisForMe, isEn) || []) : [];
+  const theProcedure = isNew ? getSafeVal(tdNew.theProcedure, isEn) : "";
+  const mevaAdvantage = isNew ? getSafeVal(tdNew.mevaAdvantage, isEn) : "";
+  const faqItems = isNew ? (getSafeVal(tdNew.faq, isEn) || []) : [];
 
   const details     = isNew ? {
     hospitalStay: isEn ? '2-3 Nights' : '2-3 Nopți',

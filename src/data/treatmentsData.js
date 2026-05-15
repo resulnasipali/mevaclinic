@@ -484,7 +484,7 @@ export const treatmentsData = [
   {
     id: 'ivf-icsi-pgd',
     category: 'advanced',
-    expert: t('Cyprus Fertility Team', 'Echipa Fertilitate Cipru'),
+    expert: t('Performed in our clinic in Cyprus', 'Efectuat în clinica noastră din Cipru'),
     title: t('In Vitro Fertilization (IVF) & Genetics', 'Fertilizare In Vitro (FIV) și Genetică'),
     shortDesc: t('Beyond conventional fertility. Our Cyprus-based specialists utilize ICSI and PGD genetic screening to maximize pregnancy rates and ensure the health of your future family.', 'Dincolo de fertilitatea convențională. Specialiștii noștri din Cipru utilizează ICSI și screening-ul PGD pentru a asigura sănătatea viitoarei tale familii.'),
     isThisForMe: t([
@@ -510,7 +510,7 @@ export const treatmentsData = [
   {
     id: 'ivf-cyprus',
     category: 'advanced',
-    expert: t('Cyprus Advanced Clinic', 'Clinica Avansată Cipru'),
+    expert: t('Performed in our clinic in Cyprus', 'Efectuat în clinica noastră din Cipru'),
     title: t('IVF Cyprus — Advanced Fertility Centre', 'FIV Cipru — Centru Avansat de Fertilitate'),
     shortDesc: t('Your journey to parenthood. Our Cyprus branch offers full donor programs, gender selection, and advanced genetic screening in a luxury clinical setting.', 'Călătoria ta spre părinți. Filiala noastră din Cipru oferă programe complete de donare și selecție a genului într-un cadru clinic de lux.'),
     isThisForMe: t([
@@ -742,7 +742,7 @@ export const treatmentsData = [
       'Pacienți sătui de soluții temporare precum microblading-ul sau machiajul zilnic.',
       'Cei care doresc "Secretul Meva" pentru un rezultat imposibil de distins de creșterea naturală.'
     ]),
-    theProcedure: t('MD Harun applies the secret to a flawless look: Graft Dissection. During the procedure, the strongest multi-follicle grafts are meticulously separated under microscopic guidance into single follicles. These are then implanted at an extremely acute 10-15° angle using DHI Choi Pens to ensure the hair lies flat against the skin, never standing upright.', 'MD Harun aplică secretul unui aspect impecabil: Micro-disecția grefelor. În timpul procedurii, cele mai puternice grefe multiple sunt separate meticulos sub microscop în foliculi singulari. Aceștia sunt apoi implantați la un unghi extrem de ascuțit de 10-15 grade folosind DHI Choi Pen, asigurându-se că părul stă plat pe piele, fără a crește vertical.'),
+    theProcedure: t('Micro-grafting of the strongest multi-follicles under a microscope into single follicles, MD Harun\'s golden ratio design, and implantation with DHI Choi Pen at 10-15 degree natural angles.', 'Micro-grafting al celor mai puternice grefe multiple sub microscop în foliculi unici, designul proporției de aur al MD Harun și implantare cu DHI Choi Pen la unghiuri naturale de 10-15 grade.'),
     mevaAdvantage: t('The Meva secret lies in MD Harun\'s Golden Ratio mapping and microscopic micro-grafting technique. By ensuring zero incisions or scars, we achieve a result so natural that even under close inspection, the transplant is undetectable.', 'Secretul Meva constă în maparea Golden Ratio a MD Harun și tehnica de micro-grafting. Prin asigurarea a zero incizii sau cicatrici, obținem un rezultat nedetectabil chiar și la o inspecție atentă.'),
     faq: t([
       { q: 'Will my eyebrows look like "hair" or "eyebrows"?', a: 'By using MD Harun\'s single-follicle dissection technique and ultra-acute 10-degree angles, the transplanted hair mimics the texture and direction of natural eyebrows perfectly.' },
