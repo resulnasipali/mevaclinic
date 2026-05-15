@@ -46,14 +46,14 @@ const AboutPage = () => {
               <div className="bg-gray-100 aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative group">
                 <img 
                   src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=800" 
-                  alt="Dr. Harun Alakaya Chief Medical Officer Istanbul"
-                  aria-label="Dr. Harun Alakaya Chief Medical Officer Istanbul"
+                  alt="MD Harun Chief Medical Officer Istanbul"
+                  aria-label="MD Harun Chief Medical Officer Istanbul"
                   loading="eager"
                   fetchpriority="high"
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute bottom-0 left-0 right-0 p-10 bg-gradient-to-t from-prime to-transparent text-white">
-                   <h3 className="text-3xl font-serif font-bold">Dr. Harun Alakaya, MD</h3>
+                   <h3 className="text-3xl font-serif font-bold">MD Harun, MD</h3>
                    <p className="text-accent font-bold uppercase tracking-widest text-sm">{isEn ? "Chief Medical Officer" : "Director Medical"}</p>
                 </div>
               </div>
@@ -70,8 +70,8 @@ const AboutPage = () => {
               <div className="space-y-6 text-gray-600 font-sans leading-relaxed">
                 <p>
                   {isEn 
-                    ? "Dr. Harun Alakaya stands at the forefront of modern hair transplantation and surgical aesthetics. With over 15 years of clinical experience, his approach is defined by an uncompromising focus on sub-millimetric precision and biological integration." 
-                    : "Dr. Harun Alakaya se află în prima linie a transplantului de păr modern și a esteticii chirurgicale. Cu peste 15 ani de experiență clinică, abordarea sa este definită de un accent fără compromisuri pe precizia sub-milimetrică și integrarea biologică."}
+                    ? "MD Harun stands at the forefront of modern hair transplantation and surgical aesthetics. With over 15 years of clinical experience, his approach is defined by an uncompromising focus on sub-millimetric precision and biological integration." 
+                    : "MD Harun se află în prima linie a transplantului de păr modern și a esteticii chirurgicale. Cu peste 15 ani de experiență clinică, abordarea sa este definită de un accent fără compromisuri pe precizia sub-milimetrică și integrarea biologică."}
                 </p>
                 <div className="bg-gray-50 p-6 rounded-2xl border-l-4 border-accent">
                    <p className="italic font-medium text-prime">

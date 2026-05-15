@@ -27,13 +27,13 @@ const hairRecoveryRo = [
 
 const faqEn = [
   { q: "What is Exosome-Enhanced Graft Survival?", a: "It is a regenerative protocol where mesenchymal exosomes are applied to the recipient area to boost vascularization and ensure the highest possible survival rate for transplanted follicles." },
-  { q: "How does Dr. Harun Alakaya's protocol differ?", a: "Dr. Alakaya utilizes a proprietary 'Mathematical Graft Mapping' system and Sapphire FUE blades to create channels that precisely match the natural growth angle of your hair." },
+  { q: "How does MD Harun's protocol differ?", a: "MD Harun utilizes a proprietary 'Mathematical Graft Mapping' system and Sapphire FUE blades to create channels that precisely match the natural growth angle of your hair." },
   { q: "What is Bio-Active Preservation?", a: "During the extraction phase, follicles are stored in a specialized solution (HypoThermosol) at controlled temperatures to prevent ischemia-reperfusion injury." }
 ];
 
 const faqRo = [
   { q: "Ce este supraviețuirea grefelor îmbunătățită cu Exozomi?", a: "Un protocol regenerativ în care exozomii mezenchimali sunt aplicați pentru a stimula vascularizarea și a asigura rata maximă de supraviețuire." },
-  { q: "Cum diferă protocolul Dr. Harun Alakaya?", a: "Dr. Alakaya utilizează un sistem de 'Mapping Matematic al Grefelor' și lame de Safir pentru a crea canale care respectă unghiul natural de creștere." },
+  { q: "Cum diferă protocolul MD Harun?", a: "MD Harun utilizează un sistem de 'Mapping Matematic al Grefelor' și lame de Safir pentru a crea canale care respectă unghiul natural de creștere." },
   { q: "Ce este conservarea Bio-Activă?", a: "Folosul grefelor sunt păstrate într-o soluție specializată (HypoThermosol) la temperaturi controlate pentru a preveni degradarea celulară." }
 ];
 
@@ -46,8 +46,8 @@ const HairTransplant = ({ lang = 'ro' }) => {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       <DynamicSEO 
-        title={isEn ? "Regenerative Hair Restoration | Dr. Harun Alakaya Istanbul" : "Restaurare Capilară Regenerativă | Dr. Harun Alakaya Istanbul"}
-        description={isEn ? "Advanced Sapphire FUE with Exosome enhancement. Precision hair transplant by Dr. Harun Alakaya." : "Implant de păr Sapphire FUE cu tratament cu exozomi. Precizie coordonată de Dr. Harun Alakaya."}
+        title={isEn ? "Regenerative Hair Restoration | MD Harun Istanbul" : "Restaurare Capilară Regenerativă | MD Harun Istanbul"}
+        description={isEn ? "Advanced Sapphire FUE with Exosome enhancement. Precision hair transplant by MD Harun." : "Implant de păr Sapphire FUE cu tratament cu exozomi. Precizie coordonată de MD Harun."}
         path={isEn ? "/en/hair-transplant" : "/ro/implant-par"}
         schemaType="MedicalProcedure"
         keywords="FUE hair transplant Istanbul, DHI hair restoration Turkey, implant de par Turcia, clinica transplant par DHI Istanbul"
@@ -64,7 +64,7 @@ const HairTransplant = ({ lang = 'ro' }) => {
         </h1>
 
         <div className="flex justify-center mb-12">
-           <DoctorBadge text={isEn ? "Clinical Protocol by Dr. Harun Alakaya" : "Protocol Clinic coordonat de Dr. Harun Alakaya"} />
+           <DoctorBadge text={isEn ? "Clinical Protocol by MD Harun" : "Protocol Clinic coordonat de MD Harun"} />
         </div>
 
         {/* Technical Spec Cards */}
@@ -86,8 +86,8 @@ const HairTransplant = ({ lang = 'ro' }) => {
               <div className="prose prose-lg text-gray-600 font-sans leading-relaxed">
                 <p>
                   {isEn 
-                    ? "Traditional hair transplants focus on the physical movement of follicles. At Meva Clinic, under Dr. Harun Alakaya's guidance, we treat the biological environment. Our 'Exosome-Enhanced' protocol involves the application of mesenchymal stem cell-derived exosomes to the scalp, triggering cellular repair and rapid revascularization of the newly implanted grafts." 
-                    : "Implantul de păr tradițional se concentrează pe mișcarea fizică a foliculilor. La Meva Clinic, sub îndrumarea Dr. Harun Alakaya, tratăm mediul biologic. Protocolul nostru 'Exosome-Enhanced' implică aplicarea exozomilor pentru a declanșa repararea celulară."}
+                    ? "Traditional hair transplants focus on the physical movement of follicles. At Meva Clinic, under MD Harun's guidance, we treat the biological environment. Our 'Exosome-Enhanced' protocol involves the application of mesenchymal stem cell-derived exosomes to the scalp, triggering cellular repair and rapid revascularization of the newly implanted grafts." 
+                    : "Implantul de păr tradițional se concentrează pe mișcarea fizică a foliculilor. La Meva Clinic, sub îndrumarea MD Harun, tratăm mediul biologic. Protocolul nostru 'Exosome-Enhanced' implică aplicarea exozomilor pentru a declanșa repararea celulară."}
                 </p>
               </div>
             </section>
@@ -142,7 +142,7 @@ const HairTransplant = ({ lang = 'ro' }) => {
           <div className="space-y-8">
             <div className="bg-[#0b1626] text-white p-8 rounded-[2rem] shadow-xl">
                <UserCheck className="text-accent mb-4" size={32} />
-               <h3 className="text-xl font-bold mb-4">{isEn ? "Dr. Harun Alakaya" : "Dr. Harun Alakaya"}</h3>
+               <h3 className="text-xl font-bold mb-4">{isEn ? "MD Harun" : "MD Harun"}</h3>
                <p className="text-sm text-gray-400 leading-relaxed mb-6">
                  {isEn 
                    ? "A world-renowned hair restoration expert who personally designs every frontal hairline and graft distribution plan." 

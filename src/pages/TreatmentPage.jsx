@@ -9,12 +9,19 @@ import ExpertBadge from '../components/ExpertBadge';
 import PatientJourneyTimeline from '../components/PatientJourneyTimeline';
 import { PxTrack } from '../utils/pixel';
 import { pushToDataLayer } from '../utils/AnalyticsUtils';
+import { findTreatment } from '../data/treatmentsData';
+import { UserCheck } from 'lucide-react';
 
 const TreatmentPage = () => {
   const { slug } = useParams();
   const location = useLocation();
   const isEn = location.pathname.startsWith('/en');
-  const treatment = treatmentData.find(t => t.slug === slug);
+  
+  // Try new data first
+  const tdNew = findTreatment(slug);
+  const tdLeg = !tdNew ? treatmentData.find(t => t.slug === slug) : null;
+  const treatment = tdNew || tdLeg;
+  const isNew = !!tdNew;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,10 +38,17 @@ const TreatmentPage = () => {
     );
   }
 
-  const title = isEn ? (treatment.title_en || treatment.title) : treatment.title;
-  const subtitle = isEn ? (treatment.subtitle_en || treatment.subtitle) : treatment.subtitle;
-  const description = isEn ? (treatment.description_en || treatment.description) : treatment.description;
-  const details = isEn ? (treatment.details_en || treatment.details) : treatment.details;
+  const title = isNew ? treatment.title[isEn ? 'en' : 'ro'] : (isEn ? (treatment.title_en || treatment.title) : treatment.title);
+  const subtitle = isNew ? treatment.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? (treatment.subtitle_en || treatment.subtitle) : treatment.subtitle);
+  const description = isNew ? treatment.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? (treatment.description_en || treatment.description) : treatment.description);
+  
+  const details = isNew ? {
+    hospitalStay: isEn ? '2-3 Nights' : '2-3 Nopți',
+    hotelStay: isEn ? '3-4 Nights' : '3-4 Nopți',
+    returnToWork: isEn ? '7-10 Days' : '7-10 Zile',
+  } : (isEn ? (treatment.details_en || treatment.details) : treatment.details);
+
+  const expertName = isNew ? (typeof treatment.expert === 'object' ? treatment.expert[isEn ? 'en' : 'ro'] : treatment.expert) : null;
 
   return (
     <div className="bg-white min-h-screen selection:bg-accent/20">
@@ -57,6 +71,14 @@ const TreatmentPage = () => {
                <ArrowLeft size={16} className="mr-2" /> {isEn ? "Back to Services" : "Înapoi la Servicii"}
             </Link>
             <h1 className="text-4xl md:text-6xl font-serif font-bold mb-4 drop-shadow-lg leading-tight w-full lg:w-2/3">{title}</h1>
+            
+            {expertName && (
+               <div className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-accent/20 border border-accent/30 backdrop-blur-md mb-6">
+                  <UserCheck size={16} className="text-accent" />
+                  <span className="text-xs font-bold text-white uppercase tracking-widest">{isEn ? 'Expert:' : 'Expert:'} {expertName}</span>
+               </div>
+            )}
+
             <p className="text-xl text-gray-300 font-sans max-w-2xl border-l-4 border-accent pl-4 font-medium">{subtitle}</p>
             
             <a href="#calculator" className="mt-8 inline-flex items-center justify-center bg-accent hover:bg-yellow-500 text-prime font-bold py-3.5 px-8 rounded-xl transition-all shadow-[0_10px_30px_rgba(212,175,55,0.3)]">
@@ -66,14 +88,14 @@ const TreatmentPage = () => {
       </div>
 
       {/* Details Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:6 lg:px-8 py-16">
          <div className="flex flex-col lg:flex-row gap-12">
             
             {/* Copywriting Section */}
             <div className="lg:w-7/12 prose prose-lg prose-blue">
                <div className="text-xs uppercase tracking-widest font-bold text-prime/50 mb-2">{isEn ? "About Procedure" : "Despre Procedură"}</div>
-               <h2 className="text-3xl font-serif font-bold text-prime mb-3">{isEn ? `JCI International Expertise in ${title.split(' ')[0]}` : `Expertiză Internațională JCI în ${treatment.title.split(' ')[0]}`}</h2>
-               <ExpertBadge isEn={isEn} />
+               <h2 className="text-3xl font-serif font-bold text-prime mb-3">{isEn ? `JCI International Expertise in ${title.split(' ')[0]}` : `Expertiză Internațională JCI în ${title.split(' ')[0]}`}</h2>
+               <ExpertBadge isEn={isEn} name={expertName} />
                <p className="text-gray-600 font-sans leading-relaxed text-lg mb-8">{description}</p>
                
                <div className="bg-gray-50 border border-gray-100 rounded-3xl p-8 mb-8">

@@ -45,8 +45,8 @@ const DynamicSEO = ({
     if (roPath === '/ro') roPath = '/';
   }
 
-  const keywordsRo = "clinica istanbul transplant par, pret gastric sleeve turcia, oncologie moderna bariatrica, transplant par Turcia, chirurgie bariatrica Istanbul, implant dentar pret, oncologie Turcia, CyberKnife Romania, gastric sleeve Istanbul, Dr. Harun Alakaya, clinica medicala Istanbul, turism medical Turcia";
-  const keywordsEn = "best hair transplant Istanbul, bariatric surgery Turkey, gastric sleeve costs, Dr. Harun Alakaya, dental implants Turkey, CyberKnife oncology Istanbul, medical tourism Turkey, organ transplant Istanbul";
+  const keywordsRo = "clinica istanbul transplant par, pret gastric sleeve turcia, oncologie moderna bariatrica, transplant par Turcia, chirurgie bariatrica Istanbul, implant dentar pret, oncologie Turcia, CyberKnife Romania, gastric sleeve Istanbul, MD Harun, clinica medicala Istanbul, turism medical Turcia";
+  const keywordsEn = "best hair transplant Istanbul, bariatric surgery Turkey, gastric sleeve costs, MD Harun, dental implants Turkey, CyberKnife oncology Istanbul, medical tourism Turkey, organ transplant Istanbul";
 
   const medicalBusinessSchema = {
     "@context": "https://schema.org",
@@ -108,7 +108,7 @@ const DynamicSEO = ({
       },
       {
         "@type": "Physician",
-        "name": "Dr. Harun Alakaya",
+        "name": "MD Harun",
         "medicalSpecialty": "Hair Restoration"
       }
     ],

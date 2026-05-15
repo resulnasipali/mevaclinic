@@ -17,7 +17,8 @@ import React, { useEffect } from 'react';
 import { useParams, Link, useLocation } from 'react-router-dom';
 import {
   ArrowLeft, CheckCircle, Clock, Calendar,
-  Activity, Quote, Star, ShieldCheck, Phone
+  Activity, Quote, Star, ShieldCheck, Phone,
+  ChevronDown, HelpCircle, UserCheck, Zap, Info
 } from 'lucide-react';
 import treatmentData from '../data/treatmentDetails.json';
 import { findTreatment } from '../data/treatmentsData';
@@ -40,6 +41,28 @@ const DoctorAvatar = ({ name, image }) => (
     className="w-16 h-16 rounded-2xl object-cover border-2 border-accent/30 shadow-lg"
   />
 );
+
+const AccordionItem = ({ question, answer }) => {
+  const [isOpen, setIsOpen] = React.useState(false);
+  return (
+    <div className="border-b border-gray-200 last:border-0">
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full py-6 flex items-center justify-between text-left hover:text-accent transition-colors group"
+      >
+        <span className="font-serif font-bold text-lg text-prime group-hover:text-accent pr-8">{question}</span>
+        <span className={`shrink-0 w-8 h-8 rounded-full bg-accent/10 flex items-center justify-center transform transition-transform duration-300 ${isOpen ? 'rotate-180 bg-accent text-prime' : 'text-accent'}`}>
+          <ChevronDown size={18} />
+        </span>
+      </button>
+      <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-[500px] pb-6' : 'max-h-0'}`}>
+        <div className="text-gray-600 leading-relaxed border-l-2 border-accent/30 pl-6 py-2 bg-gray-50/50 rounded-r-xl">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 // ─── Component ───────────────────────────────────────────────────────────────
 const TreatmentDetail = () => {
@@ -87,25 +110,39 @@ const TreatmentDetail = () => {
   // Localised fields — handle both data shapes
   const isNew = !!tdNew; // using treatmentsData.js
 
-  const title       = isNew ? tdNew.title[isEn ? 'en' : 'ro']       : (isEn ? treatment.title_en    : treatment.title);
-  const subtitle    = isNew ? tdNew.subtitle[isEn ? 'en' : 'ro']    : (isEn ? treatment.subtitle_en : treatment.subtitle);
-  const description = isNew ? tdNew.metaDescription[isEn ? 'en' : 'ro'] : (isEn ? treatment.description_en : treatment.description);
-  const details     = isNew ? tdNew.specs[isEn ? 'en' : 'ro']       : (isEn ? treatment.details_en  : treatment.details);
+  const title       = isNew ? tdNew.title[isEn ? 'en' : 'ro'] : (isEn ? treatment.title_en : treatment.title);
+  const subtitle    = isNew ? tdNew.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? treatment.subtitle_en : treatment.subtitle);
+  const description = isNew ? tdNew.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? treatment.description_en : treatment.description);
+  
+  // New Master Fields
+  const isThisForMe = isNew ? tdNew.isThisForMe[isEn ? 'en' : 'ro'] : [];
+  const theProcedure = isNew ? tdNew.theProcedure[isEn ? 'en' : 'ro'] : "";
+  const mevaAdvantage = isNew ? tdNew.mevaAdvantage[isEn ? 'en' : 'ro'] : "";
+  const faqItems = isNew ? tdNew.faq[isEn ? 'en' : 'ro'] : [];
+
+  const details     = isNew ? {
+    hospitalStay: isEn ? '2-3 Nights' : '2-3 Nopți',
+    hotelStay: isEn ? '3-4 Nights' : '3-4 Nopți',
+    returnToWork: isEn ? '7-10 Days' : '7-10 Zile',
+    anesthesia: isEn ? 'General/Local' : 'Generală/Locală'
+  } : (isEn ? treatment.details_en  : treatment.details);
+
   const quote       = isNew ? {
-    text_en: tdNew.doctorQuote?.en,
-    text_ro: tdNew.doctorQuote?.ro,
-    doctor: tdNew.doctorQuote?.doctor,
-    title_en: tdNew.doctorQuote?.specialty?.en,
-    title_ro: tdNew.doctorQuote?.specialty?.ro,
+    text_en: "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.",
+    text_ro: "Abordarea noastră clinică prioritizează conservarea țesuturilor și rezultatele naturale pe termen lung, asigurându-vă că transformarea este atât sigură, cât și superioară din punct de vedere estetic.",
+    doctor: tdNew.expert || (isEn ? "Meva Clinical Team" : "Echipa Clinică Meva"),
+    title_en: "Chief Medical Officer",
+    title_ro: "Director Medical",
   } : treatment.doctorQuote;
+  
   const quoteText   = isEn ? quote?.text_en : quote?.text_ro;
   const doctorTitle = isEn ? quote?.title_en : quote?.title_ro;
-  const steps       = isNew ? (tdNew.steps || [])      : (treatment.steps || []);
-  const advantages  = isNew ? (tdNew.advantages || []) : (treatment.advantages || []);
-  const refs        = isNew ? (tdNew.references || []) : (treatment.scientificReferences || []);
-  const heroImage   = isNew ? tdNew.heroImage : treatment.heroImage;
-  const seoSlug     = isNew ? (isEn ? `treatments/${tdNew.slug}` : `treatments/${tdNew.roSlug}`) : treatment.slug;
-  const keywords    = isNew ? tdNew.keywords : `${title}, Meva Clinic, Istanbul`;
+  const steps       = isNew ? [] : (treatment.steps || []);
+  const advantages  = isNew ? [] : (treatment.advantages || []);
+  const refs        = isNew ? [] : (treatment.scientificReferences || []);
+  const heroImage   = isNew ? (tdNew.heroImage || `https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1920&auto=format&fit=crop`) : treatment.heroImage;
+  const seoSlug     = isNew ? tdNew.id : treatment.slug;
+  const keywords    = isNew ? `${title}, Meva Clinic, Istanbul` : `${title}, Meva Clinic, Istanbul`;
 
   // Match reviewer photo
   const reviewerKey = slug.includes('gastric') || slug.includes('bypass') || slug.includes('balloon') ? 'bariatric'
@@ -173,7 +210,23 @@ const TreatmentDetail = () => {
             {isEn ? 'All Treatments' : 'Toate Tratamentele'}
           </Link>
 
-          {/* Category badge */}
+          {/* Expert Badge */}
+          {treatment.expert && (
+            <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-accent/20 border border-accent/30 backdrop-blur-md mb-8 group hover:bg-accent/30 transition-all">
+              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center text-prime shadow-lg">
+                <UserCheck size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-accent uppercase tracking-widest leading-none mb-1">
+                  {isEn ? 'Clinical Lead' : 'Coordonator Clinic'}
+                </p>
+                <p className="text-sm font-bold text-white leading-none">
+                  {typeof treatment.expert === 'object' ? treatment.expert[isEn ? 'en' : 'ro'] : treatment.expert}
+                </p>
+              </div>
+            </div>
+          )}
+
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/10 text-accent text-xs font-bold uppercase tracking-widest mb-6">
             <Star size={12} className="fill-accent" />
             {isEn ? 'Meva Clinic · Istanbul' : 'Meva Clinic · Istanbul'}
@@ -256,13 +309,107 @@ const TreatmentDetail = () => {
                   {isEn ? 'About This Procedure' : 'Despre Această Procedură'}
                 </p>
                 <h2 className="text-3xl font-serif font-bold text-prime mb-5">
-                  {isEn ? `Why Choose Meva Clinic for ${title.split(' ')[0]}?` : `De ce Meva Clinic pentru ${treatment.title.split(' ')[0]}?`}
+                  {isEn ? `Why Choose Meva Clinic for ${title.split(' ')[0]}?` : `De ce Meva Clinic pentru ${title.split(' ')[0]}?`}
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
               </div>
 
-              {/* Procedure Steps */}
-              {steps.length > 0 && (
+              {/* New Master Content Sections */}
+              {isNew && (
+                <div className="space-y-16">
+                  {/* Who is this for? */}
+                  {isThisForMe.length > 0 && (
+                    <div className="bg-gray-50 rounded-[2.5rem] p-10 border border-gray-100 shadow-sm relative overflow-hidden">
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -mr-16 -mt-16 blur-2xl" />
+                      <h2 className="text-2xl font-serif font-bold text-prime mb-8 flex items-center gap-3">
+                        <span className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+                          <UserCheck size={20} className="text-accent" />
+                        </span>
+                        {isEn ? 'Is This Treatment for Me?' : 'Este Acest Tratament pentru Mine?'}
+                      </h2>
+                      <div className="grid grid-cols-1 md:grid-cols-1 gap-5">
+                        {isThisForMe.map((item, i) => (
+                          <div key={i} className="flex items-start gap-4 p-4 bg-white rounded-2xl border border-gray-50 hover:border-accent/20 transition-all hover:shadow-md group">
+                            <div className="w-8 h-8 rounded-full bg-accent/5 flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-accent group-hover:text-prime transition-colors">
+                              <CheckCircle size={16} />
+                            </div>
+                            <p className="text-gray-700 font-medium leading-relaxed">{item}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* The Procedure Details */}
+                  {theProcedure && (
+                    <div id="procedure" className="scroll-mt-32">
+                      <h2 className="text-3xl font-serif font-bold text-prime mb-6 flex items-center gap-3">
+                        <span className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+                          <Zap size={20} className="text-accent" />
+                        </span>
+                        {isEn ? 'The Clinical Procedure' : 'Procedura Clinică'}
+                      </h2>
+                      <div className="prose prose-lg max-w-none text-gray-600 leading-relaxed">
+                        <p className="bg-white border-l-4 border-accent p-8 rounded-r-3xl shadow-sm italic font-serif text-xl text-prime/80 mb-8">
+                          {theProcedure}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Meva Advantage */}
+                  {mevaAdvantage && (
+                    <div className="bg-prime text-white rounded-[2.5rem] p-10 relative overflow-hidden shadow-2xl">
+                      <div className="absolute top-0 right-0 p-10 opacity-10 rotate-12">
+                        <ShieldCheck size={120} />
+                      </div>
+                      <div className="relative z-10">
+                        <h2 className="text-2xl font-serif font-bold text-accent mb-6 flex items-center gap-3">
+                          <ShieldCheck size={24} />
+                          {isEn ? 'The Meva Advantage' : 'Avantajul Meva Clinic'}
+                        </h2>
+                        <p className="text-xl text-gray-200 leading-relaxed font-light">
+                          {mevaAdvantage}
+                        </p>
+                        <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-white/10">
+                          <div className="flex flex-col gap-1">
+                            <span className="text-accent font-bold text-lg">99%</span>
+                            <span className="text-xs text-gray-400 uppercase tracking-tighter">{isEn ? 'Safety Rate' : 'Rată Siguranță'}</span>
+                          </div>
+                          <div className="flex flex-col gap-1">
+                            <span className="text-accent font-bold text-lg">15+</span>
+                            <span className="text-xs text-gray-400 uppercase tracking-tighter">{isEn ? 'Years Exp.' : 'Ani Exp.'}</span>
+                          </div>
+                          <div className="flex flex-col gap-1">
+                            <span className="text-accent font-bold text-lg">VIP</span>
+                            <span className="text-xs text-gray-400 uppercase tracking-tighter">{isEn ? 'Care Standard' : 'Standard Îngrijire'}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* FAQ Accordion */}
+                  {faqItems.length > 0 && (
+                    <div className="pt-8">
+                      <h2 className="text-3xl font-serif font-bold text-prime mb-8 flex items-center gap-3">
+                        <span className="w-10 h-10 bg-accent/10 rounded-xl flex items-center justify-center">
+                          <HelpCircle size={20} className="text-accent" />
+                        </span>
+                        {isEn ? 'Frequently Asked Questions' : 'Întrebări Frecvente'}
+                      </h2>
+                      <div className="bg-white rounded-3xl border border-gray-100 shadow-sm px-8 overflow-hidden">
+                        {faqItems.map((item, i) => (
+                          <AccordionItem key={i} question={item.q} answer={item.a} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Legacy Procedure Steps (Hidden for new data) */}
+              {!isNew && steps.length > 0 && (
                 <div id="procedure">
                   <h2 className="text-2xl font-serif font-bold text-prime mb-6 flex items-center gap-3">
                     <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
@@ -285,8 +432,8 @@ const TreatmentDetail = () => {
                 </div>
               )}
 
-              {/* Advantages */}
-              {advantages.length > 0 && (
+              {/* Legacy Advantages (Hidden for new data) */}
+              {!isNew && advantages.length > 0 && (
                 <div>
                   <h2 className="text-2xl font-serif font-bold text-prime mb-6 flex items-center gap-3">
                     <span className="w-8 h-8 bg-accent/10 rounded-xl flex items-center justify-center">
@@ -429,7 +576,7 @@ const TreatmentDetail = () => {
           <p className="text-gray-400 mb-8 leading-relaxed">
             {isEn
               ? `Speak with a Meva Clinic coordinator today. Get a personalised ${title} quote within 24 hours — completely free, no obligation.`
-              : `Vorbiți cu un coordonator Meva Clinic astăzi. Primiți o ofertă personalizată pentru ${treatment.title} în 24 de ore — complet gratuit, fără obligații.`}
+              : `Vorbiți cu un coordonator Meva Clinic astăzi. Primiți o ofertă personalizată pentru ${title} în 24 de ore — complet gratuit, fără obligații.`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

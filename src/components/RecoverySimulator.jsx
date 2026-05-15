@@ -44,7 +44,7 @@ const recoveryData = {
     {
       stage: "6 Months",
       physical: "Significant visual density. Hair shaft thickness increases by 40% vs. month 3.",
-      protocol: "Mathematical density assessment vs. Dr. Alakaya's original model.",
+      protocol: "Mathematical density assessment vs. MD Harun's original model.",
       badge: "Growth Surge"
     },
     {

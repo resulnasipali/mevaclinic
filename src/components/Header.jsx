@@ -45,6 +45,7 @@ const Header = () => {
       '/ro/chirurgie-plastica': '/en/plastic-surgery',  '/en/plastic-surgery': '/ro/chirurgie-plastica',
       '/ro/transplant-organe': '/en/organ-transplant',  '/en/organ-transplant': '/ro/transplant-organe',
       '/ro/ivf-ciprul-de-nord': '/en/ivf-northern-cyprus', '/en/ivf-northern-cyprus': '/ro/ivf-ciprul-de-nord',
+      '/ro/andrologie': '/en/andrology',                '/en/andrology': '/ro/andrologie',
       '/ro/romani-istanbul': '/en',
       '/': '/en', '/ro': '/en', '/en': '/ro',
     };
@@ -76,14 +77,20 @@ const Header = () => {
       name: isEn ? 'Treatments' : 'Tratamente',
       path: '#',
       dropdown: [
-        { name: isEn ? 'Bariatric Surgery'   : 'Chirurgie Bariatrică',  path: isEn ? '/en/gastric-sleeve'      : '/ro/gastric-sleeve'      },
-        { name: isEn ? 'Hair Transplant'     : 'Transplant de Păr',     path: isEn ? '/en/hair-transplant'     : '/ro/implant-par'          },
-        { name: isEn ? 'IVF · Cyprus'        : 'FIV · Cipru',           path: isEn ? '/en/ivf-northern-cyprus' : '/ro/ivf-ciprul-de-nord'   },
-        { name: isEn ? 'Oncology'            : 'Oncologie Robotică',    path: isEn ? '/en/oncology'            : '/ro/oncologie'            },
-        { name: isEn ? 'Dental Implants'     : 'Implant Dentar',        path: isEn ? '/en/dental-implants'     : '/ro/implant-dentar'       },
-        { name: isEn ? 'Plastic Surgery'     : 'Chirurgie Plastică',    path: isEn ? '/en/plastic-surgery'     : '/ro/chirurgie-plastica'   },
-        { name: isEn ? 'Organ Transplant'    : 'Transplant de Organe',  path: isEn ? '/en/organ-transplant'    : '/ro/transplant-organe'    },
-        { name: isEn ? 'Eyebrow Transplant'  : 'Transplant Sprâncene',  path: isEn ? '/en/eyebrow-transplant'  : '/ro/implant-sprancene'    },
+        { name: isEn ? 'Bariatric Surgery'         : 'Chirurgie Bariatrică',       path: isEn ? '/en/gastric-sleeve'                    : '/ro/gastric-sleeve'                    },
+        { name: isEn ? 'Hair Transplant'           : 'Transplant de Păr',          path: isEn ? '/en/hair-transplant'                   : '/ro/implant-par'                        },
+        { name: isEn ? 'IVF · Cyprus'              : 'FIV · Cipru',                path: isEn ? '/en/ivf-northern-cyprus'               : '/ro/ivf-ciprul-de-nord'                 },
+        { name: isEn ? 'Oncology'                  : 'Oncologie Robotică',         path: isEn ? '/en/oncology'                          : '/ro/oncologie'                          },
+        { name: isEn ? 'Dental Implants'           : 'Implant Dentar',             path: isEn ? '/en/dental-implants'                   : '/ro/implant-dentar'                     },
+        { name: isEn ? 'Plastic Surgery'           : 'Chirurgie Plastică',         path: isEn ? '/en/plastic-surgery'                   : '/ro/chirurgie-plastica'                 },
+        { name: isEn ? 'Organ Transplant'          : 'Transplant de Organe',       path: isEn ? '/en/organ-transplant'                  : '/ro/transplant-organe'                  },
+        { name: isEn ? 'Eyebrow Transplant'        : 'Transplant Sprâncene',       path: isEn ? '/en/eyebrow-transplant'                : '/ro/implant-sprancene'                   },
+        // ── Andrology ──
+        { name: isEn ? '── Andrology ──'           : '── Andrologie ──',           path: isEn ? '/en/andrology'                         : '/ro/andrologie',                        isSectionLabel: true },
+        { name: isEn ? 'Penis Enlargement Surgery' : 'Mărire Penis Chirurgical',   path: isEn ? '/en/treatments/penis-enlargement-surgery' : '/ro/treatments/penis-enlargement-surgery' },
+        { name: isEn ? 'Non-Surgical Girth (HA)'  : 'Îngroșare Non-Chirurgicală', path: isEn ? '/en/treatments/non-surgical-enlargement'  : '/ro/treatments/non-surgical-enlargement'  },
+        { name: isEn ? 'ED: ESWT & P-Shot'         : 'ED: ESWT & P-Shot',          path: isEn ? '/en/treatments/ed-treatments-eswt-pshot'  : '/ro/treatments/ed-treatments-eswt-pshot'  },
+        { name: isEn ? 'Penile Prosthesis'          : 'Proteză Peniană',            path: isEn ? '/en/treatments/penile-prosthesis'         : '/ro/treatments/penile-prosthesis'         },
       ],
     },
     { name: 'Blog',                          path: isEn ? '/en/blog'    : '/ro/blog'    },
@@ -138,16 +145,22 @@ const Header = () => {
                         role="menu"
                       >
                         {link.dropdown.map((item) => (
-                          <Link
-                            key={item.name}
-                            to={item.path}
-                            role="menuitem"
-                            onClick={() => setTreatmentsMenu(false)}
-                            className="flex items-center gap-3 px-5 py-3.5 text-[11px] font-bold text-prime hover:bg-gray-50 hover:text-accent border-b border-gray-50 last:border-0 transition-colors"
-                          >
-                            <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                            {item.name}
-                          </Link>
+                          item.isSectionLabel ? (
+                            <div key={item.name} className="px-5 py-2 text-[9px] font-black uppercase tracking-[0.2em] text-accent/80 bg-prime/5 border-b border-gray-100">
+                              {isEn ? 'Andrology & Men\'s Health' : 'Andrologie & Sănătatea Bărbaților'}
+                            </div>
+                          ) : (
+                            <Link
+                              key={item.name}
+                              to={item.path}
+                              role="menuitem"
+                              onClick={() => setTreatmentsMenu(false)}
+                              className="flex items-center gap-3 px-5 py-3.5 text-[11px] font-bold text-prime hover:bg-gray-50 hover:text-accent border-b border-gray-50 last:border-0 transition-colors"
+                            >
+                              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                              {item.name}
+                            </Link>
+                          )
                         ))}
                       </div>
                     )}
@@ -279,19 +292,25 @@ const Header = () => {
                       </button>
                       {/* Accordion content */}
                       <div
-                        className={`overflow-hidden transition-all duration-400 ${mobileAccordion ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
+                        className={`overflow-hidden transition-all duration-400 ${mobileAccordion ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}
                       >
                         <div className="pt-3 pb-4 pl-4 flex flex-col gap-1">
                           {link.dropdown.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.path}
-                              onClick={() => { setIsOpen(false); setMobileAccordion(false); }}
-                              className="flex items-center gap-3 py-3 text-base font-semibold text-gray-300 hover:text-accent transition-colors border-b border-white/5 last:border-0"
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                              {item.name}
-                            </Link>
+                            item.isSectionLabel ? (
+                              <div key={item.name} className="py-2 text-[9px] font-black uppercase tracking-[0.2em] text-accent mt-2">
+                                {isEn ? '— Andrology & Men\'s Health —' : '— Andrologie & Sănătatea Bărbaților —'}
+                              </div>
+                            ) : (
+                              <Link
+                                key={item.name}
+                                to={item.path}
+                                onClick={() => { setIsOpen(false); setMobileAccordion(false); }}
+                                className="flex items-center gap-3 py-3 text-base font-semibold text-gray-300 hover:text-accent transition-colors border-b border-white/5 last:border-0"
+                              >
+                                <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
+                                {item.name}
+                              </Link>
+                            )
                           ))}
                         </div>
                       </div>

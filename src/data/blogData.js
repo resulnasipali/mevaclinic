@@ -13,7 +13,7 @@ export const blogPosts = [
       ro: "Descoperă cum lamele de safir revoluționează densitatea și aspectul natural al transplantului de păr modern."
     },
     date: "2026-04-15",
-    author: "Dr. Harun Alakaya"
+    author: "MD Harun"
   },
   {
     id: 2,
@@ -93,7 +93,7 @@ export const blogPosts = [
       ro: "De ce chirurgia asistată robotic reduce timpul de recuperare și îmbunătățește rezultatele metabolice."
     },
     date: "2026-03-15",
-    author: "Dr. Harun Alakaya"
+    author: "MD Harun"
   },
   {
     id: 7,

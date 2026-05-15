@@ -2,7 +2,7 @@ export const treatmentRules = {
   doctors: [
     {
       id: "dr-harun",
-      name: "Dr. Harun Alakaya",
+      name: "MD Harun",
       specialty: "Hair Restoration",
       successRate: "98.5%",
       experience: "15+ Years",

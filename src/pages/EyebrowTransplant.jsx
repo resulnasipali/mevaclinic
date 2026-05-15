@@ -45,10 +45,10 @@ const EyebrowTransplant = ({ lang = 'ro' }) => {
         </h1>
         <div className="flex justify-center mb-4">
            {/* Dr. Harun Badge Exclusive to Hair Procedures */}
-           <DoctorBadge text={isEn ? "Procedure coordinated by Dr. Harun Alakaya" : "Procedură coordonată de Dr. Harun Alakaya"} />
+           <DoctorBadge text={isEn ? "Procedure coordinated by MD Harun" : "Procedură coordonată de MD Harun"} />
         </div>
         <p className="text-xl text-gray-600 mb-12 mt-4 text-center max-w-3xl mx-auto">
-          {isEn ? "Achieve natural density using Micro-FUE and DHI techniques under the direct supervision of Dr. Harun Alakaya. Pain-free local anesthesia for maximum comfort and immediate results." : "Obține o densitate naturală folosind tehnicile Micro-FUE și DHI sub supervizarea directă a Dr. Harun Alakaya. Anestezie locală confortabilă, fără durere și rezultate imediate."}
+          {isEn ? "Achieve natural density using Micro-FUE and DHI techniques under the direct supervision of MD Harun. Pain-free local anesthesia for maximum comfort and immediate results." : "Obține o densitate naturală folosind tehnicile Micro-FUE și DHI sub supervizarea directă a MD Harun. Anestezie locală confortabilă, fără durere și rezultate imediate."}
         </p>
         
         <PatientJourneyTimeline />

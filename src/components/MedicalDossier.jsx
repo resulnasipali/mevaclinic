@@ -34,7 +34,7 @@ const MedicalDossier = ({ data, isEn = false, isUnlocked = false, onUnlock }) =>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 relative z-10">
          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
             <h3 className="text-[10px] font-bold text-accent uppercase tracking-widest mb-4">{isEn ? "Specialist & Facility" : "Specialist și Facilitate"}</h3>
-            <p className="text-sm mb-2"><strong>{isEn ? "Specialist" : "Medic Specialist"}:</strong> {data.doctorName || 'Dr. Harun Alakaya'}</p>
+            <p className="text-sm mb-2"><strong>{isEn ? "Specialist" : "Medic Specialist"}:</strong> {data.doctorName || 'MD Harun'}</p>
             <p className="text-sm mb-2"><strong>{isEn ? "Hospital" : "Spital"}:</strong> {data.hospitalName || 'Istanbul Excellence Hospital'}</p>
             <p className="text-sm"><strong>{isEn ? "Technology" : "Tehnologie"}:</strong> {data.technology || 'Sapphire FUE / CyberKnife S7'}</p>
          </div>

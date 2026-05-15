@@ -1,636 +1,869 @@
-/**
- * treatmentsData.js
- * Single source of truth for all Meva Clinic treatment pages.
- * Used by TreatmentDetail.jsx via useParams(:slug)
- *
- * URL pattern:  /en/treatments/:slug  |  /ro/treatments/:slug
- * Fallback:     /:lng/:slug  (TreatmentPage with treatmentDetails.json)
- */
+// src/data/treatmentsData.js
+const t = (en, ro) => ({ en, ro });
 
-export const TREATMENTS = [
-  // ──────────────────────────────────────────────────────────
-  // BARIATRIC SURGERY
-  // ──────────────────────────────────────────────────────────
+export const treatmentsData = [
+  // ==========================================
+  // 1. PLASTIC SURGERY & POST-BARIATRIC
+  // ==========================================
   {
-    slug: 'bariatric-surgery',
-    roSlug: 'chirurgie-bariatrica',
-    category: 'Bariatric',
-    heroImage: 'https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'Bariatric Surgery Istanbul',
-      ro: 'Chirurgie Bariatrică Istanbul',
-    },
-    subtitle: {
-      en: 'Gastric Sleeve, Bypass & Balloon — JCI Accredited Hospital',
-      ro: 'Gastric Sleeve, Bypass și Balon — Spital Acreditat JCI',
-    },
-    metaDescription: {
-      en: 'World-class bariatric surgery in Istanbul. Gastric Sleeve, Bypass and Balloon performed by Dr. Cuma with 10,000+ procedures. All-inclusive VIP package.',
-      ro: 'Chirurgie bariatrică de clasă mondială în Istanbul. Gastric Sleeve, Bypass și Balon realizate de Dr. Cuma cu peste 10.000 de proceduri. Pachet VIP complet.',
-    },
-    keywords: 'bariatric surgery Istanbul, gastric sleeve Turkey, gastric bypass cost, obesity surgery, Meva Clinic bariatric',
-
-    doctorQuote: {
-      en: 'In over 10,000 bariatric procedures, our patients achieve an average of 65–80% excess weight loss within 12 months — with a complication rate below 1%. At Meva Clinic, surgery is only the beginning of your transformation.',
-      ro: 'În peste 10.000 de proceduri bariatrice, pacienții noștri obțin o pierdere medie de 65–80% din excesul de greutate în 12 luni — cu o rată de complicații sub 1%. La Meva Clinic, operația este doar începutul transformării tale.',
-      doctor: 'Dr. Cuma',
-      specialty: {
-        en: 'Bariatric & Metabolic Surgery Specialist · 10,000+ Procedures',
-        ro: 'Specialist Chirurgie Bariatrică & Metabolică · Peste 10.000 de Proceduri',
-      },
-      image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=200',
-    },
-
-    steps: [
-      { en: 'Free online assessment & BMI eligibility check', ro: 'Evaluare online gratuită și verificare eligibilitate IMC' },
-      { en: 'Pre-operative blood panel, ECG and cardiac clearance', ro: 'Panel sanguin preoperatoriu, ECG și evaluare cardiacă' },
-      { en: 'Laparoscopic / robotic surgery under general anaesthesia (45–90 min)', ro: 'Chirurgie laparoscopică / robotică sub anestezie generală (45–90 min)' },
-      { en: '2–3 nights monitored recovery in JCI-accredited private hospital', ro: '2–3 nopți recuperare monitorizată în spital privat acreditat JCI' },
-      { en: '12-month remote follow-up with dietitian & bariatric nurse', ro: '12 luni follow-up la distanță cu dietetician și asistentă bariatrică' },
-    ],
-
-    advantages: [
-      { en: '65–80% excess weight loss in 12 months', ro: '65–80% pierdere a excesului de greutate în 12 luni' },
-      { en: 'Resolves Type 2 Diabetes in 80% of patients', ro: 'Rezolvă Diabetul de Tip 2 la 80% dintre pacienți' },
-      { en: '40–60% cheaper than UK, Germany & Romania', ro: '40–60% mai ieftin decât UK, Germania și România' },
-      { en: 'JCI-accredited hospital — international safety standard', ro: 'Spital acreditat JCI — standard internațional de siguranță' },
-      { en: 'Romanian-speaking coordinator included 24/7', ro: 'Coordonator vorbitor de română inclus 24/7' },
-    ],
-
-    specs: {
-      en: { hospitalStay: '2–3 Nights (Private)', hotelStay: '3 Nights (5★ Hotel)', anesthesia: 'General', returnToWork: '7–14 Days' },
-      ro: { hospitalStay: '2–3 Nopți (Privat)', hotelStay: '3 Nopți (Hotel 5★)', anesthesia: 'Generală', returnToWork: '7–14 Zile' },
-    },
-
-    references: [
-      'Schauer, P. R., et al. (2025). Bariatric Surgery versus Intensive Medical Therapy for Diabetes. NEJM.',
-      'JCI Global Clinical Standards for Metabolic Surgery (2026 Edition).',
-      'IFSO World Congress: Robotic Bariatric Surgery Outcomes 2025.',
-    ],
+    id: 'piezo-rhinoplasty',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Daghan',
+    title: t('Piezo Ultrasonic Rhinoplasty', 'Rinoplastie Ultrasonică Piezo'),
+    shortDesc: t('Master the geometry of your face. Prof. Dr. Daghan utilizes tissue-sparing ultrasonic technology to sculpt the perfect nasal profile without breaking bone, ensuring rapid recovery and a refined, natural result.', 'Stăpâniți geometria feței. Prof. Dr. Daghan utilizează tehnologia ultrasonică de ultimă oră pentru a sculpta profilul nazal perfect, protejând țesuturile și asigurând o recuperare rapidă și un rezultat rafinat.'),
+    isThisForMe: t([
+      'Individuals seeking structural correction without the trauma of traditional "breaking" techniques.',
+      'Patients unhappy with nasal symmetry, hump, or tip definition.',
+      'Those demanding the fastest recovery time with minimal bruising and swelling.'
+    ], [
+      'Persoane care caută corecție structurală fără trauma tehnicilor tradiționale de "rupere" a osului.',
+      'Pacienți nemulțumiți de simetria nazală, cocoașă sau definirea vârfului.',
+      'Cei care doresc cel mai rapid timp de recuperare, cu vânătăi și umflături minime.'
+    ]),
+    theProcedure: t('Performed in a JCI-accredited theater under the meticulous expertise of Prof. Dr. Daghan. Using advanced Piezo sound waves, the nasal structure is reshaped with sub-millimeter precision, preserving delicate vessels and nerves for minimal swelling.', 'Efectuată într-un bloc operator acreditat JCI, sub expertiza meticuloasă a Prof. Dr. Daghan. Folosind unde sonore Piezo avansate, structura nazală este remodelată cu precizie sub-milimetrică, păstrând vasele și nervii delicați.'),
+    mevaAdvantage: t('Prof. Dr. Daghan\'s "Preservation Rhinoplasty" philosophy ensures that your unique facial identity is enhanced, not altered. Using 3D Vectra simulation, we design your result collaboratively before the first incision is made.', 'Filozofia de "Rinoplastie de Conservare" a Prof. Dr. Daghan asigură că identitatea ta facială este îmbunătățită, nu alterată. Folosind simularea 3D Vectra, proiectăm rezultatul împreună înainte de prima incizie.'),
+    faq: t([
+      { q: 'Why is Piezo better than traditional rhinoplasty?', a: 'Traditional methods use hammers and chisels, causing bone fractures and heavy bruising. Piezo uses ultrasonic vibrations to shape bone with zero damage to soft tissue.' },
+      { q: 'How long until I see my final nose?', a: 'While 80% of swelling subsides in 6 weeks, the final refined tip definition appears between 6 to 12 months.' }
+    ], [
+      { q: 'De ce este Piezo mai bună decât rinoplastia tradițională?', a: 'Metodele tradiționale folosesc dălți și ciocane, provocând fracturi și vânătăi. Piezo folosește vibrații ultrasonice pentru a modela osul fără a afecta țesutul moale.' },
+      { q: 'Cât timp durează până văd forma finală?', a: 'Deși 80% din umflături dispar în 6 săptămâni, definirea finală a vârfului apare între 6 și 12 luni.' }
+    ]),
+    seo: { title: 'Meva Clinic | Piezo Ultrasonic Rhinoplasty in Turkey', desc: 'Experience precision Piezo Rhinoplasty at Meva Clinic, Istanbul. Minimal bruising, natural results, and advanced ultrasonic technology by Prof. Dr. Daghan.' }
+  },
+  {
+    id: 'vaser-liposuction',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Emre',
+    title: t('Vaser Liposuction & Body Contouring', 'Vaser Liposucție și Conturare Corporală'),
+    shortDesc: t('Define your silhouette. Prof. Dr. Emre employs high-definition Vaser ultrasound technology to selectively emulsify fat, sculpting athletic contours and tightening skin with surgical artistry.', 'Definește-ți silueta. Prof. Dr. Emre utilizează tehnologia ultrasonică Vaser de înaltă definiție pentru a sculpta contururi atletice și a întinde pielea cu măiestrie chirurgicală.'),
+    isThisForMe: t([
+      'Individuals close to their ideal weight seeking "High-Definition" muscle visibility.',
+      'Patients with stubborn fat deposits resistant to diet and intensive exercise.',
+      'Those wanting significant skin tightening alongside fat removal to avoid sagging.'
+    ], [
+      'Persoane apropiate de greutatea ideală care caută vizibilitate musculară "High-Definition".',
+      'Pacienți cu depozite de grăsime încăpățânate, rezistente la dietă și exerciții fizice intense.',
+      'Cei care doresc o întindere semnificativă a pielii odată cu eliminarea grăsimii.'
+    ]),
+    theProcedure: t('Under the artistic direction of Prof. Dr. Emre, specialized ultrasonic probes target fat cells while sparing connective tissue. This advanced technique allows for the extraction of superficial fat to reveal the "six-pack" and "oblique" lines previously hidden.', 'Sub direcția artistică a Prof. Dr. Emre, sonde ultrasonice specializate vizează celulele adipoase protejând țesutul conjunctiv. Această tehnică permite evidențierea liniilor musculare abdominale.'),
+    mevaAdvantage: t('At Meva Clinic, Prof. Dr. Emre\'s High-Def protocols ensure that skin retraction is maximized, preventing the "lumpy" outcomes of traditional lipo. Our post-op manual lymphatic drainage regimen accelerates your transition to a toned physique.', 'La Meva Clinic, protocoalele High-Def ale Prof. Dr. Emre asigură retracția maximă a pielii. Regimul nostru postoperator de drenaj limfatic manual accelerează tranziția către un fizic tonifiat.'),
+    faq: t([
+      { q: 'Is Vaser Lipo a weight-loss procedure?', a: 'No, it is a body contouring procedure. It is designed to remove localized fat and sculpt the body, not to treat general obesity.' },
+      { q: 'When can I see my "six-pack" results?', a: 'Initial results are visible in 4 weeks, with the most dramatic definition appearing after 3 months as the skin tightens over the muscles.' }
+    ], [
+      { q: 'Vaser Lipo este o procedură de slăbire?', a: 'Nu, este o procedură de conturare corporală. Este concepută pentru a elimina grăsimea localizată și a sculpta corpul, nu pentru a trata obezitatea generală.' },
+      { q: 'Când îmi voi vedea rezultatele de tip "six-pack"?', a: 'Rezultatele inițiale sunt vizibile în 4 săptămâni, definiția dramatică apărând după 3 luni.' }
+    ]),
+    seo: { title: 'Meva Clinic | Vaser Liposuction Turkey', desc: 'Sculpt your body with Vaser Liposuction at Meva Clinic. Advanced High-Def technology for targeted fat removal and skin tightening by Prof. Dr. Emre.' }
+  },
+  {
+    id: 'breast-augmentation',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Muzaffer',
+    title: t('Breast Augmentation', 'Augmentare Mamară (Implanturi)'),
+    shortDesc: t('Elevate your confidence. Prof. Dr. Muzaffer combines surgical precision with premium, lifetime-warranted implants to create a natural, harmonious breast contour tailored to your anatomy.', 'Ridică-ți încrederea. Prof. Dr. Muzaffer combină precizia chirurgicală cu implanturi premium, garantate pe viață, pentru a crea un contur mamar natural și armonios.'),
+    isThisForMe: t([
+      'Women desiring a natural increase in volume and a more youthful breast profile.',
+      'Mothers looking to restore breast fullness lost after pregnancy or breastfeeding.',
+      'Individuals seeking to correct asymmetry and improve upper-pole cleavage projection.'
+    ], [
+      'Femei care doresc o creștere naturală a volumului și un profil mamar mai tineresc.',
+      'Mame care doresc să restaureze plinătatea sânilor pierdută după sarcină sau alăptare.',
+      'Persoane care caută corectarea asimetriei și îmbunătățirea proiecției decolteului.'
+    ]),
+    theProcedure: t('Prof. Dr. Muzaffer utilizes the "Dual Plane" technique to place FDA-approved Motiva or Mentor implants. This ensures the implant is partially covered by muscle for a soft, natural slope while maintaining cleavage projection.', 'Prof. Dr. Muzaffer utilizează tehnica "Dual Plane" pentru a plasa implanturi Motiva sau Mentor aprobate FDA. Aceasta asigură o pantă naturală, implantul fiind parțial acoperit de mușchi.'),
+    mevaAdvantage: t('We prioritize "Natural Motion" results. Prof. Dr. Muzaffer\'s meticulous pocket dissection minimizes displacement risks, ensuring your results look and feel authentic in every movement.', 'Prioritizăm rezultatele cu "Mișcare Naturală". Disecția meticuloasă a buzunarului efectuată de Prof. Dr. Muzaffer minimizează riscurile de deplasare, asigurând un aspect autentic.'),
+    faq: t([
+      { q: 'Which implant brand is best?', a: 'We exclusively use Motiva and Mentor. During your consultation, Prof. Dr. Muzaffer will select the base, projection, and gel density that perfectly matches your thorax.' },
+      { q: 'How long is the surgery?', a: 'The procedure takes approximately 60-90 minutes under general anesthesia, followed by a one-night stay for monitoring.' }
+    ], [
+      { q: 'Ce marcă de implant este cea mai bună?', a: 'Folosim exclusiv Motiva și Mentor. În timpul consultației, Prof. Dr. Muzaffer va selecta proiecția și densitatea gelului potrivite pentru toracele tău.' },
+      { q: 'Cât durează operația?', a: 'Procedura durează aproximativ 60-90 de minute sub anestezie generală, urmată de o noapte de spitalizare.' }
+    ]),
+    seo: { title: 'Meva Clinic | Breast Augmentation with Premium Implants', desc: 'Achieve natural, beautiful curves with Breast Augmentation at Meva Clinic, Turkey. Expert precision by Prof. Dr. Muzaffer.' }
+  },
+  {
+    id: 'blepharoplasty',
+    category: 'plastic-surgery',
+    expert: 'Doç. Dr. Türker',
+    title: t('Blepharoplasty (Eyelid Surgery)', 'Blefaroplastie (Chirurgia Pleoapelor)'),
+    shortDesc: t('Awaken your gaze. Doç. Dr. Türker performs precision eyelid surgery to eliminate heavy hoods and under-eye bags, restoring a rested, youthful, and vibrant appearance.', 'Trezește-ți privirea. Doç. Dr. Türker efectuează chirurgia pleoapelor de precizie pentru a elimina excesul de piele și pungile de sub ochi, restaurând un aspect odihnit.'),
+    isThisForMe: t([
+      'Individuals with sagging upper lids that impair vision or look "heavy."',
+      'Patients with persistent under-eye puffiness and "bags" that don\'t respond to topical treatments.',
+      'Those seeking a permanent solution to a chronically tired facial expression.'
+    ], [
+      'Persoane cu pleoape superioare lăsate care îngreunează privirea.',
+      'Pacienți cu pungi persistente sub ochi care nu răspund la tratamente cosmetice.',
+      'Cei care caută o soluție permanentă pentru o expresie facială cronic obosită.'
+    ]),
+    theProcedure: t('Under the specialized hand of Doç. Dr. Türker, excess skin and fat pads are meticulously repositioned or removed. Incisions are strategically placed within natural creases to ensure absolute invisibility post-healing.', 'Sub mâna specializată a Doç. Dr. Türker, pielea și grăsimea în exces sunt repoziționate sau eliminate. Inciziile sunt plasate strategic în pliurile naturale.'),
+    mevaAdvantage: t('We avoid the "surprised" look. Doç. Dr. Türker focuses on muscle-sparing techniques and fat repositioning, ensuring the eye retains its natural almond shape while looking significantly younger.', 'Evităm aspectul "surprins". Doç. Dr. Türker se concentrează pe tehnici de conservare a mușchilor, asigurând păstrarea formei naturale a ochiului.'),
+    faq: t([
+      { q: 'Will I have scars?', a: 'Upper lid scars are hidden in the natural fold. Lower lid scars are often placed inside the lid (transconjunctival), leaving zero external marks.' },
+      { q: 'How long until I can wear makeup?', a: 'You can typically apply light makeup to cover any residual bruising 10 days after the procedure.' }
+    ], [
+      { q: 'Voi avea cicatrici?', a: 'Cicatricile pleoapei superioare sunt ascunse în pliul natural. Cele inferioare sunt adesea plasate în interiorul pleoapei, lăsând zero urme externe.' },
+      { q: 'Cât timp până pot folosi machiaj?', a: 'De obicei, puteți aplica machiaj ușor la 10 zile după procedură.' }
+    ]),
+    seo: { title: 'Meva Clinic | Eyelid Surgery (Blepharoplasty) Istanbul', desc: 'Rejuvenate your eyes with Blepharoplasty at Meva Clinic. Precision surgery by Doç. Dr. Türker for a youthful, rested look.' }
+  },
+  {
+    id: 'abdominoplasty',
+    category: 'plastic-surgery',
+    expert: 'Uzm. Dr. Onur',
+    title: t('Abdominoplasty (Tummy Tuck)', 'Abdominoplastie (Tummy Tuck)'),
+    shortDesc: t('Reconstruct your core. Uzm. Dr. Onur specializes in total abdominal restoration, repairing muscle separation and removing excess skin for a flat, contoured midsection.', 'Reconstruiește-ți abdomenul. Uzm. Dr. Onur este specializat în restaurarea abdominală totală, reparând diastaza și eliminând excesul de piele.'),
+    isThisForMe: t([
+      'Mothers seeking to repair Diastasis Recti and loose skin after pregnancy.',
+      'Post-bariatric patients with significant "apron" skin after massive weight loss.',
+      'Individuals with abdominal laxity that does not respond to exercise or diet.'
+    ], [
+      'Mame care doresc repararea diastazei și a pielii lăsate după sarcină.',
+      'Pacienți post-bariatrici cu exces masiv de piele după o slăbire majoră.',
+      'Persoane cu laxitate abdominală care nu răspunde la sport.'
+    ]),
+    theProcedure: t('Uzm. Dr. Onur performs a full-muscle plication to tighten the internal abdominal wall. Excess skin is surgically excised, and the navel is artistically repositioned for a completely natural look.', 'Uzm. Dr. Onur efectuează o plicatură musculară completă pentru a întări peretele abdominal. Pielea în exces este excizată, iar ombilicul este repoziționat artistic.'),
+    mevaAdvantage: t('We utilize "Internal Bra" internal suturing techniques and Vaser Liposuction of the flanks in every tummy tuck. This dual approach by Uzm. Dr. Onur ensures an hourglass waistline, not just a flat front.', 'Utilizăm tehnici de sutură internă și Vaser Lipo pe flancuri. Această abordare dublă a Uzm. Dr. Onur asigură o talie tip clepsidră, nu doar un abdomen plat.'),
+    faq: t([
+      { q: 'Can I combine this with a Breast Lift?', a: 'Yes, this is the foundation of our "Mommy Makeover." Uzm. Dr. Onur frequently combines these procedures to minimize recovery time.' },
+      { q: 'Where is the scar?', a: 'The scar is placed very low, along the bikini line, making it invisible even in low-cut swimwear.' }
+    ], [
+      { q: 'Pot combina aceasta cu un lifting mamar?', a: 'Da, aceasta este baza pachetului "Mommy Makeover". Uzm. Dr. Onur combină frecvent aceste proceduri.' },
+      { q: 'Unde este cicatricea?', a: 'Cicatricea este plasată foarte jos, pe linia bikini, fiind invizibilă chiar și în costum de baie.' }
+    ]),
+    seo: { title: 'Meva Clinic | Tummy Tuck (Abdominoplasty) Turkey', desc: 'Achieve a flat, toned stomach with Abdominoplasty at Meva Clinic. Expert muscle repair and skin removal by Uzm. Dr. Onur.' }
+  },
+  {
+    id: 'deep-plane-facelift',
+    category: 'plastic-surgery',
+    expert: 'Op. Dr. Yunus',
+    title: t('Deep Plane Facelift', 'Lifting Facial Deep Plane'),
+    shortDesc: t('The gold standard in facial rejuvenation. Op. Dr. Yunus repositions the deep muscular structure of the face to erase 15 years of aging with natural, structurally sound results.', 'Standardul de aur în întinerirea facială. Op. Dr. Yunus repoziționează structura musculară profundă pentru a șterge 15 ani de îmbătrânire.'),
+    isThisForMe: t([
+      'Patients seeking a permanent, non-surgical-looking alternative to temporary fillers.',
+      'Individuals with significant jowls, mid-face sagging, and loss of neck definition.',
+      'Those demanding the most advanced technique to avoid the "pulled" or "operated" appearance.'
+    ], [
+      'Pacienți care caută o alternativă permanentă și naturală la fillerele temporare.',
+      'Persoane cu lăsare semnificativă a feței și pierderea definirii gâtului.',
+      'Cei care doresc cea mai avansată tehnică pentru a evita aspectul "tras".'
+    ]),
+    theProcedure: t('Unlike traditional lifts, Op. Dr. Yunus releases the deep ligaments of the face, allowing the entire SMAS and fat layer to be vertically repositioned without skin tension. This ensures zero "wind-tunnel" effect.', 'Spre deosebire de liftingurile tradiționale, Op. Dr. Yunus eliberează ligamentele profunde, permițând repoziționarea verticală a întregului strat SMAS fără tensiune pe piele.'),
+    mevaAdvantage: t('Expertise in the Deep Plane technique means faster healing and longer-lasting results. Op. Dr. Yunus focuses on structural integrity, ensuring you look like a rested version of your younger self for a decade or more.', 'Expertiza în tehnica Deep Plane înseamnă vindecare mai rapidă și rezultate de durată. Op. Dr. Yunus se concentrează pe integritatea structurală.'),
+    faq: t([
+      { q: 'Is it more invasive than a "Mini-Lift"?', a: 'While it treats deeper layers, it is actually less traumatic to the skin, resulting in less swelling and significantly better, more natural outcomes.' },
+      { q: 'Will my friends know I had surgery?', a: 'Because the lift is vertical and muscle-based, the result is so natural that people will notice you look "refreshed" without identifying the surgery.' }
+    ], [
+      { q: 'Este mai invaziv decât un "Mini-Lift"?', a: 'Deși tratează straturi mai profunde, este de fapt mai puțin traumatic pentru piele, rezultând mai puține umflături.' },
+      { q: 'Vor ști prietenii că m-am operat?', a: 'Deoarece liftingul este vertical și bazat pe mușchi, rezultatul este atât de natural încât vei părea doar "împrospătată".' }
+    ]),
+    seo: { title: 'Meva Clinic | Deep Plane Facelift in Turkey', desc: 'Experience the gold standard in facial rejuvenation. Deep Plane Facelift at Meva Clinic by Op. Dr. Yunus offers natural, long-lasting results.' }
+  },
+  {
+    id: 'mastopexy',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Yakup',
+    title: t('Mastopexy (Breast Lift)', 'Mastopexie (Lifting Mamar)'),
+    shortDesc: t('Restore youthful elevation. Prof. Dr. Yakup meticulously reshapes sagging breast tissue and repositions the areola to create a firm, perky, and rejuvenated silhouette.', 'Restaurează elevația tinerească. Prof. Dr. Yakup remodelează meticulos țesutul mamar lăsat pentru a crea o siluetă fermă și întinerită.'),
+    isThisForMe: t([
+      'Women experiencing breast "ptosis" (sagging) due to weight loss, breastfeeding, or genetics.',
+      'Patients whose nipples point downward or rest below the inframammary fold.',
+      'Those wanting to restore breast shape without necessarily increasing volume through implants.'
+    ], [
+      'Femei care se confruntă cu "ptoza" mamară (lăsare) din cauza slăbirii sau alăptării.',
+      'Paciente ale căror mameloane sunt orientate în jos.',
+      'Cele care doresc restaurarea formei fără a mări neapărat volumul prin implanturi.'
+    ]),
+    theProcedure: t('Prof. Dr. Yakup utilizes advanced internal suspension techniques to lift the glandular tissue. Excess skin is removed, and the nipple-areola complex is elevated to its ideal anatomical position.', 'Prof. Dr. Yakup utilizează tehnici avansate de suspensie internă pentru a ridica țesutul glandular. Pielea în exces este eliminată, iar mamelonul este ridicat.'),
+    mevaAdvantage: t('Prof. Dr. Yakup specializes in "Scar-Minimization" protocols. Whether using the periareolar, vertical, or anchor technique, he ensures the most discreet result possible while maximizing projection and firmness.', 'Prof. Dr. Yakup este specializat în protocoale de minimizare a cicatricilor, asigurând cel mai discret rezultat posibil, maximizând în același timp proiecția.'),
+    faq: t([
+      { q: 'Can I combine a lift with implants?', a: 'Absolutely. If you want both elevation and added volume, Prof. Dr. Yakup can perform an "Augmentation-Mastopexy" in a single session.' },
+      { q: 'How long until I can exercise?', a: 'You can resume light walking in 1 week, but high-impact activities (running, gym) must wait for 6 weeks.' }
+    ], [
+      { q: 'Pot combina liftingul cu implanturile?', a: 'Absolut. Dacă doriți atât elevație cât și volum, Prof. Dr. Yakup poate efectua o "Augmentare-Mastopexie" simultan.' },
+      { q: 'Când pot face sport?', a: 'Puteți relua mersul ușor într-o săptămână, dar activitățile de impact necesită 6 săptămâni de pauză.' }
+    ]),
+    seo: { title: 'Meva Clinic | Breast Lift (Mastopexy) Istanbul', desc: 'Restore youthful firmness and shape with a Breast Lift at Meva Clinic. Expert elevation and contouring by Prof. Dr. Yakup.' }
+  },
+  {
+    id: 'brazilian-butt-lift',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Daghan',
+    title: t('Brazilian Butt Lift (BBL)', 'Brazilian Butt Lift (BBL)'),
+    shortDesc: t('Sculpt the perfect hourglass. Prof. Dr. Daghan combines precision Vaser Liposuction with advanced fat grafting to create stunning, natural curves and a lifted profile.', 'Sculptează clepsidra perfectă. Prof. Dr. Daghan combină Vaser Lipo de precizie cu grefarea avansată de grăsime pentru a crea curbe naturale uimitoare.'),
+    isThisForMe: t([
+      'Individuals seeking more volume and projection in the buttocks without artificial implants.',
+      'Patients wanting to slim their waist and abdomen while simultaneously augmenting their hips.',
+      'Those looking for a safe, natural-feeling body transformation.'
+    ], [
+      'Persoane care caută volum și proiecție în fese fără implanturi artificiale.',
+      'Pacienți care doresc să-și subțieze talia în timp ce își măresc șoldurile.',
+      'Cei care caută o transformare corporală sigură și naturală.'
+    ]),
+    theProcedure: t('Under the elite guidance of Prof. Dr. Daghan, fat is harvested via ultrasound-assisted Vaser Liposuction. After purification and enrichment with growth factors, the fat is injected into the subcutaneous layers of the buttocks using ultrasound-guided safety protocols.', 'Sub îndrumarea de elită a Prof. Dr. Daghan, grăsimea este recoltată prin Vaser Lipo, purificată și injectată folosind protocoale de siguranță ghidate ecografic.'),
+    mevaAdvantage: t('Safety is our obsession. Prof. Dr. Daghan strictly utilizes the "Expansion Vibration Lipofilling" technique and never injects into the muscle, eliminating serious risks while ensuring maximum fat survival and a smooth, round contour.', 'Siguranța este obsesia noastră. Prof. Dr. Daghan utilizează tehnici avansate și nu injectează niciodată în mușchi, eliminând riscurile majore.'),
+    faq: t([
+      { q: 'Is BBL safe?', a: 'When performed by an expert like Prof. Dr. Daghan using ultrasound-guided, subcutaneous injection techniques, BBL is a safe and highly effective procedure.' },
+      { q: 'How long will the results last?', a: 'Once the transferred fat integrates (usually after 3-4 months), the results are permanent. Fluctuations in your overall weight will affect the size of the transferred fat cells.' }
+    ], [
+      { q: 'Este BBL sigur?', a: 'Când este efectuată de un expert ca Prof. Dr. Daghan, folosind tehnici ghidate ecografic, BBL este o procedură sigură.' },
+      { q: 'Cât timp durează rezultatele?', a: 'Odată ce grăsimea transferată se integrează, rezultatele sunt permanente.' }
+    ]),
+    seo: { title: 'Meva Clinic | Safe Brazilian Butt Lift (BBL) Turkey', desc: 'Get the perfect hourglass curve with BBL at Meva Clinic. Ultrasound-guided fat transfer for maximum safety by Prof. Dr. Daghan.' }
+  },
+  {
+    id: 'gynecomastia',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Emre',
+    title: t('Gynecomastia Surgery', 'Operație de Ginecomastie'),
+    shortDesc: t('Define a masculine chest. Prof. Dr. Emre permanently corrects enlarged male breast tissue, restoring a flat, firm, and confident thoracic contour.', 'Definește un piept masculin. Prof. Dr. Emre corectează permanent țesutul mamar mărit la bărbați, restaurând un contur toracic ferm.'),
+    isThisForMe: t([
+      'Men self-conscious about "man boobs" due to hormonal imbalance or weight fluctuations.',
+      'Individuals frustrated by chest fat that does not respond to weightlifting or cardio.',
+      'Those seeking a permanent solution with minimal scarring and rapid recovery.'
+    ], [
+      'Bărbați jenați de aspectul sânilor din cauza dezechilibrelor hormonale.',
+      'Persoane frustrate de grăsimea pectorală care nu răspunde la sport.',
+      'Cei care caută o soluție permanentă cu cicatrici minime.'
+    ]),
+    theProcedure: t('Prof. Dr. Emre utilizes a combined approach: Vaser Liposuction to emulsify fat and precision glandular excision for fibrous tissue. This ensures a smooth, contoured chest without any "crater" deformity.', 'Prof. Dr. Emre utilizează o abordare combinată: Vaser Lipo pentru a lichefia grăsimea și excizie glandulară de precizie.'),
+    mevaAdvantage: t('We prioritize the masculine aesthetic. Prof. Dr. Emre\'s specialized technique focuses on sculpting the pectoral borders, ensuring the chest looks athletic and firm, with incisions hidden discreetly at the areola edge.', 'Prioritizăm estetica masculină. Tehnica specializată a Prof. Dr. Emre se concentrează pe sculptarea marginilor pectorale.'),
+    faq: t([
+      { q: 'Will the tissue return?', a: 'No. The removed gland and fat cells are gone permanently. Results are lifelong as long as a stable lifestyle is maintained.' },
+      { q: 'Is the recovery painful?', a: 'Most patients describe it as "soreness" similar to a heavy chest workout. You can return to office work in 3-5 days.' }
+    ], [
+      { q: 'Țesutul va reveni?', a: 'Nu. Glanda și celulele adipoase eliminate dispar permanent.' },
+      { q: 'Este recuperarea dureroasă?', a: 'Majoritatea pacienților descriu o senzație de febră musculară. Revenirea la birou este posibilă în 3-5 zile.' }
+    ]),
+    seo: { title: 'Meva Clinic | Gynecomastia Surgery Istanbul', desc: 'Restore a masculine chest with Gynecomastia surgery at Meva Clinic. Expert glandular removal by Prof. Dr. Emre.' }
+  },
+  {
+    id: 'mommy-makeover',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Muzaffer',
+    title: t('Mommy Makeover', 'Mommy Makeover (Transformare Post-Natală)'),
+    shortDesc: t('Reclaim your identity. Prof. Dr. Muzaffer designs a bespoke surgical plan to restore your pre-pregnancy body, combining abdominal and breast restoration in a single transformative session.', 'Recâștigă-ți identitatea. Prof. Dr. Muzaffer proiectează un plan chirurgical personalizat pentru a-ți restaura corpul de dinaintea sarcinii.'),
+    isThisForMe: t([
+      'Mothers who have completed their families and want a total body reset.',
+      'Individuals dealing with both sagging breasts and loose abdominal skin simultaneously.',
+      'Those seeking the maximum aesthetic upgrade with a single anesthesia and recovery period.'
+    ], [
+      'Mame care doresc o resetare totală a corpului după încheierea planurilor de familie.',
+      'Persoane care se confruntă simultan cu sâni lăsați și piele abdominală flască.',
+      'Cele care doresc îmbunătățirea estetică maximă cu o singură anestezie.'
+    ]),
+    theProcedure: t('Under the highly coordinated care of Prof. Dr. Muzaffer, we combine Abdominoplasty (Tummy Tuck), Breast Augmentation/Lift, and 360 Liposuction. Every step is optimized to ensure maximum safety and stunning coordination of your results.', 'Sub îngrijirea coordonată a Prof. Dr. Muzaffer, combinăm abdominoplastia, augmentarea/liftingul mamar și liposucția 360.'),
+    mevaAdvantage: t('The Meva "Mommy Makeover" is more than surgery; it\'s a restoration. Prof. Dr. Muzaffer ensures that your proportions are balanced, giving you a refreshed, youthful, and naturally athletic silhouette that boosts confidence.', 'Meva Mommy Makeover este mai mult decât o operație; este o restaurare. Prof. Dr. Muzaffer se asigură că proporțiile tale sunt echilibrate.'),
+    faq: t([
+      { q: 'Is it safe to combine so many surgeries?', a: 'Yes, when performed by a veteran surgeon like Prof. Dr. Muzaffer in a JCI-accredited hospital. We limit the duration of surgery to ensure your safety and comfort.' },
+      { q: 'How long until I can hug my kids?', a: 'You can hug them immediately! However, you must avoid lifting children for 4-6 weeks to protect your muscle repairs.' }
+    ], [
+      { q: 'Este sigur să combinăm atâtea operații?', a: 'Da, când este efectuată de un chirurg veteran ca Prof. Dr. Muzaffer. Limităm durata operației pentru siguranță.' },
+      { q: 'Când îmi pot lua copiii în brațe?', a: 'Îi poți îmbrățișa imediat, dar trebuie să eviți ridicarea lor timp de 4-6 săptămâni.' }
+    ]),
+    seo: { title: 'Meva Clinic | Mommy Makeover Surgery Turkey', desc: 'Restore your pre-pregnancy body with a Mommy Makeover at Meva Clinic. Expert body restoration by Prof. Dr. Muzaffer.' }
+  },
+  {
+    id: 'otoplasty',
+    category: 'plastic-surgery',
+    expert: 'Doç. Dr. Türker',
+    title: t('Otoplasty (Ear Surgery)', 'Otoplastie (Chirurgia Urechilor)'),
+    shortDesc: t('Perfect facial balance. Doç. Dr. Türker artistically reshapes prominent ears, ensuring a natural position and symmetrical contour for adults and children alike.', 'Echilibru facial perfect. Doç. Dr. Türker remodelează artistic urechile proeminente, asigurând o poziție naturală și un contur simetric.'),
+    isThisForMe: t([
+      'Individuals (ages 5+) self-conscious about "prominent" or protruding ears.',
+      'Patients seeking to correct earlobe deformities or asymmetrical ear shapes.',
+      'Those looking for a permanent structural fix with virtually invisible scars.'
+    ], [
+      'Persoane (peste 5 ani) jenați de urechile proeminente.',
+      'Pacienți care doresc corectarea deformărilor lobului sau a asimetriilor.',
+      'Cei care caută o corecție structurală permanentă.'
+    ]),
+    theProcedure: t('Doç. Dr. Türker utilizes a "Cartilage-Sparing" approach. Through a discreet incision behind the ear, the cartilage is sculpted and secured with permanent internal sutures to its new, balanced position.', 'Doç. Dr. Türker utilizează o abordare de conservare a cartilajului. Printr-o incizie discretă în spatele urechii, cartilajul este sculptat și fixat.'),
+    mevaAdvantage: t('We focus on the "Anti-Helical Fold." Doç. Dr. Türker\'s precision ensures that the ears do not look "pinned back" or flat, but rather have the natural curves of a perfectly positioned ear.', 'Ne concentrăm pe "pliul antihelix". Precizia Doç. Dr. Türker asigură că urechile nu arată "lipite", ci au curbe naturale.'),
+    faq: t([
+      { q: 'Is it painful?', a: 'Most patients feel pressure rather than pain. In children, we perform it under general anesthesia; in adults, local anesthesia with sedation is sufficient.' },
+      { q: 'When can I see the final shape?', a: 'Results are visible as soon as the initial bandages are removed (1 week), though residual swelling takes 4-6 weeks to fully resolve.' }
+    ], [
+      { q: 'Este dureros?', a: 'Majoritatea simt presiune, nu durere. La copii se face sub anestezie generală, la adulți sub anestezie locală.' },
+      { q: 'Când văd forma finală?', a: 'Rezultatele sunt vizibile imediat ce bandajele sunt scoase (1 săptămână).' }
+    ]),
+    seo: { title: 'Meva Clinic | Otoplasty (Prominent Ear Surgery) Turkey', desc: 'Correct protruding ears permanently with Otoplasty at Meva Clinic. Expert cartilage reshaping by Doç. Dr. Türker.' }
+  },
+  {
+    id: 'thigh-and-arm-lift',
+    category: 'plastic-surgery',
+    expert: 'Uzm. Dr. Onur',
+    title: t('Thigh & Arm Lift (Brachioplasty)', 'Lifting de Brațe și Coapse'),
+    shortDesc: t('Firm and refined limbs. Uzm. Dr. Onur specializes in removing significant skin laxity after weight loss, restoring a tight, youthful, and functional contour to your arms and legs.', 'Membru ferme și rafinate. Uzm. Dr. Onur este specializat în eliminarea laxității pielii după slăbire, restaurând un contur tineresc.'),
+    isThisForMe: t([
+      'Post-bariatric patients with "bat wing" arms or sagging inner thighs.',
+      'Individuals dealing with hygiene issues or chafing due to excess skin folds.',
+      'Those who want to feel confident in sleeveless tops or swimwear again.'
+    ], [
+      'Pacienți post-bariatrici cu "aripi de liliac" la brațe sau coapse lăsate.',
+      'Persoane cu probleme de igienă sau iritații din cauza pliurilor de piele.',
+      'Cele care doresc să poarte din nou haine fără mâneci sau costume de baie cu încredere.'
+    ]),
+    theProcedure: t('Uzm. Dr. Onur meticulously excises excess skin and fat, repositioning the remaining tissue for a lean, athletic look. He utilizes multi-layered closure techniques to ensure minimal tension and optimal scar healing.', 'Uzm. Dr. Onur elimină meticulos pielea și grăsimea în exces, repoziționând țesutul. Folosește tehnici de sutură multi-strat pentru cicatrici optime.'),
+    mevaAdvantage: t('We specialize in "Hidden Scar" placement. Uzm. Dr. Onur strategically positions incisions on the inner arm and thigh where they are naturally concealed, focusing on the functional and aesthetic recovery of our patients.', 'Suntem specializați în plasarea cicatricilor în zone ascunse. Uzm. Dr. Onur poziționează strategic inciziile pe partea interioară a brațelor și coapselor.'),
+    faq: t([
+      { q: 'How visible are the scars?', a: 'While scars are unavoidable with significant skin removal, Uzm. Dr. Onur ensures they are as thin as possible and hidden in the natural shadows of the limbs.' },
+      { q: 'How long until I can walk comfortably?', a: 'After a thigh lift, you can walk short distances immediately. Normal, comfortable walking usually returns within 2 weeks.' }
+    ], [
+      { q: 'Cât de vizibile sunt cicatricile?', a: 'Deși sunt inevitabile la eliminarea masivă de piele, Uzm. Dr. Onur se asigură că sunt cât mai subțiri și ascunse în umbrele naturale.' },
+      { q: 'Când pot merge confortabil?', a: 'După liftingul de coapse, poți merge pe distanțe scurte imediat. Mersul normal revine în 2 săptămâni.' }
+    ]),
+    seo: { title: 'Meva Clinic | Arm and Thigh Lift Post-Bariatric Surgery', desc: 'Remove excess, sagging skin from arms and thighs at Meva Clinic. Expert post-bariatric contouring by Uzm. Dr. Onur.' }
+  },
+  {
+    id: 'mentoplasty',
+    category: 'plastic-surgery',
+    expert: 'Op. Dr. Yunus',
+    title: t('Mentoplasty (Chin Augmentation)', 'Mentoplastie (Augmentare Bărbie)'),
+    shortDesc: t('Define your profile. Op. Dr. Yunus utilizes customized medical implants to enhance a weak or receding chin, creating a strong, harmonious jawline and balanced facial proportions.', 'Definește-ți profilul. Op. Dr. Yunus utilizează implanturi personalizate pentru a evidenția bărbia, creând o linie mandibulară puternică.'),
+    isThisForMe: t([
+      'Individuals with a "weak" chin that makes their nose appear disproportionately large.',
+      'Patients seeking a more defined separation between the jawline and the neck.',
+      'Those desiring a permanent structural improvement to their side profile.'
+    ], [
+      'Persoane cu bărbie "retrasă" care face nasul să pară disproporționat de mare.',
+      'Pacienți care caută o separare mai definită între mandibulă și gât.',
+      'Cei care doresc o îmbunătățire structurală permanentă a profilului lateral.'
+    ]),
+    theProcedure: t('Op. Dr. Yunus carefully secures a medical-grade silicone implant through a tiny incision either inside the mouth or under the chin. This creates instant, permanent projection that aligns with the "Golden Ratio" of your face.', 'Op. Dr. Yunus fixează un implant de silicon printr-o incizie discretă. Aceasta creează o proiecție instantanee, aliniată cu "Secțiunea de Aur" a feței tale.'),
+    mevaAdvantage: t('We specialize in "Profile-Plasty." Op. Dr. Yunus often combines chin augmentation with rhinoplasty or neck liposuction to create a complete, stunning facial transformation that looks entirely natural.', 'Suntem specializați în "Profiloplastie". Op. Dr. Yunus combină adesea augmentarea bărbiei cu rinoplastia pentru o transformare facială uimitoare.'),
+    faq: t([
+      { q: 'Will the implant move?', a: 'No, Op. Dr. Yunus secures the implant beneath the muscle and directly to the bone structure, ensuring it remains a permanent part of your anatomy.' },
+      { q: 'How long is the recovery?', a: 'Social downtime is minimal (5-7 days). Some minor swelling is normal but subsides quickly.' }
+    ], [
+      { q: 'Se va deplasa implantul?', a: 'Nu, Op. Dr. Yunus fixează implantul sub mușchi și direct pe structura osoasă.' },
+      { q: 'Cât durează recuperarea?', a: 'Timpul de recuperare socială este minim (5-7 zile).' }
+    ]),
+    seo: { title: 'Meva Clinic | Chin Augmentation (Mentoplasty) Istanbul', desc: 'Achieve a balanced, strong facial profile with Chin Augmentation at Meva Clinic. Expert profile balancing by Op. Dr. Yunus.' }
+  },
+  {
+    id: 'labiaplasty-genital',
+    category: 'plastic-surgery',
+    expert: 'Prof. Dr. Yakup',
+    title: t('Labiaplasty & Genital Aesthetics', 'Labioplastie și Estetică Genitală'),
+    shortDesc: t('Reclaim your comfort. Prof. Dr. Yakup provides expert aesthetic and functional restoration of the labia, combining precision surgery with total patient privacy and care.', 'Recâștigă-ți confortul. Prof. Dr. Yakup oferă restaurare estetică și funcțională a labiilor, combinând precizia chirurgicală cu discreția totală.'),
+    isThisForMe: t([
+      'Women experiencing physical discomfort or chafing during exercise or intimacy.',
+      'Individuals self-conscious about asymmetrical or elongated labia minora.',
+      'Patients seeking a more refined, youthful aesthetic for the genital area.'
+    ], [
+      'Femei care resimt disconfort fizic sau iritații la sport sau intimitate.',
+      'Persoane preocupate de asimetria sau alungirea labiilor mici.',
+      'Paciente care doresc o estetică mai rafinată și tinerescă a zonei genitale.'
+    ]),
+    theProcedure: t('Under the specialized expertise of Prof. Dr. Yakup, excess labial tissue is precisely trimmed using advanced wedge or edge resection techniques. Every stitch is placed to preserve sensitivity and ensure invisible scarring.', 'Sub expertiza Prof. Dr. Yakup, țesutul labial în exces este eliminat prin tehnici avansate. Fiecare sutură este plasată pentru a proteja sensibilitatea.'),
+    mevaAdvantage: t('We prioritize both "Look and Feel." Prof. Dr. Yakup\'s technique ensures the natural edges are preserved, avoiding a "scalloped" look and restoring both the confidence and physical comfort of our patients.', 'Prioritizăm atât aspectul, cât și senzația. Tehnica Prof. Dr. Yakup asigură păstrarea marginilor naturale, evitând un aspect artificial.'),
+    faq: t([
+      { q: 'Does it affect sensitivity?', a: 'No. Prof. Dr. Yakup specifically avoids nerve clusters to ensure that sexual sensation is maintained or even improved through increased comfort.' },
+      { q: 'When can I wear jeans again?', a: 'You should wait at least 2-3 weeks before wearing tight-fitting clothing to ensure the area is fully healed and comfortable.' }
+    ], [
+      { q: 'Afectează sensibilitatea?', a: 'Nu. Prof. Dr. Yakup evită terminațiile nervoase pentru a asigura menținerea senzației sexuale.' },
+      { q: 'Când pot purta din nou blugi?', a: 'Ar trebui să aștepți cel puțin 2-3 săptămâni înainte de a purta haine strâmte.' }
+    ]),
+    seo: { title: 'Meva Clinic | Labiaplasty & Genital Aesthetics Turkey', desc: 'Discreet, expert Labiaplasty at Meva Clinic. Restore comfort and confidence with specialized care by Prof. Dr. Yakup.' }
   },
 
-  // ──────────────────────────────────────────────────────────
-  // HAIR TRANSPLANT
-  // ──────────────────────────────────────────────────────────
+  // ==========================================
+  // 2. ANDROLOGY & PENIS ENLARGEMENT
+  // ==========================================
   {
-    slug: 'hair-transplant',
-    roSlug: 'transplant-par',
-    category: 'Hair',
-    heroImage: 'https://images.unsplash.com/photo-1519340241574-2cec6aef0c01?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'Hair Transplant Istanbul — Sapphire FUE & DHI',
-      ro: 'Transplant de Păr Istanbul — Sapphire FUE & DHI',
-    },
-    subtitle: {
-      en: '12,000+ Successful Procedures · Dr. Harun Alakaya',
-      ro: 'Peste 12.000 de Proceduri Reușite · Dr. Harun Alakaya',
-    },
-    metaDescription: {
-      en: 'Premium Sapphire FUE and DHI hair transplant in Istanbul. 97%+ graft survival, natural hairlines, non-shaven options. All-inclusive VIP package by Meva Clinic.',
-      ro: 'Transplant de păr premium Sapphire FUE și DHI în Istanbul. Supraviețuire grefe 97%+, linii naturale, opțiuni fără ras. Pachet VIP complet Meva Clinic.',
-    },
-    keywords: 'hair transplant Istanbul, Sapphire FUE Turkey, DHI hair transplant, hair restoration cost, Meva Clinic hair',
-
-    doctorQuote: {
-      en: 'The Sapphire FUE blade opens micro-channels with 40% less tissue trauma than steel blades. Combined with DHI direct implantation, we achieve graft survival rates above 97% — and hairlines indistinguishable from natural growth.',
-      ro: 'Lama Sapphire FUE deschide micro-canale cu 40% mai puțin traumatism tisular față de lamele de oțel. Combinat cu implantarea directă DHI, obținem rate de supraviețuire a grefelor peste 97% — și linii ale părului indistinguibile de creșterea naturală.',
-      doctor: 'Dr. Harun',
-      specialty: {
-        en: 'Hair & Eyebrow Transplant Specialist · Sapphire FUE · DHI · 12,000+ Procedures',
-        ro: 'Specialist Transplant Păr & Sprâncene · Sapphire FUE · DHI · Peste 12.000 Proceduri',
-      },
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
-    },
-
-    steps: [
-      { en: 'Hairline design consultation and graft count planning', ro: 'Consultație design linie a părului și planificare grefe' },
-      { en: 'Painless scalp anaesthesia (needle-free system)', ro: 'Anestezie nedureroasă a scalpului (sistem fără ac)' },
-      { en: 'Sapphire FUE follicular extraction (4–8 hours)', ro: 'Extracție foliculară Sapphire FUE (4–8 ore)' },
-      { en: 'DHI direct implantation using Choi pen', ro: 'Implantare directă DHI cu stiloul Choi' },
-      { en: '12-month photographic growth monitoring', ro: 'Monitorizare fotografică a creșterii pe 12 luni' },
-    ],
-
-    advantages: [
-      { en: '97%+ graft survival rate guaranteed', ro: 'Rată de supraviețuire a grefelor 97%+ garantată' },
-      { en: 'Permanent, completely natural results', ro: 'Rezultate permanente, complet naturale' },
-      { en: 'No visible linear scarring', ro: 'Fără cicatrici liniare vizibile' },
-      { en: 'Non-shaven (unshaved) FUE available', ro: 'FUE nerasat (unshaved) disponibil' },
-      { en: 'Day clinic — back to work in 3 days', ro: 'Clinică ambulatorie — înapoi la muncă în 3 zile' },
-    ],
-
-    specs: {
-      en: { hospitalStay: 'Day Clinic (No Stay)', hotelStay: '3 Nights (5★ Hotel)', anesthesia: 'Local', returnToWork: '3–5 Days' },
-      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '3 Nopți (Hotel 5★)', anesthesia: 'Locală', returnToWork: '3–5 Zile' },
-    },
-
-    references: [
-      'ISHRS (International Society of Hair Restoration Surgery) Practice Standards 2025.',
-      'Comparative Analysis: Sapphire vs Steel FUE Blades — Graft Survival & Patient Satisfaction. JHRS 2024.',
-    ],
+    id: 'penis-enlargement-surgery',
+    category: 'andrology',
+    expert: 'MD Ateş',
+    title: t('Penile Enlargement & Girth Enhancement', 'Chirurgie de Mărire Penis și Îngroșare'),
+    shortDesc: t('Absolute discretion and clinical excellence. MD Ateş utilizes advanced surgical protocols to permanently increase both flaccid length and girth with natural-looking results.', 'Discreție absolută și excelență clinică. MD Ateş utilizează protocoale avansate pentru a crește permanent atât lungimea cât și grosimea.'),
+    isThisForMe: t([
+      'Men seeking a significant, permanent improvement in their flaccid and erect profile.',
+      'Individuals looking for a safe alternative to dangerous and ineffective "stretching" devices.',
+      'Those demanding total confidentiality and treatment by a specialized urological expert.'
+    ], [
+      'Bărbați care caută o îmbunătățire semnificativă și permanentă a profilului lor.',
+      'Persoane care caută o alternativă sigură la dispozitivele ineficiente de "întindere".',
+      'Cei care solicită confidențialitate totală și tratament de către un expert urolog.'
+    ]),
+    theProcedure: t('MD Ateş performs a combined lengthening and thickening procedure. Through a tiny incision, the suspensory ligament is released to expose hidden length, while girth is enhanced via precision fat grafting or dermal matrix integration.', 'MD Ateş efectuează o procedură combinată de alungire și îngroșare. Prin eliberarea ligamentului suspensor și grefarea de grăsime, se obțin rezultate remarcabile.'),
+    mevaAdvantage: t('We utilize "Micro-Fat" technology. MD Ateş purifies your own fat to ensure a smooth, symmetrical result that feels entirely natural, avoiding the "lumps" associated with older techniques.', 'Utilizăm tehnologia "Micro-Fat". MD Ateş purifică propria grăsime pentru a asigura un rezultat neted și simetric.'),
+    faq: t([
+      { q: 'How much length will I gain?', a: 'Most patients see an increase of 2-4 cm in flaccid length. Girth can be increased by 30-50% permanently.' },
+      { q: 'Is it painful?', a: 'The surgery is performed under general anesthesia. Post-operative discomfort is managed with mild medication, and you can resume light activities in 48 hours.' }
+    ], [
+      { q: 'Cât de mult voi câștiga în lungime?', a: 'Majoritatea pacienților observă o creștere de 2-4 cm în lungime flascidă. Grosimea poate crește cu 30-50%.' },
+      { q: 'Este dureros?', a: 'Operația se face sub anestezie generală. Disconfortul postoperator este minim.' }
+    ]),
+    seo: { title: 'Meva Clinic | Penile Enlargement Surgery in Turkey', desc: 'Safe, confidential Penile Lengthening and Girth Enhancement at Meva Clinic. Expert urology by MD Ateş.' }
+  },
+  {
+    id: 'non-surgical-enlargement',
+    category: 'andrology',
+    expert: 'MD Haluk',
+    title: t('Non-Surgical Girth Enhancement (HA Fillers)', 'Îngroșare Penis Non-Chirurgicală (Filler HA)'),
+    shortDesc: t('Immediate results without surgery. MD Haluk performs rapid, needle-free girth enhancement using premium hyaluronic acid fillers for instant volume and confidence.', 'Rezultate imediate fără chirurgie. MD Haluk efectuează îngroșarea rapidă a penisului folosind fillere de acid hialuronic premium.'),
+    isThisForMe: t([
+      'Men wanting immediate girth enhancement with zero surgical downtime.',
+      'Patients looking for a temporary way to trial increased size before permanent surgery.',
+      'Individuals seeking a safe, "lunchtime" procedure with instant results.'
+    ], [
+      'Bărbați care doresc îngroșare imediată fără timp de recuperare chirurgicală.',
+      'Pacienți care vor să testeze temporar mărirea dimensiunii.',
+      'Persoane care caută o procedură rapidă cu rezultate instantanee.'
+    ]),
+    theProcedure: t('Under the specialized hand of MD Haluk, high-density HA fillers are injected using a blunt micro-cannula. This technique avoids blood vessels and ensures a perfectly uniform, smooth distribution of volume.', 'Sub mâna specializată a MD Haluk, fillerele HA sunt injectate folosind o micro-canulă atraumatică, asigurând o distribuție uniformă.'),
+    mevaAdvantage: t('We exclusively use premium, FDA-approved "Volumetric" fillers. MD Haluk\'s technique focuses on symmetry and feel, ensuring the result is indistinguishable from natural anatomy.', 'Folosim exclusiv fillere premium Volumetric aprobate FDA. Tehnica MD Haluk se concentrează pe simetrie și senzație naturală.'),
+    faq: t([
+      { q: 'How long does it last?', a: 'Results typically last 12-18 months. The procedure can be easily repeated or topped up to maintain your desired volume.' },
+      { q: 'Can I exercise after?', a: 'You should avoid intense gym workouts and sexual activity for 72 hours, after which you can return to your full routine.' }
+    ], [
+      { q: 'Cât timp durează?', a: 'Rezultatele durează de obicei 12-18 luni. Procedura poate fi repetată ușor pentru a menține volumul dorit.' },
+      { q: 'Pot face sport după?', a: 'Trebuie să eviți antrenamentele intense și viața sexuală timp de 72 de ore.' }
+    ]),
+    seo: { title: 'Meva Clinic | Non-Surgical Penile Girth Enhancement (HA Filler)', desc: 'Instant penile thickening with premium HA fillers at Meva Clinic. Safe procedure by MD Haluk.' }
+  },
+  {
+    id: 'ed-treatments-eswt-pshot',
+    category: 'andrology',
+    expert: 'MD Murat',
+    title: t('Erectile Dysfunction: ESWT & P-Shot', 'Tratament DE: ESWT & P-Shot'),
+    shortDesc: t('Regenerative sexual health. MD Murat combines shockwave therapy with growth factor injections to treat the root vascular cause of ED, restoring spontaneous function.', 'Sănătate sexuală regenerativă. MD Murat combină terapia cu unde de șoc cu injecții de factori de creștere pentru a trata cauza DE.'),
+    isThisForMe: t([
+      'Men noticing a decrease in morning erections or firmess during intimacy.',
+      'Patients who prefer a natural, medication-free solution to erectile issues.',
+      'Individuals wanting to optimize blood flow and penile sensitivity for peak performance.'
+    ], [
+      'Bărbați care observă o scădere a erecțiilor matinale sau a fermității.',
+      'Pacienți care preferă o soluție naturală, fără medicamente.',
+      'Cei care doresc optimizarea fluxului sanguin și a sensibilității.'
+    ]),
+    theProcedure: t('MD Murat utilizes the "Performance Protocol." ESWT (Extracorporeal Shockwave Therapy) clears micro-plaques and triggers new blood vessel growth, while the P-Shot (PRP) accelerates cellular repair.', 'MD Murat utilizează "Protocolul de Performanță". ESWT curăță micro-plăcile și stimulează vasele noi, în timp ce P-Shot accelerează repararea.'),
+    mevaAdvantage: t('We treat the *cause*, not just the symptom. Under MD Murat\'s care, we help patients move away from "pill-dependency" by restoring the natural vascular health of the penile tissue.', 'Tratăm *cauza*, nu doar simptomul. Sub îngrijirea MD Murat, ajutăm pacienții să renunțe la dependența de pastile.'),
+    faq: t([
+      { q: 'Does the P-Shot hurt?', a: 'We apply a clinical-grade topical anesthetic. The injection is performed with a micro-needle and is described as a mild pressure, not pain.' },
+      { q: 'How many sessions are required?', a: 'A standard ESWT protocol involves 6 sessions. MD Murat will customize your P-Shot frequency based on your regenerative response.' }
+    ], [
+      { q: 'Doare P-Shot?', a: 'Aplicăm un anestezic topic de grad clinic; injecția se face cu un micro-ac și este descrisă ca o presiune ușoară.' },
+      { q: 'Câte sesiuni sunt necesare?', a: 'Un protocol standard ESWT include 6 sesiuni.' }
+    ]),
+    seo: { title: 'Meva Clinic | Erectile Dysfunction Treatments: ESWT & P-Shot', desc: 'Restore peak performance with regenerative ED treatments at Meva Clinic. Protocols by MD Murat.' }
+  },
+  {
+    id: 'penile-prosthesis',
+    category: 'andrology',
+    expert: 'MD Ateş',
+    title: t('Penile Prosthesis (The Bionic Implant)', 'Proteză Peniană (Implantul Bionic)'),
+    shortDesc: t('The permanent cure. MD Ateş performs advanced inflatable implant surgery to restore 100% reliable erectile function for men with severe, non-responsive ED.', 'Cura permanentă. MD Ateş efectuează chirurgia avansată de implant gonflabil pentru a restaura funcția erectilă 100% sigură.'),
+    isThisForMe: t([
+      'Men with severe Erectile Dysfunction where medications, ESWT, and injections have failed.',
+      'Patients post-prostatectomy or with severe vascular damage from diabetes.',
+      'Individuals seeking the "Gold Standard" for immediate, on-demand erections.'
+    ], [
+      'Bărbați cu DE severă unde medicamentele și injecțiile au eșuat.',
+      'Pacienți post-prostatectomie sau cu afecțiuni vasculare severe din cauza diabetului.',
+      'Cei care caută standardul de aur pentru erecții imediate, la cerere.'
+    ]),
+    theProcedure: t('Under the surgical mastery of MD Ateş, a 3-piece inflatable device is placed internally. This includes an reservoir, a discreet pump hidden in the scrotum, and two cylinders within the erectile chambers.', 'Sub măiestria chirurgicală a MD Ateş, un dispozitiv gonflabil din 3 piese este plasat intern. Pompa este ascunsă discret în scrot.'),
+    mevaAdvantage: t('We provide lifelong reliability. MD Ateş exclusively uses AMS and Coloplast implants, ensuring that our patients regain spontaneous sexual freedom with a device that is completely invisible to the partner.', 'Oferim fiabilitate pe viață. MD Ateş utilizează exclusiv implanturi AMS și Coloplast, asigurând libertatea sexuală spontană.'),
+    faq: t([
+      { q: 'Will my partner feel it?', a: 'No. The device is hidden entirely within your natural anatomy. The erection feels firm and looks natural to the touch and eye.' },
+      { q: 'What is the recovery like?', a: 'Most patients return to light activity in 1 week and can resume sexual activity 6 weeks after surgery.' }
+    ], [
+      { q: 'Va simți partenera dispozitivul?', a: 'Nu. Dispozitivul este ascuns complet în anatomia ta naturală. Erecția se simte fermă și arată natural.' },
+      { q: 'Cum este recuperarea?', a: 'Majoritatea pacienților revin la activități ușoare într-o săptămână și pot relua viața sexuală la 6 săptămâni.' }
+    ]),
+    seo: { title: 'Meva Clinic | Penile Prosthesis Surgery (Implant) Turkey', desc: 'Permanent cure for severe ED. State-of-the-art inflatable implants by expert urologist MD Ateş.' }
   },
 
-  // ──────────────────────────────────────────────────────────
-  // IVF — NORTHERN CYPRUS
-  // ──────────────────────────────────────────────────────────
+  // ==========================================
+  // 3. ADVANCED MEDICINE (IVF, ONCOLOGY, ORGAN)
+  // ==========================================
   {
-    slug: 'ivf-cyprus',
-    roSlug: 'fiv-cipru',
-    category: 'IVF',
-    heroImage: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'IVF Treatment in Cyprus — 2026 Guide',
-      ro: 'Tratament FIV în Cipru — Ghid 2026',
-    },
-    subtitle: {
-      en: '65%+ Success Rate · Egg Donation · NGS Genetic Screening',
-      ro: 'Rată de Succes 65%+ · Donare de Ovule · Screening Genetic NGS',
-    },
-    metaDescription: {
-      en: 'World-class IVF treatment in Northern Cyprus. 65%+ success rate with egg donation, NGS embryo selection and AI-assisted protocols. Meva Clinic all-inclusive package.',
-      ro: 'Tratament FIV de clasă mondială în Ciprul de Nord. Rată de succes 65%+ cu donare de ovule, selecție embrioni NGS și protocoale asistate AI. Pachet complet Meva Clinic.',
-    },
-    keywords: 'IVF Cyprus, egg donation Cyprus, FIV Cipru, fertilizare in vitro Cipru, IVF success rate 2026, Meva Clinic IVF',
-
-    doctorQuote: {
-      en: 'Northern Cyprus is among the top 3 IVF destinations globally — not because of cost alone, but because our legal framework allows egg donation and PGT-A genetic screening that many EU countries restrict. Our live birth rates exceed 65% per transfer for patients under 38.',
-      ro: 'Ciprul de Nord se numără printre primele 3 destinații FIV din lume — nu doar datorită costurilor, ci și pentru că cadrul nostru legal permite donarea de ovule și screening genetic PGT-A pe care multe țări UE le restricționează. Ratele noastre de nașteri vii depășesc 65% pe transfer pentru pacientele sub 38 de ani.',
-      doctor: 'Dr. Ayşe Kaya',
-      specialty: {
-        en: 'Reproductive Medicine Specialist · IVF & Egg Donation · Cyprus Protocol',
-        ro: 'Specialist Medicină Reproductivă · FIV & Donare Ovule · Protocol Cipru',
-      },
-      image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=200',
-    },
-
-    steps: [
-      { en: 'AMH / FSH blood test and antral follicle count (AFC) remotely', ro: 'Test sanguin AMH / FSH și numărare foliculi antrali (AFC) la distanță' },
-      { en: 'Ovarian stimulation protocol (10–14 days of injections)', ro: 'Protocol de stimulare ovariană (10–14 zile de injecții)' },
-      { en: 'Egg retrieval under light sedation (20–30 min)', ro: 'Recuperarea ovulelor sub sedare ușoară (20–30 min)' },
-      { en: 'ICSI fertilisation + NGS genetic screening of embryos', ro: 'Fertilizare ICSI + screening genetic NGS al embrionilor' },
-      { en: 'Blastocyst transfer + 2-week pregnancy test (beta-hCG)', ro: 'Transfer blastocist + test de sarcină la 2 săptămâni (beta-hCG)' },
-    ],
-
-    advantages: [
-      { en: '65%+ live birth rate per transfer (under 38)', ro: 'Rată de nașteri vii 65%+ per transfer (sub 38 ani)' },
-      { en: 'Egg donation legally permitted — no waiting list', ro: 'Donare ovule permisă legal — fără listă de așteptare' },
-      { en: 'NGS + AI embryo selection for highest viability', ro: 'Selecție embrioni NGS + AI pentru viabilitate maximă' },
-      { en: '50–70% cheaper than UK, Spain & Greece', ro: '50–70% mai ieftin decât UK, Spania și Grecia' },
-      { en: 'Anonymous donor database — 48hr match', ro: 'Bază de date donatori anonimă — potrivire în 48h' },
-    ],
-
-    specs: {
-      en: { hospitalStay: 'Day Clinic', hotelStay: '5–7 Nights (5★ Hotel)', anesthesia: 'Light Sedation', returnToWork: 'Same Day' },
-      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '5–7 Nopți (Hotel 5★)', anesthesia: 'Sedare Ușoară', returnToWork: 'Aceeași Zi' },
-    },
-
-    references: [
-      'ESHRE (European Society of Human Reproduction and Embryology) ART Report 2025.',
-      'Cyprus IVF Success Rates vs European Benchmarks — Reproductive BioMedicine Online 2024.',
-      'AI-Assisted Embryo Selection: Clinical Outcomes Review, Fertility & Sterility Journal 2025.',
-    ],
+    id: 'ivf-icsi-pgd',
+    category: 'advanced',
+    expert: t('Cyprus Fertility Team', 'Echipa Fertilitate Cipru'),
+    title: t('In Vitro Fertilization (IVF) & Genetics', 'Fertilizare In Vitro (FIV) și Genetică'),
+    shortDesc: t('Beyond conventional fertility. Our Cyprus-based specialists utilize ICSI and PGD genetic screening to maximize pregnancy rates and ensure the health of your future family.', 'Dincolo de fertilitatea convențională. Specialiștii noștri din Cipru utilizează ICSI și screening-ul PGD pentru a asigura sănătatea viitoarei tale familii.'),
+    isThisForMe: t([
+      'Couples with multiple failed IVF cycles or advanced maternal age.',
+      'Patients with severe male factor infertility requiring ICSI/IMSI techniques.',
+      'Families wanting to screen for genetic diseases or chromosomal abnormalities before transfer.'
+    ], [
+      'Cupluri cu multiple cicluri FIV eșuate sau vârstă maternă avansată.',
+      'Pacienți cu infertilitate masculină severă care necesită tehnici ICSI/IMSI.',
+      'Familii care doresc screening pentru boli genetice înainte de transfer.'
+    ]),
+    theProcedure: t('Operating at our elite Cyprus Centre, the process begins with personalized stimulation. We utilize ICSI to inject a single, superior sperm into the egg, followed by PGD testing to select the healthiest embryo.', 'Operând în centrul nostru de elită din Cipru, procesul începe cu stimularea personalizată. Utilizăm ICSI și testarea PGD pentru a selecta cel mai sănătos embrion.'),
+    mevaAdvantage: t('Meva Clinic Cyprus provides a world-class laboratory environment. By integrating Micro-TESE for male factor and AI-driven embryo monitoring, we consistently achieve some of the highest success rates in the Mediterranean.', 'Meva Clinic Cipru oferă un mediu de laborator de clasă mondială, obținând constant unele dintre cele mai mari rate de succes din regiune.'),
+    faq: t([
+      { q: 'Why do you perform IVF in Cyprus?', a: 'Cyprus offers unique legal advantages for donor programs and gender selection that are restricted elsewhere, combined with world-class clinical expertise.' },
+      { q: 'Is PGD safe for the embryo?', a: 'Yes. Our senior embryologists perform a microscopic biopsy on day 5 (blastocyst stage) which has zero impact on the future development of the baby.' }
+    ], [
+      { q: 'De ce efectuați FIV în Cipru?', a: 'Cipru oferă avantaje legale unice pentru programele de donare și selecția genului, împreună cu o expertiză clinică de top.' },
+      { q: 'Este testarea PGD sigură pentru embrion?', a: 'Da. Embriologii noștri efectuează o biopsie microscopică în ziua a 5-a, care nu afectează dezvoltarea bebelușului.' }
+    ]),
+    seo: { title: 'Meva Clinic | Advanced IVF & Genetic Testing (PGD) Turkey', desc: 'High-success IVF treatments at Meva Clinic Cyprus. Utilizing ICSI, IMSI, and PGD genetic screening.' }
+  },
+  {
+    id: 'ivf-cyprus',
+    category: 'advanced',
+    expert: t('Cyprus Advanced Clinic', 'Clinica Avansată Cipru'),
+    title: t('IVF Cyprus — Advanced Fertility Centre', 'FIV Cipru — Centru Avansat de Fertilitate'),
+    shortDesc: t('Your journey to parenthood. Our Cyprus branch offers full donor programs, gender selection, and advanced genetic screening in a luxury clinical setting.', 'Călătoria ta spre părinți. Filiala noastră din Cipru oferă programe complete de donare și selecție a genului într-un cadru clinic de lux.'),
+    isThisForMe: t([
+      'Families seeking "Family Balancing" through legal gender selection.',
+      'Patients requiring legal and regulated egg or sperm donation programs.',
+      'Individuals looking for the highest possible laboratory standards in the region.'
+    ], [
+      'Familii care caută "Echilibrarea Familiei" prin selecția legală a genului.',
+      'Pacienți care necesită programe de donare de ovule sau spermatozoizi reglementate.',
+      'Persoane care caută cele mai înalte standarde de laborator din regiune.'
+    ]),
+    theProcedure: t('Our Cyprus protocols are defined by precision. From Micro-Sort sperm selection to PGD-Aneuploidy screening, every step is designed to ensure that only the most viable, healthy embryos are selected for transfer.', 'Protocoalele noastre din Cipru sunt definite de precizie. Fiecare pas este conceput pentru a asigura transferul celor mai viabili embrioni.'),
+    mevaAdvantage: t('Located in our specialized Cyprus Clinic, we provide a stress-free, 5-star experience. Our unique legal framework allows for options like Tandem Cycles and egg donation that are not available in many other European jurisdictions.', 'Situat în clinica noastră specializată din Cipru, oferim o experiență de 5 stele și opțiuni legale unice, cum ar fi Ciclurile Tandem și donarea de ovule.'),
+    faq: t([
+      { q: 'Is gender selection legal in Cyprus?', a: 'Yes. Gender selection for family balancing is legally permitted and performed with 99.9% accuracy via PGD testing.' },
+      { q: 'Do you offer donor anonymity?', a: 'We offer both anonymous and known donor programs, fully compliant with Cyprus health regulations to ensure the rights of all parties.' }
+    ], [
+      { q: 'Este selecția genului legală în Cipru?', a: 'Da. Selecția genului pentru echilibrarea familiei este permisă legal și efectuată cu o acuratețe de 99,9%.' },
+      { q: 'Oferiți anonimatul donatorului?', a: 'Oferim atât programe cu donatori anonimi, cât și cunoscuți, în deplină conformitate cu reglementările din Cipru.' }
+    ]),
+    seo: { title: 'Meva Clinic Cyprus | IVF with ICSI, IMSI & PGD', desc: 'High-success IVF at Meva Clinic Cyprus. Legal egg donation and gender selection.' }
+  },
+  {
+    id: 'oncology-smart-drugs',
+    category: 'advanced',
+    expert: 'Prof. Dr. Gökhan',
+    title: t('Advanced Oncology & Immunotherapy', 'Oncologie Avansată și Imunoterapie'),
+    shortDesc: t('Precision cancer care. Prof. Dr. Gökhan utilizes molecular profiling and targeted immunotherapy to attack tumors at the genetic level while preserving your quality of life.', 'Îngrijire oncologică de precizie. Prof. Dr. Gökhan utilizează profilarea moleculară și imunoterapia pentru a ataca tumorile la nivel genetic.'),
+    isThisForMe: t([
+      'Patients seeking second opinions from internationally recognized oncology leaders.',
+      'Individuals whose cancers have not responded to traditional chemotherapy.',
+      'Patients looking for targeted "Smart Drug" therapies with fewer systemic side effects.'
+    ], [
+      'Pacienți care caută a doua opinie de la lideri recunoscuți internațional în oncologie.',
+      'Persoane al căror cancer nu a răspuns la chimioterapia tradițională.',
+      'Pacienți care caută terapii țintite cu "medicamente inteligente" și mai puține efecte secundare.'
+    ]),
+    theProcedure: t('Under the direction of Prof. Dr. Gökhan, we perform comprehensive Liquid Biopsies and Genomic Mapping. This allows us to select Immunotherapy agents that specifically train your immune system to identify and destroy cancer cells.', 'Sub direcția Prof. Dr. Gökhan, efectuăm biopsii lichide și mapare genomică pentru a selecta agenți de imunoterapie personalizați.'),
+    mevaAdvantage: t('Prof. Dr. Gökhan leads our multidisciplinary Tumor Board, ensuring that every patient benefits from a personalized "Attack Plan" that integrates the latest CyberKnife S7 and molecular pharmacology.', 'Prof. Dr. Gökhan conduce comisia noastră oncologică, asigurându-se că fiecare pacient beneficiază de un plan de atac personalizat.'),
+    faq: t([
+      { q: 'What are Smart Drugs?', a: 'Unlike Chemo which kills all fast-growing cells, Smart Drugs target specific protein markers on cancer cells, significantly reducing damage to healthy tissue.' },
+      { q: 'Can I get treatment immediately?', a: 'Yes. We prioritize international oncology cases, often beginning molecular profiling within 48 hours of your arrival.' }
+    ], [
+      { q: 'Ce sunt medicamentele inteligente?', a: 'Spre deosebire de chimio, medicamentele inteligente țintesc proteine specifice de pe celulele canceroase, reducând daunele asupra țesutului sănătos.' },
+      { q: 'Pot primi tratament imediat?', a: 'Da. Prioritizăm cazurile internaționale, începând profilarea moleculară în 48 de ore de la sosire.' }
+    ]),
+    seo: { title: 'Meva Clinic | Advanced Oncology & Immunotherapy Turkey', desc: 'Precision oncology, smart drugs, and immunotherapy at Meva Clinic by Prof. Dr. Gökhan.' }
   },
 
-  // ──────────────────────────────────────────────────────────
-  // DENTAL IMPLANTS
-  // ──────────────────────────────────────────────────────────
+  // ==========================================
+  // 4. ANTI-GRAVITY SUITE
+  // ==========================================
   {
-    slug: 'dental-implants',
-    roSlug: 'implanturi-dentare',
-    category: 'Dental',
-    heroImage: 'https://plus.unsplash.com/premium_photo-1664303498964-b8bfa93eff49?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'Dental Implants Istanbul — Hollywood Smile',
-      ro: 'Implanturi Dentare Istanbul — Zâmbet Hollywoodian',
-    },
-    subtitle: {
-      en: 'Straumann & Nobel Biocare · Dr. Ayşe Kaya · ITI Fellow',
-      ro: 'Straumann & Nobel Biocare · Dr. Ayşe Kaya · Membră ITI',
-    },
-    metaDescription: {
-      en: 'Premium dental implants in Istanbul. Straumann & Nobel Biocare brands, same-day temporaries, All-on-4. 40–60% cheaper than UK. EACMFS certified doctors at Meva Clinic.',
-      ro: 'Implanturi dentare premium în Istanbul. Branduri Straumann & Nobel Biocare, temporare în aceeași zi, All-on-4. 40–60% mai ieftin decât UK. Medici certificați EACMFS la Meva Clinic.',
-    },
-    keywords: 'dental implants Istanbul, Hollywood smile Turkey, All-on-4 Istanbul, implanturi dentare Istanbul, Straumann Turkey, Meva Clinic dental',
-
-    doctorQuote: {
-      en: 'With Straumann BLX implants and full-digital smile design, we plan your entire reconstruction virtually before a single drill touches the bone. Same-day temporaries mean you leave Istanbul smiling — every time.',
-      ro: 'Cu implanturi Straumann BLX și design digital complet al zâmbetului, planificăm întreaga reconstrucție virtual înainte ca vreo freză să atingă osul. Coroanele temporare în aceeași zi înseamnă că plecați din Istanbul zâmbind — de fiecare dată.',
-      doctor: 'Dr. Ayşe Kaya',
-      specialty: {
-        en: 'Implantologist · ITI Fellow · Straumann Certified · 8,000+ Implants',
-        ro: 'Implantolog · Membră ITI · Certificată Straumann · Peste 8.000 de Implanturi',
-      },
-      image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=200',
-    },
-
-    steps: [
-      { en: '3D CBCT scan and digital smile design session', ro: 'Scanare 3D CBCT și sesiune design digital al zâmbetului' },
-      { en: 'Zero-pain local anaesthesia protocol', ro: 'Protocol anestezie locală zero durere' },
-      { en: 'Titanium implant placement (Straumann / Nobel Biocare)', ro: 'Plasare implant titan (Straumann / Nobel Biocare)' },
-      { en: 'Zirconium crown fitting — same-day temporary crown', ro: 'Montare coroană zirconiu — coroană temporară în aceeași zi' },
-      { en: 'Final crown delivery (return visit or courier)', ro: 'Livrare coroană finală (vizită retur sau curier)' },
-    ],
-
-    advantages: [
-      { en: '40–60% cheaper than UK, Germany, Romania', ro: '40–60% mai ieftin decât UK, Germania, România' },
-      { en: 'Straumann & Nobel Biocare — 15-year warranty', ro: 'Straumann & Nobel Biocare — garanție 15 ani' },
-      { en: 'Same-day zirconium temporaries', ro: 'Temporare din zirconiu în aceeași zi' },
-      { en: 'All-on-4 & All-on-6 full arch available', ro: 'All-on-4 & All-on-6 arc complet disponibil' },
-      { en: 'No hospital stay — return to work immediately', ro: 'Fără spitalizare — revenire imediată la muncă' },
-    ],
-
-    specs: {
-      en: { hospitalStay: 'Not Required', hotelStay: '5 Nights (5★ Hotel)', anesthesia: 'Local', returnToWork: 'Immediate' },
-      ro: { hospitalStay: 'Nu Necesită', hotelStay: '5 Nopți (Hotel 5★)', anesthesia: 'Locală', returnToWork: 'Imediat' },
-    },
-
-    references: [
-      'ITI (International Team for Implantology) Consensus Statement 2025.',
-      'Journal of Clinical Periodontology: Osseointegration Success Rates in High-Density Implants.',
-      'EACMFS Digital Implantology Workflow Guidelines 2024.',
-    ],
+    id: 'thread-lift-anti-gravity',
+    category: 'anti-gravity',
+    expert: 'Prof. Dr. Daghan',
+    title: t('Thread Lift (French Lift)', 'Lifting cu Fire (Lifting Francez)'),
+    shortDesc: t('Defy gravity instantly. Prof. Dr. Daghan utilizes biocompatible, permanent lifting threads to restore your facial architecture without a single surgical incision.', 'Sfidează gravitația instantaneu. Prof. Dr. Daghan utilizează fire de lifting biocompatibile pentru a-ți restaura arhitectura facială fără incizii chirurgicale.'),
+    isThisForMe: t([
+      'Patients with early to moderate sagging who aren\'t ready for a full facelift.',
+      'Individuals wanting an "instant" lift for the brows, cheeks, or jawline.',
+      'Those seeking a high-performance aesthetic result with zero surgical downtime.'
+    ], [
+      'Pacienți cu lăsare timpurie sau moderată care nu sunt pregătiți pentru un lifting total.',
+      'Persoane care doresc un lifting "instant" al sprâncenelor, obrajilor sau mandibulei.',
+      'Cei care caută un rezultat estetic performant fără timp de recuperare.'
+    ]),
+    theProcedure: t('Using the "Meva Vector" technique, Prof. Dr. Daghan inserts microscopic threads into the subcutaneous layer. These threads act as a structural scaffold, physically lifting the tissue and triggering massive long-term collagen synthesis.', 'Folosind tehnica "Meva Vector", Prof. Dr. Daghan inserează fire microscopice în stratul subcutanat, ridicând țesutul și stimulând colagenul.'),
+    mevaAdvantage: t('Prof. Dr. Daghan specializes in the "Double-Needle" French Lift technique, which provides 3x the lifting power of standard PDO threads, ensuring your result is both dramatic and long-lasting.', 'Prof. Dr. Daghan este specializat în tehnica de lifting francez cu "ac dublu", care oferă o putere de ridicare de 3 ori mai mare decât firele standard.'),
+    faq: t([
+      { q: 'How long do the threads last?', a: 'We use premium permanent and dissolvable options. Dissolvable threads last 18-24 months, while the permanent "French Lift" can last up to 5 years.' },
+      { q: 'Is it visible under the skin?', a: 'No. The threads are placed deeply enough that they are completely undetectable to both sight and touch.' }
+    ], [
+      { q: 'Cât timp durează firele?', a: 'Firele resorbabile durează 18-24 luni, în timp ce liftingul francez permanent poate dura până la 5 ani.' },
+      { q: 'Sunt vizibile sub piele?', a: 'Nu. Firele sunt plasate suficient de profund încât să fie nedetectabile.' }
+    ]),
+    seo: { title: 'Meva Clinic | Non-Surgical Thread Lift Istanbul', desc: 'Instantly defy gravity with a Thread Lift at Meva Clinic. Expert application by Prof. Dr. Daghan.' }
+  },
+  {
+    id: 'hifu-liquid-lift',
+    category: 'anti-gravity',
+    expert: 'Prof. Dr. Emre',
+    title: t('HIFU & Liquid Lifting', 'HIFU și Liquid Lifting'),
+    shortDesc: t('The non-invasive architectural reset. Prof. Dr. Emre combines High-Intensity Focused Ultrasound with strategic MD Codes filler placement to lift and contour the face.', 'Resetarea arhitecturală non-invazivă. Prof. Dr. Emre combină ultrasunetele HIFU cu fillere plasate strategic pentru a ridica și contura fața.'),
+    isThisForMe: t([
+      'Patients wanting to tighten their skin and sharpen their jawline without needles or surgery.',
+      'Individuals experiencing volume loss and sagging who seek a "liquid" rejuvenation.',
+      'Those wanting a preventative anti-aging treatment to maintain facial tightness.'
+    ], [
+      'Pacienți care doresc să-și întindă pielea și să-și definească mandibula fără operație.',
+      'Persoane care se confruntă cu pierderea de volum și lăsarea feței.',
+      'Cei care doresc un tratament anti-aging preventiv.'
+    ]),
+    theProcedure: t('Prof. Dr. Emre utilizes the Ultraformer III system to deliver focused heat to the SMAS layer. This is followed by a "Liquid Lift" using premium fillers to restore the structural support lost to aging.', 'Prof. Dr. Emre utilizează sistemul Ultraformer III pentru a livra căldură focalizată în stratul SMAS, urmat de un "Liquid Lift" pentru suport structural.'),
+    mevaAdvantage: t('The Meva "Anti-Gravity Protocol" by Prof. Dr. Emre treats all layers of aging—from the deep muscle to the surface volume—ensuring a 3D rejuvenation that looks entirely natural.', 'Protocolul Meva "Anti-Gravity" creat de Prof. Dr. Emre tratează toate straturile îmbătrânirii, asigurând o întinerire 3D naturală.'),
+    faq: t([
+      { q: 'Does HIFU hurt?', a: 'You will feel a warm, prickling sensation. We use cooling technology and optional light sedation to ensure the procedure is perfectly comfortable.' },
+      { q: 'Can I do this in one day?', a: 'Yes. The combined protocol takes about 90 minutes, and you can return to your social life immediately.' }
+    ], [
+      { q: 'Doare HIFU?', a: 'Veți simți o senzație de căldură și înțepături ușoare. Utilizăm tehnologie de răcire pentru confort maxim.' },
+      { q: 'Se poate face într-o singură zi?', a: 'Da. Protocolul combinat durează aproximativ 90 de minute.' }
+    ]),
+    seo: { title: 'Meva Clinic | HIFU & Liquid Facelift Turkey', desc: 'Tighten skin and restore volume without surgery at Meva Clinic. Expert protocol by Prof. Dr. Emre.' }
   },
 
-  // ──────────────────────────────────────────────────────────
-  // MEVA MIXED HAIR TRANSPLANT (Sapphire FUE + DHI Combo)
-  // ──────────────────────────────────────────────────────────
+  // ==========================================
+  // 5. BARIATRIC SURGERY
+  // ==========================================
   {
-    slug: 'mixed-hair-transplant',
-    roSlug: 'transplant-par-mixt',
-    category: 'Hair',
-    heroImage: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'Meva Mixed Hair Transplant — 1 Operation, 2 Expert Techniques',
-      ro: 'Transplant Mixt de Păr Meva — 1 Operație, 2 Tehnici Expert',
-    },
-    subtitle: {
-      en: 'Sapphire FUE for Hairline · DHI (Choi Pen) for Density · Dr. Harun Alakaya',
-      ro: 'Sapphire FUE pentru Linia Frontală · DHI (Stilou Choi) pentru Densitate · Dr. Harun Alakaya',
-    },
-    metaDescription: {
-      en: 'The world\'s most effective hair transplant combination: Sapphire FUE micro-incisions for a natural hairline + DHI Choi Pen for maximum mid-scalp and crown density. Performed by Dr. Harun Alakaya at Meva Clinic Istanbul.',
-      ro: 'Cea mai eficientă combinație de transplant de păr din lume: micro-incizii Sapphire FUE pentru o linie frontală naturală + DHI Stilou Choi pentru densitate maximă. Realizat de Dr. Harun Alakaya la Meva Clinic Istanbul.',
-    },
-    keywords: 'mixed hair transplant Istanbul, Sapphire FUE DHI combination, hair transplant technique Turkey, Meva Clinic mixed technique, Dr Harun Alakaya',
-
-    doctorQuote: {
-      en: 'No single technique is optimal for every zone of the scalp. The frontal hairline demands razor-sharp micro-channel precision — that is Sapphire FUE\'s domain. The mid-scalp and crown require maximum follicular density without channel trauma — that is exactly what DHI\'s direct Choi Pen implantation achieves. By combining both in a single surgical session, we deliver what neither technique can accomplish alone: a hairline that looks genuinely natural and a crown with the structural density of youth.',
-      ro: 'Nicio tehnică singulară nu este optimă pentru fiecare zonă a scalpului. Linia frontală a părului necesită precizie perfectă a micro-canalelor — aceasta este zona Sapphire FUE. Mid-scalp-ul și coroana necesită densitate foliculară maximă fără traumatism canalicular — exact ceea ce realizează implantarea directă cu Stiloul Choi DHI. Combinând ambele tehnici într-o singură sesiune chirurgicală, oferim ceea ce nicio tehnică nu poate realiza singură: o linie frontală cu aspect genuinamente natural și o coroană cu densitatea structurală a tinereții.',
-      doctor: 'Dr. Harun',
-      specialty: {
-        en: 'Hair Restoration Specialist · Sapphire FUE · DHI · Mixed Technique Pioneer',
-        ro: 'Specialist Restaurare Capilară · Sapphire FUE · DHI · Pionier Tehnică Mixtă',
-      },
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
-    },
-
-    technicalDetail: {
-      en: [
-        {
-          zone: 'Frontal Hairline (0–3 cm)',
-          technique: 'Sapphire FUE Micro-Incisions',
-          detail: 'Dr. Harun uses Sapphire-tipped pens to create micro-channels as narrow as 0.6–0.8 mm — 40% less tissue trauma than steel blades. The crystalline sapphire tip enables precise angle control (30–45°), replicating the natural growth vector of each follicle to produce an imperceptible hairline transition.',
-        },
-        {
-          zone: 'Mid-Scalp & Crown (3 cm+)',
-          technique: 'DHI Direct Implantation (Choi Pen)',
-          detail: 'In zones requiring maximum follicular packing, channel-less DHI eliminates the gap between extraction and implantation. The Choi implanter pen deposits each graft directly into tissue at precisely calibrated depth and angle — enabling 80–100 grafts/cm² density that FUE alone cannot achieve without vascular compromise.',
-        },
-      ],
-      ro: [
-        {
-          zone: 'Linia Frontală (0–3 cm)',
-          technique: 'Micro-Incizii Sapphire FUE',
-          detail: 'Dr. Harun folosește stilouri cu vârf de safir pentru a crea micro-canale de doar 0,6–0,8 mm — cu 40% mai puțin traumatism tisular față de lamele de oțel. Vârful cristalin de safir permite controlul precis al unghiului (30–45°), replicând vectorul natural de creștere al fiecărui folicul pentru o tranziție imperceptibilă a liniei frontale.',
-        },
-        {
-          zone: 'Mid-Scalp și Coroană (3 cm+)',
-          technique: 'Implantare Directă DHI (Stiloul Choi)',
-          detail: 'În zonele care necesită densitate foliculară maximă, DHI fără canal elimină intervalul dintre extracție și implantare. Stiloul implantator Choi depune fiecare grefă direct în țesut la adâncime și unghi precis calibrate — permițând o densitate de 80–100 grefe/cm² pe care FUE singur nu o poate realiza fără compromis vascular.',
-        },
-      ],
-    },
-
-    steps: [
-      { en: 'Scalp mapping: zone-by-zone density analysis and technique allocation', ro: 'Cartografiere scalp: analiza densității pe zone și alocarea tehnicii' },
-      { en: 'Needle-free scalp anaesthesia — virtually painless protocol', ro: 'Anestezie scalp fără ac — protocol practic nedureros' },
-      { en: 'Sapphire FUE micro-channel creation in frontal hairline zone', ro: 'Creare micro-canale Sapphire FUE în zona liniei frontale' },
-      { en: 'DHI Choi Pen direct implantation in mid-scalp and crown', ro: 'Implantare directă DHI Stilou Choi în mid-scalp și coroană' },
-      { en: 'Bio-active growth serum application + 12-month photographic follow-up', ro: 'Aplicare ser de creștere bio-activ + urmărire fotografică pe 12 luni' },
-    ],
-
-    advantages: [
-      { en: '1 operation — 2 complementary expert techniques', ro: '1 operație — 2 tehnici expert complementare' },
-      { en: 'Sapphire precision at the hairline = zero unnatural appearance', ro: 'Precizie Sapphire la linie frontală = zero aspect nefiresc' },
-      { en: 'DHI density at crown = structural thickness of youth', ro: 'Densitate DHI la coroană = grosime structurală a tinereții' },
-      { en: '97%+ graft survival across both zones', ro: 'Supraviețuire 97%+ a grefelor în ambele zone' },
-      { en: 'Shorter total healing time vs. two separate procedures', ro: 'Timp de vindecare mai scurt față de două proceduri separate' },
-    ],
-
-    specs: {
-      en: { hospitalStay: 'Day Clinic (No Stay)', hotelStay: '3 Nights (5★ Hotel)', anesthesia: 'Local (Needle-Free)', returnToWork: '3–5 Days' },
-      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '3 Nopți (Hotel 5★)', anesthesia: 'Locală (Fără Ac)', returnToWork: '3–5 Zile' },
-    },
-
-    references: [
-      'ISHRS 2025: Comparative Outcomes of Combined FUE-DHI Technique vs Single-Method Protocols.',
-      'Rassman, W.R. et al. (2024). Follicular Unit Extraction: Principles and Practice. 3rd Ed.',
-      'Journal of Dermatologic Surgery: Sapphire FUE vs Steel Blade Recipient Site Creation — Tissue Trauma Analysis 2024.',
-    ],
+    id: 'gastric-sleeve',
+    category: 'bariatric',
+    expert: 'Dr. Cuma',
+    title: t('Gastric Sleeve (Sleeve Gastrectomy)', 'Gastric Sleeve (Micșorare Stomac)'),
+    shortDesc: t('The transformation of a lifetime. Bariatric Master Surgeon Dr. Cuma utilizes 3D laparoscopic technology to help you shed 70-80% of excess weight and reclaim your health.', 'Transformarea vieții tale. Maestrul chirurg bariatric Dr. Cuma utilizează tehnologia laparoscopică 3D pentru a te ajuta să slăbești 70-80% din excesul de greutate.'),
+    isThisForMe: t([
+      'Patients with a BMI over 35 seeking a permanent solution to obesity.',
+      'Individuals suffering from weight-related conditions like sleep apnea or hypertension.',
+      'Those ready for a comprehensive lifestyle reset with 5-star clinical support.'
+    ], [
+      'Pacienți cu un IMC peste 35 care caută o soluție permanentă la obezitate.',
+      'Persoane care suferă de afecțiuni legate de greutate, cum ar fi apneea de somn.',
+      'Cei pregătiți pentru o resetare a stilului de viață cu suport clinic de 5 stele.'
+    ]),
+    theProcedure: t('Performed by Dr. Cuma using ultra-advanced 3D Laparoscopy. 80% of the stomach is precisely removed, significantly reducing the "Hunger Hormone" (Ghrelin) and restricting food intake to ensure massive, sustained weight loss.', 'Efectuată de Dr. Cuma folosind laparoscopia 3D ultra-avansată. 80% din stomac este eliminat, reducând drastic hormonul foamei (Grelina).'),
+    mevaAdvantage: t('Dr. Cuma\'s "Zero-Leak" protocol utilizes triple-row electronic stapling and robotic-assisted precision. Our program includes a dedicated nutritionist and 12 months of 24/7 post-op monitoring for our international patients.', 'Protocolul "Zero-Leak" al Dr. Cuma utilizează capsularea electronică cu rând triplu. Programul include nutriționist dedicat și monitorizare 24/7 timp de 12 luni.'),
+    faq: t([
+      { q: 'How long until I can return to work?', a: 'Most international patients stay in Istanbul for 6 days and can return to desk work within 10-14 days.' },
+      { q: 'Will I be hungry all the time?', a: 'No. Because the portion of the stomach that produces hunger hormones is removed, most patients report a significant loss of appetite.' }
+    ], [
+      { q: 'În cât timp mă pot întoarce la muncă?', a: 'Majoritatea pacienților internaționali stau în Istanbul 6 zile și pot reveni la birou în 10-14 zile.' },
+      { q: 'Îmi va fi foame tot timpul?', a: 'Nu. Deoarece partea stomacului care produce hormonii foamei este eliminată, pofta de mâncare scade semnificativ.' }
+    ]),
+    seo: { title: 'Meva Clinic | Gastric Sleeve Surgery in Turkey', desc: 'Transform your life with Gastric Sleeve surgery at Meva Clinic. Expert bariatric care by Dr. Cuma.' }
+  },
+  {
+    id: 'gastric-bypass',
+    category: 'bariatric',
+    expert: 'Dr. Cuma',
+    title: t('Gastric Bypass & Metabolic Surgery', 'Gastric Bypass și Chirurgie Metabolică'),
+    shortDesc: t('The metabolic cure. Dr. Cuma utilizes the Roux-en-Y technique to treat severe obesity and reverse Type 2 Diabetes, offering a powerful reset for your body\'s metabolism.', 'Cura metabolică. Dr. Cuma utilizează tehnica Roux-en-Y pentru a trata obezitatea severă și a remite diabetul de tip 2.'),
+    isThisForMe: t([
+      'Patients with BMI 40+ or those with uncontrolled Type 2 Diabetes.',
+      'Individuals suffering from chronic acid reflux (GERD) that worsens with obesity.',
+      'Those seeking the most powerful surgical tool for metabolic health and sustained weight loss.'
+    ], [
+      'Pacienți cu IMC 40+ sau cei cu diabet de tip 2 necontrolat.',
+      'Persoane care suferă de reflux acid cronic (GERD).',
+      'Cei care caută cel mai puternic instrument chirurgical pentru sănătatea metabolică.'
+    ]),
+    theProcedure: t('Under the meticulous hand of Dr. Cuma, the stomach is divided into a small pouch and the small intestine is rerouted. This "Double Action" approach restricts intake and significantly reduces calorie absorption.', 'Sub mâna meticuloasă a Dr. Cuma, stomacul este divizat, iar intestinul subțire este rerutat, reducând absorbția caloriilor.'),
+    mevaAdvantage: t('Dr. Cuma\'s expertise in Metabolic Surgery consistently results in over 85% of Type 2 Diabetes patients achieving complete remission. We provide a tailored micronutrient protocol to ensure your body remains nourished during rapid weight loss.', 'Expertiza Dr. Cuma face ca peste 85% din pacienții cu diabet de tip 2 să obțină remisia completă. Oferim un protocol de micronutrienți personalizat.'),
+    faq: t([
+      { q: 'Is it reversible?', a: 'While technically possible, Gastric Bypass is intended to be a permanent, life-changing structural change to your digestive system.' },
+      { q: 'How is it different from the Sleeve?', a: 'Bypass includes a malabsorptive component, making it more effective for diabetic patients and those with severe reflux.' }
+    ], [
+      { q: 'Este reversibilă?', a: 'Deși este tehnic posibil, Gastric Bypass este concepută ca o schimbare permanentă a sistemului digestiv.' },
+      { q: 'Cum este diferită de Sleeve?', a: 'Bypass-ul include o componentă de malabsorbție, fiind mai eficientă pentru diabetici și cei cu reflux.' }
+    ]),
+    seo: { title: 'Meva Clinic | Gastric Bypass Turkey', desc: 'Cure Type 2 Diabetes and achieve massive weight loss with Gastric Bypass at Meva Clinic. Expert surgery by Dr. Cuma.' }
   },
 
-  // ──────────────────────────────────────────────────────────
-  // DHI (CHOI PEN) — DIRECT HAIR IMPLANTATION
-  // ──────────────────────────────────────────────────────────
+  // ==========================================
+  // 6. HAIR & BROW TRANSPLANT
+  // ==========================================
   {
-    slug: 'dhi-hair-transplant',
-    roSlug: 'transplant-par-dhi',
-    category: 'Hair',
-    heroImage: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'DHI Hair Transplant (Choi Pen) — Maximum Density Without Channels',
-      ro: 'Transplant Păr DHI (Stiloul Choi) — Densitate Maximă Fără Canale',
-    },
-    subtitle: {
-      en: 'Direct Implantation · No Channel Phase · Faster Recovery · Higher Density',
-      ro: 'Implantare Directă · Fără Faza de Canal · Recuperare Mai Rapidă · Densitate Mai Mare',
-    },
-    metaDescription: {
-      en: 'DHI Direct Hair Implantation with Choi Pen at Meva Clinic Istanbul. No channel-cutting phase means less scalp trauma, higher graft density (up to 100/cm²) and significantly faster recovery. Ideal for crown and mid-scalp restoration.',
-      ro: 'Implantare Directă de Păr DHI cu Stiloul Choi la Meva Clinic Istanbul. Fără faza de tăiere a canalelor înseamnă mai puțin traumatism al scalpului, densitate mai mare a grefelor (până la 100/cm²) și recuperare semnificativ mai rapidă. Ideal pentru restaurarea coroanei și a mid-scalp-ului.',
-    },
-    keywords: 'DHI hair transplant Istanbul, Choi pen hair transplant Turkey, direct hair implantation, DHI vs FUE comparison, Meva Clinic DHI',
-
-    doctorQuote: {
-      en: 'In traditional FUE, we first open all recipient channels, then implant — a two-phase sequence that leaves grafts out of tissue for longer. DHI eliminates this entirely. The Choi implanter pen extracts and deposits each follicle in a single motion, minimising ischaemic exposure time to under 90 seconds per graft. The clinical result is measurable: we achieve 15–20% higher graft density in the crown area compared to standard FUE, with a complication rate that approaches zero.',
-      ro: 'În FUE tradițional, deschidem mai întâi toate canalele receptoare, apoi implantăm — o secvență în două faze care lasă grefele în afara țesutului mai mult timp. DHI elimină complet acest lucru. Stiloul implantator Choi extrage și depune fiecare folicul într-o singură mișcare, minimizând timpul de expunere ischemică la sub 90 de secunde per grefă. Rezultatul clinic este măsurabil: obținem o densitate a grefelor cu 15–20% mai mare în zona coroanei față de FUE standard, cu o rată de complicații care se apropie de zero.',
-      doctor: 'Dr. Harun',
-      specialty: {
-        en: 'DHI & Sapphire FUE Specialist · 12,000+ Procedures · Meva Clinic Istanbul',
-        ro: 'Specialist DHI & Sapphire FUE · Peste 12.000 de Proceduri · Meva Clinic Istanbul',
-      },
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
-    },
-
-    steps: [
-      { en: 'Digital density mapping and Choi pen calibration to hair calibre', ro: 'Cartografiere digitală a densității și calibrarea Stiloului Choi la calibrul firului' },
-      { en: 'Micro-targeted local anaesthesia to the donor and recipient zones', ro: 'Anestezie locală micro-țintită pe zonele donoare și receptoare' },
-      { en: 'FUE extraction of follicular units from the occipital donor area', ro: 'Extracție FUE a unităților foliculare din zona donatoare occipitală' },
-      { en: 'Choi Pen direct implantation — no pre-made channels required', ro: 'Implantare directă cu Stiloul Choi — fără canale pre-formate necesare' },
-      { en: 'Exosome growth serum application + 12-month density monitoring', ro: 'Aplicare ser de creștere cu exozomi + monitorizare densitate 12 luni' },
-    ],
-
-    advantages: [
-      { en: 'No channel-cutting phase — 40% less scalp trauma', ro: 'Fără faza de tăiere canale — 40% mai puțin traumatism al scalpului' },
-      { en: '80–100 grafts/cm² — highest density achievable', ro: '80–100 grefe/cm² — cea mai mare densitate realizabilă' },
-      { en: 'Graft ischaemic time under 90 seconds', ro: 'Timp de ischemie a grefei sub 90 de secunde' },
-      { en: 'Faster recovery — reduced crusting and swelling', ro: 'Recuperare mai rapidă — cruste și umflare reduse' },
-      { en: 'Ideal for unshaven (non-shaved) procedures', ro: 'Ideal pentru proceduri nerase (non-shaved)' },
-    ],
-
-    specs: {
-      en: { hospitalStay: 'Day Clinic (No Stay)', hotelStay: '3 Nights (5★ Hotel)', anesthesia: 'Local', returnToWork: '2–4 Days' },
-      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '3 Nopți (Hotel 5★)', anesthesia: 'Locală', returnToWork: '2–4 Zile' },
-    },
-
-    references: [
-      'Tsilosani, A. (2024). Direct Hair Implantation (DHI): Clinical Outcomes and Density Comparison. JHRS.',
-      'ISHRS 2025: DHI vs FUE — Scalp Trauma, Graft Survival and Patient Satisfaction Meta-Analysis.',
-      'Bernstein, R.M. (2024). Follicular Unit Transplantation: The Science of Natural Hairline Design. Springer.',
-    ],
+    id: 'meva-mixed-hair-transplant',
+    category: 'hair-transplant',
+    expert: 'MD Harun',
+    title: t('Meva Mixed Technique (Sapphire + DHI)', 'Tehnica Mixtă Meva (Sapphire + DHI)'),
+    shortDesc: t('The elite hybrid restoration. MD Harun combines Sapphire FUE for a razor-sharp hairline with DHI Choi Pen for maximum crown density in a single session.', 'Restaurarea hibridă de elită. MD Harun combină Sapphire FUE pentru o linie a părului precisă cu DHI pentru densitate maximă.'),
+    isThisForMe: t([
+      'Patients demanding a 100% natural, undetectable frontal hairline.',
+      'Individuals seeking the highest graft density currently achievable in modern medicine.',
+      'Those wanting to combine two premium techniques for a total-scalp restoration.'
+    ], [
+      'Pacienți care solicită o linie frontală 100% naturală și nedetectabilă.',
+      'Persoane care caută cea mai mare densitate de grefe realizabilă în medicina modernă.',
+      'Cei care doresc să combine două tehnici premium pentru o restaurare totală.'
+    ]),
+    theProcedure: t('Under the master precision of MD Harun, we utilize Sapphire Tipped blades for the aesthetic hairline channels. For the high-density mid-scalp and crown, the DHI Choi Pen is used to implant follicles directly, bypassing the channel phase for maximum survival.', 'Sub precizia de maestru a MD Harun, utilizăm lame de Safir pentru linia frontală și stiloul Choi DHI pentru densitatea în creștet.'),
+    mevaAdvantage: t('The Meva "Mixed Method" by MD Harun offers the best of both worlds: the artistic unmatchable precision of Sapphire and the extreme, trauma-free density of DHI. Results are consistently thicker and more natural than any single-technique approach.', 'Metoda Mixtă Meva a MD Harun oferă ce este mai bun din ambele lumi: precizia artistică Sapphire și densitatea extremă DHI.'),
+    faq: t([
+      { q: 'Why mix the two techniques?', a: 'Sapphire is superior for designing unifollicular natural hairlines, while DHI is the gold standard for placing high-density grafts between existing hairs.' },
+      { q: 'Is it more expensive?', a: 'It represents our premium restoration tier, utilizing double the specialized equipment and a larger clinical team led by MD Harun.' }
+    ], [
+      { q: 'De ce să combinăm cele două tehnici?', a: 'Sapphire este superioară pentru linia frontală naturală, în timp ce DHI este standardul de aur pentru densitatea mare.' },
+      { q: 'Este mai scumpă?', a: 'Reprezintă nivelul nostru premium de restaurare, utilizând echipamente specializate și o echipă clinică extinsă.' }
+    ]),
+    seo: { title: 'Meva Clinic | Mixed Hair Transplant Turkey', desc: 'Experience the ultimate restoration with the Meva Mixed Technique by MD Harun: Sapphire and DHI.' }
+  },
+  {
+    id: 'dhi-hair-transplant',
+    category: 'hair-transplant',
+    expert: 'MD Harun',
+    title: t('DHI Hair Transplant (Choi Pen)', 'Transplant de Păr DHI (Stiloul Choi)'),
+    shortDesc: t('High-density, trauma-free restoration. MD Harun utilizes the Choi Implanter Pen to achieve superior graft survival and a faster recovery without the need for traditional channels.', 'Restaurare de înaltă densitate, fără traume. MD Harun utilizează stiloul Choi pentru o supraviețuire superioară a grefelor.'),
+    isThisForMe: t([
+      'Patients wanting to increase density in thinning areas without shaving their existing hair.',
+      'Individuals seeking the fastest possible clinical recovery and minimal scabbing.',
+      'Those demanding the absolute highest graft survival rates (95%+).'
+    ], [
+      'Pacienți care doresc să mărească densitatea fără a rade părul existent.',
+      'Persoane care caută cea mai rapidă recuperare clinică și coji minime.',
+      'Cei care solicită cele mai mari rate de supraviețuire a grefelor (peste 95%).'
+    ]),
+    theProcedure: t('MD Harun personally oversees the direct implantation process. Follicles are loaded into the Choi Pen and placed into the scalp in a single motion, protecting the delicate tissue and ensuring optimal depth and angle for every hair.', 'MD Harun supraveghează personal procesul de implantare directă. Foliculii sunt plasați în scalp dintr-o singură mișcare, protejând țesutul delicat.'),
+    mevaAdvantage: t('MD Harun\'s DHI technique achieves "Ultra-Density" (up to 100 grafts/cm²). Because we skip the channel-cutting phase, there is significantly less bleeding and trauma, allowing you to return to your social life faster.', 'Tehnica DHI a MD Harun obține "Ultra-Densitate". Deoarece sărim peste faza de tăiere a canalelor, trauma este mult mai mică.'),
+    faq: t([
+      { q: 'Can I have DHI without shaving?', a: 'Yes. One of the primary benefits of MD Harun\'s DHI technique is the ability to implant between long hairs without a full shave.' },
+      { q: 'Is the recovery faster than FUE?', a: 'Yes. Most DHI patients experience significantly less redness and can return to work 3-4 days post-op.' }
+    ], [
+      { q: 'Pot face DHI fără să mă rad?', a: 'Da. Unul dintre beneficiile tehnicii DHI a MD Harun este capacitatea de a implanta între firele lungi.' },
+      { q: 'Recuperarea este mai rapidă decât la FUE?', a: 'Da. Majoritatea pacienților DHI observă mult mai puțină roșeață.' }
+    ]),
+    seo: { title: 'Meva Clinic | DHI Hair Transplant Turkey', desc: 'Premium DHI hair restoration with Choi Pen in Istanbul. Expert density and fast recovery by MD Harun.' }
+  },
+  {
+    id: 'eyebrow-transplant',
+    category: 'hair-transplant',
+    expert: 'MD Harun',
+    title: t('Precision Eyebrow Transplant', 'Transplant de Sprâncene de Precizie'),
+    shortDesc: t('Permanent architectural restoration of the face. MD Harun\'s signature Golden Ratio design creates perfectly framed eyes with 100% natural density.', 'Restaurarea arhitecturală permanentă a feței. Designul semnătură "Golden Ratio" al MD Harun creează sprâncene perfect conturate cu densitate 100% naturală.'),
+    isThisForMe: t([
+      'Individuals with over-plucked, thinning, or scarred eyebrows seeking a permanent fix.',
+      'Patients tired of temporary solutions like microblading or daily makeup.',
+      'Those demanding the "Meva Secret" for a result that is indistinguishable from natural growth.'
+    ], [
+      'Persoane cu sprâncene subțiate sau cicatrice care caută o soluție permanentă.',
+      'Pacienți sătui de soluții temporare precum microblading-ul sau machiajul zilnic.',
+      'Cei care doresc "Secretul Meva" pentru un rezultat imposibil de distins de creșterea naturală.'
+    ]),
+    theProcedure: t('MD Harun applies the secret to a flawless look: Graft Dissection. During the procedure, the strongest multi-follicle grafts are meticulously separated under microscopic guidance into single follicles. These are then implanted at an extremely acute 10-15° angle using DHI Choi Pens to ensure the hair lies flat against the skin, never standing upright.', 'MD Harun aplică secretul unui aspect impecabil: Micro-disecția grefelor. În timpul procedurii, cele mai puternice grefe multiple sunt separate meticulos sub microscop în foliculi singulari. Aceștia sunt apoi implantați la un unghi extrem de ascuțit de 10-15 grade folosind DHI Choi Pen, asigurându-se că părul stă plat pe piele, fără a crește vertical.'),
+    mevaAdvantage: t('The Meva secret lies in MD Harun\'s Golden Ratio mapping and microscopic micro-grafting technique. By ensuring zero incisions or scars, we achieve a result so natural that even under close inspection, the transplant is undetectable.', 'Secretul Meva constă în maparea Golden Ratio a MD Harun și tehnica de micro-grafting. Prin asigurarea a zero incizii sau cicatrici, obținem un rezultat nedetectabil chiar și la o inspecție atentă.'),
+    faq: t([
+      { q: 'Will my eyebrows look like "hair" or "eyebrows"?', a: 'By using MD Harun\'s single-follicle dissection technique and ultra-acute 10-degree angles, the transplanted hair mimics the texture and direction of natural eyebrows perfectly.' },
+      { q: 'How often do I need to trim them?', a: 'Because the hair is harvested from the scalp, it will grow at its original rate. You will need to trim them every 10-14 days to maintain your desired length.' }
+    ], [
+      { q: 'Sprâncenele vor arăta ca "părul" sau ca "sprâncenele"?', a: 'Prin tehnica MD Harun de disecție a foliculilor singulari și unghiurile de 10 grade, părul transplantat imită perfect textura sprâncenelor naturale.' },
+      { q: 'Cât de des trebuie să le tund?', a: 'Deoarece părul provine de pe scalp, va crește în ritmul său original. Va trebui să le tunzi la fiecare 10-14 zile.' }
+    ]),
+    seo: { title: 'Meva Clinic | Precision Eyebrow Transplant Istanbul', desc: 'Permanent architectural eyebrow restoration by MD Harun at Meva Clinic. 100% natural, scar-free results.' }
   },
 
-  // ──────────────────────────────────────────────────────────
-  // EYEBROW TRANSPLANT
-  // ──────────────────────────────────────────────────────────
+  // ==========================================
+  // 7. DENTAL CARE
+  // ==========================================
   {
-    slug: 'eyebrow-transplant',
-    roSlug: 'transplant-sprancene',
-    category: 'Hair',
-    heroImage: 'https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'Eyebrow Transplant Istanbul — Precision Angle & Direction Technique',
-      ro: 'Transplant de Sprâncene Istanbul — Tehnică Precizie Unghi & Direcție',
-    },
-    subtitle: {
-      en: '20–30° Implantation Angles · Single-Hair Follicles · Permanent Natural Results',
-      ro: 'Unghiuri de Implantare 20–30° · Foliculi Fire Unice · Rezultate Naturale Permanente',
-    },
-    metaDescription: {
-      en: 'Eyebrow transplant at Meva Clinic Istanbul. Dr. Harun\'s precision angular technique (20–30°) using single-hair follicular units from the nape donor region delivers permanent, natural-density eyebrows. Bilingual RO/EN support.',
-      ro: 'Transplant de sprâncene la Meva Clinic Istanbul. Tehnica angulară de precizie a Dr. Harun (20–30°) folosind unități foliculare de un singur fir din zona donatoare a cefei oferă sprâncene cu densitate naturală permanentă.',
-    },
-    keywords: 'eyebrow transplant Istanbul, eyebrow restoration Turkey, transplant sprancene Istanbul, sourcil greffe Turquie, Meva Clinic eyebrow',
-
-    doctorQuote: {
-      en: 'The eyebrow is the most technically demanding area in hair restoration. Unlike scalp hair, eyebrow follicles must be implanted at acute angles of 20 to 30 degrees — and within each brow, the direction changes continuously across three anatomical vectors: the medial head, the body arch and the lateral tail. A deviation of even 5 degrees produces a visually detectable unnatural appearance. We use single-hair follicular units exclusively, harvested from the nape of the neck where calibre most closely matches natural brow hair, and implanted with Choi pens under magnification to guarantee sub-millimetre angular precision.',
-      ro: 'Sprânceana este zona cea mai dificilă din punct de vedere tehnic în restaurarea capilară. Spre deosebire de firul de pe scalp, foliculii sprâncenei trebuie implantați la unghiuri acute de 20 până la 30 de grade — și în cadrul fiecărei sprâncene, direcția se schimbă continuu pe trei vectori anatomici: capul medial, arcul corpului și coada laterală. O deviere de chiar 5 grade produce un aspect nefiresc detectabil vizual. Folosim exclusiv unități foliculare cu un singur fir, recoltate de la ceafă unde calibrul corespunde cel mai îndeaproape firului natural de sprânceană, și implantate cu stilouri Choi sub mărire pentru a garanta precizie angulară sub-milimetrică.',
-      doctor: 'Dr. Harun',
-      specialty: {
-        en: 'Eyebrow & Hair Transplant Specialist · Precision Angular Technique · Meva Clinic',
-        ro: 'Specialist Transplant Sprâncene & Păr · Tehnică Angulară de Precizie · Meva Clinic',
-      },
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
-    },
-
-    technicalDetail: {
-      en: [
-        {
-          zone: 'Donor Site Selection',
-          technique: 'Nape (Occipital Fringe)',
-          detail: 'Nape hair has the finest calibre of any scalp region — typically 0.04–0.06 mm — closely matching the diameter of natural brow hair. Single-hair FUE extraction from this zone minimises donor site visibility and ensures the transplanted hairs lie flat without bulk.',
-        },
-        {
-          zone: 'Angular Implantation',
-          technique: '20–30° Directional Precision',
-          detail: 'Three anatomical vectors govern a natural brow: the medial head points upward and slightly outward (25–30°), the body follows the brow arch at 15–20°, and the lateral tail sweeps downward at 5–10°. Dr. Harun maps each zone individually and implants every graft at its vector-specific angle using a fine-gauge Choi pen under 3× magnification.',
-        },
-      ],
-      ro: [
-        {
-          zone: 'Selectarea Zonei Donoare',
-          technique: 'Ceafa (Franja Occipitală)',
-          detail: 'Părul de la ceafă are cel mai fin calibru din orice regiune a scalpului — de obicei 0,04–0,06 mm — corespunzând îndeaproape diametrului firului natural de sprânceană. Extracția FUE cu un singur fir din această zonă minimizează vizibilitatea zonei donoare și asigură că firele transplantate stau plat fără volum.',
-        },
-        {
-          zone: 'Implantare Angulară',
-          technique: 'Precizie Direcțională 20–30°',
-          detail: 'Trei vectori anatomici guvernează o sprânceană naturală: capul medial indică în sus și ușor în exterior (25–30°), corpul urmează arcul sprâncenei la 15–20°, iar coada laterală se îndreaptă în jos la 5–10°. Dr. Harun cartografiază fiecare zonă individual și implantează fiecare grefă la unghiul specific vectorului folosind un stilou Choi cu calibru fin sub mărire 3×.',
-        },
-      ],
-    },
-
-    steps: [
-      { en: 'Brow symmetry design using golden ratio digital mapping', ro: 'Design simetrie sprânceană folosind cartografiere digitală raport de aur' },
-      { en: 'Nape donor zone shaving and local anaesthesia', ro: 'Tunderea zonei donoare de la ceafă și anestezie locală' },
-      { en: 'Single-hair FUE extraction from nape (fine-calibre follicles only)', ro: 'Extracție FUE cu un singur fir de la ceafă (exclusiv foliculi cu calibru fin)' },
-      { en: 'Directional Choi Pen implantation at 20–30° per anatomical zone under magnification', ro: 'Implantare direcțională cu Stiloul Choi la 20–30° per zonă anatomică sub mărire' },
-      { en: 'Bio-serum application + 6-month shaping consultation', ro: 'Aplicare bio-ser + consultație de modelare la 6 luni' },
-    ],
-
-    advantages: [
-      { en: 'Permanent results — no maintenance required', ro: 'Rezultate permanente — fără întreținere necesară' },
-      { en: '20–30° precision angles = undetectable artificial appearance', ro: 'Unghiuri de precizie 20–30° = aspect artificial nedetectabil' },
-      { en: 'Fine-calibre nape donor hair = natural brow texture', ro: 'Păr donator fin de la ceafă = textură naturală a sprâncenei' },
-      { en: 'Golden ratio symmetry design included', ro: 'Design simetrie raport de aur inclus' },
-      { en: 'Day procedure — return to normal activity next day', ro: 'Procedură de zi — revenire la activitate normală a doua zi' },
-    ],
-
-    specs: {
-      en: { hospitalStay: 'Day Clinic (No Stay)', hotelStay: '2 Nights (5★ Hotel)', anesthesia: 'Local', returnToWork: '1–2 Days' },
-      ro: { hospitalStay: 'Clinică Ambulatorie', hotelStay: '2 Nopți (Hotel 5★)', anesthesia: 'Locală', returnToWork: '1–2 Zile' },
-    },
-
-    references: [
-      'Rose, P.T. (2024). Eyebrow Transplantation: Principles of Angular and Directional Precision. JHRS.',
-      'Cotsarelis, G. et al. (2025). Donor Site Selection for Eyebrow Reconstruction: Nape vs Scalp Comparison. Dermatologic Surgery.',
-      'ISHRS Best Practices for Facial Hair Restoration (2025 Edition).',
-    ],
+    id: 'dental-implants',
+    category: 'dental',
+    expert: 'Dr. Osman',
+    title: t('Premium Dental Implants', 'Implanturi Dentare Premium'),
+    shortDesc: t('The permanent foundation for your smile. Dr. Osman utilizes world-class Straumann and Nobel Biocare systems to restore missing teeth with lifetime structural integrity.', 'Fundația permanentă a zâmbetului tău. Dr. Osman utilizează sisteme Straumann și Nobel Biocare pentru a restaura dinții lipsă.'),
+    isThisForMe: t([
+      'Individuals with one or more missing teeth seeking a permanent, non-removable solution.',
+      'Patients wanting to prevent jawbone loss and maintain facial structure.',
+      'Those demanding the highest quality dental components with global lifetime warranties.'
+    ], [
+      'Persoane cu unul sau mai mulți dinți lipsă care caută o soluție fixă.',
+      'Pacienți care doresc să prevină resorbția osoasă.',
+      'Cei care solicită componente dentare de cea mai înaltă calitate.'
+    ]),
+    theProcedure: t('Dr. Osman utilizes 3D CBCT imaging to map your bone structure with 100% accuracy. A medical-grade titanium or zirconia implant is precisely placed into the jawbone, acting as a synthetic root that fuses permanently with your anatomy.', 'Dr. Osman utilizează imagistica 3D CBCT pentru a mapa structura osoasă. Un implant de titan sau zirconiu este plasat cu precizie în osul maxilar.'),
+    mevaAdvantage: t('We prioritize "Zero-Failure" biological integration. Under Dr. Osman\'s care, Meva Clinic exclusively uses premium implant systems with a 99% success rate, ensuring your new teeth feel and function exactly like natural ones.', 'Prioritizăm integrarea biologică. Sub îngrijirea Dr. Osman, folosim exclusiv sisteme de implant premium cu o rată de succes de 99%.'),
+    faq: t([
+      { q: 'Is it painful?', a: 'The procedure is performed under local anesthesia and is often described as less painful than a tooth extraction. Most patients return to eating soft foods within 24 hours.' },
+      { q: 'How long until I get my final crown?', a: 'After the implant is placed, the bone needs 3 months to fuse (osseointegration). After this, Dr. Osman secures your final, permanent porcelain or zirconium crown.' }
+    ], [
+      { q: 'Este dureros?', a: 'Procedura se face sub anestezie locală și este adesea descrisă ca fiind mai puțin dureroasă decât o extracție.' },
+      { q: 'Cât timp durează până primesc coroana finală?', a: 'Osul are nevoie de 3 luni pentru a fuziona cu implantul, după care Dr. Osman fixează coroana finală.' }
+    ]),
+    seo: { title: 'Meva Clinic | Dental Implants Istanbul', desc: 'Premium Straumann and Nobel Biocare implants at Meva Clinic. Expert restoration by Dr. Osman.' }
   },
-
-  // ──────────────────────────────────────────────────────────
-  // ANTI-GRAVITY — NON-SURGICAL FACE LIFTING SERIES
-  // ──────────────────────────────────────────────────────────
   {
-    slug: 'anti-gravity-lifting',
-    roSlug: 'lifting-anti-gravitational',
-    category: 'Aesthetic Medicine',
-    heroImage: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2070&auto=format&fit=crop',
-
-    title: {
-      en: 'Anti-Gravity Lifting — Non-Surgical Face Rejuvenation',
-      ro: 'Lifting Anti-Gravitațional — Întinerire Facială Non-Chirurgicală',
-    },
-    subtitle: {
-      en: 'Thread Lift · HIFU · Gold Microneedling · Liquid Lifting — The Meva Vector Philosophy',
-      ro: 'Thread Lift · HIFU · Microneedling Aur · Lifting Lichid — Filosofia Vectorului Meva',
-    },
-    metaDescription: {
-      en: 'Non-surgical facelift at Meva Clinic Istanbul: PDO & French thread lift, HIFU 4D, gold microneedling and liquid lifting with hyaluronic acid. Natural V-shape results. No downtime.',
-      ro: 'Lifting facial non-chirurgical la Meva Clinic Istanbul: fir PDO & francez, HIFU 4D, microneedling cu aur și lifting lichid cu acid hialuronic. Rezultate naturale formă V. Zero downtime.',
-    },
-    keywords: 'non-surgical facelift Istanbul, thread lift Turkey, HIFU face tightening Istanbul, PDO threads Turkey, liquid lifting hyaluronic acid, anti-aging clinic Istanbul',
-
-    doctorQuote: {
-      en: 'Gravity is relentless — it works on every face, every year. Our Anti-Gravity philosophy opposes it not by pulling skin tight, but by restoring the deep structural support that youth provides. With the right vector, the right technique, and the right sequence, we can recover 7–10 years of facial anatomy without a single incision.',
-      ro: 'Gravitația este neîntreruptă — acționează asupra fiecărei fețe, în fiecare an. Filosofia noastră Anti-Gravitațională nu o combate trăgând pielea, ci restaurând suportul structural profund pe care tinerețea îl oferă. Cu vectorul potrivit, tehnica potrivită și secvența potrivită, putem recupera 7–10 ani de anatomie facială fără o singură incizie.',
-      doctor: 'Meva Aesthetic Medicine Team',
-      specialty: {
-        en: 'Non-Surgical Facial Rejuvenation · Istanbul',
-        ro: 'Rejuvenare Facială Non-Chirurgicală · Istanbul',
-      },
-      image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
-    },
-
-    // 5-Phase Anti-Gravity Content Flow
-    antiGravityFlow: {
-      intro: {
-        en: {
-          heading: 'Gravity & The Face: Understanding What Time Does',
-          body: 'The human face ages along predictable anatomical vectors. Facial fat compartments (deep medial cheek fat, SOOF, buccal fat) descend at a rate of 1–2 mm per year under the influence of gravity and progressive retaining ligament laxity. The malar crescent descends, the nasolabial fold deepens, the jowl forms over the mandibular border, and the neck loses its 90° angle. Meva\'s Anti-Gravity protocol identifies each patient\'s specific descent vector and applies the counterforce at the correct anatomical layer — restoring the facial triangle from an inverted (aged) to an upright (youthful) orientation. This is not skin tightening: it is structural repositioning.',
-        },
-        ro: {
-          heading: 'Gravitația și Fața: Înțelegând Ce Face Timpul',
-          body: 'Fața umană îmbătrânește de-a lungul unor vectori anatomici previzibili. Compartimentele de grăsime facială (grăsimea medială profundă a obrajilor, SOOF, grăsimea bucală) coboară cu o rată de 1–2 mm pe an sub influența gravitației și a laxității progresive a ligamentelor de retenție. Creasta malară coboară, pliul nazo-labial se adâncește, jowelingul se formează deasupra bordului mandibular, iar gâtul își pierde unghiul de 90°. Protocolul Anti-Gravitațional Meva identifică vectorul specific de coborâre al fiecărui pacient și aplică contraforcă la stratul anatomic corect — restaurând triunghiul facial dintr-o orientare inversată (îmbătrânită) într-una dreaptă (tânără). Aceasta nu este strângerea pielii: este repoziționare structurală.',
-        },
-      },
-      threadLift: {
-        en: {
-          heading: 'Thread Lift: French Cannula vs PDO Cog Threads',
-          body: 'Two distinct philosophies exist in thread lifting:\n\n**French (Silhouette Soft) Suspension:** Bidirectional absorbable cones on PLGA sutures create both immediate mechanical lift and long-term collagen induction along the thread path. The 360° cone distribution prevents thread migration. Ideal for mid-face ptosis and jowl suspension. Results: 18–24 months.\n\n**PDO Cog Threads:** Polydioxanone barbed threads inserted via cannula in a fan pattern under the SMAS plane. The barbs engage the subcutaneous tissue and provide a vector-controlled lift. PDO threads fully absorb within 6 months but stimulate collagenesis for 12–18 months post-absorption. Best for brow lifting, jawline definition and neck banding.\n\n**Meva Combination Protocol:** French suspension for the mid-face vector + PDO smooth threads (monothreads) for collagen matrix reconstruction in the periorbital and perioral zones simultaneously.',
-        },
-        ro: {
-          heading: 'Thread Lift: Canulă Franceză vs Fire PDO Cog',
-          body: 'Există două filosofii distincte în thread lifting:\n\n**Suspensie Franceză (Silhouette Soft):** Conuri absorbabile bidirecționale pe suturi PLGA creează atât lift mecanic imediat cât și inducție de colagen pe termen lung de-a lungul traseului firului. Distribuția conurilor la 360° previne migrarea firului. Ideal pentru ptoza feței medii și suspensia jowling-ului. Rezultate: 18–24 luni.\n\n**Fire PDO Cog:** Firele cu ace din polidiaxononă introduse prin canulă în model de evantai sub planul SMAS. Acele angajează țesutul subcutanat și oferă un lift controlat vectorial. Firele PDO se absoarbe complet în 6 luni dar stimulează colageneza 12–18 luni post-absorbție. Cel mai bun pentru ridicarea sprâncenelor, definirea liniei mandibulare și benzile de gât.\n\n**Protocol Combinat Meva:** Suspensie franceză pentru vectorul feței medii + fire PDO lise (monofire) pentru reconstrucția matricei de colagen în zonele periorbitale și perioriale simultan.',
-        },
-      },
-      hiTechLifting: {
-        en: {
-          heading: 'High-Tech Lifting: HIFU 4D & Gold Microneedling RF',
-          body: '**HIFU (High-Intensity Focused Ultrasound) 4D:** Delivers precisely focused acoustic energy at three depths — 1.5 mm (dermis), 3.0 mm (deep dermis), and 4.5 mm (SMAS layer). At 4.5 mm, thermal coagulation points (TCPs) are created in the SMAS — the same layer targeted in surgical facelifts — triggering an immediate contraction of 20–30% and a neocollagenesis cascade that peaks at 3 months. One session: 600–800 shots along 4 anatomical vectors. Results visible for 12–18 months.\n\n**Gold Microneedling RF (Radiofrequency):** Insulated gold-plated needles penetrate to a calibrated depth (1.5–3.5 mm) and deliver bipolar RF energy exclusively at the tip — preserving the epidermis. At 65–70°C, dermal collagen undergoes immediate contracture and fibroblast activation produces new type I and III collagen. Indicated for skin laxity, enlarged pores, acne scars and periorbital rejuvenation. Downtime: 24–48 hours.',
-        },
-        ro: {
-          heading: 'Lifting High-Tech: HIFU 4D & Microneedling RF cu Aur',
-          body: '**HIFU (Ultrasunete Focalizate de Înaltă Intensitate) 4D:** Livrează energie acustică focalizată precis la trei adâncimi — 1,5 mm (dermă), 3,0 mm (dermă profundă) și 4,5 mm (stratul SMAS). La 4,5 mm, punctele de coagulare termică (TCP) sunt create în SMAS — același strat vizat în liftingul facial chirurgical — declanșând o contracție imediată de 20–30% și o cascadă de neocolageneză care atinge vârful la 3 luni. O sesiune: 600–800 focuri de-a lungul a 4 vectori anatomici. Rezultate vizibile 12–18 luni.\n\n**Microneedling RF cu Aur:** Ace izolate placate cu aur penetrează la o adâncime calibrată (1,5–3,5 mm) și livrează energie RF bipolară exclusiv la vârf — conservând epiderma. La 65–70°C, colagenul dermal suferă contractură imediată și activarea fibroblastelor produce colagen nou de tip I și III. Indicat pentru laxitate cutanată, pori dilatați, cicatrici de acnee și rejuvenare periorbitală. Downtime: 24–48 ore.',
-        },
-      },
-      liquidLifting: {
-        en: {
-          heading: 'Liquid Lifting: Hyaluronic Acid & The V-Shape Protocol',
-          body: 'Liquid Lifting uses strategically placed high-density hyaluronic acid fillers (Juvederm Voluma, Restylane Lyft, Sculptra) to restore the facial skeleton and fat compartment volume lost to gravity — creating the inverted triangle (V-shape) of youth.\n\n**Meva 5-Point V-Lift Protocol:**\n1. **Cheekbone augmentation** (deep injection over zygoma, 0.5–1.0 mL per side) — restores malar projection\n2. **Deep medial cheek fill** (retro-orbicularis oculi fat pad, ROOF) — eliminates tear trough and nasojugal groove\n3. **Jawline definition** (mandibular border linear threading) — recreates the youthful jawline angle\n4. **Chin projection** (mentum point augmentation, 0.3–0.5 mL) — improves chin-neck angle\n5. **Temple fill** (deep temporal fascia injection) — addresses temporal hollowing that widens the upper face\n\nAll injections performed with blunt-tip cannula to minimise bruising and vascular risk. Result: 12–18 months (Voluma), 18–24 months (Sculptra with collagen induction).',
-        },
-        ro: {
-          heading: 'Lifting Lichid: Acid Hialuronic & Protocolul V-Shape',
-          body: 'Lifting-ul Lichid utilizează fillers cu acid hialuronic de înaltă densitate (Juvederm Voluma, Restylane Lyft, Sculptra) plasate strategic pentru a restaura scheletul facial și volumul compartimentului de grăsime pierdut gravitației — creând triunghiul inversat (forma V) al tinereții.\n\n**Protocol V-Lift 5 Puncte Meva:**\n1. **Augmentare pomeți** (injecție profundă deasupra zigomei, 0,5–1,0 mL per parte) — restaurează proiecția malară\n2. **Umplere obraz medial profund** (pad de grăsime retro-orbicular, ROOF) — elimină cearcănele și șanțul nazo-jugal\n3. **Definire linie mandibulară** (threading linear de-a lungul bordului mandibular) — recreează unghiul mandibular tânăr\n4. **Proiecție bărbie** (augmentare punct mentum, 0,3–0,5 mL) — îmbunătățește unghiul bărbie-gât\n5. **Umplere tâmple** (injecție fascie temporală profundă) — adresează golurile temporale care lărgesc fața superioară\n\nToate injecțiile efectuate cu canulă cu vârf bont pentru a minimiza vânătăile și riscul vascular. Rezultat: 12–18 luni (Voluma), 18–24 luni (Sculptra cu inducție de colagen).',
-        },
-      },
-    },
-
-    steps: [
-      { en: 'Digital facial mapping & descent vector analysis', ro: 'Cartografiere facială digitală & analiza vectorului de coborâre' },
-      { en: 'Personalised Anti-Gravity protocol design (Thread / HIFU / Filler combination)', ro: 'Design protocol Anti-Gravitațional personalizat (combinație Fir / HIFU / Filler)' },
-      { en: 'Treatment session — 60–90 minutes, topical anaesthetic', ro: 'Sesiune de tratament — 60–90 minute, anestezic topic' },
-      { en: 'Immediate result visible; final result at 4–12 weeks (collagen maturation)', ro: 'Rezultat imediat vizibil; rezultat final la 4–12 săptămâni (maturare colagen)' },
-      { en: 'Follow-up at 4 weeks — touch-up if needed, maintenance schedule', ro: 'Follow-up la 4 săptămâni — retușuri dacă sunt necesare, program de întreținere' },
-    ],
-
-    advantages: [
-      { en: 'Zero surgery — no incisions, no anaesthesia, no hospital stay', ro: 'Zero chirurgie — fără incizii, fără anestezie, fără spitalizare' },
-      { en: '7–10 years of facial rejuvenation in a single session', ro: '7–10 ani de rejuvenare facială într-o singură sesiune' },
-      { en: 'Fully customisable — thread, HIFU, filler or combined protocol', ro: 'Complet personalizabil — protocol fir, HIFU, filler sau combinat' },
-      { en: 'Natural result — vector-based, not stretch-based', ro: 'Rezultat natural — bazat pe vector, nu pe întindere' },
-      { en: 'No visible scar, no healing period, return to social life same day', ro: 'Fără cicatrice vizibilă, fără perioadă de vindecare, revenire în viața socială în aceeași zi' },
-    ],
-
-    specs: [
-      { label: { en: 'Thread Duration', ro: 'Durată Fire' }, value: { en: '18–24 months', ro: '18–24 luni' } },
-      { label: { en: 'HIFU Duration', ro: 'Durată HIFU' }, value: { en: '12–18 months', ro: '12–18 luni' } },
-      { label: { en: 'Filler Duration', ro: 'Durată Filler' }, value: { en: '12–24 months', ro: '12–24 luni' } },
-      { label: { en: 'Session Time', ro: 'Timp Sesiune' }, value: { en: '60–90 min', ro: '60–90 min' } },
-      { label: { en: 'Downtime', ro: 'Downtime' }, value: { en: '0–48 hours', ro: '0–48 ore' } },
-      { label: { en: 'Anaesthesia', ro: 'Anestezie' }, value: { en: 'Topical cream only', ro: 'Cremă topică' } },
-    ],
-
-    // Master FAQ
-    faqs: {
-      en: [
-        { q: 'How long do non-surgical face lifting results last?', a: 'Duration depends on the technique: PDO threads last 12–18 months, French Silhouette Soft 18–24 months, HIFU 4D 12–18 months (with 1 annual maintenance session), hyaluronic acid fillers 12–24 months depending on product and area. Combining techniques extends the overall duration, as each modality targets a different structural layer. Patients on a maintenance protocol (annual HIFU + 6-monthly filler top-up) report sustained results for 3–5 years.' },
-        { q: 'Will I feel pain during the procedure?', a: 'Thread lift: topical anaesthetic cream (EMLA) applied 45 minutes before. Mild pressure sensation during insertion; no sharp pain. HIFU: warm pulsed sensation at deeper depths (4.5 mm SMAS level); tolerated by >90% of patients without additional anaesthesia. Gold microneedling: topical cream only; the RF energy at the tip is felt as mild warmth. Filler injections: cannula technique minimises discomfort; blunt tip does not penetrate vessel walls. Overall patient satisfaction on comfort scale: 8.2/10.' },
-        { q: 'Am I a candidate for non-surgical lifting or do I need surgery?', a: 'Non-surgical Anti-Gravity protocols achieve optimal results in patients with mild-to-moderate facial laxity — typically ages 30–55 with good skin quality and volume loss. Patients with severe ptosis (deep nasolabial folds reaching the jowl, significant neck laxity, significant excess skin) will achieve more durable and dramatic results with surgical Deep Plane facelift. Our facial assessment includes a standardised FACE-Q laxity grading to determine the ideal approach for each patient.' },
-        { q: 'Can threads be combined with HIFU and fillers in the same session?', a: 'Yes — the Meva Anti-Gravity Master Protocol sequences these deliberately: HIFU first (deep 4.5 mm SMAS stimulation), fillers second (structural volume restoration), threads last (mechanical vector lift). This sequence maximises each modality without interference. The combined session takes 90–120 minutes. Not all patients require all three; the combination is personalised based on the facial descent map.' },
-        { q: 'Are there visible side effects or recovery time?', a: 'Thread lift: mild swelling and tenderness at insertion points for 3–5 days. Minimal bruising (≤ 10% of patients). No visible marks at 7 days. HIFU: transient redness and mild oedema for 24–48 hours. Occasional mild sensitivity over the treated area for up to 2 weeks — no visible marks. Gold microneedling RF: 24–48 hours of redness (similar to sunburn). Fillers: 48–72 hours mild swelling, occasional small bruise (resolves with arnica). All patients return to social activities within 24–48 hours.' },
-      ],
-      ro: [
-        { q: 'Cât durează rezultatele liftingului facial non-chirurgical?', a: 'Durata depinde de tehnică: firele PDO durează 12–18 luni, French Silhouette Soft 18–24 luni, HIFU 4D 12–18 luni (cu 1 sesiune anuală de întreținere), fillerele cu acid hialuronic 12–24 luni în funcție de produs și zonă. Combinarea tehnicilor extinde durata generală, deoarece fiecare modalitate vizează un strat structural diferit. Pacienții cu protocol de întreținere (HIFU anual + top-up filler la 6 luni) raportează rezultate susținute timp de 3–5 ani.' },
-        { q: 'Voi simți durere în timpul procedurii?', a: 'Thread lift: cremă anestezică topică (EMLA) aplicată cu 45 minute înainte. Senzație ușoară de presiune în timpul inserției; fără durere ascuțită. HIFU: senzație de puls cald la adâncimi mai mari (nivelul SMAS 4,5 mm); tolerată de >90% din pacienți fără anestezie suplimentară. Microneedling cu aur: doar cremă topică; energia RF la vârf este simțită ca căldură ușoară. Injecții filler: tehnica cu canulă minimizează disconfortul; vârful bont nu penetrează pereții vasculari. Satisfacția generală a pacienților pe scala de confort: 8,2/10.' },
-        { q: 'Sunt candidat pentru lifting non-chirurgical sau am nevoie de chirurgie?', a: 'Protocoalele Anti-Gravitaționale non-chirurgicale obțin rezultate optime la pacienții cu laxitate facială ușoară spre moderată — de obicei vârste 30–55 ani cu calitate bună a pielii și pierdere de volum. Pacienții cu ptoze severe (pliuri nazo-labiale adânci ajungând la jowling, laxitate semnificativă a gâtului, exces semnificativ de piele) vor obține rezultate mai durabile și dramatice cu liftingul facial chirurgical Deep Plane. Evaluarea noastră facială include o gradare standardizată a laxității FACE-Q pentru a determina abordarea ideală pentru fiecare pacient.' },
-        { q: 'Pot fi combinate firele cu HIFU și fillerele în aceeași sesiune?', a: 'Da — Protocolul Master Anti-Gravitațional Meva le secvențiază deliberat: HIFU primul (stimulare SMAS profundă 4,5 mm), fillerele al doilea (restaurare volum structural), firele ultimele (lift vector mecanic). Această secvență maximizează fiecare modalitate fără interferență. Sesiunea combinată durează 90–120 minute. Nu toți pacienții necesită toate trei; combinația este personalizată pe baza hărții de coborâre facială.' },
-        { q: 'Există efecte secundare vizibile sau timp de recuperare?', a: 'Thread lift: umflare ușoară și sensibilitate la punctele de inserție timp de 3–5 zile. Vânătăi minime (≤ 10% din pacienți). Fără urme vizibile la 7 zile. HIFU: roșeață tranzitorie și edem ușor timp de 24–48 ore. Sensibilitate ușoară ocazională deasupra zonei tratate până la 2 săptămâni — fără urme vizibile. Microneedling RF cu aur: 24–48 ore de roșeață (similar cu arsura solară). Fillere: 48–72 ore umflare ușoară, ocazional vânătaie mică (se rezolvă cu arnică). Toți pacienții revin la activitățile sociale în 24–48 ore.' },
-      ],
-    },
-
-    references: [
-      'Sulamanidze M. et al. (2024). Long-Term Outcomes of APTOS Thread Suspension for Facial Ptosis. Aesthetic Surgery Journal.',
-      'Suh DH. et al. (2023). Efficacy of High-Intensity Focused Ultrasound for Facial Laxity: Systematic Review and Meta-Analysis. Dermatologic Surgery.',
-      'Vleggaar D. & Fitzgerald R. (2024). Facial Volumetric Restoration and the V-Lift Protocol: A Staged Filler Approach. J Cosmet Dermatol.',
-      'Alam M. et al. (2025). Combination Non-Surgical Rejuvenation: Thread, Energy Device and Filler Sequencing Guidelines. JAAD.',
-      'Cotofana S. & Lachman N. (2023). Anatomy of Facial Fat Compartments and Ligament Descent Vectors. Clinical Anatomy.',
-    ],
+    id: 'hollywood-smile',
+    category: 'dental',
+    expert: 'Dr. Şiyar',
+    title: t('Hollywood Smile Design', 'Design Zâmbet Hollywoodian'),
+    shortDesc: t('The ultimate aesthetic transformation. Dr. Şiyar utilizes AI-driven digital smile design and ultra-thin porcelain veneers to create your custom, red-carpet-ready smile.', 'Transformarea estetică supremă. Dr. Şiyar utilizează designul digital și fațete de porțelan ultra-subțiri pentru un zâmbet de Hollywood.'),
+    isThisForMe: t([
+      'Patients with discolored, chipped, or slightly misaligned teeth wanting a "perfect" look.',
+      'Individuals seeking a symmetrical, bright, and harmonious dental aesthetic.',
+      'Those demanding the most advanced cosmetic dentistry available in modern clinics.'
+    ], [
+      'Pacienți cu dinți pătați sau ciobiți care doresc un aspect "perfect".',
+      'Persoane care caută o estetică dentară simetrică și luminoasă.',
+      'Cei care solicită cea mai avansată stomatologie cosmetică disponibilă.'
+    ]),
+    theProcedure: t('Under the artistic direction of Dr. Şiyar, we begin with 3D intraoral scanning. Teeth are minimally prepared, and custom-crafted E-Max or Zirconium veneers are bonded to the surface, flawlessly correcting color and shape.', 'Sub direcția artistică a Dr. Şiyar, începem cu scanarea 3D. Dinții sunt pregătiți minim, iar fațetele E-Max sunt aplicate pe suprafață.'),
+    mevaAdvantage: t('Dr. Şiyar utilizes "Face-Driven" smile design software. We don\'t just make white teeth; we design a smile that matches your lip line, skin tone, and facial proportions for a result that is both stunning and natural.', 'Dr. Şiyar utilizează software de design "Face-Driven". Nu facem doar dinți albi; proiectăm un zâmbet care să se potrivească perfect feței tale.'),
+    faq: t([
+      { q: 'Will my teeth look "fake" or "too white"?', a: 'No. Dr. Şiyar customizes the translucency and shade gradient of each veneer to ensure your smile has the natural "depth" of real enamel.' },
+      { q: 'How long do veneers last?', a: 'With proper care, premium porcelain veneers last 15-20 years. They are highly resistant to staining from coffee, tea, and tobacco.' }
+    ], [
+      { q: 'Vor arăta dinții "falși" sau "prea albi"?', a: 'Nu. Dr. Şiyar personalizează translucența fiecărei fațete pentru a asigura "profunzimea" naturală a smalțului.' },
+      { q: 'Cât durează fațetele?', a: 'Cu o îngrijire adecvată, fațetele de porțelan durează 15-20 de ani.' }
+    ]),
+    seo: { title: 'Meva Clinic | Hollywood Smile Istanbul', desc: 'Transform your smile with digital design and premium veneers by Dr. Şiyar at Meva Clinic.' }
   },
+  {
+    id: 'all-on-4-implants',
+    category: 'dental',
+    expert: 'Dr. Cemal',
+    title: t('All-on-4 Full Arch Restoration', 'Restaurare Completă All-on-4'),
+    shortDesc: t('Total dental rebirth. Dr. Cemal restores an entire arch of missing teeth with just four strategic implants, providing immediate functionality and a permanent, fixed smile.', 'Renaștere dentară totală. Dr. Cemal restaurează o întreagă arcadă cu doar patru implanturi strategice.'),
+    isThisForMe: t([
+      'Patients with total tooth loss or those with failing teeth needing full-mouth extraction.',
+      'Individuals with low bone density who have been told traditional implants are impossible.',
+      'Those wanting to abandon uncomfortable, removable dentures for a fixed, natural-feeling solution.'
+    ], [
+      'Pacienți cu pierdere totală a dinților sau care necesită extracții totale.',
+      'Persoane cu densitate osoasă scăzută.',
+      'Cei care doresc să renunțe la protezele mobile în favoarea unei soluții fixe.'
+    ]),
+    theProcedure: t('Dr. Cemal specializes in the All-on-4 protocol. Four titanium implants are placed at specific angles to maximize existing bone support. A customized, temporary fixed bridge is often attached on the same day.', 'Dr. Cemal este specializat în protocolul All-on-4. Patru implanturi de titan sunt plasate în unghiuri specifice, oferind adesea o lucrare fixă în aceeași zi.'),
+    mevaAdvantage: t('We offer "Teeth in a Day" clinical excellence. Under Dr. Cemal\'s care, we eliminate the need for painful bone grafting in most cases, allowing our patients to walk out with a full, functional smile in record time.', 'Oferim excelență clinică "Teeth in a Day". Sub îngrijirea Dr. Cemal, eliminăm necesitatea adițiilor osoase dureroase în majoritatea cazurilor.'),
+    faq: t([
+      { q: 'Is it stable for eating?', a: 'Absolutely. All-on-4 is a structural restoration. Once healed, you can eat steak, apples, and all your favorite foods with 100% confidence.' },
+      { q: 'What is the success rate?', a: 'The All-on-4 technique has a global success rate of over 98% when performed by a specialist like Dr. Cemal.' }
+    ], [
+      { q: 'Este stabilă pentru mâncat?', a: 'Absolut. Odată vindecată, poți mânca orice alimente preferi cu încredere deplină.' },
+      { q: 'Care este rata de succes?', a: 'Tehnica All-on-4 are o rată de succes globală de peste 98% sub mâna unui specialist ca Dr. Cemal.' }
+    ]),
+    seo: { title: 'Meva Clinic | All-on-4 Dental Implants Turkey', desc: 'Full arch restoration in one day with All-on-4 implants. Expert surgery by Dr. Cemal.' }
+  },
+  {
+    id: 'zirconium-crowns',
+    category: 'dental',
+    expert: 'Dr. Yusuf',
+    title: t('Zirconium Dental Crowns', 'Coroane Dentare din Zirconiu'),
+    shortDesc: t('The metal-free evolution. Dr. Yusuf utilizes high-translucency Zirconium to restore damaged teeth with extreme durability and natural, light-reflecting aesthetics.', 'Evoluția fără metal. Dr. Yusuf utilizează zirconiul de înaltă translucență pentru a restaura dinții cu durabilitate extremă.'),
+    isThisForMe: t([
+      'Patients needing to restore heavily decayed or fractured teeth.',
+      'Individuals wanting to replace old, graying "metal-fused" crowns with a modern alternative.',
+      'Those seeking a biocompatible material that is gentle on the gums and looks 100% natural.'
+    ], [
+      'Pacienți care au nevoie de restaurarea dinților cariați sau fracturați.',
+      'Persoane care doresc înlocuirea vechilor coroane metalice inestetice.',
+      'Cei care caută un material biocompatibil și natural.'
+    ]),
+    theProcedure: t('Dr. Yusuf utilizes intraoral digital scanning to eliminate uncomfortable molds. The crown is designed in 3D and precision-milled from a single block of Zirconium, ensuring a perfect "micro-fit" with your natural tooth.', 'Dr. Yusuf utilizează scanarea digitală intraorală. Coroana este proiectată 3D și frezată cu precizie pentru o potrivire perfectă.'),
+    mevaAdvantage: t('We utilize CAD/CAM digital craftsmanship. Dr. Yusuf\'s precision ensures that there is zero "dark line" at the gum border, a common issue with traditional crowns, ensuring a flawless and healthy smile.', 'Utilizăm măiestria digitală CAD/CAM. Precizia Dr. Yusuf asigură absența "liniei negre" la marginea gingiei.'),
+    faq: t([
+      { q: 'Is Zirconium stronger than Porcelain?', a: 'Zirconium is significantly stronger and more resistant to chipping than pure porcelain, making it ideal for both front and back teeth.' },
+      { q: 'Will I have sensitivity?', a: 'Because Zirconium is a poor conductor of heat and cold, patients typically experience much less sensitivity than with traditional metal crowns.' }
+    ], [
+      { q: 'Este zirconiul mai rezistent decât porțelanul?', a: 'Zirconiul este semnificativ mai rezistent, fiind ideal atât pentru dinții frontali, cât și pentru cei laterali.' },
+      { q: 'Voi avea sensibilitate?', a: 'Pacienții experimentează de obicei mult mai puțină sensibilitate decât la coroanele metalice tradiționale.' }
+    ]),
+    seo: { title: 'Meva Clinic | Zirconium Crowns Istanbul', desc: 'Get durable, natural-looking zirconium crowns with CAD/CAM technology by Dr. Yusuf at Meva Clinic.' }
+  }
 ];
 
+export const findTreatment = (slug) => 
+  treatmentsData.find(t => t.id === slug) || null;
 
-/**
- * Helper: find treatment by EN or RO slug
- */
-export const findTreatment = (slug) =>
-  TREATMENTS.find(t => t.slug === slug || t.roSlug === slug) || null;
-
-export default TREATMENTS;
+export default treatmentsData;
