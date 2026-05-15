@@ -169,12 +169,12 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3 font-sans text-sm">
               {[
-                { ro: '/ro/gastric-sleeve', en: '/en/gastric-sleeve', labelEn: 'Bariatric Surgery', labelRo: 'Chirurgie Bariatrică' },
-                { ro: '/ro/implant-par', en: '/en/hair-transplant', labelEn: 'Sapphire FUE Hair', labelRo: 'Transplant Păr Safir' },
-                { ro: '/ro/oncologie', en: '/en/oncology', labelEn: 'Robotic Oncology', labelRo: 'Oncologie Robotică' },
-                { ro: '/ro/implant-dentar', en: '/en/dental-implants', labelEn: 'Dental Implants', labelRo: 'Implanturi Dentare' },
-                { ro: '/ro/chirurgie-plastica', en: '/en/plastic-surgery', labelEn: 'Plastic Surgery', labelRo: 'Chirurgie Plastică' },
-                { ro: '/ro/transplant-organe', en: '/en/organ-transplant', labelEn: 'Organ Transplant', labelRo: 'Transplant de Organe' },
+                { ro: '/ro/treatments/gastric-sleeve', en: '/en/treatments/gastric-sleeve', labelEn: 'Bariatric Surgery', labelRo: 'Chirurgie Bariatrică' },
+                { ro: '/ro/treatments/meva-mixed-hair', en: '/en/treatments/meva-mixed-hair', labelEn: 'Sapphire FUE Hair', labelRo: 'Transplant Păr Safir' },
+                { ro: '/ro/treatments/smart-oncology-drugs', en: '/en/treatments/smart-oncology-drugs', labelEn: 'Robotic Oncology', labelRo: 'Oncologie Robotică' },
+                { ro: '/ro/treatments/zirconium-crowns', en: '/en/treatments/zirconium-crowns', labelEn: 'Dental Implants', labelRo: 'Implanturi Dentare' },
+                { ro: '/ro/treatments/piezo-rhinoplasty', en: '/en/treatments/piezo-rhinoplasty', labelEn: 'Plastic Surgery', labelRo: 'Chirurgie Plastică' },
+                { ro: '/ro/treatments/organ-transplant-turkey', en: '/en/treatments/organ-transplant-turkey', labelEn: 'Organ Transplant', labelRo: 'Transplant de Organe' },
               ].map((item) => (
                 <li key={item.labelEn}>
                   <Link to={isEn ? item.en : item.ro} className="text-gray-400 hover:text-accent flex items-center transition-colors">
