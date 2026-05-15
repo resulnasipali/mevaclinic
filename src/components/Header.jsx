@@ -1,27 +1,108 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Globe, ChevronDown, Activity, ShieldCheck, Phone } from 'lucide-react';
+import { Menu, X, Globe, ChevronDown, Activity, ShieldCheck, Phone, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import AppointmentModal from './AppointmentModal';
 import TopBar from './TopBar';
+import { treatmentsData } from '../data/treatmentsData';
 
+// ── Category configuration ─────────────────────────────────────────────────────
+const CATEGORY_CONFIG = {
+  'plastic-surgery': { icon: '✂️',  en: 'Plastic Surgery',          ro: 'Chirurgie Plastică',           col: 'left'  },
+  'bariatric':       { icon: '⚕️',  en: 'Bariatric Surgery',         ro: 'Chirurgie Bariatrică',          col: 'left'  },
+  'hair-transplant': { icon: '💇',  en: 'Hair & Brow Transplant',    ro: 'Păr & Sprâncene',               col: 'left'  },
+  'dental':          { icon: '🦷',  en: 'Dental Care',               ro: 'Stomatologie',                  col: 'left'  },
+  'andrology':       { icon: '👨‍⚕️', en: "Andrology & Men's Health", ro: 'Andrologie & Sănătate Masculină', col: 'right' },
+  'advanced':        { icon: '🧬',  en: 'Advanced Medicine',          ro: 'Medicină Avansată',             col: 'right' },
+  'anti-gravity':    { icon: '✨',  en: 'Anti-Gravity Suite',         ro: 'Suita Anti-Gravity',            col: 'right' },
+};
+
+const LEFT_CATEGORIES  = ['plastic-surgery', 'bariatric', 'hair-transplant', 'dental'];
+const RIGHT_CATEGORIES = ['andrology', 'advanced', 'anti-gravity'];
+
+// ── Safe title extractor ────────────────────────────────────────────────────────
+// Prevents "Objects are not valid as a React child" crash
+const getTitle = (titleField, isEn) => {
+  if (!titleField) return '';
+  if (typeof titleField === 'string') return titleField;
+  if (typeof titleField === 'object' && (titleField.en || titleField.ro)) {
+    return isEn ? (titleField.en || '') : (titleField.ro || '');
+  }
+  return '';
+};
+
+// ── Build grouped treatments ────────────────────────────────────────────────────
+const groupByCategory = () => {
+  const groups = {};
+  treatmentsData.forEach((t) => {
+    if (!CATEGORY_CONFIG[t.category]) return; // skip unknown/removed categories
+    if (!groups[t.category]) groups[t.category] = [];
+    groups[t.category].push(t);
+  });
+  return groups;
+};
+
+// ── CategoryColumn sub-component ───────────────────────────────────────────────
+const CategoryColumn = ({ categories, groups, isEn, onClose }) => (
+  <div className="flex flex-col gap-5">
+    {categories.map((catKey) => {
+      const cfg = CATEGORY_CONFIG[catKey];
+      const items = groups[catKey] || [];
+      if (!cfg || items.length === 0) return null;
+
+      return (
+        <div key={catKey}>
+          {/* Category header */}
+          <div className="flex items-center gap-2 mb-2 px-1">
+            <span className="text-base leading-none" role="img" aria-hidden="true">{cfg.icon}</span>
+            <p className="text-[10px] font-black uppercase tracking-[0.15em] text-accent">
+              {isEn ? cfg.en : cfg.ro}
+            </p>
+          </div>
+
+          {/* Treatment links */}
+          <div className="flex flex-col gap-0.5">
+            {items.map((treatment) => {
+              const title = getTitle(treatment.title, isEn);
+              return (
+                <Link
+                  key={treatment.id}
+                  to={`/${isEn ? 'en' : 'ro'}/treatments/${treatment.id}`}
+                  onClick={onClose}
+                  className="group flex items-center gap-2.5 px-3 py-2 rounded-xl text-[11px] font-semibold text-gray-600 hover:bg-accent/8 hover:text-prime transition-all"
+                >
+                  <span className="w-1 h-1 rounded-full bg-gray-300 group-hover:bg-accent transition-colors shrink-0" />
+                  <span className="leading-snug">{title}</span>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      );
+    })}
+  </div>
+);
+
+// ── Main Header ─────────────────────────────────────────────────────────────────
 const Header = () => {
-  const [isOpen, setIsOpen]               = useState(false);   // mobile panel
-  const [langMenu, setLangMenu]           = useState(false);   // desktop lang dropdown
-  const [treatmentsMenu, setTreatmentsMenu] = useState(false); // desktop treatments dropdown
-  const [mobileAccordion, setMobileAccordion] = useState(false); // mobile treatments accordion
+  const [isOpen, setIsOpen]               = useState(false);
+  const [langMenu, setLangMenu]           = useState(false);
+  const [treatmentsMenu, setTreatmentsMenu] = useState(false);
+  const [mobileAccordion, setMobileAccordion] = useState(null); // stores open catKey
   const [isModalOpen, setIsModalOpen]     = useState(false);
   const location = useLocation();
   const isEn = location.pathname.startsWith('/en');
+
+  const groups = groupByCategory();
 
   // Close everything on route change
   useEffect(() => {
     setIsOpen(false);
     setLangMenu(false);
     setTreatmentsMenu(false);
-    setMobileAccordion(false);
+    setMobileAccordion(null);
   }, [location.pathname]);
 
-  // ── Opposite language path mapping ─────────────────────────────────────────
+  // ── Opposite language path mapping ──────────────────────────────────────────
   const getOppositeLangPath = () => {
     const rawPath = location.pathname;
     const path = (rawPath.endsWith('/') && rawPath.length > 1) ? rawPath.slice(0, -1) : rawPath || '/ro';
@@ -34,29 +115,19 @@ const Header = () => {
       '/ro/comparatie-medicala': '/en/medical-comparison',    '/en/medical-comparison': '/ro/comparatie-medicala',
       '/ro/blog': '/en/blog',                   '/en/blog': '/ro/blog',
       '/ro/quiz': '/en/quiz',                   '/en/quiz': '/ro/quiz',
-      '/ro/concierge': '/en/concierge',         '/en/concierge': '/ro/concierge',
-      '/ro/gastric-sleeve': '/en/gastric-sleeve',       '/en/gastric-sleeve': '/ro/gastric-sleeve',
-      '/ro/gastric-bypass': '/en/gastric-bypass',       '/en/gastric-bypass': '/ro/gastric-bypass',
-      '/ro/balon-gastric': '/en/gastric-balloon',       '/en/gastric-balloon': '/ro/balon-gastric',
-      '/ro/implant-par': '/en/hair-transplant',         '/en/hair-transplant': '/ro/implant-par',
-      '/ro/implant-sprancene': '/en/eyebrow-transplant','/en/eyebrow-transplant': '/ro/implant-sprancene',
-      '/ro/oncologie': '/en/oncology',                  '/en/oncology': '/ro/oncologie',
-      '/ro/implant-dentar': '/en/dental-implants',      '/en/dental-implants': '/ro/implant-dentar',
-      '/ro/chirurgie-plastica': '/en/plastic-surgery',  '/en/plastic-surgery': '/ro/chirurgie-plastica',
-      '/ro/transplant-organe': '/en/organ-transplant',  '/en/organ-transplant': '/ro/transplant-organe',
-      '/ro/ivf-ciprul-de-nord': '/en/ivf-northern-cyprus', '/en/ivf-northern-cyprus': '/ro/ivf-ciprul-de-nord',
-      '/ro/andrologie': '/en/andrology',                '/en/andrology': '/ro/andrologie',
-      '/ro/romani-istanbul': '/en',
-      '/': '/en', '/ro': '/en', '/en': '/ro',
+      '/ro': '/en', '/en': '/ro', '/': '/en',
     };
 
     if (mappings[path]) return mappings[path];
+    // Dynamic treatment routes: swap lang prefix
+    if (path.startsWith('/ro/treatments/')) return path.replace('/ro/treatments/', '/en/treatments/');
+    if (path.startsWith('/en/treatments/')) return path.replace('/en/treatments/', '/ro/treatments/');
     if (path.startsWith('/ro/')) return path.replace('/ro/', '/en/');
     if (path.startsWith('/en/')) return path.replace('/en/', '/ro/');
     return isEn ? '/ro' : '/en';
   };
 
-  // ── Separate refs for each dropdown ────────────────────────────────────────
+  // ── Click-outside refs ───────────────────────────────────────────────────────
   const langRef       = useRef(null);
   const treatmentsRef = useRef(null);
 
@@ -69,35 +140,15 @@ const Header = () => {
     return () => document.removeEventListener('mousedown', handler);
   }, []);
 
-  // ── Nav links definition ────────────────────────────────────────────────────
-  const navLinks = [
-    { name: isEn ? 'Home' : 'Acasă',       path: isEn ? '/en' : '/ro' },
-    { name: isEn ? 'About Us' : 'Despre Noi', path: isEn ? '/en/about-us' : '/ro/despre-noi' },
-    {
-      name: isEn ? 'Treatments' : 'Tratamente',
-      path: '#',
-      dropdown: [
-        { name: isEn ? 'Bariatric Surgery'         : 'Chirurgie Bariatrică',       path: isEn ? '/en/gastric-sleeve'                    : '/ro/gastric-sleeve'                    },
-        { name: isEn ? 'Hair Transplant'           : 'Transplant de Păr',          path: isEn ? '/en/hair-transplant'                   : '/ro/implant-par'                        },
-        { name: isEn ? 'IVF · Cyprus'              : 'FIV · Cipru',                path: isEn ? '/en/ivf-northern-cyprus'               : '/ro/ivf-ciprul-de-nord'                 },
-        { name: isEn ? 'Oncology'                  : 'Oncologie Robotică',         path: isEn ? '/en/oncology'                          : '/ro/oncologie'                          },
-        { name: isEn ? 'Dental Implants'           : 'Implant Dentar',             path: isEn ? '/en/dental-implants'                   : '/ro/implant-dentar'                     },
-        { name: isEn ? 'Plastic Surgery'           : 'Chirurgie Plastică',         path: isEn ? '/en/plastic-surgery'                   : '/ro/chirurgie-plastica'                 },
-        { name: isEn ? 'Organ Transplant'          : 'Transplant de Organe',       path: isEn ? '/en/organ-transplant'                  : '/ro/transplant-organe'                  },
-        { name: isEn ? 'Eyebrow Transplant'        : 'Transplant Sprâncene',       path: isEn ? '/en/eyebrow-transplant'                : '/ro/implant-sprancene'                   },
-        // ── Andrology ──
-        { name: isEn ? '── Andrology ──'           : '── Andrologie ──',           path: isEn ? '/en/andrology'                         : '/ro/andrologie',                        isSectionLabel: true },
-        { name: isEn ? 'Penis Enlargement Surgery' : 'Mărire Penis Chirurgical',   path: isEn ? '/en/treatments/penis-enlargement-surgery' : '/ro/treatments/penis-enlargement-surgery' },
-        { name: isEn ? 'Non-Surgical Girth (HA)'  : 'Îngroșare Non-Chirurgicală', path: isEn ? '/en/treatments/non-surgical-enlargement'  : '/ro/treatments/non-surgical-enlargement'  },
-        { name: isEn ? 'ED: ESWT & P-Shot'         : 'ED: ESWT & P-Shot',          path: isEn ? '/en/treatments/ed-treatments-eswt-pshot'  : '/ro/treatments/ed-treatments-eswt-pshot'  },
-        { name: isEn ? 'Penile Prosthesis'          : 'Proteză Peniană',            path: isEn ? '/en/treatments/penile-prosthesis'         : '/ro/treatments/penile-prosthesis'         },
-      ],
-    },
-    { name: 'Blog',                          path: isEn ? '/en/blog'    : '/ro/blog'    },
-    { name: isEn ? 'Contact' : 'Contact',   path: isEn ? '/en/contact' : '/ro/contact' },
+  // ── Simple nav links (non-dropdown) ─────────────────────────────────────────
+  const simpleLinks = [
+    { name: isEn ? 'Home'     : 'Acasă',      path: isEn ? '/en'            : '/ro'            },
+    { name: isEn ? 'About Us' : 'Despre Noi', path: isEn ? '/en/about-us'   : '/ro/despre-noi' },
+    { name: 'Blog',                            path: isEn ? '/en/blog'        : '/ro/blog'       },
+    { name: isEn ? 'Contact'  : 'Contact',    path: isEn ? '/en/contact'     : '/ro/contact'    },
   ];
 
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const closeMegaMenu = () => setTreatmentsMenu(false);
 
   return (
     <>
@@ -108,7 +159,7 @@ const Header = () => {
           {/* ── Logo ── */}
           <Link
             to={isEn ? '/en' : '/ro'}
-            onClick={scrollToTop}
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center gap-3 group shrink-0"
             aria-label="Meva Clinic Home"
           >
@@ -125,55 +176,105 @@ const Header = () => {
 
           {/* ── Desktop Nav ── */}
           <nav className="hidden lg:flex items-center justify-center gap-6 flex-1 mx-8" aria-label="Main navigation">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative">
-                {link.dropdown ? (
-                  /* Treatments dropdown */
-                  <div ref={treatmentsRef}>
-                    <button
-                      onClick={() => { setTreatmentsMenu(prev => !prev); setLangMenu(false); }}
-                      className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors whitespace-nowrap focus:outline-none focus:text-accent"
-                      aria-haspopup="true"
-                      aria-expanded={treatmentsMenu}
-                    >
-                      {link.name}
-                      <ChevronDown size={12} className={`transition-transform duration-300 ${treatmentsMenu ? 'rotate-180' : ''}`} />
-                    </button>
-                    {treatmentsMenu && (
-                      <div
-                        className="absolute top-full left-0 mt-4 w-64 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden z-[5002] animate-fade-up"
-                        role="menu"
-                      >
-                        {link.dropdown.map((item) => (
-                          item.isSectionLabel ? (
-                            <div key={item.name} className="px-5 py-2 text-[9px] font-black uppercase tracking-[0.2em] text-accent/80 bg-prime/5 border-b border-gray-100">
-                              {isEn ? 'Andrology & Men\'s Health' : 'Andrologie & Sănătatea Bărbaților'}
-                            </div>
-                          ) : (
-                            <Link
-                              key={item.name}
-                              to={item.path}
-                              role="menuitem"
-                              onClick={() => setTreatmentsMenu(false)}
-                              className="flex items-center gap-3 px-5 py-3.5 text-[11px] font-bold text-prime hover:bg-gray-50 hover:text-accent border-b border-gray-50 last:border-0 transition-colors"
-                            >
-                              <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                              {item.name}
-                            </Link>
-                          )
-                        ))}
-                      </div>
-                    )}
+
+            {/* Simple links before Treatments */}
+            {simpleLinks.slice(0, 2).map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors whitespace-nowrap"
+              >
+                {link.name}
+              </Link>
+            ))}
+
+            {/* ── TREATMENTS MEGA-MENU ── */}
+            <div ref={treatmentsRef} className="relative">
+              <button
+                onClick={() => { setTreatmentsMenu(prev => !prev); setLangMenu(false); }}
+                className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors whitespace-nowrap focus:outline-none focus:text-accent"
+                aria-haspopup="true"
+                aria-expanded={treatmentsMenu}
+                id="treatments-menu-button"
+              >
+                {isEn ? 'Treatments' : 'Tratamente'}
+                <ChevronDown size={12} className={`transition-transform duration-300 ${treatmentsMenu ? 'rotate-180' : ''}`} />
+              </button>
+
+              {/* ── MEGA-MENU DROPDOWN ── */}
+              {treatmentsMenu && (
+                <div
+                  role="menu"
+                  aria-labelledby="treatments-menu-button"
+                  className="absolute top-full left-1/2 -translate-x-1/2 mt-5 w-[680px] bg-white rounded-3xl shadow-2xl border border-gray-100 z-[5002] overflow-hidden"
+                  style={{ animation: 'fadeInUp 0.2s ease-out' }}
+                >
+                  {/* Header bar */}
+                  <div className="bg-prime px-6 py-3 flex items-center justify-between">
+                    <p className="text-[10px] font-black uppercase tracking-[0.2em] text-accent">
+                      {isEn ? 'Clinical Services' : 'Servicii Clinice'}
+                    </p>
+                    <p className="text-[10px] text-white/50 font-medium">
+                      {treatmentsData.length}+ {isEn ? 'treatments available' : 'tratamente disponibile'}
+                    </p>
                   </div>
-                ) : (
-                  <Link
-                    to={link.path}
-                    className="text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors whitespace-nowrap"
-                  >
-                    {link.name}
-                  </Link>
-                )}
-              </div>
+
+                  {/* 2-column grid */}
+                  <div className="grid grid-cols-2 divide-x divide-gray-100">
+
+                    {/* LEFT COLUMN — Surgical */}
+                    <div className="p-5 bg-gray-50/50">
+                      <p className="text-[9px] font-black uppercase tracking-[0.18em] text-gray-400 mb-4 px-1">
+                        {isEn ? 'Surgical' : 'Chirurgical'}
+                      </p>
+                      <CategoryColumn
+                        categories={LEFT_CATEGORIES}
+                        groups={groups}
+                        isEn={isEn}
+                        onClose={closeMegaMenu}
+                      />
+                    </div>
+
+                    {/* RIGHT COLUMN — Medical / Advanced */}
+                    <div className="p-5">
+                      <p className="text-[9px] font-black uppercase tracking-[0.18em] text-gray-400 mb-4 px-1">
+                        {isEn ? 'Medical & Advanced' : 'Medical & Avansat'}
+                      </p>
+                      <CategoryColumn
+                        categories={RIGHT_CATEGORIES}
+                        groups={groups}
+                        isEn={isEn}
+                        onClose={closeMegaMenu}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Footer CTA */}
+                  <div className="border-t border-gray-100 px-6 py-3 bg-gray-50 flex items-center justify-between">
+                    <p className="text-[10px] text-gray-400 font-medium">
+                      {isEn ? 'JCI Accredited · Da Vinci Robotic · VIP Transfers' : 'Acreditat JCI · Robotic Da Vinci · Transferuri VIP'}
+                    </p>
+                    <Link
+                      to={isEn ? '/en/contact' : '/ro/contact'}
+                      onClick={closeMegaMenu}
+                      className="flex items-center gap-1.5 text-[10px] font-black text-accent hover:text-prime uppercase tracking-wider transition-colors"
+                    >
+                      {isEn ? 'Free Consult' : 'Consultație Gratuită'} <ArrowRight size={11} />
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Simple links after Treatments */}
+            {simpleLinks.slice(2).map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors whitespace-nowrap"
+              >
+                {link.name}
+              </Link>
             ))}
           </nav>
 
@@ -244,7 +345,7 @@ const Header = () => {
           </div>
         </div>
 
-        {/* ── Mobile Menu Panel ──────────────────────────────────────────────── */}
+        {/* ── Mobile Menu Panel ──────────────────────────────────────────────────── */}
         <div
           id="mobile-nav-panel"
           className={`fixed inset-0 bg-[#0b1626] z-[4000] transition-transform duration-500 ${isOpen ? 'translate-y-0' : '-translate-y-full'} overflow-y-auto`}
@@ -252,7 +353,7 @@ const Header = () => {
           aria-modal="true"
           aria-label={isEn ? 'Navigation menu' : 'Meniu de navigare'}
         >
-          <div className="min-h-full flex flex-col px-8 pt-20 pb-10 relative">
+          <div className="min-h-full flex flex-col px-6 pt-20 pb-10 relative">
             {/* Close */}
             <button
               onClick={() => setIsOpen(false)}
@@ -270,65 +371,84 @@ const Header = () => {
               <Phone size={22} />
             </a>
 
-            {/* Nav items */}
-            <nav className="flex flex-col gap-2 mt-4" aria-label="Mobile navigation">
-              {navLinks.map((link) => (
-                <div key={link.name}>
-                  {link.dropdown ? (
-                    /* ── Treatments Accordion ── */
-                    <div>
+            {/* Simple nav items */}
+            <nav className="flex flex-col gap-1 mt-4" aria-label="Mobile navigation">
+              {simpleLinks.slice(0, 2).map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-4 text-2xl font-serif font-bold text-white hover:text-accent transition-colors border-b border-white/10"
+                >
+                  {link.name}
+                </Link>
+              ))}
+
+              {/* ── Mobile Treatments Accordion (per-category) ── */}
+              <div className="border-b border-white/10">
+                <div className="py-4 text-2xl font-serif font-bold text-white">
+                  {isEn ? 'Treatments' : 'Tratamente'}
+                </div>
+
+                {/* All categories as sub-accordions */}
+                {[...LEFT_CATEGORIES, ...RIGHT_CATEGORIES].map((catKey) => {
+                  const cfg = CATEGORY_CONFIG[catKey];
+                  const items = groups[catKey] || [];
+                  if (!cfg || items.length === 0) return null;
+                  const isOpen2 = mobileAccordion === catKey;
+
+                  return (
+                    <div key={catKey} className="ml-2 mb-1">
                       <button
-                        onClick={() => setMobileAccordion(prev => !prev)}
-                        className="w-full flex items-center justify-between py-4 border-b border-white/10 focus:outline-none group"
-                        aria-expanded={mobileAccordion}
+                        onClick={() => setMobileAccordion(isOpen2 ? null : catKey)}
+                        className="w-full flex items-center justify-between py-3 pr-1 focus:outline-none group"
+                        aria-expanded={isOpen2}
                       >
-                        <span className="text-2xl font-serif font-bold text-white group-hover:text-accent transition-colors">
-                          {link.name}
+                        <span className="flex items-center gap-2 text-sm font-bold text-gray-300 group-hover:text-accent transition-colors">
+                          <span>{cfg.icon}</span>
+                          {isEn ? cfg.en : cfg.ro}
                         </span>
                         <ChevronDown
-                          size={22}
-                          className={`text-accent transition-transform duration-300 ${mobileAccordion ? 'rotate-180' : ''}`}
+                          size={16}
+                          className={`text-accent/60 transition-transform duration-300 ${isOpen2 ? 'rotate-180' : ''}`}
                         />
                       </button>
-                      {/* Accordion content */}
-                      <div
-                        className={`overflow-hidden transition-all duration-400 ${mobileAccordion ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}
-                      >
-                        <div className="pt-3 pb-4 pl-4 flex flex-col gap-1">
-                          {link.dropdown.map((item) => (
-                            item.isSectionLabel ? (
-                              <div key={item.name} className="py-2 text-[9px] font-black uppercase tracking-[0.2em] text-accent mt-2">
-                                {isEn ? '— Andrology & Men\'s Health —' : '— Andrologie & Sănătatea Bărbaților —'}
-                              </div>
-                            ) : (
+
+                      <div className={`overflow-hidden transition-all duration-300 ${isOpen2 ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+                        <div className="pl-6 pb-3 flex flex-col gap-0.5 border-l border-accent/20 ml-2">
+                          {items.map((treatment) => {
+                            const title = getTitle(treatment.title, isEn);
+                            return (
                               <Link
-                                key={item.name}
-                                to={item.path}
-                                onClick={() => { setIsOpen(false); setMobileAccordion(false); }}
-                                className="flex items-center gap-3 py-3 text-base font-semibold text-gray-300 hover:text-accent transition-colors border-b border-white/5 last:border-0"
+                                key={treatment.id}
+                                to={`/${isEn ? 'en' : 'ro'}/treatments/${treatment.id}`}
+                                onClick={() => { setIsOpen(false); setMobileAccordion(null); }}
+                                className="flex items-center gap-2 py-2 text-sm text-gray-400 hover:text-accent transition-colors"
                               >
-                                <span className="w-1.5 h-1.5 rounded-full bg-accent shrink-0" />
-                                {item.name}
+                                <span className="w-1 h-1 rounded-full bg-accent/40 shrink-0" />
+                                {title}
                               </Link>
-                            )
-                          ))}
+                            );
+                          })}
                         </div>
                       </div>
                     </div>
-                  ) : (
-                    <Link
-                      to={link.path}
-                      onClick={() => setIsOpen(false)}
-                      className="block py-4 text-2xl font-serif font-bold text-white hover:text-accent transition-colors border-b border-white/10"
-                    >
-                      {link.name}
-                    </Link>
-                  )}
-                </div>
+                  );
+                })}
+              </div>
+
+              {simpleLinks.slice(2).map((link) => (
+                <Link
+                  key={link.name}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className="block py-4 text-2xl font-serif font-bold text-white hover:text-accent transition-colors border-b border-white/10"
+                >
+                  {link.name}
+                </Link>
               ))}
             </nav>
 
-            {/* Spacer */}
             <div className="flex-1 min-h-8" />
 
             {/* Language switcher */}
