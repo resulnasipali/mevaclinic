@@ -28,21 +28,12 @@ const TreatmentPage = lazy(() => import('./pages/TreatmentPage'));
 const About = lazy(() => import('./pages/About'));
 const Contact = lazy(() => import('./pages/Contact'));
 const NotFound = lazy(() => import('./pages/NotFound'));
-const HairTransplant = lazy(() => import('./pages/HairTransplant'));
-const Oncology = lazy(() => import('./pages/Oncology'));
-const Bariatric = lazy(() => import('./pages/Bariatric'));
-const DentalImplants = lazy(() => import('./pages/DentalImplants'));
-const PlasticSurgery = lazy(() => import('./pages/PlasticSurgery'));
-const EyebrowTransplant = lazy(() => import('./pages/EyebrowTransplant'));
-const OrganTransplant = lazy(() => import('./pages/OrganTransplant'));
 const RomaniaSpecial = lazy(() => import('./pages/RomaniaSpecial'));
 const QuizPage = lazy(() => import('./pages/QuizPage'));
 const FAQPage = lazy(() => import('./pages/FAQPage'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const ComparisonHub = lazy(() => import('./pages/ComparisonHub'));
 const TreatmentDetail = lazy(() => import('./pages/TreatmentDetail'));
-const Andrology = lazy(() => import('./pages/Andrology'));
-const IVF = lazy(() => import('./pages/IVF'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0b1626] flex items-center justify-center">
@@ -228,11 +219,11 @@ function App() {
                <Route path="/ro/gastric-bypass" element={<Bariatric lang="ro" />} />
                <Route path="/ro/balon-gastric" element={<Bariatric lang="ro" />} />
                <Route path="/ro/implant-par" element={<HairTransplant lang="ro" />} />
-               <Route path="/ro/implant-sprancene" element={<EyebrowTransplant lang="ro" />} />
-               <Route path="/ro/oncologie" element={<Oncology lang="ro" />} />
-               <Route path="/ro/implant-dentar" element={<DentalImplants lang="ro" />} />
-               <Route path="/ro/chirurgie-plastica" element={<PlasticSurgery lang="ro" />} />
-               <Route path="/ro/transplant-organe" element={<OrganTransplant lang="ro" />} />
+               <Route path="/ro/implant-sprancene" element={<TreatmentDetail />} />
+               <Route path="/ro/oncologie" element={<TreatmentDetail />} />
+               <Route path="/ro/implant-dentar" element={<TreatmentDetail />} />
+               <Route path="/ro/chirurgie-plastica" element={<TreatmentDetail />} />
+               <Route path="/ro/transplant-organe" element={<TreatmentDetail />} />
                <Route path="/ro/blog" element={<BlogArchive />} />
                <Route path="/ro/blog/:slug" element={<BlogPost />} />
                <Route path="/ro/quiz" element={<QuizPage lang="ro" />} />
@@ -241,17 +232,23 @@ function App() {
                <Route path="/ro/politica-confidentialitate" element={<PrivacyPolicy />} />
                <Route path="/ro/comparatie-medicala" element={<ComparisonHub />} />
                <Route path="/ro/romani-istanbul" element={<RomaniaSpecial />} />
-               <Route path="/ro/andrologie" element={<Andrology lang="ro" />} />
-               <Route path="/ro/fiv" element={<IVF lang="ro" />} />
+               <Route path="/ro/andrologie" element={<TreatmentDetail />} />
+               <Route path="/ro/fiv" element={<TreatmentDetail />} />
                {/* IVF pages */}
+               <Route path="/ro/ivf-icsi-pgd" element={<TreatmentDetail />} />
+               <Route path="/ro/ivf-cyprus" element={<TreatmentDetail />} />
                <Route path="/ro/ivf-ciprul-de-nord" element={<TreatmentDetail />} />
-               <Route path="/ro/hair-transplant" element={<HairTransplant lang="ro" />} />
+               <Route path="/ro/hair-transplant" element={<TreatmentDetail />} />
                {/* /:lng/treatments/:slug — dynamic detail pages */}
                <Route path="/ro/treatments/:slug" element={<TreatmentDetail />} />
                {/* Hair technique detail pages */}
                <Route path="/ro/transplant-par-mixt" element={<TreatmentDetail />} />
                <Route path="/ro/transplant-par-dhi" element={<TreatmentDetail />} />
                <Route path="/ro/transplant-sprancene" element={<TreatmentDetail />} />
+               <Route path="/ro/eyebrow-transplant" element={<TreatmentDetail />} />
+               <Route path="/ro/gastric-sleeve" element={<TreatmentDetail />} />
+               <Route path="/ro/gastric-bypass" element={<TreatmentDetail />} />
+               <Route path="/ro/balon-gastric" element={<TreatmentDetail />} />
                {/* wildcard last */}
                <Route path="/ro/:slug" element={<TreatmentPage />} />
     
@@ -261,11 +258,11 @@ function App() {
                <Route path="/en/gastric-bypass" element={<Bariatric lang="en" />} />
                <Route path="/en/gastric-balloon" element={<Bariatric lang="en" />} />
                <Route path="/en/hair-transplant" element={<HairTransplant lang="en" />} />
-               <Route path="/en/eyebrow-transplant" element={<EyebrowTransplant lang="en" />} />
-               <Route path="/en/oncology" element={<Oncology lang="en" />} />
-               <Route path="/en/dental-implants" element={<DentalImplants lang="en" />} />
-               <Route path="/en/plastic-surgery" element={<PlasticSurgery lang="en" />} />
-               <Route path="/en/organ-transplant" element={<OrganTransplant lang="en" />} />
+               <Route path="/en/eyebrow-transplant" element={<TreatmentDetail />} />
+               <Route path="/en/oncology" element={<TreatmentDetail />} />
+               <Route path="/en/dental-implants" element={<TreatmentDetail />} />
+               <Route path="/en/plastic-surgery" element={<TreatmentDetail />} />
+               <Route path="/en/organ-transplant" element={<TreatmentDetail />} />
                <Route path="/en/blog" element={<BlogArchive />} />
                <Route path="/en/blog/:slug" element={<BlogPost />} />
                <Route path="/en/quiz" element={<QuizPage lang="en" />} />
@@ -273,9 +270,11 @@ function App() {
                <Route path="/en/contact" element={<Contact />} />
                <Route path="/en/privacy-policy" element={<PrivacyPolicy />} />
                <Route path="/en/medical-comparison" element={<ComparisonHub />} />
-               <Route path="/en/andrology" element={<Andrology lang="en" />} />
-               <Route path="/en/ivf" element={<IVF lang="en" />} />
+               <Route path="/en/andrology" element={<TreatmentDetail />} />
+               <Route path="/en/ivf" element={<TreatmentDetail />} />
                {/* IVF pages */}
+               <Route path="/en/ivf-icsi-pgd" element={<TreatmentDetail />} />
+               <Route path="/en/ivf-cyprus" element={<TreatmentDetail />} />
                <Route path="/en/ivf-northern-cyprus" element={<TreatmentDetail />} />
                {/* /:lng/treatments/:slug — dynamic detail pages */}
                <Route path="/en/treatments/:slug" element={<TreatmentDetail />} />
@@ -283,6 +282,9 @@ function App() {
                <Route path="/en/mixed-hair-transplant" element={<TreatmentDetail />} />
                <Route path="/en/dhi-hair-transplant" element={<TreatmentDetail />} />
                <Route path="/en/eyebrow-transplant" element={<TreatmentDetail />} />
+               <Route path="/en/gastric-sleeve" element={<TreatmentDetail />} />
+               <Route path="/en/gastric-bypass" element={<TreatmentDetail />} />
+               <Route path="/en/gastric-balloon" element={<TreatmentDetail />} />
                {/* wildcard last */}
                <Route path="/en/:slug" element={<TreatmentPage />} />
                

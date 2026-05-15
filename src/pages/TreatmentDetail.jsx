@@ -130,7 +130,7 @@ const TreatmentDetail = () => {
   const quote       = isNew ? {
     text_en: "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.",
     text_ro: "Abordarea noastră clinică prioritizează conservarea țesuturilor și rezultatele naturale pe termen lung, asigurându-vă că transformarea este atât sigură, cât și superioară din punct de vedere estetic.",
-    doctor: tdNew.expert || (isEn ? "Meva Clinical Team" : "Echipa Clinică Meva"),
+    doctor: typeof tdNew.expert === 'object' ? tdNew.expert[isEn ? 'en' : 'ro'] : (tdNew.expert || (isEn ? "Meva Clinical Team" : "Echipa Clinică Meva")),
     title_en: "Chief Medical Officer",
     title_ro: "Director Medical",
   } : treatment.doctorQuote;
@@ -309,7 +309,7 @@ const TreatmentDetail = () => {
                   {isEn ? 'About This Procedure' : 'Despre Această Procedură'}
                 </p>
                 <h2 className="text-3xl font-serif font-bold text-prime mb-5">
-                  {isEn ? `Why Choose Meva Clinic for ${title.split(' ')[0]}?` : `De ce Meva Clinic pentru ${title.split(' ')[0]}?`}
+                  {isEn ? `Why Choose Meva Clinic for ${(title || "Meva").split(' ')[0]}?` : `De ce Meva Clinic pentru ${(title || "Meva").split(' ')[0]}?`}
                 </h2>
                 <p className="text-gray-600 text-lg leading-relaxed">{description}</p>
               </div>
