@@ -112,6 +112,8 @@ const TreatmentDetail = () => {
 
   const getSafeVal = (val, isEn) => {
     if (!val) return '';
+    // If it's the new array-based structure (isThisForMe, faq), return the array for the lang
+    if (Array.isArray(val)) return val; 
     return typeof val === 'object' ? (val[isEn ? 'en' : 'ro'] || val) : val;
   };
 
@@ -125,17 +127,21 @@ const TreatmentDetail = () => {
   const mevaAdvantage = isNew ? getSafeVal(tdNew.mevaAdvantage, isEn) : "";
   const faqItems = isNew ? (getSafeVal(tdNew.faq, isEn) || []) : [];
 
+  // Specs handling
+  const newSpecs = isNew ? getSafeVal(tdNew.specs, isEn) : null;
   const details     = isNew ? {
-    hospitalStay: isEn ? '2-3 Nights' : '2-3 Nopți',
-    hotelStay: isEn ? '3-4 Nights' : '3-4 Nopți',
-    returnToWork: isEn ? '7-10 Days' : '7-10 Zile',
-    anesthesia: isEn ? 'General/Local' : 'Generală/Locală'
+    hospitalStay: newSpecs?.hospitalStay || (isEn ? '1-2 Nights' : '1-2 Nopți'),
+    hotelStay: newSpecs?.hotelStay || (isEn ? '3-5 Nights' : '3-5 Nopți'),
+    returnToWork: newSpecs?.returnToWork || (isEn ? '7-10 Days' : '7-10 Zile'),
+    anesthesia: newSpecs?.anesthesia || (isEn ? 'General/Local' : 'Generală/Locală')
   } : (isEn ? treatment.details_en  : treatment.details);
+
+  const expertName = isNew ? getSafeVal(tdNew.expert, isEn) : (treatment.expert || "Meva Clinical Team");
 
   const quote       = isNew ? {
     text_en: "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.",
     text_ro: "Abordarea noastră clinică prioritizează conservarea țesuturilor și rezultatele naturale pe termen lung, asigurându-vă că transformarea este atât sigură, cât și superioară din punct de vedere estetic.",
-    doctor: typeof tdNew.expert === 'object' ? tdNew.expert[isEn ? 'en' : 'ro'] : (tdNew.expert || (isEn ? "Meva Clinical Team" : "Echipa Clinică Meva")),
+    doctor: expertName,
     title_en: "Chief Medical Officer",
     title_ro: "Director Medical",
   } : treatment.doctorQuote;
@@ -148,14 +154,12 @@ const TreatmentDetail = () => {
   const heroImage   = isNew ? (tdNew.heroImage || `https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1920&auto=format&fit=crop`) : treatment.heroImage;
   const seoSlug     = isNew ? tdNew.id : treatment.slug;
   const keywords    = isNew ? `${title}, Meva Clinic, Istanbul` : `${title}, Meva Clinic, Istanbul`;
-
-  // Match reviewer photo
   const reviewerKey = slug.includes('gastric') || slug.includes('bypass') || slug.includes('balloon') ? 'bariatric'
     : slug.includes('hair') || slug.includes('eyebrow') || slug.includes('par') || slug.includes('sprancene') ? 'hair'
     : slug.includes('onco') ? 'oncology'
     : slug.includes('dental') ? 'dental'
     : slug.includes('plastic') ? 'plastic'
-    : slug.includes('organ') || slug.includes('transplant') ? 'organ'
+    : slug.includes('andrology') || slug.includes('penile') || slug.includes('ligament') ? 'bariatric' // fallback
     : 'bariatric';
   const reviewer = REVIEWERS[reviewerKey];
 

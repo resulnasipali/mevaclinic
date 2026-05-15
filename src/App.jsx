@@ -217,15 +217,14 @@ function App() {
                
                {/* RO routes — specific before wildcard */}
                <Route path="/ro/despre-noi" element={<About />} />
-               <Route path="/ro/gastric-sleeve" element={<Bariatric lang="ro" />} />
-               <Route path="/ro/gastric-bypass" element={<Bariatric lang="ro" />} />
-               <Route path="/ro/balon-gastric" element={<Bariatric lang="ro" />} />
-               <Route path="/ro/implant-par" element={<HairTransplant lang="ro" />} />
+               <Route path="/ro/gastric-sleeve" element={<TreatmentDetail />} />
+               <Route path="/ro/gastric-bypass" element={<TreatmentDetail />} />
+               <Route path="/ro/balon-gastric" element={<TreatmentDetail />} />
+               <Route path="/ro/implant-par" element={<TreatmentDetail />} />
                <Route path="/ro/implant-sprancene" element={<TreatmentDetail />} />
                <Route path="/ro/oncologie" element={<TreatmentDetail />} />
                <Route path="/ro/implant-dentar" element={<TreatmentDetail />} />
                <Route path="/ro/chirurgie-plastica" element={<TreatmentDetail />} />
-               <Route path="/ro/transplant-organe" element={<TreatmentDetail />} />
                <Route path="/ro/blog" element={<BlogArchive />} />
                <Route path="/ro/blog/:slug" element={<BlogPost />} />
                <Route path="/ro/quiz" element={<QuizPage lang="ro" />} />
@@ -236,35 +235,26 @@ function App() {
                <Route path="/ro/romani-istanbul" element={<RomaniaSpecial />} />
                <Route path="/ro/andrologie" element={<TreatmentDetail />} />
                <Route path="/ro/fiv" element={<TreatmentDetail />} />
-               {/* IVF pages */}
                <Route path="/ro/ivf-icsi-pgd" element={<TreatmentDetail />} />
                <Route path="/ro/ivf-cyprus" element={<TreatmentDetail />} />
                <Route path="/ro/ivf-ciprul-de-nord" element={<TreatmentDetail />} />
                <Route path="/ro/hair-transplant" element={<TreatmentDetail />} />
-               {/* /:lng/treatments/:slug — dynamic detail pages */}
                <Route path="/ro/treatments/:slug" element={<TreatmentDetail />} />
-               {/* Hair technique detail pages */}
                <Route path="/ro/transplant-par-mixt" element={<TreatmentDetail />} />
                <Route path="/ro/transplant-par-dhi" element={<TreatmentDetail />} />
-               <Route path="/ro/transplant-sprancene" element={<TreatmentDetail />} />
                <Route path="/ro/eyebrow-transplant" element={<TreatmentDetail />} />
-               <Route path="/ro/gastric-sleeve" element={<TreatmentDetail />} />
-               <Route path="/ro/gastric-bypass" element={<TreatmentDetail />} />
-               <Route path="/ro/balon-gastric" element={<TreatmentDetail />} />
-               {/* wildcard last */}
                <Route path="/ro/:slug" element={<TreatmentPage />} />
     
                {/* EN routes — specific before wildcard */}
                <Route path="/en/about-us" element={<About />} />
-               <Route path="/en/gastric-sleeve" element={<Bariatric lang="en" />} />
-               <Route path="/en/gastric-bypass" element={<Bariatric lang="en" />} />
-               <Route path="/en/gastric-balloon" element={<Bariatric lang="en" />} />
-               <Route path="/en/hair-transplant" element={<HairTransplant lang="en" />} />
+               <Route path="/en/gastric-sleeve" element={<TreatmentDetail />} />
+               <Route path="/en/gastric-bypass" element={<TreatmentDetail />} />
+               <Route path="/en/gastric-balloon" element={<TreatmentDetail />} />
+               <Route path="/en/hair-transplant" element={<TreatmentDetail />} />
                <Route path="/en/eyebrow-transplant" element={<TreatmentDetail />} />
                <Route path="/en/oncology" element={<TreatmentDetail />} />
                <Route path="/en/dental-implants" element={<TreatmentDetail />} />
                <Route path="/en/plastic-surgery" element={<TreatmentDetail />} />
-               <Route path="/en/organ-transplant" element={<TreatmentDetail />} />
                <Route path="/en/blog" element={<BlogArchive />} />
                <Route path="/en/blog/:slug" element={<BlogPost />} />
                <Route path="/en/quiz" element={<QuizPage lang="en" />} />
@@ -274,20 +264,12 @@ function App() {
                <Route path="/en/medical-comparison" element={<ComparisonHub />} />
                <Route path="/en/andrology" element={<TreatmentDetail />} />
                <Route path="/en/ivf" element={<TreatmentDetail />} />
-               {/* IVF pages */}
                <Route path="/en/ivf-icsi-pgd" element={<TreatmentDetail />} />
                <Route path="/en/ivf-cyprus" element={<TreatmentDetail />} />
                <Route path="/en/ivf-northern-cyprus" element={<TreatmentDetail />} />
-               {/* /:lng/treatments/:slug — dynamic detail pages */}
                <Route path="/en/treatments/:slug" element={<TreatmentDetail />} />
-               {/* Hair technique detail pages */}
                <Route path="/en/mixed-hair-transplant" element={<TreatmentDetail />} />
                <Route path="/en/dhi-hair-transplant" element={<TreatmentDetail />} />
-               <Route path="/en/eyebrow-transplant" element={<TreatmentDetail />} />
-               <Route path="/en/gastric-sleeve" element={<TreatmentDetail />} />
-               <Route path="/en/gastric-bypass" element={<TreatmentDetail />} />
-               <Route path="/en/gastric-balloon" element={<TreatmentDetail />} />
-               {/* wildcard last */}
                <Route path="/en/:slug" element={<TreatmentPage />} />
                
                <Route path="/concierge" element={<ConciergePage />} />

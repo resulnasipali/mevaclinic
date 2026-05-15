@@ -5,27 +5,21 @@ import { treatmentsData } from '../data/treatmentsData';
 
 // ── Category configuration ─────────────────────────────────────────────────────
 const CATEGORY_CONFIG = {
-  'plastic':      { icon: '✂️',  en: 'Plastic Surgery',          ro: 'Chirurgie Plastică' },
   'bariatric':    { icon: '⚕️',  en: 'Bariatric Surgery',         ro: 'Chirurgie Bariatrică' },
   'hair':         { icon: '💇',  en: 'Hair & Brow Transplant',    ro: 'Păr & Sprâncene' },
   'dental':       { icon: '🦷',  en: 'Dental Care',               ro: 'Stomatologie' },
+  'plastic':      { icon: '✂️',  en: 'Plastic Surgery',          ro: 'Chirurgie Plastică' },
   'andrology':    { icon: '👨‍⚕️', en: "Andrology & Men's Health", ro: 'Andrologie & Sănătate Masculină' },
-  'ivf':          { icon: '🧬',  en: 'Reproductive Medicine',     ro: 'Medicină Reproductivă' },
-  'oncology':     { icon: '🔬',  en: 'Advanced Oncology',         ro: 'Oncologie Avansată' },
-  'anti-gravity': { icon: '✨',  en: 'Anti-Gravity Suite',         ro: 'Suita Anti-Gravity' },
+  'specialist':   { icon: '🔬',  en: 'Specialist Treatments',    ro: 'Tratamente Specializate' },
 };
 
-const LEFT_CATEGORIES  = ['plastic', 'bariatric', 'hair', 'dental'];
-const RIGHT_CATEGORIES = ['andrology', 'ivf', 'oncology', 'anti-gravity'];
+const LEFT_CATEGORIES  = ['bariatric', 'hair', 'dental'];
+const RIGHT_CATEGORIES = ['plastic', 'andrology', 'specialist'];
 
 // ── Safe title extractor ────────────────────────────────────────────────────────
-const getTitle = (titleField, isEn) => {
-  if (!titleField) return '';
-  if (typeof titleField === 'string') return titleField;
-  if (typeof titleField === 'object' && (titleField.en || titleField.ro)) {
-    return isEn ? (titleField.en || '') : (titleField.ro || '');
-  }
-  return '';
+const getSafeVal = (val, isEn) => {
+  if (!val) return '';
+  return typeof val === 'object' ? (val[isEn ? 'en' : 'ro'] || val) : val;
 };
 
 // ── Build grouped treatments ────────────────────────────────────────────────────
@@ -47,36 +41,36 @@ const CategoryColumn = ({ categories, groups, isEn, onClose }) => (
       const items = groups[catKey] || [];
       if (!cfg || items.length === 0) return null;
 
-      const isAndrology = catKey === 'andrology';
+      const isHighDensity = catKey === 'plastic' || catKey === 'andrology';
 
       return (
-        <div key={catKey} className={isAndrology ? "bg-accent/5 -mx-3 p-4 rounded-2xl border border-accent/10" : ""}>
+        <div key={catKey} className={`rounded-2xl transition-all ${isHighDensity ? "bg-accent/5 -mx-2 p-4 border border-accent/10" : ""}`}>
           <div className="flex items-center gap-2 mb-3 px-1">
-            <span className="text-base leading-none" role="img" aria-hidden="true">{cfg.icon}</span>
-            <p className={`text-[10px] font-black uppercase tracking-[0.15em] ${isAndrology ? 'text-accent' : 'text-gray-400'}`}>
+            <span className="text-base" role="img" aria-hidden="true">{cfg.icon}</span>
+            <p className={`text-[10px] font-black uppercase tracking-[0.15em] ${isHighDensity ? 'text-accent' : 'text-gray-400'}`}>
               {isEn ? cfg.en : cfg.ro}
             </p>
           </div>
 
-          <div className="flex flex-col gap-0.5">
+          <div className={`grid ${isHighDensity ? 'grid-cols-2 gap-x-3 gap-y-1' : 'flex flex-col gap-0.5'}`}>
             {items.map((treatment) => {
-              const title = getTitle(treatment.title, isEn);
-              const expertStr = typeof treatment.expert === 'object' 
-                ? treatment.expert[isEn ? 'en' : 'ro'] 
-                : (treatment.expert || 'Meva Specialist');
+              const title = getSafeVal(treatment.title, isEn);
+              const expertStr = getSafeVal(treatment.expert, isEn) || (isEn ? 'Meva Specialist' : 'Specialist Meva');
 
               return (
                 <Link
                   key={treatment.id}
                   to={`/${isEn ? 'en' : 'ro'}/treatments/${treatment.id}`}
                   onClick={onClose}
-                  className="group flex flex-col gap-0.5 px-3 py-2 rounded-xl hover:bg-white/40 hover:shadow-sm transition-all"
+                  className="group flex flex-col gap-0 px-2 py-1.5 rounded-lg hover:bg-white/60 hover:shadow-sm transition-all"
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="w-1 h-1 rounded-full bg-accent/40 group-hover:bg-accent transition-colors shrink-0" />
-                    <span className="text-[11px] font-bold text-prime group-hover:text-accent transition-colors leading-snug">{title}</span>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1 h-1 rounded-full bg-accent/30 group-hover:bg-accent transition-colors shrink-0" />
+                    <span className="text-[10px] font-bold text-prime group-hover:text-accent transition-colors leading-tight">
+                      {title}
+                    </span>
                   </div>
-                  <span className="pl-3 text-[9px] text-gray-400 font-medium uppercase tracking-wider">
+                  <span className="pl-2.5 text-[8px] text-gray-400 font-medium uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity">
                     {expertStr}
                   </span>
                 </Link>
@@ -127,23 +121,23 @@ const Navbar = () => {
           </Link>
           
           <div className="relative" onMouseEnter={() => setTreatmentsMenu(true)} onMouseLeave={() => setTreatmentsMenu(false)}>
-            <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors">
+            <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors py-2">
               {isEn ? 'Treatments' : 'Tratamente'}
               <ChevronDown size={14} className={`transition-transform duration-300 ${treatmentsMenu ? 'rotate-180' : ''}`} />
             </button>
             
             {treatmentsMenu && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[850px]">
-                <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 overflow-hidden grid grid-cols-2 p-8 gap-8">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[900px]">
+                <div className="bg-white rounded-[2.5rem] shadow-[0_30px_100px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden grid grid-cols-2 p-8 gap-10">
                   <div className="border-r border-gray-50 pr-8">
-                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-6 px-1">
-                      {isEn ? 'Surgical Excellence' : 'Excelență Chirurgicală'}
+                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-300 mb-6 px-1">
+                      {isEn ? 'Clinical Specialties' : 'Specialități Clinice'}
                     </p>
                     <CategoryColumn categories={LEFT_CATEGORIES} groups={groups} isEn={isEn} onClose={closeMegaMenu} />
                   </div>
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-400 mb-6 px-1">
-                      {isEn ? 'Medical & Advanced' : 'Medical & Avansat'}
+                    <p className="text-[10px] font-black uppercase tracking-widest text-gray-300 mb-6 px-1">
+                      {isEn ? 'Surgical & Specialist' : 'Chirurgie & Specialiști'}
                     </p>
                     <CategoryColumn categories={RIGHT_CATEGORIES} groups={groups} isEn={isEn} onClose={closeMegaMenu} />
                   </div>
@@ -159,15 +153,25 @@ const Navbar = () => {
 
         {/* Right Actions */}
         <div className="flex items-center gap-4">
-          <div className="hidden md:flex items-center gap-4 border-r border-gray-100 pr-4 mr-4">
-             <div className="flex flex-col items-end">
-                <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{isEn ? 'Call Us' : 'Sună-ne'}</span>
-                <a href="tel:+905324675941" className="text-sm font-bold text-prime hover:text-accent transition-colors">+90 532 467 5941</a>
-             </div>
+          {/* Language Switcher */}
+          <div className="relative">
+             <button 
+               onClick={() => setLangMenu(!langMenu)}
+               className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-prime transition-colors px-3 py-2 rounded-lg bg-gray-50 border border-gray-100"
+             >
+               <Globe size={14} />
+               {isEn ? 'EN' : 'RO'}
+             </button>
+             {langMenu && (
+               <div className="absolute top-full right-0 mt-2 w-24 bg-white rounded-xl shadow-xl border border-gray-100 p-1">
+                 <Link to="/en" className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">English</Link>
+                 <Link to="/ro" className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">Română</Link>
+               </div>
+             )}
           </div>
-          
+
           <Link to={isEn ? '/en/contact' : '/ro/contact'} className="bg-prime text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-prime/90 transition-all shadow-md">
-            {isEn ? 'Free Consultation' : 'Consultație Gratuită'}
+            {isEn ? 'Consultation' : 'Consultație'}
           </Link>
         </div>
       </div>

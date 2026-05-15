@@ -38,9 +38,14 @@ const TreatmentPage = () => {
     );
   }
 
-  const title = isNew ? treatment.title[isEn ? 'en' : 'ro'] : (isEn ? (treatment.title_en || treatment.title) : treatment.title);
-  const subtitle = isNew ? treatment.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? (treatment.subtitle_en || treatment.subtitle) : treatment.subtitle);
-  const description = isNew ? treatment.shortDesc[isEn ? 'en' : 'ro'] : (isEn ? (treatment.description_en || treatment.description) : treatment.description);
+  const getSafeVal = (val, isEn) => {
+    if (!val) return '';
+    return typeof val === 'object' ? (val[isEn ? 'en' : 'ro'] || val) : val;
+  };
+
+  const title = isNew ? getSafeVal(treatment.title, isEn) : (isEn ? (treatment.title_en || treatment.title) : treatment.title);
+  const subtitle = isNew ? getSafeVal(treatment.shortDesc, isEn) : (isEn ? (treatment.subtitle_en || treatment.subtitle) : treatment.subtitle);
+  const description = isNew ? getSafeVal(treatment.shortDesc, isEn) : (isEn ? (treatment.description_en || treatment.description) : treatment.description);
   
   const details = isNew ? {
     hospitalStay: isEn ? '2-3 Nights' : '2-3 Nopți',
@@ -48,7 +53,7 @@ const TreatmentPage = () => {
     returnToWork: isEn ? '7-10 Days' : '7-10 Zile',
   } : (isEn ? (treatment.details_en || treatment.details) : treatment.details);
 
-  const expertName = isNew ? (typeof treatment.expert === 'object' ? treatment.expert[isEn ? 'en' : 'ro'] : treatment.expert) : null;
+  const expertName = isNew ? getSafeVal(treatment.expert, isEn) : (isEn ? (treatment.expert_en || treatment.expert) : treatment.expert);
 
   return (
     <div className="bg-white min-h-screen selection:bg-accent/20">
