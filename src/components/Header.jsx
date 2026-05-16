@@ -211,43 +211,43 @@ const Header = () => {
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu Panel */}
-        <div className={`fixed inset-0 top-[110px] bg-white z-[3000] transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto lg:hidden`}>
-          <div className="p-6 flex flex-col gap-4">
-             {simpleLinks.map(link => (
-               <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)} className="text-xl font-bold text-prime border-b border-gray-100 pb-3">{link.name}</Link>
-             ))}
-             <div className="mt-4">
-                <p className="text-xs font-black uppercase text-gray-400 mb-4">{isEn ? 'Treatments' : 'Tratamente'}</p>
-                {[...LEFT_CATEGORIES, ...RIGHT_CATEGORIES].map(catKey => {
-                  const cfg = CATEGORY_CONFIG[catKey];
-                  const items = groups[catKey] || [];
-                  if (!cfg || items.length === 0) return null;
-                  const isMobOpen = mobileAccordion === catKey;
-                  return (
-                    <div key={catKey} className="mb-2">
-                       <button onClick={() => setMobileAccordion(isMobOpen ? null : catKey)} className="w-full flex justify-between items-center py-2 text-prime font-bold">
-                          <span>{cfg.icon} {isEn ? cfg.en : cfg.ro}</span>
-                          <ChevronDown size={14} className={isMobOpen ? 'rotate-180' : ''} />
-                       </button>
-                       {isMobOpen && (
-                         <div className="pl-6 flex flex-col gap-2 mt-2">
-                           {items.map(t => (
-                             <Link key={t.id} to={`/${isEn ? 'en' : 'ro'}/treatments/${t.id}`} onClick={() => setIsOpen(false)} className="text-sm text-gray-600">{getSafeVal(t.title, isEn)}</Link>
-                           ))}
-                         </div>
-                       )}
-                    </div>
-                  );
-                })}
-             </div>
-             <button onClick={() => {setIsOpen(false); setIsModalOpen(true);}} className="mt-8 bg-accent text-prime font-bold py-4 rounded-xl uppercase tracking-widest">
-               {isEn ? 'Free Consultation' : 'Consultație Gratuită'}
-             </button>
-          </div>
-        </div>
       </header>
+
+      {/* Mobile Menu Panel */}
+      <div className={`fixed inset-0 top-[110px] bg-white z-[3000] transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto lg:hidden`}>
+        <div className="p-6 flex flex-col gap-4">
+           {simpleLinks.map(link => (
+             <Link key={link.path} to={link.path} onClick={() => setIsOpen(false)} className="text-xl font-bold text-prime border-b border-gray-100 pb-3">{link.name}</Link>
+           ))}
+           <div className="mt-4">
+              <p className="text-xs font-black uppercase text-gray-400 mb-4">{isEn ? 'Treatments' : 'Tratamente'}</p>
+              {[...LEFT_CATEGORIES, ...RIGHT_CATEGORIES].map(catKey => {
+                const cfg = CATEGORY_CONFIG[catKey];
+                const items = groups[catKey] || [];
+                if (!cfg || items.length === 0) return null;
+                const isMobOpen = mobileAccordion === catKey;
+                return (
+                  <div key={catKey} className="mb-2">
+                     <button onClick={() => setMobileAccordion(isMobOpen ? null : catKey)} className="w-full flex justify-between items-center py-2 text-prime font-bold">
+                        <span>{cfg.icon} {isEn ? cfg.en : cfg.ro}</span>
+                        <ChevronDown size={14} className={isMobOpen ? 'rotate-180' : ''} />
+                     </button>
+                     {isMobOpen && (
+                       <div className="pl-6 flex flex-col gap-2 mt-2">
+                         {items.map(t => (
+                           <Link key={t.id} to={`/${isEn ? 'en' : 'ro'}/treatments/${t.id}`} onClick={() => setIsOpen(false)} className="text-sm text-gray-600">{getSafeVal(t.title, isEn)}</Link>
+                         ))}
+                       </div>
+                     )}
+                  </div>
+                );
+              })}
+           </div>
+           <button onClick={() => {setIsOpen(false); setIsModalOpen(true);}} className="mt-8 bg-accent text-prime font-bold py-4 rounded-xl uppercase tracking-widest">
+             {isEn ? 'Free Consultation' : 'Consultație Gratuită'}
+           </button>
+        </div>
+      </div>
 
       <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} isEn={isEn} />
     </>
