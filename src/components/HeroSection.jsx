@@ -9,6 +9,10 @@ const HeroSection = () => {
   const location = useLocation();
   const isEn = location.pathname.startsWith('/en');
   const [heroTreatment, setHeroTreatment] = React.useState('');
+  const [heroName, setHeroName] = React.useState('');
+  const [heroPrefix, setHeroPrefix] = React.useState('+40');
+  const [heroPhone, setHeroPhone] = React.useState('');
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
 
   return (
     <section className="relative min-h-[90vh] md:min-h-screen flex items-center pt-20 overflow-hidden bg-[#0b1626]">
@@ -79,91 +83,112 @@ const HeroSection = () => {
             <div className="bg-white rounded-[2.5rem] shadow-2xl p-8 lg:p-10 border border-white/10 relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-accent"></div>
 
-              <div className="flex justify-between items-start mb-6">
-                 <h3 className="text-2xl font-serif font-bold text-prime">
-                   {isEn ? "Free Consultation" : "Consultație Gratuită"}
-                 </h3>
-                 <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-green-50 text-green-700 border border-green-100">
-                    <ShieldCheck size={14} />
-                    <span className="text-[10px] font-bold uppercase tracking-widest">Secure</span>
-                 </div>
-              </div>
-              
-              <form 
-                className="space-y-4" 
-                aria-label={isEn ? "Free Consultation Form" : "Formular Consultație Gratuită"}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  pushToDataLayer('generate_lead', { form_location: 'hero_section' });
-                  pushToDataLayer('form_submission_success', { form_location: 'hero_section' });
-                  alert(isEn ? "Thank you! We will contact you shortly." : "Mulțumim! Vă vom contacta în scurt timp.");
-                }}
-              >
-                <div>
-                  <label htmlFor="hero-name" className="block text-gray-700 text-xs font-bold uppercase tracking-wider mb-2">{isEn ? "Full Name *" : "Nume și Prenume *"}</label>
-                  <input id="hero-name" type="text" className="w-full border border-gray-200 rounded-xl px-4 py-3.5 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-accent outline-none transition-all" placeholder={isEn ? "Your full name" : "Numele tău complet"} required autoComplete="name" />
-                </div>
-
-                <div>
-                  <label htmlFor="hero-phone" className="block text-gray-700 text-xs font-bold uppercase tracking-wider mb-2">{isEn ? "Phone Number *" : "Număr Telefon *"}</label>
-                  <div className="flex gap-2">
-                    <label htmlFor="hero-phone-prefix" className="sr-only">{isEn ? "Country Code" : "Prefix Țară"}</label>
-                    <select id="hero-phone-prefix" className="border border-gray-200 rounded-xl px-3 bg-gray-50 outline-none text-sm font-bold" aria-label={isEn ? "Country Code" : "Prefix Țară"}>
-                      <option value="+40">+40</option>
-                      <option value="+44">+44</option>
-                      <option value="+90">+90</option>
-                    </select>
-                    <input id="hero-phone" type="tel" className="w-full border border-gray-200 rounded-xl px-4 py-3.5 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-accent outline-none transition-all" placeholder="7xx xxx xxx" required autoComplete="tel" />
+              {isSubmitted ? (
+                <div className="py-10 text-center animate-fade-in">
+                  <div className="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle2 size={40} className="text-green-500" />
                   </div>
-                </div>
-
-                <div>
-                  <label htmlFor="hero-treatment" className="block text-gray-700 text-xs font-bold uppercase tracking-wider mb-2">{isEn ? "Treatment *" : "Tratament *"}</label>
-                  <select
-                    id="hero-treatment"
-                    className="w-full border border-gray-200 rounded-xl px-4 py-3.5 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-accent outline-none transition-all appearance-none"
-                    required
-                    aria-required="true"
-                    value={heroTreatment}
-                    onChange={(e) => setHeroTreatment(e.target.value)}
-                  >
-                    <option value="">{isEn ? 'Select Treatment...' : 'Selectează Tratament...'}</option>
-                    <option value="gastric-sleeve">Gastric Sleeve</option>
-                    <option value="gastric-bypass">Gastric Bypass</option>
-                    <option value="gastric-balloon">Gastric Balloon</option>
-                    <option value="hair-transplant">Hair Transplant</option>
-                    <option value="dental-implants">Dental Implants</option>
-                    <option value="ivf">{isEn ? 'IVF / In-Vitro Fertilization' : 'FIV / Fertilizare In Vitro'}</option>
-                  </select>
-
-                  {/* IVF Cyprus note */}
-                  {heroTreatment === 'ivf' && (
-                    <div role="note" aria-live="polite" className="mt-2 flex items-start gap-2 px-3 py-2.5 rounded-xl bg-blue-50 border border-blue-100">
-                      <span className="text-blue-400 mt-0.5 shrink-0 text-xs" aria-hidden="true">ℹ️</span>
-                      <p className="text-[11px] italic text-blue-600 leading-relaxed">
-                        {isEn
-                          ? 'Note: Our IVF treatments are performed at our specialized branch in Northern Cyprus.'
-                          : 'Notă: Tratamentele noastre IVF sunt efectuate la sucursala noastră specializată din Ciprul de Nord.'}
-                      </p>
-                    </div>
-                  )}
-                </div>
-
-                <div className="pt-4">
-                  <button type="submit" aria-label={isEn ? "Submit consultation request" : "Trimite cererea de consultație"} className="w-full bg-prime hover:bg-[#112440] text-white font-bold py-5 rounded-xl shadow-xl transition-all hover:-translate-y-1 active:scale-95 flex justify-center items-center gap-2">
-                    {isEn ? "Get Your Quote Now" : "Obține Devizul Acum"}
+                  <h3 className="text-2xl font-serif font-bold text-prime mb-3">
+                    {isEn ? "Request Received!" : "Cerere Primită!"}
+                  </h3>
+                  <p className="text-gray-500 mb-6">
+                    {isEn 
+                      ? "Thank you! Our medical team will contact you shortly on WhatsApp." 
+                      : "Mulțumim! Echipa noastră medicală vă va contacta în scurt timp pe WhatsApp."}
+                  </p>
+                  <button onClick={() => setIsSubmitted(false)} className="text-accent font-bold text-sm hover:text-prime transition-colors">
+                    {isEn ? "Submit another request" : "Trimiteți altă cerere"}
                   </button>
                 </div>
+              ) : (
+                <>
+                  <div className="flex justify-between items-start mb-6">
+                     <h3 className="text-2xl font-serif font-bold text-prime">
+                       {isEn ? "Free Consultation" : "Consultație Gratuită"}
+                     </h3>
+                     <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-green-50 text-green-700 border border-green-100">
+                        <ShieldCheck size={14} />
+                        <span className="text-[10px] font-bold uppercase tracking-widest">Secure</span>
+                     </div>
+                  </div>
+                  
+                  <form 
+                    className="space-y-4" 
+                    aria-label={isEn ? "Free Consultation Form" : "Formular Consultație Gratuită"}
+                    onSubmit={(e) => {
+                      e.preventDefault();
+                      console.log("Lead Data:", { name: heroName, phone: heroPrefix + heroPhone, treatment: heroTreatment });
+                      pushToDataLayer('generate_lead', { form_location: 'hero_section' });
+                      pushToDataLayer('form_submission_success', { form_location: 'hero_section' });
+                      setIsSubmitted(true);
+                    }}
+                  >
+                    <div>
+                      <label htmlFor="hero-name" className="block text-gray-700 text-xs font-bold uppercase tracking-wider mb-2">{isEn ? "Full Name *" : "Nume și Prenume *"}</label>
+                      <input id="hero-name" type="text" value={heroName} onChange={(e) => setHeroName(e.target.value)} className="w-full border border-gray-200 rounded-xl px-4 py-3.5 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-accent outline-none transition-all" placeholder={isEn ? "Your full name" : "Numele tău complet"} required autoComplete="name" />
+                    </div>
 
-                <div className="flex items-center justify-center gap-4 mt-4 opacity-40" aria-hidden="true">
-                   <div className="flex items-center gap-1 text-[9px] font-bold text-gray-500 uppercase tracking-widest">
-                      <Lock size={10} /> HIPAA Compliant
-                   </div>
-                   <div className="flex items-center gap-1 text-[9px] font-bold text-gray-500 uppercase tracking-widest">
-                      <ShieldCheck size={10} /> GDPR Ready
-                   </div>
-                </div>
-              </form>
+                    <div>
+                      <label htmlFor="hero-phone" className="block text-gray-700 text-xs font-bold uppercase tracking-wider mb-2">{isEn ? "Phone Number *" : "Număr Telefon *"}</label>
+                      <div className="flex gap-2">
+                        <label htmlFor="hero-phone-prefix" className="sr-only">{isEn ? "Country Code" : "Prefix Țară"}</label>
+                        <select id="hero-phone-prefix" value={heroPrefix} onChange={(e) => setHeroPrefix(e.target.value)} className="border border-gray-200 rounded-xl px-3 bg-gray-50 outline-none text-sm font-bold" aria-label={isEn ? "Country Code" : "Prefix Țară"}>
+                          <option value="+40">+40</option>
+                          <option value="+44">+44</option>
+                          <option value="+90">+90</option>
+                        </select>
+                        <input id="hero-phone" type="tel" value={heroPhone} onChange={(e) => setHeroPhone(e.target.value)} className="w-full border border-gray-200 rounded-xl px-4 py-3.5 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-accent outline-none transition-all" placeholder="7xx xxx xxx" required autoComplete="tel" />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label htmlFor="hero-treatment" className="block text-gray-700 text-xs font-bold uppercase tracking-wider mb-2">{isEn ? "Treatment *" : "Tratament *"}</label>
+                      <select
+                        id="hero-treatment"
+                        className="w-full border border-gray-200 rounded-xl px-4 py-3.5 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-accent outline-none transition-all appearance-none"
+                        required
+                        aria-required="true"
+                        value={heroTreatment}
+                        onChange={(e) => setHeroTreatment(e.target.value)}
+                      >
+                        <option value="">{isEn ? 'Select Treatment...' : 'Selectează Tratament...'}</option>
+                        <option value="gastric-sleeve">Gastric Sleeve</option>
+                        <option value="gastric-bypass">Gastric Bypass</option>
+                        <option value="gastric-balloon">Gastric Balloon</option>
+                        <option value="hair-transplant">Hair Transplant</option>
+                        <option value="dental-implants">Dental Implants</option>
+                        <option value="ivf">{isEn ? 'IVF / In-Vitro Fertilization' : 'FIV / Fertilizare In Vitro'}</option>
+                      </select>
+
+                      {heroTreatment === 'ivf' && (
+                        <div role="note" aria-live="polite" className="mt-2 flex items-start gap-2 px-3 py-2.5 rounded-xl bg-blue-50 border border-blue-100">
+                          <span className="text-blue-400 mt-0.5 shrink-0 text-xs" aria-hidden="true">ℹ️</span>
+                          <p className="text-[11px] italic text-blue-600 leading-relaxed">
+                            {isEn
+                              ? 'Note: Our IVF treatments are performed at our specialized branch in Northern Cyprus.'
+                              : 'Notă: Tratamentele noastre IVF sunt efectuate la sucursala noastră specializată din Ciprul de Nord.'}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    <div className="pt-4">
+                      <button type="submit" aria-label={isEn ? "Submit consultation request" : "Trimite cererea de consultație"} className="w-full bg-prime hover:bg-[#112440] text-white font-bold py-5 rounded-xl shadow-xl transition-all hover:-translate-y-1 active:scale-95 flex justify-center items-center gap-2">
+                        {isEn ? "Get Your Quote Now" : "Obține Devizul Acum"}
+                      </button>
+                    </div>
+
+                    <div className="flex items-center justify-center gap-4 mt-4 opacity-40" aria-hidden="true">
+                       <div className="flex items-center gap-1 text-[9px] font-bold text-gray-500 uppercase tracking-widest">
+                          <Lock size={10} /> HIPAA Compliant
+                       </div>
+                       <div className="flex items-center gap-1 text-[9px] font-bold text-gray-500 uppercase tracking-widest">
+                          <ShieldCheck size={10} /> GDPR Ready
+                       </div>
+                    </div>
+                  </form>
+                </>
+              )}
             </div>
           </div>
         </div>

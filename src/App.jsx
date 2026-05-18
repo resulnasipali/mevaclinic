@@ -178,8 +178,14 @@ const LangSync = () => {
   return null;
 };
 
-function App() {
+// Handles scroll to top and re-initializes reveal animations on route change
+const RouteTransition = () => {
+  const { pathname } = useLocation();
+
   useEffect(() => {
+    // Scroll to top
+    window.scrollTo(0, 0);
+
     const observerOptions = {
       root: null,
       rootMargin: '0px',
@@ -194,15 +200,26 @@ function App() {
       });
     }, observerOptions);
 
-    const elements = document.querySelectorAll('.reveal');
-    elements.forEach(el => observer.observe(el));
+    // Use a small timeout to ensure DOM is fully rendered after route change
+    const timeoutId = setTimeout(() => {
+      const elements = document.querySelectorAll('.reveal');
+      elements.forEach(el => observer.observe(el));
+    }, 50);
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      clearTimeout(timeoutId);
+      observer.disconnect();
+    };
+  }, [pathname]);
 
+  return null;
+};
+
+function App() {
   return (
     <BrowserRouter>
       <LangSync />
+      <RouteTransition />
       <div className="font-sans antialiased text-gray-900 bg-white min-h-screen">
 
         <Header />

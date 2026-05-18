@@ -117,7 +117,7 @@ const AIAssistant = () => {
              </div>
            )}
 
-           <div className={`transition-all duration-700 relative p-4 md:p-8 ${step === 1 ? 'opacity-100 translate-y-0 z-10' : 'opacity-0 translate-y-12 -z-10 pointer-events-none absolute inset-0'}`}>
+           <div className={`transition-all duration-700 p-4 md:p-8 w-full ${step === 1 ? 'opacity-100 translate-y-0 z-10 relative' : 'opacity-0 translate-y-12 -z-10 pointer-events-none absolute inset-0'}`}>
               <h3 className="text-xl md:text-3xl font-serif font-bold mb-6 text-center mt-4 leading-relaxed">{isEn ? "What is your area of interest?" : "Care este aria ta de interes?"}</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 pb-8">
                 {treatmentOptions.map(opt => (

@@ -86,6 +86,51 @@ const CategoryColumn = ({ categories, groups, isEn, onClose }) => (
   </div>
 );
 
+const ROUTE_MAP = {
+  '/ro/despre-noi': '/en/about-us',
+  '/en/about-us': '/ro/despre-noi',
+  '/ro/balon-gastric': '/en/gastric-balloon',
+  '/en/gastric-balloon': '/ro/balon-gastric',
+  '/ro/implant-par': '/en/hair-transplant',
+  '/en/hair-transplant': '/ro/implant-par',
+  '/ro/implant-sprancene': '/en/eyebrow-transplant',
+  '/en/eyebrow-transplant': '/ro/implant-sprancene',
+  '/ro/oncologie': '/en/oncology',
+  '/en/oncology': '/ro/oncologie',
+  '/ro/implant-dentar': '/en/dental-implants',
+  '/en/dental-implants': '/ro/implant-dentar',
+  '/ro/chirurgie-plastica': '/en/plastic-surgery',
+  '/en/plastic-surgery': '/ro/chirurgie-plastica',
+  '/ro/politica-confidentialitate': '/en/privacy-policy',
+  '/en/privacy-policy': '/ro/politica-confidentialitate',
+  '/ro/comparatie-medicala': '/en/medical-comparison',
+  '/en/medical-comparison': '/ro/comparatie-medicala',
+  '/ro/fiv': '/en/ivf',
+  '/en/ivf': '/ro/fiv',
+  '/ro/ivf-ciprul-de-nord': '/en/ivf-northern-cyprus',
+  '/en/ivf-northern-cyprus': '/ro/ivf-ciprul-de-nord',
+  '/ro/transplant-par-mixt': '/en/mixed-hair-transplant',
+  '/en/mixed-hair-transplant': '/ro/transplant-par-mixt',
+  '/ro/transplant-par-dhi': '/en/dhi-hair-transplant',
+  '/en/dhi-hair-transplant': '/ro/transplant-par-dhi',
+};
+
+const getTranslatedPath = (currentPath, targetLang) => {
+  if (targetLang === 'en') {
+    if (currentPath === '/' || currentPath === '/ro') return '/en';
+    if (ROUTE_MAP[currentPath]) return ROUTE_MAP[currentPath];
+    if (currentPath.startsWith('/ro/')) return currentPath.replace('/ro/', '/en/');
+    return '/en';
+  } else {
+    if (currentPath === '/en') return '/ro';
+    if (ROUTE_MAP[currentPath]) return ROUTE_MAP[currentPath];
+    if (currentPath.startsWith('/en/')) return currentPath.replace('/en/', '/ro/');
+    if (currentPath === '/') return '/ro';
+    return '/ro';
+  }
+};
+
+
 const Header = () => {
   const [isOpen, setIsOpen]               = useState(false);
   const [langMenu, setLangMenu]           = useState(false);
@@ -195,8 +240,8 @@ const Header = () => {
                </button>
                {langMenu && (
                  <div className="absolute top-full right-0 mt-2 w-24 bg-white rounded-xl shadow-xl border border-gray-100 p-1 z-[2000]">
-                   <Link to={isEn ? location.pathname.replace('/en', '/ro') : location.pathname} onClick={() => setLangMenu(false)} className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">Română</Link>
-                   <Link to={!isEn ? location.pathname.replace('/ro', '/en') : location.pathname} onClick={() => setLangMenu(false)} className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">English</Link>
+                   <Link to={getTranslatedPath(location.pathname, 'ro')} onClick={() => setLangMenu(false)} className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">Română</Link>
+                   <Link to={getTranslatedPath(location.pathname, 'en')} onClick={() => setLangMenu(false)} className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">English</Link>
                  </div>
                )}
             </div>
