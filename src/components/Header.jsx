@@ -230,18 +230,22 @@ const Header = () => {
           {/* Right Actions */}
           <div className="flex items-center gap-3">
             {/* Language Switcher */}
-            <div className="relative" ref={langRef}>
+             <div className="relative" ref={langRef}>
                <button 
                  onClick={() => setLangMenu(!langMenu)}
                  className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-prime transition-colors px-3 py-2 rounded-lg bg-gray-50 border border-gray-100"
                >
-                 <Globe size={14} />
+                 <span className="text-sm leading-none" role="img" aria-label={isEn ? "English" : "Română"}>{isEn ? '🇬🇧' : '🇷🇴'}</span>
                  {isEn ? 'EN' : 'RO'}
                </button>
                {langMenu && (
-                 <div className="absolute top-full right-0 mt-2 w-24 bg-white rounded-xl shadow-xl border border-gray-100 p-1 z-[2000]">
-                   <Link to={getTranslatedPath(location.pathname, 'ro')} onClick={() => setLangMenu(false)} className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">Română</Link>
-                   <Link to={getTranslatedPath(location.pathname, 'en')} onClick={() => setLangMenu(false)} className="block px-4 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">English</Link>
+                 <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-gray-100 p-1 z-[2000]">
+                   <Link to={getTranslatedPath(location.pathname, 'ro')} onClick={() => setLangMenu(false)} className="flex items-center gap-2 px-3 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">
+                     <span className="text-base leading-none">🇷🇴</span> Română
+                   </Link>
+                   <Link to={getTranslatedPath(location.pathname, 'en')} onClick={() => setLangMenu(false)} className="flex items-center gap-2 px-3 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">
+                     <span className="text-base leading-none">🇬🇧</span> English
+                   </Link>
                  </div>
                )}
             </div>
