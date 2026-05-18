@@ -235,16 +235,16 @@ const Header = () => {
                  onClick={() => setLangMenu(!langMenu)}
                  className="flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-gray-400 hover:text-prime transition-colors px-3 py-2 rounded-lg bg-gray-50 border border-gray-100"
                >
-                 <span className="text-sm leading-none" role="img" aria-label={isEn ? "English" : "Română"}>{isEn ? '🇬🇧' : '🇷🇴'}</span>
+                 <img src={isEn ? "https://flagcdn.com/w20/gb.png" : "https://flagcdn.com/w20/ro.png"} width="16" alt={isEn ? "English" : "Română"} className="rounded-[2px] shadow-sm" />
                  {isEn ? 'EN' : 'RO'}
                </button>
                {langMenu && (
                  <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-xl shadow-xl border border-gray-100 p-1 z-[2000]">
-                   <Link to={getTranslatedPath(location.pathname, 'ro')} onClick={() => setLangMenu(false)} className="flex items-center gap-2 px-3 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">
-                     <span className="text-base leading-none">🇷🇴</span> Română
+                   <Link to={getTranslatedPath(location.pathname, 'ro')} onClick={() => setLangMenu(false)} className="flex items-center gap-2 px-3 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg text-prime">
+                     <img src="https://flagcdn.com/w20/ro.png" width="16" alt="Română" className="rounded-[2px] shadow-sm" /> Română
                    </Link>
-                   <Link to={getTranslatedPath(location.pathname, 'en')} onClick={() => setLangMenu(false)} className="flex items-center gap-2 px-3 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg">
-                     <span className="text-base leading-none">🇬🇧</span> English
+                   <Link to={getTranslatedPath(location.pathname, 'en')} onClick={() => setLangMenu(false)} className="flex items-center gap-2 px-3 py-2 text-[10px] font-bold hover:bg-gray-50 rounded-lg text-prime">
+                     <img src="https://flagcdn.com/w20/gb.png" width="16" alt="English" className="rounded-[2px] shadow-sm" /> English
                    </Link>
                  </div>
                )}
