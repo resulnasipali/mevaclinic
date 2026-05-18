@@ -134,12 +134,17 @@ const ContactForm = ({ isEn: isEnProp }) => {
                 required
               >
                  <option value="">{isEn ? "Choose an option..." : "Alege o opțiune..."}</option>
-                  <option value="oncology">{isEn ? 'Oncology' : 'Oncologie'}</option>
                   <option value="bariatric">{isEn ? 'Bariatric Surgery' : 'Chirurgie Bariatrică'}</option>
-                  <option value="hair">{isEn ? 'Hair Transplant' : 'Implant Păr'}</option>
-                  <option value="dental">{isEn ? 'Dental Implants' : 'Implanturi Dentare'}</option>
+                  <option value="hair">{isEn ? 'Hair Transplant' : 'Implant de Păr'}</option>
+                  <option value="eyebrow">{isEn ? 'Eyebrow Transplant' : 'Implant de Sprâncene'}</option>
+                  <option value="dental">{isEn ? 'Dental Care' : 'Stomatologie'}</option>
                   <option value="plastic">{isEn ? 'Plastic Surgery' : 'Chirurgie Plastică'}</option>
                   <option value="ivf">{isEn ? 'IVF / In-Vitro Fertilization' : 'FIV / Fertilizare In Vitro'}</option>
+                  <option value="organ-transplant">{isEn ? 'Organ Transplant' : 'Transplant de Organe'}</option>
+                  <option value="oncology">{isEn ? 'Oncology' : 'Oncologie'}</option>
+                  <option value="andrology">{isEn ? "Andrology & Men's Health" : 'Andrologie & Sănătate Masculină'}</option>
+                  <option value="special">{isEn ? 'Special Treatments' : 'Tratamente Specializate'}</option>
+                  <option value="other">{isEn ? 'Other' : 'Altele'}</option>
                </select>
 
                {/* IVF Cyprus note — shown only when IVF is selected */}
