@@ -36,3 +36,49 @@ export const trackPixelEvent = (eventName, data = {}) => {
     // Silently ignore
   }
 };
+
+/**
+ * Deep Telemetry: Scroll Depth Tracking
+ * Fires at 25%, 50%, 75%, 100% of page depth
+ */
+export const initScrollTracking = () => {
+  if (typeof window === 'undefined') return;
+  
+  let marks = { 25: false, 50: false, 75: false, 100: false };
+  
+  const handleScroll = () => {
+    const scrollPosition = window.scrollY + window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollPercentage = (scrollPosition / documentHeight) * 100;
+
+    [25, 50, 75, 100].forEach(mark => {
+      if (scrollPercentage >= mark && !marks[mark]) {
+        marks[mark] = true;
+        pushToDataLayer('scroll_depth', { depth: `${mark}%` });
+      }
+    });
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  return () => window.removeEventListener('scroll', handleScroll);
+};
+
+/**
+ * Deep Telemetry: Dwell Time Tracking
+ * Fires when user spends more than 60s, 180s on a page
+ */
+export const initDwellTimeTracking = () => {
+  if (typeof window === 'undefined') return;
+  
+  const timers = [];
+  
+  // High-ticket intent benchmarks
+  [60, 180, 300].forEach(seconds => {
+    const timer = setTimeout(() => {
+      pushToDataLayer('dwell_time', { duration: seconds });
+    }, seconds * 1000);
+    timers.push(timer);
+  });
+
+  return () => timers.forEach(clearTimeout);
+};

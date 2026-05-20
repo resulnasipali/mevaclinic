@@ -176,6 +176,7 @@ const TreatmentDetail = () => {
   const theProcedure = isNew ? getSafeVal(tdNew.theProcedure, isEn) : "";
   const mevaAdvantage = isNew ? getSafeVal(tdNew.mevaAdvantage, isEn) : "";
   const faqItems = isNew ? (getSafeVal(tdNew.faq, isEn) || []) : [];
+  const semanticSeoText = isNew ? getSafeVal(tdNew.semanticSeoText, isEn) : "";
 
   // Specs handling
   const newSpecs = isNew ? getSafeVal(tdNew.specs, isEn) : null;
@@ -240,6 +241,7 @@ const TreatmentDetail = () => {
         path={isEn ? `/en/${seoSlug}` : `/ro/${seoSlug}`}
         keywords={keywords}
         schemaType="MedicalProcedure"
+        semanticSeoText={semanticSeoText}
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 

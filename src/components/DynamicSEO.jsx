@@ -10,7 +10,8 @@ const DynamicSEO = ({
   schemaType = "MedicalBusiness",
   image = "https://www.mevaclinic.com/premium-clinical-image.jpg",
   keywords,
-  reviewer = null   // Optional: { name, specialty, credentials, url } from REVIEWERS constant
+  reviewer = null,  // Optional: { name, specialty, credentials, url } from REVIEWERS constant
+  semanticSeoText = ""
 }) => {
   const siteUrl = "https://www.mevaclinic.com";
   const currentUrl = `${siteUrl}${path}`;
@@ -151,6 +152,7 @@ const DynamicSEO = ({
     "name": title,
     "url": currentUrl,
     "description": description,
+    ...(semanticSeoText ? { "abstract": semanticSeoText, "text": semanticSeoText } : {}),
     "provider": medicalBusinessSchema,
     ...(reviewedByNode ? { "reviewedBy": reviewedByNode } : {})
   };

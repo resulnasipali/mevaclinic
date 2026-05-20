@@ -18,6 +18,10 @@ export const treatmentsData = [
     title: t('Gastric Sleeve (Sleeve Gastrectomy)', 'Gastric Sleeve (Micșorare Stomac)'),
     shortDesc: t('The gold standard for rapid, sustainable weight loss. Dr. Cuma utilizes 3D laparoscopy to remove 80% of the stomach, reducing hunger hormones permanently.', 'Standardul de aur pentru slăbirea rapidă. Dr. Cuma utilizează laparoscopia 3D pentru a elimina 80% din stomac.'),
     isThisForMe: t(['BMI > 35', 'Weight-related health issues', 'Ready for lifestyle change'], ['IMC > 35', 'Probleme de sănătate legate de greutate', 'Pregătit pentru schimbarea stilului de viață']),
+    semanticSeoText: t(
+      "Gastric sleeve surgery, also known as sleeve gastrectomy, is a leading bariatric procedure performed at Meva Clinic's JCI-accredited facility in Istanbul. Dr. Cuma utilizes state-of-the-art 3D laparoscopy to precisely remove approximately 80% of the stomach. This not only restricts food intake but significantly reduces the production of ghrelin, the hunger hormone. The procedure offers rapid, sustainable weight loss with a 90% success rate. Our VIP package includes 5-star hotel accommodation, Mercedes VIP transfer, and 12 months of dedicated post-operative nutritional coaching to ensure long-term success.",
+      "Operația de Gastric Sleeve (micșorarea stomacului) este o procedură bariatrică de top efectuată în clinica Meva din Istanbul, acreditată JCI. Dr. Cuma utilizează laparoscopia 3D de ultimă generație pentru a îndepărta cu precizie aproximativ 80% din stomac. Acest lucru nu doar restricționează aportul alimentar, dar reduce semnificativ producția de grelină, hormonul foamei. Procedura oferă o pierdere în greutate rapidă și durabilă, cu o rată de succes de 90%. Pachetul nostru VIP include cazare la hotel de 5 stele, transfer VIP cu Mercedes și 12 luni de coaching nutrițional dedicat."
+    ),
     theProcedure: t('Laparoscopic resection of the stomach volume.', 'Rezecția laparoscopică a volumului stomacului.'),
     mevaAdvantage: t('Triple-row electronic stapling and 12-month nutrition support.', 'Capsulare electronică pe trei rânduri și suport nutrițional 12 luni.'),
     specs: t({ hospitalStay: '2-3 Nights', hotelStay: '4 Nights', returnToWork: '10 Days', anesthesia: 'General' }, { hospitalStay: '2-3 Nopți', hotelStay: '4 Nopți', returnToWork: '10 Zile', anesthesia: 'Generală' }),
@@ -70,6 +74,10 @@ export const treatmentsData = [
     title: t('Meva Mixed Technique (Sapphire + DHI)', 'Tehnica Mixtă Meva (Sapphire + DHI)'),
     shortDesc: t('The ultimate hybrid hair restoration. Sapphire FUE for a sharp hairline and DHI for maximum crown density.', 'Restaurarea hibridă supremă. Sapphire FUE pentru linia părului și DHI pentru densitate.'),
     isThisForMe: t(['Advanced hair loss', 'Desire for maximum density', 'Natural result seekers'], ['Pierdere avansată a părului', 'Dorință de densitate maximă', 'Căutători de rezultate naturale']),
+    semanticSeoText: t(
+      "The Meva Mixed Technique represents the pinnacle of hair restoration in Turkey, combining the precision of Sapphire FUE for a natural, sharp hairline with the high-density implantation of the DHI (Direct Hair Implantation) technique using the Choi Pen. MD Harun ensures a 99% graft survival rate by minimizing scalp trauma. This painless procedure is performed under local anesthesia and guarantees natural, lifelong results. Our exclusive packages cover all logistics from airport pickup to premium aftercare kits.",
+      "Tehnica Mixtă Meva reprezintă apogeul restaurării capilare în Turcia, combinând precizia Sapphire FUE pentru o linie a părului naturală și conturată, cu implantarea de înaltă densitate a tehnicii DHI folosind stiloul Choi. MD Harun asigură o rată de supraviețuire a grefelor de 99% prin minimizarea traumei asupra scalpului. Această procedură nedureroasă garantează rezultate naturale pe viață. Pachetele noastre exclusive acoperă toată logistica, de la preluarea de la aeroport până la kituri premium de îngrijire."
+    ),
     theProcedure: t('Sapphire micro-channels combined with direct Choi Pen implantation.', 'Micro-canale Sapphire combinate cu implantare directă cu stiloul Choi.'),
     mevaAdvantage: t('99% graft survival and 12-month growth guarantee.', 'Supraviețuire a grefelor de 99% și garanție de creștere 12 luni.'),
     specs: t({ hospitalStay: 'None', hotelStay: '3 Nights', returnToWork: '3 Days', anesthesia: 'Pain-Free Local' }, { hospitalStay: 'Fără', hotelStay: '3 Nopți', returnToWork: '3 Zile', anesthesia: 'Locală fără durere' }),
@@ -122,6 +130,10 @@ export const treatmentsData = [
     title: t('Zirconium Veneers & Crowns', 'Coroane și Fațete Zirconiu'),
     shortDesc: t('Highly durable and aesthetic metal-free restorations. Perfect light reflection for a natural look.', 'Restaurări fără metal, durabile și estetice. Reflexie perfectă a luminii.'),
     isThisForMe: t(['Discolored teeth', 'Chipped or broken teeth', 'Aesthetic improvement'], ['Dinți pătați', 'Dinți ciobiți sau rupți', 'Îmbunătățire estetică']),
+    semanticSeoText: t(
+      "Zirconium veneers and crowns at Meva Clinic provide an exceptional, highly durable, and aesthetic metal-free dental restoration. Utilizing advanced CAD/CAM digital design technology, Dr. Yusuf creates precision-milled crowns that perfectly mimic the light reflection and translucency of natural teeth. Zirconium is bio-compatible, ensuring excellent gum health without the dark lines associated with traditional metal-based crowns. Experience a flawless Hollywood smile with our comprehensive Turkey dental packages.",
+      "Fațetele și coroanele din zirconiu la Meva Clinic oferă o restaurare dentară estetică, fără metal și extrem de durabilă. Utilizând tehnologia avansată de design digital CAD/CAM, Dr. Yusuf creează coroane frezate cu precizie care imită perfect reflexia luminii dinților naturali. Zirconiul este biocompatibil, asigurând o sănătate excelentă a gingiilor, fără liniile închise asociate coroanelor tradiționale. Obține un zâmbet Hollywood impecabil cu pachetele noastre dentare complete din Turcia."
+    ),
     theProcedure: t('CAD/CAM digital design and precision milling.', 'Design digital CAD/CAM și frezare de precizie.'),
     mevaAdvantage: t('Bio-compatible material that protects gum health.', 'Material biocompatibil care protejează sănătatea gingiilor.'),
     specs: t({ hospitalStay: 'None', hotelStay: '5 Nights', returnToWork: 'Next Day', anesthesia: 'Local' }, { hospitalStay: 'Fără', hotelStay: '5 Nopți', returnToWork: 'A doua zi', anesthesia: 'Locală' }),

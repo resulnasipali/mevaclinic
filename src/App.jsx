@@ -1,5 +1,6 @@
 import React, { useEffect, Suspense, lazy } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { initScrollTracking, initDwellTimeTracking } from './utils/AnalyticsUtils'
 import Header from './components/Header'
 import HeroSection from './components/HeroSection'
 import TrustBadges from './components/TrustBadges'
@@ -221,11 +222,29 @@ const RouteTransition = () => {
   return null;
 };
 
+// Mounts deep telemetry tracking on every route change
+const DeepTelemetry = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const cleanupScroll = initScrollTracking();
+    const cleanupDwell = initDwellTimeTracking();
+    
+    return () => {
+      if (cleanupScroll) cleanupScroll();
+      if (cleanupDwell) cleanupDwell();
+    };
+  }, [pathname]);
+
+  return null;
+};
+
 function App() {
   return (
     <BrowserRouter>
       <LangSync />
       <RouteTransition />
+      <DeepTelemetry />
       <div className="font-sans antialiased text-gray-900 bg-white min-h-screen">
 
         <Header />
