@@ -198,7 +198,7 @@ const Footer = () => {
                 { ro: '/ro/quiz', en: '/en/quiz', labelEn: 'Suitability Quiz', labelRo: 'Test de Eligibilitate' },
                 { ro: '/ro/despre-noi', en: '/en/about-us', labelEn: 'Our Board', labelRo: 'Consiliul Medical' },
                 { ro: '/ro/comparatie-medicala', en: '/en/medical-comparison', labelEn: 'Compare Clinics', labelRo: 'Comparație Clinici' },
-                { ro: '/ro/romani-istanbul', en: '/ro/romani-istanbul', labelEn: 'Romania Hub', labelRo: 'Hub România' },
+                { ro: '/ro/romani-istanbul', en: '/en/contact', labelEn: 'Romanian Patients', labelRo: 'Hub România' },
               ].map((item) => (
                 <li key={item.labelEn}>
                   <Link to={isEn ? item.en : item.ro} className="text-gray-400 hover:text-white flex items-center transition-colors">

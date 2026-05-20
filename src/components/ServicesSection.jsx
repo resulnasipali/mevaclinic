@@ -42,7 +42,7 @@ const ServicesSection = () => {
           {treatments.map((t) => (
             <Link 
               key={t.id} 
-              to={isEn ? `/en/${t.slug_en}` : `/ro/${t.slug_ro}`}
+              to={isEn ? `/en/packages/${t.slug_en}` : `/ro/pachete/${t.slug_ro}`}
               className="bg-white rounded-3xl shadow-[0_4px_25px_rgb(0,0,0,0.06)] border border-gray-100 p-8 transition-all duration-300 transform group hover:-translate-y-2 hover:shadow-2xl flex flex-col hover:border-prime/20"
               onClick={() => trackClick(t.id)}
             >

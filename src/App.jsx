@@ -12,6 +12,7 @@ import DynamicSEO from './components/DynamicSEO'
 import ServicesSection from './components/ServicesSection'
 import SafetyQualitySection from './components/SafetyQualitySection'
 import TestimonialsGrid from './components/TestimonialsGrid'
+import PremiumTreatmentSlider from './components/PremiumTreatmentSlider'
 import CookieBanner from './components/CookieBanner'
 import AIAssistant from './components/AIAssistant'
 import FloatingTrustBadge from './components/FloatingTrustBadge'
@@ -36,6 +37,7 @@ const ComparisonHub = lazy(() => import('./pages/ComparisonHub'));
 const TreatmentDetail = lazy(() => import('./pages/TreatmentDetail'));
 const Bariatric = lazy(() => import('./pages/Bariatric'));
 const HairTransplant = lazy(() => import('./pages/HairTransplant'));
+const PackagePage = lazy(() => import('./pages/PackagePage'));
 
 const LoadingFallback = () => (
   <div className="min-h-screen bg-[#0b1626] flex items-center justify-center">
@@ -110,6 +112,10 @@ const HomePage = ({ lang = 'ro' }) => {
             </div>
             <SuitabilityQuiz isEn={isEn} procedure="Meva Clinic" />
          </div>
+      </div>
+
+      <div className="reveal">
+        <PremiumTreatmentSlider />
       </div>
 
       <div className="reveal">
@@ -260,6 +266,7 @@ function App() {
                <Route path="/ro/transplant-par-mixt" element={<TreatmentDetail />} />
                <Route path="/ro/transplant-par-dhi" element={<TreatmentDetail />} />
                <Route path="/ro/eyebrow-transplant" element={<TreatmentDetail />} />
+               <Route path="/ro/pachete/:slug" element={<PackagePage />} />
                <Route path="/ro/:slug" element={<TreatmentPage />} />
     
                {/* EN routes — specific before wildcard */}
@@ -287,6 +294,7 @@ function App() {
                <Route path="/en/treatments/:slug" element={<TreatmentDetail />} />
                <Route path="/en/mixed-hair-transplant" element={<TreatmentDetail />} />
                <Route path="/en/dhi-hair-transplant" element={<TreatmentDetail />} />
+               <Route path="/en/packages/:slug" element={<PackagePage />} />
                <Route path="/en/:slug" element={<TreatmentPage />} />
                
                <Route path="/concierge" element={<ConciergePage />} />

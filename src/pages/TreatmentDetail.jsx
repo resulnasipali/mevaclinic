@@ -64,16 +64,63 @@ const AccordionItem = ({ question, answer }) => {
   );
 };
 
+// ─── Slug alias map ─────────────────────────────────────────────────────────
+// Maps RO locale slugs / legacy slugs → canonical treatmentsData.js id
+const SLUG_ALIASES = {
+  // RO bariatric
+  'balon-gastric':          'gastric-balloon',
+  'gastric-balon':          'gastric-balloon',
+  // RO dental
+  'implant-dentar':         'dental-implants',
+  'implanturi-dentare':     'dental-implants',
+  // RO hair
+  'implant-par':            'meva-mixed-hair',
+  'transplant-par':         'meva-mixed-hair',
+  'hair-transplant':        'meva-mixed-hair',
+  'transplant-par-mixt':    'meva-mixed-hair',
+  'transplant-par-dhi':     'dhi-hair-transplant',
+  // RO eyebrow
+  'implant-sprancene':      'eyebrow-transplant',
+  'eyebrow-transplant':     'eyebrow-transplant',
+  // Legacy dental
+  'dental':                 'dental-implants',
+  // RO plastic
+  'chirurgie-plastica':     'piezo-rhinoplasty',
+  // RO oncology
+  'oncologie':              'smart-oncology-drugs',
+  'oncology':               'smart-oncology-drugs',
+  // RO andrology
+  'andrologie':             'ligamentolysis-andrology',
+  'andrology':              'ligamentolysis-andrology',
+  // RO IVF
+  'fiv':                    'ivf-cyprus-special',
+  'ivf':                    'ivf-cyprus-special',
+  'ivf-cyprus':             'ivf-cyprus-special',
+  'ivf-ciprul-de-nord':     'ivf-cyprus-special',
+  'ivf-northern-cyprus':    'ivf-cyprus-special',
+  'ivf-icsi-pgd':           'ivf-cyprus-special',
+  // Organ transplant
+  'transplant-organe':      'organ-transplant-turkey',
+  // Premium Slider Aliases
+  'mommy-makeover':         'mommy-makeover-full',
+  'liposuction-360':        'vaser-liposuction',
+  'bbl':                    'brazilian-butt-lift-bbl',
+  'breast-implants':        'breast-augmentation'
+};
+
 // ─── Component ───────────────────────────────────────────────────────────────
 const TreatmentDetail = () => {
   const { slug } = useParams();
   const location = useLocation();
   const isEn = location.pathname.startsWith('/en');
 
-  // 1. Try new canonical treatmentsData.js first
+  // Resolve alias → canonical id
+  const resolvedSlug = SLUG_ALIASES[slug] || slug;
+
+  // 1. Try new canonical treatmentsData.js first (with alias resolution)
   // 2. Fall back to legacy treatmentDetails.json
-  const tdNew  = findTreatment(slug);
-  const tdLeg  = !tdNew ? treatmentData.find(t => t.slug === slug) : null;
+  const tdNew  = findTreatment(resolvedSlug);
+  const tdLeg  = !tdNew ? (treatmentData.find(t => t.slug === resolvedSlug) || treatmentData.find(t => t.slug === slug)) : null;
   const treatment = tdNew || tdLeg;
 
   useEffect(() => {
