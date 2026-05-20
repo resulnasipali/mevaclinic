@@ -96,7 +96,8 @@ const FloatingWhatsApp = () => {
           {isEn ? "Talk to us" : "WhatsApp"}
         </button>
         <a 
-          href="#ai-assistant"
+          href="tel:+905324675941"
+          onClick={() => pushToDataLayer('phone_click', { location: 'sticky_bar' })}
           aria-label={isEn ? "Get a price quote" : "Obține o cotație de preț"}
           className="flex-1 bg-prime text-white py-3.5 rounded-xl font-bold flex items-center justify-center text-sm shadow-md"
         >

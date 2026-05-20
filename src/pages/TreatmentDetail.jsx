@@ -28,19 +28,22 @@ import { PxTrack } from '../utils/pixel';
 import { pushToDataLayer } from '../utils/AnalyticsUtils';
 
 // ─── Reviewer image fallback ─────────────────────────────────────────────────
-const DoctorAvatar = ({ name, image }) => (
-  <img
-    src={image}
-    alt={`${name} — Meva Clinic`}
-    width={64} height={64}
-    loading="lazy"
-    onError={e => {
-      e.currentTarget.onerror = null;
-      e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=64&background=0b1626&color=d4af37&bold=true&format=svg`;
-    }}
-    className="w-16 h-16 rounded-2xl object-cover border-2 border-accent/30 shadow-lg"
-  />
-);
+const DoctorAvatar = ({ name, image }) => {
+  const avatarUrl = image || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=64&background=0b1626&color=d4af37&bold=true&format=svg`;
+  return (
+    <img
+      src={avatarUrl}
+      alt={`${name} — Meva Clinic`}
+      width={64} height={64}
+      loading="lazy"
+      onError={e => {
+        e.currentTarget.onerror = null;
+        e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=64&background=0b1626&color=d4af37&bold=true&format=svg`;
+      }}
+      className="w-16 h-16 rounded-2xl object-cover border-2 border-accent/30 shadow-lg"
+    />
+  );
+};
 
 const AccordionItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = React.useState(false);

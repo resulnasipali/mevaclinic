@@ -15,7 +15,7 @@ export const REVIEWERS = {
     education: 'Istanbul University, Cerrahpaşa Faculty of Medicine (1976)',
     institution: 'Haseki Training and Research Hospital',
     cases: '10,000+',
-    image: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=200',
+    image: '',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
     url: 'https://www.mevaclinic.com/en/about-us',
@@ -31,7 +31,7 @@ export const REVIEWERS = {
     credentialsRo: 'MD · Universitatea din Istanbul (2011) · Peste 12.000 de Proceduri',
     education: 'Istanbul University, Faculty of Medicine (2011)',
     cases: '12,000+',
-    image: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=200',
+    image: '',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
     url: 'https://www.mevaclinic.com/en/about-us',
@@ -45,7 +45,7 @@ export const REVIEWERS = {
     bioRo: 'Doctor în Oncologie Radioterapeutică cu peste 15 ani de experiență clinică. Specialist certificat ESTRO care operează sistemul CyberKnife S7 Synchrony pentru ablația non-invazivă a tumorilor.',
     credentials: 'MD, PhD · ESTRO Certified · 15+ Years Experience',
     credentialsRo: 'MD, PhD · Certificat ESTRO · 15+ ani experiență',
-    image: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=200',
+    image: '',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
     url: 'https://www.mevaclinic.com/en/about-us',
@@ -59,7 +59,7 @@ export const REVIEWERS = {
     bioRo: 'Membră ITI și implantolog certificat Straumann cu peste 8.000 de implanturi plasate. Pionier al designului digital al zâmbetului full-arch la Meva Clinic.',
     credentials: 'DDS, PhD · ITI Fellow · Straumann Certified',
     credentialsRo: 'DDS, PhD · Membră ITI · Certificată Straumann',
-    image: 'https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=200',
+    image: '',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
     url: 'https://www.mevaclinic.com/en/about-us',
@@ -73,7 +73,7 @@ export const REVIEWERS = {
     bioRo: 'Membru ISAPS și specialist în lifting facial Deep Plane. Cunoscut pentru tehnicile de întinerire pe vector vertical care oferă rezultate naturale și durabile.',
     credentials: 'MD · ISAPS Member · Deep Plane Specialist',
     credentialsRo: 'MD · Membru ISAPS · Specialist Deep Plane',
-    image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&q=80&w=200',
+    image: '',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
     url: 'https://www.mevaclinic.com/en/about-us',
@@ -87,7 +87,7 @@ export const REVIEWERS = {
     bioRo: 'Membru TTS și chirurg de transplant certificat conform Protocolului JCI cu experiență vastă în transplant renal, hepatic și alotransplant de țesuturi compozite.',
     credentials: 'MD, PhD · TTS Member · JCI Protocol Certified',
     credentialsRo: 'MD, PhD · Membru TTS · Protocol JCI Certificat',
-    image: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=200',
+    image: '',
     reviewedLabel: 'Medically Reviewed by',
     reviewedLabelRo: 'Verificat Medical de',
     url: 'https://www.mevaclinic.com/en/about-us',
@@ -118,7 +118,7 @@ const MedicalReviewer = ({ reviewer, isEn = false }) => {
         {/* Doctor photo */}
         <div className="relative shrink-0">
           <img
-            src={reviewer.image}
+            src={reviewer.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=80&background=0b1626&color=d4af37&bold=true&format=svg`}
             alt={`${name} — Meva Clinic Medical Specialist`}
             width="80"
             height="80"

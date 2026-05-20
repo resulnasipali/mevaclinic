@@ -195,7 +195,7 @@ const Header = () => {
             ))}
             
             <div className="relative" ref={treatmentsRef} onMouseEnter={() => setTreatmentsMenu(true)} onMouseLeave={() => setTreatmentsMenu(false)}>
-              <button className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors py-2">
+              <button onClick={() => setTreatmentsMenu(!treatmentsMenu)} className="flex items-center gap-1 text-xs font-bold uppercase tracking-widest text-prime hover:text-accent transition-colors py-2">
                 {isEn ? 'Treatments' : 'Tratamente'}
                 <ChevronDown size={14} className={`transition-transform duration-300 ${treatmentsMenu ? 'rotate-180' : ''}`} />
               </button>

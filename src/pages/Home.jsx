@@ -8,6 +8,7 @@ import PremiumPackageSection from '../components/PremiumPackageSection';
 import PatientJourneyTimeline from '../components/PatientJourneyTimeline';
 import FAQSection from '../components/FAQSection';
 import DynamicSEO from '../components/DynamicSEO';
+import ComparisonSection from '../components/ComparisonSection';
 
 const Home = ({ lang = 'ro' }) => {
   const isEn = lang === 'en';
@@ -30,6 +31,7 @@ const Home = ({ lang = 'ro' }) => {
       <SafetyQualitySection />
       <PremiumPackageSection />
       <HumanTrust />
+      <ComparisonSection />
       <PatientJourneyTimeline />
       <FAQSection />
     </>
