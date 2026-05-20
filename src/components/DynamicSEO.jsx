@@ -50,12 +50,12 @@ const DynamicSEO = ({
 
   const medicalBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": ["MedicalBusiness", "HealthAndBeautyBusiness", "LocalBusiness"],
+    "@type": ["MedicalBusiness", "HealthAndBeautyBusiness", "LocalBusiness", "MedicalClinic"],
     "name": "Meva Clinic",
     "url": siteUrl,
     "logo": `${siteUrl}/logo.png`,
     "image": image,
-    "description": "Premium medical tourism clinic in Istanbul, Turkey. Specializing in Bariatric Surgery, Hair Transplant, Oncology (CyberKnife), Dental Implants, Plastic Surgery and Organ Transplant.",
+    "description": "Premium JCI-accredited medical tourism clinic in Istanbul, Turkey. Specializing in Bariatric Surgery, Hair Transplant, Oncology (CyberKnife), Dental Implants, Plastic Surgery and Organ Transplant with 5-star VIP concierge.",
     "telephone": "+905324675941",
     "email": "info@mevaclinic.com",
     "address": {
@@ -197,10 +197,14 @@ const DynamicSEO = ({
       <meta name="author" content="Meva Clinic" />
       <link rel="canonical" href={currentUrl} />
 
-      {/* Hreflang for bilingual SEO */}
-      <link rel="alternate" hrefLang="ro" href={`${siteUrl}${roPath}`} />
+      {/* Advanced Hreflang for Bilingual SEO */}
+      <link rel="alternate" hrefLang="ro-RO" href={`${siteUrl}${roPath}`} />
+      <link rel="alternate" hrefLang="ro-MD" href={`${siteUrl}${roPath}`} />
+      <link rel="alternate" hrefLang="en-GB" href={`${siteUrl}${enPath}`} />
+      <link rel="alternate" hrefLang="en-US" href={`${siteUrl}${enPath}`} />
       <link rel="alternate" hrefLang="en" href={`${siteUrl}${enPath}`} />
-      <link rel="alternate" hrefLang="x-default" href={`${siteUrl}/ro`} />
+      <link rel="alternate" hrefLang="ro" href={`${siteUrl}${roPath}`} />
+      <link rel="alternate" hrefLang="x-default" href={`${siteUrl}/en`} />
 
       {/* Open Graph */}
       <meta property="og:title" content={title} />

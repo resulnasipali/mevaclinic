@@ -151,9 +151,18 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false }) => {
               >
                  {isEn ? "Activate VIP Evaluation" : "Activează Evaluarea VIP"} <Send size={18} />
               </button>
-              <p className="text-[10px] text-center text-gray-400 mt-4 uppercase tracking-[0.2em] font-bold">
-                 <ShieldCheck size={12} className="inline mr-1 text-accent" /> SSL Secured & GDPR Compliant
-              </p>
+              <div className="flex flex-col items-center justify-center gap-2 mt-5 border-t border-gray-50 pt-4">
+                 <p className="text-[9px] text-center text-gray-400 uppercase tracking-[0.15em] font-bold">
+                    <ShieldCheck size={12} className="inline mr-1 text-accent" /> SSL Secured & GDPR Compliant
+                 </p>
+                 <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime">
+                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {isEn ? 'JCI Accredited' : 'Acreditat JCI'}</span>
+                   <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {isEn ? 'VIP Concierge' : 'Concierge VIP'}</span>
+                   <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {isEn ? '€0 Consultation' : 'Consultanță €0'}</span>
+                 </div>
+              </div>
             </form>
           )}
 

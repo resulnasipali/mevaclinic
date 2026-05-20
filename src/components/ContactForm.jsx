@@ -185,12 +185,21 @@ const ContactForm = ({ isEn: isEnProp }) => {
              {isEn ? "Send Secure Message" : "Trimite Mesaj Securizat"} <CheckCircle2 size={20} />
           </button>
 
-          <div className="flex items-center justify-center gap-6 opacity-60">
-             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-600">
-                <ShieldCheck size={14} /> HIPAA Compliant
+          <div className="flex flex-col items-center justify-center gap-3 mt-4 border-t border-gray-50 pt-5">
+             <div className="flex items-center justify-center gap-6 opacity-60">
+                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-600">
+                   <ShieldCheck size={14} /> HIPAA Compliant
+                </div>
+                <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-600">
+                   <Globe size={14} /> Worldwide Service
+                </div>
              </div>
-             <div className="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-gray-600">
-                <Globe size={14} /> Worldwide Service
+             <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime mt-2">
+               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {isEn ? 'JCI Accredited' : 'Acreditat JCI'}</span>
+               <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {isEn ? 'VIP Concierge' : 'Concierge VIP'}</span>
+               <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {isEn ? '€0 Consultation' : 'Consultanță €0'}</span>
              </div>
           </div>
         </form>
