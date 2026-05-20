@@ -1,6 +1,6 @@
 // src/components/Header.jsx
 import React, { useState, useEffect, useRef } from 'react';
-import { Globe, ChevronDown, ShieldCheck, Phone, ArrowRight, Menu, X, Activity } from 'lucide-react';
+import { Globe, ChevronDown, ShieldCheck, Phone, ArrowRight, Menu, X, Activity, Sparkles, Scissors, HeartPulse, Stethoscope, Star } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import AppointmentModal from './AppointmentModal';
 import TopBar from './TopBar';
@@ -8,12 +8,12 @@ import { treatmentsData } from '../data/treatmentsData';
 
 // ── Category configuration ─────────────────────────────────────────────────────
 const CATEGORY_CONFIG = {
-  'bariatric':    { icon: '⚕️',  en: 'Bariatric Surgery',         ro: 'Chirurgie Bariatrică' },
-  'hair':         { icon: '💇',  en: 'Hair & Brow Transplant',    ro: 'Păr & Sprâncene' },
-  'dental':       { icon: '🦷',  en: 'Dental Care',               ro: 'Stomatologie' },
-  'plastic':      { icon: '✂️',  en: 'Plastic Surgery',          ro: 'Chirurgie Plastică' },
-  'andrology':    { icon: '👨‍⚕️', en: "Andrology & Men's Health", ro: 'Andrologie & Sănătate Masculină' },
-  'specialist':   { icon: '🔬',  en: 'Specialist Treatments',    ro: 'Tratamente Specializate' },
+  'bariatric':    { icon: Activity,    en: 'Bariatric Surgery',         ro: 'Chirurgie Bariatrică' },
+  'hair':         { icon: Sparkles,    en: 'Hair & Brow Transplant',    ro: 'Păr & Sprâncene' },
+  'dental':       { icon: Star,        en: 'Dental Care',               ro: 'Stomatologie' },
+  'plastic':      { icon: Scissors,    en: 'Plastic Surgery',          ro: 'Chirurgie Plastică' },
+  'andrology':    { icon: HeartPulse,  en: "Andrology & Men's Health", ro: 'Andrologie & Sănătate Masculină' },
+  'specialist':   { icon: Stethoscope, en: 'Specialist Treatments',    ro: 'Tratamente Specializate' },
 };
 
 const LEFT_CATEGORIES  = ['bariatric', 'hair', 'dental'];
@@ -38,24 +38,27 @@ const groupByCategory = () => {
 
 // ── CategoryColumn sub-component ───────────────────────────────────────────────
 const CategoryColumn = ({ categories, groups, isEn, onClose }) => (
-  <div className="flex flex-col gap-6">
+  <div className="flex flex-col gap-8">
     {categories.map((catKey) => {
       const cfg = CATEGORY_CONFIG[catKey];
       const items = groups[catKey] || [];
       if (!cfg || items.length === 0) return null;
 
+      const Icon = cfg.icon;
       const isHighDensity = catKey === 'plastic' || catKey === 'andrology';
 
       return (
-        <div key={catKey} className={`rounded-2xl transition-all ${isHighDensity ? "bg-accent/5 -mx-2 p-3 border border-accent/10" : ""}`}>
-          <div className="flex items-center gap-2 mb-2 px-1">
-            <span className="text-base" role="img" aria-hidden="true">{cfg.icon}</span>
-            <p className={`text-[10px] font-black uppercase tracking-[0.15em] ${isHighDensity ? 'text-accent' : 'text-gray-400'}`}>
+        <div key={catKey} className={`rounded-3xl transition-all ${isHighDensity ? "bg-gradient-to-br from-accent/5 to-transparent -mx-4 p-5 border border-accent/10 shadow-sm" : "px-2"}`}>
+          <div className="flex items-center gap-3 mb-4">
+            <div className={`w-8 h-8 rounded-xl flex items-center justify-center shadow-sm ${isHighDensity ? 'bg-accent/20 text-accent' : 'bg-gray-100 text-gray-500'}`}>
+               <Icon size={16} strokeWidth={2.5} />
+            </div>
+            <p className={`text-[11px] font-black uppercase tracking-[0.2em] ${isHighDensity ? 'text-accent' : 'text-prime'}`}>
               {isEn ? cfg.en : cfg.ro}
             </p>
           </div>
 
-          <div className={`grid ${isHighDensity ? 'grid-cols-2 gap-x-3 gap-y-0.5' : 'flex flex-col gap-0.5'}`}>
+          <div className={`grid ${isHighDensity ? 'grid-cols-2 gap-x-4 gap-y-2' : 'flex flex-col gap-1.5'}`}>
             {items.map((treatment) => {
               const title = getSafeVal(treatment.title, isEn);
               const expertStr = getSafeVal(treatment.expert, isEn) || (isEn ? 'Meva Specialist' : 'Specialist Meva');
@@ -65,15 +68,15 @@ const CategoryColumn = ({ categories, groups, isEn, onClose }) => (
                   key={treatment.id}
                   to={`/${isEn ? 'en' : 'ro'}/treatments/${treatment.id}`}
                   onClick={onClose}
-                  className="group flex flex-col gap-0 px-2 py-1.5 rounded-lg hover:bg-white/60 hover:shadow-sm transition-all"
+                  className="group flex flex-col gap-1 px-3 py-2.5 rounded-xl hover:bg-white hover:shadow-[0_4px_15px_rgba(0,0,0,0.05)] border border-transparent hover:border-gray-100 transition-all duration-300 relative overflow-hidden"
                 >
-                  <div className="flex items-center gap-1.5">
-                    <span className="w-1 h-1 rounded-full bg-accent/30 group-hover:bg-accent transition-colors shrink-0" />
-                    <span className="text-[10px] font-bold text-prime group-hover:text-accent transition-colors leading-tight">
+                  <div className="absolute left-0 top-0 w-1 h-full bg-accent transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 rounded-l-xl"></div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-xs font-bold text-gray-700 group-hover:text-prime transition-colors leading-tight">
                       {title}
                     </span>
                   </div>
-                  <span className="pl-2.5 text-[8px] text-gray-400 font-medium uppercase tracking-tighter opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap overflow-hidden text-ellipsis">
+                  <span className="text-[9px] text-gray-400 font-bold uppercase tracking-[0.1em] group-hover:text-accent transition-colors">
                     {expertStr}
                   </span>
                 </Link>
@@ -201,19 +204,41 @@ const Header = () => {
               </button>
               
               {treatmentsMenu && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[850px]">
-                  <div className="bg-white rounded-[2.5rem] shadow-[0_30px_100px_rgba(0,0,0,0.15)] border border-gray-100 overflow-hidden grid grid-cols-2 p-8 gap-8 max-h-[85vh] overflow-y-auto custom-scrollbar">
-                    <div className="border-r border-gray-50 pr-8">
-                      <p className="text-[10px] font-black uppercase tracking-widest text-gray-300 mb-6 px-1">
-                        {isEn ? 'Clinical Specialties' : 'Specialități Clinice'}
-                      </p>
-                      <CategoryColumn categories={LEFT_CATEGORIES} groups={groups} isEn={isEn} onClose={closeMegaMenu} />
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 w-[950px]">
+                  <div className="bg-white rounded-[2.5rem] shadow-[0_40px_100px_rgba(0,0,0,0.12)] border border-gray-100 overflow-hidden flex flex-col max-h-[85vh]">
+                    <div className="grid grid-cols-2 p-8 gap-10 overflow-y-auto custom-scrollbar">
+                      <div className="border-r border-gray-100 pr-10">
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mb-6 flex items-center gap-2">
+                          <span className="w-4 h-px bg-gray-200"></span>
+                          {isEn ? 'Clinical Specialties' : 'Specialități Clinice'}
+                        </p>
+                        <CategoryColumn categories={LEFT_CATEGORIES} groups={groups} isEn={isEn} onClose={closeMegaMenu} />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-300 mb-6 flex items-center gap-2">
+                          <span className="w-4 h-px bg-gray-200"></span>
+                          {isEn ? 'Surgical & Specialist' : 'Chirurgie & Specialiști'}
+                        </p>
+                        <CategoryColumn categories={RIGHT_CATEGORIES} groups={groups} isEn={isEn} onClose={closeMegaMenu} />
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-[10px] font-black uppercase tracking-widest text-gray-300 mb-6 px-1">
-                        {isEn ? 'Surgical & Specialist' : 'Chirurgie & Specialiști'}
-                      </p>
-                      <CategoryColumn categories={RIGHT_CATEGORIES} groups={groups} isEn={isEn} onClose={closeMegaMenu} />
+                    
+                    {/* High-Intent SEO Footer Area */}
+                    <div className="bg-gray-50 p-6 px-10 border-t border-gray-100 flex items-center justify-between shrink-0">
+                       <div className="flex-1 pr-12">
+                         <p className="text-[10px] font-black text-prime uppercase tracking-widest mb-2 flex items-center gap-2">
+                            <ShieldCheck size={14} className="text-accent" />
+                            {isEn ? 'Meva Clinic Excellence' : 'Excelența Meva Clinic'}
+                         </p>
+                         <p className="text-xs text-gray-500 leading-relaxed font-medium">
+                           {isEn 
+                             ? 'As a JCI-accredited premium medical facility in Istanbul, Turkey, we specialize in high-end bariatric, plastic surgery, and elite dental reconstructions. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a no-hidden-fees guarantee.'
+                             : 'Ca unitate medicală premium acreditată JCI în Istanbul, Turcia, suntem specializați în chirurgie bariatrică, chirurgie plastică de top și reconstrucții dentare de elită. Procedurile includ transfer VIP, cazare 5 stele pe Bosfor și concierge dedicat, fără costuri ascunse.'}
+                         </p>
+                       </div>
+                       <Link to={isEn ? '/en/contact' : '/ro/contact'} onClick={closeMegaMenu} className="shrink-0 bg-prime text-white px-8 py-3.5 rounded-2xl text-xs font-bold uppercase tracking-widest hover:bg-accent hover:text-prime transition-all shadow-xl shadow-prime/20 hover:-translate-y-0.5">
+                          {isEn ? 'Book Consultation' : 'Programează Consult'}
+                       </Link>
                     </div>
                   </div>
                 </div>
@@ -277,9 +302,12 @@ const Header = () => {
                 const isMobOpen = mobileAccordion === catKey;
                 return (
                   <div key={catKey} className="mb-2">
-                     <button onClick={() => setMobileAccordion(isMobOpen ? null : catKey)} className="w-full flex justify-between items-center py-2 text-prime font-bold">
-                        <span>{cfg.icon} {isEn ? cfg.en : cfg.ro}</span>
-                        <ChevronDown size={14} className={isMobOpen ? 'rotate-180' : ''} />
+                     <button onClick={() => setMobileAccordion(isMobOpen ? null : catKey)} className="w-full flex justify-between items-center py-3 text-prime font-bold border-b border-gray-50">
+                        <span className="flex items-center gap-3">
+                           {React.createElement(cfg.icon, { size: 16, className: "text-accent" })} 
+                           {isEn ? cfg.en : cfg.ro}
+                        </span>
+                        <ChevronDown size={14} className={`transition-transform ${isMobOpen ? 'rotate-180 text-accent' : 'text-gray-400'}`} />
                      </button>
                      {isMobOpen && (
                        <div className="pl-6 flex flex-col gap-2 mt-2">
