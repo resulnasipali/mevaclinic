@@ -1,12 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MessageCircle, X, ChevronRight, Phone } from 'lucide-react';
 import { useLocation } from 'react-router-dom';
 import { pushToDataLayer } from '../utils/AnalyticsUtils';
 
 const FloatingWhatsApp = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const location = useLocation();
   const isEn = location.pathname.startsWith('/en');
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 3500);
+
+    const handleScroll = () => {
+      setIsVisible(true);
+      window.removeEventListener('scroll', handleScroll);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  if (!isVisible) return null;
 
   const getWhatsAppMessage = () => {
     let message = isEn ? "Hello, I would like more information." : "Buna ziua, as dori mai multe informatii.";
