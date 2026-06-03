@@ -230,11 +230,12 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
           </div>
 
           {/* Col 4 — Contact (LocalBusiness schema-compliant) */}
-          <div className="space-y-6" itemScope itemType="https://schema.org/LocalBusiness">
+          <div itemScope itemType="https://schema.org/LocalBusiness">
             <meta itemProp="name" content="Meva Clinic" />
             <meta itemProp="telephone" content="+905324675941" />
             <meta itemProp="email" content="info@mevaclinic.com" />
-            <h3 
+            <div className="space-y-6">
+              <h3 
               onClick={() => toggleSection('contact')}
               className="text-lg font-serif font-bold text-white border-b border-white/10 pb-4 flex items-center justify-between cursor-pointer md:cursor-default"
             >
@@ -303,6 +304,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
             </ul>
           </div>
         </div>
+      </div>
 
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-sans gap-4">
           <p>© {new Date().getFullYear()} Meva Clinic Medical Tourism. {tUI('All rights reserved.', lang)}</p>
