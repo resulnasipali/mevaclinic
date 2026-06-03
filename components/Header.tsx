@@ -12,6 +12,7 @@ import TopBar from './TopBar';
 import { treatmentsData } from '../data/treatmentsData';
 import { tUI } from '@/utils/uiTranslations';
 import { MevaLogo } from './MevaLogo';
+import { maskDoctorName } from '@/utils/doctorUtils';
 
 // ── Category configuration ─────────────────────────────────────────────────────
 const CATEGORY_CONFIG = {
@@ -81,7 +82,7 @@ const CategoryColumn = ({
           <div className={`grid ${isHighDensity ? 'grid-cols-2 gap-x-4 gap-y-2' : 'flex flex-col gap-1.5'}`}>
             {items.map((treatment: any) => {
               const title = getSafeVal(treatment.title, lang);
-              const expertStr = getSafeVal(treatment.expert, lang) || tUI('Meva Specialist', lang);
+              const expertStr = maskDoctorName(getSafeVal(treatment.expert, lang) || tUI('Meva Specialist', lang));
 
               return (
                 <Link

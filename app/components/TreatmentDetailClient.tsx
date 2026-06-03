@@ -14,6 +14,7 @@ import ProcedureGallery from '@/components/ProcedureGallery';
 import { getWhatsAppLink } from '@/utils/getWhatsAppLink';
 import { TreatmentImage } from '@/utils/getTreatmentImages';
 import { tUI } from '@/utils/uiTranslations';
+import { maskDoctorName } from '@/utils/doctorUtils';
 
 interface TreatmentClientProps {
   treatment: any;
@@ -46,13 +47,34 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string 
 export default function TreatmentDetailClient({ treatment, lang, images = [] }: TreatmentClientProps) {
   const isEn = lang === 'en';
 
-  const getSafeVal = (val: any, locale: string) => {
+  const getSafeVal = (val: any, locale: string): any => {
     if (!val) return '';
-    if (Array.isArray(val)) return val; 
-    if (typeof val === 'object') {
-      return val[locale] || val['en'] || Object.values(val)[0] || '';
+    if (Array.isArray(val)) {
+      return val.map(item => {
+        if (typeof item === 'string') {
+          return maskDoctorName(item);
+        }
+        if (item && typeof item === 'object') {
+          const newItem = { ...item };
+          for (const key in newItem) {
+            if (typeof newItem[key] === 'string') {
+              newItem[key] = maskDoctorName(newItem[key]);
+            } else if (newItem[key] && typeof newItem[key] === 'object') {
+              newItem[key] = getSafeVal(newItem[key], locale);
+            }
+          }
+          return newItem;
+        }
+        return item;
+      });
     }
-    return val;
+    let res = '';
+    if (typeof val === 'object') {
+      res = val[locale] || val['en'] || Object.values(val)[0] || '';
+    } else {
+      res = val;
+    }
+    return typeof res === 'string' ? maskDoctorName(res) : res;
   };
 
   const title = getSafeVal(treatment.title, lang);

@@ -2,7 +2,7 @@ export const treatmentRules = {
   doctors: [
     {
       id: "dr-harun",
-      name: "MD Harun",
+      name: "MD Harun A.",
       specialty: "Hair Restoration",
       successRate: "98.5%",
       experience: "15+ Years",
@@ -10,7 +10,7 @@ export const treatmentRules = {
         hair_transplant: {
           firstWash: "Day 2",
           restPeriod: "3 Days",
-          reason: "Dr. Harun's Sapphire protocol requires early micro-circulation check to ensure graft survival."
+          reason: "MD Harun A.'s Sapphire protocol requires early micro-circulation check to ensure graft survival."
         }
       }
     },
