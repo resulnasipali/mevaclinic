@@ -1,0 +1,50 @@
+{
+  "Navigation": {
+    "home": "Accueil", "treatments": "Traitements", "about": "À Propos", "faq": "FAQ", "contact": "Contact",
+    "consultation": "Consultation", "freeConsultation": "Consultation Gratuite", "bookConsultation": "Réserver une Consultation",
+    "clinicalSpecialties": "Spécialités Cliniques", "surgicalSpecialist": "Chirurgical & Spécialiste",
+    "mevaExcellence": "Excellence Meva Clinic",
+    "jciDesc": "En tant qu'établissement médical premium accrédité JCI à Istanbul, Turquie, nous sommes spécialisés en chirurgie bariatrique, plastique et reconstructions dentaires d'élite. Tous les soins incluent des transferts VIP, un hébergement 5 étoiles sur le Bosphore et un service de conciergerie dédié."
+  },
+  "Hero": {
+    "title": "Bienvenue à Meva Clinic", "subtitle": "Tourisme Médical Premium à Istanbul",
+    "badge": "Excellence Médicale à Istanbul",
+    "headline": "Transformez votre vie avec Meva Clinic – ", "headlineAccent": "Expertise de Haut Niveau", "headlineSuffix": " en Chirurgie Bariatrique.",
+    "subtext": "Forfaits all-inclusive premium à Istanbul : Sleeve Gastrique et Bypass avec des spécialistes de renommée internationale.",
+    "bullet1": "Transfert VIP Inclus", "bullet2": "Hébergement 5 Étoiles", "bullet3": "Établissement Accrédité JCI", "bullet4": "Support Natif (EN/FR)",
+    "formTitle": "Consultation Gratuite", "secure": "Sécurisé",
+    "labelName": "Nom Complet", "placeholderName": "Votre nom complet",
+    "labelPhone": "Numéro de Téléphone", "labelTreatment": "Traitement",
+    "selectTreatment": "Sélectionner un traitement...",
+    "bariatric": "Chirurgie Bariatrique", "hair": "Greffe de Cheveux", "dental": "Dentisterie", "plastic": "Chirurgie Plastique", "aesthetics": "Esthétique Médicale",
+    "submit": "Obtenir Mon Devis Maintenant",
+    "successTitle": "Demande Reçue !", "successMsg": "Merci ! Notre équipe médicale vous contactera bientôt sur WhatsApp.", "anotherRequest": "Soumettre une autre demande"
+  },
+  "Stats": {
+    "badge": "Données Cliniques 2025-2026", "heading": "L'Autorité en Chiffres",
+    "subtext": "Résultats cliniques validés et indicateurs de confiance internationaux reflétant notre engagement envers l'excellence chirurgicale.",
+    "successRate": "Taux de Réussite", "internationalPatients": "Patients Internationaux", "countriesServed": "Pays Desservis", "safetyAccuracy": "Précision de Sécurité"
+  },
+  "Footer": {
+    "globalSupport": "Support Mondial aux Patients", "heartOfIstanbul": "Le Cœur Médical d'Istanbul",
+    "partnerDesc": "Nos partenariats stratégiques garantissent un accès VIP depuis l'atterrissage jusqu'aux procédures au sein du réseau Acibadem et des hôtels 5 étoiles.",
+    "whatsappCta": "Je souhaite une consultation médicale gratuite.", "istanbulExcellence": "Excellence Istanbul",
+    "brandDesc": "Votre partenaire de confiance pour l'excellence médicale en Turquie. Forfaits VIP premium pour des interventions sûres et un confort absolu.",
+    "medicalExcellence": "Excellence Médicale", "patientIntelligence": "Intelligence Patient", "contactUs": "Contactez-nous",
+    "address": "Clinique Partenaire Acibadem, Altunizade", "turkey": "Turquie",
+    "hours": "Lun–Sam · 09:00 – 18:00", "whatsapp24": "Support WhatsApp 24/7",
+    "allRights": "Tous droits réservés.", "privacy": "Politique de Confidentialité", "cookies": "Politique de Cookies", "terms": "Conditions",
+    "accreditations": "Accréditations & Certifications Officielles", "contactWhatsapp": "Je souhaite une consultation gratuite.",
+    "messageWhatsapp": "Envoyez-nous un message sur WhatsApp", "contactMevaWhatsapp": "Contacter Meva Clinic sur WhatsApp", "sitemap": "Pied de Page"
+  },
+  "Safety": {
+    "jciBadge": "Accréditation JCI & Sécurité", "heading": "Nous Ne Faisons Aucun Compromis Sur Votre Vie.",
+    "subtext": "Meva Clinic opère selon les normes de sécurité internationales et européennes les plus strictes. Soins irréprochables, chirurgiens expérimentés et technologie du XXIe siècle.",
+    "faqHeading": "Questions Fréquentes", "boardHeading": "Conseil Médical Meva", "viewDoctors": "Voir tous les médecins",
+    "playInterview": "Lire l'Interview Vidéo", "bariatricSpecialty": "Chirurgien Bariatrique", "dentalSpecialty": "Esthétique Dentaire",
+    "erdemBio": "Plus de 15 ans d'expérience en chirurgies complexes Sleeve Gastrique et Bypass. Membre titulaire de l'IFSO Europe.",
+    "turanBio": "Expert en Hollywood Smile, implantologie et esthétique de reconstruction 3D. Plus de 8 000 implants réalisés avec succès.",
+    "erdemAccred": "Accréditation Internationale", "turanAccred": "Membre Européen EACMFS",
+    "interviewErdem": "Interview Vidéo Dr. Erdem", "interviewTuran": "L'Expertise du Dr. Turan", "internationalPatients": "Patients Internationaux"
+  }
+}

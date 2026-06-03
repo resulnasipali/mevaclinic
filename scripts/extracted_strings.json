@@ -1,0 +1,572 @@
+[
+  {
+    "en": "en",
+    "ro": "ro",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Meva Specialist",
+    "ro": "Specialist Meva",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "en",
+    "ro": "ro",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "/en",
+    "ro": "/ro",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "/en/about-us",
+    "ro": "/ro/about-us",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "/en/blog",
+    "ro": "/ro/blog",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "/en/contact",
+    "ro": "/ro/contact",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "/en",
+    "ro": "/",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Treatments",
+    "ro": "Tratamente",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Clinical Specialties",
+    "ro": "Specialități Clinice",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Surgical & Specialist",
+    "ro": "Chirurgie & Specialiști",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Meva Clinic Excellence",
+    "ro": "Excelența Meva Clinic",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "As a JCI-accredited premium medical facility in Istanbul, Turkey, we specialize in high-end bariatric, plastic surgery, and elite dental reconstructions. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a no-hidden-fees guarantee.",
+    "ro": "Ca unitate medicală premium acreditată JCI în Istanbul, Turcia, suntem specializați în chirurgie bariatrică, chirurgie plastică de top și reconstrucții dentare de elită. Procedurile includ transfer VIP, cazare 5 stele pe Bosfor și concierge dedicat, fără costuri ascunse.",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "/en/contact",
+    "ro": "/ro/contact",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Book Consultation",
+    "ro": "Programează Consult",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "https://flagcdn.com/w20/gb.png",
+    "ro": "https://flagcdn.com/w20/ro.png",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "English",
+    "ro": "Română",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "EN",
+    "ro": "RO",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Consultation",
+    "ro": "Consultație",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Treatments",
+    "ro": "Tratamente",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "en",
+    "ro": "ro",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Free Consultation",
+    "ro": "Consultație Gratuită",
+    "file": "../components/Header.tsx"
+  },
+  {
+    "en": "Medical Excellence in Istanbul",
+    "ro": "Excelență Medicală în Istanbul",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Transform your life with Meva Clinic – ",
+    "ro": "Transformă-ți viața cu Meva Clinic – ",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Top Expertise",
+    "ro": "Expertiză de Top",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": " in Bariatric Surgery.",
+    "ro": " în Chirurgia Bariatrică.",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Premium all-inclusive packages in Istanbul: Gastric Sleeve and Bypass with internationally renowned specialists.",
+    "ro": "Pachete premium all-inclusive în Istanbul: Gastric Sleeve și Bypass cu specialiști de renume internațional.",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "VIP Transfer Included",
+    "ro": "Transfer VIP Inclus",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "5-Star Accommodation",
+    "ro": "Cazare 5 Stele",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "JCI Accredited Facility",
+    "ro": "Facilitate Acreditată JCI",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Native Support (EN/RO)",
+    "ro": "Asistență Nativă (EN/RO)",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Request Received!",
+    "ro": "Cerere Primită!",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Thank you! Our medical team will contact you shortly on WhatsApp.",
+    "ro": "Mulțumim! Echipa noastră medicală vă va contacta în scurt timp pe WhatsApp.",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Submit another request",
+    "ro": "Trimiteți altă cerere",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Free Consultation",
+    "ro": "Consultație Gratuită",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Full Name",
+    "ro": "Nume și Prenume",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Your full name",
+    "ro": "Numele tău complet",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Phone Number",
+    "ro": "Număr Telefon",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Treatment",
+    "ro": "Tratament",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Select Treatment...",
+    "ro": "Selectează Tratament...",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Bariatric Surgery",
+    "ro": "Chirurgie Bariatrică",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Hair Transplant",
+    "ro": "Implant de Păr",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "Get Your Quote Now",
+    "ro": "Obține Devizul Acum",
+    "file": "../components/HeroSection.tsx"
+  },
+  {
+    "en": "The Meva Experience",
+    "ro": "Experiența Meva",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "Your Journey, ",
+    "ro": "Călătoria Ta, ",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "Step by Step",
+    "ro": "Pas cu Pas",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "From your first message to your full recovery — every detail is managed with precision and luxury by our dedicated team.",
+    "ro": "De la primul mesaj până la recuperarea completă — fiecare detaliu este gestionat cu precizie și lux de echipa noastră dedicată.",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "Next step",
+    "ro": "Pasul următor",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "VIP Logistics",
+    "ro": "Logistică VIP",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "Comfort from the moment you land.",
+    "ro": "Confort din momentul aterizării.",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "Hello, I want to know more about the VIP all-inclusive package.",
+    "ro": "Buna ziua, doresc informatii despre pachetul VIP all-inclusive.",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "Request VIP Package Details",
+    "ro": "Solicită Detalii Pachet VIP",
+    "file": "../components/PatientJourney.tsx"
+  },
+  {
+    "en": "/ro",
+    "ro": "/en",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Site Footer",
+    "ro": "Subsol Site",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "The Medical Heart of Istanbul",
+    "ro": "Inima Medicală a Istanbulului",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Our strategic partnerships guarantee VIP access from landing to the procedures within the Acibadem network and 5-star hotels.",
+    "ro": "Parteneriatele noastre strategice garantează accesul VIP de la aterizare până la procedurile din rețeaua Acibadem și hotelurile de 5 stele.",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "I would like a free medical consultation.",
+    "ro": "Doresc o consultație medicală gratuită.",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Contact Meva Clinic on WhatsApp",
+    "ro": "Contactați Meva Clinic pe WhatsApp",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "/en",
+    "ro": "/ro",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and absolute comfort.",
+    "ro": "Partenerul tău de încredere pentru excelență medicală în Turcia. Pachete premium VIP pentru intervenții sigure și confort absolut.",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Facebook",
+    "ro": "Facebook",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "bg-accent text-prime",
+    "ro": "text-gray-400 hover:text-white border border-white/10",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "bg-accent text-prime",
+    "ro": "text-gray-400 hover:text-white border border-white/10",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Medical Excellence",
+    "ro": "Excelență Medicală",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Patient Intelligence",
+    "ro": "Inteligență Pacient",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Contact Us",
+    "ro": "Contactează-ne",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Acibadem Partner Clinic, Altunizade",
+    "ro": "Clinica Partneră Acibadem, Altunizade",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Turkey",
+    "ro": "Turcia",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "I would like a free consultation.",
+    "ro": "Doresc o consultație gratuită.",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Message us on WhatsApp",
+    "ro": "Trimiteți-ne un mesaj pe WhatsApp",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Mon–Sat · 09:00 – 18:00",
+    "ro": "Lun–Sâm · 09:00 – 18:00",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "24/7 WhatsApp Support",
+    "ro": "Suport WhatsApp 24/7",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "All rights reserved.",
+    "ro": "Toate drepturile rezervate.",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "/en/privacy-policy",
+    "ro": "/ro/privacy-policy",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Privacy Policy",
+    "ro": "Politică de Confidențialitate",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "/en/privacy-policy",
+    "ro": "/ro/privacy-policy",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Cookie Policy",
+    "ro": "Politică Cookie",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "/en/privacy-policy",
+    "ro": "/ro/privacy-policy",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Terms",
+    "ro": "Termeni",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "Accreditations & Official Certifications",
+    "ro": "Acreditări & Certificări Oficiale",
+    "file": "../components/Footer.tsx"
+  },
+  {
+    "en": "en",
+    "ro": "ro",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "1-2 Nights",
+    "ro": "1-2 Nopți",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "3-5 Nights",
+    "ro": "3-5 Nopți",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "7-10 Days",
+    "ro": "7-10 Zile",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "General/Local",
+    "ro": "Generală/Locală",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.",
+    "ro": "Abordarea noastră clinică prioritizează conservarea țesuturilor și rezultatele naturale pe termen lung, asigurându-vă că transformarea este atât sigură, cât și superioară din punct de vedere estetic.",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Chief Medical Officer",
+    "ro": "Director Medical",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Return to Home Page",
+    "ro": "Întoarce-te la Prima Pagină",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Clinical Lead",
+    "ro": "Coordonator Clinic",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Meva Clinic · Istanbul",
+    "ro": "Meva Clinic · Istanbul",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Free Consultation",
+    "ro": "Consultație Gratuită",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "How It Works",
+    "ro": "Cum Funcționează",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Doctor's Clinical Insight",
+    "ro": "Perspectivă Clinică a Medicului",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "About This Procedure",
+    "ro": "Despre Această Procedură",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Why Choose Meva Clinic for ${(title || \"Meva\").split(' ')[0]}?",
+    "ro": "De ce Meva Clinic pentru ${(title || \"Meva\").split(' ')[0]}?",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Is This Treatment for Me?",
+    "ro": "Este Acest Tratament pentru Mine?",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Premium VIP Package Inclusions",
+    "ro": "Includeri Pachet VIP Premium",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "The Clinical Procedure",
+    "ro": "Procedura Clinică",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Recovery & Transformation Journey",
+    "ro": "Călătoria de Recuperare și Transformare",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "The Meva Advantage",
+    "ro": "Avantajul Meva Clinic",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Safety Rate",
+    "ro": "Rată Siguranță",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Years Exp.",
+    "ro": "Ani Exp.",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Care Standard",
+    "ro": "Standard Îngrijire",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Frequently Asked Questions",
+    "ro": "Întrebări Frecvente",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Procedure Details",
+    "ro": "Detalii Procedură",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Hospital Stay",
+    "ro": "Spitalizare",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Hotel Package",
+    "ro": "Pachet Hotel",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Return to Work",
+    "ro": "Revenire la Muncă",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Anaesthesia",
+    "ro": "Anestezie",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Get Free Quote on WhatsApp",
+    "ro": "Obțineți Ofertă Gratuită pe WhatsApp",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Incredible Transformation",
+    "ro": "Transformare Incredibilă",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Loss of 45kg in 12 months with Gastric Sleeve",
+    "ro": "Pierdere de 45kg în 12 luni cu Gastric Sleeve",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "Hairline Restoration",
+    "ro": "Restaurarea Liniei Părului",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  },
+  {
+    "en": "4000 Grafts DHI Technique",
+    "ro": "4000 Grefe Tehnica DHI",
+    "file": "../app/components/TreatmentDetailClient.tsx"
+  }
+]

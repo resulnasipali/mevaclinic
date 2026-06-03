@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base ─────────────────────────────────────────────────────────────────── */
+body {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* ─── Marquee animation ─────────────────────────────────────────────────────── */
+@keyframes marquee-social {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee-social 50s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ─── Scrollbar utility ─────────────────────────────────────────────────────── */
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ─── Reveal animation ──────────────────────────────────────────────────────── 
+   CRITICAL FIX: Elements default to VISIBLE.
+   The .reveal-animate class opts-in to the fade-up behaviour.
+   JS adds .reveal-animate--hidden on mount, then removes it when in-viewport.
+   This guarantees content is never permanently invisible if JS fails or the
+   IntersectionObserver is not supported.
+────────────────────────────────────────────────────────────────────────────── */
+.reveal {
+  /* SAFE DEFAULT: always visible — no longer opacity:0 */
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+/* Only hidden when JS has confirmed IntersectionObserver support */
+.reveal.js-reveal-hidden {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+/* Animate in when visible class is added by the observer */
+.reveal.js-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Page-level hero animations ─────────────────────────────────────────────── */
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease forwards;
+}
+
+/* ─── Loading skeleton shimmer ─────────────────────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.skeleton-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.04) 0%,
+    rgba(255,255,255,0.09) 50%,
+    rgba(255,255,255,0.04) 100%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+/* ─── Custom scrollbar for mega-menu ───────────────────────────────────────── */
+.custom-scrollbar::-webkit-scrollbar { width: 4px; }
+.custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.1);
+  border-radius: 2px;
+}

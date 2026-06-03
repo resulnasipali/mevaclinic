@@ -1,37 +1,36 @@
-# Meva Clinic - Luxury Medical Tourism Platform
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A high-performance, SEO-driven SPA built for a premium medical tourism clinic operating out of Istanbul, Turkey. Engineered for maximum organic traffic capture, localized landing pages, and automated lead generation.
+## Getting Started
 
-## 🚀 Built With
+First, run the development server:
 
-* **Framework:** React 19 + Vite
-* **Styling:** Tailwind CSS (Custom Royal Blue & Gold theme)
-* **Routing:** React Router v7 (Dynamic Page Generation)
-* **SEO:** React Helmet Async (Automated Schema.org JSON-LD generation)
-* **Tracking:** Direct Meta Pixel (CAPI) Integration wrapped in GDPR logics
-* **Icons:** Lucide React
-
-## 💎 Core Features
-
-1. **AI Diagnostic Assistant:** A multi-step form utilizing a state-machine architecture that predicts patient eligibility and extracts highly-qualified leads via **EmailJS**.
-2. **SEO Blog Engine:** Dynamic `/ro/blog/:slug` generator built to parse HTML payloads and automatically construct deep-linked 'Table of Contents' modules. E-E-A-T Badges included.
-3. **Automated Conversion Anchors:** High-intent 'Bariatric' and 'Dental' dedicated landing pages featuring fixed sticky sidebars and embedded BMI calculators.
-4. **Vercel Ready:** SPA fallback completely mapped in `vercel.json`.
-
-## ⚙️ Local Development
-
-1. Clone or download the repository.
-2. Run `npm install` to grab the dependencies.
-3. Add your `EmailJS` credentials into `src/components/AIAssistant.jsx`.
-4. Run `npm run dev` to launch the lightning-fast Vite server on localhost:5173.
-
-To compile for production:
 ```bash
-npm run build
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## 📈 Lead Architecture
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Leads are primarily captured in two ways:
-- **Direct API:** The `HeroSection` bypasses server logic and can be tied into Webhooks.
-- **Progressive Profiling:** Evaluated organically using `BmiCalculator` (which triggers Meta 'BMI_Calculated' pixel) and ultimately funnels the patient to `/ro/despre-noi` or the WhatsApp quick-actions.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

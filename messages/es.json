@@ -1,0 +1,50 @@
+{
+  "Navigation": {
+    "home": "Inicio", "treatments": "Tratamientos", "about": "Sobre Nosotros", "faq": "FAQ", "contact": "Contacto",
+    "consultation": "Consulta", "freeConsultation": "Consulta Gratuita", "bookConsultation": "Reservar Consulta",
+    "clinicalSpecialties": "Especialidades Clínicas", "surgicalSpecialist": "Quirúrgico y Especialista",
+    "mevaExcellence": "Excelencia Meva Clinic",
+    "jciDesc": "Como instalación médica premium acreditada por JCI en Estambul, Turquía, nos especializamos en cirugía bariátrica, plástica y reconstrucciones dentales de élite. Todos los procedimientos incluyen traslados VIP, alojamiento de 5 estrellas en el Bósforo y servicio de conserjería dedicado."
+  },
+  "Hero": {
+    "title": "Bienvenido a Meva Clinic", "subtitle": "Turismo Médico Premium en Estambul",
+    "badge": "Excelencia Médica en Estambul",
+    "headline": "Transforma tu vida con Meva Clinic – ", "headlineAccent": "Experiencia de Alto Nivel", "headlineSuffix": " en Cirugía Bariátrica.",
+    "subtext": "Paquetes all-inclusive premium en Estambul: Manga Gástrica y Bypass con especialistas de renombre internacional.",
+    "bullet1": "Traslado VIP Incluido", "bullet2": "Alojamiento 5 Estrellas", "bullet3": "Instalación Acreditada JCI", "bullet4": "Soporte Nativo (EN/ES)",
+    "formTitle": "Consulta Gratuita", "secure": "Seguro",
+    "labelName": "Nombre Completo", "placeholderName": "Tu nombre completo",
+    "labelPhone": "Número de Teléfono", "labelTreatment": "Tratamiento",
+    "selectTreatment": "Seleccionar Tratamiento...",
+    "bariatric": "Cirugía Bariátrica", "hair": "Trasplante Capilar", "dental": "Odontología", "plastic": "Cirugía Plástica", "aesthetics": "Estética Médica",
+    "submit": "Obtener Mi Presupuesto Ahora",
+    "successTitle": "¡Solicitud Recibida!", "successMsg": "¡Gracias! Nuestro equipo médico te contactará pronto por WhatsApp.", "anotherRequest": "Enviar otra solicitud"
+  },
+  "Stats": {
+    "badge": "Datos Clínicos 2025-2026", "heading": "Autoridad en Números",
+    "subtext": "Resultados clínicos validados e indicadores de confianza internacionales que reflejan nuestro compromiso con la excelencia quirúrgica.",
+    "successRate": "Tasa de Éxito", "internationalPatients": "Pacientes Internacionales", "countriesServed": "Países Atendidos", "safetyAccuracy": "Precisión de Seguridad"
+  },
+  "Footer": {
+    "globalSupport": "Soporte Global al Paciente", "heartOfIstanbul": "El Corazón Médico de Estambul",
+    "partnerDesc": "Nuestras alianzas estratégicas garantizan acceso VIP desde el aterrizaje hasta los procedimientos dentro de la red Acibadem y hoteles de 5 estrellas.",
+    "whatsappCta": "Me gustaría una consulta médica gratuita.", "istanbulExcellence": "Excelencia Estambul",
+    "brandDesc": "Tu socio de confianza para la excelencia médica en Turquía. Paquetes VIP premium para intervenciones seguras y confort absoluto.",
+    "medicalExcellence": "Excelencia Médica", "patientIntelligence": "Inteligencia del Paciente", "contactUs": "Contáctenos",
+    "address": "Clínica Asociada Acibadem, Altunizade", "turkey": "Turquía",
+    "hours": "Lun–Sáb · 09:00 – 18:00", "whatsapp24": "Soporte WhatsApp 24/7",
+    "allRights": "Todos los derechos reservados.", "privacy": "Política de Privacidad", "cookies": "Política de Cookies", "terms": "Términos",
+    "accreditations": "Acreditaciones y Certificaciones Oficiales", "contactWhatsapp": "Me gustaría una consulta gratuita.",
+    "messageWhatsapp": "Envíanos un mensaje por WhatsApp", "contactMevaWhatsapp": "Contactar Meva Clinic por WhatsApp", "sitemap": "Pie de Página"
+  },
+  "Safety": {
+    "jciBadge": "Acreditación JCI y Seguridad", "heading": "No Hacemos Compromisos Con Tu Vida.",
+    "subtext": "Meva Clinic opera bajo los estándares de seguridad internacionales y europeos más estrictos. Atención impecable, cirujanos experimentados y tecnología del siglo XXI.",
+    "faqHeading": "Preguntas Frecuentes", "boardHeading": "Junta Médica Meva", "viewDoctors": "Ver todos los médicos",
+    "playInterview": "Reproducir Entrevista en Video", "bariatricSpecialty": "Cirujano Bariátrico", "dentalSpecialty": "Estética Dental",
+    "erdemBio": "Más de 15 años de experiencia en cirugías complejas de Manga Gástrica y Bypass. Miembro titular de IFSO Europe.",
+    "turanBio": "Experto en Hollywood Smile, implantología y estética de reconstrucción 3D. Más de 8.000 implantes realizados con éxito.",
+    "erdemAccred": "Acreditación Internacional", "turanAccred": "Miembro Europeo EACMFS",
+    "interviewErdem": "Entrevista en Video Dr. Erdem", "interviewTuran": "Experiencia del Dr. Turan", "internationalPatients": "Pacientes Internacionales"
+  }
+}

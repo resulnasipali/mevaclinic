@@ -1,0 +1,28 @@
+# Exclude specific local utility scripts (do NOT ignore next.config.ts)
+/fixRO.ts
+/fixROLong.ts
+/translateDatabase.ts
+/translateUI.ts
+/find_large_files.js
+/find_large_files.py
+/check_references.js
+/check_fetches.js
+/check_puppeteer.js
+/extract_logo.js
+/find_folders.py
+/search.ps1
+/strategy_report.md
+/vitesearch.txt
+/meva-clinic-deploy.zip
+
+# Exclude temp folders
+/_temp_files/
+
+# Exclude all unused MP4 videos (since they are not referenced in the code and are too large)
+**/*.mp4
+
+# Default next.js/vercel ignores
+node_modules/
+.next/
+out/
+.vercel/

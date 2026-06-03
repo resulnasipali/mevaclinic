@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1779473021845",
+    "date": "2026-05-22T18:03:41.845Z",
+    "name": "Resul Nasipali",
+    "phone": "+90 555 555 5555",
+    "email": "resulnasipali@gmail.com",
+    "treatment": "general",
+    "message": "Bu bir CRM baglanti testidir.",
+    "metrics": "",
+    "medicalCondition": "",
+    "source": "SystemTest",
+    "status": "New"
+  },
+  {
+    "id": "1779468908281",
+    "date": "2026-05-22T16:55:08.281Z",
+    "name": "Elena Dumitrescu",
+    "phone": "+40 712 345 678",
+    "email": "elena@example.ro",
+    "treatment": "ivf",
+    "message": "I am interested in IVF at your Cyprus clinic. We have been trying for 2 years.",
+    "metrics": "",
+    "medicalCondition": "",
+    "source": "ContactForm",
+    "status": "New"
+  }
+]

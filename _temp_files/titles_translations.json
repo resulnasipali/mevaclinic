@@ -1,0 +1,261 @@
+{
+  "Gastric Sleeve (Sleeve Gastrectomy)": {
+    "es": "Manga Gástrica",
+    "it": "Sleeve Gastrectomy",
+    "ru": "Рукавная резекция желудка",
+    "fr": "Sleeve Gastrectomie",
+    "de": "Schlauchmagen-OP"
+  },
+  "Gastric Bypass (Metabolic Surgery)": {
+    "es": "Bypass Gástrico",
+    "it": "Bypass Gastrico",
+    "ru": "Шунтирование желудка",
+    "fr": "Bypass Gastrique",
+    "de": "Magenbypass"
+  },
+  "Gastric Balloon (Allurion)": {
+    "es": "Balón Gástrico (Allurion)",
+    "it": "Palloncino Gastrico (Allurion)",
+    "ru": "Желудочный баллон (Allurion)",
+    "fr": "Ballon Gastrique (Allurion)",
+    "de": "Magenballon (Allurion)"
+  },
+  "Gastric Botox Injection": {
+    "es": "Botox Gástrico",
+    "it": "Botox Gastrico",
+    "ru": "Инъекции ботокса в желудок",
+    "fr": "Botox Gastrique",
+    "de": "Magen-Botox"
+  },
+  "Meva Mixed Technique (Sapphire + DHI)": {
+    "es": "Técnica Mixta Meva (Zafiro + DHI)",
+    "it": "Tecnica Mista Meva (Zaffiro + DHI)",
+    "ru": "Смешанная техника Meva (Сапфир + DHI)",
+    "fr": "Technique Mixte Meva (Saphir + DHI)",
+    "de": "Meva Mixed Technik (Saphir + DHI)"
+  },
+  "DHI (Direct Hair Implantation)": {
+    "es": "DHI (Implantación Directa de Cabello)",
+    "it": "DHI (Impianto Diretto dei Capelli)",
+    "ru": "DHI (Прямая имплантация волос)",
+    "fr": "DHI (Implantation Directe de Cheveux)",
+    "de": "DHI (Direkte Haarimplantation)"
+  },
+  "Eyebrow Transplant (Meva Secret)": {
+    "es": "Trasplante de Cejas (Meva Secret)",
+    "it": "Trapianto di Sopracciglia (Meva Secret)",
+    "ru": "Пересадка бровей (Секрет Meva)",
+    "fr": "Greffe de Sourcils (Secret Meva)",
+    "de": "Augenbrauentransplantation (Meva Secret)"
+  },
+  "Premium Dental Implants": {
+    "es": "Implantes Dentales Premium",
+    "it": "Impianti Dentali Premium",
+    "ru": "Премиальные зубные имплантаты",
+    "fr": "Implants Dentaires Premium",
+    "de": "Premium Zahnimplantate"
+  },
+  "Zirconium Veneers & Crowns": {
+    "es": "Carillas y Coronas de Circonio",
+    "it": "Faccette e Corone in Zirconio",
+    "ru": "Циркониевые виниры и коронки",
+    "fr": "Facettes et Couronnes en Zirconium",
+    "de": "Zirkonium-Veneers & Kronen"
+  },
+  "Hollywood Smile Design": {
+    "es": "Diseño de Sonrisa de Hollywood",
+    "it": "Design del Sorriso Hollywood",
+    "ru": "Дизайн голливудской улыбки",
+    "fr": "Design de Sourire Hollywoodien",
+    "de": "Hollywood Smile Design"
+  },
+  "All-on-4 / All-on-6 Restoration": {
+    "es": "Restauración All-on-4 / All-on-6",
+    "it": "Restauro All-on-4 / All-on-6",
+    "ru": "Восстановление All-on-4 / All-on-6",
+    "fr": "Restauration All-on-4 / All-on-6",
+    "de": "All-on-4 / All-on-6 Restauration"
+  },
+  "Piezo Ultrasonic Rhinoplasty": {
+    "es": "Rinoplastia Ultrasónica Piezo",
+    "it": "Rinoplastica Ultrasonica Piezo",
+    "ru": "Ультразвуковая ринопластика Piezo",
+    "fr": "Rhinoplastie Ultrasonique Piezo",
+    "de": "Piezo-Ultraschall-Nasenkorrektur"
+  },
+  "Vaser Liposuction (High-Def)": {
+    "es": "Liposucción Vaser (Alta Definición)",
+    "it": "Liposuzione Vaser (High-Def)",
+    "ru": "Vaser-липосакция (Высокая четкость)",
+    "fr": "Liposuccion Vaser (Haute Définition)",
+    "de": "Vaser-Fettabsaugung (High-Def)"
+  },
+  "Breast Augmentation (Implants)": {
+    "es": "Aumento de Senos (Implantes)",
+    "it": "Aumento del Seno (Impianti)",
+    "ru": "Увеличение груди (Имплантаты)",
+    "fr": "Augmentation Mammaire (Implants)",
+    "de": "Brustvergrößerung (Implantate)"
+  },
+  "Abdominoplasty (Tummy Tuck)": {
+    "es": "Abdominoplastia",
+    "it": "Addominoplastica",
+    "ru": "Абдоминопластика",
+    "fr": "Abdominoplastie",
+    "de": "Bauchstraffung (Abdominoplastik)"
+  },
+  "BBL (Brazilian Butt Lift)": {
+    "es": "BBL (Lifting de Glúteos Brasileño)",
+    "it": "BBL (Lifting dei Glutei Brasiliano)",
+    "ru": "BBL (Бразильская подтяжка ягодиц)",
+    "fr": "BBL (Lifting Brésilien des Fesses)",
+    "de": "BBL (Brazilian Butt Lift)"
+  },
+  "Deep Plane Facelift": {
+    "es": "Lifting Facial de Plano Profundo",
+    "it": "Lifting Facciale Deep Plane",
+    "ru": "Глубокий фейслифтинг",
+    "fr": "Lifting Facial Deep Plane",
+    "de": "Deep Plane Facelift"
+  },
+  "Blepharoplasty (Eyelid Surgery)": {
+    "es": "Blefaroplastia (Cirugía de Párpados)",
+    "it": "Blefaroplastica (Chirurgia delle Palpebre)",
+    "ru": "Блефаропластика (Хирургия век)",
+    "fr": "Blépharoplastie (Chirurgie des Paupières)",
+    "de": "Blepharoplastik (Lidstraffung)"
+  },
+  "Mommy Makeover": {
+    "es": "Mommy Makeover",
+    "it": "Mommy Makeover",
+    "ru": "Восстановление после родов (Mommy Makeover)",
+    "fr": "Mommy Makeover",
+    "de": "Mommy Makeover"
+  },
+  "Gynecomastia (Male Breast Reduction)": {
+    "es": "Ginecomastia (Reducción de Pechos Masculinos)",
+    "it": "Ginecomastia (Riduzione del Seno Maschile)",
+    "ru": "Гинекомастия (Уменьшение мужской груди)",
+    "fr": "Gynécomastie (Réduction Mammaire Masculine)",
+    "de": "Gynäkomastie (Männliche Brustverkleinerung)"
+  },
+  "Otoplasty (Prominent Ear Surgery)": {
+    "es": "Otoplastia (Cirugía de Orejas)",
+    "it": "Otoplastica (Chirurgia delle Orecchie Prominenti)",
+    "ru": "Отопластика (Коррекция ушей)",
+    "fr": "Otoplastie (Chirurgie des Oreilles Décollées)",
+    "de": "Otoplastik (Ohrenkorrektur)"
+  },
+  "Arm & Thigh Lift (Brachioplasty)": {
+    "es": "Lifting de Brazos y Muslos",
+    "it": "Lifting Braccia e Cosce",
+    "ru": "Подтяжка рук и бедер",
+    "fr": "Lifting des Bras et des Cuisses",
+    "de": "Arm- und Oberschenkelstraffung"
+  },
+  "Mastopexy (Breast Lift)": {
+    "es": "Mastopexia (Lifting de Senos)",
+    "it": "Mastopessi (Lifting del Seno)",
+    "ru": "Мастопексия (Подтяжка груди)",
+    "fr": "Mastopexie (Lifting Mammaire)",
+    "de": "Mastopexie (Bruststraffung)"
+  },
+  "Mentoplasty (Chin Augmentation)": {
+    "es": "Mentoplastia (Aumento de Mentón)",
+    "it": "Mentoplastica (Aumento del Mento)",
+    "ru": "Ментопластика (Увеличение подбородка)",
+    "fr": "Mentoplastie (Augmentation du Menton)",
+    "de": "Mentoplastik (Kinnvergrößerung)"
+  },
+  "Labiaplasty (Aesthetic & Functional)": {
+    "es": "Labioplastia (Estética y Funcional)",
+    "it": "Labioplastica (Estetica e Funzionale)",
+    "ru": "Лабиопластика (Эстетическая и функциональная)",
+    "fr": "Labiaplastie (Esthétique et Fonctionnelle)",
+    "de": "Schamlippenkorrektur (Ästhetisch & Funktionell)"
+  },
+  "Penile Lengthening (Ligamentolysis)": {
+    "es": "Alargamiento del Pene (Ligamentólisis)",
+    "it": "Allungamento del Pene (Ligamentolisi)",
+    "ru": "Удлинение пениса (Лигаментотомия)",
+    "fr": "Allongement Pénien (Ligamentolyse)",
+    "de": "Penisverlängerung (Ligamentolyse)"
+  },
+  "Penile Girth (Fat Grafting)": {
+    "es": "Grosor del Pene (Injerto de Grasa)",
+    "it": "Ingrossamento del Pene (Innesto di Grasso)",
+    "ru": "Утолщение пениса (Пересадка жира)",
+    "fr": "Élargissement Pénien (Greffe de Graisse)",
+    "de": "Penisverdickung (Eigenfett)"
+  },
+  "Non-Surgical Girth (HA Fillers)": {
+    "es": "Grosor no Quirúrgico (Rellenos AH)",
+    "it": "Ingrossamento non Chirurgico (Filler AH)",
+    "ru": "Безоперационное утолщение (Филлеры ГК)",
+    "fr": "Élargissement non Chirurgical (Acide Hyaluronique)",
+    "de": "Nicht-chirurgische Verdickung (HA-Filler)"
+  },
+  "Dermal Matrix Graft (Girth)": {
+    "es": "Injerto de Matriz Dérmica",
+    "it": "Innesto di Matrice Dermica",
+    "ru": "Дермальный матричный трансплантат",
+    "fr": "Greffe de Matrice Dermique",
+    "de": "Dermale Matrix-Transplantation"
+  },
+  "P-Shot (Regenerative PRP)": {
+    "es": "P-Shot (PRP Regenerativo)",
+    "it": "P-Shot (PRP Rigenerativo)",
+    "ru": "P-Shot (Регенеративная PRP)",
+    "fr": "P-Shot (PRP Régénératif)",
+    "de": "P-Shot (Regeneratives PRP)"
+  },
+  "Glans Augmentation (PE Treatment)": {
+    "es": "Aumento del Glande",
+    "it": "Aumento del Glande",
+    "ru": "Увеличение головки",
+    "fr": "Augmentation du Gland",
+    "de": "Eichelvergrößerung"
+  },
+  "ESWT Shockwave Therapy": {
+    "es": "Terapia de Ondas de Choque ESWT",
+    "it": "Terapia a Onde d'Urto ESWT",
+    "ru": "Ударно-волновая терапия ESWT",
+    "fr": "Thérapie par Ondes de Choc ESWT",
+    "de": "ESWT Stoßwellentherapie"
+  },
+  "Penile Prosthesis (Implant)": {
+    "es": "Prótesis de Pene (Implante)",
+    "it": "Protesi Peniena (Impianto)",
+    "ru": "Протезирование полового члена",
+    "fr": "Prothèse Pénienne (Implant)",
+    "de": "Penisprothese (Implantat)"
+  },
+  "Organ Transplant (Kidney & Liver)": {
+    "es": "Trasplante de Órganos (Riñón e Hígado)",
+    "it": "Trapianto di Organi (Rene e Fegato)",
+    "ru": "Трансплантация органов (Почки и печень)",
+    "fr": "Transplantation d'Organes (Rein et Foie)",
+    "de": "Organtransplantation (Niere & Leber)"
+  },
+  "IVF Cyprus (Advanced Fertility)": {
+    "es": "FIV Chipre (Fertilidad Avanzada)",
+    "it": "FIVET Cipro (Fertilità Avanzata)",
+    "ru": "ЭКО Кипр (Передовая фертильность)",
+    "fr": "FIV Chypre (Fertilité Avancée)",
+    "de": "IVF Zypern (Fortgeschrittene Fruchtbarkeit)"
+  },
+  "Smart Oncology & Targeted Drugs": {
+    "es": "Oncología Inteligente y Fármacos Dirigidos",
+    "it": "Oncologia Intelligente e Farmaci Mirati",
+    "ru": "Умная онкология и таргетные препараты",
+    "fr": "Oncologie Intelligente et Thérapies Ciblées",
+    "de": "Smarte Onkologie & Zielgerichtete Medikamente"
+  },
+  "Anti-Gravity Lifting (Non-Surgical)": {
+    "es": "Lifting Anti-Gravedad (No Quirúrgico)",
+    "it": "Lifting Anti-Gravità (Non Chirurgico)",
+    "ru": "Антигравитационный лифтинг (Безоперационный)",
+    "fr": "Lifting Anti-Gravité (Non Chirurgical)",
+    "de": "Anti-Gravity Lifting (Nicht-chirurgisch)"
+  }
+}
