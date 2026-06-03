@@ -102,14 +102,36 @@ const BmiCalculator = ({ lang = 'en' }: { lang?: string }) => {
     PxTrack?.('BMI_Calculated', { bmi_score: bmi, category: interp.label });
   };
 
-  const submitLead = (e) => {
+  const submitLead = async (e) => {
     e.preventDefault();
+    if (!name || !phone || !result) return;
     setSending(true);
-    setTimeout(() => {
-      pushToDataLayer?.('generate_lead', { form_location: 'bmi_calculator' });
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'bmi_calculator',
+          name,
+          phone,
+          procedure: result.bariatric ? 'bariatric' : 'weight_loss_consultation',
+          bmiScore: result.bmi.toString(),
+          details: `BMI Status: ${result.label}. Ideal Weight Range: ${result.idealLo} - ${result.idealHi} kg.`,
+          source: 'BmiCalculator',
+        }),
+      });
+      if (response.ok) {
+        pushToDataLayer?.('generate_lead', { form_location: 'bmi_calculator' });
+        setSent(true);
+      } else {
+        alert(lang === 'ro' ? 'Eroare la trimiterea datelor.' : 'Error sending details. Please try again.');
+      }
+    } catch (err) {
+      console.error('BMI lead submit error:', err);
+      alert(lang === 'ro' ? 'Eroare de rețea.' : 'Network error. Please try again.');
+    } finally {
       setSending(false);
-      setSent(true);
-    }, 1400);
+    }
   };
 
   const ageNote = result && age && parseInt(age) >= 65

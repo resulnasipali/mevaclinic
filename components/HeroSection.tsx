@@ -49,23 +49,30 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!heroName || !heroPhone || !heroTreatment) return;
     setIsSubmitting(true);
     try {
-      await fetch('/api/leads', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
+          type: 'hero',
           name: heroName,
-          phone: `${heroPrefix}${heroPhone}`,
-          treatment: heroTreatment,
+          phone: `${heroPrefix} ${heroPhone}`,
+          procedure: heroTreatment,
           source: 'HeroSection',
         }),
       });
-    } catch {
-      // Silent fail — lead is still counted in analytics
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        alert(lang === 'ro' ? 'Eroare la trimiterea formularului.' : 'Error sending request. Please try again.');
+      }
+    } catch (err) {
+      console.error('Submit error:', err);
+      alert(lang === 'ro' ? 'Eroare de conexiune.' : 'Network error. Please check your connection.');
     } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
     }
   };
 

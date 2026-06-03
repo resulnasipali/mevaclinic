@@ -1,68 +1,211 @@
 import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+// ─── Sanitization helper ──────────────────────────────────────────────────────
+function sanitizeString(val: unknown, maxLen = 500): string {
+  if (typeof val !== 'string') return '';
+  return val.trim().slice(0, maxLen);
+}
 
 export async function POST(req: Request) {
   try {
     const body = await req.json();
-    const { type, name, email, phone, message, procedure, details } = body;
+    const { 
+      type, 
+      name, 
+      email, 
+      phone, 
+      message, 
+      procedure, 
+      treatment, 
+      country, 
+      bmiScore, 
+      details, 
+      source 
+    } = body;
 
-    // GoDaddy / Office365 SMTP Ayarları (Ortam değişkenlerinden alınır)
-    const smtpEmail = process.env.SMTP_USER; // GoDaddy e-posta adresiniz (örn: info@mevaclinic.com)
-    const smtpPassword = process.env.SMTP_PASS; // E-posta şifreniz
+    // Standardize variables
+    const finalName = sanitizeString(name, 150) || 'Patient';
+    const finalPhone = sanitizeString(phone, 30);
+    const finalEmail = sanitizeString(email, 200) || 'No email provided';
+    const finalProcedure = sanitizeString(procedure || treatment, 100) || 'Not specified';
+    const finalMessage = sanitizeString(message || details, 1000);
+    const finalSource = sanitizeString(source, 50) || 'Website Form';
+    const finalCountry = sanitizeString(country, 100);
+    const finalBmi = sanitizeString(bmiScore, 10);
 
-    const toEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || smtpEmail || 'resulnasipali@gmail.com';
+    // ─── 1. Write to CRM Storage (leads.json) ───────────────────────────────────
+    const dataDir = path.join(process.cwd(), 'data');
+    const leadsFilePath = path.join(dataDir, 'leads.json');
 
-    let subject = '';
-    let htmlContent = '';
-
-    if (type === 'quiz') {
-      subject = `New Medical Quiz Result: ${procedure}`;
-      htmlContent = `
-        <h2>Medical Suitability Quiz Result</h2>
-        <p><strong>Procedure:</strong> ${procedure}</p>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <br/>
-        <h3>Quiz Details:</h3>
-        <p>${details ? details.replace(/\\n/g, '<br/>') : ''}</p>
-      `;
-    } else {
-      subject = `New Contact Form Submission from ${name}`;
-      htmlContent = `
-        <h2>Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <br/>
-        <h3>Message:</h3>
-        <p>${message}</p>
-      `;
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
     }
 
-    // Nodemailer transporter oluşturuluyor (GoDaddy Office365 için genel ayarlar)
+    let leads: any[] = [];
+    if (fs.existsSync(leadsFilePath)) {
+      try {
+        const fileContent = fs.readFileSync(leadsFilePath, 'utf-8');
+        leads = fileContent ? JSON.parse(fileContent) : [];
+      } catch {
+        leads = [];
+      }
+    }
+
+    const newLead = {
+      id: Date.now().toString(),
+      date: new Date().toISOString(),
+      name: finalName,
+      phone: finalPhone,
+      email: finalEmail,
+      treatment: finalProcedure,
+      message: finalMessage,
+      metrics: finalBmi ? `BMI: ${finalBmi}` : '',
+      medicalCondition: finalCountry ? `Country: ${finalCountry}` : '',
+      source: finalSource,
+      status: 'New',
+    };
+
+    leads.unshift(newLead);
+    fs.writeFileSync(leadsFilePath, JSON.stringify(leads, null, 2), 'utf-8');
+    console.log(`✅ [CRM] Lead saved inside contact API: ${finalName}`);
+
+    // ─── 2. Setup Email Notification ─────────────────────────────────────────────
+    const toEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@mevaclinic.com';
+    const subject = `[Meva Lead] ${finalProcedure.toUpperCase()} - ${finalName}`;
+
+    // Premium HTML Email Template
+    const htmlContent = `
+      <div style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #e2e8f0; border-radius: 12px; background-color: #ffffff; color: #1a202c;">
+        <!-- Header -->
+        <div style="text-align: center; border-bottom: 2px solid #d4af37; padding-bottom: 15px; margin-bottom: 20px;">
+          <h2 style="color: #0b1626; margin: 0; font-size: 24px; font-weight: 700;">MEVA CLINIC</h2>
+          <p style="color: #d4af37; margin: 5px 0 0 0; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Premium Patient Lead</p>
+        </div>
+
+        <!-- Details Table -->
+        <div style="margin-bottom: 25px;">
+          <h3 style="color: #0b1626; font-size: 18px; margin-top: 0; border-left: 3px solid #d4af37; padding-left: 10px;">Lead Profile</h3>
+          
+          <table style="width: 100%; border-collapse: collapse; margin-top: 15px;">
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568; width: 35%;">Name / Surname:</td>
+              <td style="padding: 10px 0; color: #2d3748;">${finalName}</td>
+            </tr>
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568;">Phone / WhatsApp:</td>
+              <td style="padding: 10px 0; color: #2d3748; font-weight: 600;">
+                <a href="https://wa.me/${finalPhone.replace(/\+/g, '').replace(/\s/g, '')}" style="color: #34d399; text-decoration: none;" target="_blank">
+                  ${finalPhone} 💬 (Click to chat)
+                </a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568;">Email Address:</td>
+              <td style="padding: 10px 0; color: #2d3748;">
+                <a href="mailto:${finalEmail}" style="color: #0b1626; text-decoration: underline;">${finalEmail}</a>
+              </td>
+            </tr>
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568;">Treatment Area:</td>
+              <td style="padding: 10px 0; color: #d4af37; font-weight: bold; text-transform: uppercase;">${finalProcedure}</td>
+            </tr>
+            ${finalCountry ? `
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568;">Country / Region:</td>
+              <td style="padding: 10px 0; color: #2d3748;">${finalCountry}</td>
+            </tr>
+            ` : ''}
+            ${finalBmi ? `
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568;">BMI Score:</td>
+              <td style="padding: 10px 0; color: #ef4444; font-weight: bold;">${finalBmi}</td>
+            </tr>
+            ` : ''}
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568;">Source Panel:</td>
+              <td style="padding: 10px 0; color: #718096; font-size: 13px;">${finalSource} (${type || 'Standard Form'})</td>
+            </tr>
+          </table>
+        </div>
+
+        <!-- Message Block -->
+        ${finalMessage ? `
+        <div style="margin-bottom: 25px; padding: 15px; background-color: #f7fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
+          <h4 style="margin-top: 0; color: #0b1626; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Message / Details:</h4>
+          <p style="margin: 0; font-size: 14px; color: #4a5568; line-height: 1.6; white-space: pre-wrap;">${finalMessage}</p>
+        </div>
+        ` : ''}
+
+        <!-- Footer -->
+        <div style="text-align: center; border-top: 1px solid #edf2f7; padding-top: 15px; margin-top: 25px; font-size: 12px; color: #a0aec0;">
+          <p style="margin: 0;">Meva Clinic Automated Notification System</p>
+          <p style="margin: 5px 0 0 0;">Istanbul, Turkey | JCI Accredited Facility</p>
+        </div>
+      </div>
+    `;
+
+    // Try Resend first (ideal for Next.js deploy environment)
+    if (process.env.RESEND_API_KEY && !process.env.RESEND_API_KEY.startsWith('your_') && !process.env.RESEND_API_KEY.includes('BURAYA')) {
+      try {
+        const resend = new Resend(process.env.RESEND_API_KEY);
+        const data = await resend.emails.send({
+          from: 'Meva Clinic System <onboarding@resend.dev>',
+          to: toEmail,
+          subject: subject,
+          html: htmlContent,
+          replyTo: finalEmail !== 'No email provided' ? finalEmail : undefined,
+        });
+
+        if (data.error) {
+          console.error("Resend API failed:", data.error);
+          throw new Error(data.error.message);
+        }
+
+        return NextResponse.json({ success: true, provider: 'resend', leadId: newLead.id });
+      } catch (resendError: any) {
+        console.warn("Resend failed, trying fallback SMTP Nodemailer. Error:", resendError.message || resendError);
+      }
+    }
+
+    // Fallback to Nodemailer SMTP (GoDaddy/Office365 or custom server config)
+    const smtpEmail = process.env.SMTP_USER || process.env.EMAIL_SERVER_USER;
+    const smtpPassword = process.env.SMTP_PASS || process.env.EMAIL_SERVER_PASSWORD;
+
+    if (!smtpEmail || !smtpPassword || smtpPassword.includes('BURAYA') || smtpPassword.includes('your_')) {
+      console.warn("❌ [CRM] Email not sent because SMTP credentials are not configured.");
+      // We still return true because the lead was successfully saved to leads.json (don't break user experience)
+      return NextResponse.json({ 
+        success: true, 
+        warning: 'Lead saved but email configuration missing.', 
+        leadId: newLead.id 
+      }, { status: 200 });
+    }
+
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.office365.com', // GoDaddy genelde Office365 altyapısını kullanır
+      host: process.env.SMTP_HOST || 'smtp.office365.com',
       port: Number(process.env.SMTP_PORT) || 587,
-      secure: false, // 587 portu için false, TLS ile şifrelenir
+      secure: false,
       auth: {
         user: smtpEmail,
         pass: smtpPassword,
       },
     });
 
-    // E-postayı gönder
     const info = await transporter.sendMail({
-      from: `"Meva Clinic System" <${smtpEmail}>`, // GoDaddy'de gönderici adresi doğrulama gerektirdiği için kendi adresiniz olmalı
+      from: `"Meva Clinic System" <${smtpEmail}>`,
       to: toEmail,
-      replyTo: email, // Müşteri hizmetleriniz "Yanıtla" dediğinde müşterinin e-postasına gider
+      replyTo: finalEmail !== 'No email provided' ? finalEmail : undefined,
       subject: subject,
       html: htmlContent,
     });
 
-    return NextResponse.json({ success: true, messageId: info.messageId });
+    return NextResponse.json({ success: true, provider: 'nodemailer', messageId: info.messageId, leadId: newLead.id });
   } catch (error: any) {
-    console.error("Email send error:", error);
-    return NextResponse.json({ error: error.message || 'Error sending email' }, { status: 500 });
+    console.error("❌ [API] Contact Route Error:", error);
+    return NextResponse.json({ success: false, error: error.message || 'Error processing lead' }, { status: 500 });
   }
 }
