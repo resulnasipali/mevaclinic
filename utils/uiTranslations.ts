@@ -5837,6 +5837,33 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.": {
       "en": "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.",
       "ro": "Un coordonator medical vă va contacta pe WhatsApp în maximum 15 minute cu raportul personalizat."
+    },
+    "Published:": {
+      "en": "Published:",
+      "ro": "Publicat:",
+      "es": "Publicado:",
+      "it": "Pubblicato:",
+      "ru": "Опубликовано:",
+      "fr": "Publié :",
+      "de": "Veröffentlicht:"
+    },
+    "Last Updated:": {
+      "en": "Last Updated:",
+      "ro": "Ultima actualizare:",
+      "es": "Última actualización:",
+      "it": "Ultimo aggiornamento:",
+      "ru": "Последнее обновление:",
+      "fr": "Dernière mise à jour :",
+      "de": "Zuletzt aktualisiert:"
+    },
+    "Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.": {
+      "en": "Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.",
+      "ro": "Declinare de responsabilitate medicală: Informațiile clinice de pe acest site sunt doar în scopuri educaționale și informative. Acestea nu constituie sfaturi medicale, diagnostic sau tratament. Consultați întotdeauna un medic calificat cu privire la orice afecțiune medicală sau procedură chirurgicală în Turcia.",
+      "de": "Medizinischer Haftungsausschluss: Die klinischen Informationen auf dieser Website dienen ausschließlich Bildungs- und Informationszwecken. Sie stellen keine medizinische Beratung, Diagnose oder Behandlung dar. Wenden Sie sich bei Fragen zu einer Erkrankung oder einem chirurgischen Eingriff in der Türkei immer an einen qualifizierten Arzt.",
+      "es": "Descargo de responsabilidad médica: La información clínica de este sitio web es solo para fines educativos e informativos. No constituye asesoramiento médico, diagnóstico o tratamiento. Consulte siempre con un médico calificado con respecto a cualquier condición médica o procedimiento quirúrgico en Turquía.",
+      "fr": "Avis de non-responsabilité médicale : Les informations cliniques figurant sur ce site web sont fournies uniquement à des fins éducatives et d'information. Elles ne constituent pas un avis médical, un diagnostic ou un traitement. Consultez toujours un médecin qualifié pour toute question relative à un problème de santé ou à une intervention chirurgicale en Turquie.",
+      "it": "Disclaimer medico: Le informazioni cliniche presenti su questo sito web sono solo a scopo didattico e informativo. Non costituiscono consulenza medica, diagnosi o trattamento. Consultare sempre un medico qualificato per qualsiasi condizione medica o procedura chirurgica in Turchia.",
+      "ru": "Медицинский дисклеймер: Клиническая информация на этом сайте предназначена исключительно для образовательных и информационных целей. Она не является медицинской консультацией, диагнозом или лечением. Всегда консультируйтесь с квалифицированным врачом по поводу любого медицинского состояния или хирургического вмешательства в Турции."
     }
 };
 

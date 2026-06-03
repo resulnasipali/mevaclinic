@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, ShieldCheck, Share2, Clock, BookOpen, GraduationCap } from 'lucide-react';
 import { CertRow } from '@/components/ClinicalBadges';
 import { tUI } from '@/utils/uiTranslations';
+import MedicalReviewer, { REVIEWERS } from '@/components/MedicalReviewer';
 
 interface BlogPostClientProps {
   post: any;
@@ -18,6 +19,20 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
   const currentTitle = (post.title as any)[lang] || post.title['en'];
   const currentExcerpt = (post.excerpt as any)[lang] || post.excerpt['en'];
   const content = post.content ? (post.content as any)[lang] || post.content['en'] : null;
+
+  // Resolve reviewer based on post category
+  const getReviewer = (cat: string) => {
+    const category = (cat || '').toLowerCase();
+    if (category.includes('hair')) return REVIEWERS.hair;
+    if (category.includes('bariatric') || category.includes('obesity')) return REVIEWERS.bariatric;
+    if (category.includes('dental') || category.includes('tooth') || category.includes('teeth')) return REVIEWERS.dental;
+    if (category.includes('plastic') || category.includes('face') || category.includes('rhinoplasty') || category.includes('regenerative')) return REVIEWERS.plastic;
+    if (category.includes('oncology') || category.includes('cancer') || category.includes('cyberknife')) return REVIEWERS.oncology;
+    if (category.includes('transplant') || category.includes('organ') || category.includes('kidney') || category.includes('liver') || category.includes('ivf')) return REVIEWERS.organ;
+    return REVIEWERS.hair;
+  };
+
+  const reviewer = getReviewer(post.category);
 
   return (
     <div className="bg-white min-h-screen pt-[102px] lg:pt-[112px] pb-20 overflow-hidden">
@@ -61,7 +76,8 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
             transition={{ delay: 0.2 }}
             className="flex flex-wrap items-center gap-6 text-gray-400 text-xs font-bold uppercase tracking-widest"
           >
-             <div className="flex items-center gap-2"><Calendar size={14} className="text-amber-500" /> {post.date}</div>
+             <div className="flex items-center gap-2"><Calendar size={14} className="text-amber-500" /> {tUI("Published:", lang)} {post.date}</div>
+             <div className="flex items-center gap-2"><Calendar size={14} className="text-amber-500" /> {tUI("Last Updated:", lang)} {post.lastUpdated || post.date}</div>
              <div className="flex items-center gap-2"><User size={14} className="text-amber-500" /> {post.author}</div>
              <div className="flex items-center gap-2"><Clock size={14} className="text-amber-500" /> {tUI("8 Min Read", lang)}</div>
           </motion.div>
@@ -213,6 +229,11 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
                      </>
                    )}
                  </motion.div>
+
+                 {/* Medical Reviewer Section */}
+                 {reviewer && (
+                    <MedicalReviewer reviewer={reviewer} isEn={lang === 'en'} />
+                 )}
 
                  {/* End CTA */}
                  <div className="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">

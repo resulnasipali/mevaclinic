@@ -305,8 +305,14 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
           </div>
         </div>
       </div>
+        {/* YMYL Medical Disclaimer */}
+        <div className="border-t border-white/10 pt-8 text-center">
+          <p className="text-[10px] text-gray-500 leading-relaxed max-w-4xl mx-auto font-sans mb-6">
+            {tUI("Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.", lang)}
+          </p>
+        </div>
 
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-sans gap-4">
+        <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-sans gap-4">
           <p>© {new Date().getFullYear()} Meva Clinic Medical Tourism. {tUI('All rights reserved.', lang)}</p>
           <div className="flex flex-wrap justify-center gap-6 font-medium">
             <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors">

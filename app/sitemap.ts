@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next';
 import { treatmentsData } from '../data/treatmentsData';
+import { blogPosts } from '../data/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://mevaclinic.com';
@@ -11,6 +12,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/blog',
     '/quiz',
+    '/faq',
+    '/about-us',
+    '/medical-comparison',
+    '/privacy-policy',
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
@@ -35,6 +40,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: new Date(),
         changeFrequency: 'weekly',
         priority: 0.9,
+      });
+    });
+  });
+
+  // 3. Dynamic Blog Pages
+  locales.forEach((locale) => {
+    blogPosts.forEach((post) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}/blog/${post.slug}`,
+        lastModified: new Date(post.date || Date.now()),
+        changeFrequency: 'weekly',
+        priority: 0.7,
       });
     });
   });

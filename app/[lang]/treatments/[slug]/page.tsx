@@ -63,6 +63,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     keywords,
     alternates: {
       canonical: `/${lang}/treatments/${slug}`,
+      languages: {
+        'en': `/en/treatments/${slug}`,
+        'ro': `/ro/treatments/${slug}`,
+        'es': `/es/treatments/${slug}`,
+        'it': `/it/treatments/${slug}`,
+        'ru': `/ru/treatments/${slug}`,
+        'fr': `/fr/treatments/${slug}`,
+        'de': `/de/treatments/${slug}`,
+        'x-default': `/en/treatments/${slug}`,
+      }
     },
     openGraph: {
       title,
@@ -121,6 +131,14 @@ export default async function TreatmentPage({ params }: Props) {
       '@type': 'MedicalOrganization',
       'name': 'Meva Clinic Istanbul',
       'url': 'https://www.mevaclinic.com',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': 'Altunizade, Uskudar',
+        'addressLocality': 'Istanbul',
+        'addressRegion': 'Uskudar',
+        'postalCode': '34662',
+        'addressCountry': 'TR'
+      }
     },
     'bodyLocation': treatment.category === 'bariatric' ? 'Stomach' : 
                     treatment.category === 'hair' ? 'Scalp' : 

@@ -15,6 +15,7 @@ import { getWhatsAppLink } from '@/utils/getWhatsAppLink';
 import { TreatmentImage } from '@/utils/getTreatmentImages';
 import { tUI } from '@/utils/uiTranslations';
 import { maskDoctorName } from '@/utils/doctorUtils';
+import MedicalReviewer, { REVIEWERS } from '@/components/MedicalReviewer';
 
 interface TreatmentClientProps {
   treatment: any;
@@ -107,6 +108,32 @@ export default function TreatmentDetailClient({ treatment, lang, images = [] }: 
   const quoteText = tUI('Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.', lang);
   const doctorTitle = tUI('Chief Medical Officer', lang);
 
+  // Resolve reviewer based on treatment id
+  const getReviewer = (treatmentId: string) => {
+    const id = (treatmentId || '').toLowerCase();
+    if (id.includes('hair') || id.includes('fue') || id.includes('dhi')) {
+      return REVIEWERS.hair;
+    }
+    if (id.includes('sleeve') || id.includes('gastric') || id.includes('bypass') || id.includes('obesity') || id.includes('bariatric')) {
+      return REVIEWERS.bariatric;
+    }
+    if (id.includes('dental') || id.includes('smile') || id.includes('implants') || id.includes('zirconium') || id.includes('veneers') || id.includes('hollywood')) {
+      return REVIEWERS.dental;
+    }
+    if (id.includes('rhinoplasty') || id.includes('facelift') || id.includes('lift') || id.includes('breast') || id.includes('tummy') || id.includes('lipo') || id.includes('mummy') || id.includes('blepharoplasty') || id.includes('otoplasty') || id.includes('gynecomastia')) {
+      return REVIEWERS.plastic;
+    }
+    if (id.includes('cyberknife') || id.includes('oncology') || id.includes('cancer')) {
+      return REVIEWERS.oncology;
+    }
+    if (id.includes('transplant') || id.includes('kidney') || id.includes('liver') || id.includes('ivf')) {
+      return REVIEWERS.organ;
+    }
+    return REVIEWERS.hair;
+  };
+
+  const reviewerObj = getReviewer(treatment.id);
+
   const heroImage = treatment.heroImage || `https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1920&auto=format&fit=crop`;
 
   return (
@@ -164,6 +191,16 @@ export default function TreatmentDetailClient({ treatment, lang, images = [] }: 
           >
             <Star size={12} className="fill-amber-500" />
             {tUI('Meva Clinic · Istanbul', lang)}
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-wrap items-center gap-6 text-gray-400 text-xs font-bold uppercase tracking-widest mb-6"
+          >
+             <div className="flex items-center gap-2"><Calendar size={14} className="text-amber-500" /> {tUI("Published:", lang)} {treatment.publishDate || '2025-11-12'}</div>
+             <div className="flex items-center gap-2"><Clock size={14} className="text-amber-500" /> {tUI("Last Updated:", lang)} {treatment.lastUpdated || '2026-05-18'}</div>
           </motion.div>
 
           <motion.h1 
@@ -266,6 +303,10 @@ export default function TreatmentDetailClient({ treatment, lang, images = [] }: 
                   </div>
                 )}
               </motion.div>
+
+              {reviewerObj && (
+                <MedicalReviewer reviewer={reviewerObj} isEn={isEn} />
+              )}
 
               <div className="space-y-16">
                 {isThisForMe.length > 0 && (

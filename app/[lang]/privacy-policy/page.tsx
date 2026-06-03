@@ -1,6 +1,32 @@
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { tUI } from '@/utils/uiTranslations';
+
+type Props = {
+  params: Promise<{ lang: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: `${tUI("Privacy Policy", lang)} | Meva Clinic`,
+    description: tUI("Privacy Policy and Data protection details compliant with GDPR and KVKK regulations.", lang),
+    alternates: {
+      canonical: `/${lang}/privacy-policy`,
+      languages: {
+        'en': `/en/privacy-policy`,
+        'ro': `/ro/privacy-policy`,
+        'es': `/es/privacy-policy`,
+        'it': `/it/privacy-policy`,
+        'ru': `/ru/privacy-policy`,
+        'fr': `/fr/privacy-policy`,
+        'de': `/de/privacy-policy`,
+        'x-default': `/en/privacy-policy`,
+      }
+    }
+  };
+}
 
 export default async function PrivacyPolicyPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;

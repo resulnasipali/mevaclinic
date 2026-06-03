@@ -1,8 +1,34 @@
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MedicalReviewer, { REVIEWERS } from '@/components/MedicalReviewer';
 import { CertRow } from '@/components/ClinicalBadges';
 import { tUI } from '@/utils/uiTranslations';
+
+type Props = {
+  params: Promise<{ lang: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: `${tUI("Our Board & Medical Team", lang)} | Meva Clinic`,
+    description: tUI("Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.", lang),
+    alternates: {
+      canonical: `/${lang}/about-us`,
+      languages: {
+        'en': `/en/about-us`,
+        'ro': `/ro/about-us`,
+        'es': `/es/about-us`,
+        'it': `/it/about-us`,
+        'ru': `/ru/about-us`,
+        'fr': `/fr/about-us`,
+        'de': `/de/about-us`,
+        'x-default': `/en/about-us`,
+      }
+    }
+  };
+}
 
 export default async function AboutUsPage({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
@@ -38,7 +64,7 @@ export default async function AboutUsPage({ params }: { params: Promise<{ lang: 
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

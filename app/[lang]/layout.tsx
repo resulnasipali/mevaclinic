@@ -94,10 +94,10 @@ export default async function RootLayout({
             "description": "Premium VIP Health Tourism and Medical Procedures in Istanbul, Turkey.",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "Nisantasi Medical District",
+              "streetAddress": "Altunizade, Uskudar",
               "addressLocality": "Istanbul",
-              "addressRegion": "Sisli",
-              "postalCode": "34365",
+              "addressRegion": "Uskudar",
+              "postalCode": "34662",
               "addressCountry": "TR"
             },
             "medicalSpecialty": [
