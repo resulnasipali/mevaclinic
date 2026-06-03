@@ -328,20 +328,35 @@ const TreatmentQuiz = () => {
     setStep(step + 1);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const payload = {
-      type: activeType,
-      score: totalScore,
-      result: result.label,
-      answers,
-      contact,
-      timestamp: new Date().toISOString()
-    };
-    console.log('[MEVA CRM LEAD]', payload);
-    pushToDataLayer('generate_lead', { form_location: 'treatment_quiz' });
-    pushToDataLayer('form_submission_success', { form_location: 'treatment_quiz' });
-    setSubmitted(true);
+    if (!contact.name || !contact.phone) return;
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'treatment_quiz',
+          name: contact.name,
+          phone: contact.phone,
+          email: contact.email,
+          procedure: activeType,
+          bmiScore: activeType === 'bariatric' ? totalScore.toString() : undefined,
+          details: `Quiz Result: ${result.label}. Answers score sequence: ${answers.join(', ')}`,
+          source: 'TreatmentQuizPage',
+        }),
+      });
+      if (response.ok) {
+        pushToDataLayer('generate_lead', { form_location: 'treatment_quiz' });
+        pushToDataLayer('form_submission_success', { form_location: 'treatment_quiz' });
+        setSubmitted(true);
+      } else {
+        alert(lang === 'ro' ? 'Eroare la trimiterea răspunsurilor.' : 'Error submitting answers. Please try again.');
+      }
+    } catch (err) {
+      console.error('Quiz submit error:', err);
+      alert(lang === 'ro' ? 'Eroare de rețea.' : 'Network error. Please try again.');
+    }
   };
 
   const currentQ = quiz.questions[step];

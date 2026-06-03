@@ -84,8 +84,7 @@ export default function ContactClient({ lang }: ContactClientProps) {
                 <div>
                   <p className="font-bold text-white mb-0.5">{tUI("Location", lang)}</p>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    Acibadem Partner Clinic<br />
-                    Istanbul, {tUI("Turkey", lang)}
+                    {tUI("Altunizade, Uskudar, Istanbul, Turkey", lang)}
                   </p>
                 </div>
               </div>
@@ -131,7 +130,7 @@ export default function ContactClient({ lang }: ContactClientProps) {
             <div className="h-56 rounded-2xl overflow-hidden border border-gray-200 shadow-md">
               <iframe 
                 title="Meva Clinic Istanbul Location"
-                src="https://maps.google.com/maps?q=Istanbul,Acibadem&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                src="https://maps.google.com/maps?q=Altunizade,Uskudar,Istanbul,Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed" 
                 className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-500"
                 loading="lazy"
               ></iframe>

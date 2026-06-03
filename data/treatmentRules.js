@@ -45,16 +45,16 @@ export const treatmentRules = {
   ],
   hospitals: [
     {
-      id: "hosp-acibadem",
-      name: "Acibadem Altunizade",
+      id: "hosp-altunizade",
+      name: "Altunizade Partner Hospital",
       distanceIST: "45 mins",
       distanceSAW: "35 mins",
       tech: "CyberKnife S7, Da Vinci Xi",
       amenities: ["VIP Suite", "Translators", "Gourmet Menu"]
     },
     {
-      id: "hosp-memorial",
-      name: "Memorial Bahçelievler",
+      id: "hosp-bahcelievler",
+      name: "Bahçelievler Partner Hospital",
       distanceIST: "20 mins",
       distanceSAW: "55 mins",
       tech: "Gamma Knife Icon",

@@ -7,18 +7,42 @@ import { pushToDataLayer } from '../utils/AnalyticsUtils';
 
 const ConsultationModal = ({ isOpen, onClose, isEn }) => {
   const [formState, setFormState] = useState('idle'); // idle, loading, success
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!name || !phone) return;
     setFormState('loading');
-    // Simulate API call
-    setTimeout(() => {
-      setFormState('success');
-      pushToDataLayer('generate_lead', { form_location: 'consultation_modal' });
-      pushToDataLayer('form_submission_success', { form_location: 'consultation_modal' });
-    }, 1500);
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'consultation_modal',
+          name,
+          email,
+          phone,
+          procedure: 'General Consultation Inquiry',
+          source: 'ConsultationModal',
+        }),
+      });
+      if (response.ok) {
+        setFormState('success');
+        pushToDataLayer('generate_lead', { form_location: 'consultation_modal' });
+        pushToDataLayer('form_submission_success', { form_location: 'consultation_modal' });
+      } else {
+        alert(isEn ? 'Error submitting request. Please try again.' : 'Eroare la înregistrarea solicitării. Reîncercați.');
+        setFormState('idle');
+      }
+    } catch (err) {
+      console.error('Consultation Modal Submit error:', err);
+      alert(isEn ? 'Network error. Please try again.' : 'Eroare de rețea. Reîncercați.');
+      setFormState('idle');
+    }
   };
 
   return (
@@ -78,6 +102,8 @@ const ConsultationModal = ({ isOpen, onClose, isEn }) => {
                 <input 
                   required
                   type="text" 
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder={isEn ? "Full Name" : "Nume Complet"}
                   className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-accent outline-none transition-all font-sans text-sm"
                 />
@@ -88,6 +114,8 @@ const ConsultationModal = ({ isOpen, onClose, isEn }) => {
                 <input 
                   required
                   type="email" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Email"
                   className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-accent outline-none transition-all font-sans text-sm"
                 />
@@ -98,6 +126,8 @@ const ConsultationModal = ({ isOpen, onClose, isEn }) => {
                 <input 
                   required
                   type="tel" 
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   placeholder={isEn ? "Phone Number" : "Număr de Telefon"}
                   className="w-full pl-12 pr-4 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-accent outline-none transition-all font-sans text-sm"
                 />

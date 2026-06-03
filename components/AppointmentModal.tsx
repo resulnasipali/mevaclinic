@@ -18,15 +18,37 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    import('../utils/pixel').then(({ PxTrack }) => {
-      PxTrack('Lead', { form_location: 'VIP_Modal', ...formData });
-      pushToDataLayer('generate_lead', { form_location: 'appointment_modal' });
-      pushToDataLayer('form_submission_success', { form_location: 'appointment_modal' });
-      alert(tUI("VIP Request Received! A specialist will contact you.", lang));
-      onClose();
-    });
+    if (!formData.name || !formData.phone) return;
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'appointment_modal',
+          name: formData.name,
+          phone: formData.phone,
+          procedure: 'VIP Consultation',
+          details: `Planning Date: ${formData.planningDate}. Logistics Needs: ${formData.needsLogistics}.`,
+          source: 'VIPAppointmentModal',
+        }),
+      });
+      if (response.ok) {
+        import('../utils/pixel').then(({ PxTrack }) => {
+          PxTrack('Lead', { form_location: 'VIP_Modal', ...formData });
+          pushToDataLayer('generate_lead', { form_location: 'appointment_modal' });
+          pushToDataLayer('form_submission_success', { form_location: 'appointment_modal' });
+          alert(tUI("VIP Request Received! A specialist will contact you.", lang));
+          onClose();
+        });
+      } else {
+        alert(lang === 'ro' ? 'Eroare la înregistrarea solicitării VIP.' : 'Error submitting VIP request. Please try again.');
+      }
+    } catch (err) {
+      console.error('VIP Submit error:', err);
+      alert(lang === 'ro' ? 'Eroare de rețea.' : 'Network error. Please try again.');
+    }
   };
 
   return (

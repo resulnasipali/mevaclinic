@@ -88,7 +88,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0b1626] via-[#0b1626]/80 to-[#0b1626]/40 pointer-events-none transition-opacity duration-700 group-hover:opacity-80" />
         <iframe
           title="Meva Clinic Istanbul Location"
-          src={`https://maps.google.com/maps?q=Istanbul,Acibadem&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=${lang === 'ro' ? 'ro' : lang}`}
+          src={`https://maps.google.com/maps?q=Altunizade,Uskudar,Istanbul,Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=${lang === 'ro' ? 'ro' : lang}`}
           className="w-full h-[140%] -mt-10 border-0 absolute inset-0 map-filter"
           loading="lazy"
         />
@@ -102,7 +102,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               {tUI('The Medical Heart of Istanbul', lang)}
             </h2>
             <p className="text-base text-gray-300 font-sans leading-relaxed mb-6">
-              {tUI('Our strategic partnerships guarantee VIP access from landing to the procedures within the Acibadem network and 5-star hotels.', lang)}
+              {tUI('Our strategic partnerships guarantee VIP access from landing to the procedures within our premium clinical network and 5-star hotels.', lang)}
             </p>
             {/* WhatsApp CTA inside map card */}
             <a
@@ -249,7 +249,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               <li className="flex items-start" itemProp="address" itemScope itemType="https://schema.org/PostalAddress">
                 <MapPin className="text-accent mt-1 mr-4 flex-shrink-0" size={20} aria-hidden="true" />
                 <span className="leading-relaxed text-gray-200">
-                  <span itemProp="streetAddress">{tUI('Acibadem Partner Clinic, Altunizade', lang)}</span>
+                  <span itemProp="streetAddress">{tUI('Altunizade, Uskudar', lang)}</span>
                   <br />
                   <span itemProp="addressLocality">Istanbul</span>,{' '}
                   <span itemProp="addressCountry">{tUI('Turkey', lang)}</span>

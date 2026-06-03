@@ -18,7 +18,7 @@ const HospitalSchema = () => {
     },
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Acibadem Partner Clinic",
+      "streetAddress": "Altunizade, Uskudar, Istanbul, Turkey",
       "addressLocality": "Istanbul",
       "addressCountry": "TR"
     }

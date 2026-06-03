@@ -1817,14 +1817,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Notre approche clinique donne la priorité à la préservation des tissus et aux résultats naturels à long terme, garantissant que votre transformation est à la fois sûre et esthétiquement supérieure.",
     "ru": "Наш клинический подход ставит в приоритет сохранение тканей и долгосрочные естественные результаты, гарантируя, что ваша трансформация будет безопасной и эстетически безупречной."
   },
-  "Our strategic partnerships guarantee VIP access from landing to the procedures within the Acibadem network and 5-star hotels.": {
-    "en": "Our strategic partnerships guarantee VIP access from landing to the procedures within the Acibadem network and 5-star hotels.",
-    "de": "Unsere strategischen Partnerschaften garantieren Ihnen VIP-Zugang von der Landung bis zu den Behandlungen im Acıbadem-Netzwerk und in 5-Sterne-Hotels.",
-    "ro": "Parteneriatele noastre strategice garantează acces VIP de la aterizare până la procedurile din cadrul rețelei Acibadem și hoteluri de 5 stele.",
-    "es": "Nuestras alianzas estratégicas garantizan acceso VIP desde el aterrizaje hasta los procedimientos dentro de la red Acibadem y hoteles de 5 estrellas.",
-    "it": "Le partnership strategiche garantiscono l'accesso VIP dall'atterraggio alle procedure all'interno del network Acibadem e in hotel a 5 stelle.",
-    "fr": "Nos partenariats stratégiques garantissent un accès VIP de l'atterrissage aux procédures au sein du réseau Acibadem et dans des hôtels 5 étoiles.",
-    "ru": "Наши стратегические партнерства гарантируют VIP-доступ от посадки до процедур в сети клиник Acibadem и 5-звездочных отелях."
+  "Our strategic partnerships guarantee VIP access from landing to the procedures within our premium clinical network and 5-star hotels.": {
+    "en": "Our strategic partnerships guarantee VIP access from landing to the procedures within our premium clinical network and 5-star hotels.",
+    "de": "Unsere strategischen Partnerschaften garantieren Ihnen VIP-Zugang von der Landung bis zu den Behandlungen in unserem Premium-Kliniknetzwerk und in 5-Sterne-Hotels.",
+    "ro": "Parteneriatele noastre strategice garantează acces VIP de la aterizare până la procedurile din cadrul rețelei noastre clinice premium și hoteluri de 5 stele.",
+    "es": "Nuestras alianzas estratégicas garantizan acceso VIP desde el aterrizaje hasta los procedimientos dentro de nuestra red clínica premium y hoteles de 5 estrellas.",
+    "it": "Le partnership strategiche garantiscono l'accesso VIP dall'atterraggio alle procedure all'interno del nostro network clinico premium e in hotel a 5 stelle.",
+    "fr": "Nos partenariats stratégiques garantissent un accès VIP de l'atterrissage aux procédures au sein de notre réseau clinique premium et dans des hôtels 5 étoiles.",
+    "ru": "Наши стратегические партнерства гарантируют VIP-доступ от посадки до процедур в нашей премиальной сети клиник и 5-звездочных отелях."
   },
   "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and absolute comfort.": {
     "en": "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and absolute comfort.",
@@ -2186,14 +2186,23 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Contactez-nous",
     "de": "Kontaktiere uns"
   },
-  "Acibadem Partner Clinic, Altunizade": {
-    "en": "Acibadem Partner Clinic, Altunizade",
-    "ro": "Clinica Partneră Acibadem, Altunizade",
-    "es": "Clínica Socia Acibadem, Altunizade",
-    "it": "Clinica Partner Acibadem, Altunizade",
-    "ru": "Клиника-партнер Аджибадем, Алтунізаде",
-    "fr": "Clinique Partenaire Acibadem, Altunizade",
-    "de": "Acıbadem Partnerklinik, Altunizade"
+  "Altunizade, Uskudar": {
+    "en": "Altunizade, Uskudar",
+    "ro": "Altunizade, Uskudar",
+    "es": "Altunizade, Uskudar",
+    "it": "Altunizade, Uskudar",
+    "ru": "Алтунизаде, Ускюдар",
+    "fr": "Altunizade, Uskudar",
+    "de": "Altunizade, Uskudar"
+  },
+  "Altunizade, Uskudar, Istanbul, Turkey": {
+    "en": "Altunizade, Uskudar, Istanbul, Turkey",
+    "ro": "Altunizade, Uskudar, Istanbul, Turcia",
+    "es": "Altunizade, Uskudar, Estambul, Turquía",
+    "it": "Altunizade, Uskudar, Istanbul, Turchia",
+    "ru": "Алтунизаде, Ускюдар, Стамбул, Турция",
+    "fr": "Altunizade, Uskudar, Istanbul, Turquie",
+    "de": "Altunizade, Uskudar, Istanbul, Türkei"
   },
   "Turkey": {
     "en": "Turkey",

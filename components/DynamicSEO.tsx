@@ -65,7 +65,7 @@ const DynamicSEO = ({
     "email": "info@mevaclinic.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Acibadem Partner Clinic, Altunizade",
+      "streetAddress": "Altunizade, Uskudar, Istanbul, Turkey",
       "addressLocality": "Istanbul",
       "addressRegion": "Istanbul",
       "postalCode": "34662",
