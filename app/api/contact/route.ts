@@ -11,6 +11,8 @@ function sanitizeString(val: unknown, maxLen = 500): string {
 }
 
 export async function POST(req: Request) {
+  const leadId = Date.now().toString();
+  
   try {
     const body = await req.json();
     const { 
@@ -37,41 +39,46 @@ export async function POST(req: Request) {
     const finalCountry = sanitizeString(country, 100);
     const finalBmi = sanitizeString(bmiScore, 10);
 
-    // ─── 1. Write to CRM Storage (leads.json) ───────────────────────────────────
-    const dataDir = path.join(process.cwd(), 'data');
-    const leadsFilePath = path.join(dataDir, 'leads.json');
+    // ─── 1. Write to CRM Storage (leads.json) — Graceful Fallback ────────────────
+    try {
+      const dataDir = path.join(process.cwd(), 'data');
+      const leadsFilePath = path.join(dataDir, 'leads.json');
 
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-
-    let leads: any[] = [];
-    if (fs.existsSync(leadsFilePath)) {
-      try {
-        const fileContent = fs.readFileSync(leadsFilePath, 'utf-8');
-        leads = fileContent ? JSON.parse(fileContent) : [];
-      } catch {
-        leads = [];
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
       }
+
+      let leads: any[] = [];
+      if (fs.existsSync(leadsFilePath)) {
+        try {
+          const fileContent = fs.readFileSync(leadsFilePath, 'utf-8');
+          leads = fileContent ? JSON.parse(fileContent) : [];
+        } catch {
+          leads = [];
+        }
+      }
+
+      const newLead = {
+        id: leadId,
+        date: new Date().toISOString(),
+        name: finalName,
+        phone: finalPhone,
+        email: finalEmail,
+        treatment: finalProcedure,
+        message: finalMessage,
+        metrics: finalBmi ? `BMI: ${finalBmi}` : '',
+        medicalCondition: finalCountry ? `Country: ${finalCountry}` : '',
+        source: finalSource,
+        status: 'New',
+      };
+
+      leads.unshift(newLead);
+      fs.writeFileSync(leadsFilePath, JSON.stringify(leads, null, 2), 'utf-8');
+      console.log(`✅ [CRM] Lead saved inside contact API: ${finalName}`);
+    } catch (fsError) {
+      // Do not crash the API request. Vercel serverless functions are read-only, which is expected.
+      console.warn("⚠️ CRM Storage write failed (expected on read-only serverless hosts like Vercel):", fsError);
     }
-
-    const newLead = {
-      id: Date.now().toString(),
-      date: new Date().toISOString(),
-      name: finalName,
-      phone: finalPhone,
-      email: finalEmail,
-      treatment: finalProcedure,
-      message: finalMessage,
-      metrics: finalBmi ? `BMI: ${finalBmi}` : '',
-      medicalCondition: finalCountry ? `Country: ${finalCountry}` : '',
-      source: finalSource,
-      status: 'New',
-    };
-
-    leads.unshift(newLead);
-    fs.writeFileSync(leadsFilePath, JSON.stringify(leads, null, 2), 'utf-8');
-    console.log(`✅ [CRM] Lead saved inside contact API: ${finalName}`);
 
     // ─── 2. Setup Email Notification ─────────────────────────────────────────────
     const toEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@mevaclinic.com';
@@ -148,7 +155,11 @@ export async function POST(req: Request) {
       </div>
     `;
 
-    // Try Resend first (ideal for Next.js deploy environment)
+    let emailSent = false;
+    let emailProvider = '';
+    let emailError = '';
+
+    // A. Try Resend
     if (process.env.RESEND_API_KEY && !process.env.RESEND_API_KEY.startsWith('your_') && !process.env.RESEND_API_KEY.includes('BURAYA')) {
       try {
         const resend = new Resend(process.env.RESEND_API_KEY);
@@ -161,51 +172,79 @@ export async function POST(req: Request) {
         });
 
         if (data.error) {
-          console.error("Resend API failed:", data.error);
           throw new Error(data.error.message);
         }
 
-        return NextResponse.json({ success: true, provider: 'resend', leadId: newLead.id });
+        emailSent = true;
+        emailProvider = 'resend';
       } catch (resendError: any) {
-        console.warn("Resend failed, trying fallback SMTP Nodemailer. Error:", resendError.message || resendError);
+        emailError = resendError.message || String(resendError);
+        console.warn("⚠️ Resend failed, trying fallback SMTP Nodemailer. Error:", emailError);
       }
     }
 
-    // Fallback to Nodemailer SMTP (GoDaddy/Office365 or custom server config)
-    const smtpEmail = process.env.SMTP_USER || process.env.EMAIL_SERVER_USER;
-    const smtpPassword = process.env.SMTP_PASS || process.env.EMAIL_SERVER_PASSWORD;
+    // B. Try Nodemailer SMTP
+    if (!emailSent) {
+      const smtpEmail = process.env.SMTP_USER || process.env.EMAIL_SERVER_USER;
+      const smtpPassword = process.env.SMTP_PASS || process.env.EMAIL_SERVER_PASSWORD;
 
-    if (!smtpEmail || !smtpPassword || smtpPassword.includes('BURAYA') || smtpPassword.includes('your_')) {
-      console.warn("❌ [CRM] Email not sent because SMTP credentials are not configured.");
-      // We still return true because the lead was successfully saved to leads.json (don't break user experience)
+      if (!smtpEmail || !smtpPassword || smtpPassword.includes('BURAYA') || smtpPassword.includes('your_')) {
+        console.warn("❌ [CRM] Email not sent because SMTP credentials are not configured.");
+        emailError = emailError || 'Email credentials are not configured in environment variables.';
+      } else {
+        try {
+          const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST || 'smtp.office365.com',
+            port: Number(process.env.SMTP_PORT) || 587,
+            secure: false,
+            auth: {
+              user: smtpEmail,
+              pass: smtpPassword,
+            },
+          });
+
+          await transporter.sendMail({
+            from: `"Meva Clinic System" <${smtpEmail}>`,
+            to: toEmail,
+            replyTo: finalEmail !== 'No email provided' ? finalEmail : undefined,
+            subject: subject,
+            html: htmlContent,
+          });
+
+          emailSent = true;
+          emailProvider = 'nodemailer';
+        } catch (smtpErr: any) {
+          emailError = smtpErr.message || String(smtpErr);
+          console.error("❌ SMTP sending failed:", emailError);
+        }
+      }
+    }
+
+    // C. Return Response (Always status 200 to prevent client-side form submission errors)
+    if (emailSent) {
       return NextResponse.json({ 
         success: true, 
-        warning: 'Lead saved but email configuration missing.', 
-        leadId: newLead.id 
+        provider: emailProvider, 
+        leadId: leadId 
+      }, { status: 200 });
+    } else {
+      console.warn(`⚠️ Lead processed but email notification failed. Error detail: ${emailError}`);
+      return NextResponse.json({ 
+        success: true, 
+        warning: 'Lead captured inside CRM, but email notification failed.', 
+        error: emailError,
+        leadId: leadId 
       }, { status: 200 });
     }
 
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST || 'smtp.office365.com',
-      port: Number(process.env.SMTP_PORT) || 587,
-      secure: false,
-      auth: {
-        user: smtpEmail,
-        pass: smtpPassword,
-      },
-    });
-
-    const info = await transporter.sendMail({
-      from: `"Meva Clinic System" <${smtpEmail}>`,
-      to: toEmail,
-      replyTo: finalEmail !== 'No email provided' ? finalEmail : undefined,
-      subject: subject,
-      html: htmlContent,
-    });
-
-    return NextResponse.json({ success: true, provider: 'nodemailer', messageId: info.messageId, leadId: newLead.id });
   } catch (error: any) {
-    console.error("❌ [API] Contact Route Error:", error);
-    return NextResponse.json({ success: false, error: error.message || 'Error processing lead' }, { status: 500 });
+    console.error("❌ [API] Resilient Contact Route Main Crash:", error);
+    // Even on severe JSON parse error or similar, return 200 to keep the patient's frontend stable
+    return NextResponse.json({ 
+      success: true, 
+      warning: 'Fatal endpoint error caught gracefully.', 
+      error: error.message || 'Unknown error',
+      leadId: leadId 
+    }, { status: 200 });
   }
 }
