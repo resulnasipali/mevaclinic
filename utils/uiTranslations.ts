@@ -4407,22 +4407,22 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "DISCOVER PACKAGE": {
     "en": "DISCOVER PACKAGE",
-    "es": "DISCOVER PACKAGE",
-    "it": "DISCOVER PACKAGE",
-    "ru": "DISCOVER PACKAGE",
-    "fr": "DISCOVER PACKAGE",
-    "de": "DISCOVER PACKAGE",
-      "ro": "DESCOPERĂ PACHETUL"
-},
+    "es": "DESCUBRIR PAQUETE",
+    "it": "SCOPRI IL PACCHETTO",
+    "ru": "ОТКРЫТЬ ПАКЕТ",
+    "fr": "DÉCOUVRIR LE FORFAIT",
+    "de": "PAKET ENTDECKEN",
+    "ro": "DESCOPERĂ PACHETUL"
+  },
   "CONSULT NOW": {
     "en": "CONSULT NOW",
-    "es": "CONSULT NOW",
-    "it": "CONSULT NOW",
-    "ru": "CONSULT NOW",
-    "fr": "CONSULT NOW",
-    "de": "CONSULT NOW",
-      "ro": "CONSULTAȚI ACUM"
-},
+    "es": "CONSULTAR AHORA",
+    "it": "CONSULTA ORA",
+    "ru": "КОНСУЛЬТИРОВАТЬСЯ",
+    "fr": "CONSULTER MAINTENANT",
+    "de": "JETZT BERATEN",
+    "ro": "CONSULTAȚI ACUM"
+  },
   "Essential": {
     "en": "Essential",
     "es": "Essential",
@@ -4452,31 +4452,31 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Premium Logistics": {
     "en": "Premium Logistics",
-    "es": "Premium Logistics",
-    "it": "Premium Logistics",
-    "ru": "Premium Logistics",
-    "fr": "Premium Logistics",
-    "de": "Premium Logistics",
-      "ro": "Logistică Premium"
-},
+    "es": "Logística premium",
+    "it": "Logistica premium",
+    "ru": "Премиум-логистика",
+    "fr": "Logistique Premium",
+    "de": "Premium-Logistik",
+    "ro": "Logistică Premium"
+  },
   "Curated VIP Packages": {
     "en": "Curated VIP Packages",
-    "es": "Curated VIP Packages",
-    "it": "Curated VIP Packages",
-    "ru": "Curated VIP Packages",
-    "fr": "Curated VIP Packages",
-    "de": "Curated VIP Packages",
-      "ro": "Pachete VIP Alese cu Grijă"
-},
+    "es": "Paquetes VIP seleccionados",
+    "it": "Pacchetti VIP selezionati",
+    "ru": "Эксклюзивные VIP-пакеты",
+    "fr": "Forfaits VIP Sélectionnés",
+    "de": "Exklusive VIP-Pakete",
+    "ro": "Pachete VIP Alese cu Grijă"
+  },
   "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.": {
     "en": "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.",
-    "es": "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.",
-    "it": "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.",
-    "ru": "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.",
-    "fr": "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.",
-    "de": "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.",
-      "ro": "Bucurați-vă de liniște absolută. Fiecare tratament include îngrijire acreditată JCI, hoteluri de 5 stele pe Bosfor și transferuri de lux incluse."
-},
+    "es": "Experimente una tranquilidad absoluta. Cada tratamiento incluye atención acreditada por la JCI, hoteles de 5 estrellas en el Bósforo y traslados de lujo.",
+    "it": "Sperimenta la massima tranquillità. Ogni trattamento include cure accreditate JCI, hotel a 5 stelle sul Bosforo e trasferimenti di lusso.",
+    "ru": "Испытайте абсолютное спокойствие. Каждая процедура включает уход, аккредитованный JCI, 5-звездочные отели на Босфоре и роскошные трансферы.",
+    "fr": "Bénéficiez d'une tranquillité d'esprit absolue. Chaque traitement comprend des soins accrédités par la JCI, des hôtels 5 étoiles sur le Bosphore et des transferts de luxe.",
+    "de": "Erleben Sie absolute Sorgenfreiheit. Jede Behandlung beinhaltet eine JCI-akkreditierte Betreuung, 5-Sterne-Hotels am Bosporus und Luxustransfers.",
+    "ro": "Bucurați-vă de liniște absolută. Fiecare tratament include îngrijire acreditată JCI, hoteluri de 5 stele pe Bosfor și transferuri de lux incluse."
+  },
   "Recovery Science Simulator": {
     "en": "Recovery Science Simulator",
     "es": "Recovery Science Simulator",
@@ -4717,13 +4717,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Discover Package": {
     "en": "Discover Package",
-    "es": "Discover Package",
-    "it": "Discover Package",
-    "ru": "Discover Package",
-    "fr": "Discover Package",
-    "de": "Discover Package",
-      "ro": "Descoperă Pachetul"
-},
+    "es": "Descubrir paquete",
+    "it": "Scopri il pacchetto",
+    "ru": "Открыть пакет",
+    "fr": "Découvrir le forfait",
+    "de": "Paket entdecken",
+    "ro": "Descoperă Pachetul"
+  },
   "Enter your WhatsApp number to unlock & download the official report:": {
     "en": "Enter your WhatsApp number to unlock & download the official report:",
     "es": "Enter your WhatsApp number to unlock & download the official report:",
@@ -5318,22 +5318,22 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Meet the Medical Board": {
     "en": "Meet the Medical Board",
-    "es": "Meet the Medical Board",
-    "it": "Meet the Medical Board",
-    "ru": "Meet the Medical Board",
-    "fr": "Meet the Medical Board",
-    "de": "Meet the Medical Board",
-      "ro": "Cunoașteți Consiliul Medical"
-},
+    "es": "Conozca la Junta Médica",
+    "it": "Incontra il Comitato Medico",
+    "ru": "Встречайте медицинский совет",
+    "fr": "Rencontrez le comité médical",
+    "de": "Lernen Sie den medizinischen Vorstand kennen",
+    "ro": "Cunoașteți Consiliul Medical"
+  },
   "Clinical Intelligence Hub | Meva Clinic Insights": {
     "en": "Clinical Intelligence Hub | Meva Clinic Insights",
-    "es": "Clinical Intelligence Hub | Meva Clinic Insights",
-    "it": "Clinical Intelligence Hub | Meva Clinic Insights",
-    "ru": "Clinical Intelligence Hub | Meva Clinic Insights",
-    "fr": "Clinical Intelligence Hub | Meva Clinic Insights",
-    "de": "Clinical Intelligence Hub | Meva Clinic Insights",
-      "ro": "Hub de Inteligență Clinică | Perspective Meva Clinic"
-},
+    "es": "Centro de Inteligencia Clínica | Perspectivas de Meva Clinic",
+    "it": "Clinical Intelligence Hub | Approfondimenti Meva Clinic",
+    "ru": "Центр клинической аналитики | Инсайты Meva Clinic",
+    "fr": "Centre d'Intelligence Clinique | Meva Clinic Insights",
+    "de": "Klinisches Intelligenzzentrum | Meva Clinic Einblicke",
+    "ro": "Hub de Inteligență Clinică | Perspective Meva Clinic"
+  },
   "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.": {
     "en": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
     "es": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
@@ -5345,22 +5345,22 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Clinical Intelligence Hub": {
     "en": "Clinical Intelligence Hub",
-    "es": "Clinical Intelligence Hub",
-    "it": "Clinical Intelligence Hub",
-    "ru": "Clinical Intelligence Hub",
-    "fr": "Clinical Intelligence Hub",
-    "de": "Clinical Intelligence Hub",
-      "ro": "Centru de Inteligență Clinică"
-},
+    "es": "Centro de Inteligencia Clínica",
+    "it": "Centro di Intelligenza Clinica",
+    "ru": "Центр клинической аналитики",
+    "fr": "Centre d'Intelligence Clinique",
+    "de": "Klinisches Intelligenzzentrum",
+    "ro": "Centru de Inteligență Clinică"
+  },
   "Deep medical analysis from Istanbul.": {
     "en": "Deep medical analysis from Istanbul.",
-    "es": "Deep medical analysis from Istanbul.",
-    "it": "Deep medical analysis from Istanbul.",
-    "ru": "Deep medical analysis from Istanbul.",
-    "fr": "Deep medical analysis from Istanbul.",
-    "de": "Deep medical analysis from Istanbul.",
-      "ro": "Analiză medicală profundă din Istanbul."
-},
+    "es": "Análisis médico profundo desde Estambul.",
+    "it": "Analisi medica approfondita da Istanbul.",
+    "ru": "Глубокий медицинский анализ из Стамбула.",
+    "fr": "Analyse médicale approfondie d'Istanbul.",
+    "de": "Tiefgehende medizinische Analyse aus Istanbul.",
+    "ro": "Analiză medicală profundă din Istanbul"
+  },
   "Contact Us | Meva Clinic": {
     "en": "Contact Us | Meva Clinic",
     "es": "Contact Us | Meva Clinic",
@@ -5748,96 +5748,330 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Meva Klinisches Team",
     "ru": "Клиническая команда Meva"
   },
-    "PREMIUM LOGISTICS": { "en": "PREMIUM LOGISTICS", "ro": "LOGISTICĂ PREMIUM" },
-    "LUXURY CONCIERGE": { "en": "LUXURY CONCIERGE", "ro": "CONCIERGE DE LUX" },
-    "Eligibility & Treatment Suitability Quiz": {
-      "en": "Eligibility & Treatment Suitability Quiz",
-      "ro": "Chestionar de Eligibilitate și Tratamente"
-    },
-    "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.": {
-      "en": "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.",
-      "ro": "Răspunde la 6 întrebări rapide pentru a afla dacă ești eligibil pentru procedurile noastre premium din Istanbul."
-    },
-    "Step 1: Gender & Age": {
-      "en": "Step 1: Gender & Age",
-      "ro": "Pasul 1: Gen & Vârstă"
-    },
-    "Male": { "en": "Male", "ro": "Masculin" },
-    "Female": { "en": "Female", "ro": "Feminin" },
-    "Age Group": { "en": "Age Group", "ro": "Grupă de Vârstă" },
-    "Step 2: Physical Metrics": {
-      "en": "Step 2: Physical Metrics",
-      "ro": "Pasul 2: Parametri Fizici"
-    },
-    "Enter your weight and height to calculate your Body Mass Index (BMI) automatically.": {
-      "en": "Enter your weight and height to calculate your Body Mass Index (BMI) automatically.",
-      "ro": "Introdu greutatea și înălțimea pentru a calcula automat Indicele de Masă Corporală (IMC)."
-    },
-    "Calculated BMI:": { "en": "Calculated BMI:", "ro": "IMC Calculat:" },
-    "Step 3: Medical History": {
-      "en": "Step 3: Medical History",
-      "ro": "Pasul 3: Istoric Medical"
-    },
-    "Select any pre-existing medical conditions (select all that apply):": {
-      "en": "Select any pre-existing medical conditions (select all that apply):",
-      "ro": "Selectează afecțiunile medicale preexistente (bifează toate cele aplicabile):"
-    },
-    "Diabetes": { "en": "Diabetes", "ro": "Diabet" },
-    "Hypertension": { "en": "Hypertension", "ro": "Hipertensiune" },
-    "Sleep Apnea": { "en": "Sleep Apnea", "ro": "Apnee în somn" },
-    "None": { "en": "None", "ro": "Niciuna" },
-    "Step 4: Visit Timeline": {
-      "en": "Step 4: Visit Timeline",
-      "ro": "Pasul 4: Planificarea Vizitei"
-    },
-    "When are you planning to travel for your procedure?": {
-      "en": "When are you planning to travel for your procedure?",
-      "ro": "Când plănuiești să călătorești pentru procedură?"
-    },
-    "Within 1 month": { "en": "Within 1 month", "ro": "În decurs de 1 lună" },
-    "2-3 months": { "en": "2-3 months", "ro": "În 2-3 luni" },
-    "Just researching": { "en": "Just researching", "ro": "Doar cercetez" },
-    "Step 5: Personal Goal": {
-      "en": "Step 5: Personal Goal",
-      "ro": "Pasul 5: Obiectivul Personal"
-    },
-    "What is your primary goal for this treatment?": {
-      "en": "What is your primary goal for this treatment?",
-      "ro": "Care este scopul tău principal pentru acest tratament?"
-    },
-    "Health improvement": { "en": "Health improvement", "ro": "Îmbunătățirea sănătății" },
-    "Aesthetic confidence": { "en": "Aesthetic confidence", "ro": "Încredere estetică" },
-    "All of the above": { "en": "All of the above", "ro": "Toate cele de mai sus" },
-    "Analyzing your clinical parameters...": {
-      "en": "Analyzing your clinical parameters...",
-      "ro": "Se analizează parametrii clinici..."
-    },
-    "Please wait while our medical algorithm reviews your safety criteria.": {
-      "en": "Please wait while our medical algorithm reviews your safety criteria.",
-      "ro": "Vă rugăm să așteptați în timp ce algoritmul nostru medical evaluează criteriile de siguranță."
-    },
-    "Step 6: Secure Lead Capture": {
-      "en": "Step 6: Secure Lead Capture",
-      "ro": "Pasul 6: Trimitere Securizată"
-    },
-    "Provide your details to receive your official clinical suitability report.": {
-      "en": "Provide your details to receive your official clinical suitability report.",
-      "ro": "Introdu datele de contact pentru a primi raportul oficial de eligibilitate clinică."
-    },
-    "Select Country": { "en": "Select Country", "ro": "Selectează Țara" },
-    "Submit My Evaluation": { "en": "Submit My Evaluation", "ro": "Trimite Evaluarea Mea" },
-    "Your data is encrypted and strictly used for medical assessment.": {
-      "en": "Your data is encrypted and strictly used for medical assessment.",
-      "ro": "Datele tale sunt criptate și folosite strict pentru evaluarea medicală."
-    },
-    "Evaluation Submitted Successfully!": {
-      "en": "Evaluation Submitted Successfully!",
-      "ro": "Evaluarea a fost trimisă cu succes!"
-    },
-    "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.": {
-      "en": "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.",
-      "ro": "Un coordonator medical vă va contacta pe WhatsApp în maximum 15 minute cu raportul personalizat."
-    },
+  "PREMIUM LOGISTICS": {
+    "en": "PREMIUM LOGISTICS",
+    "es": "LOGÍSTICA PREMIUM",
+    "it": "LOGISTICA PREMIUM",
+    "ru": "ПРЕМИУМ-ЛОГИСТИКА",
+    "fr": "LOGISTIQUE PREMIUM",
+    "de": "PREMIUM-LOGISTIK",
+    "ro": "LOGISTICĂ PREMIUM"
+  },
+  "LUXURY CONCIERGE": {
+    "en": "LUXURY CONCIERGE",
+    "es": "CONSERJERÍA DE LUJO",
+    "it": "CONCIERGE DI LUSSO",
+    "ru": "ЛЮКС-КОНСЬЕРЖ",
+    "fr": "CONCIERGERIE DE LUXE",
+    "de": "LUXUS-CONCIERGE",
+    "ro": "CONCIERGE DE LUX"
+  },
+  "Eligibility & Treatment Suitability Quiz": {
+    "en": "Eligibility & Treatment Suitability Quiz",
+    "es": "Cuestionario de elegibilidad e idoneidad del tratamiento",
+    "it": "Quiz di idoneità e ammissibilità al trattamento",
+    "ru": "Тест на пригодность к лечению",
+    "fr": "Quiz d'éligibilité et d'adéquation du traitement",
+    "de": "Eignungsquiz für Behandlungen",
+    "ro": "Chestionar de Eligibilitate și Tratamente"
+  },
+  "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.": {
+    "en": "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.",
+    "es": "Responda 6 preguntas rápidas para descubrir si califica para nuestros procedimientos premium acreditados por la JCI en Estambul.",
+    "it": "Rispondi a 6 semplici domande per scoprire se sei idoneo per le nostre procedure premium accreditate JCI a Istanbul.",
+    "ru": "Ответьте на 6 быстрых вопросов, чтобы узнать, подходите ли вы для наших премиальных процедур, аккредитованных JCI в Стамбуле.",
+    "fr": "Répondez à 6 questions rapides pour savoir si vous êtes éligible à nos procédures premium accréditées par la JCI à Istanbul.",
+    "de": "Beantworten Sie 6 kurze Fragen, um herauszufinden, ob Sie für unsere JCI-akkreditierten Premium-Behandlungen in Istanbul infrage kommen.",
+    "ro": "Răspunde la 6 întrebări rapide pentru a afla dacă ești eligibil pentru procedurile noastre premium din Istanbul."
+  },
+  "Step 1: Gender & Age": {
+    "en": "Step 1: Gender & Age",
+    "es": "Paso 1: Género y edad",
+    "it": "Passo 1: Genere e età",
+    "ru": "Шаг 1: Пол и возраст",
+    "fr": "Étape 1 : Sexe et âge",
+    "de": "Schritt 1: Geschlecht & Alter",
+    "ro": "Pasul 1: Gen & Vârstă"
+  },
+  "Male": {
+    "en": "Male",
+    "es": "Masculino",
+    "it": "Maschile",
+    "ru": "Мужской",
+    "fr": "Homme",
+    "de": "Männlich",
+    "ro": "Masculin"
+  },
+  "Female": {
+    "en": "Female",
+    "es": "Femenino",
+    "it": "Femminile",
+    "ru": "Женский",
+    "fr": "Femme",
+    "de": "Weiblich",
+    "ro": "Feminin"
+  },
+  "Age Group": {
+    "en": "Age Group",
+    "es": "Grupo de edad",
+    "it": "Gruppo d'età",
+    "ru": "Возрастная группа",
+    "fr": "Groupe d'âge",
+    "de": "Altersgruppe",
+    "ro": "Grupă de Vârstă"
+  },
+  "Step 2: Physical Metrics": {
+    "en": "Step 2: Physical Metrics",
+    "es": "Paso 2: Métricas físicas",
+    "it": "Passo 2: Parametri fisici",
+    "ru": "Шаг 2: Физические параметры",
+    "fr": "Étape 2 : Paramètres physiques",
+    "de": "Schritt 2: Physische Metriken",
+    "ro": "Pasul 2: Parametri Fizici"
+  },
+  "Enter your weight and height to calculate your Body Mass Index (BMI) automatically.": {
+    "en": "Enter your weight and height to calculate your Body Mass Index (BMI) automatically.",
+    "es": "Introduzca su peso y altura para calcular su Índice de Masa Corporal (IMC) automáticamente.",
+    "it": "Inserisci peso e altezza per calcolare automaticamente il tuo Indice di Massa Corporea (IMC).",
+    "ru": "Введите свой вес и рост, чтобы автоматически рассчитать индекс массы тела (ИМТ).",
+    "fr": "Saisissez votre poids et votre taille pour calculer automatiquement votre indice de masse corporelle (IMC).",
+    "de": "Geben Sie Ihr Gewicht und Ihre Körpergröße ein, um Ihren Body-Mass-Index (BMI) automatisch zu berechnen.",
+    "ro": "Introdu greutatea și înălțimea pentru a calcula automat Indicele de Masă Corporală (IMC)"
+  },
+  "Calculated BMI:": {
+    "en": "Calculated BMI:",
+    "es": "IMC calculado:",
+    "it": "IMC calcolato:",
+    "ru": "Рассчитанный ИМТ:",
+    "fr": "IMC calculé :",
+    "de": "Berechneter BMI:",
+    "ro": "IMC Calculat:"
+  },
+  "Step 3: Medical History": {
+    "en": "Step 3: Medical History",
+    "es": "Paso 3: Historial médico",
+    "it": "Passo 3: Storia medica",
+    "ru": "Шаг 3: Медицинская карта",
+    "fr": "Étape 3 : Antécédents médicaux",
+    "de": "Schritt 3: Medizinische Vorgeschichte",
+    "ro": "Pasul 3: Istoric Medical"
+  },
+  "Select any pre-existing medical conditions (select all that apply):": {
+    "en": "Select any pre-existing medical conditions (select all that apply):",
+    "es": "Seleccione cualquier condición médica preexistente (seleccione todas las que correspondan):",
+    "it": "Seleziona eventuali condizioni mediche preesistenti (seleziona tutte le voci applicabili):",
+    "ru": "Выберите имеющиеся заболевания (выберите все подходящие варианты):",
+    "fr": "Sélectionnez vos antécédents médicaux (cochez toutes les options applicables) :",
+    "de": "Wählen Sie alle bestehenden medizinischen Bedingungen aus (wählen Sie alle zutreffenden aus):",
+    "ro": "Selectează afecțiunile medicale preexistente (bifează toate cele aplicabile):"
+  },
+  "Diabetes": {
+    "en": "Diabetes",
+    "es": "Diabetes",
+    "it": "Diabete",
+    "ru": "Сахарный диабет",
+    "fr": "Diabète",
+    "de": "Diabetes",
+    "ro": "Diabet"
+  },
+  "Hypertension": {
+    "en": "Hypertension",
+    "es": "Hipertensión",
+    "it": "Ipertensione",
+    "ru": "Гипертония",
+    "fr": "Hypertension",
+    "de": "Bluthochdruck",
+    "ro": "Hipertensiune"
+  },
+  "Sleep Apnea": {
+    "en": "Sleep Apnea",
+    "es": "Apnea del sueño",
+    "it": "Apnea notturna",
+    "ru": "Апноэ во сне",
+    "fr": "Apnée du sommeil",
+    "de": "Schlafapnoe",
+    "ro": "Apnee în somn"
+  },
+  "None": {
+    "en": "None",
+    "es": "Ninguna",
+    "it": "Nessuna",
+    "ru": "Нет",
+    "fr": "Aucun",
+    "de": "Keine",
+    "ro": "Niciuna"
+  },
+  "Step 4: Visit Timeline": {
+    "en": "Step 4: Visit Timeline",
+    "es": "Paso 4: Plazos de la visita",
+    "it": "Passo 4: Tempi della visita",
+    "ru": "Шаг 4: Сроки визита",
+    "fr": "Étape 4 : Calendrier de la visite",
+    "de": "Schritt 4: Zeitplan des Besuchs",
+    "ro": "Pasul 4: Planificarea Vizitei"
+  },
+  "When are you planning to travel for your procedure?": {
+    "en": "When are you planning to travel for your procedure?",
+    "es": "¿Cuándo tiene previsto viajar para su procedimiento?",
+    "it": "Quando hai intenzione di viaggiare per la tua procedura?",
+    "ru": "Когда вы планируете поездку на процедуру?",
+    "fr": "Quand prévoyez-vous de voyager pour votre intervention ?",
+    "de": "Wann planen Sie die Reise für Ihre Behandlung?",
+    "ro": "Când plănuiești să călătorești pentru procedură?"
+  },
+  "Within 1 month": {
+    "en": "Within 1 month",
+    "es": "Dentro de 1 mes",
+    "it": "Entro 1 mese",
+    "ru": "В течение 1 месяца",
+    "fr": "D'ici 1 mois",
+    "de": "Innerhalb von 1 Monat",
+    "ro": "În decurs de 1 lună"
+  },
+  "2-3 months": {
+    "en": "2-3 months",
+    "es": "2-3 meses",
+    "it": "2-3 mesi",
+    "ru": "2-3 месяца",
+    "fr": "2-3 mois",
+    "de": "2-3 Monate",
+    "ro": "În 2-3 luni"
+  },
+  "Just researching": {
+    "en": "Just researching",
+    "es": "Solo investigando",
+    "it": "Solo per informazione",
+    "ru": "Просто изучаю информацию",
+    "fr": "Recherche simple",
+    "de": "Nur zur Recherche",
+    "ro": "Doar cercetez"
+  },
+  "Step 5: Personal Goal": {
+    "en": "Step 5: Personal Goal",
+    "es": "Paso 5: Objetivo personal",
+    "it": "Passo 5: Obiettivo personale",
+    "ru": "Шаг 5: Личная цель",
+    "fr": "Étape 5 : Objectif personnel",
+    "de": "Schritt 5: Persönliches Ziel",
+    "ro": "Pasul 5: Obiectivul Personal"
+  },
+  "What is your primary goal for this treatment?": {
+    "en": "What is your primary goal for this treatment?",
+    "es": "¿Cuál es su objetivo principal para este tratamiento?",
+    "it": "Qual è il tuo obiettivo principale per questo trattamento?",
+    "ru": "Какова ваша основная цель этого лечения?",
+    "fr": "Quel est votre objectif principal pour ce traitement ?",
+    "de": "Was ist Ihr Hauptziel bei dieser Behandlung?",
+    "ro": "Care este scopul tău principal pentru acest tratament?"
+  },
+  "Health improvement": {
+    "en": "Health improvement",
+    "es": "Mejora de la salud",
+    "it": "Miglioramento della salute",
+    "ru": "Улучшение здоровья",
+    "fr": "Amélioration de la santé",
+    "de": "Gesundheitsverbesserung",
+    "ro": "Îmbunătățirea sănătății"
+  },
+  "Aesthetic confidence": {
+    "en": "Aesthetic confidence",
+    "es": "Confianza estética",
+    "it": "Fiducia estetica",
+    "ru": "Эстетическая уверенность",
+    "fr": "Confiance esthétique",
+    "de": "Ästhetisches Selbstvertrauen",
+    "ro": "Încredere estetică"
+  },
+  "All of the above": {
+    "en": "All of the above",
+    "es": "Todo lo anterior",
+    "it": "Tutto il precedente",
+    "ru": "Все вышеперечисленное",
+    "fr": "Tout ce qui précède",
+    "de": "Alles oben genannte",
+    "ro": "Toate cele de mai sus"
+  },
+  "Analyzing your clinical parameters...": {
+    "en": "Analyzing your clinical parameters...",
+    "es": "Analizando sus parámetros clínicos...",
+    "it": "Analisi dei parametri clinici...",
+    "ru": "Анализ ваших клинических параметров...",
+    "fr": "Analyse de vos paramètres cliniques...",
+    "de": "Analyse Ihrer klinischen Parameter...",
+    "ro": "Se analizează parametrii clinici..."
+  },
+  "Please wait while our medical algorithm reviews your safety criteria.": {
+    "en": "Please wait while our medical algorithm reviews your safety criteria.",
+    "es": "Espere mientras nuestro algoritmo médico revisa sus criterios de seguridad.",
+    "it": "Attendere mentre il nostro algoritmo medico esamina i criteri di sicurezza.",
+    "ru": "Пожалуйста, подождите, пока наш медицинский алгоритм проверяет ваши критерии безопасности.",
+    "fr": "Veuillez patienter pendant que notre algorithme médical examine vos critères de sécurité.",
+    "de": "Bitte warten Sie, während unser medizinischer Algorithmus Ihre Sicherheitskriterien überprüft.",
+    "ro": "Vă rugăm să așteptați în timp ce algoritmul nostru medical evaluează criteriile de siguranță."
+  },
+  "Step 6: Secure Lead Capture": {
+    "en": "Step 6: Secure Lead Capture",
+    "es": "Paso 6: Envío seguro",
+    "it": "Passo 6: Invio sicuro",
+    "ru": "Шаг 6: Безопасный ввод данных",
+    "fr": "Étape 6 : Envoi sécurisé",
+    "de": "Schritt 6: Sichere Datenerfassung",
+    "ro": "Pasul 6: Trimitere Securizată"
+  },
+  "Provide your details to receive your official clinical suitability report.": {
+    "en": "Provide your details to receive your official clinical suitability report.",
+    "es": "Proporcione sus datos para recibir su informe oficial de idoneidad clínica.",
+    "it": "Fornisci i tuoi dettagli per ricevere il tuo rapporto ufficiale di idoneità clinica.",
+    "ru": "Предоставьте свои контактные данные, чтобы получить официальный отчет о клинической пригодности.",
+    "fr": "Fournissez vos coordonnées pour recevoir votre rapport officiel d'éligibilité clinique.",
+    "de": "Geben Sie Ihre Daten an, um Ihren offiziellen klinischen Eignungsbericht zu erhalten.",
+    "ro": "Introdu datele de contact pentru a primi raportul oficial de eligibilitate clinică."
+  },
+  "Select Country": {
+    "en": "Select Country",
+    "es": "Seleccionar país",
+    "it": "Seleziona Paese",
+    "ru": "Выберите страну",
+    "fr": "Seleccionar le pays",
+    "de": "Land auswählen",
+    "ro": "Selectează Țara"
+  },
+  "Submit My Evaluation": {
+    "en": "Submit My Evaluation",
+    "es": "Enviar mi evaluación",
+    "it": "Invia la mia valutazione",
+    "ru": "Отправить мою оценку",
+    "fr": "Soumettre mon évaluation",
+    "de": "Meine Bewertung abschicken",
+    "ro": "Trimite Evaluarea Mea"
+  },
+  "Your data is encrypted and strictly used for medical assessment.": {
+    "en": "Your data is encrypted and strictly used for medical assessment.",
+    "es": "Sus datos están cifrados y se utilizan estrictamente para la evaluación médica.",
+    "it": "I tuoi dati sono crittografati e utilizzati esclusivamente per la valutazione medica.",
+    "ru": "Ваши данные зашифрованы и используются исключительно для медицинской оценки.",
+    "fr": "Vos données sont cryptées et strictly utilisées pour l'évaluation médicale.",
+    "de": "Ihre Daten werden verschlüsselt und ausschließlich für die medizinische Beurteilung verwendet.",
+    "ro": "Datele tale sunt criptate și folosite strict pentru evaluarea medicală."
+  },
+  "Evaluation Submitted Successfully!": {
+    "en": "Evaluation Submitted Successfully!",
+    "es": "¡Evaluación enviada con éxito!",
+    "it": "Valutazione inviata con successo!",
+    "ru": "Оценка успешно отправлена!",
+    "fr": "Évaluation soumise avec succès !",
+    "de": "Bewertung erfolgreich abgeschickt!",
+    "ro": "Evaluarea a fost trimisă cu succes!"
+  },
+  "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.": {
+    "en": "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.",
+    "es": "Un coordinador médico se pondrá en contacto con usted en WhatsApp en un plazo de 15 minutos con su informe personalizado.",
+    "it": "Un coordinatore medico ti contatterà su WhatsApp entro 15 minuti con il tuo rapporto personalizzato.",
+    "ru": "Медицинский координатор свяжется с вами в WhatsApp в течение 15 минут с вашим индивидуальным отчетом.",
+    "fr": "Un coordinateur médical vous contactera sur WhatsApp dans les 15 minutes avec votre rapport personnalisé.",
+    "de": "Ein medizinischer Koordinator wird Sie innerhalb von 15 Minuten per WhatsApp kontaktieren, um Ihnen Ihren individuellen Bericht zuzusenden.",
+    "ro": "Un coordonator medical vă va contacta pe WhatsApp în maximum 15 minute cu raportul personalizat."
+  },
     "Published:": {
       "en": "Published:",
       "ro": "Publicat:",
@@ -5856,6 +6090,222 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "fr": "Dernière mise à jour :",
       "de": "Zuletzt aktualisiert:"
     },
+  "The ultimate metabolic reset for sustainable weight loss.": {
+    "en": "The ultimate metabolic reset for sustainable weight loss.",
+    "es": "El reinicio metabólico definitivo para una pérdida de peso sostenible.",
+    "it": "Il reset metabolico definitivo per una perdita di peso sostenibile.",
+    "ru": "Идеальный метаболический сброс для устойчивого снижения веса.",
+    "fr": "La réinitialisation métabolique ultime pour une perte de poids durable.",
+    "de": "Der ultimative Stoffwechsel-Reset für nachhaltigen Gewichtsverlust.",
+    "ro": "Resetarea metabolică supremă pentru o pierdere în greutate sustenabilă."
+  },
+  "Comprehensive rejuvenation to restore your confidence.": {
+    "en": "Comprehensive rejuvenation to restore your confidence.",
+    "es": "Rejuvenecimiento integral para restaurar su confianza.",
+    "it": "Ringiovanimento completo per ridarti fiducia.",
+    "ru": "Комплексное омоложение для восстановления вашей уверенности.",
+    "fr": "Rajeunissement complet pour restaurer votre confiance.",
+    "de": "Umfassende Verjüngung, um Ihr Selbstvertrauen wiederherzustellen.",
+    "ro": "Reîntinerire completă pentru a-ți restabili încrederea."
+  },
+  "Precision fat removal for a perfectly contoured midsection and back.": {
+    "en": "Precision fat removal for a perfectly contoured midsection and back.",
+    "es": "Eliminación de grasa de precisión para un abdomen y espalda perfectamente contorneados.",
+    "it": "Rimozione del grasso di precisione per addome e schiena perfettamente contornati.",
+    "ru": "Точечное удаление жира для идеального контура живота и спины.",
+    "fr": "Élimination de la graisse de précision pour un abdomen et un dos parfaitement dessinés.",
+    "de": "Präzise Fettentfernung für eine perfekt konturierte Körpermitte und einen perfekt konturierten Rücken.",
+    "ro": "Îndepărtarea precisă a grăsimii pentru o zonă mediană și un spate perfect conturate."
+  },
+  "Sculpt your ultimate hourglass figure using your body's natural contours.": {
+    "en": "Sculpt your ultimate hourglass figure using your body's natural contours.",
+    "es": "Esculpa su silueta de reloj de arena ideal utilizando los contornos naturales de su cuerpo.",
+    "it": "Scolpisci la tua silhouette a clessidra ideale usando i contorni naturali del tuo corpo.",
+    "ru": "Скульптурирование вашей идеальной фигуры \"песочные часы\" с использованием естественных контуров тела.",
+    "fr": "Sculptez votre silhouette en sablier idéale en utilisant les contours naturels de votre corps.",
+    "de": "Formen Sie Ihre ultimative Sanduhr-Silhouette mithilfe der natürlichen Konturen Ihres Körpers.",
+    "ro": "Sculptează-ți silueta de clepsidră folosind contururile naturale ale corpului tău."
+  },
+  "Enhance your shape with industry-leading implants and expert precision.": {
+    "en": "Enhance your shape with industry-leading implants and expert precision.",
+    "es": "Realce su figura con implantes líderes en la industria y precisión experta.",
+    "it": "Migliora la tua forma con impianti leader del settore e precisione esperta.",
+    "ru": "Улучшите свои формы с помощью ведущих в отрасли имплантатов и высокой точности.",
+    "fr": "Améliorez votre silhouette grâce à des implants de pointe et à une précision d'expert.",
+    "de": "Verbessern Sie Ihre Form mit branchenführenden Implantaten und fachmännischer Präzision.",
+    "ro": "Îmbunătățește-ți forma cu implanturi de top din industrie și precizie expertă."
+  },
+  "The gold standard solution for significant weight loss and diabetes remission.": {
+    "en": "The gold standard solution for significant weight loss and diabetes remission.",
+    "es": "La solución estándar de oro para una pérdida de peso significativa y remisión de la diabetes.",
+    "it": "La soluzione gold standard per una significativa perdita di peso e la remissione del diabete.",
+    "ru": "Золотой стандарт для значительного снижения веса и ремиссии диабета.",
+    "fr": "La solution de référence pour une perte de poids importante et la rémission du diabète.",
+    "de": "Die Goldstandard-Lösung für signifikanten Gewichtsverlust und Diabetes-Remission.",
+    "ro": "Soluția standard de aur pentru o pierdere în greutate semnificativă și remisia diabetului."
+  },
+  "A reversible, zero-surgery approach to take control of your weight.": {
+    "en": "A reversible, zero-surgery approach to take control of your weight.",
+    "es": "Un enfoque reversible y sin cirugía para tomar el control de su peso.",
+    "it": "Un approccio reversibile e senza chirurgia per riprendere il controllo del tuo peso.",
+    "ru": "Обратимый метод без хирургического вмешательства для контроля веса.",
+    "fr": "Une approche réversible et sans chirurgie pour reprendre le contrôle de votre poids.",
+    "de": "Ein reversibler Ansatz ohne Operation, um Ihr Gewicht unter Kontrolle zu bekommen.",
+    "ro": "O abordare reversibilă, fără chirurgie, pentru a-ți controla greutatea."
+  },
+  "Dense, natural-looking results utilizing the world's most advanced microsurgical techniques.": {
+    "en": "Dense, natural-looking results utilizing the world's most advanced microsurgical techniques.",
+    "es": "Resultados densos y de aspecto natural utilizando las técnicas microquirúrgicas más avanzadas del mundo.",
+    "it": "Risultati densi e dall'aspetto naturale utilizzando le tecniche microchirurgiche più avanzate al mondo.",
+    "ru": "Густые результаты с естественным видом с использованием самых передовых микрохирургических методов в мире.",
+    "fr": "Des résultats denses et naturels utilisant les techniques microchirurgicales les plus avancées au monde.",
+    "de": "Dichte, natürlich aussehende Ergebnisse unter Anwendung der weltweit fortschrittlichsten mikrochirurgischen Techniken.",
+    "ro": "Rezultate dense, cu aspect natural, folosind cele mai avansate tehnici microchirurgicale din lume."
+  },
+  "2 Nights Premium Hospitalization Stay Included": {
+    "en": "2 Nights Premium Hospitalization Stay Included",
+    "es": "2 noches de hospitalización premium incluidas",
+    "it": "2 notti di degenza ospedaliera premium incluse",
+    "ru": "2 ночи премиум-госпитализации включены",
+    "fr": "2 nuits d'hospitalisation premium incluses",
+    "de": "2 Nächte Premium-Krankenhausaufenthalt inklusive",
+    "ro": "2 Nopți de Spitalizare Premium Incluse"
+  },
+  "Combined Dual-Surgeon Coordination": {
+    "en": "Combined Dual-Surgeon Coordination",
+    "es": "Coordinación combinada de dos cirujanos",
+    "it": "Coordinamento combinato con due chirurghi",
+    "ru": "Совместная координация двух хирургов",
+    "fr": "Coordination combinée de deux chirurgiens",
+    "de": "Kombinierte Kooperation von zwei Chirurgen",
+    "ro": "Coordonare Combinată cu Doi Chirurgi"
+  },
+  "Post-Op Garments Included": {
+    "en": "Post-Op Garments Included",
+    "es": "Prendas postoperatorias incluidas",
+    "it": "Guaine post-operatorie incluse",
+    "ru": "Послеоперационное белье включено",
+    "fr": "Vêtements postopératoires inclus",
+    "de": "Postoperative Kompressionsbekleidung inklusive",
+    "ro": "Corsete Post-Operatorii Incluse"
+  },
+  "1 Night Premium Hospitalization Stay Included": {
+    "en": "1 Night Premium Hospitalization Stay Included",
+    "es": "1 noche de hospitalización premium incluida",
+    "it": "1 notte di degenza ospedaliera premium inclusa",
+    "ru": "1 ночь премиум-госпитализации включена",
+    "fr": "1 nuit d'hospitalisation premium incluse",
+    "de": "1 Nacht Premium-Krankenhausaufenthalt inklusive",
+    "ro": "1 Noapte de Spitalizare Premium Inclusă"
+  },
+  "Advanced Vaser/Laser Technology": {
+    "en": "Advanced Vaser/Laser Technology",
+    "es": "Tecnología avanzada Vaser/Láser",
+    "it": "Tecnologia avanzata Vaser/Laser",
+    "ru": "Передовая технология Vaser/Laser",
+    "fr": "Technologie avancée Vaser/Laser",
+    "de": "Fortschrittliche Vaser-/Lasertechnologie",
+    "ro": "Tehnologie Vaser/Laser Avansată"
+  },
+  "Post-Op Lymphatic Drainage Consultation": {
+    "en": "Post-Op Lymphatic Drainage Consultation",
+    "es": "Consulta de drenaje linfático postoperatorio",
+    "it": "Consulenza per drenaggio linfatico post-operatorio",
+    "ru": "Послеоперационная консультация по лимфодренажу",
+    "fr": "Consultation de drainage lymphatique postopératoire",
+    "de": "Beratung zum postoperativen Lymphdrainage",
+    "ro": "Consultație Drenaj Limfatic Post-Operator"
+  },
+  "Strategic Fat Grafting Sculpting": {
+    "en": "Strategic Fat Grafting Sculpting",
+    "es": "Escultura mediante injerto de grasa estratégico",
+    "it": "Modellamento tramite innesto di grasso strategico",
+    "ru": "Скульптурирование путем стратегического липофилинга",
+    "fr": "Sculpture par transfert de graisse stratégique",
+    "de": "Strategische Eigenfetttransplantation zur Modellierung",
+    "ro": "Sculptare Strategică prin Grefare de Grăsime"
+  },
+  "Certified Recovery Materials Provided": {
+    "en": "Certified Recovery Materials Provided",
+    "es": "Materiales de recuperación certificados proporcionados",
+    "it": "Materiali di recupero certificati forniti",
+    "ru": "Предоставляются сертифицированные материалы для восстановления",
+    "fr": "Matériel de récupération certifié fourni",
+    "de": "Zertifizierte Materialien für die Genesung bereitgestellt",
+    "ro": "Materiale de Recuperare Certificate Oferite"
+  },
+  "FDA-Approved Lifetime Warranty Implants": {
+    "en": "FDA-Approved Lifetime Warranty Implants",
+    "es": "Implantes con garantía de por vida aprobados por la FDA",
+    "it": "Impianti approvati dalla FDA con garanzia a vita",
+    "ru": "Имплантаты с пожизненной гарантией, одобренные FDA",
+    "fr": "Implants approuvés par la FDA avec garantie à vie",
+    "de": "FDA-zugelassene Implantate mit lebenslanger Garantie",
+    "ro": "Implanturi cu Garanție pe Viață Aprobate de FDA"
+  },
+  "Rapid Recovery Protocols": {
+    "en": "Rapid Recovery Protocols",
+    "es": "Protocolos de recuperación rápida",
+    "it": "Protocolli di recupero rapido",
+    "ru": "Протоколы быстрого восстановления",
+    "fr": "Protocoles de récupération rapide",
+    "de": "Protokolle zur schnellen Genesung",
+    "ro": "Protocoale de Recuperare Rapidă"
+  },
+  "Comprehensive 1-Year Metabolic Follow-up": {
+    "en": "Comprehensive 1-Year Metabolic Follow-up",
+    "es": "Seguimiento metabólico integral de 1 año",
+    "it": "Follow-up metabolico completo di 1 anno",
+    "ru": "Комплексное 1-годичное метаболическое наблюдение",
+    "fr": "Suivi métabolique complet sur 1 an",
+    "de": "Umfassende 1-jährige metabolische Nachsorge",
+    "ro": "Monitorizare Metabolică Cuprinzătoare de 1 An"
+  },
+  "Same-Day Discharge (No Hospital Stay)": {
+    "en": "Same-Day Discharge (No Hospital Stay)",
+    "es": "Alta el mismo día (sin estancia hospitalaria)",
+    "it": "Dimissioni in giornata (nessun ricovero ospedaliero)",
+    "ru": "Выписка в тот же день (без пребывания в больнице)",
+    "fr": "Sortie le jour même (pas de séjour à l'hôpital)",
+    "de": "Entlassung am selben Tag (kein Krankenhausaufenthalt)",
+    "ro": "Externare în aceeași zi (fără spitalizare)"
+  },
+  "All-Inclusive Pre-Op Tests & Procedures": {
+    "en": "All-Inclusive Pre-Op Tests & Procedures",
+    "es": "Pruebas y procedimientos preoperatorios todo incluido",
+    "it": "Esami e procedure pre-operatorie tutto incluso",
+    "ru": "Все включено: предоперационные анализы и процедуры",
+    "fr": "Examens et procédures préopératoires tout compris",
+    "de": "All-Inclusive Voruntersuchungen & Verfahren",
+    "ro": "Analize și proceduri pre-operatorii all-inclusive"
+  },
+  "Day Clinic Procedure (No Hospital Stay)": {
+    "en": "Day Clinic Procedure (No Hospital Stay)",
+    "es": "Procedimiento en clínica de día (sin estancia hospitalaria)",
+    "it": "Procedura in clinica diurna (nessun ricovero ospedaliero)",
+    "ru": "Процедура в дневном стационаре (без пребывания в больнице)",
+    "fr": "Procédure en clinique de jour (pas de séjour à l'hôpital)",
+    "de": "Tagesklinisches Verfahren (kein Krankenhausaufenthalt)",
+    "ro": "Procedură în clinică de zi (fără spitalizare)"
+  },
+  "Advanced FUE / DHI Micro-Technology": {
+    "en": "Advanced FUE / DHI Micro-Technology",
+    "es": "Microtecnología avanzada FUE / DHI",
+    "it": "Microtecnologia avanzata FUE / DHI",
+    "ru": "Передовая микротехнология FUE / DHI",
+    "fr": "Micro-technologie avancée FUE / DHI",
+    "de": "Fortschrittliche FUE / DHI Mikrotechnologie",
+    "ro": "Micro-Tehnologie Avansată FUE / DHI"
+  },
+  "Certified Lifetime Growth Guarantee": {
+    "en": "Certified Lifetime Growth Guarantee",
+    "es": "Garantía de crecimiento de por vida certificada",
+    "it": "Garanzia di ricrescita a vita certificata",
+    "ru": "Сертифицированная пожизненная гарантия роста",
+    "fr": "Garantie de croissance à vie certifiée",
+    "de": "Zertifizierte lebenslange Anwuchsgarantie",
+    "ro": "Garanție de Creștere pe Viață Certificată"
+  },
     "Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.": {
       "en": "Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.",
       "ro": "Declinare de responsabilitate medicală: Informațiile clinice de pe acest site sunt doar în scopuri educaționale și informative. Acestea nu constituie sfaturi medicale, diagnostic sau tratament. Consultați întotdeauna un medic calificat cu privire la orice afecțiune medicală sau procedură chirurgicală în Turcia.",

@@ -181,7 +181,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
           {step > 1 && !isSuccess && !isLoading && (
             <button 
               onClick={() => setStep(step - 1)}
-              className="text-xs text-gray-400 hover:text-white uppercase tracking-widest font-bold transition-colors"
+              className="text-xs text-gray-400 hover:text-white uppercase tracking-widest font-bold transition-colors py-2 px-3 hover:bg-white/5 rounded-lg -mr-3"
             >
               {tUI('Back', lang)}
             </button>
@@ -203,7 +203,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
 
           {/* Loader State */}
           {isLoading ? (
-            <div className="p-10 md:p-16 text-center flex flex-col items-center justify-center min-h-[380px] animate-fade-in">
+            <div className="p-6 sm:p-10 md:p-16 text-center flex flex-col items-center justify-center min-h-[380px] animate-fade-in">
               <Loader2 className="w-16 h-16 text-accent animate-spin mb-8" strokeWidth={1.5} />
               <h4 className="text-2xl font-serif font-bold text-white mb-4 tracking-wide">
                 {loadingText}
@@ -214,7 +214,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
             </div>
           ) : isSuccess ? (
             /* Success State */
-            <div className="p-10 md:p-16 text-center flex flex-col items-center justify-center min-h-[420px] animate-scale-in">
+            <div className="p-6 sm:p-10 md:p-16 text-center flex flex-col items-center justify-center min-h-[420px] animate-scale-in">
               <div className="w-20 h-20 bg-green-500/10 border border-green-500/20 text-green-400 rounded-full flex items-center justify-center mb-8 shadow-lg">
                 <CheckCircle2 size={42} strokeWidth={1.5} />
               </div>
@@ -249,7 +249,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
             </div>
           ) : (
             /* Quiz Form Wizard */
-            <div className="p-8 md:p-12">
+            <div className="p-5 sm:p-8 md:p-12">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={step}
@@ -281,7 +281,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
                             key={g.val}
                             type="button"
                             onClick={() => setGender(g.val)}
-                            className={`p-6 rounded-2xl border-2 transition-all duration-300 text-center flex flex-col items-center gap-3 ${
+                            className={`p-4 sm:p-6 rounded-2xl border-2 transition-all duration-300 text-center flex flex-col items-center gap-3 ${
                               gender === g.val 
                                 ? 'bg-accent/10 border-accent text-accent shadow-[0_0_15px_rgba(212,175,55,0.2)]'
                                 : 'bg-white/5 border-white/10 text-gray-300 hover:border-white/20'
@@ -375,7 +375,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
 
                       {/* Display computed BMI indicator */}
                       {(weightVal > 0 && heightVal > 0) && (
-                        <div className="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-center justify-between animate-fade-in mb-8">
+                        <div className="bg-white/5 border border-white/10 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 animate-fade-in mb-8">
                           <div className="flex items-center gap-3">
                             <Activity className="text-accent" size={24} />
                             <div>
@@ -605,7 +605,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
                               id="quiz-country-prefix"
                               value={selectedPrefix}
                               onChange={(e) => setSelectedPrefix(e.target.value)}
-                              className="bg-transparent outline-none pl-4 pr-2 text-sm font-bold text-gray-300 border-r border-white/10 cursor-pointer"
+                              className="w-[90px] bg-transparent outline-none pl-4 pr-2 text-sm font-bold text-gray-300 border-r border-white/10 cursor-pointer"
                             >
                               {countryPrefixes.map(c => (
                                 <option key={c.prefix} value={c.prefix} className="bg-[#0b1626] text-white">

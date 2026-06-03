@@ -129,7 +129,7 @@ const ContactForm = ({ isEn: isEnProp, lang = 'en' }: any) => {
                  <label htmlFor="country-select" className="sr-only">Country Code</label>
                  <select 
                    id="country-select"
-                   className="pl-4 pr-2 py-4 bg-transparent outline-none text-sm font-bold border-r border-gray-200 cursor-pointer"
+                   className="w-[90px] pl-4 pr-2 py-4 bg-transparent outline-none text-sm font-bold border-r border-gray-200 cursor-pointer"
                    onChange={(e) => setSelectedCode(e.target.value)}
                    value={selectedCode}
                  >

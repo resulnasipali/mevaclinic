@@ -271,7 +271,7 @@ const AIAssistant = ({ lang = 'en' }: { lang?: string }) => {
               <button
                 type="button"
                 onClick={() => setStep(1)}
-                className="text-xs text-gray-400 hover:text-white uppercase tracking-widest font-bold mb-6 flex items-center transition-colors"
+                className="text-xs text-gray-400 hover:text-white uppercase tracking-widest font-bold mb-4 flex items-center transition-colors py-2 px-3 hover:bg-white/5 rounded-lg -ml-3"
               >
                 <ArrowRight size={14} className="mr-2 transform rotate-180" />
                 {tUI("Modify Section", lang)}
@@ -379,7 +379,7 @@ const AIAssistant = ({ lang = 'en' }: { lang?: string }) => {
               <button
                 type="button"
                 onClick={() => setStep(2)}
-                className="text-xs text-gray-400 hover:text-white uppercase tracking-widest font-bold mb-4 flex items-center transition-colors"
+                className="text-xs text-gray-400 hover:text-white uppercase tracking-widest font-bold mb-2 flex items-center transition-colors py-2 px-3 hover:bg-white/5 rounded-lg -ml-3"
               >
                 <ArrowRight size={14} className="mr-2 transform rotate-180" />
                 {tUI("Medical Parameters", lang)}

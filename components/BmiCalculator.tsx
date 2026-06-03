@@ -181,7 +181,7 @@ const BmiCalculator = ({ lang = 'en' }: { lang?: string }) => {
                       role="radio"
                       aria-checked={gender === val}
                       onClick={() => setGender(val)}
-                      className={`px-8 py-3 rounded-xl text-sm font-bold transition-all duration-200 ${
+                      className={`px-8 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 ${
                         gender === val
                           ? 'bg-prime text-white shadow-lg scale-[1.02]'
                           : 'text-gray-400 hover:text-prime'
@@ -375,7 +375,7 @@ const BmiCalculator = ({ lang = 'en' }: { lang?: string }) => {
                             value={name}
                             onChange={e => setName(e.target.value)}
                             required
-                            className="border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
+                            className="border border-gray-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
                           />
                           <input
                             type="tel"
@@ -383,13 +383,13 @@ const BmiCalculator = ({ lang = 'en' }: { lang?: string }) => {
                             value={phone}
                             onChange={e => setPhone(e.target.value)}
                             required
-                            className="border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
+                            className="border border-gray-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20"
                           />
                         </div>
                         <button
                           type="submit"
                           disabled={sending}
-                          className="w-full bg-accent text-prime font-bold py-3 rounded-xl shadow hover:bg-yellow-400 transition-all text-sm disabled:opacity-60"
+                          className="w-full bg-accent text-prime font-bold py-3.5 rounded-xl shadow hover:bg-yellow-400 transition-all text-sm disabled:opacity-60"
                         >
                           {sending ? (tUI("Sending…", lang)) : (tUI("Request Callback in 15 min", lang))}
                         </button>
