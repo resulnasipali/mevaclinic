@@ -164,7 +164,7 @@ export async function POST(req: Request) {
       try {
         const resend = new Resend(process.env.RESEND_API_KEY);
         const data = await resend.emails.send({
-          from: 'Meva Clinic System <onboarding@resend.dev>',
+          from: 'Meva Clinic System <system@mevaclinic.com>',
           to: toEmail,
           subject: subject,
           html: htmlContent,
