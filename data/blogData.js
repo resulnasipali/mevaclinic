@@ -16,7 +16,8 @@ export const blogPosts = [
       ro: "Descoperă cum lamele de safir revoluționează densitatea și aspectul natural al transplantului de păr modern."
     },
     date: "2026-04-15",
-    author: "MD Harun"
+    author: "MD Harun A.",
+    authorFullName: "Dr. Harun Aksoy"
   },
   {
     id: 2,
@@ -35,7 +36,8 @@ export const blogPosts = [
       ro: "Explorarea preciziei sub-milimetrice a sistemului S7 în țintirea tumorilor complexe."
     },
     date: "2026-04-10",
-    author: "Prof. Dr. Mehmet Yılmaz"
+    author: "Prof. Dr. Mehmet Y.",
+    authorFullName: "Prof. Dr. Mehmet Aksoy"
   },
   {
     id: 3,
@@ -54,7 +56,8 @@ export const blogPosts = [
       ro: "Cum veziculele extracelulare accelerează recuperarea post-operatorie și regenerarea țesuturilor."
     },
     date: "2026-04-05",
-    author: "Dr. Ayşe Kaya"
+    author: "Dr. Ayşe K.",
+    authorFullName: "Dr. Ayşe Yılmaz"
   },
   {
     id: 4,
@@ -73,7 +76,8 @@ export const blogPosts = [
       ro: "Înțelegerea standardului de aur global pentru calitatea clinică și siguranța pacienților."
     },
     date: "2026-03-28",
-    author: "Meva Medical Board"
+    author: "Meva Medical Board",
+    authorFullName: "Meva Medical Board"
   },
   {
     id: 5,
@@ -92,7 +96,8 @@ export const blogPosts = [
       ro: "Un ghid detaliat despre modul în care Meva Clinic gestionează fiecare pas al itinerariului tău medical."
     },
     date: "2026-03-20",
-    author: "Patient Coordination Team"
+    author: "Patient Coordination Team",
+    authorFullName: "Patient Coordination Team"
   },
   {
     id: 6,
@@ -111,7 +116,8 @@ export const blogPosts = [
       ro: "De ce chirurgia asistată robotic reduce timpul de recuperare și îmbunătățește rezultatele metabolice."
     },
     date: "2026-03-15",
-    author: "MD Harun"
+    author: "MD Harun A.",
+    authorFullName: "Dr. Harun Aksoy"
   },
   {
     id: 7,
@@ -130,7 +136,8 @@ export const blogPosts = [
       ro: "Cum scanarea intraorală și wax-up-urile digitale elimină presupunerile în stomatologie."
     },
     date: "2026-03-10",
-    author: "Meva Dental Experts"
+    author: "Meva Dental Experts",
+    authorFullName: "Meva Dental Experts"
   },
   {
     id: 8,
@@ -149,7 +156,8 @@ export const blogPosts = [
       ro: "O privire asupra celor mai recente protocoale biologice disponibile în facilitățile noastre partenere."
     },
     date: "2026-03-05",
-    author: "Prof. Dr. Mehmet Yılmaz"
+    author: "Prof. Dr. Mehmet Y.",
+    authorFullName: "Prof. Dr. Mehmet Aksoy"
   },
   {
     id: 9,
@@ -168,7 +176,8 @@ export const blogPosts = [
       ro: "Rolul critic al neuro-monitorizării și al protocoalelor TIVA în siguranța chirurgicală modernă."
     },
     date: "2026-02-28",
-    author: "Anesthesia Board"
+    author: "Anesthesia Board",
+    authorFullName: "Anesthesia Board"
   },
   {
     id: 10,
@@ -187,7 +196,8 @@ export const blogPosts = [
       ro: "Informații despre ratele de succes de talie mondială ale Turciei în transplantul de ficat și rinichi."
     },
     date: "2026-02-20",
-    author: "Transplant Specialist Board"
+    author: "Transplant Specialist Board",
+    authorFullName: "Transplant Specialist Board"
   },
 
   // ─── IVF Cornerstone Articles ────────────────────────────────────────────────
@@ -210,6 +220,7 @@ export const blogPosts = [
     keywords: "IVF success rates Cyprus, rata de succes fertilizare in vitro Cipru, IVF cost comparison Europe",
     date: "2026-05-10",
     author: "Meva Clinic Medical Board",
+    authorFullName: "Meva Clinic Medical Board",
     readTime: 12,
     content: {
       en: {
@@ -272,7 +283,8 @@ export const blogPosts = [
     },
     keywords: "ovarian rejuvenation Turkey, PRP ovare pret, low AMH treatments, poor ovarian reserve IVF",
     date: "2026-05-08",
-    author: "Dr. Harun — Hair & Reproductive Medicine",
+    author: "Dr. Harun A.",
+    authorFullName: "Dr. Harun Aksoy",
     readTime: 10,
     content: {
       en: {
@@ -306,7 +318,6 @@ export const blogPosts = [
       }
     }
   },
-
   {
     id: 13,
     slug: "ngs-ai-embryo-selection-ivf",

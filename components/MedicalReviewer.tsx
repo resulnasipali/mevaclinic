@@ -7,8 +7,9 @@ import { ShieldCheck, GraduationCap, Star } from 'lucide-react';
 // Central registry of all Meva Clinic medical reviewers
 export const REVIEWERS = {
   bariatric: {
-    name: 'Dr. Cuma',
-    nameRo: 'Dr. Cuma',
+    name: 'Dr. Cuma A.',
+    nameRo: 'Dr. Cuma A.',
+    fullName: 'Dr. Cuma Aksoy',
     specialty: 'Bariatric Surgery · Sleeve Gastrectomy · Gastric Balloon',
     specialtyRo: 'Chirurgie Bariatrică · Gastrectomie în Mânecă · Balon Gastric',
     bio: 'Born in 1976, graduated from Istanbul University Cerrahpaşa Faculty of Medicine. General Surgery specialist from Haseki Training and Research Hospital. Performed 10,000+ obesity surgeries (Sleeve Gastrectomy, Gastric Balloon) over the last 10 years.',
@@ -24,8 +25,9 @@ export const REVIEWERS = {
     url: 'https://www.mevaclinic.com/en/about-us',
   },
   hair: {
-    name: 'MD Harun',
-    nameRo: 'MD Harun',
+    name: 'MD Harun A.',
+    nameRo: 'MD Harun A.',
+    fullName: 'Dr. Harun Aksoy',
     specialty: 'Hair & Eyebrow Transplant · Sapphire FUE · DHI',
     specialtyRo: 'Transplant de Păr & Sprâncene · Sapphire FUE · DHI',
     bio: 'Istanbul University (2011) graduate. Specialized in Sapphire FUE, DHI, and non-shaven techniques with over 12,000 successful procedures. Focuses on natural-looking results and patient satisfaction.',
@@ -40,8 +42,9 @@ export const REVIEWERS = {
     url: 'https://www.mevaclinic.com/en/about-us',
   },
   oncology: {
-    name: 'Prof. Dr. Gökhan',
-    nameRo: 'Prof. Dr. Gökhan',
+    name: 'Prof. Dr. Gökhan K.',
+    nameRo: 'Prof. Dr. Gökhan K.',
+    fullName: 'Prof. Dr. Gökhan Küçükay',
     specialty: 'Robotic Oncology · CyberKnife S7 Specialist',
     specialtyRo: 'Oncologie Robotică · Specialist CyberKnife S7',
     bio: 'PhD in Radiation Oncology with over 15 years of clinical experience. ESTRO certified specialist operating the CyberKnife S7 Synchrony system for non-invasive tumor ablation.',
@@ -54,8 +57,9 @@ export const REVIEWERS = {
     url: 'https://www.mevaclinic.com/en/about-us',
   },
   dental: {
-    name: 'Dr. Osman',
-    nameRo: 'Dr. Osman',
+    name: 'Dr. Osman B.',
+    nameRo: 'Dr. Osman B.',
+    fullName: 'Dr. Osman Bayram',
     specialty: 'Implantology & Digital Dentistry',
     specialtyRo: 'Implantologie & Stomatologie Digitală',
     bio: 'ITI Fellow and Straumann-certified implantologist with over 8,000 implant placements. Pioneer of full-arch digital smile design at Meva Clinic.',
@@ -68,8 +72,9 @@ export const REVIEWERS = {
     url: 'https://www.mevaclinic.com/en/about-us',
   },
   plastic: {
-    name: 'Prof. Dr. Daghan',
-    nameRo: 'Prof. Dr. Daghan',
+    name: 'Prof. Dr. Dağhan I.',
+    nameRo: 'Prof. Dr. Dağhan I.',
+    fullName: 'Prof. Dr. Dağhan Işık',
     specialty: 'Plastic & Reconstructive Surgery · ISAPS',
     specialtyRo: 'Chirurgie Plastică & Reconstructivă · ISAPS',
     bio: 'ISAPS member and Deep Plane facelift specialist. Known for vertical-vector rejuvenation techniques that achieve natural, long-lasting results.',
@@ -82,8 +87,9 @@ export const REVIEWERS = {
     url: 'https://www.mevaclinic.com/en/about-us',
   },
   organ: {
-    name: 'Dr. Fatih',
-    nameRo: 'Dr. Fatih',
+    name: 'Dr. Fatih E.',
+    nameRo: 'Dr. Fatih E.',
+    fullName: 'Dr. Fatih Erden',
     specialty: 'Transplant Surgery · Organ Procurement',
     specialtyRo: 'Chirurgie de Transplant · Prelevare de Organe',
     bio: 'TTS member and JCI Protocol certified transplant surgeon with extensive experience in kidney, liver and composite tissue allotransplantation.',
@@ -149,9 +155,9 @@ const MedicalReviewer = ({ reviewer, isEn = false }) => {
           </p>
 
           {/* Doctor name */}
+          <meta itemProp="name" content={reviewer.fullName} />
           <h3
             className="font-serif text-xl font-bold text-prime leading-tight mb-1"
-            itemProp="name"
           >
             {name}
           </h3>

@@ -16,7 +16,7 @@ export const treatmentRules = {
     },
     {
       id: "dr-ayse",
-      name: "Dr. Ayşe Kaya",
+      name: "Dr. Ayşe K.",
       specialty: "Plastic Surgery",
       successRate: "99.1%",
       experience: "12+ Years",
@@ -30,7 +30,7 @@ export const treatmentRules = {
     },
     {
       id: "prof-mehmet",
-      name: "Prof. Dr. Mehmet Yılmaz",
+      name: "Prof. Dr. Mehmet Y.",
       specialty: "Oncology",
       successRate: "97.8%",
       experience: "25+ Years",

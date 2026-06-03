@@ -101,8 +101,8 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
                           <GraduationCap size={16} /> {tUI("Author Expertise", lang)}
                        </h4>
                        <div className="flex flex-col items-center text-center">
-                          <div className="relative w-20 h-20 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 overflow-hidden border border-gray-100">
-                             <Image src="/images/blog/doctor-avatar.png" alt={post.author} fill className="object-cover" sizes="80px" />
+                          <div className="w-16 h-16 bg-[#0b1626] rounded-2xl flex items-center justify-center mb-4 border border-white/10 text-amber-500 shadow-md">
+                             <ShieldCheck size={32} />
                           </div>
                           <p className="font-bold text-[#0b1626] text-sm mb-1">{post.author}</p>
                           <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{tUI("Istanbul Medical Board", lang)}</p>

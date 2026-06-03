@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: currentExcerpt,
       type: "article",
       publishedTime: post.date,
-      authors: [post.author],
+      authors: [post.authorFullName || post.author],
       images: [
         {
           url: post.image,
@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: Props) {
     "image": post.image,
     "datePublished": post.date,
     "dateModified": post.date,
-    "author": { "@type": "Person", "name": post.author },
+    "author": { "@type": "Person", "name": post.authorFullName || post.author },
     "publisher": {
       "@type": "MedicalOrganization",
       "name": "Meva Clinic",
