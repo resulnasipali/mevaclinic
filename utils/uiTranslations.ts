@@ -5749,7 +5749,95 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ru": "Клиническая команда Meva"
   },
     "PREMIUM LOGISTICS": { "en": "PREMIUM LOGISTICS", "ro": "LOGISTICĂ PREMIUM" },
-    "LUXURY CONCIERGE": { "en": "LUXURY CONCIERGE", "ro": "CONCIERGE DE LUX" }
+    "LUXURY CONCIERGE": { "en": "LUXURY CONCIERGE", "ro": "CONCIERGE DE LUX" },
+    "Eligibility & Treatment Suitability Quiz": {
+      "en": "Eligibility & Treatment Suitability Quiz",
+      "ro": "Chestionar de Eligibilitate și Tratamente"
+    },
+    "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.": {
+      "en": "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.",
+      "ro": "Răspunde la 6 întrebări rapide pentru a afla dacă ești eligibil pentru procedurile noastre premium din Istanbul."
+    },
+    "Step 1: Gender & Age": {
+      "en": "Step 1: Gender & Age",
+      "ro": "Pasul 1: Gen & Vârstă"
+    },
+    "Male": { "en": "Male", "ro": "Masculin" },
+    "Female": { "en": "Female", "ro": "Feminin" },
+    "Age Group": { "en": "Age Group", "ro": "Grupă de Vârstă" },
+    "Step 2: Physical Metrics": {
+      "en": "Step 2: Physical Metrics",
+      "ro": "Pasul 2: Parametri Fizici"
+    },
+    "Enter your weight and height to calculate your Body Mass Index (BMI) automatically.": {
+      "en": "Enter your weight and height to calculate your Body Mass Index (BMI) automatically.",
+      "ro": "Introdu greutatea și înălțimea pentru a calcula automat Indicele de Masă Corporală (IMC)."
+    },
+    "Calculated BMI:": { "en": "Calculated BMI:", "ro": "IMC Calculat:" },
+    "Step 3: Medical History": {
+      "en": "Step 3: Medical History",
+      "ro": "Pasul 3: Istoric Medical"
+    },
+    "Select any pre-existing medical conditions (select all that apply):": {
+      "en": "Select any pre-existing medical conditions (select all that apply):",
+      "ro": "Selectează afecțiunile medicale preexistente (bifează toate cele aplicabile):"
+    },
+    "Diabetes": { "en": "Diabetes", "ro": "Diabet" },
+    "Hypertension": { "en": "Hypertension", "ro": "Hipertensiune" },
+    "Sleep Apnea": { "en": "Sleep Apnea", "ro": "Apnee în somn" },
+    "None": { "en": "None", "ro": "Niciuna" },
+    "Step 4: Visit Timeline": {
+      "en": "Step 4: Visit Timeline",
+      "ro": "Pasul 4: Planificarea Vizitei"
+    },
+    "When are you planning to travel for your procedure?": {
+      "en": "When are you planning to travel for your procedure?",
+      "ro": "Când plănuiești să călătorești pentru procedură?"
+    },
+    "Within 1 month": { "en": "Within 1 month", "ro": "În decurs de 1 lună" },
+    "2-3 months": { "en": "2-3 months", "ro": "În 2-3 luni" },
+    "Just researching": { "en": "Just researching", "ro": "Doar cercetez" },
+    "Step 5: Personal Goal": {
+      "en": "Step 5: Personal Goal",
+      "ro": "Pasul 5: Obiectivul Personal"
+    },
+    "What is your primary goal for this treatment?": {
+      "en": "What is your primary goal for this treatment?",
+      "ro": "Care este scopul tău principal pentru acest tratament?"
+    },
+    "Health improvement": { "en": "Health improvement", "ro": "Îmbunătățirea sănătății" },
+    "Aesthetic confidence": { "en": "Aesthetic confidence", "ro": "Încredere estetică" },
+    "All of the above": { "en": "All of the above", "ro": "Toate cele de mai sus" },
+    "Analyzing your clinical parameters...": {
+      "en": "Analyzing your clinical parameters...",
+      "ro": "Se analizează parametrii clinici..."
+    },
+    "Please wait while our medical algorithm reviews your safety criteria.": {
+      "en": "Please wait while our medical algorithm reviews your safety criteria.",
+      "ro": "Vă rugăm să așteptați în timp ce algoritmul nostru medical evaluează criteriile de siguranță."
+    },
+    "Step 6: Secure Lead Capture": {
+      "en": "Step 6: Secure Lead Capture",
+      "ro": "Pasul 6: Trimitere Securizată"
+    },
+    "Provide your details to receive your official clinical suitability report.": {
+      "en": "Provide your details to receive your official clinical suitability report.",
+      "ro": "Introdu datele de contact pentru a primi raportul oficial de eligibilitate clinică."
+    },
+    "Select Country": { "en": "Select Country", "ro": "Selectează Țara" },
+    "Submit My Evaluation": { "en": "Submit My Evaluation", "ro": "Trimite Evaluarea Mea" },
+    "Your data is encrypted and strictly used for medical assessment.": {
+      "en": "Your data is encrypted and strictly used for medical assessment.",
+      "ro": "Datele tale sunt criptate și folosite strict pentru evaluarea medicală."
+    },
+    "Evaluation Submitted Successfully!": {
+      "en": "Evaluation Submitted Successfully!",
+      "ro": "Evaluarea a fost trimisă cu succes!"
+    },
+    "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.": {
+      "en": "A medical coordinator will contact you on WhatsApp within 15 minutes with your custom report.",
+      "ro": "Un coordonator medical vă va contacta pe WhatsApp în maximum 15 minute cu raportul personalizat."
+    }
 };
 
 export function tUI(enString: string, lang: string): string {

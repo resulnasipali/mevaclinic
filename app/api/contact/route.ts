@@ -59,6 +59,41 @@ export async function POST(req: Request) {
         }
       }
 
+      let leadMetrics = finalBmi ? `BMI: ${finalBmi}` : '';
+      let leadMedical = finalCountry ? `Country: ${finalCountry}` : '';
+
+      if (type === 'suitability_quiz' && finalMessage && finalMessage.includes(' | ')) {
+        const parts = finalMessage.split(' | ');
+        let extractedAge = '';
+        let extractedHeight = '';
+        let extractedWeight = '';
+        let extractedHistory = '';
+        
+        for (const part of parts) {
+          const colonIndex = part.indexOf(':');
+          if (colonIndex > 0) {
+            const key = part.slice(0, colonIndex).trim().toLowerCase();
+            const value = part.slice(colonIndex + 1).trim();
+            if (key.includes('age')) {
+              extractedAge = value;
+            } else if (key.includes('height')) {
+              extractedHeight = value;
+            } else if (key.includes('weight')) {
+              extractedWeight = value;
+            } else if (key.includes('history')) {
+              extractedHistory = value;
+            }
+          }
+        }
+        
+        if (extractedHeight && extractedWeight) {
+          leadMetrics = `BMI: ${finalBmi} (H: ${extractedHeight}, W: ${extractedWeight}${extractedAge ? `, Age: ${extractedAge}` : ''})`;
+        }
+        if (extractedHistory) {
+          leadMedical = `History: ${extractedHistory} | Country: ${finalCountry}`;
+        }
+      }
+
       const newLead = {
         id: leadId,
         date: new Date().toISOString(),
@@ -67,8 +102,8 @@ export async function POST(req: Request) {
         email: finalEmail,
         treatment: finalProcedure,
         message: finalMessage,
-        metrics: finalBmi ? `BMI: ${finalBmi}` : '',
-        medicalCondition: finalCountry ? `Country: ${finalCountry}` : '',
+        metrics: leadMetrics,
+        medicalCondition: leadMedical,
         source: finalSource,
         status: 'New',
       };
@@ -83,7 +118,38 @@ export async function POST(req: Request) {
 
     // ─── 2. Setup Email Notification ─────────────────────────────────────────────
     const toEmail = process.env.NEXT_PUBLIC_CONTACT_EMAIL || 'info@mevaclinic.com';
-    const subject = `[Meva Lead] ${finalProcedure.toUpperCase()} - ${finalName}`;
+    const subject = type === 'suitability_quiz'
+      ? `New High-Intent Quiz Lead: ${finalName}`
+      : `[Meva Lead] ${finalProcedure.toUpperCase()} - ${finalName}`;
+
+    // Format suitability quiz details into beautiful rows if present
+    let quizDetailsRows = '';
+    if (type === 'suitability_quiz' && finalMessage && finalMessage.includes(' | ')) {
+      const parts = finalMessage.split(' | ');
+      for (const part of parts) {
+        const colonIndex = part.indexOf(':');
+        if (colonIndex > 0) {
+          const key = part.slice(0, colonIndex).trim();
+          const value = part.slice(colonIndex + 1).trim();
+          
+          let valStyle = 'color: #2d3748; font-weight: 500;';
+          if (key.toLowerCase().includes('bmi')) {
+            valStyle = 'color: #ef4444; font-weight: bold;';
+          } else if (key.toLowerCase().includes('history') || key.toLowerCase().includes('medical')) {
+            valStyle = value.toLowerCase() === 'none' ? 'color: #718096; font-style: italic;' : 'color: #e53e3e; font-weight: bold;';
+          } else if (key.toLowerCase().includes('goal') || key.toLowerCase().includes('timeline')) {
+            valStyle = 'color: #d4af37; font-weight: bold;';
+          }
+          
+          quizDetailsRows += `
+            <tr style="border-bottom: 1px solid #edf2f7;">
+              <td style="padding: 10px 0; font-weight: bold; color: #4a5568; width: 35%;">${key}:</td>
+              <td style="padding: 10px 0; ${valStyle}">${value}</td>
+            </tr>
+          `;
+        }
+      }
+    }
 
     // Premium HTML Email Template
     const htmlContent = `
@@ -91,7 +157,9 @@ export async function POST(req: Request) {
         <!-- Header -->
         <div style="text-align: center; border-bottom: 2px solid #d4af37; padding-bottom: 15px; margin-bottom: 20px;">
           <h2 style="color: #0b1626; margin: 0; font-size: 24px; font-weight: 700;">MEVA CLINIC</h2>
-          <p style="color: #d4af37; margin: 5px 0 0 0; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">Premium Patient Lead</p>
+          <p style="color: #d4af37; margin: 5px 0 0 0; font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;">
+            ${type === 'suitability_quiz' ? 'High-Intent Quiz Lead' : 'Premium Patient Lead'}
+          </p>
         </div>
 
         <!-- Details Table -->
@@ -140,13 +208,22 @@ export async function POST(req: Request) {
           </table>
         </div>
 
-        <!-- Message Block -->
+        <!-- Message Block / Structured Quiz Parameters -->
+        ${quizDetailsRows ? `
+        <div style="margin-bottom: 25px; padding: 20px; background-color: #fcfcf9; border-radius: 12px; border: 1px solid #d4af37; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+          <h3 style="color: #0b1626; font-size: 16px; margin-top: 0; margin-bottom: 15px; border-left: 3px solid #d4af37; padding-left: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px;">Clinical Quiz Parameters</h3>
+          <table style="width: 100%; border-collapse: collapse;">
+            ${quizDetailsRows}
+          </table>
+        </div>
+        ` : `
         ${finalMessage ? `
         <div style="margin-bottom: 25px; padding: 15px; background-color: #f7fafc; border-radius: 8px; border: 1px solid #e2e8f0;">
           <h4 style="margin-top: 0; color: #0b1626; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Message / Details:</h4>
           <p style="margin: 0; font-size: 14px; color: #4a5568; line-height: 1.6; white-space: pre-wrap;">${finalMessage}</p>
         </div>
         ` : ''}
+        `}
 
         <!-- Footer -->
         <div style="text-align: center; border-top: 1px solid #edf2f7; padding-top: 15px; margin-top: 25px; font-size: 12px; color: #a0aec0;">
