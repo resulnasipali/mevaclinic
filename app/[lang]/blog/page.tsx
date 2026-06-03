@@ -32,11 +32,11 @@ export default async function BlogArchivePage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Header />
+      <Header lang={safeLang} />
       <main className="flex-1">
         <BlogArchiveClient lang={safeLang} />
       </main>
-      <Footer />
+      <Footer lang={safeLang} />
     </div>
   );
 }

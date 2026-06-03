@@ -163,14 +163,14 @@ const getTranslatedPath = (currentPath: string, targetLang: string) => {
 };
 
 
-const Header = () => {
+const Header = ({ lang: propLang }: { lang?: string }) => {
   const [isOpen, setIsOpen]               = useState(false);
   const [langMenu, setLangMenu]           = useState(false);
   const [treatmentsMenu, setTreatmentsMenu] = useState(false);
   const [mobileAccordion, setMobileAccordion] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen]     = useState(false);
   const pathname = usePathname();
-  const lang = pathname?.split('/')[1] || 'en';
+  const lang = propLang || pathname?.split('/')[1] || 'en';
   const isEn = lang === 'en';
   const t = useTranslations('Navigation');
 
@@ -207,7 +207,7 @@ const Header = () => {
   return (
     <>
       <TopBar />
-      <header className="fixed top-0 w-full z-[1000] bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 lg:py-4 mt-[40px] lg:mt-[32px]">
+      <header className="fixed top-0 w-full z-[1000] bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 lg:py-4 mt-0 md:mt-[40px] lg:mt-[32px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
           {/* Logo */}
@@ -327,8 +327,48 @@ const Header = () => {
       </header>
 
       {/* Mobile Menu Panel */}
-      <div className={`fixed inset-0 top-[110px] bg-white z-[3000] transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto lg:hidden`}>
+      <div className={`fixed inset-0 top-[68px] md:top-[108px] bg-white z-[3000] transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto lg:hidden`}>
         <div className="p-8 flex flex-col gap-5">
+           {/* Premium Mobile Language Selector */}
+           <div className="border-b border-gray-100 pb-6 mb-2">
+             <p className="text-[11px] font-bold tracking-widest text-accent uppercase mb-3">
+               {tUI('Select Language', lang)}
+             </p>
+             <div className="grid grid-cols-2 gap-2">
+               {[
+                 { code: 'en', label: 'English', flag: 'gb' },
+                 { code: 'ro', label: 'Română', flag: 'ro' },
+                 { code: 'es', label: 'Español', flag: 'es' },
+                 { code: 'it', label: 'Italiano', flag: 'it' },
+                 { code: 'ru', label: 'Русский', flag: 'ru' },
+                 { code: 'fr', label: 'Français', flag: 'fr' },
+                 { code: 'de', label: 'Deutsch', flag: 'de' }
+               ].map((item) => {
+                 const isActive = lang === item.code;
+                 return (
+                   <Link
+                     key={item.code}
+                     href={getTranslatedPath(pathname, item.code)}
+                     onClick={() => setIsOpen(false)}
+                     className={`flex items-center gap-2.5 px-3 py-2.5 rounded-xl border transition-all duration-300 ${
+                       isActive
+                         ? 'border-accent bg-accent/5 text-prime font-semibold shadow-sm'
+                         : 'border-gray-100 hover:border-gray-200 text-gray-600'
+                     }`}
+                   >
+                     <img
+                       src={`https://flagcdn.com/w20/${item.flag}.png`}
+                       width="18"
+                       alt={item.label}
+                       className="rounded-sm shadow-sm"
+                     />
+                     <span className="text-[12px]">{item.label}</span>
+                   </Link>
+                 );
+               })}
+             </div>
+           </div>
+
            {simpleLinks.map(link => (
              <Link key={link.path} href={link.path} onClick={() => setIsOpen(false)} className="block text-xl font-medium text-prime border-b border-gray-100 pb-4">{link.name}</Link>
            ))}

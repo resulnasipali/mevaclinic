@@ -9,7 +9,7 @@ export default async function MedicalComparisonPage({ params }: { params: Promis
 
   return (
     <div className="min-h-screen flex flex-col bg-[#0b1626]">
-      <Header />
+      <Header lang={lang} />
       <main className="flex-1 pt-32 pb-24">
         <div className="container mx-auto px-4 max-w-7xl">
           <div className="text-center mb-16">
@@ -27,7 +27,7 @@ export default async function MedicalComparisonPage({ params }: { params: Promis
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

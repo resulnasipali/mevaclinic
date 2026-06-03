@@ -80,7 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Header />
+      <Header lang={safeLang} />
       <main className="flex-1">
         <script
           type="application/ld+json"
@@ -88,7 +88,7 @@ export default async function BlogPostPage({ params }: Props) {
         />
         <BlogPostClient post={post} lang={safeLang} />
       </main>
-      <Footer />
+      <Footer lang={safeLang} />
     </div>
   );
 }

@@ -62,7 +62,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Header />
+      <Header lang={lang} />
       <main className="flex-1 pt-32 pb-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <h1 className="text-4xl font-serif font-bold text-[#0b1626] mb-8">
@@ -83,7 +83,7 @@ export default async function PrivacyPolicyPage({ params }: { params: Promise<{ 
           </div>
         </div>
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }

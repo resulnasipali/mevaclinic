@@ -77,7 +77,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
   return (
     <>
-      <Header />
+      <Header lang={lang} />
 
       {/* ── ABOVE THE FOLD — renders instantly, zero JS ─────────────────────── */}
       <HeroSection t={heroT} lang={lang} />

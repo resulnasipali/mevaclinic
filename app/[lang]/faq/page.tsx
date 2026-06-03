@@ -9,7 +9,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
 
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
-      <Header />
+      <Header lang={lang} />
       <main className="flex-1 pt-32 pb-24">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="text-center mb-16">
@@ -23,7 +23,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang: stri
           <FAQSection lang={lang} isEn={isEn} />
         </div>
       </main>
-      <Footer />
+      <Footer lang={lang} />
     </div>
   );
 }
