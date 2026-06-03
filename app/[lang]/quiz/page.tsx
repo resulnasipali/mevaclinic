@@ -15,6 +15,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: tUI("30-second medical assessment to find your ideal treatment protocol in Istanbul.", lang),
     alternates: {
       canonical: `/${lang}/quiz`,
+      languages: {
+        'en': `/en/quiz`,
+        'ro': `/ro/quiz`,
+        'es': `/es/quiz`,
+        'it': `/it/quiz`,
+        'ru': `/ru/quiz`,
+        'fr': `/fr/quiz`,
+        'de': `/de/quiz`,
+        'x-default': `/en/quiz`,
+      }
     }
   };
 }

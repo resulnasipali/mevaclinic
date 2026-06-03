@@ -17,6 +17,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: tUI("Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.", lang),
     alternates: {
       canonical: `/${lang}/blog`,
+      languages: {
+        'en': `/en/blog`,
+        'ro': `/ro/blog`,
+        'es': `/es/blog`,
+        'it': `/it/blog`,
+        'ru': `/ru/blog`,
+        'fr': `/fr/blog`,
+        'de': `/de/blog`,
+        'x-default': `/en/blog`,
+      }
     },
     openGraph: {
       title: tUI("Clinical Intelligence Hub", lang),

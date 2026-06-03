@@ -41,6 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: meta.description,
     metadataBase: new URL('https://mevaclinic.com'),
     alternates: {
+      canonical: `/${lang}`,
       languages: {
         'en': '/en',
         'ro': '/ro',

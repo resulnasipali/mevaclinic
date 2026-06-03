@@ -15,6 +15,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: tUI("Get in touch with Meva Clinic in Istanbul for a free consultation and VIP health tourism packages.", lang),
     alternates: {
       canonical: `/${lang}/contact`,
+      languages: {
+        'en': `/en/contact`,
+        'ro': `/ro/contact`,
+        'es': `/es/contact`,
+        'it': `/it/contact`,
+        'ru': `/ru/contact`,
+        'fr': `/fr/contact`,
+        'de': `/de/contact`,
+        'x-default': `/en/contact`,
+      }
     }
   };
 }
