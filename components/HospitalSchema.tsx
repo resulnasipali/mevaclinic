@@ -7,8 +7,8 @@ const HospitalSchema = () => {
     "@type": "MedicalOrganization",
     "name": "Meva Clinic",
     "alternateName": "Meva Istanbul Healthcare",
-    "url": "https://mevaclinic.com",
-    "logo": "https://mevaclinic.com/logo.png",
+    "url": "https://www.mevaclinic.com",
+    "logo": "https://www.mevaclinic.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+90-532-467-59-41",

@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: meta.title,
     description: meta.description,
-    metadataBase: new URL('https://mevaclinic.com'),
+    metadataBase: new URL('https://www.mevaclinic.com'),
     alternates: {
       canonical: `/${lang}`,
       languages: {
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://mevaclinic.com/${lang}`,
+      url: `https://www.mevaclinic.com/${lang}`,
       siteName: 'Meva Clinic',
       locale: lang,
       type: 'website',
@@ -90,8 +90,8 @@ export default async function RootLayout({
             "@context": "https://schema.org",
             "@type": "MedicalOrganization",
             "name": "Meva Clinic",
-            "url": "https://mevaclinic.com",
-            "logo": "https://mevaclinic.com/logo.png",
+            "url": "https://www.mevaclinic.com",
+            "logo": "https://www.mevaclinic.com/logo.png",
             "description": "Premium VIP Health Tourism and Medical Procedures in Istanbul, Turkey.",
             "address": {
               "@type": "PostalAddress",

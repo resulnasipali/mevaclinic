@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/'],
     },
-    sitemap: 'https://mevaclinic.com/sitemap.xml',
+    sitemap: 'https://www.mevaclinic.com/sitemap.xml',
   };
 }

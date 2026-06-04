@@ -205,9 +205,9 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
   ];
 
   return (
-    <>
+    <div className="fixed top-0 w-full z-[1000]">
       <TopBar />
-      <header className="fixed top-0 w-full z-[1000] bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 lg:py-4 mt-0 md:mt-[40px] lg:mt-[32px]">
+      <header className="w-full bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 lg:py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
           {/* Logo */}
@@ -406,7 +406,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
       </div>
 
       <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} isEn={isEn} />
-    </>
+    </div>
   );
 };
 

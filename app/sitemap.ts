@@ -3,7 +3,7 @@ import { treatmentsData } from '../data/treatmentsData';
 import { blogPosts } from '../data/blogData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://mevaclinic.com';
+  const baseUrl = 'https://www.mevaclinic.com';
   const locales = ['en', 'ro', 'es', 'it', 'ru', 'fr', 'de'];
 
   // 1. Static Pages

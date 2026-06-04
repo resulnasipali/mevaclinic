@@ -78,7 +78,7 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
 
   return (
     <section
-      className="relative min-h-[90vh] md:min-h-screen flex items-center pt-20 overflow-hidden bg-[#0b1626]"
+      className="relative min-h-[90vh] md:min-h-screen flex items-center pt-24 md:pt-32 overflow-hidden bg-[#0b1626]"
       aria-label="Hero"
     >
       {/* Background image */}

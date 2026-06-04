@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: Props) {
     "name": reviewerObj.fullName,
     "medicalSpecialty": reviewerObj.specialty,
     "description": reviewerObj.bio || reviewerObj.credentials,
-    "url": `https://mevaclinic.com/${safeLang}/about-us`
+    "url": `https://www.mevaclinic.com/${safeLang}/about-us`
   } : undefined;
 
   // Structured Data (JSON-LD)
@@ -101,8 +101,8 @@ export default async function BlogPostPage({ params }: Props) {
     "publisher": {
       "@type": "MedicalOrganization",
       "name": "Meva Clinic",
-      "url": "https://mevaclinic.com",
-      "logo": { "@type": "ImageObject", "url": "https://mevaclinic.com/logo.png" },
+      "url": "https://www.mevaclinic.com",
+      "logo": { "@type": "ImageObject", "url": "https://www.mevaclinic.com/logo.png" },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Altunizade, Uskudar",
@@ -112,7 +112,7 @@ export default async function BlogPostPage({ params }: Props) {
         "addressCountry": "TR"
       }
     },
-    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://mevaclinic.com/${safeLang}/blog/${post.slug}` },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": `https://www.mevaclinic.com/${safeLang}/blog/${post.slug}` },
     "keywords": post.keywords || "",
     "timeRequired": post.readTime ? `PT${post.readTime}M` : undefined,
     "articleSection": post.category,
@@ -122,8 +122,8 @@ export default async function BlogPostPage({ params }: Props) {
   const medicalWebPageSchema = {
     "@context": "https://schema.org",
     "@type": "MedicalWebPage",
-    "@id": `https://mevaclinic.com/${safeLang}/blog/${post.slug}#webpage`,
-    "url": `https://mevaclinic.com/${safeLang}/blog/${post.slug}`,
+    "@id": `https://www.mevaclinic.com/${safeLang}/blog/${post.slug}#webpage`,
+    "url": `https://www.mevaclinic.com/${safeLang}/blog/${post.slug}`,
     "name": currentTitle,
     "description": currentExcerpt,
     "aspect": ["treatment", "recovery", "options"],
