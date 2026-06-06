@@ -4,29 +4,20 @@ import Footer from '@/components/Footer';
 import ComparisonSection from '@/components/ComparisonSection';
 import { tUI } from '@/utils/uiTranslations';
 
+import { buildMetadata } from '@/app/utils/seo';
+
 type Props = {
   params: Promise<{ lang: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
-  return {
+  return buildMetadata({
     title: `${tUI("The VIP Standard", lang)} | Meva Clinic`,
     description: tUI("See why international patients choose Meva Clinic over standard healthcare facilities. We don't just offer surgeries; we offer an end-to-end luxury experience.", lang),
-    alternates: {
-      canonical: `/${lang}/medical-comparison`,
-      languages: {
-        'en': `/en/medical-comparison`,
-        'ro': `/ro/medical-comparison`,
-        'es': `/es/medical-comparison`,
-        'it': `/it/medical-comparison`,
-        'ru': `/ru/medical-comparison`,
-        'fr': `/fr/medical-comparison`,
-        'de': `/de/medical-comparison`,
-        'x-default': `/en/medical-comparison`,
-      }
-    }
-  };
+    pathname: '/medical-comparison',
+    lang,
+  });
 }
 
 export default async function MedicalComparisonPage({ params }: { params: Promise<{ lang: string }> }) {

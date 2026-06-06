@@ -2,31 +2,21 @@ import { Metadata } from 'next';
 import QuizClient from '../../components/QuizClient';
 import { tUI } from '@/utils/uiTranslations';
 
+import { buildMetadata } from '@/app/utils/seo';
+
 type Props = {
   params: Promise<{ lang: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  return {
+  return buildMetadata({
     title: tUI("Treatment Suitability Test | Meva Clinic", lang),
     description: tUI("30-second medical assessment to find your ideal treatment protocol in Istanbul.", lang),
-    alternates: {
-      canonical: `/${lang}/quiz`,
-      languages: {
-        'en': `/en/quiz`,
-        'ro': `/ro/quiz`,
-        'es': `/es/quiz`,
-        'it': `/it/quiz`,
-        'ru': `/ru/quiz`,
-        'fr': `/fr/quiz`,
-        'de': `/de/quiz`,
-        'x-default': `/en/quiz`,
-      }
-    }
-  };
+    pathname: '/quiz',
+    lang,
+  });
 }
 
 export default async function QuizPage({ params }: Props) {

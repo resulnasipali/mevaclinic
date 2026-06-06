@@ -3,6 +3,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BlogArchiveClient from '../../components/BlogArchiveClient';
 import { tUI } from '@/utils/uiTranslations';
+import { buildMetadata } from '@/app/utils/seo';
 
 type Props = {
   params: Promise<{ lang: string }>;
@@ -10,30 +11,13 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
-  const isEn = lang === 'en';
   
-  return {
+  return buildMetadata({
     title: tUI("Clinical Intelligence Hub | Meva Clinic Insights", lang),
     description: tUI("Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.", lang),
-    alternates: {
-      canonical: `/${lang}/blog`,
-      languages: {
-        'en': `/en/blog`,
-        'ro': `/ro/blog`,
-        'es': `/es/blog`,
-        'it': `/it/blog`,
-        'ru': `/ru/blog`,
-        'fr': `/fr/blog`,
-        'de': `/de/blog`,
-        'x-default': `/en/blog`,
-      }
-    },
-    openGraph: {
-      title: tUI("Clinical Intelligence Hub", lang),
-      description: tUI("Deep medical analysis from Istanbul.", lang),
-      type: "website"
-    }
-  };
+    pathname: '/blog',
+    lang,
+  });
 }
 
 export default async function BlogArchivePage({ params }: Props) {

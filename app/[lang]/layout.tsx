@@ -33,35 +33,17 @@ const META_BY_LANG: Record<string, { title: string; description: string }> = {
   ru: { title: 'Meva Clinic | Премиум Медицинский Туризм Стамбул', description: 'VIP медицинские пакеты в Стамбуле — Бариатрическая хирургия, трансплантация волос, стоматология и пластическая хирургия с JCI-аккредитованными специалистами.' },
 };
 
+import { buildMetadata } from '@/app/utils/seo';
+
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   const meta = META_BY_LANG[lang] ?? META_BY_LANG['en'];
-  return {
+  return buildMetadata({
     title: meta.title,
     description: meta.description,
-    metadataBase: new URL('https://www.mevaclinic.com'),
-    alternates: {
-      canonical: `/${lang}`,
-      languages: {
-        'en': '/en',
-        'ro': '/ro',
-        'es': '/es',
-        'it': '/it',
-        'ru': '/ru',
-        'fr': '/fr',
-        'de': '/de',
-        'x-default': '/en',
-      },
-    },
-    openGraph: {
-      title: meta.title,
-      description: meta.description,
-      url: `https://www.mevaclinic.com/${lang}`,
-      siteName: 'Meva Clinic',
-      locale: lang,
-      type: 'website',
-    },
-  };
+    pathname: '/',
+    lang,
+  });
 }
 
 import PageTransition from '@/components/PageTransition';

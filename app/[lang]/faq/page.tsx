@@ -4,29 +4,20 @@ import Footer from '@/components/Footer';
 import FAQSection from '@/components/FAQSection';
 import { tUI } from '@/utils/uiTranslations';
 
+import { buildMetadata } from '@/app/utils/seo';
+
 type Props = {
   params: Promise<{ lang: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
-  return {
+  return buildMetadata({
     title: `${tUI("Frequently Asked Questions", lang)} | Meva Clinic`,
     description: tUI("Everything you need to know about the Meva Clinic experience.", lang),
-    alternates: {
-      canonical: `/${lang}/faq`,
-      languages: {
-        'en': `/en/faq`,
-        'ro': `/ro/faq`,
-        'es': `/es/faq`,
-        'it': `/it/faq`,
-        'ru': `/ru/faq`,
-        'fr': `/fr/faq`,
-        'de': `/de/faq`,
-        'x-default': `/en/faq`,
-      }
-    }
-  };
+    pathname: '/faq',
+    lang,
+  });
 }
 
 export default async function FAQPage({ params }: { params: Promise<{ lang: string }> }) {

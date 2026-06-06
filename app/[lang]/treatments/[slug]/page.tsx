@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import TreatmentDetailClient from '@/app/components/TreatmentDetailClient';
 import { treatmentsData } from '@/data/treatmentsData';
 import { getTreatmentImages } from '@/utils/getTreatmentImages';
+import { buildMetadata } from '@/app/utils/seo';
 
 type Props = {
   params: Promise<{ lang: string; slug: string }>;
@@ -26,7 +27,6 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang, slug } = await params;
-  const isEn = lang === 'en';
   
   const treatment = treatmentsData.find(t => t.id === slug);
   if (!treatment) return { title: 'Treatment Not Found' };
@@ -49,43 +49,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const keywords = getSafeVal(treatment.keywords, lang);
 
-  const images = getTreatmentImages(slug, title, lang);
-  const ogImages = [];
-  if (images && images.length > 0) {
-    ogImages.push({ url: images[0].url, alt: images[0].alt });
-  } else if ((treatment as any).heroImage) {
-    ogImages.push({ url: (treatment as any).heroImage, alt: title });
-  }
-
-  return {
+  return buildMetadata({
     title,
     description: desc,
+    pathname: `/treatments/${slug}`,
+    lang,
+    category: treatment.category,
     keywords,
-    alternates: {
-      canonical: `/${lang}/treatments/${slug}`,
-      languages: {
-        'en': `/en/treatments/${slug}`,
-        'ro': `/ro/treatments/${slug}`,
-        'es': `/es/treatments/${slug}`,
-        'it': `/it/treatments/${slug}`,
-        'ru': `/ru/treatments/${slug}`,
-        'fr': `/fr/treatments/${slug}`,
-        'de': `/de/treatments/${slug}`,
-        'x-default': `/en/treatments/${slug}`,
-      }
-    },
-    openGraph: {
-      title,
-      description: desc,
-      images: ogImages,
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title,
-      description: desc,
-      images: ogImages.map(img => img.url),
-    }
-  };
+  });
 }
 
 export default async function TreatmentPage({ params }: Props) {

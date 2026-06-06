@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import BlogPostClient from '@/app/components/BlogPostClient';
 import { blogPosts } from '@/data/blogData';
 import { REVIEWERS } from '@/components/MedicalReviewer';
+import { buildMetadata } from '@/app/utils/seo';
 
 type Props = {
   params: Promise<{ lang: string; slug: string }>;
@@ -20,38 +21,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const currentTitle = (post.title as any)[safeLang] || post.title['en'];
   const currentExcerpt = (post.excerpt as any)[safeLang] || post.excerpt['en'];
 
-  return {
+  return buildMetadata({
     title: `${currentTitle} | Meva Clinic Blog`,
     description: currentExcerpt,
-    alternates: {
-      canonical: `/${lang}/blog/${slug}`,
-      languages: {
-        'en': `/en/blog/${slug}`,
-        'ro': `/ro/blog/${slug}`,
-        'es': `/es/blog/${slug}`,
-        'it': `/it/blog/${slug}`,
-        'ru': `/ru/blog/${slug}`,
-        'fr': `/fr/blog/${slug}`,
-        'de': `/de/blog/${slug}`,
-        'x-default': `/en/blog/${slug}`,
-      }
-    },
-    openGraph: {
-      title: currentTitle,
-      description: currentExcerpt,
-      type: "article",
-      publishedTime: post.date,
-      authors: [post.authorFullName || post.author],
-      images: [
-        {
-          url: post.image,
-          width: 800,
-          height: 600,
-          alt: currentTitle,
-        }
-      ]
-    }
-  };
+    pathname: `/blog/${slug}`,
+    lang,
+    ogImage: post.image,
+    type: 'article',
+  });
 }
 
 export default async function BlogPostPage({ params }: Props) {
