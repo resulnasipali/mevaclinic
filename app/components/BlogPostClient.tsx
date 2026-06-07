@@ -53,7 +53,7 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
             className="flex items-center gap-3 mb-6"
           >
              <span className="px-4 py-1 bg-white/10 rounded-full text-[10px] font-black uppercase tracking-widest text-amber-500 border border-white/5">
-                {post.category}
+                {tUI(post.category, lang)}
              </span>
              <div className="flex items-center gap-1.5 px-3 py-1 bg-green-500/10 rounded-full border border-green-500/20 text-green-400">
                 <ShieldCheck size={12} />
@@ -79,7 +79,7 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
              <div className="flex items-center gap-2"><Calendar size={14} className="text-amber-500" /> {tUI("Published:", lang)} {post.date}</div>
              <div className="flex items-center gap-2"><Calendar size={14} className="text-amber-500" /> {tUI("Last Updated:", lang)} {post.lastUpdated || post.date}</div>
              <div className="flex items-center gap-2"><User size={14} className="text-amber-500" /> {post.author}</div>
-             <div className="flex items-center gap-2"><Clock size={14} className="text-amber-500" /> {tUI("8 Min Read", lang)}</div>
+             <div className="flex items-center gap-2"><Clock size={14} className="text-amber-500" /> {post.readTime || 8} {tUI("Min Read", lang)}</div>
           </motion.div>
         </div>
       </section>
@@ -231,9 +231,9 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
                  </motion.div>
 
                  {/* Medical Reviewer Section */}
-                 {reviewer && (
-                    <MedicalReviewer reviewer={reviewer} isEn={lang === 'en'} />
-                 )}
+                  {reviewer && (
+                     <MedicalReviewer reviewer={reviewer} lang={lang} />
+                  )}
 
                  {/* End CTA */}
                  <div className="mt-20 pt-10 border-t border-gray-100 flex flex-col md:flex-row items-center justify-between gap-8">
@@ -251,7 +251,7 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
       </section>
 
       <div className="max-w-7xl mx-auto px-4 mt-20">
-         <CertRow isEn={isEn} />
+         <CertRow lang={lang} />
       </div>
     </div>
   );

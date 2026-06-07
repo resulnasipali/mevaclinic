@@ -1,4 +1,148 @@
 export const T: Record<string, { en?: string, ro?: string, es?: string, it?: string, ru?: string, fr?: string, de?: string }> = {
+  "Transplant": {
+    "en": "Transplant",
+    "ro": "Transplant",
+    "es": "Trasplante",
+    "it": "Trapianto",
+    "ru": "Трансплантация",
+    "fr": "Transplantation",
+    "de": "Transplantation"
+  },
+  "Dental Tech": {
+    "en": "Dental Tech",
+    "ro": "Tehnologie Dentară",
+    "es": "Tecnología Dental",
+    "it": "Tecnologia Dentale",
+    "ru": "Стоматологические технологии",
+    "fr": "Tech Dentaire",
+    "de": "Zahntechnik"
+  },
+  "Bariatric": {
+    "en": "Bariatric",
+    "ro": "Bariatrie",
+    "es": "Bariátrica",
+    "it": "Bariatrica",
+    "ru": "Бариатрия",
+    "fr": "Bariatrique",
+    "de": "Bariatrie"
+  },
+  "Concierge": {
+    "en": "Concierge",
+    "ro": "Concierge",
+    "es": "Conserjería",
+    "it": "Servizio Concierge",
+    "ru": "Консьерж-сервис",
+    "fr": "Concierge",
+    "de": "Concierge-Service"
+  },
+  "Safety": {
+    "en": "Safety",
+    "ro": "Siguranță",
+    "es": "Seguridad",
+    "it": "Sicurezza",
+    "ru": "Безопасность",
+    "fr": "Sécurité",
+    "de": "Sicherheit"
+  },
+  "Regenerative": {
+    "en": "Regenerative",
+    "ro": "Regenerativă",
+    "es": "Regenerativa",
+    "it": "Rigenerativa",
+    "ru": "Регенеративная медицина",
+    "fr": "Régénérative",
+    "de": "Regenerativ"
+  },
+  "Hair Tech": {
+    "en": "Hair Tech",
+    "ro": "Tehnologia Părului",
+    "es": "Tecnología Capilar",
+    "it": "Tecnologia dei Capelli",
+    "ru": "Технологии трансплантации",
+    "fr": "Tech Capillaire",
+    "de": "Haartechnik"
+  },
+  "IVF": {
+    "en": "IVF",
+    "ro": "FIV",
+    "es": "FIV",
+    "it": "FIV",
+    "ru": "ЭКО",
+    "fr": "FIV",
+    "de": "IVF"
+  },
+  "All": {
+    "en": "All",
+    "ro": "Toate",
+    "es": "Todos",
+    "it": "Tutti",
+    "ru": "Все",
+    "fr": "Tout",
+    "de": "Alle"
+  },
+  "By subscribing, you agree to receive medical updates in compliance with HIPAA and GDPR standards.": {
+    "en": "By subscribing, you agree to receive medical updates in compliance with HIPAA and GDPR standards.",
+    "ro": "Prin abonare, sunteți de acord să primiți actualizări medicale în conformitate cu standardele HIPAA și GDPR.",
+    "es": "Al suscribirse, acepta recibir actualizaciones médicas de acuerdo con los estándares HIPAA y GDPR.",
+    "it": "Iscrivendoti, acconsenti a ricevere aggiornamenti medici in conformità con gli standard HIPAA e GDPR.",
+    "ru": "Подписываясь, вы соглашаетесь получать медицинские обновления в соответствии со стандартами HIPAA и GDPR.",
+    "fr": "En vous abonnant, vous acceptez de recevoir des informations médicales conformément aux normes HIPAA et GDPR.",
+    "de": "Mit dem Abonnement erklären Sie sich damit einverstanden, medizinische Updates in Übereinstimmung mit den HIPAA- und DSGVO-Standards zu erhalten."
+  },
+  "Your address has been added to our board registry. Welcome to Clinical Intelligence.": {
+    "en": "Your address has been added to our board registry. Welcome to Clinical Intelligence.",
+    "ro": "Adresa ta a fost adăugată în registrul comisiei. Bine ai venit la Clinical Intelligence.",
+    "es": "Su dirección ha sido añadida a nuestro registro de la junta. Bienvenido a Inteligencia Clínica.",
+    "it": "Il tuo indirizzo è stato aggiunto al registro del comitato. Benvenuto in Intelligenza Clinica.",
+    "ru": "Ваш адрес добавлен в реестр совета. Добро пожаловать в Клиническую аналитику.",
+    "fr": "Votre adresse a été ajoutée au registre du conseil. Bienvenue dans l'Intelligence Clinique.",
+    "de": "Ihre Adresse wurde in das Beiratsregister eingetragen. Willkommen bei Clinical Intelligence."
+  },
+  "Access Granted": {
+    "en": "Access Granted",
+    "ro": "Acces Permis",
+    "es": "Acceso Concedido",
+    "it": "Accesso Consentito",
+    "ru": "Доступ разрешен",
+    "fr": "Accès autorisé",
+    "de": "Zugang gewährt"
+  },
+  "VIP Board Access": {
+    "en": "VIP Board Access",
+    "ro": "Acces VIP Comisie",
+    "es": "Acceso VIP a la Junta",
+    "it": "Accesso VIP al Comitato",
+    "ru": "VIP доступ к совету",
+    "fr": "Accès VIP au Conseil",
+    "de": "VIP-Beiratszugang"
+  },
+  "Fact-Checked by Board": {
+    "en": "Fact-Checked by Board",
+    "ro": "Verificat de Comisie",
+    "es": "Verificado por la Junta",
+    "it": "Verificato dal Comitato",
+    "ru": "Проверено комиссией",
+    "fr": "Vérifié par le conseil",
+    "de": "Vom Beirat geprüft"
+  },
+  "TÜV Certified": {
+    "en": "TÜV Certified",
+    "ro": "Certificat TÜV",
+    "es": "Certificado por TÜV",
+    "it": "Certificato TÜV",
+    "ru": "Сертифицировано TÜV",
+    "fr": "Certifié TÜV",
+    "de": "TÜV-zertifiziert"
+  },
+  "Min Read": {
+    "en": "Min Read",
+    "ro": "Min. de lectură",
+    "es": "Min de lectura",
+    "it": "Minuti di lettura",
+    "ru": "мин. чтения",
+    "fr": "Min de lecture",
+    "de": "Min. Lesezeit"
+  },
   "2 Nights": { "it": "2 Notti", "es": "2 Noches", "fr": "2 Nuits", "de": "2 Nächte", "ru": "2 Ночи", "ro": "2 Nopți", "en": "2 Nights" },
   "7 Nights": { "it": "7 Notti", "es": "7 Noches", "fr": "7 Nuits", "de": "7 Nächte", "ru": "7 Ночей", "ro": "7 Nopți", "en": "7 Nights" },
   "14 Days": { "it": "14 Giorni", "es": "14 Días", "fr": "14 Jours", "de": "14 Tage", "ru": "14 Дней", "ro": "14 Zile", "en": "14 Days" },
@@ -2638,12 +2782,12 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
   },
   "Oncology": {
     "en": "Oncology",
+    "ro": "Oncologie",
     "es": "Oncología",
     "it": "Oncologia",
     "ru": "Онкология",
     "fr": "Oncologie",
-    "de": "Onkologie",
-    "ro": "Oncologie"
+    "de": "Onkologie"
   },
   "CyberKnife, Chemotherapy": {
     "en": "CyberKnife, Chemotherapy",
@@ -3105,13 +3249,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Accreditations & Certifications": {
     "en": "Accreditations & Certifications",
-    "es": "Accreditations & Certifications",
-    "it": "Accreditations & Certifications",
-    "ru": "Accreditations & Certifications",
-    "fr": "Accreditations & Certifications",
-    "de": "Accreditations & Certifications",
-      "ro": "Acreditări și Certificări"
-},
+    "ro": "Acreditări și Certificări",
+    "es": "Acreditaciones y Certificaciones",
+    "it": "Accreditamenti e Certificazioni",
+    "ru": "Аккредитации и сертификаты",
+    "fr": "Accréditations & Certifications",
+    "de": "Akkreditierungen & Zertifizierungen"
+  },
   "Recovery Timeline": {
     "en": "Recovery Timeline",
     "es": "Recovery Timeline",
@@ -4852,112 +4996,112 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Clinical Intelligence": {
     "en": "Clinical Intelligence",
-    "es": "Clinical Intelligence",
-    "it": "Clinical Intelligence",
-    "ru": "Clinical Intelligence",
-    "fr": "Clinical Intelligence",
-    "de": "Clinical Intelligence",
-      "ro": "Inteligență Clinică"
-},
+    "ro": "Inteligență Clinică",
+    "es": "Inteligencia Clínica",
+    "it": "Intelligenza Clinica",
+    "ru": "Клиническая аналитика",
+    "fr": "Intelligence Clinique",
+    "de": "Klinische Intelligenz"
+  },
   "The Authority Hub": {
     "en": "The Authority Hub",
-    "es": "The Authority Hub",
-    "it": "The Authority Hub",
-    "ru": "The Authority Hub",
-    "fr": "The Authority Hub",
-    "de": "The Authority Hub",
-      "ro": "Centrul de Autoritate"
-},
+    "ro": "Centrul de Autoritate",
+    "es": "El Centro de Autoridad",
+    "it": "L'Hub di Autorità",
+    "ru": "Авторитетный аналитический центр",
+    "fr": "Le Centre d'Autorité",
+    "de": "Das Autoritätszentrum"
+  },
   "Deep medical analysis and clinical updates from our multidisciplinary board in Istanbul.": {
     "en": "Deep medical analysis and clinical updates from our multidisciplinary board in Istanbul.",
-    "es": "Deep medical analysis and clinical updates from our multidisciplinary board in Istanbul.",
-    "it": "Deep medical analysis and clinical updates from our multidisciplinary board in Istanbul.",
-    "ru": "Deep medical analysis and clinical updates from our multidisciplinary board in Istanbul.",
-    "fr": "Deep medical analysis and clinical updates from our multidisciplinary board in Istanbul.",
-    "de": "Deep medical analysis and clinical updates from our multidisciplinary board in Istanbul.",
-      "ro": "Analiză medicală aprofundată și actualizări clinice de la consiliul nostru multidisciplinar din Istanbul."
-},
+    "ro": "Analiză medicală aprofundată și actualizări clinice de la consiliul nostru multidisciplinar din Istanbul.",
+    "es": "Análisis médico profundo y actualizaciones clínicas de nuestra junta multidisciplinaria en Estambul.",
+    "it": "Analisi medica approfondita e aggiornamenti clinici dal nostro comitato multidisciplinare a Istanbul.",
+    "ru": "Глубокий медицинский анализ и клинические обновления от нашего междисциплинарного совета в Стамбуле.",
+    "fr": "Analyses médicales approfondies et mises à jour cliniques de notre conseil multidisciplinaire à Istanbul.",
+    "de": "Tiefgehende medizinische Analysen und klinische Updates von unserem multidisziplinären Beirat in Istanbul."
+  },
   "Search clinical topics...": {
     "en": "Search clinical topics...",
-    "es": "Search clinical topics...",
-    "it": "Search clinical topics...",
-    "ru": "Search clinical topics...",
-    "fr": "Search clinical topics...",
-    "de": "Search clinical topics...",
-      "ro": "Caută subiecte clinice..."
-},
+    "ro": "Caută subiecte clinice...",
+    "es": "Buscar temas clínicos...",
+    "it": "Cerca argomenti clinici...",
+    "ru": "Поиск клинических тем...",
+    "fr": "Rechercher des sujets cliniques...",
+    "de": "Klinische Themen suchen..."
+  },
   "Read Full Analysis": {
     "en": "Read Full Analysis",
-    "es": "Read Full Analysis",
-    "it": "Read Full Analysis",
-    "ru": "Read Full Analysis",
-    "fr": "Read Full Analysis",
-    "de": "Read Full Analysis",
-      "ro": "Citește analiza completă"
-},
+    "ro": "Citește Analiza Completă",
+    "es": "Leer Análisis Completo",
+    "it": "Leggi l'Analisi Completa",
+    "ru": "Читать полный анализ",
+    "fr": "Lire l'analyse complète",
+    "de": "Vollständige Analyse lesen"
+  },
   "No clinical topics found matching your criteria.": {
     "en": "No clinical topics found matching your criteria.",
-    "es": "No clinical topics found matching your criteria.",
-    "it": "No clinical topics found matching your criteria.",
-    "ru": "No clinical topics found matching your criteria.",
-    "fr": "No clinical topics found matching your criteria.",
-    "de": "No clinical topics found matching your criteria.",
-      "ro": "Nu au fost găsite subiecte clinice care să corespundă criteriilor dvs."
-},
+    "ro": "Nu au fost găsite subiecte clinice care să corespundă criteriilor.",
+    "es": "No se encontraron temas clínicos que coincidan con sus criterios.",
+    "it": "Nessun argomento clinico trovato corrispondente ai criteri.",
+    "ru": "Клинических тем по вашему запросу не найдено.",
+    "fr": "Aucun sujet clinique trouvé correspondant à vos critères.",
+    "de": "Keine klinischen Themen gefunden, die Ihren Kriterien entsprechen."
+  },
   "Subscribe to Clinical Insights": {
     "en": "Subscribe to Clinical Insights",
-    "es": "Subscribe to Clinical Insights",
-    "it": "Subscribe to Clinical Insights",
-    "ru": "Subscribe to Clinical Insights",
-    "fr": "Subscribe to Clinical Insights",
-    "de": "Subscribe to Clinical Insights",
-      "ro": "Abonează-te la Clinical Insights"
-},
+    "ro": "Abonează-te la Clinical Insights",
+    "es": "Suscribirse a Perspectivas Clínicas",
+    "it": "Iscriviti a Approfondimenti Clinici",
+    "ru": "Подписаться на клинические новости",
+    "fr": "S'abonner aux publications cliniques",
+    "de": "Klinische Einblicke abonnieren"
+  },
   "Get the latest surgical protocols and medical technology updates directly from our Istanbul board.": {
     "en": "Get the latest surgical protocols and medical technology updates directly from our Istanbul board.",
-    "es": "Get the latest surgical protocols and medical technology updates directly from our Istanbul board.",
-    "it": "Get the latest surgical protocols and medical technology updates directly from our Istanbul board.",
-    "ru": "Get the latest surgical protocols and medical technology updates directly from our Istanbul board.",
-    "fr": "Get the latest surgical protocols and medical technology updates directly from our Istanbul board.",
-    "de": "Get the latest surgical protocols and medical technology updates directly from our Istanbul board.",
-      "ro": "Obține cele mai recente protocoale chirurgicale și actualizări ale tehnologiei medicale direct de la consiliul nostru din Istanbul."
-},
+    "ro": "Obține cele mai recente protocoale chirurgicale și actualizări tehnologice direct de la consiliul din Istanbul.",
+    "es": "Obtenga los últimos protocolos quirúrgicos y actualizaciones tecnológicas directamente de nuestra junta de Estambul.",
+    "it": "Ricevi gli ultimi protocolli chirurgici e aggiornamenti tecnologici direttamente dal comitato di Istanbul.",
+    "ru": "Получайте новейшие хирургические протоколы и обновления медицинских технологий прямо от совета в Стамбуле.",
+    "fr": "Recevez les derniers protocoles chirurgicaux et mises à jour technologiques directement de notre conseil d'Istanbul.",
+    "de": "Erhalten Sie die neuesten Operationsprotokolle und Medizintechnik-Updates direkt von unserem Beirat in Istanbul."
+  },
   "Enter your email": {
     "en": "Enter your email",
-    "es": "Enter your email",
-    "it": "Enter your email",
-    "ru": "Enter your email",
-    "fr": "Enter your email",
-    "de": "Enter your email",
-      "ro": "Introdu adresa ta de email"
-},
+    "ro": "Introdu adresa ta de email",
+    "es": "Introduce tu correo electrónico",
+    "it": "Inserisci la tua email",
+    "ru": "Введите ваш email",
+    "fr": "Entrez votre adresse e-mail",
+    "de": "Geben Sie Ihre E-Mail-Adresse ein"
+  },
   "Join the Board": {
     "en": "Join the Board",
-    "es": "Join the Board",
-    "it": "Join the Board",
-    "ru": "Join the Board",
-    "fr": "Join the Board",
-    "de": "Join the Board",
-      "ro": "Alăturați-vă consiliului"
-},
+    "ro": "Alăturați-vă consiliului",
+    "es": "Unirse a la Junta",
+    "it": "Unisciti al Comitato",
+    "ru": "Присоединиться к совету",
+    "fr": "Rejoindre le conseil",
+    "de": "Dem Beirat beitreten"
+  },
   "Back to Library": {
     "en": "Back to Library",
-    "es": "Back to Library",
-    "it": "Back to Library",
-    "ru": "Back to Library",
-    "fr": "Back to Library",
-    "de": "Back to Library",
-      "ro": "Înapoi la Bibliotecă"
-},
+    "ro": "Înapoi la Bibliotecă",
+    "es": "Volver a la Biblioteca",
+    "it": "Torna alla Biblioteca",
+    "ru": "Назад в библиотеку",
+    "fr": "Retour à la bibliothèque",
+    "de": "Zurück zur Bibliothek"
+  },
   "Board Certified Fact-Check": {
     "en": "Board Certified Fact-Check",
-    "es": "Board Certified Fact-Check",
-    "it": "Board Certified Fact-Check",
-    "ru": "Board Certified Fact-Check",
-    "fr": "Board Certified Fact-Check",
-    "de": "Board Certified Fact-Check",
-      "ro": "Verificare a faptelor certificată de consiliu"
-},
+    "ro": "Verificat de Comisie",
+    "es": "Verificación Médica Certificada",
+    "it": "Verifica Medica Certificata",
+    "ru": "Проверено комиссией",
+    "fr": "Vérification médicale certifiée",
+    "de": "Vom Fachbeirat verifiziert"
+  },
   "8 Min Read": {
     "en": "8 Min Read",
     "es": "8 Min Read",
@@ -4969,67 +5113,67 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Author Expertise": {
     "en": "Author Expertise",
-    "es": "Author Expertise",
-    "it": "Author Expertise",
-    "ru": "Author Expertise",
-    "fr": "Author Expertise",
-    "de": "Author Expertise",
-      "ro": "Expertiza autorului"
-},
+    "ro": "Expertiza Autorului",
+    "es": "Experiencia del Autor",
+    "it": "Competenza dell'Autore",
+    "ru": "Экспертиза автора",
+    "fr": "Expertise de l'auteur",
+    "de": "Autoren-Expertise"
+  },
   "Istanbul Medical Board": {
     "en": "Istanbul Medical Board",
-    "es": "Istanbul Medical Board",
-    "it": "Istanbul Medical Board",
-    "ru": "Istanbul Medical Board",
-    "fr": "Istanbul Medical Board",
-    "de": "Istanbul Medical Board",
-      "ro": "Consiliul Medical din Istanbul"
-},
+    "ro": "Consiliul Medical din Istanbul",
+    "es": "Junta Médica de Estambul",
+    "it": "Comitato Medico di Istanbul",
+    "ru": "Медицинский совет Стамбула",
+    "fr": "Conseil Médical d'Istanbul",
+    "de": "Medizinischer Beirat Istanbul"
+  },
   "Share Analysis": {
     "en": "Share Analysis",
-    "es": "Share Analysis",
-    "it": "Share Analysis",
-    "ru": "Share Analysis",
-    "fr": "Share Analysis",
-    "de": "Share Analysis",
-      "ro": "Partajează analiza"
-},
+    "ro": "Distribuie Analiza",
+    "es": "Compartir Análisis",
+    "it": "Condividi Analisi",
+    "ru": "Поделиться анализом",
+    "fr": "Partager l'analyse",
+    "de": "Analyse teilen"
+  },
   "Ready to start your journey?": {
     "en": "Ready to start your journey?",
-    "es": "Ready to start your journey?",
-    "it": "Ready to start your journey?",
-    "ru": "Ready to start your journey?",
-    "fr": "Ready to start your journey?",
-    "de": "Ready to start your journey?",
-      "ro": "Gata să începi călătoria ta?"
-},
+    "ro": "Pregătit să începi călătoria?",
+    "es": "¿Listo para comenzar tu viaje?",
+    "it": "Pronto a iniziare il tuo viaggio?",
+    "ru": "Готовы начать свое путешествие?",
+    "fr": "Prêt à commencer votre voyage ?",
+    "de": "Bereit, Ihre Reise zu beginnen?"
+  },
   "Free consultation · 24h response": {
     "en": "Free consultation · 24h response",
-    "es": "Free consultation · 24h response",
-    "it": "Free consultation · 24h response",
-    "ru": "Free consultation · 24h response",
-    "fr": "Free consultation · 24h response",
-    "de": "Free consultation · 24h response",
-      "ro": "Consultație gratuită · Răspuns în 24 de ore"
-},
+    "ro": "Consultație gratuită · Răspuns în 24 de ore",
+    "es": "Consulta gratuita · Respuesta en 24h",
+    "it": "Consulenza gratuita · Risposta in 24 ore",
+    "ru": "Бесплатная консультация · Ответ за 24 часа",
+    "fr": "Consultation gratuite · Réponse sous 24h",
+    "de": "Kostenlose Beratung · 24h Antwortzeit"
+  },
   "Get Free Evaluation": {
     "en": "Get Free Evaluation",
-    "es": "Get Free Evaluation",
-    "it": "Get Free Evaluation",
-    "ru": "Get Free Evaluation",
-    "fr": "Get Free Evaluation",
-    "de": "Get Free Evaluation",
-      "ro": "Obțineți evaluare gratuită"
-},
+    "ro": "Obține Evaluarea Gratuită",
+    "es": "Obtener Evaluación Gratis",
+    "it": "Ricevi Valutazione Gratuita",
+    "ru": "Получить бесплатную оценку",
+    "fr": "Obtenir une évaluation gratuite",
+    "de": "Kostenlose Bewertung anfordern"
+  },
   "Executive Clinical Summary": {
     "en": "Executive Clinical Summary",
-    "es": "Executive Clinical Summary",
-    "it": "Executive Clinical Summary",
-    "ru": "Executive Clinical Summary",
-    "fr": "Executive Clinical Summary",
-    "de": "Executive Clinical Summary",
-      "ro": "Rezumat Clinic Executiv"
-},
+    "ro": "Rezumat Clinic Executiv",
+    "es": "Resumen Clínico Ejecutivo",
+    "it": "Sintesi Clinica Esecutiva",
+    "ru": "Краткое клиническое резюме",
+    "fr": "Résumé clinique exécutif",
+    "de": "Klinische Zusammenfassung"
+  },
   "This technical briefing explores the architectural advancements in current surgical protocols. By prioritizing tissue biological integration and utilizing high-definition intraoperative guidance systems, we achieve outcomes that were previously considered beyond the reach of standard medicine.": {
     "en": "This technical briefing explores the architectural advancements in current surgical protocols. By prioritizing tissue biological integration and utilizing high-definition intraoperative guidance systems, we achieve outcomes that were previously considered beyond the reach of standard medicine.",
     "es": "This technical briefing explores the architectural advancements in current surgical protocols. By prioritizing tissue biological integration and utilizing high-definition intraoperative guidance systems, we achieve outcomes that were previously considered beyond the reach of standard medicine.",
@@ -5041,13 +5185,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Clinical Technical Note": {
     "en": "Clinical Technical Note",
-    "es": "Clinical Technical Note",
-    "it": "Clinical Technical Note",
-    "ru": "Clinical Technical Note",
-    "fr": "Clinical Technical Note",
-    "de": "Clinical Technical Note",
-      "ro": "Notă tehnică clinică"
-},
+    "ro": "Notă Tehnică Clinică",
+    "es": "Nota Técnica Clínica",
+    "it": "Nota Tecnica Clinica",
+    "ru": "Клиническая техническая заметка",
+    "fr": "Note technique clinique",
+    "de": "Klinisch-technischer Hinweis"
+  },
   "Data derived from our internal 2025 performance audit indicates a 15% reduction in inflammatory response when following the S7 protocol combined with advanced exosome priming.": {
     "en": "Data derived from our internal 2025 performance audit indicates a 15% reduction in inflammatory response when following the S7 protocol combined with advanced exosome priming.",
     "es": "Data derived from our internal 2025 performance audit indicates a 15% reduction in inflammatory response when following the S7 protocol combined with advanced exosome priming.",
@@ -5059,13 +5203,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Conclusion and Next Steps": {
     "en": "Conclusion and Next Steps",
-    "es": "Conclusion and Next Steps",
-    "it": "Conclusion and Next Steps",
-    "ru": "Conclusion and Next Steps",
-    "fr": "Conclusion and Next Steps",
-    "de": "Conclusion and Next Steps",
-      "ro": "Concluzie și Pașii Următori"
-},
+    "ro": "Concluzie și Următorii Pași",
+    "es": "Conclusión y Siguientes Pasos",
+    "it": "Conclusione e Prossimi Passi",
+    "ru": "Заключение и следующие шаги",
+    "fr": "Conclusion et étapes suivantes",
+    "de": "Fazit und nächste Schritte"
+  },
   "The convergence of robotics and biology marks a new era for international patients traveling to Istanbul for complex procedures.": {
     "en": "The convergence of robotics and biology marks a new era for international patients traveling to Istanbul for complex procedures.",
     "es": "The convergence of robotics and biology marks a new era for international patients traveling to Istanbul for complex procedures.",
@@ -5077,31 +5221,31 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Ready for a deeper evaluation?": {
     "en": "Ready for a deeper evaluation?",
-    "es": "Ready for a deeper evaluation?",
-    "it": "Ready for a deeper evaluation?",
-    "ru": "Ready for a deeper evaluation?",
-    "fr": "Ready for a deeper evaluation?",
-    "de": "Ready for a deeper evaluation?",
-      "ro": "Gata pentru o evaluare mai profundă?"
-},
+    "ro": "Pregătit pentru o evaluare mai profundă?",
+    "es": "¿Listo/a para una evaluación más profunda?",
+    "it": "Pronto per una valutazione più approfondita?",
+    "ru": "Готовы к более глубокой оценке?",
+    "fr": "Prêt pour une évaluation plus approfondie ?",
+    "de": "Bereit für eine tiefergehende Bewertung?"
+  },
   "Consult with our board regarding this specific topic.": {
     "en": "Consult with our board regarding this specific topic.",
-    "es": "Consult with our board regarding this specific topic.",
-    "it": "Consult with our board regarding this specific topic.",
-    "ru": "Consult with our board regarding this specific topic.",
-    "fr": "Consult with our board regarding this specific topic.",
-    "de": "Consult with our board regarding this specific topic.",
-      "ro": "Consultați-vă cu consiliul nostru cu privire la acest subiect specific."
-},
+    "ro": "Consultați comisia noastră cu privire la acest subiect specific.",
+    "es": "Consulte con nuestra junta sobre este tema específico.",
+    "it": "Consulta il nostro comitato su questo argomento specifico.",
+    "ru": "Проконсультируйтесь с нашим советом по этой теме.",
+    "fr": "Consultez notre conseil sur ce sujet spécifique.",
+    "de": "Konsultieren Sie unseren Beirat zu diesem Thema."
+  },
   "Book Board Consultation": {
     "en": "Book Board Consultation",
-    "es": "Book Board Consultation",
-    "it": "Book Board Consultation",
-    "ru": "Book Board Consultation",
-    "fr": "Book Board Consultation",
-    "de": "Book Board Consultation",
-      "ro": "Consultare Consiliu Carte"
-},
+    "ro": "Rezervă o consultație cu comisia",
+    "es": "Reservar Consulta con la Junta",
+    "it": "Prenota un Consulto con il Comitato",
+    "ru": "Записаться на консультацию с советом",
+    "fr": "Prendre rendez-vous avec le conseil",
+    "de": "Beiratskonsultation buchen"
+  },
   "Secure Contact": {
     "en": "Secure Contact",
     "es": "Secure Contact",
@@ -5345,13 +5489,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
   },
   "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.": {
     "en": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
-    "es": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
-    "it": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
-    "ru": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
-    "fr": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
-    "de": "Explore our deep medical analysis on hair restoration, oncology, and surgical precision in Istanbul.",
-      "ro": "Explorați analiza noastră medicală aprofundată privind restaurarea părului, oncologia și precizia chirurgicală în Istanbul."
-},
+    "ro": "Explorați analiza noastră medicală aprofundată privind restaurarea părului, oncologia și precizia chirurgicală în Istanbul.",
+    "es": "Explore nuestros profundos análisis médicos sobre restauración capilar, oncología y precisión quirúrgica en Estambul.",
+    "it": "Esplora le nostre approfondite analisi mediche sul trapianto di capelli, oncologia e precisione chirurgica a Istanbul.",
+    "ru": "Ознакомьтесь с нашим глубоким клиническим анализом в области трансплантации волос, онкологии и хирургической точности в Стамбуле.",
+    "fr": "Découvrez nos analyses médicales approfondies sur la restauration capillaire, l'oncologie et la précision chirurgicale à Istanbul.",
+    "de": "Erkunden Sie unsere tiefgehenden medizinischen Analysen zur Haarwiederherstellung, Onkologie und chirurgischen Präzision in Istanbul."
+  },
   "Clinical Intelligence Hub": {
     "en": "Clinical Intelligence Hub",
     "es": "Centro de Inteligencia Clínica",
@@ -5435,22 +5579,22 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "Ministry of Health TR": {
     "en": "Ministry of Health TR",
-    "es": "Ministry of Health TR",
-    "it": "Ministry of Health TR",
-    "ru": "Ministry of Health TR",
-    "fr": "Ministry of Health TR",
-    "de": "Ministry of Health TR",
-      "ro": "Ministerul Sănătății TR"
-},
+    "ro": "Ministerul Sănătății TR",
+    "es": "Ministerio de Salud TR",
+    "it": "Ministero della Salute TR",
+    "ru": "Минздрав Турции",
+    "fr": "Ministère de la Santé TR",
+    "de": "Gesundheitsministerium TR"
+  },
   "ISAPS Member": {
     "en": "ISAPS Member",
-    "es": "ISAPS Member",
-    "it": "ISAPS Member",
-    "ru": "ISAPS Member",
-    "fr": "ISAPS Member",
-    "de": "ISAPS Member",
-      "ro": "Membru ISAPS"
-},
+    "ro": "Membru ISAPS",
+    "es": "Miembro de ISAPS",
+    "it": "Membro ISAPS",
+    "ru": "Член ISAPS",
+    "fr": "Membre de l'ISAPS",
+    "de": "ISAPS-Mitglied"
+  },
   "Stomach reduction procedure by up to 80%, optimal for patients suffering from obesity.": {
     "en": "Stomach reduction procedure by up to 80%, optimal for patients suffering from obesity.",
     "es": "Stomach reduction procedure by up to 80%, optimal for patients suffering from obesity.",

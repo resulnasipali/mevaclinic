@@ -154,11 +154,11 @@ export default function BlogArchiveClient({ lang }: BlogArchiveClientProps) {
                             />
                           )}
                           <div className="absolute top-4 left-4 px-3.5 py-1.5 bg-white/90 backdrop-blur-md rounded-full text-[9px] font-black uppercase tracking-widest text-[#0b1626] border border-white/20 shadow-sm z-10">
-                             {post.category}
+                             {tUI(post.category, lang)}
                           </div>
                           <div className="absolute bottom-4 right-4 flex items-center gap-1.5 px-3 py-1 bg-[#0b1626]/80 backdrop-blur-md rounded-lg border border-white/10 text-white shadow-sm z-10">
                              <ShieldCheck size={12} className="text-amber-500" />
-                             <span className="text-[8px] font-bold uppercase tracking-wider">Fact-Checked by Board</span>
+                             <span className="text-[8px] font-bold uppercase tracking-wider">{tUI("Fact-Checked by Board", lang)}</span>
                           </div>
                        </div>
                        
@@ -216,7 +216,7 @@ export default function BlogArchiveClient({ lang }: BlogArchiveClientProps) {
                
                <div className="max-w-3xl mx-auto text-center">
                   <div className="inline-flex items-center space-x-2 py-1.5 px-3 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-black tracking-[0.2em] uppercase mb-6">
-                     <span>VIP Board Access</span>
+                     <span>{tUI("VIP Board Access", lang)}</span>
                   </div>
                   
                   <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 tracking-tight leading-tight">
@@ -238,9 +238,9 @@ export default function BlogArchiveClient({ lang }: BlogArchiveClientProps) {
                         <div className="w-12 h-12 bg-amber-500 text-[#0b1626] rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg shadow-amber-500/20">
                           <ShieldCheck size={24} />
                         </div>
-                        <h3 className="text-white font-serif font-bold text-lg mb-2">Access Granted</h3>
+                        <h3 className="text-white font-serif font-bold text-lg mb-2">{tUI("Access Granted", lang)}</h3>
                         <p className="text-slate-400 text-xs">
-                          Your address has been added to our board registry. Welcome to Clinical Intelligence.
+                          {tUI("Your address has been added to our board registry. Welcome to Clinical Intelligence.", lang)}
                         </p>
                       </motion.div>
                     ) : (
@@ -272,7 +272,7 @@ export default function BlogArchiveClient({ lang }: BlogArchiveClientProps) {
                   </AnimatePresence>
                   
                   <p className="text-[10px] text-slate-600 mt-8 font-sans">
-                     By subscribing, you agree to receive medical updates in compliance with HIPAA and GDPR standards.
+                     {tUI("By subscribing, you agree to receive medical updates in compliance with HIPAA and GDPR standards.", lang)}
                   </p>
                </div>
             </div>

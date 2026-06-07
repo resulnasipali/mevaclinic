@@ -57,11 +57,19 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   const reviewerObj = getReviewer(post.category);
+
+  const getReviewerVal = (reviewer: any, field: string, lang: string) => {
+    if (lang === 'en') return reviewer[field];
+    if (lang === 'ro') return reviewer[`${field}Ro`] || reviewer[field];
+    const suffix = lang.charAt(0).toUpperCase() + lang.slice(1);
+    return reviewer[`${field}${suffix}`] || reviewer[field];
+  };
+
   const reviewedByNode = reviewerObj ? {
     "@type": "Physician",
     "name": reviewerObj.fullName,
-    "medicalSpecialty": reviewerObj.specialty,
-    "description": reviewerObj.bio || reviewerObj.credentials,
+    "medicalSpecialty": getReviewerVal(reviewerObj, 'specialty', safeLang),
+    "description": getReviewerVal(reviewerObj, 'bio', safeLang) || getReviewerVal(reviewerObj, 'credentials', safeLang),
     "url": `https://www.mevaclinic.com/${safeLang}/about-us`
   } : undefined;
 
