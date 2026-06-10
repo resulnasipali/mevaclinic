@@ -1,5 +1,18 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "outputDirectory": ".next"
+  "outputDirectory": ".next",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "destination": "https://www.mevaclinic.com/:path*",
+      "permanent": true,
+      "has": [
+        {
+          "type": "host",
+          "value": "mevaclinic.com"
+        }
+      ]
+    }
+  ]
 }
