@@ -19,6 +19,21 @@ const nextConfig: NextConfig = {
   experimental: {
     nextScriptWorkers: true,
   },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'mevaclinic.com',
+          },
+        ],
+        destination: 'https://www.mevaclinic.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default withNextIntl(nextConfig);
