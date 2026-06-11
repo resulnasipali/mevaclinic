@@ -2,6 +2,7 @@
 import React from 'react';
 import { MapPin, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const LocalContext = ({ city = 'București', isEn = false }) => {
   if (isEn) return null; // Only show for Romanian version
@@ -23,7 +24,15 @@ const LocalContext = ({ city = 'București', isEn = false }) => {
         </Link>
       </div>
       <div className="w-full md:w-64 aspect-square rounded-3xl overflow-hidden shadow-xl grayscale hover:grayscale-0 transition-all duration-700">
-         <img src="https://images.unsplash.com/photo-1589110477381-2287aa391629?auto=format&fit=crop&q=80&w=600" alt="Bucharest to Istanbul" aria-label="Bucharest to Istanbul Medical Journey" loading="lazy" className="w-full h-full object-cover" />
+         <Image 
+           src="/images/bucharest-istanbul.webp" 
+           alt="Bucharest to Istanbul" 
+           aria-label="Bucharest to Istanbul Medical Journey" 
+           width={256}
+           height={256}
+           loading="lazy" 
+           className="w-full h-full object-cover" 
+         />
       </div>
     </div>
   );

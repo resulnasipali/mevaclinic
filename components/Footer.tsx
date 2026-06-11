@@ -62,6 +62,15 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
     setOpenSection(openSection === section ? null : section);
   };
 
+  const [loadMap, setLoadMap] = React.useState(false);
+
+  React.useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoadMap(true);
+    }, 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // Build opposite-language path for language switcher
   const getAltLangPath = () => {
     const path = pathname || '/';
@@ -84,14 +93,30 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
       itemType="https://schema.org/WPFooter"
     >
       {/* ── Map Section ── */}
-      <div className="relative h-[400px] md:h-[520px] w-full border-b border-white/5 overflow-hidden group">
+      <div 
+        className="relative h-[400px] md:h-[520px] w-full border-b border-white/5 overflow-hidden group"
+        onMouseEnter={() => setLoadMap(true)}
+        onTouchStart={() => setLoadMap(true)}
+      >
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0b1626] via-[#0b1626]/80 to-[#0b1626]/40 pointer-events-none transition-opacity duration-700 group-hover:opacity-80" />
-        <iframe
-          title="Meva Clinic Istanbul Location"
-          src={`https://maps.google.com/maps?q=Altunizade,Uskudar,Istanbul,Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=${lang === 'ro' ? 'ro' : lang}`}
-          className="w-full h-[140%] -mt-10 border-0 absolute inset-0 map-filter"
-          loading="lazy"
-        />
+        {loadMap ? (
+          <iframe
+            title="Meva Clinic Istanbul Location"
+            src={`https://maps.google.com/maps?q=Altunizade,Uskudar,Istanbul,Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=${lang === 'ro' ? 'ro' : lang}`}
+            className="w-full h-[140%] -mt-10 border-0 absolute inset-0 map-filter"
+            loading="lazy"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-[#0f1d2f]/90 flex items-center justify-center">
+            {/* Elegant Map Placeholder */}
+            <div className="text-center p-4">
+              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
+                <MapPin size={24} className="text-accent" />
+              </div>
+              <span className="text-xs uppercase tracking-widest text-accent font-bold">Loading Map...</span>
+            </div>
+          </div>
+        )}
         <div className="absolute inset-0 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center md:justify-end pb-12 md:pb-24 pointer-events-none">
           <div className="bg-[#0f1d2f]/80 backdrop-blur-2xl p-6 md:p-10 rounded-[2.5rem] max-w-lg border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] pointer-events-auto transform transition-all hover:scale-[1.02] duration-500">
             <div className="flex items-center space-x-2 text-accent mb-4">

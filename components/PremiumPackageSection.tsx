@@ -5,6 +5,7 @@ import React from 'react';
 import { ShieldCheck, Check, Star, Car, Hotel, Languages, Activity } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { tUI } from '@/utils/uiTranslations';
+import Image from 'next/image';
 
 
 const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
@@ -38,9 +39,11 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-8 z-10 relative">
             <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left group">
               <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300 mb-3 sm:mb-0" aria-hidden="true">
-                <img 
+                <Image 
                   src="/images/vip-transfer.jpg" 
                   alt={tUI("VIP Airport & Clinic Transfer", lang)} 
+                  width={80}
+                  height={80}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -52,9 +55,11 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
 
             <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left group">
               <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300 mb-3 sm:mb-0" aria-hidden="true">
-                <img 
+                <Image 
                   src="/images/hotel.jpg" 
                   alt={tUI("5-Star Hotel Accommodation", lang)} 
+                  width={80}
+                  height={80}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -66,9 +71,11 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
 
             <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left group">
               <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300 mb-3 sm:mb-0" aria-hidden="true">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=300&auto=format&fit=crop" 
                   alt={tUI("Native English Translator", lang)} 
+                  width={80}
+                  height={80}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -80,9 +87,11 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
 
             <div className="flex flex-col items-center text-center sm:flex-row sm:items-start sm:text-left group">
               <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300 mb-3 sm:mb-0" aria-hidden="true">
-                <img 
+                <Image 
                   src="/images/hospital.webp" 
                   alt={tUI("Pre/Post-Operative Tests", lang)} 
+                  width={80}
+                  height={80}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -96,9 +105,11 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
           <div className="bg-prime rounded-2xl p-6 lg:p-10 text-white relative overflow-hidden shadow-2xl h-full flex flex-col justify-between group">
              {/* S-Tier Luxury Hotel Image Overlay */}
              <div className="absolute inset-0 z-0 overflow-hidden">
-                <img 
-                   src="https://images.unsplash.com/photo-1542314831-c6a4d14d8373?q=80&w=1200&auto=format&fit=crop" 
+                <Image 
+                   src="/images/hotel.jpg" 
                    alt="5-Star Accommodation" 
+                   fill
+                   sizes="(max-width: 1024px) 100vw, 50vw"
                    className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-110 group-hover:opacity-30 transition-all duration-1000 ease-out" 
                 />
              </div>

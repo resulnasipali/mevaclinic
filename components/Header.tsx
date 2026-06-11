@@ -319,7 +319,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
             </button>
 
             {/* Mobile hamburger */}
-            <button className="lg:hidden p-2 text-prime" onClick={() => setIsOpen(!isOpen)}>
+            <button className="lg:hidden p-2 text-prime" onClick={() => setIsOpen(!isOpen)} aria-label={tUI('Toggle Navigation Menu', lang)}>
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>

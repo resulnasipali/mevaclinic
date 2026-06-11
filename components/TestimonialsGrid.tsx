@@ -13,7 +13,7 @@ const TestimonialsGrid = ({ lang = 'en' }: { lang?: string }) => {
   const testimonials = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1512413914564-9279093bf8fa?auto=format&fit=crop&q=80&w=800", // Dramatic weight loss / fitness transformation look
+      image: "/images/transformation.webp", // Dramatic weight loss / fitness transformation look
       quoteEn: "Meva Clinic changed my life! I lost 45kg and feel like a completely new person.",
       quoteRo: "Meva Clinic mi-a schimbat viața! Am slăbit 45kg și mă simt ca o persoană complet nouă.",
       name: "Maria D.",
