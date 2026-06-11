@@ -1,4 +1,13 @@
 export const T: Record<string, { en?: string, ro?: string, es?: string, it?: string, ru?: string, fr?: string, de?: string }> = {
+  "Cyprus Clinical Team": {
+    "en": "Cyprus Clinical Team",
+    "ro": "Echipa Clinică Cipru",
+    "es": "Equipo Clínico de Chipre",
+    "it": "Team Clinico di Cipro",
+    "ru": "Клиническая команда Кипра",
+    "fr": "Équipe clinique de Chypre",
+    "de": "Zyprus Klinisches Team"
+  },
   "Transplant": {
     "en": "Transplant",
     "ro": "Transplant",

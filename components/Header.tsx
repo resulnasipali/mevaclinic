@@ -82,7 +82,7 @@ const CategoryColumn = ({
           <div className={`grid ${isHighDensity ? 'grid-cols-2 gap-x-4 gap-y-2' : 'flex flex-col gap-1.5'}`}>
             {items.map((treatment: any) => {
               const title = getSafeVal(treatment.title, lang);
-              const expertStr = maskDoctorName(getSafeVal(treatment.expert, lang) || tUI('Meva Specialist', lang));
+              const expertStr = maskDoctorName(tUI(getSafeVal(treatment.expert, lang), lang) || tUI('Meva Specialist', lang));
 
               return (
                 <Link
@@ -200,7 +200,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
   const simpleLinks = [
     { name: t('home'),     path: `/${lang}`            },
     { name: t('about'),    path: `/${lang}/about-us` },
-    { name: 'Blog',        path: `/${lang}/blog`       },
+    { name: t('blog'),     path: `/${lang}/blog`       },
     { name: t('contact'),  path: `/${lang}/contact`    },
   ];
 
