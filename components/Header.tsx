@@ -110,49 +110,9 @@ const CategoryColumn = ({
   </div>
 );
 
-const ROUTE_MAP = {
-  '/ro/despre-noi': '/en/about-us',
-  '/en/about-us': '/ro/despre-noi',
-  '/ro/balon-gastric': '/en/gastric-balloon',
-  '/en/gastric-balloon': '/ro/balon-gastric',
-  '/ro/implant-par': '/en/hair-transplant',
-  '/en/hair-transplant': '/ro/implant-par',
-  '/ro/implant-sprancene': '/en/eyebrow-transplant',
-  '/en/eyebrow-transplant': '/ro/implant-sprancene',
-  '/ro/oncologie': '/en/oncology',
-  '/en/oncology': '/ro/oncologie',
-  '/ro/implant-dentar': '/en/dental-implants',
-  '/en/dental-implants': '/ro/implant-dentar',
-  '/ro/chirurgie-plastica': '/en/plastic-surgery',
-  '/en/plastic-surgery': '/ro/chirurgie-plastica',
-  '/ro/politica-confidentialitate': '/en/privacy-policy',
-  '/en/privacy-policy': '/ro/politica-confidentialitate',
-  '/ro/comparatie-medicala': '/en/medical-comparison',
-  '/en/medical-comparison': '/ro/comparatie-medicala',
-  '/ro/fiv': '/en/ivf',
-  '/en/ivf': '/ro/fiv',
-  '/ro/ivf-ciprul-de-nord': '/en/ivf-northern-cyprus',
-  '/en/ivf-northern-cyprus': '/ro/ivf-ciprul-de-nord',
-  '/ro/transplant-par-mixt': '/en/mixed-hair-transplant',
-  '/en/mixed-hair-transplant': '/ro/transplant-par-mixt',
-  '/ro/transplant-par-dhi': '/en/dhi-hair-transplant',
-  '/en/dhi-hair-transplant': '/ro/transplant-par-dhi',
-};
-
 const getTranslatedPath = (currentPath: string, targetLang: string) => {
   if (!currentPath || currentPath === '/') return `/${targetLang}`;
-  const parts = currentPath.split('/');
   
-  // If we are on a known RO path, translate back to EN before replacing language
-  if (targetLang !== 'ro' && ROUTE_MAP[currentPath as keyof typeof ROUTE_MAP]) {
-     currentPath = ROUTE_MAP[currentPath as keyof typeof ROUTE_MAP];
-  }
-  // If we are targeting RO from EN, try to use ROUTE_MAP
-  else if (targetLang === 'ro') {
-     const roPath = Object.keys(ROUTE_MAP).find(k => ROUTE_MAP[k as keyof typeof ROUTE_MAP] === currentPath);
-     if (roPath) return roPath;
-  }
-
   const newParts = currentPath.split('/');
   if (newParts.length > 1 && ['en', 'ro', 'es', 'it', 'ru', 'fr', 'de'].includes(newParts[1])) {
     newParts[1] = targetLang;

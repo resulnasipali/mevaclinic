@@ -5,7 +5,7 @@ export const faqData = {
       questions: [
         {
           q: "How does CyberKnife S7 differ from traditional radiotherapy?",
-          a: "CyberKnife S7 uses a robotic arm and real-time tracking (VOLO Optimizer) to deliver radiation with ±0.44mm precision. <a href='/en/oncology' class='text-accent font-bold'>Learn more about our CyberKnife S7 technology here.</a>",
+          a: "CyberKnife S7 uses a robotic arm and real-time tracking (VOLO Optimizer) to deliver radiation with ±0.44mm precision. <a href='/en/treatments/smart-oncology-drugs' class='text-accent font-bold'>Learn more about our CyberKnife S7 technology here.</a>",
           schema: true
         },
         {
@@ -30,7 +30,7 @@ export const faqData = {
       questions: [
         {
           q: "Why is robotic-assisted bariatric surgery (Da Vinci) safer?",
-          a: "Robotic systems provide 3D HD visualization and tremor filtration, reducing complication risks. <a href='/en/gastric-sleeve' class='text-accent font-bold'>See our Robotic Gastric Sleeve details.</a>",
+          a: "Robotic systems provide 3D HD visualization and tremor filtration, reducing complication risks. <a href='/en/treatments/gastric-sleeve' class='text-accent font-bold'>See our Robotic Gastric Sleeve details.</a>",
           schema: true
         },
         {
@@ -50,7 +50,7 @@ export const faqData = {
       questions: [
         {
           q: "Why do you use Sapphire blades instead of steel?",
-          a: "Sapphire blades create V-shaped incisions which result in 40% faster healing. <a href='/en/hair-transplant' class='text-accent font-bold'>Explore Sapphire FUE.</a>",
+          a: "Sapphire blades create V-shaped incisions which result in 40% faster healing. <a href='/en/treatments/meva-mixed-hair' class='text-accent font-bold'>Explore Sapphire FUE.</a>",
           schema: true
         },
         {
@@ -102,7 +102,7 @@ export const faqData = {
       questions: [
         {
           q: "Cum diferă CyberKnife S7 de radioterapia tradițională?",
-          a: "CyberKnife S7 utilizează un braț robotic și urmărire în timp real (VOLO Optimizer) pentru o precizie milimetrică. <a href='/ro/oncologie' class='text-accent font-bold'>Află mai multe despre tehnologia S7 aici.</a>",
+          a: "CyberKnife S7 utilizează un braț robotic și urmărire în timp real (VOLO Optimizer) pentru o precizie milimetrică. <a href='/ro/treatments/smart-oncology-drugs' class='text-accent font-bold'>Află mai multe despre tehnologia S7 aici.</a>",
           schema: true
         },
         {
@@ -127,7 +127,7 @@ export const faqData = {
       questions: [
         {
           q: "De ce este mai sigură chirurgie bariatrică asistată de robot (Da Vinci)?",
-          a: "Sistemele robotice permit suturi mai precise și un risc scăzut de fistule. <a href='/ro/gastric-sleeve' class='text-accent font-bold'>Vezi detaliile despre Gastric Sleeve Robotic.</a>",
+          a: "Sistemele robotice permit suturi mai precise și un risc scăzut de fistule. <a href='/ro/treatments/gastric-sleeve' class='text-accent font-bold'>Vezi detaliile despre Gastric Sleeve Robotic.</a>",
           schema: true
         },
         {
@@ -147,7 +147,7 @@ export const faqData = {
       questions: [
         {
           q: "De ce folosiți lame de Safir în loc de oțel?",
-          a: "Lamele de Safir reduc trauma tisulară cu 40%, accelerând vindecarea. <a href='/ro/implant-par' class='text-accent font-bold'>Vezi tehnologia Safir.</a>",
+          a: "Lamele de Safir reduc trauma tisulară cu 40%, accelerând vindecarea. <a href='/ro/treatments/meva-mixed-hair' class='text-accent font-bold'>Vezi tehnologia Safir.</a>",
           schema: true
         },
         {

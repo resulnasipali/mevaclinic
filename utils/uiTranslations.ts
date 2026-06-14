@@ -3667,7 +3667,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ru": "/en/privacy-policy",
     "fr": "/en/privacy-policy",
     "de": "/en/privacy-policy",
-      "ro": "/ro/politica-de-confidențialitate"
+      "ro": "/ro/privacy-policy"
 },
   "View Policy": {
     "en": "View Policy",
@@ -4767,7 +4767,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ru": "/en/about-us",
     "fr": "/en/about-us",
     "de": "/en/about-us",
-      "ro": "/ro/despre-noi"
+      "ro": "/ro/about-us"
 },
   "View all doctors": {
     "en": "View all doctors",
