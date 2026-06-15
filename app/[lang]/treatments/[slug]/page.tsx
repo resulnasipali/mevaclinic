@@ -40,37 +40,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return val;
   };
 
-  const fallbackTitle = getSafeVal(treatment.title, lang);
-  
-  const getLocalizedTitle = (tName: string, locale: string) => {
-    switch (locale) {
-      case 'ro': return `${tName} Istanbul | Pachete All-Inclusive VIP - Meva Clinic`;
-      case 'es': return `${tName} Estambul | Paquetes VIP Todo Incluido - Meva Clinic`;
-      case 'it': return `${tName} Istanbul | Pacchetti VIP All-Inclusive - Meva Clinic`;
-      case 'ru': return `${tName} Стамбул | VIP-пакеты «все включено» - Meva Clinic`;
-      case 'fr': return `${tName} Istanbul | Formules VIP Tout Compris - Meva Clinic`;
-      case 'de': return `${tName} Istanbul | All-Inclusive-VIP-Pakete - Meva Klinik`;
-      case 'en':
-      default: return `${tName} Istanbul | VIP All-Inclusive Packages - Meva Clinic`;
-    }
-  };
-
-  const getLocalizedDesc = (tName: string, locale: string) => {
-    switch (locale) {
-      case 'ro': return `Beneficiați de ${tName.toLowerCase()} de calitate premium la Meva Clinic Turcia. Clinici acreditate JCI, medici de renume mondial, cazare la hotel de 5 stele de lux și transferuri private VIP cu Mercedes cu 12 luni de monitorizare. Obțineți o cotație gratuită.`;
-      case 'es': return `${tName} premium en Meva Clinic Turquía. Instalaciones acreditadas por la JCI, especialistas de renombre mundial, hotel de lujo de 5 estrellas y traslados VIP privados en Mercedes con 12 meses de seguimiento. Obtenga un presupuesto gratuito.`;
-      case 'it': return `${tName} premium presso Meva Clinic Turchia. Strutture accreditate JCI, specialisti di fama mondiale, hotel di lusso a 5 stelle e trasferimenti VIP privati Mercedes con 12 mesi di assistenza post-operatoria. Richiedi un preventivo gratuito.`;
-      case 'ru': return `Премиум ${tName.toLowerCase()} в клинике Meva в Турции. Аккредитованные JCI медицинские центры, всемирно известные специалисты, роскошный 5-звездочный отель и частные VIP-трансферы Mercedes с 12 месяцами последующего ухода. Получите бесплатный расчет цены.`;
-      case 'fr': return `${tName} haut de gamme à la Clinique Meva en Turquie. Installations accréditées JCI, spécialistes certifiés de renommée mondiale, hôtel de luxe 5 étoiles et transferts VIP privés en Mercedes avec 12 mois de suivi postopératoire. Obtenez un devis gratuit.`;
-      case 'de': return `Premium-${tName} in der Meva Klinik Türkei. JCI-akkreditierte Einrichtungen, weltweit renommierte Spezialisten, luxuriöses 5-Sterne-Hotel und private VIP-Mercedes-Transfers mit 12 Monaten Nachsorge. Fordern Sie ein kostenloses Angebot an.`;
-      case 'en':
-      default: return `Premium ${tName.toLowerCase()} at Meva Clinic Turkey. JCI-accredited facilities, world-renowned board-certified specialists, luxury 5-star hotel, and private VIP Mercedes transfers with 12 months aftercare. Get a free quote.`;
-    }
-  };
-
-  const title = getSafeVal(treatment.metaTitle, lang) || getLocalizedTitle(fallbackTitle, lang);
-  const desc = getSafeVal(treatment.metaDesc, lang) || getLocalizedDesc(fallbackTitle, lang);
-
+  // Natively read localized metadata strings directly from updated data object without switch-case fallbacks
+  const title = getSafeVal(treatment.metaTitle, lang) || getSafeVal(treatment.title, lang);
+  const desc = getSafeVal(treatment.metaDesc, lang) || getSafeVal(treatment.shortDesc, lang);
   const keywords = getSafeVal(treatment.keywords, lang);
 
   return buildMetadata({
@@ -114,16 +86,52 @@ export default async function TreatmentPage({ params }: Props) {
     if (!val) return [];
     return typeof val === 'object' && !Array.isArray(val) ? (val[locale] || val['en'] || []) : val;
   };
+
+  // Helper to extract Wikipedia/Wikidata entity links based on category for GEO (AI Search Engines)
+  const getSameAsLinks = (category: string, treatmentId: string) => {
+    switch (category) {
+      case 'bariatric':
+        return [
+          'https://en.wikipedia.org/wiki/Bariatric_surgery',
+          'https://www.wikidata.org/wiki/Q807357'
+        ];
+      case 'hair':
+        return [
+          'https://en.wikipedia.org/wiki/Hair_transplantation',
+          'https://www.wikidata.org/wiki/Q1545620'
+        ];
+      case 'dental':
+        return [
+          'https://en.wikipedia.org/wiki/Dental_implant',
+          'https://www.wikidata.org/wiki/Q728494'
+        ];
+      case 'plastic':
+        if (treatmentId.includes('rhinoplasty')) {
+          return [
+            'https://en.wikipedia.org/wiki/Rhinoplasty',
+            'https://www.wikidata.org/wiki/Q337372'
+          ];
+        }
+        return [
+          'https://en.wikipedia.org/wiki/Plastic_surgery',
+          'https://www.wikidata.org/wiki/Q182442'
+        ];
+      default:
+        return [];
+    }
+  };
   
-  // 1. MedicalProcedure Schema
+  // 1. MedicalProcedure Schema (Semantically linked using layout organization ID)
   const medicalProcedureSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
     'name': title,
     'description': description.substring(0, 200),
     'procedureType': 'https://health-lifesci.schema.org/SurgicalProcedure',
+    'sameAs': getSameAsLinks(treatment.category || '', slug),
     'provider': {
       '@type': 'MedicalOrganization',
+      '@id': 'https://www.mevaclinic.com/#organization', // Strict ID connection to layout organization schema
       'name': 'Meva Clinic Istanbul',
       'url': 'https://www.mevaclinic.com',
       'address': {
@@ -164,8 +172,14 @@ export default async function TreatmentPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
-      <TreatmentDetailClient treatment={treatment} lang={safeLang} images={images} />
+      
+      {/* Category-Based Presentation Layout optimized dynamically for specific landing profiles */}
+      <TreatmentDetailClient 
+        treatment={treatment} 
+        lang={safeLang} 
+        images={images} 
+        categoryLayout={treatment.category} 
+      />
     </>
   );
 }
-

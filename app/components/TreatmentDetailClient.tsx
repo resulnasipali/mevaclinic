@@ -16,11 +16,13 @@ import { TreatmentImage } from '@/utils/getTreatmentImages';
 import { tUI } from '@/utils/uiTranslations';
 import { maskDoctorName } from '@/utils/doctorUtils';
 import MedicalReviewer, { REVIEWERS } from '@/components/MedicalReviewer';
+import BmiWrapper from '@/components/BmiWrapper';
 
 interface TreatmentClientProps {
   treatment: any;
   lang: string;
   images?: TreatmentImage[];
+  categoryLayout?: string;
 }
 
 const AccordionItem = ({ question, answer }: { question: string; answer: string }) => {
@@ -45,7 +47,7 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string 
   );
 };
 
-export default function TreatmentDetailClient({ treatment, lang, images = [] }: TreatmentClientProps) {
+export default function TreatmentDetailClient({ treatment, lang, images = [], categoryLayout }: TreatmentClientProps) {
   const isEn = lang === 'en';
 
   const getSafeVal = (val: any, locale: string): any => {
@@ -548,6 +550,17 @@ export default function TreatmentDetailClient({ treatment, lang, images = [] }: 
                   {tUI('Get Free Quote on WhatsApp', lang)}
                 </motion.a>
                 
+                {categoryLayout === 'bariatric' && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="bg-white p-6 rounded-[2rem] border border-amber-500/20 shadow-xl"
+                  >
+                    <BmiWrapper lang={lang} />
+                  </motion.div>
+                )}
+
                 {images.length > 0 && (
                   <ProcedureGallery images={images} title={tUI('Clinical Outcomes', lang)} />
                 )}

@@ -19,6 +19,7 @@ interface LeadPayload {
   source?: unknown;
   metrics?: unknown;
   medical_condition?: unknown;
+  lang?: unknown;
 }
 
 function sanitizeString(val: unknown, maxLen = 500): string {
@@ -38,6 +39,34 @@ function isRateLimited(ip: string): boolean {
   if (entry.count >= 10) return true; // max 10 submissions/min per IP
   entry.count++;
   return false;
+}
+
+// ─── Local Fallback Writer (Ensures no data loss if Supabase is offline) ──────
+function saveLeadLocalFallback(newLead: any) {
+  try {
+    const dataDir = path.join(process.cwd(), 'data');
+    const leadsFilePath = path.join(dataDir, 'leads.json');
+
+    if (!fs.existsSync(dataDir)) {
+      fs.mkdirSync(dataDir, { recursive: true });
+    }
+
+    let leads: any[] = [];
+    if (fs.existsSync(leadsFilePath)) {
+      try {
+        const fileContent = fs.readFileSync(leadsFilePath, 'utf-8');
+        leads = fileContent ? JSON.parse(fileContent) : [];
+      } catch {
+        leads = [];
+      }
+    }
+
+    leads.unshift(newLead);
+    fs.writeFileSync(leadsFilePath, JSON.stringify(leads, null, 2), 'utf-8');
+    console.log(`💾 [CRM] Lead saved to local fallback file: ${newLead.name}`);
+  } catch (err) {
+    console.error('❌ [CRM] Local fallback write failed:', err);
+  }
 }
 
 export async function POST(request: Request) {
@@ -73,28 +102,54 @@ export async function POST(request: Request) {
       medicalCondition: sanitizeString(rawData.medical_condition, 500),
       source:           sanitizeString(rawData.source, 50) || 'Website',
       status:           'New',
+      lang:             sanitizeString(rawData.lang, 10) || 'en',
     };
 
-    // ── Filesystem write ───────────────────────────────────────────────────────
-    const dataDir = path.join(process.cwd(), 'data');
-    const leadsFilePath = path.join(dataDir, 'leads.json');
+    // ── Supabase Insertion ──────────────────────────────────────────────────────
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+    let insertedInDb = false;
 
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
-    }
-
-    let leads: typeof newLead[] = [];
-    if (fs.existsSync(leadsFilePath)) {
+    if (supabaseUrl && supabaseKey) {
       try {
-        const fileContent = fs.readFileSync(leadsFilePath, 'utf-8');
-        leads = fileContent ? JSON.parse(fileContent) : [];
-      } catch {
-        leads = []; // corrupt file: start fresh rather than crash
-      }
-    }
+        const response = await fetch(`${supabaseUrl}/rest/v1/leads`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`,
+            'Prefer': 'return=representation'
+          },
+          body: JSON.stringify({
+            name: newLead.name,
+            phone: newLead.phone,
+            email: newLead.email,
+            treatment: newLead.treatment,
+            message: newLead.message,
+            metrics: newLead.metrics,
+            medical_condition: newLead.medicalCondition,
+            source: newLead.source,
+            status: newLead.status,
+            lang: newLead.lang
+          })
+        });
 
-    leads.unshift(newLead);
-    fs.writeFileSync(leadsFilePath, JSON.stringify(leads, null, 2), 'utf-8');
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('❌ [CRM] Supabase insert failed status:', response.status, errorText);
+          saveLeadLocalFallback(newLead);
+        } else {
+          console.log(`✅ [CRM] Lead captured in Supabase: ${newLead.name}`);
+          insertedInDb = true;
+        }
+      } catch (dbError) {
+        console.error('❌ [CRM] Supabase fetch error:', dbError);
+        saveLeadLocalFallback(newLead);
+      }
+    } else {
+      console.warn('⚠️ [CRM] Supabase credentials missing. Falling back to local storage.');
+      saveLeadLocalFallback(newLead);
+    }
 
     // ── Email notification (silent fail) ──────────────────────────────────────
     if (process.env.SMTP_USER && process.env.SMTP_PASS) {
@@ -114,6 +169,7 @@ export async function POST(request: Request) {
             <p><strong>E-Posta:</strong> ${newLead.email}</p>
             <p><strong>Tedavi:</strong> ${newLead.treatment}</p>
             <p><strong>Kaynak:</strong> ${newLead.source}</p>
+            <p><strong>Dil Sürümü:</strong> ${newLead.lang}</p>
             ${newLead.metrics ? `<p><strong>Ölçüler:</strong> ${newLead.metrics}</p>` : ''}
             ${newLead.medicalCondition ? `<p><strong>Tıbbi Durum:</strong> ${newLead.medicalCondition}</p>` : ''}
             ${newLead.message ? `<p><strong>Mesaj:</strong><br/>${newLead.message}</p>` : ''}
@@ -125,9 +181,9 @@ export async function POST(request: Request) {
       }
     }
 
-    console.log(`✅ [CRM] Lead captured: ${newLead.name} via ${newLead.source}`);
+    console.log(`✅ [CRM] Lead captured successfully: ${newLead.name} via ${newLead.source}`);
     return NextResponse.json(
-      { success: true, message: 'Lead captured successfully.', leadId: newLead.id },
+      { success: true, message: 'Lead captured successfully.', leadId: newLead.id, db: insertedInDb },
       { status: 201 }
     );
   } catch (error) {
@@ -144,6 +200,48 @@ export async function GET(request: Request) {
       return NextResponse.json({ success: false, message: 'Unauthorized' }, { status: 401 });
     }
 
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+    if (supabaseUrl && supabaseKey) {
+      try {
+        const response = await fetch(`${supabaseUrl}/rest/v1/leads?order=created_at.desc`, {
+          method: 'GET',
+          headers: {
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`
+          }
+        });
+
+        if (!response.ok) {
+          const errorText = await response.text();
+          throw new Error(`Supabase query failed: ${errorText}`);
+        }
+
+        const dbLeads = await response.json();
+        // Map database format back to CRM dashboard format
+        const leads = dbLeads.map((dbLead: any) => ({
+          id: dbLead.id,
+          date: dbLead.created_at,
+          name: dbLead.name,
+          phone: dbLead.phone,
+          email: dbLead.email,
+          treatment: dbLead.treatment,
+          message: dbLead.message,
+          metrics: dbLead.metrics,
+          medicalCondition: dbLead.medical_condition,
+          source: dbLead.source,
+          status: dbLead.status,
+          lang: dbLead.lang || 'en'
+        }));
+
+        return NextResponse.json({ success: true, leads });
+      } catch (dbError) {
+        console.error('❌ [CRM] Supabase fetch error, falling back to local file:', dbError);
+      }
+    }
+
+    // ── Local File Fallback Reader ──────────────────────────────────────────
     const leadsFilePath = path.join(process.cwd(), 'data', 'leads.json');
     if (!fs.existsSync(leadsFilePath)) {
       return NextResponse.json({ success: true, leads: [] });
