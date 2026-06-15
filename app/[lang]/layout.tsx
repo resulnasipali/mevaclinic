@@ -24,13 +24,13 @@ const playfair = Playfair_Display({
 });
 
 const META_BY_LANG: Record<string, { title: string; description: string }> = {
-  en: { title: 'Meva Clinic | Premium Medical Tourism Istanbul', description: 'VIP Healthcare in Istanbul — Bariatric surgery, hair transplant, dental and plastic surgery packages with JCI-accredited specialists. Free consultation.' },
-  ro: { title: 'Meva Clinic | Turism Medical Premium Istanbul', description: 'Pachete VIP de sănătate în Istanbul — Chirurgie bariatrică, transplant de păr, stomatologie și chirurgie plastică cu specialiști acreditați JCI.' },
-  de: { title: 'Meva Clinic | Premium Medizintourismus Istanbul', description: 'VIP Gesundheitsreisen nach Istanbul — Bariatrie, Haartransplantation, Zahnästhetik und plastische Chirurgie mit JCI-akkreditierten Spezialisten.' },
-  fr: { title: 'Meva Clinic | Tourisme Médical Premium Istanbul', description: 'Forfaits VIP de santé à Istanbul — Chirurgie bariatrique, greffe de cheveux, dentisterie et chirurgie plastique avec des spécialistes accrédités JCI.' },
-  es: { title: 'Meva Clinic | Turismo Médico Premium Estambul', description: 'Paquetes VIP de salud en Estambul — Cirugía bariátrica, trasplante de cabello, odontología y cirugía plástica con especialistas acreditados por JCI.' },
-  it: { title: 'Meva Clinic | Turismo Medico Premium Istanbul', description: 'Pacchetti VIP di salute a Istanbul — Chirurgia bariatrica, trapianto di capelli, odontoiatria e chirurgia plastica con specialisti accreditati JCI.' },
-  ru: { title: 'Meva Clinic | Премиум Медицинский Туризм Стамбул', description: 'VIP медицинские пакеты в Стамбуле — Бариатрическая хирургия, трансплантация волос, стоматология и пластическая хирургия с JCI-аккредитованными специалистами.' },
+  en: { title: 'Meva Clinic | Elite Medical Concierge & VIP Healthcare Istanbul', description: 'Experience world-class medical concierge services in Istanbul with Meva Clinic. Premium healthcare packages, JCI-accredited specialists, and luxury Bosphorus stays.' },
+  ro: { title: 'Meva Clinic | Concierge Medical de Elită și Servicii VIP Istanbul', description: 'Experimentați servicii de concierge medical de clasă mondială în Istanbul cu Meva Clinic. Pachete premium de sănătate, specialiști acreditați JCI și cazare de lux pe Bosfor.' },
+  de: { title: 'Meva Clinic | Elite Medical Concierge & VIP-Gesundheitsdienste Istanbul', description: 'Erleben Sie erstklassigen medizinischen Concierge-Service in Istanbul mit der Meva Clinic. Premium-Gesundheitspakete, JCI-akkreditierte Spezialisten und Luxusunterkünfte am Bosporus.' },
+  fr: { title: 'Meva Clinic | Conciergerie Médicale d\'Élite & Santé VIP Istanbul', description: 'Profitez d\'un service de conciergerie médicale haut de gamme à Istanbul avec Meva Clinic. Formules de santé premium, chirurgiens accrédités JCI et séjours de luxe sur le Bosphore.' },
+  es: { title: 'Meva Clinic | Concierge Médico de Élite y Salud VIP en Estambul', description: 'Disfrute de servicios de concierge médico de clase mundial en Estambul con Meva Clinic. Tratamientos premium, especialistas certificados y alojamiento de lujo en el Bósforo.' },
+  it: { title: 'Meva Clinic | Concierge Medico d\'Élite e Cure VIP a Istanbul', description: 'Vivi un\'esperienza di turismo medico di livello mondiale a Istanbul con Meva Clinic. Trattamenti d\'élite, specialisti accreditati JCI e alloggi di lusso sul Bosforo.' },
+  ru: { title: 'Meva Clinic | Элитный медицинский консьерж и VIP-лечение в Стамбуле', description: 'Испытайте медицинский консьерж-сервис мирового класса в Стамбуле с Meva Clinic. Премиум пакеты лечения, аккредитованные JCI специалисты и роскошное проживание.' },
 };
 
 import { buildMetadata } from '@/app/utils/seo';
@@ -74,7 +74,7 @@ export default async function RootLayout({
             "name": "Meva Clinic",
             "url": "https://www.mevaclinic.com",
             "logo": "https://www.mevaclinic.com/logo.png",
-            "description": "Premium VIP Health Tourism and Medical Procedures in Istanbul, Turkey.",
+            "description": "Elite international medical concierge and premium patient care platform in Istanbul.",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Altunizade, Uskudar",
@@ -83,13 +83,22 @@ export default async function RootLayout({
               "postalCode": "34662",
               "addressCountry": "TR"
             },
-            "medicalSpecialty": [
-              "Bariatric Surgery",
+            "knowsAbout": [
               "Plastic Surgery",
-              "Hair Transplant",
-              "Dentistry"
+              "Hair Transplantation",
+              "Bariatric Surgery",
+              "Medical Tourism",
+              "Dental Implants"
             ],
-            "priceRange": "$$$"
+            "medicalSpecialty": [
+              "CosmeticProcedure",
+              "SurgicalProcedure"
+            ],
+            "priceRange": "$$$",
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Worldwide"
+            }
           })
         }}
       />
