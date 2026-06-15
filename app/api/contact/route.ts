@@ -40,6 +40,9 @@ export async function POST(req: Request) {
     const finalCountry = sanitizeString(country, 100);
     const finalBmi = sanitizeString(bmiScore, 10);
 
+    let leadMetrics = finalBmi ? `BMI: ${finalBmi}` : '';
+    let leadMedical = finalCountry ? `Country: ${finalCountry}` : '';
+
     // ─── 1. Write to CRM Storage (leads.json) — Graceful Fallback ────────────────
     try {
       const dataDir = path.join(process.cwd(), 'data');
@@ -58,9 +61,6 @@ export async function POST(req: Request) {
           leads = [];
         }
       }
-
-      let leadMetrics = finalBmi ? `BMI: ${finalBmi}` : '';
-      let leadMedical = finalCountry ? `Country: ${finalCountry}` : '';
 
       if (type === 'suitability_quiz' && finalMessage && finalMessage.includes(' | ')) {
         const parts = finalMessage.split(' | ');
@@ -114,6 +114,46 @@ export async function POST(req: Request) {
     } catch (fsError) {
       // Do not crash the API request. Vercel serverless functions are read-only, which is expected.
       console.warn("⚠️ CRM Storage write failed (expected on read-only serverless hosts like Vercel):", fsError);
+    }
+
+    // ─── Supabase Entegrasyonu ──────────────────────────────────────────────────
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+
+    if (supabaseUrl && supabaseKey) {
+      try {
+        const dbResponse = await fetch(`${supabaseUrl}/rest/v1/leads`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'apikey': supabaseKey,
+            'Authorization': `Bearer ${supabaseKey}`
+          },
+          body: JSON.stringify({
+            name: finalName,
+            phone: finalPhone,
+            email: finalEmail,
+            treatment: finalProcedure,
+            message: finalMessage,
+            metrics: leadMetrics,
+            medical_condition: leadMedical,
+            source: finalSource,
+            status: 'New',
+            lang: sanitizeString(body.lang || body.locale || 'en', 10)
+          })
+        });
+
+        if (!dbResponse.ok) {
+          const errorText = await dbResponse.text();
+          console.error('❌ [CRM] Supabase insert failed inside contact API:', dbResponse.status, errorText);
+        } else {
+          console.log(`✅ [CRM] Lead captured in Supabase inside contact API: ${finalName}`);
+        }
+      } catch (dbError) {
+        console.error('❌ [CRM] Supabase fetch error inside contact API:', dbError);
+      }
+    } else {
+      console.warn('⚠️ [CRM] Supabase credentials missing inside contact API.');
     }
 
     // ─── 2. Setup Email Notification ─────────────────────────────────────────────
