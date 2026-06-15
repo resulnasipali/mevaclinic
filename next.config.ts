@@ -38,6 +38,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/treatments/hair-transplant',
+        destination: '/:lang/treatments/meva-mixed-hair',
+        permanent: true,
+      },
+      {
         source: '/:lang(en|de|ro|es|it|ru|fr)/gastric-sleeve',
         destination: '/:lang/treatments/gastric-sleeve',
         permanent: true,
