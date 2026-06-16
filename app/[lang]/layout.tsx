@@ -75,6 +75,12 @@ export default async function RootLayout({
             "url": "https://www.mevaclinic.com",
             "logo": "https://www.mevaclinic.com/logo.png",
             "description": "Elite international medical concierge and premium patient care platform in Istanbul.",
+            "sameAs": [
+              "https://www.facebook.com/mevaclinic",
+              "https://www.instagram.com/mevaclinic",
+              "https://www.linkedin.com/company/meva-clinic",
+              "https://www.youtube.com/@mevaclinic"
+            ],
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "Altunizade, Uskudar",
