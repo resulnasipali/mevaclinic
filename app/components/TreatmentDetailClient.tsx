@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 
 import ProcedureGallery from '@/components/ProcedureGallery';
+import PrivacyCtaCard from '@/components/PrivacyCtaCard';
 import { getWhatsAppLink } from '@/utils/getWhatsAppLink';
 import { TreatmentImage } from '@/utils/getTreatmentImages';
 import { tUI } from '@/utils/uiTranslations';
@@ -46,6 +47,17 @@ const AccordionItem = ({ question, answer }: { question: string; answer: string 
     </div>
   );
 };
+
+const PROTECTED_TREATMENTS = [
+  'ligamentolysis-andrology',
+  'breast-augmentation',
+  'mastopexy-lift',
+  'brazilian-butt-lift-bbl',
+  'abdominoplasty-tummy',
+  'vaser-liposuction',
+  'mommy-makeover-full',
+  'gynecomastia-male'
+];
 
 export default function TreatmentDetailClient({ treatment, lang, images = [], categoryLayout }: TreatmentClientProps) {
   const isEn = lang === 'en';
@@ -561,8 +573,12 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                   </motion.div>
                 )}
 
-                {images.length > 0 && (
-                  <ProcedureGallery images={images} title={tUI('Clinical Outcomes', lang)} />
+                {PROTECTED_TREATMENTS.includes(treatment.id) ? (
+                  <PrivacyCtaCard lang={lang} treatmentId={treatment.id} treatmentTitle={title} />
+                ) : (
+                  images.length > 0 && (
+                    <ProcedureGallery images={images} title={tUI('Clinical Outcomes', lang)} />
+                  )
                 )}
 
 
