@@ -77,9 +77,11 @@ export default async function RootLayout({
             "description": "Elite international medical concierge and premium patient care platform in Istanbul.",
             "sameAs": [
               "https://www.facebook.com/mevaclinic",
-              "https://www.instagram.com/mevaclinic",
+              "https://www.instagram.com/meva.clinicofficial/",
               "https://www.linkedin.com/company/meva-clinic",
-              "https://www.youtube.com/@mevaclinic"
+              "https://www.youtube.com/@mevaclinic",
+              "https://www.trustpilot.com/review/mevaclinic.com",
+              "https://www.google.com/maps/place/Meva+Clinic/@41.0053215,29.0121794,17z/data=!4m7!3m6!1s0xabdc6227ea2ad5cd:0xebf5d95ed4bcab64!8m2!3d41.0053215!4d29.0121794"
             ],
             "address": {
               "@type": "PostalAddress",
