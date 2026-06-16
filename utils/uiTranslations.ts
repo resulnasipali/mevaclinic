@@ -3241,6 +3241,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   "/en": {
     "en": "/en",
+    "ro": "/ro",
     "es": "/en",
     "it": "/en",
     "ru": "/en",
