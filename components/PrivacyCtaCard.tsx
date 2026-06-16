@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { ShieldAlert, Send, MessageSquare } from 'lucide-react';
+import React, { useState } from 'react';
+import { ShieldAlert, Send, MessageSquare, Check } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 interface PrivacyCtaCardProps {
@@ -17,6 +17,7 @@ const translations: Record<string, {
   protocol: string;
   whatsappBtn: string;
   emailBtn: string;
+  emailCopied: string;
   footerCopy: string;
   emailSubject: string;
   emailBody: string;
@@ -28,6 +29,7 @@ const translations: Record<string, {
     protocol: "To preserve the elite discretion our clientele expects, we manage clinical outcomes exclusively through a secure, private disclosure protocol.",
     whatsappBtn: "Request Private Access via WhatsApp",
     emailBtn: "Request via E-mail",
+    emailCopied: "Email Copied!",
     footerCopy: "Click below to instantly connect with our elite medical consultants to receive our confidential results catalog, personalized treatment brochures, and private case studies.",
     emailSubject: "VIP Access Request - {treatmentTitle} Outcomes Catalog",
     emailBody: "Dear Meva Clinic Team,\n\nI am interested in learning more about the {treatmentTitle} procedure. In accordance with your elite patient confidentiality protocol, I would like to request private access to the confidential results catalog, personalized treatment brochures, and private case studies.\n\nThank you."
@@ -39,6 +41,7 @@ const translations: Record<string, {
     protocol: "Pentru a păstra discreția de elită pe care o așteaptă clientela noastră, gestionăm rezultatele clinice exclusiv printr-un protocol securizat de dezvăluire privată.",
     whatsappBtn: "Solicită Acces Privat prin WhatsApp",
     emailBtn: "Solicită prin E-mail",
+    emailCopied: "E-mail Copiat!",
     footerCopy: "Faceți clic mai jos pentru a vă conecta instantaneu cu consultanții noștri medicali de elită pentru a primi catalogul nostru confidențial de rezultate, broșuri de tratament personalizate și studii de caz private.",
     emailSubject: "Solicitare Acces Confidențial - Catalog Rezultate {treatmentTitle}",
     emailBody: "Stimată echipă Meva Clinic,\n\nDoresc să aflu mai multe detalii despre procedura de {treatmentTitle}. În conformitate cu protocolul dvs. de confidențialitate, doresc să solicit acces privat la catalogul confidențial de rezultate înainte/după, broșurile de tratament personalizate și studiile de caz private.\n\nVă mulțumesc."
@@ -50,6 +53,7 @@ const translations: Record<string, {
     protocol: "Para preservar la discreción de élite que espera nuestra clientela, gestionamos los resultados clínicos exclusivamente a través de un protocolo seguro de divulgación privada.",
     whatsappBtn: "Solicitar Acceso Privado vía WhatsApp",
     emailBtn: "Solicitar vía Correo Electrónico",
+    emailCopied: "¡Correo Copiado!",
     footerCopy: "Haga clic a continuación para conectarse instantáneamente con nuestros asesores médicos de élite y recibir nuestro catálogo de resultados confidenciales, folletos de tratamiento personalizados y estudios de casos privados.",
     emailSubject: "Solicitud de Acceso Confidencial - Catálogo de Resultados de {treatmentTitle}",
     emailBody: "Estimado equipo de Meva Clinic,\n\nEstoy interesado en obtener más información sobre el procedimiento de {treatmentTitle}. De acuerdo con su estricto protocolo de confidencialidad para pacientes, solicito acceso privado a su catálogo de resultados de antes y después, folletos de tratamiento personalizados y estudios de casos privados.\n\nGracias."
@@ -61,6 +65,7 @@ const translations: Record<string, {
     protocol: "Per preservare l'élite discrezione che la nostra clientela si aspetta, gestiamo i risultati clinici esclusivamente tramite un protocollo di divulgazione privato e sicuro.",
     whatsappBtn: "Richiedi Accesso Riservato via WhatsApp",
     emailBtn: "Richiedi via E-mail",
+    emailCopied: "E-mail Copiata!",
     footerCopy: "Clicca qui sotto per connetterti istantaneamente con i nostri consulenti medici d'élite per ricevere il nostro catalogo dei risultati riservato, brochure di trattamento personalizzate e casi di studio privati.",
     emailSubject: "Richiesta Accesso Riservato - Catalogo Risultati {treatmentTitle}",
     emailBody: "Gentile Team di Meva Clinic,\n\nSono interessato a ricevere maggiori informazioni sulla procedura di {treatmentTitle}. In linea con il vostro protocollo di riservatezza, desidero richiedere l'accesso privato al catalogo riservato dei risultati prima/dopo, alle brochure informative personalizzate e ai casi di studio privati.\n\nGrazie."
@@ -72,6 +77,7 @@ const translations: Record<string, {
     protocol: "Um die elitäre Diskretion zu wahren, die unsere Klientel erwartet, verwalten wir klinische Ergebnisse ausschließlich über ein sicheres, privates Offenlegungsprotokoll.",
     whatsappBtn: "Privaten Zugang per WhatsApp anfordern",
     emailBtn: "Per E-Mail anfordern",
+    emailCopied: "E-Mail kopiert!",
     footerCopy: "Klicken Sie unten, um sich sofort mit unseren Elite-Medizinberatern in Verbindung zu setzen und unseren vertraulichen Ergebniskatalog, personalisierte Behandlungsbroschüren und private Fallstudien zu erhalten.",
     emailSubject: "Vertrauliche Zugangsbestellung - Ergebniskatalog für {treatmentTitle}",
     emailBody: "Sehr geehrtes Team der Meva Clinic,\n\nich interessiere mich für das Verfahren {treatmentTitle}. In Übereinstimmung mit Ihrem strengen Protokoll zur Patientengeheimhaltung bitte ich um privaten Zugang zu Ihrem vertraulichen Vorher-Nachher-Ergebniskatalog, personalisierten Behandlungsbroschüren und privaten Fallstudien.\n\nVielen Dank."
@@ -83,6 +89,7 @@ const translations: Record<string, {
     protocol: "Pour préserver la discrétion d'élite attendue par notre clientèle, nous gérons les résultats cliniques exclusivement via un protocole de divulgation privé et sécurisé.",
     whatsappBtn: "Demander un Accès Privé via WhatsApp",
     emailBtn: "Demander par E-mail",
+    emailCopied: "E-mail Copié !",
     footerCopy: "Cliquez ci-dessous pour vous connecter instantanément avec nos conseillers médicaux d'élite afin de recevoir notre catalogue de résultats confidentiels, nos brochures de traitement personnalisées et nos études de cas privées.",
     emailSubject: "Demande d'Accès Confidentiel - Catalogue de Résultats pour {treatmentTitle}",
     emailBody: "Chère équipe de Meva Clinic,\n\nJe suis intéressé par la procédure de {treatmentTitle}. Conformément à votre protocole d'extrême confidentialité, je souhaite demander un accès privé à votre catalogue de résultats avant-après, à vos brochures de traitement personnalisées et à vos études de cas privées.\n\nMerci."
@@ -94,6 +101,7 @@ const translations: Record<string, {
     protocol: "Для обеспечения исключительной конфиденциальности, которую ожидает наша клиентура, мы предоставляем клинические результаты исключительно через безопасный протокол закрытого доступа.",
     whatsappBtn: "Запросить частный доступ через WhatsApp",
     emailBtn: "Запросить по электронной почте",
+    emailCopied: "Email скопирован!",
     footerCopy: "Нажмите ниже, чтобы мгновенно связаться с нашими элитными медицинскими консультантами и получить конфиденциальный каталог результатов, персонализированные брошюры о лечении и частные кейсы.",
     emailSubject: "Запрос закрытого доступа - Каталог результатов процедуры {treatmentTitle}",
     emailBody: "Уважаемая команда клиники Meva,\n\nЯ интересуюсь процедурой {treatmentTitle}. В соответствии с вашим протоколом конфиденциальности для VIP-пациентов, я хотел бы запросить закрытый доступ к вашему конфиденциальному каталогу результатов до/после, индивидуальным брошюрам и частным клиническим случаям.\n\nСпасибо."
@@ -101,6 +109,7 @@ const translations: Record<string, {
 };
 
 export default function PrivacyCtaCard({ lang, treatmentId, treatmentTitle }: PrivacyCtaCardProps) {
+  const [copied, setCopied] = useState(false);
   const currentLang = translations[lang] ? lang : 'en';
   const t = translations[currentLang];
 
@@ -118,6 +127,16 @@ export default function PrivacyCtaCard({ lang, treatmentId, treatmentTitle }: Pr
 
   // Email configuration
   const emailUrl = `mailto:info@mevaclinic.com?subject=${encodeURIComponent(subjectText)}&body=${encodeURIComponent(bodyText)}`;
+
+  const handleEmailClick = () => {
+    try {
+      navigator.clipboard.writeText('info@mevaclinic.com');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    } catch (err) {
+      console.error('Failed to copy email to clipboard: ', err);
+    }
+  };
 
   return (
     <motion.div
@@ -165,15 +184,29 @@ export default function PrivacyCtaCard({ lang, treatmentId, treatmentTitle }: Pr
 
           <a
             href={emailUrl}
-            className="flex items-center justify-center gap-2.5 border border-white/20 text-white font-bold py-3.5 px-6 rounded-2xl hover:border-amber-500 hover:bg-white/5 transition-all transform hover:-translate-y-0.5 min-h-[48px] text-xs md:text-sm"
+            onClick={handleEmailClick}
+            className={`flex items-center justify-center gap-2.5 border font-bold py-3.5 px-6 rounded-2xl transition-all transform hover:-translate-y-0.5 min-h-[48px] text-xs md:text-sm ${
+              copied 
+                ? 'border-green-500 bg-green-500/10 text-green-400' 
+                : 'border-white/20 text-white hover:border-amber-500 hover:bg-white/5'
+            }`}
           >
-            <Send size={16} className="text-amber-500" />
-            {t.emailBtn}
+            {copied ? (
+              <>
+                <Check size={16} className="text-green-400" />
+                {t.emailCopied}
+              </>
+            ) : (
+              <>
+                <Send size={16} className="text-amber-500" />
+                {t.emailBtn}
+              </>
+            )}
           </a>
         </div>
 
         {/* Footer Copy */}
-        <p className="text-[11px] text-gray-400 leading-normal max-w-lg mx-auto pt-4 border-t border-white/10 font-light">
+        <p className="text-[11px] text-gray-400 leading-normal max-w-lg mx-auto pt-4 border-t border-t-white/10 font-light">
           {t.footerCopy}
         </p>
       </div>
