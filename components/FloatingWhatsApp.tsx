@@ -9,6 +9,8 @@ import { tUI } from '@/utils/uiTranslations';
 import { pushToDataLayer } from '../utils/AnalyticsUtils';
 
 const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
+  const whatsappNumber = lang === 'ro' ? '905324675941' : '905366511599';
+  const phoneNumber = lang === 'ro' ? '+905324675941' : '+905366511599';
   const [isOpen, setIsOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
@@ -51,7 +53,7 @@ const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
   const openWhatsApp = () => {
     pushToDataLayer('whatsapp_click', { location: 'floating_widget' });
     const text = getWhatsAppMessage();
-    window.open(`https://wa.me/905324675941?text=${text}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${text}`, '_blank');
   };
 
   return (
@@ -122,7 +124,7 @@ const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
           {tUI("Talk to us", lang)}
         </button>
         <a 
-          href="tel:+905324675941"
+          href={`tel:${phoneNumber}`}
           onClick={() => pushToDataLayer('phone_click', { location: 'sticky_bar' })}
           aria-label={tUI("Get a price quote", lang)}
           className="flex-1 bg-prime text-white py-3.5 rounded-xl font-bold flex items-center justify-center text-sm shadow-md"

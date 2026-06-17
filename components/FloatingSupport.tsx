@@ -10,9 +10,10 @@ const FloatingSupport = () => {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const isEn = (pathname || "/").startsWith('/en');
+  const whatsappNumber = isEn ? '905366511599' : '905324675941';
 
   const openWhatsApp = () => {
-    window.open('https://api.whatsapp.com/send?phone=905000000000', '_blank');
+    window.open(`https://api.whatsapp.com/send?phone=${whatsappNumber}`, '_blank');
   };
 
   return (
@@ -59,7 +60,7 @@ const FloatingSupport = () => {
       {/* Mobile Sticky Action Bar */}
       <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-[90] py-3 px-4 flex gap-3 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]">
         <a 
-          href="https://api.whatsapp.com/send?phone=905000000000"
+          href={`https://api.whatsapp.com/send?phone=${whatsappNumber}`}
           target="_blank"
           rel="noreferrer"
           className="flex-1 bg-[#25D366] text-white py-3.5 rounded-xl font-bold flex items-center justify-center text-sm shadow-md"

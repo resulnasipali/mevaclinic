@@ -9,6 +9,8 @@ export default function FloatingLeadWidget() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const isEn = pathname?.startsWith('/en') || false;
+  const whatsappNumber = isEn ? '905366511599' : '905324675941';
+  const phoneNumber = isEn ? '+905366511599' : '+905324675941';
 
   useEffect(() => {
     setMounted(true);
@@ -37,7 +39,7 @@ export default function FloatingLeadWidget() {
             </div>
             
             <a 
-              href="https://wa.me/905555555555" 
+              href={`https://wa.me/${whatsappNumber}`} 
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 w-full bg-[#25D366] text-white p-4 rounded-2xl hover:bg-[#1ebd5a] transition-colors mb-3 font-bold shadow-md shadow-[#25D366]/20"
@@ -47,7 +49,7 @@ export default function FloatingLeadWidget() {
             </a>
             
             <a 
-              href="tel:+905555555555"
+              href={`tel:${phoneNumber}`}
               className="flex items-center justify-center gap-3 w-full bg-[#0b1626] text-white p-4 rounded-2xl hover:bg-[#12233b] transition-colors font-bold shadow-md shadow-[#0b1626]/20"
             >
               <Phone size={20} />

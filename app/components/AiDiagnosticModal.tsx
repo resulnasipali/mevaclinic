@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bot, ScanFace, Activity, CheckCircle, Smartphone } from 'lucide-react';
 
 export default function AiDiagnosticModal({ lang }: { lang: string }) {
+  const whatsappNumber = lang === 'ro' ? '905324675941' : '905366511599';
   const [step, setStep] = useState(0); // 0: Idle, 1: Details, 2: Scanning, 3: Result
   const [loadingProgress, setLoadingProgress] = useState(0);
 
@@ -143,7 +144,7 @@ export default function AiDiagnosticModal({ lang }: { lang: string }) {
                   {tUI("Our AI has formulated your personalized surgical blueprint. For strict medical privacy, your detailed report and pricing have been securely generated.", lang)}
                 </p>
                 <a 
-                  href="https://wa.me/905555555555" 
+                  href={`https://wa.me/${whatsappNumber}`} 
                   className="w-full bg-[#25D366] text-white font-bold text-lg px-8 py-4 rounded-xl transition-all shadow-lg shadow-[#25D366]/20 flex items-center justify-center gap-3 hover:bg-[#1ebd5a]"
                 >
                   <Smartphone />

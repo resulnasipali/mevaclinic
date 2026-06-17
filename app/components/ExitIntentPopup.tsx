@@ -8,6 +8,7 @@ export default function ExitIntentPopup() {
   const [show, setShow] = useState(false);
   const pathname = usePathname();
   const isEn = pathname?.startsWith('/en') || false;
+  const whatsappNumber = isEn ? '905366511599' : '905324675941';
 
   useEffect(() => {
     const hasSeenPopup = sessionStorage.getItem('meva_exit_popup');
@@ -80,7 +81,7 @@ export default function ExitIntentPopup() {
             </ul>
 
             <a 
-              href="https://wa.me/905555555555" 
+              href={`https://wa.me/${whatsappNumber}`} 
               className="w-full bg-amber-500 text-white font-bold text-lg py-4 rounded-xl text-center shadow-lg shadow-amber-500/30 hover:bg-amber-600 hover:shadow-amber-500/50 transition-all transform hover:-translate-y-1"
             >
               {isEn ? 'Claim My 10% Discount' : 'Revendică Reducerea de 10%'}
