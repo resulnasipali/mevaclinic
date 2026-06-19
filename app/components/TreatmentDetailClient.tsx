@@ -500,12 +500,12 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                       </p>
                       <div className="mt-8 grid grid-cols-2 md:grid-cols-3 gap-6 pt-8 border-t border-white/10">
                         <div className="flex flex-col gap-1">
-                          <span className="text-amber-500 font-bold text-lg">99%</span>
-                          <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Safety Rate', lang)}</span>
+                          <span className="text-amber-500 font-bold text-lg">{tUI('High', lang)}</span>
+                          <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Safety Standard', lang)}</span>
                         </div>
                         <div className="flex flex-col gap-1">
                           <span className="text-amber-500 font-bold text-lg">15+</span>
-                          <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Years Exp.', lang)}</span>
+                          <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Years Experience', lang)}</span>
                         </div>
                         <div className="flex flex-col gap-1">
                           <span className="text-amber-500 font-bold text-lg">VIP</span>
