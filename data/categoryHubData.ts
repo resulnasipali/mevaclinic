@@ -225,7 +225,7 @@ export const categoryHubData: Record<string, CategoryData> = {
     faq: {
       en: [
         { q: 'Is a Sapphire FUE hair transplant painful?', a: 'The procedure is performed under local anesthesia, which is administered using comfort-injections (needle-free pressure delivery). Patients feel no pain during graft extraction or implantation.' },
-        { q: 'How long do transplanted hair follicles last?', a: 'Transplanted hair is harvested from the permanent donor zone (resistant to DHT hormones). Once successfully integrated, these hair follicles grow permanently for a lifetime.' }
+        { q: 'How long do transplanted hair follicles last?', a: 'Transplanted hair is harvested from the permanent donor zone (resistant to DHT hormones). Once successfully integrated, these hair follicles grow naturally long-term.' }
       ],
       ro: [
         { q: 'Este dureros transplantul de păr Sapphire FUE?', a: 'Procedura se efectuează sub anestezie locală administrată prin injecții fără ac. Pacienții nu resimt durere în timpul extracției grefelor sau implantării.' },
@@ -587,7 +587,7 @@ export const categoryHubData: Record<string, CategoryData> = {
     },
     faq: {
       en: [
-        { q: 'Is ligamentolysis permanent?', a: 'Yes, surgical release of the suspensory ligament permanently gains length. However, post-op stretching protocols must be strictly followed to prevent ligament reattachment.' },
+        { q: 'Is ligamentolysis permanent?', a: 'Yes, surgical release of the suspensory ligament gains long-term length. However, post-op stretching protocols must be strictly followed to prevent ligament reattachment.' },
         { q: 'What is the required recovery period after andrological procedures?', a: 'Most patients return to light desk work in 3 to 5 days. However, sexual activities and heavy physical training must be avoided for 4 to 6 weeks.' }
       ],
       ro: [
