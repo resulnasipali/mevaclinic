@@ -122,7 +122,7 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
                <ul className="space-y-3 md:space-y-4 mb-6 md:mb-8 font-sans text-sm md:text-base">
                  <li className="flex items-start">
                    <Check className="text-accent mr-3 mt-1 flex-shrink-0" size={18} strokeWidth={3} />
-                   <span className="font-medium text-white/95">{tUI("Guaranteed Surgical Intervention", lang)}</span>
+                   <span className="font-medium text-white/95">{tUI("Certified Surgical Standards", lang)}</span>
                  </li>
                  <li className="flex items-start">
                    <Check className="text-accent mr-3 mt-1 flex-shrink-0" size={18} strokeWidth={3} />

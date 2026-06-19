@@ -1,4 +1,103 @@
 export const T: Record<string, { en?: string, ro?: string, es?: string, it?: string, ru?: string, fr?: string, de?: string }> = {
+  "jciDesc": {
+    "en": "Explore Meva Clinic's premium medical specialties in Turkey: JCI-accredited bariatric surgery, advanced plastic surgery, elite dentistry, and hair restoration.",
+    "ro": "Explorați specialitățile medicale premium ale Clinicii Meva din Turcia: chirurgie bariatrică acreditată JCI, chirurgie plastică avansată, stomatologie de elită și restaurarea părului.",
+    "es": "Explore las especialidades médicas premium de Meva Clinic en Turquía: cirugía bariátrica acreditada por la JCI, cirugía plástica avanzada, odontología de élite y restauración capilar.",
+    "it": "Esplora le specialità mediche premium di Meva Clinic in Turchia: chirurgia bariatrica accreditata JCI, chirurgia plastica avanzata, odontoiatria d'élite e trapianto di capelli.",
+    "ru": "Ознакомьтесь с первоклассными медицинскими направлениями клиники Meva в Турции: бариатрическая хирургия, аккредитованная JCI, передовая пластическая хирургия, элитная стоматология и восстановление волос.",
+    "fr": "Découvrez les spécialités médicales premium de Meva Clinic en Turquie : chirurgie bariatrique accréditée JCI, chirurgie plastique de pointe, dentisterie d'élite et restauration capillaire.",
+    "de": "Entdecken Sie die erstklassigen medizinischen Fachbereiche der Meva Clinic in der Türkei: JCI-akkreditierte Adipositaschirurgie, fortschrittliche plastische Chirurgie, erstklassige Zahnmedizin und Haartransplantation."
+  },
+  "more treatments": {
+    "en": "more treatments",
+    "ro": "mai multe tratamente",
+    "es": "más tratamientos",
+    "it": "altri trattamenti",
+    "ru": "больше процедур",
+    "fr": "plus de traitements",
+    "de": "weitere Behandlungen"
+  },
+  "Explore Category": {
+    "en": "Explore Category",
+    "ro": "Explorează Categoria",
+    "es": "Explorar Categoría",
+    "it": "Esplora la Categoria",
+    "ru": "Исследовать категорию",
+    "fr": "Explorer la catégorie",
+    "de": "Kategorie erkunden"
+  },
+  "Clinical Overview": {
+    "en": "Clinical Overview",
+    "ro": "Prezentare Generală Clinică",
+    "es": "Descripción General Clínica",
+    "it": "Panoramica Clinica",
+    "ru": "Клинический обзор",
+    "fr": "Aperçu clinique",
+    "de": "Klinische Übersicht"
+  },
+  "Available Procedures": {
+    "en": "Available Procedures",
+    "ro": "Proceduri Disponibile",
+    "es": "Procedimientos Disponibles",
+    "it": "Procedure Disponibili",
+    "ru": "Доступные процедуры",
+    "fr": "Procédures disponibles",
+    "de": "Verfügbare Behandlungen"
+  },
+  "View details": {
+    "en": "View details",
+    "ro": "Vezi detalii",
+    "es": "Ver detalles",
+    "it": "Visualizza dettagli",
+    "ru": "Посмотреть детали",
+    "fr": "Voir les détails",
+    "de": "Details anzeigen"
+  },
+  "Free Clinical Consultation": {
+    "en": "Free Clinical Consultation",
+    "ro": "Consultație Clinică Gratuită",
+    "es": "Consulta Clínica Gratuita",
+    "it": "Consulenza Clinica Gratuita",
+    "ru": "Бесплатная клиническая консультация",
+    "fr": "Consultation clinique gratuite",
+    "de": "Kostenlose klinische Beratung"
+  },
+  "Our board-certified medical coordinators offer confidential evaluations. Receive your cost estimation and clinical protocol promptly.": {
+    "en": "Our board-certified medical coordinators offer confidential evaluations. Receive your cost estimation and clinical protocol promptly.",
+    "ro": "Coordonatorii noștri medicali certificați oferă evaluări confidențiale. Primiți estimarea costurilor și protocolul clinic cu promptitudine.",
+    "es": "Nuestros coordinadores médicos certificados ofrecen evaluaciones confidenciales. Reciba su estimación de costos y protocolo clínico a la brevedad.",
+    "it": "I nostri coordinatori medici certificati offrono valutazioni riservate. Ricevi la stima dei costi e il protocollo clinico tempestivamente.",
+    "ru": "Наши сертифицированные медицинские координаторы проводят конфиденциальные консультации. Получите расчет стоимости и клинический протокол в кратчайшие сроки.",
+    "fr": "Nos coordinateurs médicaux certifiés proposent des évaluations confidentielles. Recevez rapidement votre estimation des coûts et votre protocole clinique.",
+    "de": "Unsere staatlich geprüften medizinischen Koordinatoren bieten vertrauliche Bewertungen an. Erhalten Sie zeitnah Ihren Kostenvoranschlag und Ihr klinisches Protokoll."
+  },
+  "From Our Medical Blog": {
+    "en": "From Our Medical Blog",
+    "ro": "Din Blogul Nostru Medical",
+    "es": "De Nuestro Blog Médico",
+    "it": "Dal Nostro Blog Medico",
+    "ru": "Из нашего медицинского блога",
+    "fr": "De notre blog médical",
+    "de": "Aus unserem medizinischen Blog"
+  },
+  "Read Article": {
+    "en": "Read Article",
+    "ro": "Citește Articolul",
+    "es": "Leer Artículo",
+    "it": "Leggi l'Articolo",
+    "ru": "Читать статью",
+    "fr": "Lire l'article",
+    "de": "Artikel lesen"
+  },
+  "Certified Surgical Standards": {
+    "en": "Certified Surgical Standards",
+    "ro": "Standarde Chirurgicale Certificate",
+    "es": "Estándares Quirúrgicos Certificados",
+    "it": "Standard Chirurgici Certificati",
+    "ru": "Сертифицированные стандарты хирургии",
+    "fr": "Normes chirurgicales certifiées",
+    "de": "Zertifizierte chirurgische Standards"
+  },
   "Cyprus Clinical Team": {
     "en": "Cyprus Clinical Team",
     "ro": "Echipa Clinică Cipru",
@@ -1906,15 +2005,6 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "it": "Il Trattamento Premium",
     "fr": "Le Traitement Premium",
     "ru": "Премиум-Лечение"
-  },
-  "Guaranteed Surgical Intervention": {
-    "en": "Guaranteed Surgical Intervention",
-    "ro": "Intervenție Chirurgicală Garantată",
-    "de": "Garantierter chirurgischer Eingriff",
-    "es": "Intervención Quirúrgica Garantizada",
-    "it": "Intervento Chirurgico Garantito",
-    "fr": "Intervention Chirurgicale Garantie",
-    "ru": "Гарантированное хирургическое вмешательство"
   },
   "Team formed by Doctor Professors": {
     "en": "Team formed by Doctor Professors",

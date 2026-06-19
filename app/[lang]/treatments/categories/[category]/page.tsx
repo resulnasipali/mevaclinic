@@ -249,7 +249,7 @@ export default async function CategoryHubPage({ params }: { params: Promise<{ la
                     {tUI("Free Clinical Consultation", lang)}
                   </h3>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    {tUI("Our board-certified medical coordinators offer 100% confidential evaluations. Receive your cost estimation and specialized treatment protocol in 15 minutes.", lang)}
+                    {tUI("Our board-certified medical coordinators offer confidential evaluations. Receive your cost estimation and clinical protocol promptly.", lang)}
                   </p>
                   
                   <a
