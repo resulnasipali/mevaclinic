@@ -7,7 +7,8 @@ import { motion } from 'framer-motion';
 import {
   ArrowLeft, CheckCircle, Clock, Calendar,
   Activity, Quote, Star, ShieldCheck, Phone,
-  ChevronDown, HelpCircle, UserCheck, Zap
+  ChevronDown, HelpCircle, UserCheck, Zap,
+  ShieldAlert, FileText, AlertTriangle, ExternalLink
 } from 'lucide-react';
 
 import ProcedureGallery from '@/components/ProcedureGallery';
@@ -120,6 +121,15 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
   const premiumInclusions = getSafeVal(treatment.premiumInclusions, lang) || [];
   const recoveryTimeline = getSafeVal(treatment.recoveryTimeline, lang) || [];
   const procedureSteps = getSafeVal(treatment.procedureSteps, lang) || [];
+
+  const suitability = getSafeVal(treatment.suitability, lang) || [];
+  const contraindications = getSafeVal(treatment.contraindications, lang) || [];
+  const preOpEvaluation = getSafeVal(treatment.preOpEvaluation, lang) || [];
+  const risksComplications = getSafeVal(treatment.risksComplications, lang) || [];
+  const realisticOutcomes = getSafeVal(treatment.realisticOutcomes, lang);
+  const revisionPolicy = getSafeVal(treatment.revisionPolicy, lang);
+  const medicalDisclaimer = getSafeVal(treatment.medicalDisclaimer, lang);
+  const references = getSafeVal(treatment.references, lang) || [];
   
   console.log("DEBUG_TREATMENT:", treatment.id);
   console.log("DEBUG_PREMIUM:", premiumInclusions);
@@ -159,7 +169,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
     }
     if (
       cat === 'specialist' &&
-      (id.includes('organ') || id.includes('kidney') || id.includes('liver') || id.includes('transplant'))
+      (id.includes('organ') || id.includes('kidney') || id.includes('liver'))
     ) {
       return REVIEWERS.organ;
     }
@@ -172,6 +182,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
     
     return REVIEWERS.specialist;
   };
+
 
   const reviewerObj = getReviewer(treatment.category, treatment.id);
 
@@ -513,6 +524,202 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                         </div>
                       </div>
                     </div>
+                  </motion.div>
+                )}
+
+                {/* Clinical Safety & JCI Compliance Sections */}
+                {(suitability.length > 0 || contraindications.length > 0 || preOpEvaluation.length > 0 || risksComplications.length > 0 || realisticOutcomes || revisionPolicy || references.length > 0) && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="space-y-12 pt-8 border-t border-gray-100 mt-12"
+                  >
+                    <div>
+                      <span className="text-xs uppercase tracking-widest font-bold text-[#0b1626]/40 mb-3 block">
+                        {tUI('Clinical Standards & Safety', lang)}
+                      </span>
+                      <h2 className="text-3xl font-serif font-bold text-[#0b1626] mb-2 flex items-center gap-3">
+                        <span className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                          <ShieldCheck size={20} className="text-amber-500" />
+                        </span>
+                        {tUI('Medical Guidelines & Safety Protocols', lang)}
+                      </h2>
+                      <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">
+                        {tUI('Meva Clinic operates in strict JCI-accredited hospital environments. Below are the clinical guidelines, safety protocols, and medical reference documentation for this procedure.', lang)}
+                      </p>
+                    </div>
+
+                    {/* Suitability & Contraindications Grid */}
+                    {(suitability.length > 0 || contraindications.length > 0) && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {suitability.length > 0 && (
+                          <div className="bg-emerald-50/30 border border-emerald-500/15 rounded-3xl p-8 shadow-sm">
+                            <h3 className="text-lg font-bold text-[#0b1626] mb-6 flex items-center gap-2">
+                              <span className="w-7 h-7 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-600">
+                                <CheckCircle size={16} />
+                              </span>
+                              {tUI('Indicated / Suitable For', lang)}
+                            </h3>
+                            <ul className="space-y-4">
+                              {suitability.map((item: string, i: number) => (
+                                <li key={i} className="flex items-start gap-3 text-sm text-gray-700 leading-relaxed font-medium">
+                                  <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+
+                        {contraindications.length > 0 && (
+                          <div className="bg-rose-50/30 border border-rose-500/15 rounded-3xl p-8 shadow-sm">
+                            <h3 className="text-lg font-bold text-[#0b1626] mb-6 flex items-center gap-2">
+                              <span className="w-7 h-7 rounded-full bg-rose-500/10 flex items-center justify-center text-rose-600">
+                                <ShieldAlert size={16} />
+                              </span>
+                              {tUI('Contraindications / Not Suitable', lang)}
+                            </h3>
+                            <ul className="space-y-4">
+                              {contraindications.map((item: string, i: number) => (
+                                <li key={i} className="flex items-start gap-3 text-sm text-gray-700 leading-relaxed font-medium">
+                                  <span className="shrink-0 w-1.5 h-1.5 rounded-full bg-rose-500 mt-2" />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Pre-Operative Diagnostic Evaluation */}
+                    {preOpEvaluation.length > 0 && (
+                      <div className="bg-gray-50/50 border border-gray-100 rounded-3xl p-8 shadow-sm">
+                        <h3 className="text-lg font-bold text-[#0b1626] mb-6 flex items-center gap-2">
+                          <span className="w-7 h-7 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
+                            <FileText size={16} />
+                          </span>
+                          {tUI('Pre-Operative Evaluation & Diagnostic Checks', lang)}
+                        </h3>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          {preOpEvaluation.map((item: string, i: number) => (
+                            <div key={i} className="bg-white p-4 rounded-2xl border border-gray-50 flex items-start gap-3 shadow-sm hover:border-amber-500/20 transition-all">
+                              <span className="text-amber-500 font-bold text-xs bg-amber-500/10 w-5 h-5 rounded-full flex items-center justify-center shrink-0 mt-0.5">{i + 1}</span>
+                              <p className="text-sm text-gray-700 leading-relaxed font-medium">{item}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Risks & Complications */}
+                    {risksComplications.length > 0 && (
+                      <div className="bg-gray-50/50 border border-gray-100 rounded-3xl p-8 shadow-sm">
+                        <h3 className="text-lg font-bold text-[#0b1626] mb-4 flex items-center gap-2">
+                          <span className="w-7 h-7 rounded-full bg-rose-500/10 flex items-center justify-center text-rose-500">
+                            <AlertTriangle size={16} />
+                          </span>
+                          {tUI('Potential Risks & Complications', lang)}
+                        </h3>
+                        <p className="text-xs text-gray-500 mb-6 leading-relaxed">
+                          {tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under JCI patient safety standards.', lang)}
+                        </p>
+                        <div className="space-y-4">
+                          {risksComplications.map((item: string, i: number) => {
+                            const parts = item.split(':');
+                            const hasTitle = parts.length > 1;
+                            const rTitle = hasTitle ? parts[0] : '';
+                            const rDesc = hasTitle ? parts.slice(1).join(':') : item;
+
+                            return (
+                              <div key={i} className="bg-white p-5 rounded-2xl border border-gray-50 flex items-start gap-4 shadow-sm hover:border-rose-500/20 transition-all">
+                                <span className="shrink-0 w-2 h-2 rounded-full bg-rose-500 mt-2.5" />
+                                <div>
+                                  {hasTitle && <span className="font-bold text-sm text-[#0b1626] block mb-1">{rTitle}</span>}
+                                  <p className="text-sm text-gray-600 leading-relaxed font-medium">{rDesc.trim()}</p>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Expectations & Revision Policies */}
+                    {(realisticOutcomes || revisionPolicy) && (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {realisticOutcomes && (
+                          <div className="bg-gray-50/50 border border-gray-100 rounded-3xl p-8 shadow-sm">
+                            <h3 className="text-lg font-bold text-[#0b1626] mb-4 flex items-center gap-2">
+                              <span className="w-7 h-7 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
+                                <Activity size={16} />
+                              </span>
+                              {tUI('Realistic Expectations & Outcomes', lang)}
+                            </h3>
+                            <p className="text-sm text-gray-600 leading-relaxed font-medium bg-white p-5 rounded-2xl border border-gray-50 shadow-sm">
+                              {realisticOutcomes}
+                            </p>
+                          </div>
+                        )}
+
+                        {revisionPolicy && (
+                          <div className="bg-gray-50/50 border border-gray-100 rounded-3xl p-8 shadow-sm">
+                            <h3 className="text-lg font-bold text-[#0b1626] mb-4 flex items-center gap-2">
+                              <span className="w-7 h-7 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
+                                <ShieldCheck size={16} />
+                              </span>
+                              {tUI('Revision & Follow-Up Policy', lang)}
+                            </h3>
+                            <p className="text-sm text-gray-600 leading-relaxed font-medium bg-white p-5 rounded-2xl border border-gray-50 shadow-sm">
+                              {revisionPolicy}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Authoritative References */}
+                    {references.length > 0 && (
+                      <div className="bg-gray-50/30 border border-gray-100 rounded-3xl p-8 shadow-sm">
+                        <h3 className="text-sm font-bold text-[#0b1626] mb-4 flex items-center gap-2">
+                          <span className="w-6 h-6 rounded-full bg-amber-500/10 flex items-center justify-center text-amber-500">
+                            <FileText size={12} />
+                          </span>
+                          {tUI('Authoritative Medical References & Studies', lang)}
+                        </h3>
+                        <ul className="space-y-3 pl-2">
+                          {references.map((item: string, i: number) => {
+                            const searchUrl = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(item)}`;
+                            return (
+                              <li key={i} className="text-xs text-gray-500 leading-relaxed font-medium flex items-start gap-2">
+                                <span className="text-amber-500 font-bold shrink-0">[{i + 1}]</span>
+                                <span className="flex-1">
+                                  {item}{' '}
+                                  <a
+                                    href={searchUrl}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="text-amber-500 hover:text-amber-600 underline inline-flex items-center gap-0.5 ml-1"
+                                  >
+                                    {tUI('View Study', lang)} <ExternalLink size={10} />
+                                  </a>
+                                </span>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    )}
+
+                    {/* Medical Disclaimer */}
+                    {medicalDisclaimer && (
+                      <div className="bg-amber-500/5 border border-amber-500/10 rounded-2xl p-6">
+                        <p className="text-[11px] text-amber-600/80 leading-relaxed font-medium text-center">
+                          <strong>{tUI('Medical Disclaimer:', lang)}</strong> {medicalDisclaimer}
+                        </p>
+                      </div>
+                    )}
                   </motion.div>
                 )}
 

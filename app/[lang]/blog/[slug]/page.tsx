@@ -44,7 +44,6 @@ export default async function BlogPostPage({ params }: Props) {
 
   const currentTitle = (post.title as any)[safeLang] || post.title['en'];
   const currentExcerpt = (post.excerpt as any)[safeLang] || post.excerpt['en'];
-
   // Resolve reviewer based on post category
   const getReviewer = (cat: string) => {
     const category = (cat || '').toLowerCase();
@@ -53,8 +52,8 @@ export default async function BlogPostPage({ params }: Props) {
     if (category.includes('dental') || category.includes('tooth') || category.includes('teeth')) return REVIEWERS.dental;
     if (category.includes('plastic') || category.includes('face') || category.includes('rhinoplasty') || category.includes('regenerative')) return REVIEWERS.plastic;
     if (category.includes('oncology') || category.includes('cancer') || category.includes('cyberknife')) return REVIEWERS.oncology;
-    if (category.includes('transplant') || category.includes('organ') || category.includes('kidney') || category.includes('liver') || category.includes('ivf')) return REVIEWERS.organ;
-    return REVIEWERS.hair;
+    if (category.includes('organ') || category.includes('kidney') || category.includes('liver')) return REVIEWERS.organ;
+    return REVIEWERS.specialist;
   };
 
   const reviewerObj = getReviewer(post.category);

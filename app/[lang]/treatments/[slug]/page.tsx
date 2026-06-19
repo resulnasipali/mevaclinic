@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import TreatmentDetailClient from '@/app/components/TreatmentDetailClient';
 import { treatmentsData } from '@/data/treatmentsData';
 import { getTreatmentImages } from '@/utils/getTreatmentImages';
@@ -31,6 +31,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang, slug } = await params;
   
+  const DEPRECATED_REDIRECTS: Record<string, string> = {
+    'hair-transplant-dhi': 'dhi-hair-transplant',
+    'hair-transplant-sapphire-fue': 'meva-mixed-hair',
+    'gastric-balloon-allurion': 'gastric-balloon',
+    'full-mouth-dental-implants': 'all-on-4-dental',
+    'zirconium-dental-crowns': 'zirconium-crowns',
+    'rhinoplasty-nose-job': 'piezo-rhinoplasty'
+  };
+
+  if (DEPRECATED_REDIRECTS[slug]) {
+    redirect(`/${lang}/treatments/${DEPRECATED_REDIRECTS[slug]}`);
+  }
+
   const treatment = treatmentsData.find(t => t.id === slug);
   if (!treatment) return { title: 'Treatment Not Found' };
 
@@ -62,6 +75,19 @@ export default async function TreatmentPage({ params }: Props) {
   const { lang, slug } = await params;
   const SUPPORTED = ['en', 'ro', 'es', 'it', 'ru', 'fr', 'de'];
   const safeLang = SUPPORTED.includes(lang) ? lang : 'en';
+
+  const DEPRECATED_REDIRECTS: Record<string, string> = {
+    'hair-transplant-dhi': 'dhi-hair-transplant',
+    'hair-transplant-sapphire-fue': 'meva-mixed-hair',
+    'gastric-balloon-allurion': 'gastric-balloon',
+    'full-mouth-dental-implants': 'all-on-4-dental',
+    'zirconium-dental-crowns': 'zirconium-crowns',
+    'rhinoplasty-nose-job': 'piezo-rhinoplasty'
+  };
+
+  if (DEPRECATED_REDIRECTS[slug]) {
+    redirect(`/${safeLang}/treatments/${DEPRECATED_REDIRECTS[slug]}`);
+  }
 
   const treatment = treatmentsData.find(t => t.id === slug);
 
@@ -146,7 +172,7 @@ export default async function TreatmentPage({ params }: Props) {
     }
     if (
       cat === 'specialist' &&
-      (id.includes('organ') || id.includes('kidney') || id.includes('liver') || id.includes('transplant'))
+      (id.includes('organ') || id.includes('kidney') || id.includes('liver'))
     ) {
       return REVIEWERS.organ;
     }
@@ -159,6 +185,7 @@ export default async function TreatmentPage({ params }: Props) {
     
     return REVIEWERS.specialist;
   };
+
 
   const reviewerObj = getReviewer(treatment.category || '', slug);
 
