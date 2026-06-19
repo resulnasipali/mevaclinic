@@ -690,22 +690,39 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                           {tUI('Authoritative Medical References & Studies', lang)}
                         </h3>
                         <ul className="space-y-3 pl-2">
-                          {references.map((item: string, i: number) => {
-                            const searchUrl = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(item)}`;
+                          {references.map((item: any, i: number) => {
+                            let text = '';
+                            let url = '';
+                            let isStudy = true;
+
+                            if (item && typeof item === 'object') {
+                              text = item.text || '';
+                              url = item.url || '';
+                              isStudy = item.type === 'study';
+                            } else {
+                              text = String(item || '');
+                              url = `https://pubmed.ncbi.nlm.nih.gov/?term=${encodeURIComponent(text)}`;
+                              isStudy = true;
+                            }
+
+                            const linkLabel = isStudy ? tUI('View Study', lang) : tUI('View Source', lang);
+
                             return (
-                              <li key={i} className="text-xs text-gray-500 leading-relaxed font-medium flex items-start gap-2">
+                              <li key={i} className="text-xs text-gray-500 leading-relaxed font-medium grid grid-cols-[24px_1fr] gap-x-2 items-start">
                                 <span className="text-amber-500 font-bold shrink-0">[{i + 1}]</span>
-                                <span className="flex-1">
-                                  {item}{' '}
-                                  <a
-                                    href={searchUrl}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className="text-amber-500 hover:text-amber-600 underline inline-flex items-center gap-0.5 ml-1"
-                                  >
-                                    {tUI('View Study', lang)} <ExternalLink size={10} />
-                                  </a>
-                                </span>
+                                <div className="flex-1">
+                                  <span>{text}</span>
+                                  {url && (
+                                    <a
+                                      href={url}
+                                      target="_blank"
+                                      rel="noopener noreferrer nofollow"
+                                      className="text-amber-500 hover:text-amber-600 underline inline-flex items-center gap-0.5 ml-1.5 whitespace-nowrap"
+                                    >
+                                      {linkLabel} <ExternalLink size={10} />
+                                    </a>
+                                  )}
+                                </div>
                               </li>
                             );
                           })}

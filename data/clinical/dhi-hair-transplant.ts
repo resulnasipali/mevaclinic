@@ -54,9 +54,25 @@ export const dhiHairTransplantClinical = {
   doctorNote: t("DHI is an excellent technique for restoring density in thinning areas because it allows direct implantation without pre-made incisions. However, the success of the procedure relies heavily on graft handling and donor zone preservation. Protecting your donor area is our priority to ensure that you have viable options for the future if hair loss progresses."),
   medicalDisclaimer: t("The hair restoration information provided on this page is for educational purposes only. Individual hair loss patterns and donor capacities vary. Final eligibility and graft estimates are determined during a clinical consultation with our hair restoration specialists."),
   references: t([
-    "International Society of Hair Restoration Surgery (ISHRS): Core Curriculum Guidelines on Follicular Unit Extraction and Implanter Pen Usage, 2023.",
-    "Journal of Dermatologic Surgery: 'Survival Rate of Hair Grafts and Clinical Comparison of DHI vs Traditional FUE Techniques' (2021).",
-    "American Academy of Dermatology (AAD): Clinical Guidelines on the Diagnosis and Management of Androgenetic Alopecia in Men and Women.",
-    "Indian Journal of Dermatology, Venereology and Leprology: 'Direct Hair Implantation: Technical Review and Safety Profile of Implanter Pens'."
+    {
+      text: "International Society of Hair Restoration Surgery (ISHRS): Core Curriculum Guidelines on Follicular Unit Extraction and Implanter Pen Usage.",
+      url: "https://ishrs.org/",
+      type: "source"
+    },
+    {
+      text: "Journal of Cutaneous and Aesthetic Surgery: 'Direct Hair Transplantation: A Modified Follicular Unit Extraction Technique' (2013).",
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3714620/",
+      type: "study"
+    },
+    {
+      text: "American Academy of Dermatology (AAD): Clinical Guidelines on the Diagnosis and Management of Androgenetic Alopecia.",
+      url: "https://www.aad.org/public/diseases/hair-loss/types/alopecia",
+      type: "source"
+    },
+    {
+      text: "Indian Journal of Dermatology, Venereology and Leprology: 'Direct Hair Implantation: Technical Review and Safety Profile of Implanter Pens'.",
+      url: "https://ijdvl.com/",
+      type: "source"
+    }
   ])
 };

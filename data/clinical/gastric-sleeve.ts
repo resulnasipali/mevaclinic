@@ -52,9 +52,25 @@ export const gastricSleeveClinical = {
   doctorNote: t("Bariatric surgery is not an instant cure for obesity; it is a powerful metabolic tool designed to assist you in making permanent lifestyle alterations. The physical restriction of the gastric sleeve must be matched by a conscious, daily commitment to protein-first nutrition, adequate hydration, and behavioral change. Our team is here to support you at every stage of this transformation journey."),
   medicalDisclaimer: t("The medical information provided on this page is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Eligibility for bariatric surgery is determined solely by qualified medical practitioners after a comprehensive, face-to-face clinical evaluation."),
   references: t([
-    "American Society for Metabolic and Bariatric Surgery (ASMBS) and International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO): Joint Consensus Statement on Indications for Bariatric Surgery, 2022.",
-    "National Institutes of Health (NIH) Clinical Guidelines on the Identification, Evaluation, and Treatment of Overweight and Obesity in Adults.",
-    "The Lancet: 'Long-term metabolic and weight-loss outcomes of sleeve gastrectomy versus Roux-en-Y gastric bypass' (Clinical Trial Data, 2020).",
-    "World Health Organization (WHO) Technical Report Series on the Prevention and Management of the Global Epidemic of Obesity."
+    {
+      text: "American Society for Metabolic and Bariatric Surgery (ASMBS) and International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO): Joint Consensus Statement on Indications for Bariatric Surgery (2022).",
+      url: "https://pubmed.ncbi.nlm.nih.gov/36526732/",
+      type: "study"
+    },
+    {
+      text: "National Institutes of Health (NIH) Clinical Guidelines on the Identification, Evaluation, and Treatment of Overweight and Obesity in Adults.",
+      url: "https://www.nhlbi.nih.gov/health-topics/all-publications-and-resources/clinical-guidelines-identification-evaluation-and",
+      type: "source"
+    },
+    {
+      text: "The Lancet Diabetes & Endocrinology: 'Long-term metabolic and weight-loss outcomes of sleeve gastrectomy versus Roux-en-Y gastric bypass' (By-Band-Sleeve Trial, 2025).",
+      url: "https://pubmed.ncbi.nlm.nih.gov/40622470/",
+      type: "study"
+    },
+    {
+      text: "World Health Organization (WHO): Technical Report Series on the Prevention and Management of the Global Epidemic of Obesity.",
+      url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
+      type: "source"
+    }
   ])
 };
