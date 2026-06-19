@@ -4,8 +4,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import BlogPostClient from '@/app/components/BlogPostClient';
 import { blogPosts } from '@/data/blogData';
-import { REVIEWERS } from '@/components/MedicalReviewer';
+import { REVIEWERS } from '@/data/reviewersData';
 import { buildMetadata } from '@/app/utils/seo';
+
 
 type Props = {
   params: Promise<{ lang: string; slug: string }>;

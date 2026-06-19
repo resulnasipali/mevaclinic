@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/about-us',
     '/medical-comparison',
     '/privacy-policy',
+    '/treatments',
   ];
 
   const sitemapEntries: MetadataRoute.Sitemap = [];
@@ -44,7 +45,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  // 3. Dynamic Blog Pages
+  // 3. Dynamic Category Hub Pages
+  const categories = ['bariatric', 'hair', 'dental', 'plastic', 'andrology', 'specialist'];
+  locales.forEach((locale) => {
+    categories.forEach((category) => {
+      sitemapEntries.push({
+        url: `${baseUrl}/${locale}/treatments/categories/${category}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      });
+    });
+  });
+
+  // 4. Dynamic Blog Pages
   locales.forEach((locale) => {
     blogPosts.forEach((post) => {
       sitemapEntries.push({

@@ -4,6 +4,9 @@ import TreatmentDetailClient from '@/app/components/TreatmentDetailClient';
 import { treatmentsData } from '@/data/treatmentsData';
 import { getTreatmentImages } from '@/utils/getTreatmentImages';
 import { buildMetadata } from '@/app/utils/seo';
+import { REVIEWERS } from '@/data/reviewersData';
+
+
 
 type Props = {
   params: Promise<{ lang: string; slug: string }>;
@@ -121,8 +124,39 @@ export default async function TreatmentPage({ params }: Props) {
     }
   };
   
+  // Resolve reviewer based on category and treatment properties for E-E-A-T Schema
+  const getReviewer = (category: string, treatmentId: string) => {
+    const cat = (category || '').toLowerCase();
+    const id = (treatmentId || '').toLowerCase();
+    
+    if (id.includes('cyberknife') || id.includes('oncology') || id.includes('cancer')) {
+      return REVIEWERS.oncology;
+    }
+    if (id.includes('transplant') || id.includes('kidney') || id.includes('liver')) {
+      return REVIEWERS.organ;
+    }
+
+    switch (cat) {
+      case 'hair':
+        return REVIEWERS.hair;
+      case 'dental':
+        return REVIEWERS.dental;
+      case 'bariatric':
+        return REVIEWERS.bariatric;
+      case 'plastic':
+        return REVIEWERS.plastic;
+      case 'andrology':
+      case 'specialist':
+        return REVIEWERS.specialist;
+      default:
+        return REVIEWERS.specialist;
+    }
+  };
+
+  const reviewerObj = getReviewer(treatment.category || '', slug);
+
   // 1. MedicalProcedure Schema (Semantically linked using layout organization ID)
-  const medicalProcedureSchema = {
+  const medicalProcedureSchema: any = {
     '@context': 'https://schema.org',
     '@type': 'MedicalProcedure',
     'name': title,
@@ -145,7 +179,13 @@ export default async function TreatmentPage({ params }: Props) {
     },
     'bodyLocation': treatment.category === 'bariatric' ? 'Stomach' : 
                     treatment.category === 'hair' ? 'Scalp' : 
-                    treatment.category === 'dental' ? 'Mouth' : 'Body'
+                    treatment.category === 'dental' ? 'Mouth' : 'Body',
+    'reviewedBy': reviewerObj ? {
+      '@type': 'Physician',
+      'name': reviewerObj.fullName,
+      'medicalSpecialty': reviewerObj.specialty,
+      'url': `https://www.mevaclinic.com/${safeLang}/about-us`
+    } : undefined
   };
 
   // 2. FAQPage Schema (if faq exists)

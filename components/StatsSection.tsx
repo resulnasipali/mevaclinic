@@ -31,7 +31,7 @@ const CountUp = ({
   duration?: number;
   suffix?: string;
 }) => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(end); // Initialize with end value for SSR / SEO
   const spanRef = useRef<HTMLSpanElement>(null);
   const hasAnimated = useRef(false);
 
@@ -46,6 +46,7 @@ const CountUp = ({
       ([entry]) => {
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
+          setCount(0); // Reset to 0 right before starting count-up animation to avoid hydration mismatch
           let start = 0;
           const increment = end / (duration / 16);
           const timer = setInterval(() => {

@@ -12,11 +12,17 @@ import {
 
 import ProcedureGallery from '@/components/ProcedureGallery';
 import PrivacyCtaCard from '@/components/PrivacyCtaCard';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { treatmentsData } from '@/data/treatmentsData';
+import { blogPosts } from '@/data/blogData';
 import { getWhatsAppLink } from '@/utils/getWhatsAppLink';
 import { TreatmentImage } from '@/utils/getTreatmentImages';
 import { tUI } from '@/utils/uiTranslations';
 import { maskDoctorName } from '@/utils/doctorUtils';
-import MedicalReviewer, { REVIEWERS } from '@/components/MedicalReviewer';
+import MedicalReviewer from '@/components/MedicalReviewer';
+import { REVIEWERS } from '@/data/reviewersData';
+
+
 import BmiWrapper from '@/components/BmiWrapper';
 
 interface TreatmentClientProps {
@@ -58,6 +64,15 @@ const PROTECTED_TREATMENTS = [
   'mommy-makeover-full',
   'gynecomastia-male'
 ];
+
+const CATEGORY_LABELS: Record<string, string> = {
+  bariatric: 'Bariatric Surgery',
+  hair: 'Hair & Brow Transplant',
+  dental: 'Dental Care',
+  plastic: 'Plastic Surgery',
+  andrology: 'Andrology',
+  specialist: 'Specialist Treatments'
+};
 
 export default function TreatmentDetailClient({ treatment, lang, images = [], categoryLayout }: TreatmentClientProps) {
   const isEn = lang === 'en';
@@ -172,13 +187,14 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-white">
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-            <Link
-              href={`/${lang}`}
-              className="inline-flex items-center gap-2 text-xs font-bold text-amber-500 hover:text-white uppercase tracking-widest mb-8 transition-colors"
-            >
-              <ArrowLeft size={15} />
-              {tUI('Return to Home Page', lang)}
-            </Link>
+            <Breadcrumbs 
+              lang={lang}
+              items={[
+                { label: tUI("Treatments", lang), path: `/${lang}/treatments` },
+                { label: tUI(CATEGORY_LABELS[treatment.category] || treatment.category, lang), path: `/${lang}/treatments/categories/${treatment.category}` },
+                { label: title }
+              ]}
+            />
           </motion.div>
 
           {expertName && (
@@ -513,6 +529,128 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                     </div>
                   </motion.div>
                 )}
+
+                {(() => {
+                  const relatedTreatments = treatmentsData
+                    .filter((t: any) => t.category === treatment.category && t.id !== treatment.id)
+                    .slice(0, 4);
+
+                  const getRelatedBlogs = () => {
+                    const cat = (treatment.category || '').toLowerCase();
+                    const id = (treatment.id || '').toLowerCase();
+                    
+                    if (cat === 'hair') {
+                      return blogPosts.filter((b: any) => b.category === 'Hair Tech');
+                    }
+                    if (cat === 'dental') {
+                      return blogPosts.filter((b: any) => b.category === 'Dental Tech');
+                    }
+                    if (cat === 'bariatric') {
+                      return blogPosts.filter((b: any) => b.category === 'Bariatric');
+                    }
+                    if (cat === 'specialist') {
+                      if (id.includes('cyberknife') || id.includes('oncology') || id.includes('cancer')) {
+                        return blogPosts.filter((b: any) => b.category === 'Oncology');
+                      }
+                      if (id.includes('transplant') || id.includes('kidney') || id.includes('liver')) {
+                        return blogPosts.filter((b: any) => b.category === 'Transplant');
+                      }
+                      if (id.includes('ivf') || id.includes('fertility')) {
+                        return blogPosts.filter((b: any) => b.category === 'IVF');
+                      }
+                    }
+                    return [];
+                  };
+
+                  const relatedBlogs = getRelatedBlogs().slice(0, 3);
+
+                  return (
+                    <>
+                      {relatedTreatments.length > 0 && (
+                        <motion.div 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          className="pt-12 border-t border-gray-100 mt-12"
+                        >
+                          <h2 className="text-3xl font-serif font-bold text-[#0b1626] mb-8 flex items-center gap-3">
+                            <span className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                              <Activity size={20} className="text-amber-500" />
+                            </span>
+                            {tUI('Related Treatments', lang)}
+                          </h2>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {relatedTreatments.map((tItem: any, idx: number) => {
+                              const tTitle = getSafeVal(tItem.title, lang);
+                              const tDesc = getSafeVal(tItem.shortDesc, lang);
+                              return (
+                                <Link 
+                                  key={idx}
+                                  href={`/${lang}/treatments/${tItem.id}`}
+                                  className="bg-white p-6 rounded-[2rem] border border-gray-100 shadow-sm hover:border-amber-500/30 hover:shadow-md transition-all group block"
+                                >
+                                  <h3 className="font-bold text-[#0b1626] text-lg leading-tight mb-2 group-hover:text-amber-500 transition-colors">
+                                    {tTitle}
+                                  </h3>
+                                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                                    {tDesc}
+                                  </p>
+                                  <div className="mt-4 flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest gap-1 group-hover:gap-2 transition-all">
+                                    {tUI('View Treatment', lang)} &rarr;
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {relatedBlogs.length > 0 && (
+                        <motion.div 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          className="pt-12 border-t border-gray-100 mt-12"
+                        >
+                          <h2 className="text-3xl font-serif font-bold text-[#0b1626] mb-8 flex items-center gap-3">
+                            <span className="w-10 h-10 bg-amber-500/10 rounded-xl flex items-center justify-center">
+                              <Quote size={20} className="text-amber-500" />
+                            </span>
+                            {tUI('Medical Insights & Blog', lang)}
+                          </h2>
+                          <div className="space-y-4">
+                            {relatedBlogs.map((post: any, idx: number) => {
+                              const postTitle = getSafeVal(post.title, lang);
+                              const postExcerpt = getSafeVal(post.excerpt, lang);
+                              return (
+                                <Link
+                                  key={idx}
+                                  href={`/${lang}/blog/${post.slug}`}
+                                  className="flex flex-col md:flex-row gap-6 bg-white p-6 rounded-[2rem] border border-gray-100 shadow-sm hover:border-amber-500/30 hover:shadow-md transition-all group"
+                                >
+                                  <div className="flex-1">
+                                    <span className="text-[10px] font-bold text-amber-500 uppercase tracking-widest mb-1 block">
+                                      {post.category}
+                                    </span>
+                                    <h3 className="font-bold text-[#0b1626] text-lg leading-snug mb-2 group-hover:text-amber-500 transition-colors">
+                                      {postTitle}
+                                    </h3>
+                                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
+                                      {postExcerpt}
+                                    </p>
+                                    <div className="mt-4 flex items-center text-amber-500 text-xs font-bold uppercase tracking-widest gap-1">
+                                      {tUI('Read Article', lang)} &rarr;
+                                    </div>
+                                  </div>
+                                </Link>
+                              );
+                            })}
+                          </div>
+                        </motion.div>
+                      )}
+                    </>
+                  );
+                })()}
               </div>
             </div>
 

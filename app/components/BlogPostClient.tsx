@@ -5,9 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Calendar, User, ArrowLeft, ShieldCheck, Share2, Clock, BookOpen, GraduationCap } from 'lucide-react';
+
 import { CertRow } from '@/components/ClinicalBadges';
 import { tUI } from '@/utils/uiTranslations';
-import MedicalReviewer, { REVIEWERS } from '@/components/MedicalReviewer';
+import MedicalReviewer from '@/components/MedicalReviewer';
+import { REVIEWERS } from '@/data/reviewersData';
+
+
+
+
 
 interface BlogPostClientProps {
   post: any;
