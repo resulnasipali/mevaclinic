@@ -2690,6 +2690,15 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Années d'expérience",
     "de": "Jahre Erfahrung"
   },
+  "Years Experience": {
+    "en": "Years Experience",
+    "ro": "Ani de Experiență",
+    "es": "Años de Experiencia",
+    "it": "Anni di Esperienza",
+    "ru": "Лет Опыта",
+    "fr": "Ans d'Expérience",
+    "de": "Jahre Erfahrung"
+  },
   "Care Standard": {
     "en": "Care Standard",
     "ro": "Standard Îngrijire",
@@ -6552,12 +6561,12 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
   },
   "Long-Term Follow-Up Support": {
     "en": "Long-Term Follow-Up Support",
-    "es": "Garantía de crecimiento de por vida certificada",
-    "it": "Garanzia di ricrescita a vita certificata",
-    "ru": "Сертифицированная пожизненная гарантия роста",
-    "fr": "Garantie de croissance à vie certifiée",
-    "de": "Zertifizierte lebenslange Anwuchsgarantie",
-    "ro": "Garanție de Creștere pe Viață Certificată"
+    "ro": "Suport de urmărire pe termen lung",
+    "es": "Soporte de seguimiento a largo plazo",
+    "it": "Supporto di follow-up a lungo termine",
+    "ru": "Долгосрочная поддержка и сопровождение",
+    "fr": "Support de suivi à long terme",
+    "de": "Langfristige Nachsorgeunterstützung"
   },
     "Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.": {
       "en": "Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.",

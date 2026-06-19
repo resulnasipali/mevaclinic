@@ -286,6 +286,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
               <Phone size={16} />
               {tUI('Free Consultation', lang)}
             </a>
+            <span className="sr-only"> | </span>
             <a
               href="#procedure"
               className="inline-flex items-center gap-2 border border-white/20 text-white font-bold py-3.5 px-8 rounded-full hover:border-amber-500 hover:bg-white/5 backdrop-blur-sm transition-all min-h-[44px]"
@@ -515,7 +516,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                           <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Safety Standard', lang)}</span>
                         </div>
                         <div className="flex flex-col gap-1">
-                          <span className="text-amber-500 font-bold text-lg">15+</span>
+                          <span className="text-amber-500 font-bold text-lg">15+ </span>
                           <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Years Experience', lang)}</span>
                         </div>
                         <div className="flex flex-col gap-1">

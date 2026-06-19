@@ -34,7 +34,7 @@ export const gastricSleeveClinical = {
     "New-Onset or Worsened GERD: Persistent acid reflux due to the increased intra-gastric pressure within the narrowed stomach tube."
   ]),
   procedureSteps: t([
-    { title: "Anesthesia Administration", desc: "The patient is placed under general anesthesia, continuously monitored by a board-certified anesthesiologist throughout the procedure." },
+    { title: "Anesthesia & Monitoring", desc: "The patient is placed under general anesthesia, continuously monitored by a board-certified anesthesiologist throughout the procedure." },
     { title: "Laparoscopic Access", desc: "Multiple small, minimally invasive incisions (typically 5-12mm) are made in the upper abdomen to insert trocars, a laparoscope, and specialized surgical instruments." },
     { title: "Gastric Mobilization", desc: "The blood vessels and attachments along the greater curvature of the stomach are carefully dissected using ultrasonic energy devices to mobilize the gastric body." },
     { title: "Stomach Resection", desc: "A calibration tube (bougie, typically 36F to 40F) is inserted into the stomach to guide the resection. The surgeon uses triple-row titanium linear staplers to divide and remove approximately 80% of the stomach." },
