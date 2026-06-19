@@ -15,7 +15,7 @@ export const faqData = {
         },
         {
           q: "What is the success rate for intracranial lesions using Gamma Knife Icon?",
-          a: "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href='/en/contact' class='text-accent font-bold'>Request clinical data.</a>",
+          a: "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href='/en/contact' class='text-accent font-bold'>Request clinical data.</a>",
           schema: true
         },
         {

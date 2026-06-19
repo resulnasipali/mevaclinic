@@ -129,28 +129,35 @@ export default async function TreatmentPage({ params }: Props) {
     const cat = (category || '').toLowerCase();
     const id = (treatmentId || '').toLowerCase();
     
-    if (id.includes('cyberknife') || id.includes('oncology') || id.includes('cancer')) {
-      return REVIEWERS.oncology;
+    if (cat === 'hair') {
+      return REVIEWERS.hair;
     }
-    if (id.includes('transplant') || id.includes('kidney') || id.includes('liver')) {
+    if (cat === 'dental') {
+      return REVIEWERS.dental;
+    }
+    if (cat === 'bariatric') {
+      return REVIEWERS.bariatric;
+    }
+    if (cat === 'plastic') {
+      return REVIEWERS.plastic;
+    }
+    if (cat === 'andrology') {
+      return REVIEWERS.specialist;
+    }
+    if (
+      cat === 'specialist' &&
+      (id.includes('organ') || id.includes('kidney') || id.includes('liver') || id.includes('transplant'))
+    ) {
       return REVIEWERS.organ;
     }
-
-    switch (cat) {
-      case 'hair':
-        return REVIEWERS.hair;
-      case 'dental':
-        return REVIEWERS.dental;
-      case 'bariatric':
-        return REVIEWERS.bariatric;
-      case 'plastic':
-        return REVIEWERS.plastic;
-      case 'andrology':
-      case 'specialist':
-        return REVIEWERS.specialist;
-      default:
-        return REVIEWERS.specialist;
+    if (
+      cat === 'specialist' &&
+      (id.includes('cyberknife') || id.includes('oncology') || id.includes('cancer'))
+    ) {
+      return REVIEWERS.oncology;
     }
+    
+    return REVIEWERS.specialist;
   };
 
   const reviewerObj = getReviewer(treatment.category || '', slug);

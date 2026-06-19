@@ -77,9 +77,40 @@ const nextConfig: NextConfig = {
         destination: '/:lang/medical-comparison',
         permanent: true,
       },
+
       {
         source: '/:lang(en|de|ro|es|it|ru|fr)/politica-confidentialitate',
         destination: '/:lang/privacy-policy',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/treatments/hair-transplant-dhi',
+        destination: '/:lang/treatments/dhi-hair-transplant',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/treatments/hair-transplant-sapphire-fue',
+        destination: '/:lang/treatments/meva-mixed-hair',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/treatments/gastric-balloon-allurion',
+        destination: '/:lang/treatments/gastric-balloon',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/treatments/full-mouth-dental-implants',
+        destination: '/:lang/treatments/all-on-4-dental',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/treatments/zirconium-dental-crowns',
+        destination: '/:lang/treatments/zirconium-crowns',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/treatments/rhinoplasty-nose-job',
+        destination: '/:lang/treatments/piezo-rhinoplasty',
         permanent: true,
       }
     ];

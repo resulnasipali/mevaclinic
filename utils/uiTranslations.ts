@@ -1988,8 +1988,8 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Tests Pré/Postopératoires",
     "ru": "Пре/Постоперационные Тесты"
   },
-  "All analyzes, consultations (cardiological, anesthetic) and necessary tests are 100% covered.": {
-    "en": "All analyzes, consultations (cardiological, anesthetic) and necessary tests are 100% covered.",
+  "All medical tests, cardiology and anesthesia consultations required for your procedure are included in the transparent package.": {
+    "en": "All medical tests, cardiology and anesthesia consultations required for your procedure are included in the transparent package.",
     "ro": "Toate analizele, consulturile (cardiologic, anestezic) și testele necesare sunt acoperite 100%.",
     "de": "Alle Analysen, Konsultationen (kardiologisch, anästhetisch) und notwendigen Tests sind zu 100% abgedeckt.",
     "es": "Todos los análisis, consultas (cardiológicas, anestésicas) y pruebas necesarias están cubiertos al 100%.",
@@ -2060,8 +2060,8 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Notre approche clinique donne la priorité à la préservation des tissus et aux résultats naturels à long terme, garantissant que votre transformation est à la fois sûre et esthétiquement supérieure.",
     "ru": "Наш клинический подход ставит в приоритет сохранение тканей и долгосрочные естественные результаты, гарантируя, что ваша трансформация будет безопасной и эстетически безупречной."
   },
-  "Our strategic partnerships guarantee VIP access from landing to the procedures within our premium clinical network and 5-star hotels.": {
-    "en": "Our strategic partnerships guarantee VIP access from landing to the procedures within our premium clinical network and 5-star hotels.",
+  "Our strategic partnerships coordinate VIP access from landing to the procedures within our premium clinical network and 5-star hotels.": {
+    "en": "Our strategic partnerships coordinate VIP access from landing to the procedures within our premium clinical network and 5-star hotels.",
     "de": "Unsere strategischen Partnerschaften garantieren Ihnen VIP-Zugang von der Landung bis zu den Behandlungen in unserem Premium-Kliniknetzwerk und in 5-Sterne-Hotels.",
     "ro": "Parteneriatele noastre strategice garantează acces VIP de la aterizare până la procedurile din cadrul rețelei noastre clinice premium și hoteluri de 5 stele.",
     "es": "Nuestras alianzas estratégicas garantizan acceso VIP desde el aterrizaje hasta los procedimientos dentro de nuestra red clínica premium y hoteles de 5 estrellas.",
@@ -2069,8 +2069,8 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Nos partenariats stratégiques garantissent un accès VIP de l'atterrissage aux procédures au sein de notre réseau clinique premium et dans des hôtels 5 étoiles.",
     "ru": "Наши стратегические партнерства гарантируют VIP-доступ от посадки до процедур в нашей премиальной сети клиник и 5-звездочных отелях."
   },
-  "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and absolute comfort.": {
-    "en": "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and absolute comfort.",
+  "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and comfort-focused support.": {
+    "en": "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and comfort-focused support.",
     "de": "Ihr vertrauenswürdiger Partner für medizinische Exzellenz in der Türkei. Premium-VIP-Pakete für sichere Eingriffe und absoluten Komfort.",
     "ro": "Partenerul tău de încredere pentru excelență medicală în Turcia. Pachete VIP premium pentru intervenții sigure și confort absolut.",
     "es": "Su socio de confianza para la excelencia médica en Turquía. Paquetes VIP premium para intervenciones seguras y confort absoluto.",
@@ -5848,13 +5848,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "No, CyberKnife and Gamma Knife Icon procedures are non-invasive and require no anesthesia. <a href=",
       "ro": "Nu, procedurile CyberKnife și Gamma Knife Icon sunt non-invazive și nu necesită anestezie. <a href="
 },
-  "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href=": {
-    "en": "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href=",
-    "es": "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href=",
-    "it": "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href=",
-    "ru": "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href=",
-    "fr": "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href=",
-    "de": "Clinical studies show a local control rate of over 90% for specific intracranial lesions. <a href=",
+  "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href=": {
+    "en": "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href=",
+    "es": "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href=",
+    "it": "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href=",
+    "ru": "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href=",
+    "fr": "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href=",
+    "de": "Clinical studies show a outcomes vary depending on tumor type, staging, and planning for specific intracranial lesions. <a href=",
       "ro": "Studiile clinice arată o rată de control local de peste 90% pentru anumite leziuni intracraniene. <a href="
 },
   "Robotic systems provide 3D HD visualization and tremor filtration, reducing complication risks. <a href=": {
@@ -5895,7 +5895,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
 },
   '4 Nights Premium Hospitalization Stay Included': { it: '4 Notti di Ricovero Premium Incluse', fr: "4 Nuits d'Hospitalisation Premium Incluses", es: '4 Noches de Hospitalización Premium Incluidas', de: '4 Nächte Premium-Krankenhausaufenthalt Inbegriffen', ru: '4 Ночи Премиум-госпитализации Включены', ro: '4 Nopți de Spitalizare Premium Incluse' },
   'Optional 5-Star Hotel Stay Available': { it: 'Soggiorno Opzionale in Hotel 5 Stelle Disponibile', fr: 'Séjour Optionnel en Hôtel 5 Étoiles Disponible', es: 'Estancia Opcional en Hotel de 5 Estrellas Disponible', de: 'Optionaler 5-Sterne-Hotelaufenthalt Verfügbar', ru: 'Возможность проживания в 5-звездочном отеле', ro: 'Opțional Cazare la Hotel 5 Stele Disponibilă' },
-  'Strict NO HIDDEN FEES Guarantee': { it: 'Garanzia Rigorosa NESSUN COSTO NASCOSTO', fr: 'Garantie Stricte SANS FRAIS CACHÉS', es: 'Garantía Estricta SIN CARGOS OCULTOS', de: 'Strenge KEINE VERSTECKTEN KOSTEN Garantie', ru: 'Строгая гарантия БЕЗ СКРЫТЫХ ПЛАТЕЖЕЙ', ro: 'Garanție strictă FĂRĂ COSTURI ASCUNSE' },
+  'Transparent Package Policy': { it: 'Tariffe Trasparenti Senza Costi Nascosti', fr: 'Tarification Transparente Sans Frais Cachés', es: 'Precios Transparentes Sin Cargos Ocultos', de: 'Transparente Paketpreise Ohne Versteckte Kosten', ru: 'Строгая гарантия БЕЗ СКРЫТЫХ ПЛАТЕЖЕЙ', ro: 'Garanție strictă FĂRĂ COSTURI ASCUNSE' },
   'SUCCESS STORIES': { it: 'STORIE DI SUCCESSO', fr: 'HISTOIRES DE RÉUSSITE', es: 'HISTORIAS DE ÉXITO', de: 'ERFOLGSGESCHICHTEN', ru: 'ИСТОРИИ УСПЕХА',
       "ro": "POVESTI DE SUCCES"
 },
@@ -5910,7 +5910,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     de: 'Was passiert bei einer medizinischen Komplikation?',
     ru: 'Что произойдет, если возникнет медицинское осложнение?'
   },
-  'Your safety is our absolute priority. All our surgeries take place in JCI (Joint Commission International) accredited hospitals in Turkey. The packages include specialized medical insurance against complications.': {
+  'Your safety is our priority support. All our surgeries take place in JCI (Joint Commission International) accredited hospitals in Turkey. The packages include specialized medical insurance against complications.': {
     ro: 'Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.',
     it: 'La tua sicurezza è la nostra priorità assoluta. Tutti i nostri interventi chirurgici si svolgono in ospedali accreditati JCI (Joint Commission International) in Turchia. I pacchetti includono un\'assicurazione medica specializzata contro le complicazioni.',
     fr: 'Votre sécurité est notre priorité absolue. Toutes nos interventions chirurgicales ont lieu dans des hôpitaux accrédités JCI en Turquie. Les forfaits incluent une assurance médicale spécialisée contre les complications.',
@@ -5942,7 +5942,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     de: 'Bin ich durch eine Garantie oder Versicherung abgedeckt?',
     ru: 'Покрывается ли моя процедура гарантией или страховкой?'
   },
-  'Absolutely. We exclusively collaborate with doctors who have a documented success rate of over 99%. Additionally, you benefit from our dedicated assistance and transparent legal procedures.': {
+  'Absolutely. We exclusively collaborate with experienced partner doctors selected through credential review. Additionally, you benefit from our dedicated assistance and transparent legal procedures.': {
     ro: 'Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.',
     it: 'Assolutamente. Collaboriamo esclusivamente con medici che hanno una percentuale di successo documentata superiore al 99%. Inoltre, beneficerai della nostra assistenza dedicata e di procedure legali trasparenti.',
     fr: 'Absolument. Nous collaborons exclusivement avec des médecins qui ont un taux de réussite documenté de plus de 99 %. De plus, vous bénéficiez de notre assistance dédiée.',
@@ -6487,8 +6487,8 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Zertifizierte Materialien für die Genesung bereitgestellt",
     "ro": "Materiale de Recuperare Certificate Oferite"
   },
-  "FDA-Approved Lifetime Warranty Implants": {
-    "en": "FDA-Approved Lifetime Warranty Implants",
+  "FDA-Approved Implants with Manufacturer Warranty": {
+    "en": "FDA-Approved Implants with Manufacturer Warranty",
     "es": "Implantes con garantía de por vida aprobados por la FDA",
     "it": "Impianti approvati dalla FDA con garanzia a vita",
     "ru": "Имплантаты с пожизненной гарантией, одобренные FDA",
@@ -6550,8 +6550,8 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Fortschrittliche FUE / DHI Mikrotechnologie",
     "ro": "Micro-Tehnologie Avansată FUE / DHI"
   },
-  "Certified Lifetime Growth Guarantee": {
-    "en": "Certified Lifetime Growth Guarantee",
+  "Long-Term Follow-Up Support": {
+    "en": "Long-Term Follow-Up Support",
     "es": "Garantía de crecimiento de por vida certificada",
     "it": "Garanzia di ricrescita a vita certificata",
     "ru": "Сертифицированная пожизненная гарантия роста",

@@ -10,9 +10,9 @@ import { tUI } from '@/utils/uiTranslations';
 
 
 const getFaqData = (lang: string) => [
-  { question: tUI("What happens if a medical complication occurs?", lang), answer: tUI("Your safety is our absolute priority. All our surgeries take place in JCI (Joint Commission International) accredited hospitals in Turkey. The packages include specialized medical insurance against complications.", lang) },
+  { question: tUI("What happens if a medical complication occurs?", lang), answer: tUI("Your safety is our priority support. All our surgeries take place in JCI (Joint Commission International) accredited hospitals in Turkey. The packages include specialized medical insurance against complications.", lang) },
   { question: tUI("How safe is traveling and staying in Istanbul?", lang), answer: tUI("Istanbul is a prestigious international hub for medical tourism. From the moment you step off the plane, our VIP assistant will pick you up. Accommodation is provided in five-star hotels located in premium areas.", lang) },
-  { question: tUI("Am I covered by a guarantee or insurance?", lang), answer: tUI("Absolutely. We exclusively collaborate with doctors who have a documented success rate of over 99%. Additionally, you benefit from our dedicated assistance and transparent legal procedures.", lang) }
+  { question: tUI("Am I covered by a guarantee or insurance?", lang), answer: tUI("Absolutely. We exclusively collaborate with experienced partner doctors selected through credential review. Additionally, you benefit from our dedicated assistance and transparent legal procedures.", lang) }
 ];
 
 

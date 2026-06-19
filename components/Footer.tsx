@@ -13,40 +13,40 @@ import { MevaLogo } from './MevaLogo';
 const TRUST_BADGES = [
   {
     icon: '🏛️',
-    nameEn: 'TÜRSAB Approved',
-    nameRo: 'Aprobat TÜRSAB',
+    nameEn: 'TÜRSAB Licensed Partner',
+    nameRo: 'Partener Autorizat TÜRSAB',
     subEn: 'Group-A Travel Agency',
     subRo: 'Agenție Grup A',
     color: 'text-accent',
   },
   {
     icon: '🏥',
-    nameEn: 'Ministry of Health',
-    nameRo: 'Ministerul Sănătății',
-    subEn: 'Republic of Turkey · Certified',
-    subRo: 'Republica Turcia · Certificat',
+    nameEn: 'MoH Licensed Coordination',
+    nameRo: 'Coordonare Autorizată MS',
+    subEn: 'Republic of Turkey · Facilitator',
+    subRo: 'Republica Turcia · Facilitator',
     color: 'text-blue-400',
   },
   {
     icon: '🌐',
-    nameEn: 'JCI Accredited',
-    nameRo: 'Acreditat JCI',
+    nameEn: 'JCI Accredited Partners',
+    nameRo: 'Parteneri Acreditați JCI',
     subEn: 'Global Patient Safety',
     subRo: 'Siguranță Globală',
     color: 'text-green-400',
   },
   {
     icon: '✅',
-    nameEn: 'TÜV SÜD',
-    nameRo: 'TÜV SÜD',
-    subEn: 'Quality Management Certified',
-    subRo: 'Certificat Calitate ISO',
+    nameEn: 'TÜV SÜD Certified Partners',
+    nameRo: 'Parteneri Certificați TÜV SÜD',
+    subEn: 'Quality Management Standards',
+    subRo: 'Standarde Calitate ISO',
     color: 'text-purple-400',
   },
   {
     icon: '🤝',
-    nameEn: 'IMA Member',
-    nameRo: 'Membru IMA',
+    nameEn: 'IMA Partner Network',
+    nameRo: 'Rețea Parteneri IMA',
     subEn: 'Medical Tourism Assoc.',
     subRo: 'Asoc. Turism Medical',
     color: 'text-yellow-400',
@@ -127,7 +127,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               {tUI('The Medical Heart of Istanbul', lang)}
             </h2>
             <p className="text-base text-gray-300 font-sans leading-relaxed mb-6">
-              {tUI('Our strategic partnerships guarantee VIP access from landing to the procedures within our premium clinical network and 5-star hotels.', lang)}
+              {tUI('Our strategic partnerships coordinate VIP access from landing to the procedures within our premium clinical network and 5-star hotels.', lang)}
             </p>
             {/* WhatsApp CTA inside map card */}
             <a
@@ -158,7 +158,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mt-4 block">Istanbul Excellence</span>
             </div>
             <p className="text-gray-400 font-sans text-sm leading-relaxed pr-4">
-              {tUI('Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and absolute comfort.', lang)}
+              {tUI('Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and comfort-focused support.', lang)}
             </p>
             {/* Social */}
             <div className="flex space-x-3">
