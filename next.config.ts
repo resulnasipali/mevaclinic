@@ -58,8 +58,13 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/ro/piezo-rhinoplasty',
-        destination: '/ro/treatments/piezo-rhinoplasty',
+        source: '/:lang(en|de|ro|es|it|ru|fr)/piezo-rhinoplasty',
+        destination: '/:lang/treatments/piezo-rhinoplasty',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/undefined',
+        destination: '/:lang/about-us',
         permanent: true,
       },
       {

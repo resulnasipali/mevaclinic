@@ -1,49 +1,117 @@
 // scripts/seo-audit.mjs
 import { spawn } from 'child_process';
 import http from 'http';
+import { URL } from 'url';
 
 const LOCAL_PORT = 3000;
 const LOCAL_HOST = `http://localhost:${LOCAL_PORT}`;
 const CANONICAL_DOMAIN = 'https://www.mevaclinic.com';
 
-// The 22 exact GSC URLs
-const GSC_TEST_URLS = [
-  'https://www.mevaclinic.com/fr/despre-noi',
-  'https://www.mevaclinic.com/en/despre-noi',
-  'https://www.mevaclinic.com/it/despre-noi',
-  'https://mevaclinic.com/ro/implant-dentar',
-  'https://www.mevaclinic.com/ro/oncologie',
-  'https://mevaclinic.com/ro/romani-istanbul',
-  'https://www.mevaclinic.com/en/packages/breast-implants',
-  'https://www.mevaclinic.com/ro/comparatie-medicala',
-  'https://www.mevaclinic.com/ro/despre-noi',
-  'https://www.mevaclinic.com/ru/comparatie-medicala',
-  'https://www.mevaclinic.com/en/comparatie-medicala',
-  'https://www.mevaclinic.com/ru/despre-noi',
-  'https://www.mevaclinic.com/de/despre-noi',
-  'https://www.mevaclinic.com/fr/comparatie-medicala',
-  'https://www.mevaclinic.com/ro/implant-par',
-  'https://www.mevaclinic.com/it/comparatie-medicala',
-  'https://www.mevaclinic.com/en/gastric-sleeve',
-  'https://www.mevaclinic.com/en/oncology',
-  'https://mevaclinic.com/en/packages/liposuction-360',
-  'https://www.mevaclinic.com/es/comparatie-medicala',
-  'https://www.mevaclinic.com/de/comparatie-medicala',
-  'https://www.mevaclinic.com/en/hair-transplant'
+// Define the audit test URLs with their group, expected behavior, and expected sitemap presence
+const TEST_URLS = [
+  // --- PHASE 1 GSC 404 URLS ---
+  { url: 'https://www.mevaclinic.com/fr/despre-noi', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /fr/about-us' },
+  { url: 'https://www.mevaclinic.com/en/despre-noi', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/about-us' },
+  { url: 'https://www.mevaclinic.com/it/despre-noi', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /it/about-us' },
+  { url: 'https://mevaclinic.com/ro/implant-dentar', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ro/treatments/dental-implants' },
+  { url: 'https://www.mevaclinic.com/ro/oncologie', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ro/treatments/smart-oncology-drugs' },
+  { url: 'https://mevaclinic.com/ro/romani-istanbul', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ro/about-us' },
+  { url: 'https://www.mevaclinic.com/en/packages/breast-implants', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/breast-augmentation' },
+  { url: 'https://www.mevaclinic.com/ro/comparatie-medicala', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ro/medical-comparison' },
+  { url: 'https://www.mevaclinic.com/ro/despre-noi', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ro/about-us' },
+  { url: 'https://www.mevaclinic.com/ru/comparatie-medicala', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ru/medical-comparison' },
+  { url: 'https://www.mevaclinic.com/en/comparatie-medicala', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/medical-comparison' },
+  { url: 'https://www.mevaclinic.com/ru/despre-noi', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ru/about-us' },
+  { url: 'https://www.mevaclinic.com/de/despre-noi', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /de/about-us' },
+  { url: 'https://www.mevaclinic.com/fr/comparatie-medicala', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /fr/medical-comparison' },
+  { url: 'https://www.mevaclinic.com/ro/implant-par', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /ro/treatments/meva-mixed-hair' },
+  { url: 'https://www.mevaclinic.com/it/comparatie-medicala', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /it/medical-comparison' },
+  { url: 'https://www.mevaclinic.com/en/gastric-sleeve', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/gastric-sleeve' },
+  { url: 'https://www.mevaclinic.com/en/oncology', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/smart-oncology-drugs' },
+  { url: 'https://mevaclinic.com/en/packages/liposuction-360', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/vaser-liposuction' },
+  { url: 'https://www.mevaclinic.com/es/comparatie-medicala', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /es/medical-comparison' },
+  { url: 'https://www.mevaclinic.com/de/comparatie-medicala', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /de/medical-comparison' },
+  { url: 'https://www.mevaclinic.com/en/hair-transplant', group: 'Phase 1 - 404', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/meva-mixed-hair' },
+
+  // --- GROUP A: Page with redirect ---
+  { url: 'https://www.mevaclinic.com/blog/anesthesia-safety-protocols', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/anesthesia-safety-protocols' },
+  { url: 'https://www.mevaclinic.com/blog/organ-transplant-ethics-excellence', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/organ-transplant-ethics-excellence' },
+  { url: 'http://mevaclinic.com/', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://www.mevaclinic.com/', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en' },
+  { url: 'https://mevaclinic.com/ro', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://www.mevaclinic.com/blog/immunotherapy-breakthroughs', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/immunotherapy-breakthroughs' },
+  { url: 'https://www.mevaclinic.com/treatments/smart-oncology-drugs', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/smart-oncology-drugs' },
+  { url: 'https://www.mevaclinic.com/blog/istanbul-to-cyprus-ivf-travel-guide', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/istanbul-to-cyprus-ivf-travel-guide' },
+  { url: 'https://www.mevaclinic.com/blog/post-op-logistics-istanbul', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/post-op-logistics-istanbul' },
+  { url: 'https://www.mevaclinic.com/treatments/organ-transplant-turkey', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/organ-transplant-turkey' },
+  { url: 'https://www.mevaclinic.com/blog/exosome-therapy-healing', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/exosome-therapy-healing' },
+  { url: 'https://www.mevaclinic.com/blog/bariatric-precision-robotics', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/bariatric-precision-robotics' },
+  { url: 'https://www.mevaclinic.com/blog/cyberknife-s7-oncology', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/blog/cyberknife-s7-oncology' },
+  { url: 'https://mevaclinic.com/blog/ngs-ai-embryo-selection-ivf', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'http://www.mevaclinic.com/', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to https://www.mevaclinic.com' },
+  { url: 'https://www.mevaclinic.com/contact', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/contact' },
+  { url: 'https://mevaclinic.com/medical-comparison', group: 'Group A', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+
+  // --- GROUP B: Alternate canonical / duplicate-like ---
+  { url: 'https://mevaclinic.com/de', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/en', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/en/medical-comparison', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/en/quiz', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/ru/medical-comparison', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/fr/medical-comparison', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/ru/treatments/gastric-sleeve', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/en/blog/ngs-ai-embryo-selection-ivf', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/ru/blog/immunotherapy-breakthroughs', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/ru/contact', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/it/medical-comparison', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/en/packages/gastric-balloon', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect package route to treatment' },
+  { url: 'https://www.mevaclinic.com/en/piezo-rhinoplasty', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect to /en/treatments/piezo-rhinoplasty' },
+  { url: 'https://mevaclinic.com/en/treatments/smart-oncology-drugs', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/es/medical-comparison', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+  { url: 'https://mevaclinic.com/de/medical-comparison', group: 'Group B', isRedirect: true, expectSitemap: false, action: 'Redirect/Normalize domain to www' },
+
+  // --- GROUP C: Possible noindex / wrong hair transplant localized slug ---
+  { url: 'https://www.mevaclinic.com/it/treatments/hair-transplant', group: 'Group C', isRedirect: true, expectSitemap: false, action: 'Redirect to /it/treatments/meva-mixed-hair' },
+  { url: 'https://www.mevaclinic.com/ru/treatments/hair-transplant', group: 'Group C', isRedirect: true, expectSitemap: false, action: 'Redirect to /ru/treatments/meva-mixed-hair' },
+  { url: 'https://www.mevaclinic.com/es/treatments/hair-transplant', group: 'Group C', isRedirect: true, expectSitemap: false, action: 'Redirect to /es/treatments/meva-mixed-hair' },
+  { url: 'https://www.mevaclinic.com/fr/treatments/hair-transplant', group: 'Group C', isRedirect: true, expectSitemap: false, action: 'Redirect to /fr/treatments/meva-mixed-hair' },
+
+  // --- GROUP D: Route generation bug ---
+  { url: 'https://www.mevaclinic.com/ro/undefined', group: 'Group D', isRedirect: true, expectSitemap: false, action: 'Redirect to /ro/about-us' },
+
+  // --- GROUP E: Crawled, currently not indexed ---
+  { url: 'https://www.mevaclinic.com/en/blog/ovarian-prp-low-amh-treatment', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/fr/treatments/organ-transplant-turkey', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/ro/blog/immunotherapy-breakthroughs', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/es/blog/istanbul-to-cyprus-ivf-travel-guide', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/es/blog/dental-3d-smile-design', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/fr/blog/immunotherapy-breakthroughs', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/favicon.ico?favicon.0a6lxq-dzl.it.ico', group: 'Group E', isRedirect: false, expectSitemap: false, expectIndexable: false, action: 'None' },
+  { url: 'https://www.mevaclinic.com/en/treatments/vaser-liposuction', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/ro/blog/jci-standards-importance', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' }
 ];
 
+// Function to fetch a URL and follow redirects manually to inspect the chain locally
+async function checkRedirectChain(originalUrl, host = LOCAL_HOST) {
+  const parsedOriginal = new URL(originalUrl);
+  let currentUrl = `${host}${parsedOriginal.pathname}${parsedOriginal.search}`;
+  let currentHostHeader = parsedOriginal.host;
 
-
-// Function to fetch a URL and follow redirects manually to inspect the chain
-async function checkRedirectChain(urlPath, host = LOCAL_HOST) {
-  let currentUrl = `${host}${urlPath}`;
   const chain = [];
   let redirectsCount = 0;
   const maxRedirects = 5;
 
   while (redirectsCount < maxRedirects) {
+    const parsedCurrent = new URL(currentUrl);
     const res = await new Promise((resolve, reject) => {
-      const req = http.get(currentUrl, (response) => {
+      const options = {
+        headers: {
+          'Host': currentHostHeader,
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        }
+      };
+      const req = http.get(currentUrl, options, (response) => {
         resolve(response);
       });
       req.on('error', (err) => reject(err));
@@ -52,27 +120,25 @@ async function checkRedirectChain(urlPath, host = LOCAL_HOST) {
     const status = res.statusCode;
     chain.push({ url: currentUrl, status });
 
-    if (status === 301 || status === 302 || status === 307 || status === 308) {
+    if ([301, 302, 307, 308].includes(status)) {
       let location = res.headers.location;
       if (!location) {
         break;
       }
-      // If location is relative, convert to absolute
       if (location.startsWith('/')) {
         currentUrl = `${host}${location}`;
       } else {
-        // If it points to production domain, map it to local host for auditing
-        if (location.startsWith('https://www.mevaclinic.com')) {
-          currentUrl = location.replace('https://www.mevaclinic.com', host);
-        } else if (location.startsWith('https://mevaclinic.com')) {
-          currentUrl = location.replace('https://mevaclinic.com', host);
+        const parsedLocation = new URL(location);
+        currentHostHeader = parsedLocation.host;
+        
+        if (parsedLocation.hostname === 'www.mevaclinic.com' || parsedLocation.hostname === 'mevaclinic.com') {
+          currentUrl = `${host}${parsedLocation.pathname}${parsedLocation.search}`;
         } else {
           currentUrl = location;
         }
       }
       redirectsCount++;
     } else {
-      // Consume response body to avoid leaking file descriptors
       let body = '';
       res.setEncoding('utf8');
       for await (const chunk of res) {
@@ -97,11 +163,6 @@ function parseHtmlMetadata(html) {
                       html.match(/<meta\s+[^>]*content=["'](.*?)["'][^>]*name=["']robots["']/i);
   const robots = robotsMatch ? robotsMatch[1] : 'MISSING';
 
-  const descMatch = html.match(/<meta\s+[^>]*name=["']description["'][^>]*content=["']([\s\S]*?)["']/i) ||
-                    html.match(/<meta\s+[^>]*content=["']([\s\S]*?)["'][^>]*name=["']description["']/i);
-  const description = descMatch ? descMatch[1].trim() : 'MISSING';
-
-  // Find all H1s
   const h1Regex = /<h1[^>]*>([\s\S]*?)<\/h1>/gi;
   const h1s = [];
   let match;
@@ -109,7 +170,7 @@ function parseHtmlMetadata(html) {
     h1s.push(match[1].replace(/<[^>]*>/g, '').trim());
   }
 
-  return { title, canonical, robots, description, h1s };
+  return { title, canonical, robots, h1s };
 }
 
 // Fetch Sitemap and parse URLs
@@ -119,7 +180,6 @@ async function getSitemapUrls(host = LOCAL_HOST) {
       let body = '';
       res.on('data', (chunk) => body += chunk);
       res.on('end', () => {
-        // Extract all <loc> contents
         const locRegex = /<loc>(.*?)<\/loc>/g;
         const urls = [];
         let match;
@@ -137,110 +197,112 @@ async function getSitemapUrls(host = LOCAL_HOST) {
 async function runAudit() {
   console.log('=== Starting SEO Audit ===\n');
 
-  console.log('Fetching sitemap URLs...');
+  console.log('Fetching local sitemap URLs...');
   const sitemapUrls = await getSitemapUrls();
-  console.log(`Found ${sitemapUrls.length} URLs in the sitemap.\n`);
+  console.log(`Found ${sitemapUrls.length} URLs in the local sitemap.\n`);
 
   let passedTests = 0;
   const results = [];
 
-  for (const rawUrl of GSC_TEST_URLS) {
-    // Parse the path of the URL
+  for (const item of TEST_URLS) {
+    const rawUrl = item.url;
     const urlObj = new URL(rawUrl);
-    const path = urlObj.pathname;
+    const path = urlObj.pathname + urlObj.search;
 
-    console.log(`Auditing path: ${path} (from ${rawUrl})`);
-    const { chain, finalStatus, finalBody, finalUrl } = await checkRedirectChain(path);
+    console.log(`Auditing group [${item.group}] path: ${path}`);
+    const { chain, finalStatus, finalBody, finalUrl } = await checkRedirectChain(rawUrl);
 
     const redirectPath = chain.length > 1 ? new URL(chain[chain.length - 1].url).pathname : 'None';
-    const isRedirect = chain.length > 1;
+    const isRedirected = chain.length > 1;
 
-    let seo = { title: 'N/A', canonical: 'N/A', robots: 'N/A', description: 'N/A', h1s: [] };
+    let seo = { title: 'N/A', canonical: 'N/A', robots: 'N/A', h1s: [] };
     if (finalStatus === 200 && finalBody) {
       seo = parseHtmlMetadata(finalBody);
     }
 
-    // Check if the original path is in the sitemap
-    // (Either using the rawUrl hostname or just matching path suffix)
+    // Check if the original path is in the sitemap (matching both hostname and pathname)
     const inSitemap = sitemapUrls.some(sUrl => {
       try {
-        return new URL(sUrl).pathname === path;
+        const sUrlObj = new URL(sUrl);
+        return sUrlObj.pathname === urlObj.pathname && sUrlObj.hostname === urlObj.hostname;
       } catch {
         return false;
       }
     });
 
-    // Verify if final URL is indexable: must be 200 OK, canonical matches final URL, and no "noindex" robots tag
     const finalUrlObj = new URL(finalUrl);
     const expectedCanonical = `${CANONICAL_DOMAIN}${finalUrlObj.pathname}`;
     const canonicalMatches = seo.canonical === expectedCanonical;
     const noNoindex = !seo.robots.toLowerCase().includes('noindex');
-    const isIndexable = finalStatus === 200 && canonicalMatches && noNoindex;
+    
+    // For redirect routes, they should redirect. For active pages, they should be 200.
+    const statusMatchesExpected = item.isRedirect ? isRedirected : (finalStatus === 200);
+    const sitemapMatchesExpected = inSitemap === item.expectSitemap;
+    
+    // Indexability check for 200 destinations
+    const isIndexable = finalStatus === 200 && (seo.canonical === 'N/A' || canonicalMatches) && noNoindex;
+    
+    const expectIndexable = item.expectIndexable !== false;
+    const isOk = statusMatchesExpected && sitemapMatchesExpected && (!item.isRedirect && expectIndexable ? isIndexable : true);
 
     results.push({
-      originalUrl: rawUrl,
-      initialStatus: chain[0].status,
-      isRedirect,
-      redirectDestination: redirectPath,
-      finalUrl: finalUrlObj.pathname,
+      groupName: item.group,
+      originalUrlPath: path,
+      status: chain[0].status,
+      isRedirected,
+      finalUrlPath: finalUrlObj.pathname,
       finalStatus,
       title: seo.title,
       canonical: seo.canonical,
-      h1s: seo.h1s,
+      h1Count: seo.h1s.length,
       robots: seo.robots,
       inSitemap,
-      isIndexable
+      isIndexable,
+      actionNeeded: isOk ? 'None' : item.action
     });
 
-    // Print summary for this URL
     console.log(`  Initial Status: ${chain[0].status}`);
-    if (isRedirect) {
+    if (isRedirected) {
       console.log(`  Redirect Chain: ${chain.map(c => `${c.status}`).join(' -> ')}`);
       console.log(`  Final Destination: ${finalUrlObj.pathname}`);
     }
     console.log(`  Final Status: ${finalStatus}`);
-    console.log(`  Canonical: ${seo.canonical} (${canonicalMatches ? 'MATCH' : 'MISMATCH'})`);
+    console.log(`  Canonical: ${seo.canonical} (Expected: ${expectedCanonical})`);
     console.log(`  H1s: [${seo.h1s.join(', ')}]`);
     console.log(`  Robots: ${seo.robots}`);
-    console.log(`  In Sitemap: ${inSitemap ? '❌ YES (Failing)' : '✅ NO (Passing)'}`);
-    console.log(`  Indexable: ${isIndexable ? '✅ YES' : '❌ NO'}`);
+    console.log(`  In Sitemap: ${inSitemap} (Expected: ${item.expectSitemap})`);
+    console.log(`  Indexable: ${isIndexable}`);
+    console.log(`  Test Result: ${isOk ? '✅ PASS' : '❌ FAIL'}`);
     console.log('-'.repeat(50));
 
-    if (finalStatus === 200 && !inSitemap && isIndexable) {
+    if (isOk) {
       passedTests++;
     }
   }
 
   // Print final validation table
-  console.log('\n=== GSC 404 URL Audit Summary ===\n');
+  console.log('\n=== Technical SEO Audit Table ===\n');
   console.table(results.map(r => ({
-    'Original URL Path': new URL(r.originalUrl).pathname,
-    'Init Status': r.initialStatus,
-    'Final Path': r.finalUrl,
-    'Final Status': r.finalStatus,
-    'H1 Count': r.h1s.length,
-    'In Sitemap': r.inSitemap ? 'YES (Err)' : 'NO',
-    'Indexable': r.isIndexable ? 'YES' : 'NO'
+    'Group': r.groupName,
+    'Original Path': r.originalUrlPath,
+    'Status': r.status,
+    'Final URL': r.finalUrlPath,
+    'Canonical': r.canonical,
+    'H1 Count': r.h1Count,
+    'Robots Meta': r.robots,
+    'Sitemap Presence': r.inSitemap ? 'YES' : 'NO',
+    'Indexability': r.isIndexable ? 'YES' : 'NO',
+    'Action Needed': r.actionNeeded
   })));
 
-  // Validate sitemap exclusions in bulk
-  const sitemapDeprecatedCount = sitemapUrls.filter(sUrl => {
-    try {
-      const sPath = new URL(sUrl).pathname;
-      return GSC_TEST_URLS.some(gUrl => new URL(gUrl).pathname === sPath);
-    } catch {
-      return false;
-    }
-  }).length;
-
-  console.log(`\nSitemap validation: ${sitemapDeprecatedCount} deprecated URLs found in sitemap.`);
+  const allPassed = passedTests === TEST_URLS.length;
+  console.log(`\nAudit results: ${passedTests}/${TEST_URLS.length} tests passed.`);
   
-  const allPassed = passedTests === GSC_TEST_URLS.length && sitemapDeprecatedCount === 0;
   if (allPassed) {
     console.log('\n✅ All technical SEO validations PASSED successfully!');
     process.exit(0);
   } else {
-    console.error('\n❌ SEO validations failed. Check the errors above.');
+    console.error('\n❌ SEO validations failed. Please check the failures in the table above.');
     process.exit(1);
   }
 }
@@ -265,7 +327,6 @@ function startServerAndAudit() {
       console.log(`[Next.js Server] ${output.trim()}`);
       if (!started && (output.includes('ready') || output.includes('started server') || output.includes('localhost:3000') || output.includes('http://localhost:3000'))) {
         started = true;
-        // Wait another 3 seconds to be safe
         setTimeout(() => {
           runAudit().finally(() => {
             console.log('Stopping Next.js server...');
