@@ -19,7 +19,7 @@ const LocalContext = ({ city = 'București', isEn = false }) => {
         <p className="text-gray-600 leading-relaxed mb-8">
           Pacienții noștri din România beneficiază de expertiza chirurgilor de top din Istanbul, acces la tehnologie robotică de ultimă oră și un protocol VIP All-Inclusive care include zboruri, cazare la 5 stele și traducător român dedicat.
         </p>
-        <Link href="/ro/romani-istanbul" className="inline-flex items-center gap-2 text-prime font-bold hover:text-accent transition-colors">
+        <Link href="/ro/about-us" className="inline-flex items-center gap-2 text-prime font-bold hover:text-accent transition-colors">
           Vezi beneficiile pentru români <ArrowRight size={18} />
         </Link>
       </div>

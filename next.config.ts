@@ -68,8 +68,38 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: '/ro/despre-noi',
+        source: '/:lang(en|de|ro|es|it|ru|fr)/despre-noi',
+        destination: '/:lang/about-us',
+        permanent: true,
+      },
+      {
+        source: '/ro/implant-dentar',
+        destination: '/ro/treatments/dental-implants',
+        permanent: true,
+      },
+      {
+        source: '/ro/oncologie',
+        destination: '/ro/treatments/smart-oncology-drugs',
+        permanent: true,
+      },
+      {
+        source: '/ro/implant-par',
+        destination: '/ro/treatments/meva-mixed-hair',
+        permanent: true,
+      },
+      {
+        source: '/ro/romani-istanbul',
         destination: '/ro/about-us',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/packages/breast-implants',
+        destination: '/:lang/treatments/breast-augmentation',
+        permanent: true,
+      },
+      {
+        source: '/:lang(en|de|ro|es|it|ru|fr)/packages/liposuction-360',
+        destination: '/:lang/treatments/vaser-liposuction',
         permanent: true,
       },
       {
