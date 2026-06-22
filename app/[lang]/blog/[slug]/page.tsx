@@ -66,7 +66,7 @@ export default async function BlogPostPage({ params }: Props) {
   };
 
   const reviewedByNode = reviewerObj ? {
-    "@type": "Physician",
+    "@type": (reviewerObj.name.includes("Board") || reviewerObj.name.includes("Team") || reviewerObj.name.includes("Committee")) ? "MedicalOrganization" : "Physician",
     "name": reviewerObj.fullName,
     "medicalSpecialty": getReviewerVal(reviewerObj, 'specialty', safeLang),
     "description": getReviewerVal(reviewerObj, 'bio', safeLang) || getReviewerVal(reviewerObj, 'credentials', safeLang),
@@ -82,7 +82,9 @@ export default async function BlogPostPage({ params }: Props) {
     "image": post.image,
     "datePublished": post.date,
     "dateModified": (post as any).lastUpdated || post.date,
-    "author": { "@type": "Person", "name": post.authorFullName || post.author },
+    "author": (post.authorFullName && (post.authorFullName.includes("Team") || post.authorFullName.includes("Committee") || post.authorFullName.includes("Board")))
+      ? { "@type": "Organization", "name": post.authorFullName }
+      : { "@type": "Person", "name": post.authorFullName || post.author },
     "publisher": {
       "@type": "MedicalOrganization",
       "name": "Meva Clinic",

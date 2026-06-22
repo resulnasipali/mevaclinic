@@ -1395,8 +1395,8 @@ export const blogPosts = [
       "de": "Wie plättchenreiches Plasma (PRP) und Stammzelltherapien das Ovargewebe auf zellulärer Ebene verjüngen. Wer sich dafür eignet und welche Ergebnisse zu erwarten sind."
     },
     "date": "2026-05-08",
-    "author": "Dr. Harun A.",
-    "authorFullName": "Dr. Harun Aksoy",
+    "author": "Meva Clinic Medical Editorial Team",
+    "authorFullName": "Meva Clinic Medical Editorial Team",
     "readTime": 10,
     "content": {
       "en": {

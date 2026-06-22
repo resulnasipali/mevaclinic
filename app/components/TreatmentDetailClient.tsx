@@ -353,7 +353,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                 <p className="text-gray-600 text-lg leading-relaxed mb-6">{description}</p>
                 {semanticSeoText && (
                   <div className="prose prose-lg max-w-none text-gray-700 leading-relaxed font-serif">
-                    <p>{semanticSeoText}</p>
+                    <p dangerouslySetInnerHTML={{ __html: semanticSeoText }} />
                   </div>
                 )}
               </motion.div>

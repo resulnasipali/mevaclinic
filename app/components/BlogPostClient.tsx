@@ -154,7 +154,7 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
 
                    {content ? (
                      <>
-                       <p className="mb-8 text-gray-700 leading-relaxed">{content.intro}</p>
+                       <p className="mb-8 text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro }} />
 
                        {/* Mid-article CTA */}
                        <div className="my-10 p-8 bg-amber-500/10 border border-amber-500/20 rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-6 transform hover:-translate-y-1 transition-transform duration-300">
@@ -196,7 +196,7 @@ export default function BlogPostClient({ post, lang }: BlogPostClientProps) {
                                ))}
                              </ol>
                            ) : (
-                             <p className="text-gray-700 leading-relaxed">{sec.body}</p>
+                             <p className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: sec.body }} />
                            )}
                          </div>
                        ))}

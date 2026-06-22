@@ -215,7 +215,7 @@ export default async function TreatmentPage({ params }: Props) {
                     treatment.category === 'hair' ? 'Scalp' : 
                     treatment.category === 'dental' ? 'Mouth' : 'Body',
     'reviewedBy': reviewerObj ? {
-      '@type': 'Physician',
+      '@type': (reviewerObj.name.includes("Board") || reviewerObj.name.includes("Team") || reviewerObj.name.includes("Committee")) ? "MedicalOrganization" : "Physician",
       'name': reviewerObj.fullName,
       'medicalSpecialty': reviewerObj.specialty,
       'url': `https://www.mevaclinic.com/${safeLang}/about-us`

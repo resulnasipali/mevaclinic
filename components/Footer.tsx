@@ -209,7 +209,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
                 { ro: '/ro/treatments/gastric-sleeve', en: '/en/treatments/gastric-sleeve', labelEn: 'Bariatric Surgery', labelRo: 'Chirurgie Bariatrică' },
                 { ro: '/ro/treatments/meva-mixed-hair', en: '/en/treatments/meva-mixed-hair', labelEn: 'Sapphire FUE Hair', labelRo: 'Transplant Păr Safir' },
                 { ro: '/ro/treatments/smart-oncology-drugs', en: '/en/treatments/smart-oncology-drugs', labelEn: 'Robotic Oncology', labelRo: 'Oncologie Robotică' },
-                { ro: '/ro/treatments/zirconium-crowns', en: '/en/treatments/zirconium-crowns', labelEn: 'Dental Implants', labelRo: 'Implanturi Dentare' },
+                { ro: '/ro/treatments/dental-implants', en: '/en/treatments/dental-implants', labelEn: 'Dental Implants', labelRo: 'Implanturi Dentare' },
                 { ro: '/ro/treatments/piezo-rhinoplasty', en: '/en/treatments/piezo-rhinoplasty', labelEn: 'Plastic Surgery', labelRo: 'Chirurgie Plastică' },
                 { ro: '/ro/treatments/organ-transplant-turkey', en: '/en/treatments/organ-transplant-turkey', labelEn: 'Organ Transplant', labelRo: 'Transplant de Organe' },
               ].map((item) => (
