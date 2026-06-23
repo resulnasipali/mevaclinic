@@ -22,9 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const currentTitle = (post.title as any)[safeLang] || post.title['en'];
   const currentExcerpt = (post.excerpt as any)[safeLang] || post.excerpt['en'];
 
+  const metaTitle = (post.metaTitle as any)?.[safeLang] || `${currentTitle} | Meva Clinic Blog`;
+  const metaDesc = (post.metaDesc as any)?.[safeLang] || currentExcerpt;
+
   return buildMetadata({
-    title: `${currentTitle} | Meva Clinic Blog`,
-    description: currentExcerpt,
+    title: metaTitle,
+    description: metaDesc,
     pathname: `/blog/${slug}`,
     lang,
     ogImage: post.image,

@@ -3,12 +3,12 @@ export const blogPosts = [
     "id": 1,
     "slug": "evolution-sapphire-fue",
     "metaTitle": {
-      "en": "Latest Medical Insights on evolution sapphire fue | Meva Clinic Blog",
-      "ro": "Ultimele Noutăți Medicale despre evolution sapphire fue | Blog Meva Clinic",
-      "es": "Últimos conocimientos médicos sobre evolution sapphire fue | Blog de Meva Clinic",
-      "it": "Ultimi approfondimenti medici su evolution sapphire fue | Blog della Clinica Meva",
+      "en": "Latest Medical Insights on Evolution of Sapphire FUE | Meva Clinic Blog",
+      "ro": "Ultimele Noutăți Medicale despre Evoluția Sapphire FUE | Blog Meva Clinic",
+      "es": "Últimos conocimientos médicos sobre la Evolución de Sapphire FUE | Blog de Meva Clinic",
+      "it": "Ultimi approfondimenti medici sull'Evoluzione di Sapphire FUE | Blog della Clinica Meva",
       "ru": "Последние медицинские открытия о эволюционном сапфировом FUE | Блог клиники Meva",
-      "fr": "Dernières informations médicales sur l'évolution du sapphire fue | Blog de la clinique Meva",
+      "fr": "Dernières informations médicales sur l'Évolution du Sapphire FUE | Blog de la clinique Meva",
       "de": "Neueste medizinische Einblicke in Evolution Sapphire FUE | Meva Klinik Blog"
     },
     "metaDesc": {
@@ -85,10 +85,10 @@ export const blogPosts = [
     "id": 2,
     "slug": "cyberknife-s7-oncology",
     "metaTitle": {
-      "en": "Latest Medical Insights on cyberknife s7 oncology | Meva Clinic Blog",
-      "ro": "Ultimele Noutăți Medicale despre cyberknife s7 oncology | Blog Meva Clinic",
+      "en": "Latest Medical Insights on CyberKnife S7 Oncology | Meva Clinic Blog",
+      "ro": "Ultimele Noutăți Medicale despre CyberKnife S7 Oncology | Blog Meva Clinic",
       "es": "Últimos conocimientos médicos sobre oncología con CyberKnife S7 | Blog de Meva Clinic",
-      "it": "Ultimi approfondimenti medici sul cyberknife s7 oncologia | Blog della Clinica Meva",
+      "it": "Ultimi approfondimenti medici su CyberKnife S7 Oncology | Blog della Clinica Meva",
       "ru": "Последние медицинские сведения о киберните S7 в онкологии | Блог клиники Meva",
       "fr": "Dernières perspectives médicales sur l'oncologie CyberKnife S7 | Blog de la clinique Meva",
       "de": "Neueste medizinische Einblicke in Cyberknife S7 Onkologie | Meva Klinik Blog"
@@ -741,8 +741,8 @@ export const blogPosts = [
     "id": 10,
     "slug": "organ-transplant-ethics-excellence",
     "metaTitle": {
-      "en": "Latest Medical Insights on organ transplant ethics excellence | Meva Clinic Blog",
-      "ro": "Ultimele Noutăți Medicale despre organ transplant ethics excellence | Blog Meva Clinic",
+      "en": "Latest Medical Insights on Organ Transplant Ethics & Excellence | Meva Clinic Blog",
+      "ro": "Ultimele Noutăți Medicale despre Etica și Excelența Transplantului de Organe | Blog Meva Clinic",
       "es": "Últimos conocimientos médicos sobre la excelencia ética en el trasplante de órganos | Blog de Meva Clinic",
       "it": "Ultimi approfondimenti medici sull'eccellenza etica nel trapianto di organi | Blog della Clinica Meva",
       "ru": "Последние медицинские сведения о совершенстве этики трансплантации органов | Блог клиники Meva",
