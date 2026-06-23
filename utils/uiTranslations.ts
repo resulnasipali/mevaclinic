@@ -152,6 +152,24 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Sécurité",
     "de": "Sicherheit"
   },
+  "Start Free Assessment": {
+    "en": "Start Free Assessment",
+    "ro": "Începe Evaluarea Gratuită",
+    "es": "Iniciar Evaluación Gratuita",
+    "it": "Inizia Valutazione Gratuita",
+    "ru": "Начать бесплатную оценку",
+    "fr": "Démarrer l'évaluation gratuite",
+    "de": "Kostenlose Bewertung starten"
+  },
+  "WhatsApp": {
+    "en": "WhatsApp",
+    "ro": "WhatsApp",
+    "es": "WhatsApp",
+    "it": "WhatsApp",
+    "ru": "WhatsApp",
+    "fr": "WhatsApp",
+    "de": "WhatsApp"
+  },
   "Regenerative": {
     "en": "Regenerative",
     "ro": "Regenerativă",

@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { CheckCircle2, ShieldCheck, Star } from 'lucide-react';
+import { tUI } from '@/utils/uiTranslations';
+import { getWhatsAppLink } from '@/utils/whatsappRouter';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 export interface HeroTranslations {
@@ -78,7 +80,7 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
 
   return (
     <section
-      className="relative min-h-[90vh] md:min-h-screen flex items-center pt-24 md:pt-32 overflow-hidden bg-[#0b1626]"
+      className="relative min-h-[90vh] md:min-h-screen flex items-center pt-20 md:pt-32 overflow-hidden bg-[#0b1626]"
       aria-label="Hero"
     >
       {/* Background image */}
@@ -95,17 +97,17 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1626] via-transparent to-transparent" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10 w-full py-6 md:py-20">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10 w-full pt-4 pb-8 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start lg:items-center">
 
           {/* ── Left: Copy ── */}
           <div className="lg:col-span-7 animate-fade-up">
-            <div className="inline-flex items-center space-x-3 py-1.5 md:py-2 px-4 md:px-5 rounded-full bg-white/5 backdrop-blur-sm text-white/90 text-xs md:text-[13px] font-medium tracking-wide mb-4 md:mb-8 border border-white/10">
+            <div className="inline-flex items-center space-x-3 py-1.5 md:py-2 px-4 md:px-5 rounded-full bg-white/5 backdrop-blur-sm text-white/90 text-xs md:text-[13px] font-medium tracking-wide mb-3 md:mb-8 border border-white/10">
               <Star size={14} className="text-accent fill-accent/20" aria-hidden="true" />
               <span>{t.badge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-serif text-white font-medium leading-[1.15] md:leading-[1.05] mb-4 md:mb-8">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-serif text-white font-medium leading-[1.15] md:leading-[1.05] mb-3 md:mb-8">
               {t.headline}
               <span className="text-accent relative inline-block whitespace-nowrap">
                 {t.headlineAccent}
@@ -116,22 +118,47 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
               {t.headlineSuffix}
             </h1>
 
-            <p className="text-base sm:text-xl text-gray-300 font-light mb-6 md:mb-12 leading-relaxed max-w-2xl border-l-2 border-accent pl-4 md:pl-6">
+            <p className="text-sm sm:text-xl text-gray-300 font-light mb-5 md:mb-12 leading-relaxed max-w-2xl border-l-2 border-accent pl-4 md:pl-6">
               {t.subtext}
             </p>
 
-            <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm text-white/70 font-light">
-              {[t.bullet1, t.bullet2, t.bullet3, t.bullet4].map((b, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <CheckCircle2 size={18} className="text-accent opacity-80 flex-shrink-0" aria-hidden="true" />
-                  <span>{b}</span>
+            {/* Mobile-only CTA Row */}
+            <div className="flex flex-col sm:hidden gap-3 mb-6">
+              <button
+                type="button"
+                onClick={() => document.getElementById('free-assessment')?.scrollIntoView({ behavior: 'smooth' })}
+                className="w-full bg-accent hover:bg-yellow-500 text-[#0b1626] font-bold py-3.5 px-6 rounded-full shadow-lg transition-all text-center text-sm flex items-center justify-center gap-2"
+              >
+                {tUI("Start Free Assessment", lang)}
+              </button>
+              <a
+                href={getWhatsAppLink('general', lang)}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full bg-transparent border border-white/20 hover:border-white/40 text-white font-medium py-3.5 px-6 rounded-full transition-all text-center text-sm flex items-center justify-center gap-2"
+              >
+                {tUI("WhatsApp", lang)}
+              </a>
+            </div>
+
+            {/* Bullets grid (Desktop: shows all 4; Mobile: shows 3 clinical trust badges, hiding bullet2) */}
+            <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 sm:gap-5 text-xs sm:text-sm text-white/70 font-light mt-4 mb-6 sm:mb-0">
+              {[
+                { text: t.bullet1, hideMobile: false },
+                { text: t.bullet2, hideMobile: true },
+                { text: t.bullet3, hideMobile: false },
+                { text: t.bullet4, hideMobile: false }
+              ].map((b, i) => (
+                <div key={i} className={`items-center gap-3 ${b.hideMobile ? 'hidden sm:flex' : 'flex'}`}>
+                  <CheckCircle2 size={16} className="text-accent opacity-80 flex-shrink-0" aria-hidden="true" />
+                  <span>{b.text}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ── Right: Lead Form ── */}
-          <div className="lg:col-span-5 animate-fade-up [animation-delay:200ms] relative z-10">
+          {/* ── Right: Lead Form Container with anchor id ── */}
+          <div id="free-assessment" className="lg:col-span-5 animate-fade-up [animation-delay:200ms] relative z-10 scroll-mt-24">
             <div className="backdrop-blur-md bg-white/95 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/20 transition-all duration-500 hover:scale-[1.01] relative overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-2 bg-accent" aria-hidden="true" />
 
