@@ -867,7 +867,7 @@ export const blogPosts = [
     "readTime": 12,
     "content": {
       "en": {
-        "intro": "Cyprus has emerged as Europe's premier IVF destination, combining world-class embryology laboratories, permissive donor legislation, and costs 40–60% below Western European clinics. At Meva Clinic's Northern Cyprus branch, our 2025 live-birth rate for patients under 35 reached 68%—exceeding the EU average of 52%.",
+        "intro": "Cyprus has emerged as Europe's premier IVF destination, combining world-class embryology laboratories, permissive donor legislation, and costs 40–60% below Western European clinics. For couples seeking comprehensive pathways, our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">IVF Cyprus candidate assessment</a> program offers clinical clarity before treatment planning. At Meva Clinic's Northern Cyprus branch, our 2025 live-birth rate for patients under 35 reached 68%—exceeding the EU average of 52%.",
         "sections": [
           {
             "heading": "Why Northern Cyprus for IVF?",
@@ -1400,7 +1400,7 @@ export const blogPosts = [
     "readTime": 10,
     "content": {
       "en": {
-        "intro": "Diminished ovarian reserve (DOR), characterised by a low antral follicle count (AFC) and reduced Anti-Müllerian hormone (AMH), affects approximately 10% of women seeking fertility treatment. Conventional IVF protocols often yield poor results in this group. Platelet-Rich Plasma (PRP) ovarian rejuvenation—pioneered in Greece and now offered at Meva Clinic Cyprus—represents a scientifically substantiated adjuvant therapy that may restore follicular activity in previously non-responsive ovaries.",
+        "intro": "Diminished ovarian reserve (DOR), characterised by a low antral follicle count (AFC) and reduced Anti-Müllerian hormone (AMH), affects approximately 10% of women seeking fertility treatment. Conventional IVF protocols often yield poor results in this group. Platelet-Rich Plasma (PRP) ovarian rejuvenation—pioneered in Greece and now offered at Meva Clinic Cyprus—represents a scientifically substantiated adjuvant therapy that may restore follicular activity in previously non-responsive ovaries. This rejuvenation protocol is one of the <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">Cyprus IVF options</a> that can be discussed during consultation.",
         "sections": [
           {
             "heading": "The Cellular Mechanism of PRP",
@@ -1692,7 +1692,7 @@ export const blogPosts = [
     "readTime": 11,
     "content": {
       "en": {
-        "intro": "Two technologies are fundamentally changing IVF outcomes in 2026: Next-Generation Sequencing (NGS) for preimplantation genetic testing, and Artificial Intelligence–powered embryo selection algorithms. At Meva Clinic Cyprus, both are standard of care—not optional add-ons.",
+        "intro": "Two technologies are fundamentally changing IVF outcomes in 2026: Next-Generation Sequencing (NGS) for preimplantation genetic testing, and Artificial Intelligence–powered embryo selection algorithms. At Meva Clinic Cyprus, these modern technologies are part of our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">Cyprus IVF clinical planning</a> for couples undergoing fertility treatment.",
         "sections": [
           {
             "heading": "What Is NGS and Why Does It Matter?",
@@ -2018,7 +2018,7 @@ export const blogPosts = [
               {
                 "step": 6,
                 "title": "Flight to Cyprus (Day 9)",
-                "desc": "Meva arranges your Pegasus/Turkish Airlines flight to Ercan Airport, Northern Cyprus (1.5 hrs). VIP airport transfer to our partner hotel in Lefkoşa."
+                "desc": "Meva arranges your Pegasus/Turkish Airlines flight to Ercan Airport, Northern Cyprus (1.5 hrs) to begin your <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">Cyprus IVF treatment coordination</a> phase. VIP airport transfer to our partner hotel in Lefkoşa."
               },
               {
                 "step": 7,
