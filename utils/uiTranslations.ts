@@ -324,23 +324,23 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "De Bucarest à Istanbul, le voyage a été fluide et sans stress.",
     "de": "Von Bukarest nach Istanbul war die Reise nahtlos und stressfrei."
   },
-  "Success Rate": {
-    "en": "Success Rate",
-    "ro": "Rată de Succes",
-    "es": "Tasa de éxito",
-    "it": "Tasso di successo",
-    "ru": "Уровень успеха",
-    "fr": "Taux de réussite",
-    "de": "Erfolgsquote"
+  "International Patients Coordinated": {
+    "en": "International Patients Coordinated",
+    "ro": "Pacienți Internaționali Coordonați",
+    "es": "Pacientes internacionales coordinados",
+    "it": "Pazienti Internazionali Coordinati",
+    "ru": "Координированные международные пациенты",
+    "fr": "Patients internationaux coordonnés",
+    "de": "Koordinierte internationale Patienten"
   },
-  "International Patients": {
-    "en": "International Patients",
-    "ro": "Pacienți Internaționali",
-    "es": "Pacientes internacionales",
-    "it": "Pazienti Internazionali",
-    "ru": "Международные пациенты",
-    "fr": "Patients internationaux",
-    "de": "Internationale Patienten"
+  "Languages Supported": {
+    "en": "Languages Supported",
+    "ro": "Limbi Suportate",
+    "es": "Idiomas admitidos",
+    "it": "Lingue supportate",
+    "ru": "Поддерживаемые языки",
+    "fr": "Langues supportées",
+    "de": "Unterstützte Sprachen"
   },
   "Countries Served": {
     "en": "Countries Served",
@@ -351,14 +351,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Pays desservis",
     "de": "Bediente Länder"
   },
-  "Safety Accuracy": {
-    "en": "Safety Accuracy",
-    "ro": "Precizie Siguranță",
-    "es": "Precisión de seguridad",
-    "it": "Precisione di sicurezza",
-    "ru": "Безопасность Точность",
-    "fr": "Précision de sécurité",
-    "de": "Sicherheitsgenauigkeit"
+  "Years of Partner Clinical Experience": {
+    "en": "Years of Partner Clinical Experience",
+    "ro": "Ani de Experiență Clinică a Partenerilor",
+    "es": "Años de experiencia clínica de los socios",
+    "it": "Anni di esperienza clinica dei partner",
+    "ru": "Лет клинического опыта партнеров",
+    "fr": "Années d'expérience clinique des partenaires",
+    "de": "Jahre klinische Erfahrung der Partner"
   },
   "2025-2026 Clinical Data": {
     "en": "2025-2026 Clinical Data",
@@ -378,14 +378,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Autorité en chiffres",
     "de": "Autorität in Zahlen"
   },
-  "Validated clinical outcomes and international trust metrics reflecting our commitment to surgical excellence.": {
-    "en": "Validated clinical outcomes and international trust metrics reflecting our commitment to surgical excellence.",
-    "ro": "Rezultate clinice validate și metrici de încredere internațională care reflectă angajamentul nostru față de excelența chirurgicală.",
-    "es": "Resultados clínicos validados y métricas de confianza internacional que reflejan nuestro compromiso con la excelencia quirúrgica.",
-    "it": "Risultati clinici convalidati e metriche di fiducia internazionale che riflettono il nostro impegno per l'eccellenza chirurgica.",
-    "ru": "Проверенные клинические результаты и международные показатели доверия, отражающие нашу приверженность хирургическому совершенству.",
-    "fr": "Résultats cliniques validés et indicateurs de confiance internationaux reflétant notre engagement envers l'excellence chirurgicale.",
-    "de": "Validierte klinische Ergebnisse und internationale Vertrauensmetriken, die unser Engagement für chirurgische Exzellenz widerspiegeln."
+  "Operational volume and international trust metrics reflecting our health coordination experience.": {
+    "en": "Operational volume and international trust metrics reflecting our health coordination experience.",
+    "ro": "Volumul operațional și metricile de încredere internațională care reflectă experiența noastră în coordonarea serviciilor de sănătate.",
+    "es": "Volumen operativo y métricas de confianza internacional que reflejan nuestra experiencia en coordinación de salud.",
+    "it": "Volume operativo e metriche di fiducia internazionale che riflettono la nostra esperienza di coordinamento sanitario.",
+    "ru": "Операционный объем и международные показатели доверия, отражающие наш опыт координации медицинских услуг.",
+    "fr": "Volume opérationnel et indicateurs de confiance internationaux reflétant notre expérience en matière de coordination de la santé.",
+    "de": "Betriebsvolumen und internationale Vertrauensmetriken, die unsere Erfahrung in der Gesundheitskoordination widerspiegeln."
   },
   "What is your age group?": {
     "en": "What is your age group?",
@@ -621,14 +621,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Histoires de réussite des patients",
     "de": "Erfolgsgeschichten von Patienten"
   },
-  "JCI Accredited · Ministry of Health Certified": {
-    "en": "JCI Accredited · Ministry of Health Certified",
-    "ro": "Acreditat JCI · Certificat de Ministerul Sănătății",
-    "es": "Acreditado por JCI · Certificado por el Ministerio de Salud",
-    "it": "Accreditato JCI · Certificato dal Ministero della Salute",
-    "ru": "Аккредитовано JCI · Сертифицировано Министерством здравоохранения",
-    "fr": "Accrédité JCI · Certifié par le ministère de la Santé",
-    "de": "JCI akkreditiert · Vom Gesundheitsministerium zertifiziert"
+  "JCI-Accredited Partner Hospitals · MoH-Licensed Medical Tourism Coordination": {
+    "en": "JCI-Accredited Partner Hospitals · MoH-Licensed Medical Tourism Coordination",
+    "ro": "Spitale Partenere Acreditate JCI · Coordonare de Turism Medical Autorizată de Ministerul Sănătății",
+    "es": "Hospitales colaboradores acreditados por la JCI · Coordinación de turismo médico con licencia del Ministerio de Salud",
+    "it": "Ospedali partner accreditati JCI · Coordinamento del turismo medico autorizzato dal Ministero della Salute",
+    "ru": "Партнерские больницы, аккредитованные JCI · Лицензированная координация медицинского туризма Минздравом",
+    "fr": "Hôpitaux partenaires accrédités JCI · Coordination du tourisme médical agréée par le ministère de la Santé",
+    "de": "JCI-akkreditierte Partnerkliniken · Vom Gesundheitsministerium lizenzierte Koordinierung von Medizintourismus"
   },
   "Excellent Candidate": {
     "en": "Excellent Candidate",
@@ -774,32 +774,32 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Refaire le quiz",
     "de": "Quiz wiederholen"
   },
-  "JCI Accredited Hospital": {
-    "en": "JCI Accredited Hospital",
-    "ro": "Spital Acreditat JCI",
-    "es": "Hospital acreditado por JCI",
-    "it": "Ospedale Accreditato JCI",
-    "ru": "Аккредитованная больница JCI",
-    "fr": "Hôpital accrédité JCI",
-    "de": "JCI-akkreditiertes Krankenhaus"
+  "JCI-Accredited Partner Hospitals": {
+    "en": "JCI-Accredited Partner Hospitals",
+    "ro": "Spitale Partenere Acreditate JCI",
+    "es": "Hospitales colaboradores acreditados por la JCI",
+    "it": "Ospedali partner accreditati JCI",
+    "ru": "Партнерские больницы, аккредитованные JCI",
+    "fr": "Hôpitaux partenaires accrédités JCI",
+    "de": "JCI-akkreditierte Partnerkliniken"
   },
-  "Ministry of Health Approved": {
-    "en": "Ministry of Health Approved",
-    "ro": "Aprobat de Ministerul Sănătății",
-    "es": "Aprobado por el Ministerio de Salud",
-    "it": "Approvato dal Ministero della Salute",
-    "ru": "Одобрено Министерством здравоохранения",
-    "fr": "Approuvé par le ministère de la Santé",
-    "de": "Vom Gesundheitsministerium genehmigt"
+  "MoH-Licensed Medical Tourism Coordination": {
+    "en": "MoH-Licensed Medical Tourism Coordination",
+    "ro": "Coordonare de Turism Medical Autorizată de MS",
+    "es": "Coordinación de turismo médico autorizada por el Ministerio de Salud",
+    "it": "Coordinamento del turismo medico autorizzato dal Ministero della Salute",
+    "ru": "Координация медицинского туризма Минздравом",
+    "fr": "Coordination du tourisme médical agréée par le ministère de la Santé",
+    "de": "Vom Gesundheitsministerium lizenziertes Medizintourismus"
   },
-  "12,500+ International Patients": {
-    "en": "12,500+ International Patients",
-    "ro": "12,500+ Pacienți Internaționali",
-    "es": "Más de 12,500 pacientes internacionales",
-    "it": "Oltre 12.500 pazienti internazionali",
-    "ru": "Более 12 500 международных пациентов",
-    "fr": "Plus de 12 500 patients internationaux",
-    "de": "12.500+ internationale Patienten"
+  "12,500+ International Patients Coordinated": {
+    "en": "12,500+ International Patients Coordinated",
+    "ro": "12.500+ Pacienți Internaționali Coordonați",
+    "es": "Más de 12.500 pacientes internacionales coordinados",
+    "it": "Oltre 12.500 pazienti internazionali coordinati",
+    "ru": "Более 12 500 координированных пациентов",
+    "fr": "Plus de 12 500 patients internationaux coordonnés",
+    "de": "12.500+ koordinierte internationale Patienten"
   },
   "VIP Airport Transfer": {
     "en": "VIP Airport Transfer",
@@ -2006,14 +2006,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Le Traitement Premium",
     "ru": "Премиум-Лечение"
   },
-  "Team formed by Doctor Professors": {
-    "en": "Team formed by Doctor Professors",
-    "ro": "Echipă formată din Doctori Profesori",
-    "de": "Team aus Professor Doktoren",
-    "es": "Equipo formado por Médicos Profesores",
-    "it": "Team formato da Professori Dottori",
-    "fr": "Équipe formée par des Professeurs Docteurs",
-    "ru": "Команда, состоящая из врачей-профессоров"
+  "Coordinated with Specialist Doctors and Professor-Level Partners": {
+    "en": "Coordinated with Specialist Doctors and Professor-Level Partners",
+    "ro": "Coordonat cu Medici Specialiști și Parteneri de Nivel Universitar",
+    "de": "Koordiniert mit Fachärzten und Partnern auf Professorenebene",
+    "es": "Coordinado con médicos especialistas y socios de nivel de profesor",
+    "it": "Coordinato con medici specialisti e partner a livello di professore",
+    "fr": "Coordonné avec des médecins spécialistes et des partenaires de niveau professeur",
+    "ru": "Координация с врачами-специалистами и партнерами уровня профессора"
   },
   "VIP Hospitalization in Private Clinic (1-3 Days)": {
     "en": "VIP Hospitalization in Private Clinic (1-3 Days)",
@@ -2042,14 +2042,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Plan de Régime Postopératoire Dédié",
     "ru": "Специализированный послеоперационный план питания"
   },
-  "\"No hidden costs – Everything included for your comfort\"": {
-    "en": "\"No hidden costs – Everything included for your comfort\"",
-    "ro": "\"Fără costuri ascunse – Totul inclus pentru confortul tău\"",
-    "de": "\"Keine versteckten Kosten – Alles für Ihren Komfort inbegriffen\"",
-    "es": "\"Sin costos ocultos – Todo incluido para su comodidad\"",
-    "it": "\"Nessun costo nascosto – Tutto incluso per il tuo comfort\"",
-    "fr": "\"Aucun coût caché – Tout est inclus pour votre confort\"",
-    "ru": "\"Никаких скрытых затрат – Все включено для вашего комфорта\""
+  "Transparent package planning with no unexpected coordination fees.": {
+    "en": "Transparent package planning with no unexpected coordination fees.",
+    "ro": "Planificare transparentă a pachetelor, fără taxe de coordonare neașteptate.",
+    "de": "Transparente Paketplanung ohne unerwartete Koordinationsgebühren.",
+    "es": "Planificación transparente de paquetes sin tarifas de coordinación inesperadas.",
+    "it": "Pianificazione trasparente dei pacchetti senza costi di coordinamento imprevisti.",
+    "fr": "Planification transparente des forfaits sans frais de coordination imprévus.",
+    "ru": "Прозрачное планирование пакетов без неожиданных сборов за координацию."
   },
   "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.": {
     "en": "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.",
@@ -2078,14 +2078,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Votre partenaire de confiance pour l'excellence médicale en Turquie. Formules VIP premium pour des interventions sûres et un confort absolu.",
     "ru": "Ваш надежный партнер в области медицинского передового опыта в Турции. Премиальные VIP-пакеты для безопасных вмешательств и абсолютного комфорта."
   },
-  "As a JCI-accredited premium medical facility in Istanbul, Turkey, we specialize in high-end bariatric, plastic surgery, and elite dental reconstructions. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a no-hidden-fees guarantee.": {
-    "en": "As a JCI-accredited premium medical facility in Istanbul, Turkey, we specialize in high-end bariatric, plastic surgery, and elite dental reconstructions. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a no-hidden-fees guarantee.",
-    "de": "Als JCI-akkreditierte Premium-Medizineinrichtung in Istanbul, Türkei, sind wir auf erstklassige bariatrische Chirurgie, plastische Chirurgie und exzellente Zahnrekonstruktionen spezialisiert. Alle Eingriffe beinhalten VIP-Transfers, eine 5-Sterne-Unterkunft am Bosporus und eine engagierte Concierge-Betreuung mit einer Garantie ohne versteckte Kosten.",
-    "ro": "Ca o instituție medicală premium acreditată JCI în Istanbul, Turcia, suntem specializați în chirurgie bariatrică de înaltă calitate, chirurgie plastică și reconstrucții dentare de elită. Toate procedurile includ transferuri VIP, cazare de 5 stele pe Bosfor și asistență concierge dedicată, cu garanția zero costuri ascunse.",
-    "es": "Como centro médico premium acreditado por la JCI en Estambul, Turquía, nos especializamos en cirugía bariátrica, cirugía plástica y reconstrucciones dentales de élite. Todos los procedimientos incluyen traslados VIP, alojamiento de 5 estrellas en el Bósforo y asistencia de conserjería dedicada con garantía de sin tarifas ocultas.",
-    "it": "In qualità di struttura medica premium accreditata JCI a Istanbul, in Turchia, siamo specializzati in chirurgia bariatrica di alto livello, chirurgia plastica e ricostruzioni dentali d'élite. Tutte le procedure includono trasferimenti VIP, sistemazione a 5 stelle sul Bosfor e assistenza concierge dedicata con garanzia di zero costi nascosti.",
-    "fr": "En tant qu'établissement médical haut de gamme accrédité JCI à Istanbul, en Turquie, nous sommes spécialisés dans la chirurgie bariatrique de pointe, la chirurgie plastique et les reconstructions dentaires d'élite. Toutes les procédures comprennent les transferts VIP, l'hébergement 5 étoiles sur le Bosphore et une assistance conciergerie dédiée avec une garantie sans frais cachés.",
-    "ru": "Являясь аккредитованным JCI медицинским учреждением премиум-класса в Стамбуле, Турция, мы специализируемся на высокотехнологичной бариатрической и пластической хирургии, а также элитной реконструкции зубов. Все процедуры включают VIP-трансферы, 5-звездочное проживание на берегу Босфора и выделенную консьерж-поддержку с гарантией отсутствия скрытых комиссий."
+  "We coordinate premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.": {
+    "en": "We coordinate premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.",
+    "de": "Wir koordinieren erstklassige Behandlungen durch JCI-akkreditierte Partnerkliniken in Istanbul, Türkei. Alle Behandlungen beinhalten VIP-Transfers, eine 5-Sterne-Unterkunft am Bosporus und eine engagierte Concierge-Betreuung mit einer transparenten Richtlinie ohne versteckte Kosten.",
+    "ro": "Coordonăm tratamente premium prin spitale partenere acreditate JCI în Istanbul, Turcia. Toate procedurile includ transferuri VIP, cazare de 5 stele pe Bosfor și asistență dedicată de concierge cu o politică transparentă de zero costuri ascunse.",
+    "es": "Coordinamos tratamientos premium a través de hospitales asociados acreditados por la JCI en Estambul, Turquía. Todos los procedimientos incluyen traslados VIP, alojamiento de 5 estrellas en el Bósforo y asistencia de conserjería dedicada con una política transparente de sin tarifas ocultas.",
+    "it": "Coordiniamo trattamenti premium attraverso ospedali partner accreditati JCI a Istanbul, in Turchia. Tutte le procedure includono trasferimenti VIP, sistemazione a 5 stelle sul Bosforo e assistenza concierge dedicata con una politica trasparente di zero costi nascosti.",
+    "fr": "Nous coordonnons des traitements premium via des hôpitaux partenaires accrédités JCI à Istanbul, en Turquie. Toutes les procédures comprennent des transferts VIP, un hébergement 5 étoiles sur le Bosphore et une assistance conciergerie dédiée avec une politique transparente sans frais cachés.",
+    "ru": "Мы координируем лечение премиум-класса через партнерские больницы, аккредитованные JCI, в Стамбуле, Турция. Все процедуры включают VIP-трансферы, 5-звездочное проживание на Босфоре и выделенную консьерж-поддержку с прозрачной политикой отсутствия скрытых комиссий."
   },
   "en": {
     "en": "en",

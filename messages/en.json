@@ -12,19 +12,19 @@
     "clinicalSpecialties": "Clinical Specialties",
     "surgicalSpecialist": "Surgical & Specialist",
     "mevaExcellence": "Meva Clinic Excellence",
-    "jciDesc": "As a JCI-accredited premium medical facility in Istanbul, Turkey, we specialize in high-end bariatric, plastic surgery, and elite dental reconstructions. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a no-hidden-fees guarantee."
+    "jciDesc": "We coordinate premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy."
   },
   "Hero": {
     "title": "Welcome to Meva Clinic",
     "subtitle": "Premium Health Tourism in Istanbul",
     "badge": "Medical Excellence in Istanbul",
-    "headline": "Transform your life with Meva Clinic – ",
-    "headlineAccent": "Top Expertise",
-    "headlineSuffix": " in Bariatric Surgery.",
-    "subtext": "Premium all-inclusive packages in Istanbul: Gastric Sleeve and Bypass with internationally renowned specialists.",
+    "headline": "Meva Clinic Istanbul – ",
+    "headlineAccent": "International Medical Care",
+    "headlineSuffix": " for Bariatric, Hair, Dental & Aesthetic Treatments.",
+    "subtext": "Licensed medical tourism coordination in Istanbul for bariatric, hair, dental, aesthetic and IVF Cyprus programs — with JCI-accredited partner hospitals and multilingual VIP support.",
     "bullet1": "VIP Transfer Included",
     "bullet2": "5-Star Accommodation",
-    "bullet3": "JCI Accredited Facility",
+    "bullet3": "JCI-Accredited Partner Hospitals",
     "bullet4": "Native Support (EN/RO)",
     "formTitle": "Free Consultation",
     "secure": "Secure",
@@ -46,11 +46,11 @@
   "Stats": {
     "badge": "2025-2026 Clinical Data",
     "heading": "Authority in Numbers",
-    "subtext": "Validated clinical outcomes and international trust metrics reflecting our commitment to surgical excellence.",
-    "successRate": "Success Rate",
-    "internationalPatients": "International Patients",
+    "subtext": "Operational volume and international trust metrics reflecting our health coordination experience.",
+    "internationalPatients": "International Patients Coordinated",
     "countriesServed": "Countries Served",
-    "safetyAccuracy": "Safety Accuracy"
+    "languagesSupported": "Languages Supported",
+    "partnerExperience": "Years of Partner Clinical Experience"
   },
   "Footer": {
     "globalSupport": "Global Patient Support",

@@ -69,10 +69,10 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
     badge:                 tStats('badge'),
     heading:               tStats('heading'),
     subtext:               tStats('subtext'),
-    successRate:           tStats('successRate'),
     internationalPatients: tStats('internationalPatients'),
     countriesServed:       tStats('countriesServed'),
-    safetyAccuracy:        tStats('safetyAccuracy'),
+    languagesSupported:    tStats('languagesSupported'),
+    partnerExperience:     tStats('partnerExperience'),
   };
 
   return (

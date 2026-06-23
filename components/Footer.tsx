@@ -93,7 +93,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
       itemType="https://schema.org/WPFooter"
     >
       {/* ── Map Section ── */}
-      <div 
+      <div
         className="relative h-[400px] md:h-[520px] w-full border-b border-white/5 overflow-hidden group"
         onMouseEnter={() => setLoadMap(true)}
         onTouchStart={() => setLoadMap(true)}
@@ -113,7 +113,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
                 <MapPin size={24} className="text-accent" />
               </div>
-              <span className="text-xs uppercase tracking-widest text-accent font-bold">Loading Map...</span>
+              <span className="text-xs uppercase tracking-widest text-accent font-bold">Meva Clinic Coordinator Office - Istanbul, Turkey</span>
             </div>
           </div>
         )}
@@ -194,14 +194,14 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
 
           {/* Col 2 — Treatments */}
           <div className="space-y-6">
-            <h3 
+            <h3
               onClick={() => toggleSection('treatments')}
               className="text-lg font-serif font-bold text-white border-b border-white/10 pb-4 flex items-center justify-between cursor-pointer md:cursor-default"
             >
               <span>{tUI('Medical Excellence', lang)}</span>
-              <ChevronDown 
-                size={16} 
-                className={`transition-transform duration-300 md:hidden ${openSection === 'treatments' ? 'rotate-180' : ''}`} 
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-300 md:hidden ${openSection === 'treatments' ? 'rotate-180' : ''}`}
               />
             </h3>
             <ul className={`space-y-3 font-sans text-sm transition-all duration-300 ${openSection === 'treatments' ? 'block' : 'hidden md:block'}`}>
@@ -225,14 +225,14 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
 
           {/* Col 3 — Resources */}
           <div className="space-y-6">
-            <h3 
+            <h3
               onClick={() => toggleSection('resources')}
               className="text-lg font-serif font-bold text-white border-b border-white/10 pb-4 flex items-center justify-between cursor-pointer md:cursor-default"
             >
               <span>{tUI('Patient Intelligence', lang)}</span>
-              <ChevronDown 
-                size={16} 
-                className={`transition-transform duration-300 md:hidden ${openSection === 'resources' ? 'rotate-180' : ''}`} 
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-300 md:hidden ${openSection === 'resources' ? 'rotate-180' : ''}`}
               />
             </h3>
             <ul className={`space-y-3 text-sm font-sans transition-all duration-300 ${openSection === 'resources' ? 'block' : 'hidden md:block'}`}>
@@ -260,14 +260,14 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
             <meta itemProp="telephone" content="+905324675941" />
             <meta itemProp="email" content="info@mevaclinic.com" />
             <div className="space-y-6">
-              <h3 
+              <h3
               onClick={() => toggleSection('contact')}
               className="text-lg font-serif font-bold text-white border-b border-white/10 pb-4 flex items-center justify-between cursor-pointer md:cursor-default"
             >
               <span>{tUI('Contact Us', lang)}</span>
-              <ChevronDown 
-                size={16} 
-                className={`transition-transform duration-300 md:hidden ${openSection === 'contact' ? 'rotate-180' : ''}`} 
+              <ChevronDown
+                size={16}
+                className={`transition-transform duration-300 md:hidden ${openSection === 'contact' ? 'rotate-180' : ''}`}
               />
             </h3>
             <ul className={`space-y-5 font-sans text-sm text-gray-300 transition-all duration-300 ${openSection === 'contact' ? 'block' : 'hidden md:block'}`}>

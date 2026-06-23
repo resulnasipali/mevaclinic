@@ -48,16 +48,16 @@ const groupByCategory = (): Record<string, typeof treatmentsData> => {
 const TREATMENT_GROUPS = groupByCategory();
 
 // ── CategoryColumn sub-component ───────────────────────────────────────────────
-const CategoryColumn = ({ 
-  categories, 
-  groups, 
-  lang, 
-  onClose 
-}: { 
-  categories: any[]; 
-  groups: any; 
-  lang: string; 
-  onClose: () => void; 
+const CategoryColumn = ({
+  categories,
+  groups,
+  lang,
+  onClose
+}: {
+  categories: any[];
+  groups: any;
+  lang: string;
+  onClose: () => void;
 }) => (
   <div className="flex flex-col gap-8">
     {categories.map((catKey) => {
@@ -112,13 +112,13 @@ const CategoryColumn = ({
 
 const getTranslatedPath = (currentPath: string, targetLang: string) => {
   if (!currentPath || currentPath === '/') return `/${targetLang}`;
-  
+
   const newParts = currentPath.split('/');
   if (newParts.length > 1 && ['en', 'ro', 'es', 'it', 'ru', 'fr', 'de'].includes(newParts[1])) {
     newParts[1] = targetLang;
     return newParts.join('/');
   }
-  
+
   return `/${targetLang}`;
 };
 
@@ -169,7 +169,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
       <TopBar />
       <header className="w-full bg-white/95 backdrop-blur-md border-b border-gray-100 py-3 lg:py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-          
+
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center group -ml-1">
             <MevaLogo href={`/${lang}`} className="w-[180px] lg:w-[220px] h-auto group-hover:opacity-80 transition-opacity" />
@@ -182,13 +182,13 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
                 {link.name}
               </Link>
             ))}
-            
+
             <div className="relative" ref={treatmentsRef} onMouseEnter={() => setTreatmentsMenu(true)} onMouseLeave={() => setTreatmentsMenu(false)}>
               <button onClick={() => setTreatmentsMenu(!treatmentsMenu)} className="flex items-center gap-1.5 text-[13px] font-medium tracking-wide text-prime hover:text-accent transition-colors py-2">
                 {tUI('Treatments', lang)}
                 <ChevronDown size={14} className={`transition-transform duration-300 opacity-70 ${treatmentsMenu ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {treatmentsMenu && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 w-[1000px]">
                   <div className="bg-white rounded-[2rem] shadow-2xl border border-gray-100 overflow-hidden flex flex-col max-h-[85vh]">
@@ -208,7 +208,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
                         <CategoryColumn categories={RIGHT_CATEGORIES} groups={groups} lang={lang} onClose={closeMegaMenu} />
                       </div>
                     </div>
-                    
+
                     {/* High-Intent SEO Footer Area */}
                     <div className="bg-gray-50/50 p-8 px-12 border-t border-gray-100 flex items-center justify-between shrink-0">
                        <div className="flex-1 pr-12">
@@ -217,7 +217,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
                             {tUI('Meva Clinic Excellence', lang)}
                          </p>
                          <p className="text-xs text-gray-500 leading-relaxed font-medium">
-                           {tUI('As a JCI-accredited premium medical facility in Istanbul, Turkey, we specialize in high-end bariatric, plastic surgery, and elite dental reconstructions. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a no-hidden-fees guarantee.', lang)}
+                            {tUI('We coordinate premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.', lang)}
                          </p>
                        </div>
                        <Link href={`/${lang}/contact`} onClick={closeMegaMenu} className="shrink-0 bg-prime text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-accent hover:text-prime transition-all shadow-lg hover:-translate-y-0.5">
@@ -240,7 +240,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
           <div className="flex items-center gap-3">
             {/* Language Switcher */}
              <div className="relative" ref={langRef}>
-               <button 
+               <button
                  onClick={() => setLangMenu(!langMenu)}
                  className="flex items-center gap-2 text-[12px] font-medium text-gray-500 hover:text-prime transition-colors px-3 py-2 rounded-full hover:bg-gray-50 uppercase"
                >
@@ -343,7 +343,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
                   <div key={catKey} className="mb-2">
                      <button onClick={() => setMobileAccordion(isMobOpen ? null : catKey)} className="w-full flex justify-between items-center py-3.5 text-prime font-medium border-b border-gray-50">
                         <span className="flex items-center gap-3">
-                           {React.createElement(cfg.icon, { size: 18, className: "text-accent opacity-80" })} 
+                           {React.createElement(cfg.icon, { size: 18, className: "text-accent opacity-80" })}
                            {cfg[lang] || cfg['en']}
                         </span>
                         <ChevronDown size={16} className={`transition-transform ${isMobOpen ? 'rotate-180 text-accent' : 'text-gray-300'}`} />
