@@ -83,13 +83,13 @@ const TEST_URLS = [
   // --- GROUP E: Crawled, currently not indexed ---
   { url: 'https://www.mevaclinic.com/en/blog/ovarian-prp-low-amh-treatment', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
   { url: 'https://www.mevaclinic.com/fr/treatments/organ-transplant-turkey', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
-  { url: 'https://www.mevaclinic.com/ro/blog/immunotherapy-breakthroughs', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/ro/blog/immunotherapy-breakthroughs', group: 'Group E', isRedirect: false, expectSitemap: false, expectIndexable: false, expectNoindex: true, action: 'None' },
   { url: 'https://www.mevaclinic.com/es/blog/istanbul-to-cyprus-ivf-travel-guide', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
-  { url: 'https://www.mevaclinic.com/es/blog/dental-3d-smile-design', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
-  { url: 'https://www.mevaclinic.com/fr/blog/immunotherapy-breakthroughs', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/es/blog/dental-3d-smile-design', group: 'Group E', isRedirect: false, expectSitemap: false, expectIndexable: false, expectNoindex: true, action: 'None' },
+  { url: 'https://www.mevaclinic.com/fr/blog/immunotherapy-breakthroughs', group: 'Group E', isRedirect: false, expectSitemap: false, expectIndexable: false, expectNoindex: true, action: 'None' },
   { url: 'https://www.mevaclinic.com/favicon.ico?favicon.0a6lxq-dzl.it.ico', group: 'Group E', isRedirect: false, expectSitemap: false, expectIndexable: false, action: 'None' },
   { url: 'https://www.mevaclinic.com/en/treatments/vaser-liposuction', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' },
-  { url: 'https://www.mevaclinic.com/ro/blog/jci-standards-importance', group: 'Group E', isRedirect: false, expectSitemap: true, action: 'None' }
+  { url: 'https://www.mevaclinic.com/ro/blog/jci-standards-importance', group: 'Group E', isRedirect: false, expectSitemap: false, expectIndexable: false, expectNoindex: true, action: 'None' }
 ];
 
 // Function to fetch a URL and follow redirects manually to inspect the chain locally
@@ -243,7 +243,11 @@ async function runAudit() {
     const isIndexable = finalStatus === 200 && (seo.canonical === 'N/A' || canonicalMatches) && noNoindex;
     
     const expectIndexable = item.expectIndexable !== false;
-    const isOk = statusMatchesExpected && sitemapMatchesExpected && (!item.isRedirect && expectIndexable ? isIndexable : true);
+    const robotsMatchesNoindex = item.expectNoindex ? seo.robots.toLowerCase().includes('noindex') : true;
+    const isOk = statusMatchesExpected && 
+                 sitemapMatchesExpected && 
+                 (!item.isRedirect ? (expectIndexable ? isIndexable : !isIndexable) : true) &&
+                 robotsMatchesNoindex;
 
     results.push({
       groupName: item.group,

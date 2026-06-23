@@ -61,6 +61,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 4. Dynamic Blog Pages
   locales.forEach((locale) => {
     blogPosts.forEach((post) => {
+      // Exclude empty stub blog posts (no custom content)
+      if (!post.content) return;
+
       sitemapEntries.push({
         url: `${baseUrl}/${locale}/blog/${post.slug}`,
         lastModified: new Date(post.date || Date.now()),

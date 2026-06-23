@@ -25,14 +25,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const metaTitle = (post.metaTitle as any)?.[safeLang] || `${currentTitle} | Meva Clinic Blog`;
   const metaDesc = (post.metaDesc as any)?.[safeLang] || currentExcerpt;
 
-  return buildMetadata({
-    title: metaTitle,
-    description: metaDesc,
-    pathname: `/blog/${slug}`,
-    lang,
-    ogImage: post.image,
-    type: 'article',
-  });
+  const isStub = post.content === undefined || post.content === null;
+
+  return {
+    ...buildMetadata({
+      title: metaTitle,
+      description: metaDesc,
+      pathname: `/blog/${slug}`,
+      lang,
+      ogImage: post.image,
+      type: 'article',
+    }),
+    ...(isStub ? { robots: 'noindex, follow' } : {})
+  };
 }
 
 export default async function BlogPostPage({ params }: Props) {
