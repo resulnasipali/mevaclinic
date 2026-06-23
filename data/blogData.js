@@ -488,8 +488,8 @@ export const blogPosts = [
       "de": "Warum robotergestützte Chirurgie die Erholungszeit verkürzt und die Stoffwechselergebnisse verbessert."
     },
     "date": "2026-03-15",
-    "author": "MD Harun A.",
-    "authorFullName": "Dr. Harun Aksoy"
+    "author": "Meva Clinic Medical Editorial Team",
+    "authorFullName": "Meva Clinic Medical Editorial Team"
   },
   {
     "id": 7,
