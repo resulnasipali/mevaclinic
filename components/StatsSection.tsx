@@ -26,13 +26,13 @@ const StatsSection = ({ lang = 'en', statsT }: StatsSectionProps) => {
   // Prefer server-passed translations; fall back to client-side tUI() for backwards compat
   const badge   = statsT?.badge                ?? tUI('2025-2026 Clinical Data', lang);
   const heading = statsT?.heading              ?? tUI('Authority in Numbers', lang);
-  const subtext = statsT?.subtext              ?? tUI('Operational volume and international trust metrics reflecting our health coordination experience.', lang);
+  const subtext = statsT?.subtext              ?? tUI('International patient volume and service metrics across Meva Clinic’s specialist treatment programs.', lang);
 
   const stats = [
-    { label: statsT?.internationalPatients ?? tUI('International Patients Coordinated', lang),  value: 12500, suffix: '+',   icon: Users       },
+    { label: statsT?.internationalPatients ?? tUI('International Patients', lang),  value: 12500, suffix: '+',   icon: Users       },
     { label: statsT?.countriesServed       ?? tUI('Countries Served', lang),                     value: 45,    suffix: '+',   icon: Globe       },
     { label: statsT?.languagesSupported    ?? tUI('Languages Supported', lang),                  value: 7,     suffix: '',    icon: Languages   },
-    { label: statsT?.partnerExperience     ?? tUI('Years of Partner Clinical Experience', lang),  value: 15,    suffix: '+',   icon: ShieldCheck },
+    { label: statsT?.partnerExperience     ?? tUI('Years of Partner Experience', lang),  value: 15,    suffix: '+',   icon: ShieldCheck },
   ];
 
   return (

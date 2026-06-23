@@ -16,12 +16,12 @@
   },
   "Hero": {
     "title": "Welcome to Meva Clinic",
-    "subtitle": "Premium Health Tourism in Istanbul",
+    "subtitle": "Premium International Patient Care in Istanbul",
     "badge": "Medical Excellence in Istanbul",
     "headline": "Meva Clinic Istanbul – ",
-    "headlineAccent": "International Medical Care",
+    "headlineAccent": "International Patient Care",
     "headlineSuffix": " for Bariatric, Hair, Dental & Aesthetic Treatments.",
-    "subtext": "Licensed medical tourism coordination in Istanbul for bariatric, hair, dental, aesthetic and IVF Cyprus programs — with JCI-accredited partner hospitals and multilingual VIP support.",
+    "subtext": "Personalized treatment programs in Istanbul and Cyprus for bariatric, hair, dental, aesthetic and fertility patients — supported by specialist doctors, accredited partner hospitals and multilingual VIP patient services.",
     "bullet1": "VIP Transfer Included",
     "bullet2": "5-Star Accommodation",
     "bullet3": "JCI-Accredited Partner Hospitals",
@@ -38,7 +38,7 @@
     "dental": "Dentistry",
     "plastic": "Plastic Surgery",
     "aesthetics": "Medical Aesthetics",
-    "submit": "Get Your Quote Now",
+    "submit": "Start Your Free Medical Assessment",
     "successTitle": "Request Received!",
     "successMsg": "Thank you! Our medical team will contact you shortly on WhatsApp.",
     "anotherRequest": "Submit another request"
@@ -46,11 +46,11 @@
   "Stats": {
     "badge": "2025-2026 Clinical Data",
     "heading": "Authority in Numbers",
-    "subtext": "Operational volume and international trust metrics reflecting our health coordination experience.",
-    "internationalPatients": "International Patients Coordinated",
+    "subtext": "International patient volume and service metrics across Meva Clinic’s specialist treatment programs.",
+    "internationalPatients": "International Patients",
     "countriesServed": "Countries Served",
     "languagesSupported": "Languages Supported",
-    "partnerExperience": "Years of Partner Clinical Experience"
+    "partnerExperience": "Years of Partner Experience"
   },
   "Footer": {
     "globalSupport": "Global Patient Support",
@@ -77,9 +77,9 @@
     "sitemap": "Site Footer"
   },
   "Safety": {
-    "jciBadge": "JCI Accreditation & Safety",
-    "heading": "We Make No Compromises When It Comes To Your Life.",
-    "subtext": "Meva Clinic operates under the strictest international and European safety standards. Impeccable care, experienced surgeons and 21st century technology.",
+    "jciBadge": "Partner Hospital Safety Standards",
+    "heading": "Patient Safety Comes First.",
+    "subtext": "Meva Clinic supports international patient journeys through specialist doctors and accredited partner hospitals in Turkey, with treatment planning, patient documentation and follow-up guidance designed around safety.",
     "faqHeading": "Frequently Asked Questions",
     "boardHeading": "Meva Medical Board",
     "viewDoctors": "View all doctors",

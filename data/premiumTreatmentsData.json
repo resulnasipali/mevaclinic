@@ -49,12 +49,12 @@
     "tiers": {
       "Essential": {
         "en": [
-          "JCI Accredited Surgical Facility",
+          "Accredited Partner Hospital",
           "4 Nights Premium Hospitalization",
           "Dedicated Clinical Coordinator"
         ],
         "ro": [
-          "Facilitate Chirurgicală Acreditată JCI",
+          "Spital Partener Acreditat",
           "4 Nopți de Spitalizare Premium",
           "Coordonator Clinic Dedicat"
         ]
@@ -147,12 +147,12 @@
     "tiers": {
       "Essential": {
         "en": [
-          "JCI Accredited Surgical Facility",
+          "Accredited Partner Hospital",
           "2 Nights Premium Hospitalization",
           "Standard Post-Op Garments"
         ],
         "ro": [
-          "Facilitate Chirurgicală Acreditată JCI",
+          "Spital Partener Acreditat",
           "2 Nopți de Spitalizare Premium",
           "Corsete Post-Operatorii Standard"
         ]
@@ -441,12 +441,12 @@
     "tiers": {
       "Essential": {
         "en": [
-          "JCI Accredited Surgical Facility",
+          "Accredited Partner Hospital",
           "1 Night Premium Hospitalization",
           "FDA-Approved Lifetime Warranty Implants"
         ],
         "ro": [
-          "Facilitate Chirurgicală Acreditată JCI",
+          "Spital Partener Acreditat",
           "1 Noapte de Spitalizare Premium",
           "Implanturi Aprobate FDA cu Garanție pe Viață"
         ]
@@ -539,12 +539,12 @@
     "tiers": {
       "Essential": {
         "en": [
-          "JCI Accredited Surgical Facility",
+          "Accredited Partner Hospital",
           "4 Nights Premium Hospitalization",
           "Dedicated Clinical Coordinator"
         ],
         "ro": [
-          "Facilitate Chirurgicală Acreditată JCI",
+          "Spital Partener Acreditat",
           "4 Nopți de Spitalizare Premium",
           "Coordonator Clinic Dedicat"
         ]
@@ -637,12 +637,12 @@
     "tiers": {
       "Essential": {
         "en": [
-          "JCI Accredited Facility",
+          "Accredited Partner Hospital",
           "Same-Day Discharge",
           "Dedicated Clinical Coordinator"
         ],
         "ro": [
-          "Facilitate Acreditată JCI",
+          "Spital Partener Acreditat",
           "Externare în Aceeași Zi",
           "Coordonator Clinic Dedicat"
         ]

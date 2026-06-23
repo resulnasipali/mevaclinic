@@ -268,7 +268,7 @@ export async function POST(req: Request) {
         <!-- Footer -->
         <div style="text-align: center; border-top: 1px solid #edf2f7; padding-top: 15px; margin-top: 25px; font-size: 12px; color: #a0aec0;">
           <p style="margin: 0;">Meva Clinic Automated Notification System</p>
-          <p style="margin: 5px 0 0 0;">Istanbul, Turkey | JCI Accredited Facility</p>
+          <p style="margin: 5px 0 0 0;">Istanbul, Turkey | Accredited Partner Hospital Network</p>
         </div>
       </div>
     `;

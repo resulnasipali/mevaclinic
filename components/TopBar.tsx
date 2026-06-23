@@ -37,7 +37,7 @@ const TopBar = () => {
         {/* Center: Trust badge */}
         <div className="hidden lg:flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-widest text-gray-500">
           <span className="text-accent">✦</span>
-          {tUI("JCI-Accredited Partner Hospitals · MoH-Licensed Medical Tourism Coordination", lang)}
+          {tUI("Specialist Doctors · Accredited Partner Hospitals · VIP Patient Services", lang)}
           <span className="text-accent">✦</span>
         </div>
 

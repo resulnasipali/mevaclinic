@@ -324,14 +324,41 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "De Bucarest à Istanbul, le voyage a été fluide et sans stress.",
     "de": "Von Bukarest nach Istanbul war die Reise nahtlos und stressfrei."
   },
-  "International Patients Coordinated": {
-    "en": "International Patients Coordinated",
-    "ro": "Pacienți Internaționali Coordonați",
-    "es": "Pacientes internacionales coordinados",
-    "it": "Pazienti Internazionali Coordinati",
-    "ru": "Координированные международные пациенты",
-    "fr": "Patients internationaux coordonnés",
-    "de": "Koordinierte internationale Patienten"
+  "International Patients": {
+    "en": "International Patients",
+    "ro": "Pacienți Internaționali",
+    "es": "Pacientes Internacionales",
+    "it": "Pazienti Internazionali",
+    "ru": "Международные пациенты",
+    "fr": "Patients Internationaux",
+    "de": "Internationale Patienten"
+  },
+  "Specialist Medical Partners": {
+    "en": "Specialist Medical Partners",
+    "ro": "Parteneri Medicali Specialiști",
+    "es": "Socios Médicos Especialistas",
+    "it": "Partner Medici Specialisti",
+    "ru": "Специализированные медицинские партнеры",
+    "fr": "Partenaires Médicaux Spécialisés",
+    "de": "Medizinische Fachpartner"
+  },
+  "Accredited Hospital Network": {
+    "en": "Accredited Hospital Network",
+    "ro": "Rețea de Spitale Acreditate",
+    "es": "Red de Hospitales Acreditados",
+    "it": "Rete di Ospedali Accreditati",
+    "ru": "Сеть аккредитованных больниц",
+    "fr": "Réseau d'Hôpitaux Accrédités",
+    "de": "Akkreditiertes Kliniknetzwerk"
+  },
+  "International Patient Services": {
+    "en": "International Patient Services",
+    "ro": "Servicii pentru Pacienți Internaționali",
+    "es": "Servicios para Pacientes Internacionales",
+    "it": "Servizi per Pazienti Internazionali",
+    "ru": "Международные услуги для пациентов",
+    "fr": "Services aux Patients Internationaux",
+    "de": "Internationale Patientenservices"
   },
   "Languages Supported": {
     "en": "Languages Supported",
@@ -351,14 +378,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Pays desservis",
     "de": "Bediente Länder"
   },
-  "Years of Partner Clinical Experience": {
-    "en": "Years of Partner Clinical Experience",
-    "ro": "Ani de Experiență Clinică a Partenerilor",
-    "es": "Años de experiencia clínica de los socios",
-    "it": "Anni di esperienza clinica dei partner",
-    "ru": "Лет клинического опыта партнеров",
-    "fr": "Années d'expérience clinique des partenaires",
-    "de": "Jahre klinische Erfahrung der Partner"
+  "Years of Partner Experience": {
+    "en": "Years of Partner Experience",
+    "ro": "Ani de Experiență a Partenerilor",
+    "es": "Años de experiencia de los socios",
+    "it": "Anni di esperienza dei partner",
+    "ru": "Лет опыта партнеров",
+    "fr": "Années d'expérience des partenaires",
+    "de": "Jahre Partnererfahrung"
   },
   "2025-2026 Clinical Data": {
     "en": "2025-2026 Clinical Data",
@@ -621,14 +648,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Histoires de réussite des patients",
     "de": "Erfolgsgeschichten von Patienten"
   },
-  "JCI-Accredited Partner Hospitals · MoH-Licensed Medical Tourism Coordination": {
-    "en": "JCI-Accredited Partner Hospitals · MoH-Licensed Medical Tourism Coordination",
-    "ro": "Spitale Partenere Acreditate JCI · Coordonare de Turism Medical Autorizată de Ministerul Sănătății",
-    "es": "Hospitales colaboradores acreditados por la JCI · Coordinación de turismo médico con licencia del Ministerio de Salud",
-    "it": "Ospedali partner accreditati JCI · Coordinamento del turismo medico autorizzato dal Ministero della Salute",
-    "ru": "Партнерские больницы, аккредитованные JCI · Лицензированная координация медицинского туризма Минздравом",
-    "fr": "Hôpitaux partenaires accrédités JCI · Coordination du tourisme médical agréée par le ministère de la Santé",
-    "de": "JCI-akkreditierte Partnerkliniken · Vom Gesundheitsministerium lizenzierte Koordinierung von Medizintourismus"
+  "Specialist Doctors · Accredited Partner Hospitals · VIP Patient Services": {
+    "en": "Specialist Doctors · Accredited Partner Hospitals · VIP Patient Services",
+    "ro": "Medici Specialiști · Spitale Partenere Acreditate · Servicii VIP pentru Pacienți",
+    "es": "Médicos Especialistas · Hospitales Socios Acreditados · Servicios VIP para Pacientes",
+    "it": "Medici Specialisti · Ospedali Partner Accreditati · Servizi VIP per Pazienti",
+    "ru": "Врачи-специалисты · Аккредитованные партнерские больницы · VIP-услуги для пациентов",
+    "fr": "Médecins Spécialistes · Hôpitaux Partenaires Accrédités · Services Patients VIP",
+    "de": "Fachärzte · Akkreditierte Partnerkliniken · VIP-Patientenservice"
   },
   "Excellent Candidate": {
     "en": "Excellent Candidate",
@@ -783,24 +810,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Hôpitaux partenaires accrédités JCI",
     "de": "JCI-akkreditierte Partnerkliniken"
   },
-  "MoH-Licensed Medical Tourism Coordination": {
-    "en": "MoH-Licensed Medical Tourism Coordination",
-    "ro": "Coordonare de Turism Medical Autorizată de MS",
-    "es": "Coordinación de turismo médico autorizada por el Ministerio de Salud",
-    "it": "Coordinamento del turismo medico autorizzato dal Ministero della Salute",
-    "ru": "Координация медицинского туризма Минздравом",
-    "fr": "Coordination du tourisme médical agréée par le ministère de la Santé",
-    "de": "Vom Gesundheitsministerium lizenziertes Medizintourismus"
-  },
-  "12,500+ International Patients Coordinated": {
-    "en": "12,500+ International Patients Coordinated",
-    "ro": "12.500+ Pacienți Internaționali Coordonați",
-    "es": "Más de 12.500 pacientes internacionales coordinados",
-    "it": "Oltre 12.500 pazienti internazionali coordinati",
-    "ru": "Более 12 500 координированных пациентов",
-    "fr": "Plus de 12 500 patients internationaux coordonnés",
-    "de": "12.500+ koordinierte internationale Patienten"
-  },
+
   "VIP Airport Transfer": {
     "en": "VIP Airport Transfer",
     "ro": "Transfer VIP Aeroport",
@@ -2204,24 +2214,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Transformez votre vie avec la Clinique Meva –",
     "de": "Transformieren Sie Ihr Leben mit der Meva Klinik –"
   },
-  "Top Expertise": {
-    "en": "Top Expertise",
-    "ro": "Expertiză de Top",
-    "es": "Máxima experiencia",
-    "it": "Massima Competenza",
-    "ru": "Высокая экспертиза",
-    "fr": "Expertise de haut niveau",
-    "de": "Top-Expertise"
-  },
-  " in Bariatric Surgery.": {
-    "en": " in Bariatric Surgery.",
-    "ro": " în Chirurgia Bariatrică.",
-    "es": "en cirugía bariátrica.",
-    "it": "in Chirurgia Bariatrica.",
-    "ru": "в бариатрической хирургии.",
-    "fr": "en chirurgie bariatrique.",
-    "de": "in der bariatrischen Chirurgie."
-  },
+
   "Premium all-inclusive packages in Istanbul: Gastric Sleeve and Bypass with internationally renowned specialists.": {
     "en": "Premium all-inclusive packages in Istanbul: Gastric Sleeve and Bypass with internationally renowned specialists.",
     "ro": "Pachete premium all-inclusive în Istanbul: Gastric Sleeve și Bypass cu specialiști de renume internațional.",
@@ -2240,15 +2233,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Transfert VIP inclus",
     "de": "VIP-Transfer inbegriffen"
   },
-  "JCI Accredited Facility": {
-    "en": "JCI Accredited Facility",
-    "ro": "Facilitate Acreditată JCI",
-    "es": "Instalación acreditada por JCI",
-    "it": "Struttura accreditata JCI",
-    "ru": "Аккредитованное учреждение JCI",
-    "fr": "Établissement accrédité JCI",
-    "de": "JCI-akkreditierte Einrichtung"
-  },
+
   "Native Support (EN/RO)": {
     "en": "Native Support (EN/RO)",
     "ro": "Asistență Nativă (EN/RO)",
@@ -2340,13 +2325,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Haartransplantation"
   },
   "Get Your Quote Now": {
-    "en": "Get Your Quote Now",
-    "ro": "Obține Devizul Acum",
-    "es": "Obtén tu cotización ahora",
-    "it": "Ottieni il tuo preventivo ora",
-    "ru": "Получите свою ценовую оферту сейчас",
-    "fr": "Obtenez votre devis maintenant",
-    "de": "Fordern Sie jetzt Ihr Angebot an"
+    "en": "Start Your Free Medical Assessment",
+    "ro": "Începe Evaluarea Medicală Gratuită",
+    "es": "Comience su Evaluación Médica Gratuita",
+    "it": "Inizia la tua Valutazione Medica Gratuita",
+    "ru": "Начните бесплатную медицинскую оценку",
+    "fr": "Commencez votre évaluation médicale gratuite",
+    "de": "Starten Sie Ihre kostenlose medizinische Bewertung"
   },
   "Site Footer": {
     "en": "Site Footer",
@@ -4722,13 +4707,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ro": "Logistică Premium"
   },
   "Curated VIP Packages": {
-    "en": "Curated VIP Packages",
-    "es": "Paquetes VIP seleccionados",
-    "it": "Pacchetti VIP selezionati",
-    "ru": "Эксклюзивные VIP-пакеты",
-    "fr": "Forfaits VIP Sélectionnés",
-    "de": "Exklusive VIP-Pakete",
-    "ro": "Pachete VIP Alese cu Grijă"
+    "en": "Signature Medical Programs",
+    "es": "Programas Médicos de Firma",
+    "it": "Programmi Medici di Firma",
+    "ru": "Фирменные медицинские программы",
+    "fr": "Programmes Médicaux de Signature",
+    "de": "Signature Medizinische Programme",
+    "ro": "Programe Medicale de Semnătură"
   },
   "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.": {
     "en": "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.",
@@ -4824,33 +4809,33 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.",
       "ro": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. În plus, beneficiezi de asistența noastră dedicată și de proceduri legale și transparente."
 },
-  "JCI Accreditation & Safety": {
-    "en": "JCI Accreditation & Safety",
-    "es": "Acreditación JCI y Seguridad",
-    "it": "Accreditamento JCI e Sicurezza",
-    "ru": "Аккредитация JCI и Безопасность",
-    "fr": "Accréditation JCI et Sécurité",
-    "de": "JCI-Akkreditierung & Sicherheit",
-      "ro": "Acreditare și Siguranță JCI"
-},
-  "We Make No Compromises When It Comes To Your Life.": {
-    "en": "We Make No Compromises When It Comes To Your Life.",
-    "es": "No hacemos concesiones cuando se trata de su vida.",
-    "it": "Non scendiamo a compromessi quando si tratta della tua vita.",
-    "ru": "Мы не идем на компромиссы, когда речь идет о вашей жизни.",
-    "fr": "Nous ne faisons aucun compromis lorsqu'il s'agit de votre vie.",
-    "de": "Wir gehen keine Kompromisse ein, wenn es um Ihr Leben geht.",
-      "ro": "Nu facem compromisuri când vine vorba de viața ta."
-},
-  "Meva Clinic operates under the strictest international and European safety standards. Impeccable care, experienced surgeons and 21st century technology.": {
-    "en": "Meva Clinic operates under the strictest international and European safety standards. Impeccable care, experienced surgeons and 21st century technology.",
-    "es": "Meva Clinic opera bajo los estándares de seguridad internacionales y europeos más estrictos. Atención impecable, cirujanos experimentados y tecnología del siglo XXI.",
-    "it": "Meva Clinic opera secondo i più severi standard di sicurezza internazionali ed europei. Cure impeccabili, chirurghi esperti e tecnologia del 21° secolo.",
-    "ru": "Клиника Meva работает по самым строгим международным и европейским стандартам безопасности. Безупречный уход, опытные хирурги и технологии XXI века.",
-    "fr": "La Clinique Meva opère selon les normes de sécurité internationales et européennes les plus strictes. Des soins impeccables, des chirurgiens expérimentés et une technologie du XXIe siècle.",
-    "de": "Die Meva Klinik arbeitet nach den strengsten internationalen und europäischen Sicherheitsstandards. Einwandfreie Betreuung, erfahrene Chirurgen und Technologie des 21. Jahrhunderts.",
-      "ro": "Clinica Meva operează conform celor mai stricte norme de siguranță internaționale și europene. Îngrijire impecabilă, chirurgi experimentați și tehnologie de secol XXI."
-},
+  "Partner Hospital Safety Standards": {
+    "en": "Partner Hospital Safety Standards",
+    "ro": "Standarde de Siguranță ale Spitalelor Partenere",
+    "es": "Estándares de Seguridad de Hospitales Asociados",
+    "it": "Standard di Sicurezza degli Ospedali Partner",
+    "ru": "Стандарты безопасности партнерских больниц",
+    "fr": "Normes de Sécurité des Hôpitaux Partenaires",
+    "de": "Sicherheitsstandards der Partnerkliniken"
+  },
+  "Patient Safety Comes First.": {
+    "en": "Patient Safety Comes First.",
+    "ro": "Siguranța Pacientului Este pe Primul Loc.",
+    "es": "La Seguridad del Paciente es lo Primero.",
+    "it": "La Sicurezza del Paziente viene Prima di Tutto.",
+    "ru": "Безопасность пациентов — наш главный приоритет.",
+    "fr": "La Sécurité du Patient passe avant tout.",
+    "de": "Die Patientensicherheit steht an erster Stelle."
+  },
+  "Meva Clinic supports international patient journeys through specialist doctors and accredited partner hospitals in Turkey, with treatment planning, patient documentation and follow-up guidance designed around safety.": {
+    "en": "Meva Clinic supports international patient journeys through specialist doctors and accredited partner hospitals in Turkey, with treatment planning, patient documentation and follow-up guidance designed around safety.",
+    "ro": "Meva Clinic sprijină pacienții internaționali prin medici specialiști și spitale partenere acreditate în Turcia, cu planificarea tratamentului, documentația pacientului și asistență post-tratament concepute pentru siguranță.",
+    "es": "Meva Clinic apoya los viajes de pacientes internacionales a través de médicos especialistas y hospitales asociados acreditados en Turquía, con planificación del tratamiento, documentación del paciente y orientación de seguimiento diseñadas en torno a la seguridad.",
+    "it": "Meva Clinic supporta i percorsi dei pazienti internazionali attraverso medici specialisti e ospedali partner accreditati in Turchia, con pianificazione del trattamento, documentazione del paziente e guida al follow-up incentrate sulla sicurezza.",
+    "ru": "Meva Clinic поддерживает поездки иностранных пациентов силами врачей-специалистов и аккредитованных партнерских больниц в Турции, обеспечивая планирование лечения, оформление документов пациентов и послелечебную поддержку с приоритетом безопасности.",
+    "fr": "Meva Clinic accompagne les patients internationaux grâce à des médecins spécialistes et des hôpitaux partenaires accrédités en Turquie, avec une planification du traitement, une documentation du patient et un suivi axés sur la sécurité.",
+    "de": "Die Meva Clinic unterstützt internationale Patientenreisen durch Fachärzte und akkreditierte Partnerkliniken in der Türkei, mit Behandlungsplanung, Patientendokumentation und Nachsorgeunterstützung, die auf Sicherheit ausgerichtet sind."
+  },
   "Meva Medical Board": {
     "en": "Meva Medical Board",
     "es": "Consejo Médico Meva",
@@ -5919,13 +5904,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     de: 'Was passiert bei einer medizinischen Komplikation?',
     ru: 'Что произойдет, если возникнет медицинское осложнение?'
   },
-  'Your safety is our priority support. All our surgeries take place in JCI (Joint Commission International) accredited hospitals in Turkey. The packages include specialized medical insurance against complications.': {
-    ro: 'Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.',
-    it: 'La tua sicurezza è la nostra priorità assoluta. Tutti i nostri interventi chirurgici si svolgono in ospedali accreditati JCI (Joint Commission International) in Turchia. I pacchetti includono un\'assicurazione medica specializzata contro le complicazioni.',
-    fr: 'Votre sécurité est notre priorité absolue. Toutes nos interventions chirurgicales ont lieu dans des hôpitaux accrédités JCI en Turquie. Les forfaits incluent une assurance médicale spécialisée contre les complications.',
-    es: 'Su seguridad es nuestra prioridad absoluta. Todas nuestras cirugías se realizan en hospitales acreditados por la JCI en Turquía. Los paquetes incluyen un seguro médico especializado contra complicaciones.',
-    de: 'Ihre Sicherheit ist unsere absolute Priorität. Alle unsere Operationen finden in von der JCI (Joint Commission International) akkreditierten Krankenhäusern in der Türkei statt. Die Pakete umfassen eine spezielle Krankenversicherung gegen Komplikationen.',
-    ru: 'Ваша безопасность — наш абсолютный приоритет. Все наши операции проходят в аккредитованных JCI больницах Турции. Пакеты включают специализированную медицинскую страховку от осложнений.'
+  'Your safety is our priority. Procedures are arranged through accredited partner hospitals in Turkey where applicable, with patient briefing, documentation and post-treatment support. Eligible treatment programs may include medical complication insurance depending on the procedure and provider.': {
+    ro: 'Siguranța ta este prioritatea noastră. Procedurile sunt organizate prin spitale partenere acreditate din Turcia, acolo unde este cazul, cu informarea pacientului, documentație și suport post-tratament. Programele de tratament eligibile pot include asigurare pentru complicații medicale, în funcție de procedură și furnizor.',
+    it: 'La tua sicurezza è la nostra priorità. Le procedure sono organizzate tramite ospedali partner accreditati in Turchia, ove applicabile, con briefing del paziente, documentazione e supporto post-trattamento. I programmi di trattamento idonei possono includere un\'assicurazione contro le complicazioni mediche a seconda della procedura e del fornitore.',
+    fr: 'Votre sécurité est notre priorité. Les procédures sont organisées via des hôpitaux partenaires accrédités en Turquie, le cas échéant, avec des séances d\'information, de la documentation et un suivi post-traitement. Les programmes de traitement éligibles peuvent inclure une assurance contre les complications médicales selon la procédure et le prestataire.',
+    es: 'Su seguridad es nuestra prioridad. Los procedimientos se organizan a través de hospitales asociados acreditados en Turquía, según corresponda, con información al paciente, documentación y asistencia post-tratamiento. Los programas de tratamiento elegibles pueden incluir seguro contra complicaciones médicas según el procedimiento y el proveedor.',
+    de: 'Ihre Sicherheit ist unsere Priorität. Die Behandlungen werden bei Bedarf in akkreditierten Partnerkliniken in der Türkei durchgeführt, inklusive Patientenaufklärung, Dokumentation und Nachsorgeunterstützung. Geeignete Behandlungsprogramme können je nach Verfahren und Anbieter eine Versicherung für medizinische Komplikationen beinhalten.',
+    ru: 'Ваша безопасность — наш приоритет. Процедуры организуются через аккредитованные партнерские больницы в Турции, где это применимо, с подробным инструктажем пациентов, оформлением документов и послелечебной поддержкой. Соответствующие программы лечения могут включать страховку от медицинских осложнений в зависимости от процедуры и поставщика.'
   },
   'How safe is traveling and staying in Istanbul?': {
     ro: 'Cât de sigură este călătoria și șederea în Istanbul?',

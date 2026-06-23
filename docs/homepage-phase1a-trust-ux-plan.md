@@ -64,7 +64,7 @@ This section maps where the primary homepage elements are defined in the codebas
   - `Hero.headlineSuffix`: `" in Bariatric Surgery."`
 * **Recommended replacement text**:
   - `Hero.headline`: `"Meva Clinic Istanbul – "`
-  - `Hero.headlineAccent`: `"International Medical Care"`
+  - `Hero.headlineAccent`: `"International Patient Care"`
   - `Hero.headlineSuffix`: `" for Bariatric, Hair, Dental & Aesthetic Treatments."`
 * **SEO reason**: Establishing localized relevance for Istanbul and highlighting all core categories (Bariatric, Hair, Dental, Aesthetics) above the fold tells crawlers that the root homepage is a multi-specialty medical hub.
 * **UX/conversion reason**: Assures patients of all core specialties that they have landed on the correct website. A hair transplant or aesthetic dentistry prospect is likely to bounce immediately if the main H1 headline implies the clinic only performs bariatric surgery.
@@ -78,7 +78,7 @@ This section maps where the primary homepage elements are defined in the codebas
 * **Current issue**: The hero subtitle focuses exclusively on Gastric Sleeve and Bypass surgeries, underrepresenting the other core clinical services, and contains marketing-heavy wording.
 * **Source file/component**: [messages/en.json](file:///C:/Users/Lenovo/.gemini/antigravity/scratch/meva-clinic-next/messages/en.json) (key: `Hero.subtext`)
 * **Existing text**: `"Premium all-inclusive packages in Istanbul: Gastric Sleeve and Bypass with internationally renowned specialists."`
-* **Recommended replacement text**: `"Licensed medical tourism coordination in Istanbul for bariatric, hair, dental, aesthetic and IVF Cyprus programs — with JCI-accredited partner hospitals and multilingual VIP support."`
+* **Recommended replacement text**: `"Personalized treatment programs in Istanbul and Cyprus for bariatric, hair, dental, aesthetic and fertility patients — supported by specialist doctors, accredited partner hospitals and multilingual VIP patient services."`
 * **SEO reason**: Introduces key high-intent core money-page keywords ("hair transplant", "dental implants", "plastic surgery", "bariatric surgery", "IVF Cyprus") directly in the high-priority above-the-fold HTML copy, helping crawlers associate the root domain with these primary service areas.
 * **UX/conversion reason**: Avoids superlative, sales-heavy words like "top-tier", "elite", "best", or "guaranteed". This builds realistic clinical trust and directly reassures diverse patient cohorts.
 * **Medical/legal trust risk level**: Low.

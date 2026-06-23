@@ -14,15 +14,15 @@ const TrustBadges = () => {
   const badges = [
     {
       icon: <Award className="text-accent w-8 h-8" />,
-      title: tUI("JCI-Accredited Partner Hospitals", lang)
+      title: tUI("Specialist Medical Partners", lang)
     },
     {
       icon: <ShieldCheck className="text-accent w-8 h-8" />,
-      title: tUI("MoH-Licensed Medical Tourism Coordination", lang)
+      title: tUI("Accredited Hospital Network", lang)
     },
     {
       icon: <HeartPulse className="text-accent w-8 h-8" />,
-      title: tUI("12,500+ International Patients Coordinated", lang)
+      title: tUI("International Patient Services", lang)
     }
   ];
 

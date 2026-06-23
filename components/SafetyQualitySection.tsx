@@ -1,7 +1,7 @@
 // @ts-nocheck
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { ShieldCheck, Plus, Minus, PlayCircle, Award, HeartPulse, Stethoscope, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,7 +10,7 @@ import { tUI } from '@/utils/uiTranslations';
 
 
 const getFaqData = (lang: string) => [
-  { question: tUI("What happens if a medical complication occurs?", lang), answer: tUI("Your safety is our priority support. All our surgeries take place in JCI (Joint Commission International) accredited hospitals in Turkey. The packages include specialized medical insurance against complications.", lang) },
+  { question: tUI("What happens if a medical complication occurs?", lang), answer: tUI("Your safety is our priority. Procedures are arranged through accredited partner hospitals in Turkey where applicable, with patient briefing, documentation and post-treatment support. Eligible treatment programs may include medical complication insurance depending on the procedure and provider.", lang) },
   { question: tUI("How safe is traveling and staying in Istanbul?", lang), answer: tUI("Istanbul is a prestigious international hub for medical tourism. From the moment you step off the plane, our VIP assistant will pick you up. Accommodation is provided in five-star hotels located in premium areas.", lang) },
   { question: tUI("Am I covered by a guarantee or insurance?", lang), answer: tUI("Absolutely. We exclusively collaborate with experienced partner doctors selected through credential review. Additionally, you benefit from our dedicated assistance and transparent legal procedures.", lang) }
 ];
@@ -18,26 +18,8 @@ const getFaqData = (lang: string) => [
 
 const SafetyQualitySection = ({ lang = 'en' }: { lang?: string }) => {
   const [activeFaq, setActiveFaq] = useState(0);
-  const [counter, setCounter] = useState(0);
   const isEn = lang === 'en';
   const faqData = getFaqData(lang);
-
-  useEffect(() => {
-    let start = 0;
-    const end = 12500;
-    const duration = 2000;
-    const incrementTime = duration / (end / 100);
-    const timer = setInterval(() => {
-      start += 100;
-      if (start >= end) {
-        setCounter(end);
-        clearInterval(timer);
-      } else {
-        setCounter(start);
-      }
-    }, incrementTime);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <section className="py-12 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden" id="siguranta">
@@ -49,13 +31,13 @@ const SafetyQualitySection = ({ lang = 'en' }: { lang?: string }) => {
           <div className="lg:w-1/2">
             <div className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-red-50 text-red-800 border border-red-100 text-xs md:text-sm font-bold tracking-widest uppercase mb-4 md:mb-6 shadow-sm">
               <ShieldCheck size={16} />
-              <span>{tUI("JCI Accreditation & Safety", lang)}</span>
+              <span>{tUI("Partner Hospital Safety Standards", lang)}</span>
             </div>
             <h2 className="text-2xl md:text-5xl font-serif font-bold text-prime mb-4 md:mb-6 leading-[1.15]">
-               {tUI("We Make No Compromises When It Comes To Your Life.", lang)}
+               {tUI("Patient Safety Comes First.", lang)}
             </h2>
             <p className="text-base md:text-lg text-gray-700 font-sans leading-relaxed">
-               {tUI("Meva Clinic operates under the strictest international and European safety standards. Impeccable care, experienced surgeons and 21st century technology.", lang)}
+               {tUI("Meva Clinic supports international patient journeys through specialist doctors and accredited partner hospitals in Turkey, with treatment planning, patient documentation and follow-up guidance designed around safety.", lang)}
             </p>
           </div>
           
@@ -66,7 +48,7 @@ const SafetyQualitySection = ({ lang = 'en' }: { lang?: string }) => {
                   <HeartPulse size={32} className="md:w-[40px] md:h-[40px]" strokeWidth={1.5} />
                </div>
                <div className="relative z-10">
-                 <div className="text-4xl md:text-6xl font-bold font-serif text-prime mb-1 md:mb-2">{counter.toLocaleString()}+</div>
+                 <div className="text-4xl md:text-6xl font-bold font-serif text-prime mb-1 md:mb-2">12,500+</div>
                  <div className="text-gray-700 font-bold uppercase tracking-wider text-xs md:text-sm">{tUI("International Patients", lang)}</div>
                </div>
             </div>
