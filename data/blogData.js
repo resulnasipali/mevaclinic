@@ -1984,7 +1984,7 @@ export const blogPosts = [
     "readTime": 13,
     "content": {
       "en": {
-        "intro": "Medical travel for IVF can feel overwhelming. At Meva Clinic, we have coordinated over 3,200 international fertility journeys since 2018. This step-by-step guide walks you through every stage—from your first inquiry to your positive pregnancy test.",
+        "intro": "Medical travel for IVF can feel overwhelming. At Meva Clinic, we have coordinated over 3,200 international fertility journeys since 2018. This step-by-step guide walks you through every stage—from your first inquiry to your positive pregnancy test. For patients comparing logistics and treatment details, our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">Cyprus IVF treatment coordination</a> page explains the program structure in more detail.",
         "sections": [
           {
             "heading": "The Complete IVF Pathway — Step by Step",
@@ -2018,7 +2018,7 @@ export const blogPosts = [
               {
                 "step": 6,
                 "title": "Flight to Cyprus (Day 9)",
-                "desc": "Meva arranges your Pegasus/Turkish Airlines flight to Ercan Airport, Northern Cyprus (1.5 hrs) to begin your <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">Cyprus IVF treatment coordination</a> phase. VIP airport transfer to our partner hotel in Lefkoşa."
+                "desc": "Meva arranges your Pegasus/Turkish Airlines flight to Ercan Airport, Northern Cyprus (1.5 hrs). VIP airport transfer to our partner hotel in Lefkoşa."
               },
               {
                 "step": 7,

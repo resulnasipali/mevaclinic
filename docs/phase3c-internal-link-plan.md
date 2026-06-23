@@ -133,10 +133,10 @@ No sitemap, robots, metadata, layout, component, or locale-wide (non-English) ch
 
 ### Proposal A (istanbul-to-cyprus-ivf-travel-guide - Custom Blog)
 * **Source Page**: `istanbul-to-cyprus-ivf-travel-guide` (Blog slug)
-* **Source Field/File**: `data/blogData.js` (Step 6 under `sections`)
-* **Exact Sentence Before**: `Meva arranges your Pegasus/Turkish Airlines flight to Ercan Airport, Northern Cyprus (1.5 hrs).`
-* **Modified Sentence**: `Meva arranges your Pegasus/Turkish Airlines flight to Ercan Airport, Northern Cyprus (1.5 hrs) to begin your <a href="/en/treatments/ivf-cyprus-special" class="text-amber-500 hover:underline font-bold">Cyprus IVF treatment coordination</a> phase.`
-* **Exact Sentence After**: `VIP airport transfer to our partner hotel in Lefkoşa.`
+* **Source Field/File**: `data/blogData.js` (Intro paragraph)
+* **Exact Sentence Before**: `Medical travel for IVF can feel overwhelming. At Meva Clinic, we have coordinated over 3,200 international fertility journeys since 2018. This step-by-step guide walks you through every stage—from your first inquiry to your positive pregnancy test.`
+* **Modified Sentence**: `Medical travel for IVF can feel overwhelming. At Meva Clinic, we have coordinated over 3,200 international fertility journeys since 2018. This step-by-step guide walks you through every stage—from your first inquiry to your positive pregnancy test. For patients comparing logistics and treatment details, our <a href="/en/treatments/ivf-cyprus-special" class="text-amber-500 hover:underline font-bold">Cyprus IVF treatment coordination</a> page explains the program structure in more detail.`
+* **Exact Sentence After**: `(N/A - end of intro paragraph)`
 * **Anchor Text**: `Cyprus IVF treatment coordination`
 * **Target URL**: `/en/treatments/ivf-cyprus-special`
 * **Why the link is relevant**: Relates travel stages directly to the corresponding treatment package setup.
