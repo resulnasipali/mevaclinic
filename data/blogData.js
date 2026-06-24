@@ -867,7 +867,7 @@ export const blogPosts = [
     "readTime": 12,
     "content": {
       "en": {
-        "intro": "Cyprus has emerged as Europe's premier IVF destination, combining world-class embryology laboratories, permissive donor legislation, and costs 40–60% below Western European clinics. For couples seeking comprehensive pathways, our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">IVF Cyprus candidate assessment</a> program offers clinical clarity before treatment planning. At Meva Clinic's Northern Cyprus branch, our 2025 live-birth rate for patients under 35 reached 68%—exceeding the EU average of 52%.",
+        "intro": "Cyprus has emerged as Europe's premier IVF destination, combining world-class embryology laboratories, permissive donor legislation, and costs 40–60% below Western European clinics. For couples seeking comprehensive pathways, our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">IVF Cyprus Special</a> program offers clinical clarity before treatment planning. At Meva Clinic's Northern Cyprus branch, our 2025 live-birth rate for patients under 35 reached 68%—exceeding the EU average of 52%.",
         "sections": [
           {
             "heading": "Why Northern Cyprus for IVF?",
@@ -1692,7 +1692,7 @@ export const blogPosts = [
     "readTime": 11,
     "content": {
       "en": {
-        "intro": "Two technologies are fundamentally changing IVF outcomes in 2026: Next-Generation Sequencing (NGS) for preimplantation genetic testing, and Artificial Intelligence–powered embryo selection algorithms. At Meva Clinic Cyprus, these modern technologies are part of our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">Cyprus IVF clinical planning</a> for couples undergoing fertility treatment.",
+        "intro": "Two technologies are fundamentally changing IVF outcomes in 2026: Next-Generation Sequencing (NGS) for preimplantation genetic testing, and Artificial Intelligence–powered embryo selection algorithms. At Meva Clinic Cyprus, these modern technologies are part of our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">IVF Cyprus Special</a> program for couples undergoing fertility treatment.",
         "sections": [
           {
             "heading": "What Is NGS and Why Does It Matter?",
@@ -1984,7 +1984,7 @@ export const blogPosts = [
     "readTime": 13,
     "content": {
       "en": {
-        "intro": "Medical travel for IVF can feel overwhelming. At Meva Clinic, we have coordinated over 3,200 international fertility journeys since 2018. This step-by-step guide walks you through every stage—from your first inquiry to your positive pregnancy test. For patients comparing logistics and treatment details, our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">Cyprus IVF treatment coordination</a> page explains the program structure in more detail.",
+        "intro": "Medical travel for IVF can feel overwhelming. At Meva Clinic, we have coordinated over 3,200 international fertility journeys since 2018. This step-by-step guide walks you through every stage—from your first inquiry to your positive pregnancy test. For patients comparing logistics and treatment details, our <a href=\"/en/treatments/ivf-cyprus-special\" class=\"text-amber-500 hover:underline font-bold\">IVF Cyprus Special</a> page explains the program structure in more detail.",
         "sections": [
           {
             "heading": "The Complete IVF Pathway — Step by Step",
