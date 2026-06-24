@@ -8,7 +8,7 @@ const translations: Record<string, string> = {
   "Quality Management": "Managementul Calității",
   "Surgical Excellence": "Excelență Chirurgicală",
   "End-to-End Concierge": "Servicii Concierge Complete",
-  "PREMIUM LOGISTICS": "LOGISTICĂ PREMIUM",
+  "PREMIUM PATIENT SERVICES": "SERVICII PREMIUM PENTRU PACIENȚI",
   "Curated VIP Packages": "Pachete VIP Alese cu Grijă",
   "Experience absolute peace of mind. Every treatment comes with JCI-accredited care, 5-star Bosphorus hotels, and luxury transfers included.": "Bucurați-vă de liniște absolută. Fiecare tratament include îngrijire acreditată JCI, hoteluri de 5 stele pe Bosfor și transferuri de lux incluse.",
   "MEDICAL SOLUTIONS": "SOLUȚII MEDICALE",

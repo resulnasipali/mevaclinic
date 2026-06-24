@@ -12,19 +12,11 @@ import { MevaLogo } from './MevaLogo';
 // Trust badge data — fully bilingual
 const TRUST_BADGES = [
   {
-    icon: '🏛️',
-    nameEn: 'TÜRSAB Licensed Partner',
-    nameRo: 'Partener Autorizat TÜRSAB',
-    subEn: 'Group-A Travel Agency',
-    subRo: 'Agenție Grup A',
-    color: 'text-accent',
-  },
-  {
     icon: '🏥',
-    nameEn: 'MoH Licensed Coordination',
-    nameRo: 'Coordonare Autorizată MS',
-    subEn: 'Republic of Turkey · Facilitator',
-    subRo: 'Republica Turcia · Facilitator',
+    nameEn: 'Ministry of Health Standards',
+    nameRo: 'Standarde Ministerul Sănătății',
+    subEn: 'Türkiye Patient Services',
+    subRo: 'Servicii Pacienți Turcia',
     color: 'text-blue-400',
   },
   {
@@ -47,8 +39,8 @@ const TRUST_BADGES = [
     icon: '🤝',
     nameEn: 'IMA Partner Network',
     nameRo: 'Rețea Parteneri IMA',
-    subEn: 'Medical Tourism Assoc.',
-    subRo: 'Asoc. Turism Medical',
+    subEn: 'International Patient Care Standards',
+    subRo: 'Standarde Internaționale Pacienți',
     color: 'text-yellow-400',
   },
 ];
@@ -113,7 +105,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-3 animate-pulse">
                 <MapPin size={24} className="text-accent" />
               </div>
-              <span className="text-xs uppercase tracking-widest text-accent font-bold">Meva Clinic Coordinator Office - Istanbul, Turkey</span>
+              <span className="text-xs uppercase tracking-widest text-accent font-bold">Meva Clinic International Patient Office - Istanbul, Turkey</span>
             </div>
           </div>
         )}
@@ -127,7 +119,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               {tUI('The Medical Heart of Istanbul', lang)}
             </h2>
             <p className="text-base text-gray-300 font-sans leading-relaxed mb-6">
-              {tUI('Our strategic partnerships coordinate VIP access from landing to the procedures within our premium clinical network and 5-star hotels.', lang)}
+              {tUI('Through specialist doctors and accredited partner hospitals, Meva Clinic supports patients from arrival to follow-up within a premium clinical care network.', lang)}
             </p>
             {/* WhatsApp CTA inside map card */}
             <a
@@ -332,13 +324,16 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
       </div>
         {/* YMYL Medical Disclaimer */}
         <div className="border-t border-white/10 pt-8 text-center">
-          <p className="text-[10px] text-gray-500 leading-relaxed max-w-4xl mx-auto font-sans mb-6">
+          <p className="text-[10px] text-gray-500 leading-relaxed max-w-4xl mx-auto font-sans mb-3">
             {tUI("Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.", lang)}
+          </p>
+          <p className="text-[10px] text-gray-500 leading-relaxed max-w-4xl mx-auto font-sans mb-6">
+            {tUI("Meva Clinic operates as an international patient service provider. Travel and accommodation services are arranged through licensed TÜRSAB Group-A travel agency partners when required.", lang)}
           </p>
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-sans gap-4">
-          <p>© {new Date().getFullYear()} Meva Clinic Medical Tourism. {tUI('All rights reserved.', lang)}</p>
+          <p>© {new Date().getFullYear()} Meva Clinic. {tUI('All rights reserved.', lang)}</p>
           <div className="flex flex-wrap justify-center gap-6 font-medium">
             <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors">
               {tUI('Privacy Policy', lang)}

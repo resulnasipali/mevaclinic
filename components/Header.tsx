@@ -217,7 +217,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
                             {tUI('Meva Clinic Excellence', lang)}
                          </p>
                          <p className="text-xs text-gray-500 leading-relaxed font-medium">
-                            {tUI('We coordinate premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.', lang)}
+                            {tUI('Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.', lang)}
                          </p>
                        </div>
                        <Link href={`/${lang}/contact`} onClick={closeMegaMenu} className="shrink-0 bg-prime text-white px-8 py-3.5 rounded-full text-sm font-medium hover:bg-accent hover:text-prime transition-all shadow-lg hover:-translate-y-0.5">

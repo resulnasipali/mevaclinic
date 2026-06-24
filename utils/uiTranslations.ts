@@ -2070,14 +2070,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Plan de Régime Postopératoire Dédié",
     "ru": "Специализированный послеоперационный план питания"
   },
-  "Transparent package planning with no unexpected coordination fees.": {
-    "en": "Transparent package planning with no unexpected coordination fees.",
-    "ro": "Planificare transparentă a pachetelor, fără taxe de coordonare neașteptate.",
-    "de": "Transparente Paketplanung ohne unerwartete Koordinationsgebühren.",
-    "es": "Planificación transparente de paquetes sin tarifas de coordinación inesperadas.",
-    "it": "Pianificazione trasparente dei pacchetti senza costi di coordinamento imprevisti.",
-    "fr": "Planification transparente des forfaits sans frais de coordination imprévus.",
-    "ru": "Прозрачное планирование пакетов без неожиданных сборов за координацию."
+  "Transparent treatment planning with no unexpected package fees.": {
+    "en": "Transparent treatment planning with no unexpected package fees.",
+    "ro": "Planificare transparentă a tratamentului, fără taxe de pachet neașteptate.",
+    "de": "Transparente Behandlungsplanung ohne unerwartete Paketgebühren.",
+    "es": "Planificación transparente del tratamiento sin tarifas de paquete inesperadas.",
+    "it": "Pianificazione trasparente del trattamento senza costi di pacchetto imprevisti.",
+    "fr": "Planification transparente du traitement sans frais de forfait imprévus.",
+    "ru": "Прозрачное планирование лечения без неожиданных сборов за пакет услуг."
   },
   "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.": {
     "en": "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.",
@@ -2088,14 +2088,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Notre approche clinique donne la priorité à la préservation des tissus et aux résultats naturels à long terme, garantissant que votre transformation est à la fois sûre et esthétiquement supérieure.",
     "ru": "Наш клинический подход ставит в приоритет сохранение тканей и долгосрочные естественные результаты, гарантируя, что ваша трансформация будет безопасной и эстетически безупречной."
   },
-  "Our strategic partnerships coordinate VIP access from landing to the procedures within our premium clinical network and 5-star hotels.": {
-    "en": "Our strategic partnerships coordinate VIP access from landing to the procedures within our premium clinical network and 5-star hotels.",
-    "de": "Unsere strategischen Partnerschaften garantieren Ihnen VIP-Zugang von der Landung bis zu den Behandlungen in unserem Premium-Kliniknetzwerk und in 5-Sterne-Hotels.",
-    "ro": "Parteneriatele noastre strategice garantează acces VIP de la aterizare până la procedurile din cadrul rețelei noastre clinice premium și hoteluri de 5 stele.",
-    "es": "Nuestras alianzas estratégicas garantizan acceso VIP desde el aterrizaje hasta los procedimientos dentro de nuestra red clínica premium y hoteles de 5 estrellas.",
-    "it": "Le partnership strategiche garantiscono l'accesso VIP dall'atterraggio alle procedure all'interno del nostro network clinico premium e in hotel a 5 stelle.",
-    "fr": "Nos partenariats stratégiques garantissent un accès VIP de l'atterrissage aux procédures au sein de notre réseau clinique premium et dans des hôtels 5 étoiles.",
-    "ru": "Наши стратегические партнерства гарантируют VIP-доступ от посадки до процедур в нашей премиальной сети клиник и 5-звездочных отелях."
+  "Through specialist doctors and accredited partner hospitals, Meva Clinic supports patients from arrival to follow-up within a premium clinical care network.": {
+    "en": "Through specialist doctors and accredited partner hospitals, Meva Clinic supports patients from arrival to follow-up within a premium clinical care network.",
+    "de": "Durch Fachärzte und akkreditierte Partnerkliniken unterstützt die Meva Clinic Patienten von der Ankunft bis zur Nachsorge innerhalb eines erstklassigen klinischen Versorgungsnetzwerks.",
+    "ro": "Prin intermediul medicilor specialiști și al spitalelor partenere acreditate, Meva Clinic sprijină pacienții de la sosire până la monitorizarea post-tratament, în cadrul unei rețele premium de îngrijire clinică.",
+    "es": "A través de médicos especialistas y hospitales asociados acreditados, Meva Clinic apoya a los pacientes desde su llegada hasta el seguimiento dentro de una red de atención clínica premium.",
+    "it": "Attraverso medici specialisti e ospedali partner accreditati, Meva Clinic supporta i pazienti dall'arrivo al follow-up all'interno di una rete di assistenza clinica premium.",
+    "fr": "Grâce à des médecins spécialistes et à des hôpitaux partenaires accrédités, Meva Clinic accompagne les patients de leur arrivée à leur suivi au sein d'un réseau de soins cliniques haut de gamme.",
+    "ru": "Благодаря врачам-специалистам и аккредитованным партнерским больницам Meva Clinic поддерживает пациентов от прибытия до последующего наблюдения в рамках сети клинического обслуживания премиум-класса."
   },
   "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and comfort-focused support.": {
     "en": "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and comfort-focused support.",
@@ -2106,14 +2106,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Votre partenaire de confiance pour l'excellence médicale en Turquie. Formules VIP premium pour des interventions sûres et un confort absolu.",
     "ru": "Ваш надежный партнер в области медицинского передового опыта в Турции. Премиальные VIP-пакеты для безопасных вмешательств и абсолютного комфорта."
   },
-  "We coordinate premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.": {
-    "en": "We coordinate premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.",
-    "de": "Wir koordinieren erstklassige Behandlungen durch JCI-akkreditierte Partnerkliniken in Istanbul, Türkei. Alle Behandlungen beinhalten VIP-Transfers, eine 5-Sterne-Unterkunft am Bosporus und eine engagierte Concierge-Betreuung mit einer transparenten Richtlinie ohne versteckte Kosten.",
-    "ro": "Coordonăm tratamente premium prin spitale partenere acreditate JCI în Istanbul, Turcia. Toate procedurile includ transferuri VIP, cazare de 5 stele pe Bosfor și asistență dedicată de concierge cu o politică transparentă de zero costuri ascunse.",
-    "es": "Coordinamos tratamientos premium a través de hospitales asociados acreditados por la JCI en Estambul, Turquía. Todos los procedimientos incluyen traslados VIP, alojamiento de 5 estrellas en el Bósforo y asistencia de conserjería dedicada con una política transparente de sin tarifas ocultas.",
-    "it": "Coordiniamo trattamenti premium attraverso ospedali partner accreditati JCI a Istanbul, in Turchia. Tutte le procedure includono trasferimenti VIP, sistemazione a 5 stelle sul Bosforo e assistenza concierge dedicata con una politica trasparente di zero costi nascosti.",
-    "fr": "Nous coordonnons des traitements premium via des hôpitaux partenaires accrédités JCI à Istanbul, en Turquie. Toutes les procédures comprennent des transferts VIP, un hébergement 5 étoiles sur le Bosphore et une assistance conciergerie dédiée avec une politique transparente sans frais cachés.",
-    "ru": "Мы координируем лечение премиум-класса через партнерские больницы, аккредитованные JCI, в Стамбуле, Турция. Все процедуры включают VIP-трансферы, 5-звездочное проживание на Босфоре и выделенную консьерж-поддержку с прозрачной политикой отсутствия скрытых комиссий."
+  "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.": {
+    "en": "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy.",
+    "de": "Als JCI-akkreditierte Premium-Einrichtung in Istanbul, Türkei, spezialisieren wir uns auf Bariatrie, plastische Chirurgie und elite Zahnrekonstruktionen. Alle Eingriffe beinhalten VIP-Transfers, 5-Sterne-Unterkunft am Bosporus und dedizierten Concierge-Service.",
+    "ro": "Meva Clinic sprijină tratamente premium prin spitale partenere acreditate JCI din Istanbul, Turcia. Toate procedurile includ transferuri VIP, cazare de 5 stele la Bosfor și suport concierge dedicat, cu o politică transparentă fără taxe ascunse.",
+    "es": "Meva Clinic ofrece soporte para tratamientos premium a través de hospitales asociados acreditados por la JCI en Estambul, Turquía. Todos los procedimientos incluyen traslados VIP, alojamiento de 5 estrellas en el Bósforo y servicio de conserjería dedicado con una política transparente sin cargos ocultos.",
+    "it": "Meva Clinic supporta trattamenti premium attraverso ospedali partner accreditati JCI a Istanbul, Turchia. Tutte le procedure includono trasferimenti VIP, sistemazione a 5 stelle sul Bosforo e un servizio di concierge dedicato con una politica trasparente senza costi nascosti.",
+    "fr": "Meva Clinic prend en charge des traitements premium via des hôpitaux partenaires accrédités JCI à Istanbul, Turquie. Tous les soins incluent les transferts VIP, un hébergement 5 étoiles sur le Bosphore et un service de conciergerie dédié avec une politique transparente sans frais cachés.",
+    "ru": "Meva Clinic поддерживает премиальные методы лечения через партнерские больницы, аккредитованные JCI, в Стамбуле, Турция. Все процедуры включают VIP-трансферы, проживание в 5-звездочном отеле на Босфоре и специальную консьерж-поддержку с прозрачной политикой без скрытых комиссий."
   },
   "en": {
     "en": "en",
@@ -4715,14 +4715,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Grand VIP Experience",
       "ro": "Experiență VIP Grand"
 },
-  "Premium Logistics": {
-    "en": "Premium Logistics",
-    "es": "Logística premium",
-    "it": "Logistica premium",
-    "ru": "Премиум-логистика",
-    "fr": "Logistique Premium",
-    "de": "Premium-Logistik",
-    "ro": "Logistică Premium"
+  "Premium Patient Services": {
+    "en": "Premium Patient Services",
+    "es": "Servicios premium para pacientes",
+    "it": "Servizi premium per i pazienti",
+    "ru": "Премиальные услуги для пациентов",
+    "fr": "Services aux patients premium",
+    "de": "Premium-Patientenservice",
+    "ro": "Servicii Premium pentru Pacienți"
   },
   "Curated VIP Packages": {
     "en": "Signature Medical Programs",
@@ -6013,14 +6013,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Meva Klinisches Team",
     "ru": "Клиническая команда Meva"
   },
-  "PREMIUM LOGISTICS": {
-    "en": "PREMIUM LOGISTICS",
-    "es": "LOGÍSTICA PREMIUM",
-    "it": "LOGISTICA PREMIUM",
-    "ru": "ПРЕМИУМ-ЛОГИСТИКА",
-    "fr": "LOGISTIQUE PREMIUM",
-    "de": "PREMIUM-LOGISTIK",
-    "ro": "LOGISTICĂ PREMIUM"
+  "PREMIUM PATIENT SERVICES": {
+    "en": "PREMIUM PATIENT SERVICES",
+    "es": "SERVICIOS PREMIUM PARA PACIENTES",
+    "it": "SERVIZI PREMIUM PER I PAZIENTI",
+    "ru": "ПРЕМИАЛЬНЫЕ УСЛУГИ ДЛЯ ПАЦИЕНТОВ",
+    "fr": "SERVICES AUX PATIENTS PREMIUM",
+    "de": "PREMIUM-PATIENTENSERVICE",
+    "ro": "SERVICII PREMIUM PENTRU PACIENȚI"
   },
   "LUXURY CONCIERGE": {
     "en": "LUXURY CONCIERGE",
@@ -6436,14 +6436,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "2 Nächte Premium-Krankenhausaufenthalt inklusive",
     "ro": "2 Nopți de Spitalizare Premium Incluse"
   },
-  "Combined Dual-Surgeon Coordination": {
-    "en": "Combined Dual-Surgeon Coordination",
-    "es": "Coordinación combinada de dos cirujanos",
-    "it": "Coordinamento combinato con due chirurghi",
-    "ru": "Совместная координация двух хирургов",
-    "fr": "Coordination combinée de deux chirurgiens",
-    "de": "Kombinierte Kooperation von zwei Chirurgen",
-    "ro": "Coordonare Combinată cu Doi Chirurgi"
+  "Multidisciplinary Surgical Planning": {
+    "en": "Multidisciplinary Surgical Planning",
+    "es": "Planificación quirúrgica multidisciplinar",
+    "it": "Pianificazione chirurgica multidisciplinare",
+    "ru": "Мультидисциплинарное хирургическое планирование",
+    "fr": "Planification chirurgicale multidisciplinaire",
+    "de": "Multidisziplinäre Operationsplanung",
+    "ro": "Planificare Chirurgicală Multidisciplinară"
   },
   "Post-Op Garments Included": {
     "en": "Post-Op Garments Included",
@@ -6579,6 +6579,42 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "fr": "Avis de non-responsabilité médicale : Les informations cliniques figurant sur ce site web sont fournies uniquement à des fins éducatives et d'information. Elles ne constituent pas un avis médical, un diagnostic ou un traitement. Consultez toujours un médecin qualifié pour toute question relative à un problème de santé ou à une intervention chirurgicale en Turquie.",
       "it": "Disclaimer medico: Le informazioni cliniche presenti su questo sito web sono solo a scopo didattico e informativo. Non costituiscono consulenza medica, diagnosi o trattamento. Consultare sempre un medico qualificato per qualsiasi condizione medica o procedura chirurgica in Turchia.",
       "ru": "Медицинский дисклеймер: Клиническая информация на этом сайте предназначена исключительно для образовательных и информационных целей. Она не является медицинской консультацией, диагнозом или лечением. Всегда консультируйтесь с квалифицированным врачом по поводу любого медицинского состояния или хирургического вмешательства в Турции."
+    },
+    "Meva Clinic operates as an international patient service provider. Travel and accommodation services are arranged through licensed TÜRSAB Group-A travel agency partners when required.": {
+      "en": "Meva Clinic operates as an international patient service provider. Travel and accommodation services are arranged through licensed TÜRSAB Group-A travel agency partners when required.",
+      "ro": "Meva Clinic funcționează ca furnizor de servicii pentru pacienți internaționali. Serviciile de călătorie și cazare sunt organizate prin agenții de turism partenere autorizate TÜRSAB de Grupa A, atunci când este necesar.",
+      "de": "Meva Clinic fungiert als internationaler Dienstleister für Patienten. Reise- und Unterkunftsleistungen werden bei Bedarf über lizenzierte TÜRSAB-Reisebüropartner der Gruppe A vermittelt.",
+      "es": "Meva Clinic opera como proveedor de servicios para pacientes internacionales. Los servicios de viaje y alojamiento se organizan a través de agencias de viajes asociadas con licencia TÜRSAB Grupo A cuando es necesario.",
+      "it": "Meva Clinic opera come fornitore di servizi per i pazienti internazionali. I servizi di viaggio e alloggio sono organizzati tramite agenzie di viaggio partner licenziatarie TÜRSAB Gruppo A quando necessario.",
+      "fr": "Meva Clinic opère en tant que prestataire de services aux patients internationaux. Les services de voyage et d'hébergement sont organisés via des agences de voyages partenaires agréées TÜRSAB de Groupe A lorsque cela est requis.",
+      "ru": "Meva Clinic работает как международный поставщик услуг для пациентов. Транспортные услуги и проживание при необходимости организуются через лицензированные партнерские туристические агентства TÜRSAB группы А."
+    },
+    "Ministry of Health Standards": {
+      "en": "Ministry of Health Standards",
+      "ro": "Standarde Ministerul Sănătății",
+      "es": "Normas del Ministerio de Salud",
+      "it": "Standard del Ministero della Salute",
+      "ru": "Стандарты Министерства здравоохранения",
+      "fr": "Normes du Ministère de la Santé",
+      "de": "Standards des Gesundheitsministeriums"
+    },
+    "Türkiye Patient Services": {
+      "en": "Türkiye Patient Services",
+      "ro": "Servicii Pacienți Turcia",
+      "es": "Servicios para pacientes de Turquía",
+      "it": "Servizi per i pazienti in Turchia",
+      "ru": "Услуги для пациентов в Турции",
+      "fr": "Services aux patients en Turquie",
+      "de": "Patientenservice in der Türkei"
+    },
+    "International Patient Care Standards": {
+      "en": "International Patient Care Standards",
+      "ro": "Standarde Internaționale Pacienți",
+      "es": "Estándares internacionales de atención al paciente",
+      "it": "Standard internazionali di cura del paziente",
+      "ru": "Международные стандарты ухода за пациентами",
+      "fr": "Normes internationales de soins aux patients",
+      "de": "Internationale Standards für die Patientenversorgung"
     }
 };
 

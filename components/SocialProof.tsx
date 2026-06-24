@@ -24,7 +24,7 @@ const SocialProof = ({ lang = 'en' }: { lang?: string }) => {
     {
       name: "A.M. (" + localT({ en: "Oncology Support", ro: "Suport Oncologie", es: "Soporte Oncológico", it: "Supporto Oncologico", ru: "Онкологическая поддержка", fr: "Soutien Oncologique", de: "Onkologische Unterstützung" }) + ")",
       text: localT({
-        en: "I chose Meva's coordination for the CyberKnife S7 facility partnership, and the team's medical guidance was exceptional.",
+        en: "I chose Meva Clinic's clinical guidance for the CyberKnife S7 facility partnership, and the team's medical guidance was exceptional.",
         ro: "Am ales coordonarea Meva pentru parteneriatul cu clinica CyberKnife S7, iar îndrumarea medicală a fost excepțională.",
         es: "Elegí la coordinación de Meva para la asociación con el centro CyberKnife S7, y la guía médica fue excepcional.",
         it: "Ho scelto il coordinamento di Meva per la partnership con il centro CyberKnife S7, e la guida medica è stata eccezionale.",
@@ -36,7 +36,7 @@ const SocialProof = ({ lang = 'en' }: { lang?: string }) => {
     {
       name: "E.S. (" + localT({ en: "Bariatric Support", ro: "Suport Bariatric", es: "Soporte Bariátrico", it: "Supporto Bariatrico", ru: "Бариатрическая поддержка", fr: "Soutien Bariatrique", de: "Bariatrische Unterstützung" }) + ")",
       text: localT({
-        en: "The patient coordination made everything feel smooth and reassuring from booking to aftercare.",
+        en: "The international patient support made everything feel smooth and reassuring from booking to aftercare.",
         ro: "Coordonarea pacienților a făcut ca totul să pară simplu și liniștitor, de la rezervare până la îngrijirea postoperatorie.",
         es: "La coordinación de pacientes hizo que todo se sintiera fluido y tranquilizador desde la reserva hasta el cuidado posterior.",
         it: "Il coordinamento dei pazienti ha reso tutto semplice e rassicurante, dalla prenotazione all'assistenza successiva.",
@@ -60,7 +60,7 @@ const SocialProof = ({ lang = 'en' }: { lang?: string }) => {
     {
       name: "O.P. (" + localT({ en: "Dental Restoration", ro: "Restaurare Dentară", es: "Restauración Dental", it: "Restaurazione Dentale", ru: "Стоматологическая реставрация", fr: "Restauration Dentaire", de: "Zahnrekonstruktion" }) + ")",
       text: localT({
-        en: "The medical tourism coordination was completely seamless and stress-free.",
+        en: "The international patient care pathway was completely seamless and stress-free.",
         ro: "Coordonarea turismului medical a fost complet transparentă și fără stres.",
         es: "La coordinación del turismo médico fue completamente fluida y sin estrés.",
         it: "Il coordinamento del turismo medico è stato del tout fluido e senza stress.",
@@ -106,9 +106,9 @@ const SocialProof = ({ lang = 'en' }: { lang?: string }) => {
       })
     },
     {
-      name: "S.L. (" + localT({ en: "Coordination Service", ro: "Servicii Coordonare", es: "Servicios de Coordinación", it: "Servizi di Coordinamento", ru: "Служба координации", fr: "Service Coordination", de: "Koordinationsdienst" }) + ")",
+      name: "S.L. (" + localT({ en: "Patient Support", ro: "Suport Pacienți", es: "Soporte al Paciente", it: "Supporto ai Pazienti", ru: "Служба поддержки пациентов", fr: "Soutien aux Patients", de: "Patientenunterstützung" }) + ")",
       text: localT({
-        en: "A truly professional medical facilitator company. Highly recommended for international patients.",
+        en: "A truly professional international patient care team. Highly recommended for international patients.",
         ro: "O companie de facilitare medicală cu adevărat profesionistă. Recomandată cu căldură pacienților internaționali.",
         es: "Una empresa de facilitación médica verdaderamente profesional. Muy recomendable para pacientes internacionales.",
         it: "Una società di facilitazione medica davvero professionale. Altamente raccomandata per i pazienti internazionali.",

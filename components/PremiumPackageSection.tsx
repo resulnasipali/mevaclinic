@@ -145,7 +145,7 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
 
               <div className="relative z-10 border-t border-white/20 pt-6 mt-4 text-center backdrop-blur-sm px-6 pb-6">
                  <p className="text-base md:text-lg italic font-serif text-accent drop-shadow-md">
-                    {tUI("Transparent package planning with no unexpected coordination fees.", lang)}
+                    {tUI("Transparent treatment planning with no unexpected package fees.", lang)}
                  </p>
               </div>
           </div>

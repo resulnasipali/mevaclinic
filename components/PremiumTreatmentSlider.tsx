@@ -82,7 +82,7 @@ const PremiumTreatmentSlider = ({ lang = 'en' }: { lang?: string }) => {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#C5A059]/10 border border-[#C5A059]/30 text-[#C5A059] text-xs font-bold uppercase tracking-widest mb-4">
               <Star size={14} className="fill-[#C5A059]" />
-              {tUI("Premium Logistics", lang)}
+              {tUI("Premium Patient Services", lang)}
             </div>
             <h2 className="text-3xl md:text-5xl font-serif font-bold mb-3 md:mb-4 drop-shadow-md">
               {tUI("Curated VIP Packages", lang)}
