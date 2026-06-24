@@ -78,7 +78,7 @@ const PAGE_T: Record<string, Record<string, string>> = {
     ru: "360° Элитный консьерж-сервис"
   },
   pillar2Body: {
-    en: "Medical tourism is more than a surgery; it is a life transition. We seamlessly manage your entire journey: premium Mercedes-Benz VIP airport transfers, 5-star hotel accommodations, personal native language translators, and private clinical logistics.",
+    en: "International healthcare requires more than scheduling a procedure. It requires clear medical evaluation, experienced clinical teams, transparent communication, and reliable support before, during, and after treatment. Meva Clinic supports international patients with doctor-led treatment planning, trusted hospital partnerships, multilingual communication, and a patient-care experience designed around safety, comfort, and continuity.",
     ro: "Turismul medical înseamnă mai mult decât o intervenție chirurgicală; este o tranziție de viață. Vă gestionăm fără probleme întreaga călătorie: transferuri premium Mercedes-Benz VIP de la aeroport, cazare la hotel de 5 stele, traducători personali în limba maternă și logistică clinică privată.",
     es: "El turismo médico es más que una cirugía; es una transición de vida. Gestionamos a la perfección todo su viaje: traslados premium al aeropuerto VIP de Mercedes-Benz, alojamiento en hoteles de 5 estrellas, traductores personales en su idioma nativo y logística clínica privada.",
     it: "Il turismo medico è più di un intervento chirurgico; è una transizione di vita. Gestiamo senza problemi l'intero viaggio: trasferimenti aeroportuali VIP Mercedes-Benz premium, sistemazioni in hotel a 5 stelle, traduttori personali in lingua madre e logistica clinica privata.",

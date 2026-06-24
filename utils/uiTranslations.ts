@@ -5501,6 +5501,24 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Über 15 Jahre Erfahrung",
     "ro": "Peste 15 ani"
   },
+  "Patient Safety First": {
+    "en": "Patient Safety First",
+    "ro": "Siguranța Pacientului pe Primul Loc",
+    "es": "Seguridad del Paciente Primero",
+    "it": "La Sicurezza del Paziente Prima di Tutto",
+    "ru": "Безопасность пациентов прежде всего",
+    "fr": "La Sécurité du Patient d'Abord",
+    "de": "Patientensicherheit Zuerst"
+  },
+  "Clinical Care Standards": {
+    "en": "Clinical Care Standards",
+    "ro": "Standarde de Îngrijire Clinică",
+    "es": "Estándares de Atención Clínica",
+    "it": "Standard di Cura Clinica",
+    "ru": "Стандарты клинического ухода",
+    "fr": "Normes de Soins Cliniques",
+    "de": "Klinische Pflegestandards"
+  },
   "100% VIP": {
     "en": "100% VIP",
     "es": "100% VIP",
@@ -6581,7 +6599,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ru": "Медицинский дисклеймер: Клиническая информация на этом сайте предназначена исключительно для образовательных и информационных целей. Она не является медицинской консультацией, диагнозом или лечением. Всегда консультируйтесь с квалифицированным врачом по поводу любого медицинского состояния или хирургического вмешательства в Турции."
     },
     "Meva Clinic operates as an international patient service provider. Travel and accommodation services are arranged through licensed TÜRSAB Group-A travel agency partners when required.": {
-      "en": "Meva Clinic operates as an international patient service provider. Travel and accommodation services are arranged through licensed TÜRSAB Group-A travel agency partners when required.",
+      "en": "Meva Clinic provides international patient support in cooperation with licensed healthcare institutions. Travel, accommodation, and non-medical support services, where arranged, are provided through authorized partners in accordance with applicable regulations.",
       "ro": "Meva Clinic funcționează ca furnizor de servicii pentru pacienți internaționali. Serviciile de călătorie și cazare sunt organizate prin agenții de turism partenere autorizate TÜRSAB de Grupa A, atunci când este necesar.",
       "de": "Meva Clinic fungiert als internationaler Dienstleister für Patienten. Reise- und Unterkunftsleistungen werden bei Bedarf über lizenzierte TÜRSAB-Reisebüropartner der Gruppe A vermittelt.",
       "es": "Meva Clinic opera como proveedor de servicios para pacientes internacionales. Los servicios de viaje y alojamiento se organizan a través de agencias de viajes asociadas con licencia TÜRSAB Grupo A cuando es necesario.",

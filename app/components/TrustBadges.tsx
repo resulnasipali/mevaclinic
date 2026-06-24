@@ -8,7 +8,7 @@ export default function TrustBadges({ lang }: { lang: string }) {
     { icon: <ShieldCheck size={40} />, title: tUI('JCI Accredited', lang), desc: tUI("Global Gold Standard", lang) },
     { icon: <Globe size={40} />, title: tUI('ISO 9001:2015', lang), desc: tUI("Quality Management", lang) },
     { icon: <Award size={40} />, title: tUI('15+ Years', lang), desc: tUI("Surgical Excellence", lang) },
-    { icon: <CheckCircle size={40} />, title: tUI('100% VIP', lang), desc: tUI("End-to-End Concierge", lang) }
+    { icon: <CheckCircle size={40} />, title: tUI('Patient Safety First', lang), desc: tUI("Clinical Care Standards", lang) }
   ];
 
   return (
