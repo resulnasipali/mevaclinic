@@ -65,7 +65,7 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
               </div>
               <div className="sm:ml-4 pt-1">
                 <h3 className="text-base sm:text-lg font-bold text-prime mb-1 sm:mb-2">{tUI("Premium Partner Hotel Accommodation", lang)}</h3>
-                <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Comfortable recovery conditions. The care plan includes accommodation in one of our premium partner hotels.", lang)}</p>
+                 <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Comfortable recovery conditions. Premium partner hotel accommodation can be arranged as part of the care plan, depending on treatment schedule and patient needs.", lang)}</p>
               </div>
             </div>
 

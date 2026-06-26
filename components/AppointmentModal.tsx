@@ -29,24 +29,24 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
           type: 'appointment_modal',
           name: formData.name,
           phone: formData.phone,
-          procedure: 'VIP Consultation',
+          procedure: 'Premium Consultation',
           details: `Planning Date: ${formData.planningDate}. Logistics Needs: ${formData.needsLogistics}.`,
-          source: 'VIPAppointmentModal',
+          source: 'PremiumAppointmentModal',
         }),
       });
       if (response.ok) {
         import('../utils/pixel').then(({ PxTrack }) => {
-          PxTrack('Lead', { form_location: 'VIP_Modal', ...formData });
+          PxTrack('Lead', { form_location: 'Premium_Modal', ...formData });
           pushToDataLayer('generate_lead', { form_location: 'appointment_modal' });
           pushToDataLayer('form_submission_success', { form_location: 'appointment_modal' });
-          alert(tUI("VIP Request Received! A specialist will contact you.", lang));
+          alert(tUI("Request Received! A specialist will contact you.", lang));
           onClose();
         });
       } else {
-        alert(lang === 'ro' ? 'Eroare la înregistrarea solicitării VIP.' : 'Error submitting VIP request. Please try again.');
+        alert(lang === 'ro' ? 'Eroare la înregistrarea solicitării.' : 'Error submitting request. Please try again.');
       }
     } catch (err) {
-      console.error('VIP Submit error:', err);
+      console.error('Submit error:', err);
       alert(lang === 'ro' ? 'Eroare de rețea.' : 'Network error. Please try again.');
     }
   };
@@ -69,7 +69,7 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
           {step === 1 && (
             <div className="animate-fade-up">
               <h3 className="text-3xl font-serif font-bold text-prime mb-4">
-                {tUI("Design Your VIP Journey", lang)}
+                {tUI("Design Your Care Plan", lang)}
               </h3>
               <p className="text-gray-500 mb-8">
                 {tUI("Tell us your preferences for a seamless medical experience.", lang)}
@@ -117,7 +117,7 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
                        <Car size={24} />
                     </div>
                     <div className="text-left">
-                       <p className="font-bold text-prime">{tUI("Full VIP Concierge", lang)}</p>
+                       <p className="font-bold text-prime">{tUI("Full Premium Care", lang)}</p>
                        <p className="text-xs text-gray-500">{tUI("Includes Private Transfer & Partner Hotel", lang)}</p>
                     </div>
                  </button>
@@ -176,7 +176,7 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
                 type="submit"
                 className="w-full bg-prime text-white font-bold py-5 rounded-2xl shadow-xl flex items-center justify-center gap-3 hover:bg-[#0b1626] transition-all"
               >
-                 {tUI("Activate VIP Evaluation", lang)} <Send size={18} />
+                 {tUI("Activate Evaluation", lang)} <Send size={18} />
               </button>
               <div className="flex flex-col items-center justify-center gap-2 mt-5 border-t border-gray-50 pt-4">
                  <p className="text-[9px] text-center text-gray-400 uppercase tracking-[0.15em] font-bold">
@@ -185,7 +185,7 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
                  <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime">
                    <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("JCI Accredited", lang)}</span>
                    <span className="w-1 h-1 rounded-full bg-gray-200"></span>
-                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("VIP Concierge", lang)}</span>
+                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("Premium Care", lang)}</span>
                    <span className="w-1 h-1 rounded-full bg-gray-200"></span>
                    <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("€0 Consultation", lang)}</span>
                  </div>

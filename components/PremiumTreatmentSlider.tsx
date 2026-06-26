@@ -85,7 +85,7 @@ const PremiumTreatmentSlider = ({ lang = 'en' }: { lang?: string }) => {
               {tUI("Premium Patient Services", lang)}
             </div>
             <h2 className="text-3xl md:text-5xl font-serif font-bold mb-3 md:mb-4 drop-shadow-md">
-              {tUI("Curated VIP Packages", lang)}
+              {tUI("Signature Medical Programs", lang)}
             </h2>
             <p className="text-gray-300 font-sans text-base md:text-lg">
               {tUI("Experience absolute peace of mind. Treatment plans are coordinated through accredited partner hospitals and selected specialist medical partners, with private patient transfers and premium partner accommodation arranged when appropriate.", lang)}

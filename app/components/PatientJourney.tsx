@@ -37,7 +37,7 @@ export default function PatientJourney({ lang }: { lang: string }) {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#0b1626] mb-6">
-            {tUI("The VIP Patient Journey", lang)}
+            {tUI("The Premium Patient Journey", lang)}
           </h2>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
             {tUI("We handle every detail of your trip so you can focus entirely on your transformation.", lang)}

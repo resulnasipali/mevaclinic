@@ -219,7 +219,7 @@ const ContactForm = ({ isEn: isEnProp, lang = 'en' }: any) => {
              <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime mt-2">
                <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("JCI Accredited", lang)}</span>
                <span className="w-1 h-1 rounded-full bg-gray-200"></span>
-               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("VIP Concierge", lang)}</span>
+               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("Premium Care", lang)}</span>
                <span className="w-1 h-1 rounded-full bg-gray-200"></span>
                <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("€0 Consultation", lang)}</span>
              </div>
