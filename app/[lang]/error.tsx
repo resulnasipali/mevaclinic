@@ -26,7 +26,7 @@ export default function Error({
           Something went wrong
         </h1>
         <p className="text-gray-400 text-base leading-relaxed mb-10">
-          We encountered an unexpected issue. Our medical concierge team is available on WhatsApp to assist you directly.
+          We encountered an unexpected issue. Our support team is available on WhatsApp to assist you directly.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

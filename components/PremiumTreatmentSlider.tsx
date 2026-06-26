@@ -88,7 +88,7 @@ const PremiumTreatmentSlider = ({ lang = 'en' }: { lang?: string }) => {
               {tUI("Curated VIP Packages", lang)}
             </h2>
             <p className="text-gray-300 font-sans text-base md:text-lg">
-              {tUI("Experience absolute peace of mind. Every treatment is coordinated through JCI-accredited care, premium Bosphorus hotel accommodations, and private patient transfers.", lang)}
+              {tUI("Experience absolute peace of mind. Treatment plans are coordinated through accredited partner hospitals and selected specialist medical partners, with private patient transfers and premium partner accommodation arranged when appropriate.", lang)}
             </p>
           </div>
           

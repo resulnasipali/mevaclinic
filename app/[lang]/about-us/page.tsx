@@ -69,13 +69,13 @@ const PAGE_T: Record<string, Record<string, string>> = {
     ru: "Мы гарантируем, что каждая бариатрическая, пластическая, стоматологическая процедура и процедура по пересадке волос проводится только в передовых медицинских центрах, оснащенных современными диагностическими технологиями и полноценной реанимационной поддержкой."
   },
   pillar2Title: {
-    en: "360° Elite Concierge Management",
-    ro: "Management de Elite Concierge 360°",
-    es: "Gestión Elite Concierge 360°",
-    it: "Gestione 360° Elite Concierge",
-    fr: "Gestion Elite Concierge 360°",
-    de: "360° Elite Concierge Management",
-    ru: "360° Элитный консьерж-сервис"
+    en: "360° Premium Care Management",
+    ro: "Management Premium de Îngrijire 360°",
+    es: "Gestión de Atención Premium 360°",
+    it: "Gestione dell'Assistenza Premium a 360°",
+    fr: "Gestion des Soins Premium à 360°",
+    de: "360° Premium‑Pflegemanagement",
+    ru: "360° Премиальное обслуживание пациентов"
   },
   pillar2Body: {
     en: "International healthcare requires more than scheduling a procedure. It requires clear medical evaluation, experienced clinical teams, transparent communication, and reliable support before, during, and after treatment. Meva Clinic supports international patients with doctor-led treatment planning, trusted hospital partnerships, multilingual communication, and a patient-care experience designed around safety, comfort, and continuity.",
@@ -250,7 +250,7 @@ export default async function AboutUsPage({ params }: { params: Promise<{ lang: 
                 </p>
               </article>
 
-              {/* Pillar 2 - Elite Concierge */}
+              {/* Pillar 2 - Premium Care */}
               <article className="bg-white p-8 md:p-10 rounded-[2.5rem] border border-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.02)] hover:shadow-xl hover:border-accent/30 transition-all duration-300 group">
                 <div className="w-14 h-14 rounded-2xl bg-prime/5 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
                   <Compass size={28} />

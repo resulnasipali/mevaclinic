@@ -78,6 +78,23 @@ const CATEGORY_LABELS: Record<string, string> = {
 export default function TreatmentDetailClient({ treatment, lang, images = [], categoryLayout }: TreatmentClientProps) {
   const isEn = lang === 'en';
 
+  const getClinicalDisclaimer = () => {
+    const slug = treatment?.slug;
+    const category = treatment?.category;
+
+    if (slug === 'organ-transplant-turkey') {
+      return tUI('Meva Clinic provides coordination and second medical opinion support only. Eligibility, donor compatibility, ethics committee review and surgical decisions are made exclusively by authorized transplant centers and licensed transplant specialists.', lang);
+    }
+    if (slug === 'smart-oncology-drugs') {
+      return tUI('Meva Clinic coordinates medical record review, tumor board consultation and hospital appointment logistics only. Diagnosis, prescriptions and treatment decisions are made exclusively by authorized oncology specialists and provider institutions.', lang);
+    }
+    if (category === 'hair' || category === 'dental' || slug === 'ha-filler-girth' || slug === 'p-shot-prp' || slug === 'botox-girth') {
+      return tUI('Treatment pathways are coordinated with selected specialist medical partners and accredited provider institutions, depending on the procedure and doctor assessment.', lang);
+    }
+    return tUI('Hospital-based procedures are coordinated through accredited partner hospitals, including JCI-accredited institutions where clinically appropriate.', lang);
+  };
+
+
   const getSafeVal = (val: any, locale: string): any => {
     if (!val) return '';
     if (Array.isArray(val)) {
@@ -401,7 +418,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                       <span className="w-10 h-10 bg-amber-500 rounded-xl flex items-center justify-center shadow-lg">
                         <Star size={20} className="text-[#0b1626] fill-[#0b1626]" />
                       </span>
-                      {tUI('Premium VIP Package Inclusions', lang)}
+                      {tUI('Comprehensive International Patient Care Plan', lang)}
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {premiumInclusions.map((item: string, i: number) => (
@@ -547,7 +564,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                         {tUI('Medical Guidelines & Safety Protocols', lang)}
                       </h2>
                       <p className="text-gray-500 text-sm leading-relaxed max-w-2xl">
-                        {tUI('Meva Clinic operates in strict JCI-accredited hospital environments. Below are the clinical guidelines, safety protocols, and medical reference documentation for this procedure.', lang)}
+                        {getClinicalDisclaimer()} {tUI('Below are the clinical guidelines, safety protocols, and medical reference documentation for this procedure.', lang)}
                       </p>
                     </div>
 

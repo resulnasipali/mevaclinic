@@ -24,13 +24,13 @@ const playfair = Playfair_Display({
 });
 
 const META_BY_LANG: Record<string, { title: string; description: string }> = {
-  en: { title: 'Meva Clinic | Elite Medical Concierge & VIP Healthcare Istanbul', description: 'Experience world-class medical concierge services in Istanbul with Meva Clinic. Premium healthcare packages, JCI-accredited specialists, and luxury Bosphorus stays.' },
-  ro: { title: 'Meva Clinic | Concierge Medical de Elită și Servicii VIP Istanbul', description: 'Experimentați servicii de concierge medical de clasă mondială în Istanbul cu Meva Clinic. Pachete premium de sănătate, specialiști acreditați JCI și cazare de lux pe Bosfor.' },
-  de: { title: 'Meva Clinic | Elite Medical Concierge & VIP-Gesundheitsdienste Istanbul', description: 'Erleben Sie erstklassigen medizinischen Concierge-Service in Istanbul mit der Meva Clinic. Premium-Gesundheitspakete, JCI-akkreditierte Spezialisten und Luxusunterkünfte am Bosporus.' },
-  fr: { title: 'Meva Clinic | Conciergerie Médicale d\'Élite & Santé VIP Istanbul', description: 'Profitez d\'un service de conciergerie médicale haut de gamme à Istanbul avec Meva Clinic. Formules de santé premium, chirurgiens accrédités JCI et séjours de luxe sur le Bosphore.' },
-  es: { title: 'Meva Clinic | Concierge Médico de Élite y Salud VIP en Estambul', description: 'Disfrute de servicios de concierge médico de clase mundial en Estambul con Meva Clinic. Tratamientos premium, especialistas certificados y alojamiento de lujo en el Bósforo.' },
-  it: { title: 'Meva Clinic | Concierge Medico d\'Élite e Cure VIP a Istanbul', description: 'Vivi un\'esperienza di turismo medico di livello mondiale a Istanbul con Meva Clinic. Trattamenti d\'élite, specialisti accreditati JCI e alloggi di lusso sul Bosforo.' },
-  ru: { title: 'Meva Clinic | Элитный медицинский консьерж и VIP-лечение в Стамбуле', description: 'Испытайте медицинский консьерж-сервис мирового класса в Стамбуле с Meva Clinic. Премиум пакеты лечения, аккредитованные JCI специалисты и роскошное проживание.' },
+  en: { title: 'Meva Clinic | Premium International Patient Care Istanbul', description: 'Experience world-class international patient care in Istanbul with Meva Clinic. Premium healthcare programs, JCI-accredited partner hospitals, and comfortable Bosphorus stays.' },
+  ro: { title: 'Meva Clinic | Servicii Premium de Îngrijire a Pacienților Istanbul', description: 'Experimentați servicii premium de îngrijire a pacienților în Istanbul cu Meva Clinic. Programe premium de sănătate, spitale partenere acreditate JCI și cazare la hoteluri partenere pe Bosfor.' },
+  de: { title: 'Meva Clinic | Premium International Patient Care Istanbul', description: 'Erleben Sie erstklassige internationale Patientenbetreuung in Istanbul mit der Meva Clinic. Premium-Gesundheitsprogramme, JCI-akkreditierte Partnerkliniken und komfortable Unterkünfte am Bosporus.' },
+  fr: { title: 'Meva Clinic | Premium International Patient Care Istanbul', description: 'Profitez d\'un service premium d\'assistance aux patients internationaux à Istanbul avec Meva Clinic. Programmes de soins premium, hôpitaux partenaires accrédités JCI et séjours de confort sur le Bosphore.' },
+  es: { title: 'Meva Clinic | Premium International Patient Care Istanbul', description: 'Disfrute de servicios premium de atención internacional al paciente en Estambul con Meva Clinic. Programas médicos premium, hospitales asociados acreditados y alojamiento de confort en el Bósforo.' },
+  it: { title: 'Meva Clinic | Premium International Patient Care Istanbul', description: 'Vivi un\'assistenza premium internazionale ai pazienti a Istanbul con Meva Clinic. Programmi di cura premium, ospedali partner accreditati JCI e sistemazioni di comfort sul Bosforo.' },
+  ru: { title: 'Meva Clinic | Premium International Patient Care Istanbul', description: 'Испытайте премиальное международное обслуживание пациентов в Стамбуле с Meva Clinic. Премиум-программы лечения, партнерские клиники с аккредитацией JCI и комфортное проживание.' },
 };
 
 import { buildMetadata } from '@/app/utils/seo';
@@ -74,7 +74,7 @@ export default async function RootLayout({
             "name": "Meva Clinic",
             "url": "https://www.mevaclinic.com",
             "logo": "https://www.mevaclinic.com/logo.png",
-            "description": "Elite international medical concierge and premium patient care platform in Istanbul.",
+            "description": "Premium international patient care platform in Istanbul, Turkey.",
             "sameAs": [
               "https://www.facebook.com/mevaclinic",
               "https://www.instagram.com/meva.clinicofficial/",

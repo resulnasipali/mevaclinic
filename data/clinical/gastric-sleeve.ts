@@ -43,7 +43,7 @@ export const gastricSleeveClinical = {
   ]),
   recoveryTimeline: t([
     { time: "Days 1-2 (Hospital)", desc: "Immediate post-op monitoring, pain management using patient-controlled analgesia, early ambulation within hours of surgery to prevent DVT, and initiation of a clear liquid diet." },
-    { time: "Days 3-5 (Hotel)", desc: "Discharge from the hospital to a luxury recovery hotel. Transition to a full liquid diet (unsweetened protein shakes, strained broths). Patients are advised to walk frequently." },
+    { time: "Days 3-5 (Hotel)", desc: "Discharge from the hospital to a premium partner hotel. Transition to a full liquid diet (unsweetened protein shakes, strained broths). Patients are advised to walk frequently." },
     { time: "Weeks 2-4 (Transition)", desc: "Introduction of pureed and soft foods (mashed vegetables, soft eggs, pureed fish). Most patients return to light desk work and resume gentle physical activities." },
     { time: "Months 3+ (Stability)", desc: "Transition to solid foods in small, protein-rich portions. Rapid weight loss occurs, and patients experience increased energy levels alongside metabolic recovery." }
   ]),

@@ -33,7 +33,7 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
 
           <div className="absolute top-0 right-10 transform -translate-y-1/2 flex flex-col items-center justify-center bg-gradient-to-br from-accent to-accentHov text-white w-20 h-20 md:w-24 md:h-24 rounded-full shadow-lg shadow-accent/20 border-[3px] border-white z-10 hover:scale-105 transition-transform duration-300">
             <Star className="fill-white mb-1" size={18} />
-            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-center leading-tight">Luxury<br/>Concierge</span>
+            <span className="text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-center leading-tight">Premium<br/>Care</span>
           </div>
 
           <div className="grid grid-cols-2 gap-x-4 gap-y-6 md:gap-x-6 md:gap-y-8 z-10 relative">
@@ -97,7 +97,7 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
               </div>
               <div className="sm:ml-4 pt-1">
                 <h3 className="text-base sm:text-lg font-bold text-prime mb-1 sm:mb-2">{tUI("Pre/Post-Operative Tests", lang)}</h3>
-                <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("All medical tests, cardiology and anesthesia consultations required for your procedure are included in the transparent package.", lang)}</p>
+                 <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Required medical tests, cardiology review and anesthesia evaluation are coordinated as part of the treatment plan where clinically indicated.", lang)}</p>
               </div>
             </div>
           </div>

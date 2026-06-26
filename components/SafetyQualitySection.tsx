@@ -12,7 +12,7 @@ import { tUI } from '@/utils/uiTranslations';
 const getFaqData = (lang: string) => [
   { question: tUI("What happens if a medical complication occurs?", lang), answer: tUI("Your safety is our priority. Procedures are arranged through accredited partner hospitals in Turkey where applicable, with patient briefing, documentation and post-treatment support. Eligible treatment programs may include medical complication insurance depending on the procedure and provider.", lang) },
   { question: tUI("How safe is traveling and staying in Istanbul?", lang), answer: tUI("Istanbul is a prestigious international hub for medical care. From the moment you step off the plane, our private patient coordinator will greet you. Accommodation is provided in premium partner hotels located in premium areas.", lang) },
-  { question: tUI("Are procedures backed by safety and quality standards?", lang), answer: tUI("We exclusively collaborate with experienced, board-certified partner doctors. All procedures are conducted in JCI-accredited partner hospitals, ensuring strict adherence to international medical protocols and structured clinical follow-up care.", lang) }
+  { question: tUI("Are procedures backed by safety and quality standards?", lang), answer: tUI("We exclusively collaborate with experienced, board-certified partner doctors. Hospital-based procedures are coordinated through accredited partner hospitals, including JCI-accredited institutions where clinically appropriate, with medical protocols and follow-up planning determined by the responsible physician and provider institution.", lang) }
 ];
 
 

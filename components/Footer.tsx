@@ -150,7 +150,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
               <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mt-4 block">Istanbul Excellence</span>
             </div>
             <p className="text-gray-400 font-sans text-sm leading-relaxed pr-4">
-              {tUI('Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and comfort-focused support.', lang)}
+              {tUI('Your trusted partner for medical excellence in Turkey. Premium international patient care for safe treatment planning and comfort-focused support.', lang)}
             </p>
             {/* Social */}
             <div className="flex space-x-3">
@@ -232,7 +232,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
                 { ro: '/ro/blog', en: '/en/blog', labelEn: 'Medical Archive', labelRo: 'Arhiva Medicală' },
                 { ro: '/ro/faq', en: '/en/faq', labelEn: 'Clinical FAQ', labelRo: 'Întrebări Clinice' },
                 { ro: '/ro/quiz', en: '/en/quiz', labelEn: 'Suitability Quiz', labelRo: 'Test de Eligibilitate' },
-                { ro: '/ro/#pachete', en: '/en/#pachete', labelEn: 'VIP Services', labelRo: 'Servicii VIP' },
+                { ro: '/ro/#pachete', en: '/en/#pachete', labelEn: 'International Patient Services', labelRo: 'Servicii Internaționale Pacienți' },
                 { ro: '/ro/medical-comparison', en: '/en/medical-comparison', labelEn: 'Compare Clinics', labelRo: 'Comparație Clinici' },
                 { ro: '/ro/contact', en: '/en/contact', labelEn: 'International Hub', labelRo: 'Hub Internațional' },
               ].map((item) => (
