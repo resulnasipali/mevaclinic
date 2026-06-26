@@ -36,7 +36,7 @@ export function getWhatsAppLink(slug, locale) {
       "ro": "Bună Meva Clinic, aș dori o consultație pentru operația de Gastric Bypass. Îmi puteți spune mai multe despre monitorizarea metabolică de 1 an inclusă?"
     },
     "gastric-balloon": {
-      "en": "Hello Meva Clinic, I want to jumpstart my weight loss with the non-surgical Gastric Balloon. Could I get details on the All-Inclusive Pre-Op Tests with Transparent Pricing?",
+      "en": "Hello Meva Clinic, I want to jumpstart my weight loss with the non-surgical Gastric Balloon. Could I get details on the Pre-Op Tests and Transparent Pricing?",
       "ro": "Bună Meva Clinic, vreau să încep procesul de slăbire cu Balonul Gastric non-chirurgical. Aș putea primi detalii despre testele pre-operatorii incluse și tarifele transparente?"
     },
     "hair-transplant": {
@@ -47,8 +47,8 @@ export function getWhatsAppLink(slug, locale) {
 
   // Premium Fail-Safe Fallback
   const fallbackMessage = {
-    "en": "Hello Meva Clinic, I would like to arrange a premium consultation and receive an all-inclusive medical tourism quote for my procedure.",
-    "ro": "Bună Meva Clinic, aș dori să programez o consultație premium și să primesc o ofertă completă de turism medical pentru procedura mea."
+    "en": "Hello Meva Clinic, I would like to arrange a premium consultation and receive a comprehensive medical coordination quote for my procedure.",
+    "ro": "Bună Meva Clinic, aș dori să programez o consultație premium și să primesc o ofertă detaliată de coordonare medicală pentru procedura mea."
   };
 
   // Determine message

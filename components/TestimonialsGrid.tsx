@@ -23,8 +23,8 @@ const TestimonialsGrid = ({ lang = 'en' }: { lang?: string }) => {
     {
       id: 2,
       image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=800", // Handsome man, good hair
-      quoteEn: "Unbelievable results. My hairline is back, 100% natural and painless procedure.",
-      quoteRo: "Rezultate incredibile. Părul meu a revenit, procedură 100% naturală și fără durere.",
+      quoteEn: "Unbelievable results. My hairline is back, 100% natural and comfort-focused procedure.",
+      quoteRo: "Rezultate incredibile. Părul meu a revenit, procedură 100% naturală și cu disconfort minim.",
       name: "Andrei V.",
       treatmentEn: "Hair Transplant",
       treatmentRo: "Implant de Păr"

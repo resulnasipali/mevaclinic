@@ -9,7 +9,7 @@ import { pushToDataLayer } from '../utils/AnalyticsUtils';
 
 const DynamicSEO = ({ 
   title = "Meva Clinic - Chirurgie Bariatrică și Gastric Sleeve în Istanbul", 
-  description = "Meva Clinic Istanbul oferă pachete VIP all-inclusive pentru Gastric Sleeve și Bypass. Recuperare rapidă, experți de top și rezultate dovedite. Află prețul!", 
+  description = "Meva Clinic Istanbul oferă servicii premium de coordonare bariatrică și metabolică. Chirurgi de top, spitale JCI de renume și asistență completă de-a lungul întregului parcurs clinic.", 
   path = "",
   schemaType = "MedicalBusiness",
   image = "https://www.mevaclinic.com/premium-clinical-image.jpg",
@@ -60,7 +60,7 @@ const DynamicSEO = ({
     "url": siteUrl,
     "logo": `${siteUrl}/logo.png`,
     "image": image,
-    "description": "Premium JCI-accredited medical tourism clinic in Istanbul, Turkey. Specializing in Bariatric Surgery, Hair Transplant, Oncology (CyberKnife), Dental Implants, Plastic Surgery and Organ Transplant with 5-star VIP concierge.",
+    "description": "Premium JCI-accredited medical coordination clinic in Istanbul, Turkey. Specializing in Bariatric Surgery, Hair Transplant, Oncology (CyberKnife), Dental Implants, Plastic Surgery and Organ Transplant with premium clinical patient care.",
     "telephone": "+905324675941",
     "email": "info@mevaclinic.com",
     "address": {

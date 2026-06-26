@@ -8,11 +8,11 @@ export const ANDROLOGY_METHODS = [
     goal: t('Length', 'Lungime'),
     type: t('Surgical', 'Chirurgical'),
     anesthesia: t('General / Spinal', 'Generală / Spinală'),
-    recovery: t('7–10 days', '7–10 zile'),
+    recovery: t('4–6 weeks (sexual/exercise abstinence required)', '4–6 săptămâni (necesită abstinență sexuală/sportivă)'),
     duration: t('Permanent', 'Permanent'),
     summary: t(
-      'The suspensory ligament anchors the internal shaft to the pubic bone, concealing 3–5 cm of penile length. Surgical division of this ligament allows the internal segment to advance externally. Combined with fat grafting or V-Y advancement flasplasty to prevent retraction. Average visible gain: 2–4 cm flaccid.',
-      'Ligamentul suspensor ancorează tijul intern la osul pubian, ascunzând 3–5 cm din lungimea penisului. Secțiunea chirurgicală a acestui ligament permite segmentului intern să avanseze extern. Combinat cu grefare de grăsime sau plastie de avansare V-Y pentru prevenirea retracției. Câștig vizibil mediu: 2–4 cm flascid.'
+      'The suspensory ligament anchors the internal shaft to the pubic bone, concealing 3–5 cm of penile length. Surgical division of this ligament allows the internal segment to advance externally. Combined with fat grafting or V-Y advancement flasplasty to prevent retraction. Visible flaccid length improvement typically ranges between 2–4 cm, depending entirely on individual ligament anatomy and surgeon assessment during consultation.',
+      'Ligamentul suspensor ancorează tijul intern la osul pubian, ascunzând 3–5 cm din lungimea penisului. Secțiunea chirurgicală a acestui ligament permite segmentului intern să avanseze extern. Combinat cu grefare de grăsime sau plastie de avansare V-Y pentru prevenirea retracției. Îmbunătățirea lungimii flascide variază de regulă între 2–4 cm, în funcție de anatomia individuală a ligamentului și de evaluarea chirurgului în cadrul consultației.'
     ),
     isForMe: t(
       'Best for men whose primary concern is flaccid length, with BMI < 30 and adequate penile shaft length on internal examination.',
@@ -29,11 +29,11 @@ export const ANDROLOGY_METHODS = [
     goal: t('Girth', 'Grosime'),
     type: t('Surgical', 'Chirurgical'),
     anesthesia: t('Local / Sedation', 'Locală / Sedare'),
-    recovery: t('5–7 days', '5–7 zile'),
+    recovery: t('4–6 weeks (sexual/exercise abstinence required)', '4–6 săptămâni (necesită abstinență sexuală/sportivă)'),
     duration: t('Permanent (with touch-up)', 'Permanent (cu retușuri)'),
     summary: t(
-      "Fat harvested by VASER liposuction from the patient's own donor site (abdomen/flanks), processed via Lipogems or Coleman technique, and micro-injected circumferentially into the penile shaft subcutaneous layer. Fat survival: 60–70% at 12 months. Average circumference gain: 2–4 cm.",
-      'Grăsimea recoltată prin liposucție VASER din zona donatoare proprie (abdomen/flancare), procesată prin tehnica Lipogems sau Coleman, și micro-injectată circumferențial în stratul subcutanat al tijului penian. Supraviețuire grăsime: 60–70% la 12 luni. Câștig mediu circumferință: 2–4 cm.'
+      "Fat harvested by VASER liposuction from the patient's own donor site (abdomen/flanks), processed via Lipogems or Coleman technique, and micro-injected circumferentially into the penile shaft subcutaneous layer. Fat survival: 60–70% at 12 months. Circumference improvement typically ranges between 2–4 cm, depending on fat graft retention, tissue anatomy, and surgeon assessment.",
+      'Grăsimea recoltată prin liposucție VASER din zona donatoare proprie (abdomen/flancare), procesată prin tehnica Lipogems sau Coleman, și micro-injectată circumferențial în stratul subcutanat al tijului penian. Supraviețuire grăsime: 60–70% la 12 luni. Îmbunătățirea circumferinței variază de regulă între 2–4 cm, în funcție de retenția grefei de grăsime, anatomie și evaluarea chirurgului.'
     ),
     isForMe: t(
       'Ideal for men prioritising girth over length, with sufficient donor fat. Most natural feel — uses own tissue. Best combined with ligamentolysis for complete enhancement.',
@@ -50,15 +50,15 @@ export const ANDROLOGY_METHODS = [
     goal: t('Girth', 'Grosime'),
     type: t('Non-Surgical', 'Non-Chirurgical'),
     anesthesia: t('Topical Cream', 'Cremă Topică'),
-    recovery: t('0 days', '0 zile'),
+    recovery: t('7–14 days (sexual abstinence required)', '7–14 zile (necesită abstinență sexuală)'),
     duration: t('12–18 months', '12–18 luni'),
     summary: t(
-      'Cross-linked high-density hyaluronic acid (Juvederm Voluma / Restylane Lyft grade) is injected in a fan-technique pattern along the penile shaft in a 15–20 minute clinic procedure. Immediate visible girth increase of 2–3 cm. No downtime. Fully reversible with hyaluronidase. Ideal for patients wanting a trial before committing to permanent surgery.',
-      'Acidul hialuronic reticulat de înaltă densitate (grad Juvederm Voluma / Restylane Lyft) este injectat în pattern de evantai de-a lungul tijului penian într-o procedură clinică de 15–20 minute. Creștere imediată vizibilă a circumferinței de 2–3 cm. Fără downtime. Complet reversibil cu hialuronidază. Ideal pentru pacienții care doresc un test înainte de chirurgia permanentă.'
+      'Cross-linked high-density hyaluronic acid (Juvederm Voluma / Restylane Lyft grade) is injected in a fan-technique pattern along the penile shaft in a 15–20 minute clinic procedure. An approximate immediate circumference increase of 2–3 cm may be achieved, depending on the volume injected, tissue response, and doctor assessment during consultation. No downtime. Fully reversible with hyaluronidase. Ideal for patients wanting a trial before committing to permanent surgery.',
+      'Acidul hialuronic reticulat de înaltă densitate (grad Juvederm Voluma / Restylane Lyft) este injectat în pattern de evantai de-a lungul tijului penian într-o procedură clinică de 15–20 minute. O creștere aproximativă imediată a circumferinței de 2–3 cm poate fi obținută, în funcție de volumul injectat, răspunsul țesutului și evaluarea medicului. Fără downtime. Complet reversibil cu hialuronidază. Ideal pentru pacienții care doresc un test înainte de chirurgia permanentă.'
     ),
     isForMe: t(
-      'Best for men wanting immediate results without surgery or downtime. Also ideal as a "preview" before fat injection. Reversible, repeatable, zero recovery.',
-      'Cel mai potrivit pentru bărbații care doresc rezultate imediate fără chirurgie sau timp de recuperare. Ideal și ca "previzualizare" înaintea injecției de grăsime. Reversibil, repetabil, zero recuperare.'
+      'Best for men wanting immediate results without surgery or downtime. Also ideal as a "preview" before fat injection. Reversible, repeatable, minimal downtime.',
+      'Cel mai potrivit pentru bărbații care doresc rezultate imediate fără chirurgie sau timp de recuperare. Ideal și ca "previzualizare" înaintea injecției de grăsime. Reversibil, repetabil, recuperare minimă.'
     ),
     mevaNote: t(
       'Juvederm Voluma / Restylane Lyft only — medical-grade. 15-min procedure. Topical anaesthetic cream. Same-day discharge.',
@@ -71,11 +71,11 @@ export const ANDROLOGY_METHODS = [
     goal: t('Girth', 'Grosime'),
     type: t('Surgical', 'Chirurgical'),
     anesthesia: t('General / Spinal', 'Generală / Spinală'),
-    recovery: t('10–14 days', '10–14 zile'),
+    recovery: t('4–6 weeks (sexual/exercise abstinence required)', '4–6 săptămâni (necesită abstinență sexuală/sportivă)'),
     duration: t('Permanent', 'Permanent'),
     summary: t(
-      'A split-thickness or acellular dermal matrix (Alloderm) graft is placed circumferentially beneath the penile skin, providing uniform, homogeneous circumferential augmentation. Unlike fat (which can migrate or be resorbed unevenly), dermal matrix maintains consistent shape. Average girth increase: 3–5 cm. Preferred for patients wanting permanent, predictable results.',
-      'O grefă de matrice dermică de grosime despicată sau acelulară (Alloderm) este plasată circumferențial sub pielea penisului, oferind augmentare circumferențială uniformă și omogenă. Spre deosebire de grăsime (care poate migra sau fi reabsorbită neuniform), matricea dermică menține o formă consistentă. Creștere medie circumferință: 3–5 cm.'
+      'A split-thickness or acellular dermal matrix (Alloderm) graft is placed circumferentially beneath the penile skin, providing uniform, homogeneous circumferential augmentation. Unlike fat (which can migrate or be resorbed unevenly), dermal matrix maintains consistent shape. Typical circumference increase ranges between 1.5–2.5 cm. Girth improvement varies by anatomy, technique, tissue response, and surgeon assessment; the doctor will explain realistic expectations during consultation.',
+      'O grefă de matrice dermică de grosime despicată sau acelulară (Alloderm) este plasată circumferențial sub pielea penisului, oferind augmentare circumferențială uniformă și omogenă. Spre deosebire de grăsime (care poate migra sau fi reabsorbită neuniform), matricea dermică menține o formă consistentă. Îmbunătățirea circumferinței variază de regulă între 1.5–2.5 cm, depinzând de anatomie, tehnică, răspunsul țesutului și evaluarea chirurgului; așteptările realiste vor fi discutate în timpul consultației.'
     ),
     isForMe: t(
       'Best for men wanting permanent, homogeneous girth — especially those who have had previous fat injection with uneven resorption, or who want a single definitive procedure.',
@@ -92,11 +92,11 @@ export const ANDROLOGY_METHODS = [
     goal: t('Performance & Sensitivity', 'Performanță & Sensibilitate'),
     type: t('Non-Surgical', 'Non-Chirurgical'),
     anesthesia: t('Topical Cream', 'Cremă Topică'),
-    recovery: t('0 days', '0 zile'),
+    recovery: t('2–3 days (sexual abstinence recommended)', '2–3 zile (recomandă abstinență sexuală)'),
     duration: t('6–12 months (repeat recommended)', '6–12 luni (repetare recomandată)'),
     summary: t(
-      "Patient's own blood is centrifuged to concentrate platelets (PRP), then injected into the corpus cavernosum and glans. The released growth factors (PDGF, VEGF, TGF-β) stimulate angiogenesis and Schwann cell proliferation — improving erectile quality, sensitivity and ejaculatory control. Not a size procedure; a function and performance enhancement.",
-      "Sângele propriu al pacientului este centrifugat pentru a concentra trombocitele (PRP), apoi injectat în corpul cavernos și gland. Factorii de creștere eliberați (PDGF, VEGF, TGF-β) stimulează angiogeneza și proliferarea celulelor Schwann — îmbunătățind calitatea erecției, sensibilitatea și controlul ejaculației."
+      "Patient's own blood is centrifuged to concentrate platelets (PRP), then injected into the corpus cavernosum and glans. The released growth factors (PDGF, VEGF, TGF-β) aim to support angiogenesis and Schwann cell proliferation — designed to support erectile quality, sensitivity, and ejaculatory control. Individual response varies by patient; not a size procedure.",
+      "Sângele propriu al pacientului este centrifugat pentru a concentra trombocitele (PRP), apoi injectat în corpul cavernos și gland. Factorii de creștere eliberați (PDGF, VEGF, TGF-β) stimulează angiogeneza și regenerarea locală — având ca scop susținerea calității erecției, a sensibilității și a controlului ejaculației. Răspunsul individual variază de la pacient la pacient; nu este o procedură de mărire."
     ),
     isForMe: t(
       'For men experiencing reduced erectile quality, sensitivity loss, mild ED, or performance decline — without structural penile pathology. Best combined with ESWT for synergistic effect.',
@@ -113,7 +113,7 @@ export const ANDROLOGY_METHODS = [
     goal: t('Sensitivity & Proportion', 'Sensibilitate & Proporție'),
     type: t('Non-Surgical', 'Non-Chirurgical'),
     anesthesia: t('Topical Cream', 'Cremă Topică'),
-    recovery: t('0–1 day', '0–1 zi'),
+    recovery: t('7–14 days (sexual abstinence required)', '7–14 zile (necesită abstinență sexuală)'),
     duration: t('12–18 months', '12–18 luni'),
     summary: t(
       'Hyaluronic acid is injected precisely into the glans (head) to: (1) increase size and projection proportional to shaft augmentation, (2) reduce sensitivity in patients with premature ejaculation (sensory dampening effect), or (3) improve visual symmetry. Technique requires sub-glanular injection depth control to avoid vascular structures.',

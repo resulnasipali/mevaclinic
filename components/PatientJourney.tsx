@@ -21,10 +21,10 @@ const steps = [
   },
   {
     icon: Plane,
-    titleRo: 'Sosire VIP Istanbul',
-    titleEn: 'VIP Arrival Istanbul',
-    descRo: 'Transfer privat aeroport-hotel cu șofer dedicat. Check-in la hotelul partener de 5 stele. Coordonatorul dvs. este disponibil 24/7.',
-    descEn: 'Private airport-hotel transfer with dedicated driver. Check-in at the 5-star partner hotel. Your coordinator is available 24/7.',
+    titleRo: 'Sosire Privată Istanbul',
+    titleEn: 'Private Arrival Istanbul',
+    descRo: 'Transfer privat aeroport-hotel cu șofer dedicat. Check-in la hotelul partener premium. Coordonatorul dvs. este disponibil 24/7.',
+    descEn: 'Private airport-hotel transfer with dedicated driver. Check-in at the premium partner hotel. Your coordinator is available 24/7.',
     color: 'from-accent to-yellow-400',
     step: '02'
   },
@@ -39,10 +39,10 @@ const steps = [
   },
   {
     icon: Star,
-    titleRo: 'Recuperare 5 Stele',
-    titleEn: '5-Star Recovery',
-    descRo: 'Cameră de spital premium sau hotel 5 stele. Mese dietetice adaptate protocolului post-operator. Fizioterapie și îngrijire continuă.',
-    descEn: 'Premium hospital room or 5-star hotel. Dietary meals adapted to post-operative protocol. Physiotherapy and continuous care.',
+    titleRo: 'Recuperare Premium',
+    titleEn: 'Premium Recovery',
+    descRo: 'Cameră de spital premium sau hotel partener premium. Mese dietetice adaptate protocolului post-operator. Fizioterapie și îngrijire continuă.',
+    descEn: 'Premium hospital room or premium partner hotel. Dietary meals adapted to post-operative protocol. Physiotherapy and continuous care.',
     color: 'from-purple-500 to-purple-700',
     step: '04'
   },
@@ -50,8 +50,8 @@ const steps = [
     icon: Shield,
     titleRo: 'Follow-up Pe Viață',
     titleEn: 'Lifetime Follow-up',
-    descRo: 'Consultații video bilunare la 1, 3 și 6 luni. Coordonatorul dvs. este mereu disponibil pe WhatsApp. Garanția rezultatelor Meva.',
-    descEn: 'Video consultations at 1, 3, and 6 months. Your coordinator is always available on WhatsApp. Meva results guarantee.',
+    descRo: 'Consultații video bilunare la 1, 3 și 6 luni. Coordonatorul dvs. este mereu disponibil pe WhatsApp. Programul de asistență clinică Meva.',
+    descEn: 'Video consultations at 1, 3, and 6 months. Your coordinator is always available on WhatsApp. Meva structured care commitment.',
     color: 'from-green-500 to-green-700',
     step: '05'
   }
@@ -60,18 +60,18 @@ const steps = [
 const vipLogistics = [
   {
     icon: Car,
-    titleRo: 'Transfer VIP',
-    titleEn: 'VIP Transfer',
-    descRo: 'Mercedes S-Class sau SUV premium, șofer bilingv, așteptare în aeroport cu tăbliță personalizată.',
-    descEn: 'Mercedes S-Class or premium SUV, bilingual driver, airport greeting with personalized sign.',
+    titleRo: 'Transfer Privat',
+    titleEn: 'Private Transfer',
+    descRo: 'Automobil confortabil sau SUV premium, șofer bilingv, așteptare în aeroport cu tăbliță personalizată.',
+    descEn: 'Comfortable sedan or premium SUV, bilingual driver, airport greeting with personalized sign.',
     img: '/images/vip-transfer.jpg' // Local image you provided
   },
   {
     icon: Building2,
-    titleRo: 'Hotel 5 Stele',
-    titleEn: '5-Star Hotel',
-    descRo: 'Parteneri: Hilton Istanbul, InterContinental, Conrad Bosphorus. Camera single VIP inclusă în pachet.',
-    descEn: 'Partners: Hilton Istanbul, InterContinental, Conrad Bosphorus. VIP single room included in package.',
+    titleRo: 'Hotel Partener Premium',
+    titleEn: 'Premium Partner Hotel',
+    descRo: 'Parteneri: Hilton Istanbul, InterContinental, Conrad Bosphorus. Cameră single premium inclusă în pachet.',
+    descEn: 'Partners: Hilton Istanbul, InterContinental, Conrad Bosphorus. Premium single room included in package.',
     img: '/images/hotel.jpg' // Local image you provided
   },
   {
@@ -181,7 +181,7 @@ const PatientJourney = ({ lang = 'en' }: { lang?: string }) => {
         <div className="bg-[#0b1626] rounded-3xl overflow-hidden shadow-2xl">
           <div className="px-10 pt-10 pb-6">
             <p className="text-[11px] font-medium text-accent tracking-widest mb-3">
-              {tUI('VIP Logistics', lang)}
+              {tUI('Private Logistics', lang)}
             </p>
             <h3 className="text-3xl font-serif font-medium text-white">
               {tUI('Comfort from the moment you land.', lang)}
@@ -216,12 +216,12 @@ const PatientJourney = ({ lang = 'en' }: { lang?: string }) => {
           </div>
           <div className="px-8 py-6 text-center">
             <a
-              href={`https://wa.me/905324675941?text=${encodeURIComponent(tUI('Hello, I want to know more about the VIP all-inclusive package.', lang))}`}
+              href={`https://wa.me/905324675941?text=${encodeURIComponent(tUI('Hello, I want to know more about the premium treatment coordination plan.', lang))}`}
               onClick={() => pushToDataLayer('whatsapp_click', { location: 'patient_journey_vip' })}
               target="_blank" rel="noreferrer"
               className="inline-flex items-center gap-3 bg-accent hover:bg-yellow-400 text-[#0b1626] font-medium py-4 px-10 rounded-full transition-all shadow-lg text-[13px]"
             >
-              {tUI('Request VIP Package Details', lang)} <ArrowRight size={15} />
+              {tUI('Request Coordination Details', lang)} <ArrowRight size={15} />
             </a>
           </div>
         </div>

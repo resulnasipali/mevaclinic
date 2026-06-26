@@ -22,10 +22,10 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
             <span>Premium Care</span>
           </div>
           <h2 className="text-2xl md:text-5xl font-serif font-bold text-prime mb-4 md:mb-6 leading-tight">
-             {tUI("All-Inclusive Package Built Around You", lang)}
+             {tUI("Comprehensive Care Plan Built Around You", lang)}
           </h2>
           <p className="text-base md:text-lg text-gray-600 font-sans leading-relaxed">
-             {tUI("Your medical experience in Istanbul should be stress-free. We have prepared a premium package where details make the difference.", lang)}
+             {tUI("Your medical experience in Istanbul should be stress-free. We coordinate all logistics so you can focus entirely on recovery.", lang)}
           </p>
         </div>
 
@@ -41,14 +41,14 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
               <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300 mb-3 sm:mb-0" aria-hidden="true">
                 <Image
                   src="/images/vip-transfer.jpg"
-                  alt={tUI("VIP Airport & Clinic Transfer", lang)}
+                  alt={tUI("Private Airport & Clinic Transfer", lang)}
                   width={80}
                   height={80}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="sm:ml-4 pt-1">
-                <h3 className="text-base sm:text-lg font-bold text-prime mb-1 sm:mb-2">{tUI("VIP Airport & Clinic Transfer", lang)}</h3>
+                <h3 className="text-base sm:text-lg font-bold text-prime mb-1 sm:mb-2">{tUI("Private Airport & Clinic Transfer", lang)}</h3>
                 <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Personal driver at your disposal from landing in Istanbul and throughout all medical visits.", lang)}</p>
               </div>
             </div>
@@ -57,15 +57,15 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
               <div className="flex-shrink-0 w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden border border-gray-100 shadow-md group-hover:scale-105 transition-transform duration-300 mb-3 sm:mb-0" aria-hidden="true">
                 <Image
                   src="/images/hotel.jpg"
-                  alt={tUI("5-Star Hotel Accommodation", lang)}
+                  alt={tUI("Premium Partner Hotel Accommodation", lang)}
                   width={80}
                   height={80}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="sm:ml-4 pt-1">
-                <h3 className="text-base sm:text-lg font-bold text-prime mb-1 sm:mb-2">{tUI("5-Star Hotel Accommodation", lang)}</h3>
-                <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Recovery in luxury conditions. The package fully covers accommodation in one of our prestigious partner hotels.", lang)}</p>
+                <h3 className="text-base sm:text-lg font-bold text-prime mb-1 sm:mb-2">{tUI("Premium Partner Hotel Accommodation", lang)}</h3>
+                <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Comfortable recovery conditions. The care plan includes accommodation in one of our premium partner hotels.", lang)}</p>
               </div>
             </div>
 
@@ -103,11 +103,11 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
           </div>
 
           <div className="bg-prime rounded-2xl p-6 lg:p-10 text-white relative overflow-hidden shadow-2xl h-full flex flex-col justify-between group">
-             {/* S-Tier Luxury Hotel Image Overlay */}
+             {/* Premium Accommodation Image Overlay */}
              <div className="absolute inset-0 z-0 overflow-hidden">
                 <Image
                    src="/images/hotel.jpg"
-                   alt="5-Star Accommodation"
+                   alt="Premium Accommodation"
                    fill
                    sizes="(max-width: 1024px) 100vw, 50vw"
                    className="w-full h-full object-cover opacity-20 mix-blend-overlay group-hover:scale-110 group-hover:opacity-30 transition-all duration-1000 ease-out"
@@ -130,7 +130,7 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
                   </li>
                   <li className="flex items-start">
                     <Check className="text-accent mr-3 mt-1 flex-shrink-0" size={18} strokeWidth={3} />
-                    <span className="font-medium text-white/95">{tUI("VIP Hospitalization in Private Clinic (1-3 Days)", lang)}</span>
+                    <span className="font-medium text-white/95">{tUI("Private Clinical Hospitalization (1-3 Days)", lang)}</span>
                   </li>
                   <li className="flex items-start">
                     <Check className="text-accent mr-3 mt-1 flex-shrink-0" size={18} strokeWidth={3} />

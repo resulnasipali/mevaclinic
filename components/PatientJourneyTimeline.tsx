@@ -15,7 +15,7 @@ const PatientJourneyTimeline = ({ lang = 'en' }: { lang?: string }) => {
     { 
       id: 1, 
       title: tUI("I. VIP Arrival", lang), 
-      desc: tUI("Private Mercedes-Benz pickup from IST/SAW airport.", lang), 
+      desc: tUI("Private patient transfer from IST/SAW airport.", lang), 
       icon: PlaneTakeoff 
     },
     { 
@@ -32,7 +32,7 @@ const PatientJourneyTimeline = ({ lang = 'en' }: { lang?: string }) => {
     },
     { 
       id: 4, 
-      title: tUI("IV. 5-Star Recovery", lang), 
+      title: tUI("IV. Comfortable Recovery", lang), 
       desc: tUI("Premium stay in Istanbul partner luxury hotels.", lang), 
       icon: Hotel 
     },
@@ -52,7 +52,7 @@ const PatientJourneyTimeline = ({ lang = 'en' }: { lang?: string }) => {
        <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent text-prime text-[9px] font-bold uppercase tracking-widest mb-4">
              <Sparkles size={12} />
-             {tUI("The Meva All-Inclusive Protocol", lang)}
+             {tUI("The Meva Coordination Protocol", lang)}
           </div>
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-prime">
              {tUI("Your Path to Transformation", lang)}

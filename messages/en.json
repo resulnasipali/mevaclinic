@@ -12,7 +12,7 @@
     "clinicalSpecialties": "Clinical Specialties",
     "surgicalSpecialist": "Surgical & Specialist",
     "mevaExcellence": "Meva Clinic Excellence",
-    "jciDesc": "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include VIP transfers, 5-star Bosphorus accommodation, and dedicated concierge support with a transparent no-hidden-fees policy."
+    "jciDesc": "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include private transfers, premium Bosphorus accommodation, and dedicated care support with a transparent patient pricing policy."
   },
   "Hero": {
     "title": "Welcome to Meva Clinic",
@@ -21,9 +21,9 @@
     "headline": "Meva Clinic Istanbul – ",
     "headlineAccent": "International Patient Care",
     "headlineSuffix": " for Bariatric, Hair, Dental & Aesthetic Treatments.",
-    "subtext": "Personalized treatment programs in Istanbul and Cyprus for bariatric, hair, dental, aesthetic and fertility patients — supported by specialist doctors, accredited partner hospitals and multilingual VIP patient services.",
-    "bullet1": "VIP Transfer Included",
-    "bullet2": "5-Star Accommodation",
+    "subtext": "Personalized treatment programs in Istanbul and Cyprus for bariatric, hair, dental, aesthetic and fertility patients — supported by specialist doctors, accredited partner hospitals and multilingual premium patient services.",
+    "bullet1": "Private Transfer Included",
+    "bullet2": "Premium Accommodation",
     "bullet3": "JCI-Accredited Partner Hospitals",
     "bullet4": "Native Support (EN/RO)",
     "formTitle": "Free Consultation",
@@ -55,10 +55,10 @@
   "Footer": {
     "globalSupport": "Global Patient Support",
     "heartOfIstanbul": "The Medical Heart of Istanbul",
-    "partnerDesc": "Our strategic partnerships guarantee VIP access from landing to the procedures within our premium clinical network and 5-star hotels.",
+    "partnerDesc": "Our strategic partnerships provide private access from landing to the procedures within our premium clinical network and partner hotels.",
     "whatsappCta": "I would like a free medical consultation.",
     "istanbulExcellence": "Istanbul Excellence",
-    "brandDesc": "Your trusted partner for medical excellence in Turkey. Premium VIP packages for safe interventions and absolute comfort.",
+    "brandDesc": "Your trusted partner for medical excellence in Turkey. Premium personalized care plans for safe interventions and absolute comfort.",
     "medicalExcellence": "Medical Excellence",
     "patientIntelligence": "Patient Intelligence",
     "contactUs": "Contact Us",

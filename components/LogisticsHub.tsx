@@ -7,13 +7,13 @@ const LogisticsHub = ({ isEn = false, lang = 'en' }: { isEn?: boolean, lang?: st
   const steps = [
     {
       icon: Car,
-      title: tUI("Private VIP Transfer", lang),
-      desc: tUI("Mercedes-Benz V-Class fleet with Wi-Fi and premium refreshments.", lang)
+      title: tUI("Private Patient Transfer", lang),
+      desc: tUI("Chauffeur-driven private van fleet with comfortable, spacious seating.", lang)
     },
     {
       icon: Hotel,
-      title: tUI("5-Star Partner Hotels", lang),
-      desc: tUI("Marriott and Hilton alliance for ultimate post-op comfort.", lang)
+      title: tUI("Premium Partner Hotels", lang),
+      desc: tUI("Marriott and Hilton alliance for comfortable post-operative recovery.", lang)
     },
     {
       icon: Languages,
@@ -23,8 +23,8 @@ const LogisticsHub = ({ isEn = false, lang = 'en' }: { isEn?: boolean, lang?: st
   ];
 
   const checklist = isEn 
-    ? ["Private Airport Greeting", "Mobile App Tracking", "12-Month Remote Follow-up", "VIP Fast-Track Clinic Access"]
-    : ["Întâmpinare Privată la Aeroport", "Monitorizare prin Aplicație", "Follow-up la distanță 12 luni", "Acces Fast-Track în Clinică"];
+    ? ["Private Airport Greeting", "Mobile App Tracking", "12-Month Remote Follow-up", "Priority Clinic Access"]
+    : ["Întâmpinare Privată la Aeroport", "Monitorizare prin Aplicație", "Follow-up la distanță 12 luni", "Acces Prioritar în Clinică"];
 
   return (
     <section className="py-24 bg-white overflow-hidden">
@@ -34,10 +34,10 @@ const LogisticsHub = ({ isEn = false, lang = 'en' }: { isEn?: boolean, lang?: st
           <div className="reveal">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-prime text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
                <MapPin size={14} className="text-accent" />
-               {tUI("The Istanbul VIP Protocol", lang)}
+               {tUI("The Istanbul Patient Protocol", lang)}
             </div>
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-prime mb-8 leading-tight">
-               {tUI("5-Star Medical Logistics", lang)}
+               {tUI("Premium Medical Logistics", lang)}
             </h2>
             <p className="text-lg text-gray-500 mb-12 leading-relaxed">
                {tUI("We manage every second of your journey, ensuring that your focus remains entirely on your recovery and clinical excellence.", lang)}
@@ -62,8 +62,8 @@ const LogisticsHub = ({ isEn = false, lang = 'en' }: { isEn?: boolean, lang?: st
              <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl relative group-hover:shadow-[0_0_40px_rgba(212,175,55,0.2)] transition-shadow duration-700">
                 <img 
                   src="/images/vip-transfer.jpg" 
-                  alt="VIP Mercedes Transfer Istanbul" 
-                  aria-label="VIP Mercedes Transfer Istanbul" 
+                  alt="Private Transfer Istanbul" 
+                  aria-label="Private Transfer Istanbul" 
                   width="1200"
                   height="1500"
                   loading="lazy"

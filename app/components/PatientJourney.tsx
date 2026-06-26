@@ -9,12 +9,12 @@ export default function PatientJourney({ lang }: { lang: string }) {
     {
       icon: <Plane size={32} />,
       title: tUI("VIP Airport Transfer", lang),
-      desc: tUI("Step off the plane into a luxury Mercedes Vito. No stress, no waiting.", lang),
+      desc: tUI("Step off the plane into a private patient transfer. No stress, no waiting.", lang),
       img: "/images/vip-transfer.jpeg"
     },
     {
       icon: <Hotel size={32} />,
-      title: tUI("5-Star Accommodation", lang),
+      title: tUI("Premium Partner Hotel Accommodation", lang),
       desc: tUI("Relax in a premium hotel suite chosen specifically for your comfort and recovery.", lang),
       img: "/images/hotel.jpg"
     },

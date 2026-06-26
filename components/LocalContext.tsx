@@ -17,7 +17,7 @@ const LocalContext = ({ city = 'București', isEn = false }) => {
           Standarde Europene la doar 75 de minute distanță.
         </h3>
         <p className="text-gray-600 leading-relaxed mb-8">
-          Pacienții noștri din România beneficiază de expertiza chirurgilor de top din Istanbul, acces la tehnologie robotică de ultimă oră și un protocol VIP All-Inclusive care include zboruri, cazare la 5 stele și traducător român dedicat.
+          Pacienții noștri din România beneficiază de expertiza chirurgilor de top din Istanbul, acces la tehnologie robotică de ultimă oră și un protocol premium de coordonare care include zboruri, cazare premium la hotel partener și traducător român dedicat.
         </p>
         <Link href="/ro/about-us" className="inline-flex items-center gap-2 text-prime font-bold hover:text-accent transition-colors">
           Vezi beneficiile pentru români <ArrowRight size={18} />

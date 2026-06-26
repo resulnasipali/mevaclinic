@@ -118,7 +118,7 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
                     </div>
                     <div className="text-left">
                        <p className="font-bold text-prime">{tUI("Full VIP Concierge", lang)}</p>
-                       <p className="text-xs text-gray-500">{tUI("Includes Mercedes Transfer & 5-Star Hotel", lang)}</p>
+                       <p className="text-xs text-gray-500">{tUI("Includes Private Transfer & Partner Hotel", lang)}</p>
                     </div>
                  </button>
 

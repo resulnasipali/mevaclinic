@@ -22,7 +22,7 @@ export default function VideoTestimonials({ isEn, lang = 'en' }: VideoTestimonia
     },
     {
       img: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=600&q=80",
-      title: tUI("5-Star Medical Care", lang),
+      title: tUI("Premium Medical Care", lang),
       name: "Elena Popa, RO"
     }
   ];
