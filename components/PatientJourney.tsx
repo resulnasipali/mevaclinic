@@ -78,8 +78,8 @@ const vipLogistics = [
     icon: Shield,
     titleRo: 'Spital Premium',
     titleEn: 'Premium Hospital',
-    descRo: 'Intervenții realizate la Liv Hospital, acreditat JCI. Standarde de siguranță la nivel mondial.',
-    descEn: 'Interventions performed at Liv Hospital, JCI accredited. World-class safety standards.',
+    descRo: 'Intervenții realizate în spitale partenere autorizate, acreditate JCI. Standarde de siguranță la nivel mondial.',
+    descEn: 'Interventions performed at licensed partner hospitals, JCI accredited. World-class safety standards.',
     img: '/images/hospital.webp' // Local image you provided
   }
 ];

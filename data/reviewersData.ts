@@ -48,7 +48,7 @@ export const REVIEWERS: Record<string, Reviewer> = {
   bariatric: {
     name: 'Dr. Cuma M.',
     nameRo: 'Dr. Cuma M.',
-    fullName: 'Dr. Cuma M. Aksoy',
+    fullName: 'Dr. Cuma M.',
     specialty: 'Bariatric & Metabolic Surgeon',
     specialtyRo: 'Chirurg Bariatric & Metabolic',
     specialtyEs: 'Cirujano Bariátrico y Metabólico',
@@ -85,7 +85,7 @@ export const REVIEWERS: Record<string, Reviewer> = {
   hair: {
     name: 'MD Harun A.',
     nameRo: 'MD Harun A.',
-    fullName: 'Dr. Harun Aksoy',
+    fullName: 'Dr. Harun A.',
     specialty: 'Hair Restoration Specialist',
     specialtyRo: 'Specialist în Restaurarea Părului',
     specialtyEs: 'Especialista en Restauración Capilar',
@@ -121,7 +121,7 @@ export const REVIEWERS: Record<string, Reviewer> = {
   oncology: {
     name: 'Prof. Dr. Gökhan K.',
     nameRo: 'Prof. Dr. Gökhan K.',
-    fullName: 'Prof. Dr. Gökhan Küçükay',
+    fullName: 'Prof. Dr. Gökhan K.',
     specialty: 'Robotic Oncology · CyberKnife S7 Specialist',
     specialtyRo: 'Oncologie Robotică · Specialist CyberKnife S7',
     specialtyEs: 'Oncología Robótica · Especialista en CyberKnife S7',
@@ -155,7 +155,7 @@ export const REVIEWERS: Record<string, Reviewer> = {
   dental: {
     name: 'Dr. Osman B.',
     nameRo: 'Dr. Osman B.',
-    fullName: 'Dr. Osman Bayram',
+    fullName: 'Dr. Osman B.',
     specialty: 'Implantology & Digital Dentistry',
     specialtyRo: 'Implantologie & Stomatologie Digitală',
     specialtyEs: 'Implantología y Odontología Digital',
@@ -191,7 +191,7 @@ export const REVIEWERS: Record<string, Reviewer> = {
   plastic: {
     name: 'Prof. Dr. Yakup S.',
     nameRo: 'Prof. Dr. Yakup S.',
-    fullName: 'Prof. Dr. Yakup Şenel',
+    fullName: 'Prof. Dr. Yakup Ş.',
     specialty: 'Aesthetic, Plastic & Reconstructive Surgeon',
     specialtyRo: 'Chirurg Estetician, Plastician & Reconstructiv',
     specialtyEs: 'Cirujano Estético, Plástico y Reconstructivo',
@@ -226,7 +226,7 @@ export const REVIEWERS: Record<string, Reviewer> = {
   organ: {
     name: 'Dr. Fatih E.',
     nameRo: 'Dr. Fatih E.',
-    fullName: 'Dr. Fatih Erden',
+    fullName: 'Dr. Fatih E.',
     specialty: 'Transplant Surgery · Organ Procurement',
     specialtyRo: 'Chirurgie de Transplant · Prelevare de Organe',
     specialtyEs: 'Cirugía de Trasplante · Obtención de Órganos',
@@ -373,5 +373,79 @@ export const REVIEWERS: Record<string, Reviewer> = {
     reviewedLabelFr: 'Revu par',
     reviewedLabelDe: 'Geprüft von',
     url: 'https://www.mevaclinic.com/en/about-us'
+  }
+};
+
+export interface DoctorReviewer {
+  id: string;
+  displayName: string;
+  specialty: string;
+  publicRole: string;
+  clinicalFocus: string;
+  reviewScope: string;
+  isOrganization: boolean;
+  schemaType: "Physician" | "MedicalOrganization";
+}
+
+export const DOCTOR_REGISTRY: Record<string, DoctorReviewer> = {
+  plastic_yunus_e: {
+    id: "plastic_yunus_e",
+    displayName: "Op. Dr. Yunus E.",
+    specialty: "Plastic, Reconstructive and Aesthetic Surgery Specialist",
+    publicRole: "Medical Review",
+    clinicalFocus: "Vaser Liposuction & High-Def Body Sculpting",
+    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    isOrganization: false,
+    schemaType: "Physician"
+  },
+  bariatric_hakan_s: {
+    id: "bariatric_hakan_s",
+    displayName: "Prof. Dr. Hakan S.",
+    specialty: "Obesity & Metabolic Surgery Specialist",
+    publicRole: "Medical Review",
+    clinicalFocus: "Laparoscopic Bariatric Surgery & Stomach Reduction Pathways",
+    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    isOrganization: false,
+    schemaType: "Physician"
+  },
+  hair_harun_a: {
+    id: "hair_harun_a",
+    displayName: "Dr. Harun A.",
+    specialty: "Hair Restoration & FUE/DHI Micro-Transplant Specialist",
+    publicRole: "Medical Review",
+    clinicalFocus: "Advanced Hair Follicle Implantation & Trichology",
+    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    isOrganization: false,
+    schemaType: "Physician"
+  },
+  dental_osman_b: {
+    id: "dental_osman_b",
+    displayName: "Dt. Osman B.",
+    specialty: "Implantology & Digital Restorative Dentistry Specialist",
+    publicRole: "Medical Review",
+    clinicalFocus: "Full-Arch Implant Rehabilitation & Smile Makeover Planning",
+    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    isOrganization: false,
+    schemaType: "Physician"
+  },
+  andrology_cevdet_k: {
+    id: "andrology_cevdet_k",
+    displayName: "Prof. Dr. Cevdet K.",
+    specialty: "Urology & Reconstructive Andrology Specialist",
+    publicRole: "Medical Review",
+    clinicalFocus: "Male Health, Genitourinary Reconstruction & Non-Surgical Enhancements",
+    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    isOrganization: false,
+    schemaType: "Physician"
+  },
+  editorial: {
+    id: "editorial",
+    displayName: "Meva Clinic Medical Editorial Board",
+    specialty: "Clinical Governance & Patient Safety Standards",
+    publicRole: "Medical Review",
+    clinicalFocus: "Clinical Information Integrity & Safety Guidelines Coordination",
+    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    isOrganization: true,
+    schemaType: "MedicalOrganization"
   }
 };

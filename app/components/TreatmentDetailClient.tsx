@@ -31,6 +31,7 @@ interface TreatmentClientProps {
   lang: string;
   images?: TreatmentImage[];
   categoryLayout?: string;
+  doctorReviewer?: any;
 }
 
 const AccordionItem = ({ question, answer }: { question: string; answer: string }) => {
@@ -75,7 +76,7 @@ const CATEGORY_LABELS: Record<string, string> = {
   specialist: 'Specialist Treatments'
 };
 
-export default function TreatmentDetailClient({ treatment, lang, images = [], categoryLayout }: TreatmentClientProps) {
+export default function TreatmentDetailClient({ treatment, lang, images = [], categoryLayout, doctorReviewer }: TreatmentClientProps) {
   const isEn = lang === 'en';
 
   const getClinicalDisclaimer = () => {
@@ -244,7 +245,26 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
             />
           </motion.div>
 
-          {expertName && (
+          {doctorReviewer ? (
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl mb-8 group hover:bg-white/10 transition-all min-h-[44px]"
+            >
+              <div className="w-11 h-11 rounded-full bg-amber-500 flex items-center justify-center text-[#0b1626] shadow-lg">
+                <UserCheck size={20} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-amber-500 uppercase tracking-widest leading-none mb-1">
+                  {tUI('Medical Review', lang)}
+                </p>
+                <p className="text-sm font-bold text-white leading-none">
+                  {doctorReviewer.displayName}
+                </p>
+              </div>
+            </motion.div>
+          ) : expertName ? (
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -263,7 +283,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                 </p>
               </div>
             </motion.div>
-          )}
+          ) : null}
 
           <motion.div 
             initial={{ opacity: 0 }}
@@ -335,31 +355,71 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
             viewport={{ once: true }}
             className="flex flex-col md:flex-row items-start gap-8 p-8 md:p-10 bg-white/5 border border-white/10 backdrop-blur-xl rounded-[2rem] relative overflow-hidden"
           >
-            <div className="absolute top-6 right-8 text-amber-500/10 select-none" aria-hidden="true">
-              <Quote size={80} />
-            </div>
+            {doctorReviewer ? (
+              <>
+                <div className="shrink-0 flex flex-col items-center gap-3 text-center min-w-[120px]">
+                  <div className="w-16 h-16 rounded-2xl bg-amber-500/10 flex items-center justify-center border-2 border-amber-500/20 shadow-lg">
+                    <UserCheck size={32} className="text-amber-500" />
+                  </div>
+                  <div>
+                    <p className="text-white font-black text-sm">{doctorReviewer.displayName}</p>
+                    <p className="text-amber-500 text-[10px] uppercase font-bold tracking-widest mt-1">{tUI(doctorReviewer.publicRole, lang)}</p>
+                  </div>
+                </div>
 
-            <div className="shrink-0 flex flex-col items-center gap-3 text-center min-w-[100px]">
-              <div className="w-16 h-16 rounded-2xl bg-amber-500/20 flex items-center justify-center border-2 border-amber-500/30 shadow-lg">
-                <UserCheck size={32} className="text-amber-500" />
-              </div>
-              <div>
-                <p className="text-white font-black text-sm">{expertName}</p>
-                <p className="text-amber-500 text-[11px] font-semibold leading-tight mt-0.5 max-w-[120px]">{doctorTitle}</p>
-              </div>
-            </div>
+                <div className="flex-1 space-y-4 relative z-10">
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck size={16} className="text-amber-500" />
+                    <p className="text-amber-500 text-xs font-bold uppercase tracking-widest">
+                      {tUI(doctorReviewer.specialty, lang)}
+                    </p>
+                  </div>
+                  
+                  {treatment.doctorNote ? (
+                    <p className="text-gray-200 text-lg leading-relaxed font-serif italic">
+                      "{tUI(getSafeVal(treatment.doctorNote, lang), lang)}"
+                    </p>
+                  ) : (
+                    <div className="space-y-1">
+                      <p className="text-xs uppercase font-bold text-gray-400 tracking-wider">{tUI('Clinical Review Focus', lang)}</p>
+                      <p className="text-gray-200 text-sm leading-relaxed">{tUI(doctorReviewer.clinicalFocus, lang)}</p>
+                    </div>
+                  )}
 
-            <blockquote className="flex-1">
-              <div className="flex items-center gap-2 mb-4">
-                <ShieldCheck size={15} className="text-amber-500" />
-                <p className="text-amber-500 text-xs font-bold uppercase tracking-widest">
-                  {tUI('Doctor\'s Clinical Insight', lang)}
-                </p>
-              </div>
-              <p className="text-gray-200 text-lg leading-relaxed font-serif italic relative z-10">
-                "{quoteText}"
-              </p>
-            </blockquote>
+                  <p className="text-[11px] text-gray-400 border-t border-white/10 pt-3 leading-relaxed">
+                    {tUI(doctorReviewer.reviewScope, lang)}
+                  </p>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="absolute top-6 right-8 text-amber-500/10 select-none" aria-hidden="true">
+                  <Quote size={80} />
+                </div>
+
+                <div className="shrink-0 flex flex-col items-center gap-3 text-center min-w-[100px]">
+                  <div className="w-16 h-16 rounded-2xl bg-amber-500/20 flex items-center justify-center border-2 border-amber-500/30 shadow-lg">
+                    <UserCheck size={32} className="text-amber-500" />
+                  </div>
+                  <div>
+                    <p className="text-white font-black text-sm">{expertName}</p>
+                    <p className="text-amber-500 text-[11px] font-semibold leading-tight mt-0.5 max-w-[120px]">{doctorTitle}</p>
+                  </div>
+                </div>
+
+                <blockquote className="flex-1">
+                  <div className="flex items-center gap-2 mb-4">
+                    <ShieldCheck size={15} className="text-amber-500" />
+                    <p className="text-amber-500 text-xs font-bold uppercase tracking-widest">
+                      {tUI('Doctor\'s Clinical Insight', lang)}
+                    </p>
+                  </div>
+                  <p className="text-gray-200 text-lg leading-relaxed font-serif italic relative z-10">
+                    "{quoteText}"
+                  </p>
+                </blockquote>
+              </>
+            )}
           </motion.div>
         </div>
       </section>

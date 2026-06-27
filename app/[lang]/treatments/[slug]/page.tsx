@@ -4,7 +4,7 @@ import TreatmentDetailClient from '@/app/components/TreatmentDetailClient';
 import { treatmentsData } from '@/data/treatmentsData';
 import { getTreatmentImages } from '@/utils/getTreatmentImages';
 import { buildMetadata } from '@/app/utils/seo';
-import { REVIEWERS } from '@/data/reviewersData';
+import { REVIEWERS, DOCTOR_REGISTRY } from '@/data/reviewersData';
 
 
 
@@ -197,6 +197,7 @@ export default async function TreatmentPage({ params }: Props) {
 
 
   const reviewerObj = getReviewer(treatment.category || '', slug);
+  const doctorReviewer = (treatment as any).reviewerId ? (DOCTOR_REGISTRY[(treatment as any).reviewerId] || DOCTOR_REGISTRY.editorial) : null;
 
   // 1. MedicalProcedure Schema (Semantically linked using layout organization ID)
   const medicalProcedureSchema: any = {
@@ -223,7 +224,12 @@ export default async function TreatmentPage({ params }: Props) {
     'bodyLocation': treatment.category === 'bariatric' ? 'Stomach' : 
                     treatment.category === 'hair' ? 'Scalp' : 
                     treatment.category === 'dental' ? 'Mouth' : 'Body',
-    'reviewedBy': reviewerObj ? {
+    'reviewedBy': doctorReviewer ? {
+      '@type': doctorReviewer.schemaType,
+      'name': doctorReviewer.displayName,
+      'medicalSpecialty': doctorReviewer.specialty,
+      ...(doctorReviewer.schemaType === "MedicalOrganization" ? { 'url': `https://www.mevaclinic.com/${safeLang}/about-us` } : {})
+    } : reviewerObj ? {
       '@type': (reviewerObj.name.includes("Board") || reviewerObj.name.includes("Team") || reviewerObj.name.includes("Committee")) ? "MedicalOrganization" : "Physician",
       'name': reviewerObj.fullName,
       'medicalSpecialty': reviewerObj.specialty,
@@ -262,6 +268,7 @@ export default async function TreatmentPage({ params }: Props) {
         lang={safeLang} 
         images={images} 
         categoryLayout={treatment.category} 
+        doctorReviewer={doctorReviewer}
       />
     </>
   );

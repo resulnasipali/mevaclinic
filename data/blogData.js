@@ -79,7 +79,7 @@ export const blogPosts = [
     },
     "date": "2026-04-15",
     "author": "MD Harun A.",
-    "authorFullName": "Dr. Harun Aksoy"
+    "authorFullName": "Dr. Harun A."
   },
   {
     "id": 2,
@@ -161,7 +161,7 @@ export const blogPosts = [
     },
     "date": "2026-04-10",
     "author": "Prof. Dr. Mehmet Y.",
-    "authorFullName": "Prof. Dr. Mehmet Aksoy"
+    "authorFullName": "Prof. Dr. Mehmet A."
   },
   {
     "id": 3,
@@ -653,7 +653,7 @@ export const blogPosts = [
     },
     "date": "2026-03-05",
     "author": "Prof. Dr. Mehmet Y.",
-    "authorFullName": "Prof. Dr. Mehmet Aksoy"
+    "authorFullName": "Prof. Dr. Mehmet A."
   },
   {
     "id": 9,

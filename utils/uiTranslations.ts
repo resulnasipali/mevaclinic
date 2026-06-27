@@ -6627,6 +6627,24 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ru": "Международные стандарты ухода за пациентами",
       "fr": "Normes internationales de soins aux patients",
       "de": "Internationale Standards für die Patientenversorgung"
+    },
+    "Medical Review": {
+      "en": "Medical Review",
+      "ro": "Revizuire Medicală",
+      "es": "Revisión Médica",
+      "it": "Revisione Medica",
+      "ru": "Медицинский обзор",
+      "fr": "Revue Médicale",
+      "de": "Medizinische Prüfung"
+    },
+    "Clinical Review Focus": {
+      "en": "Clinical Review Focus",
+      "ro": "Focus Revizuire Clinică",
+      "es": "Enfoque de Revisión Clínica",
+      "it": "Focus della Revisione Clinica",
+      "ru": "Фокус клинического обзора",
+      "fr": "Objectif de la revue clinique",
+      "de": "Klinischer Prüfungsschwerpunkt"
     }
 };
 
