@@ -542,10 +542,10 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                           <span className="text-amber-500 font-bold text-lg">15+ </span>
                           <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Years Experience', lang)}</span>
                         </div>
-                        <div className="flex flex-col gap-1">
-                          <span className="text-amber-500 font-bold text-lg">VIP</span>
-                          <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Care Standard', lang)}</span>
-                        </div>
+                         <div className="flex flex-col gap-1">
+                           <span className="text-amber-500 font-bold text-lg">{tUI('Premium', lang)}</span>
+                           <span className="text-xs text-gray-400 uppercase tracking-tighter">{tUI('Clinical Care Standard', lang)}</span>
+                         </div>
                       </div>
                     </div>
                   </motion.div>

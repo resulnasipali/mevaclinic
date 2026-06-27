@@ -6601,6 +6601,24 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "fr": "Services aux patients en Turquie",
       "de": "Patientenservice in der Türkei"
     },
+    "Premium": {
+      "en": "Premium",
+      "ro": "Premium",
+      "es": "Premium",
+      "it": "Premium",
+      "ru": "Премиум",
+      "fr": "Premium",
+      "de": "Premium"
+    },
+    "Clinical Care Standard": {
+      "en": "Clinical Care Standard",
+      "ro": "Standard Îngrijire Clinică",
+      "es": "Estándar de Atención Clínica",
+      "it": "Standard di Cura Clinica",
+      "ru": "Клинический стандарт ухода",
+      "fr": "Norme de Soins Cliniques",
+      "de": "Klinischer Pflegestandard"
+    },
     "International Patient Care Standards": {
       "en": "International Patient Care Standards",
       "ro": "Standarde Internaționale Pacienți",
