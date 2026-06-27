@@ -4,6 +4,26 @@ import React from 'react';
 import { ShieldCheck, GraduationCap, Star } from 'lucide-react';
 import { REVIEWERS, type Reviewer } from '@/data/reviewersData';
 
+function getInitials(name: string): string {
+  if (!name) return 'MC';
+  const cleanName = name.replace(/\./g, ' ');
+  const words = cleanName.split(/\s+/).filter(w => {
+    const lw = w.toLowerCase();
+    return lw && !['op', 'dr', 'prof', 'dt', 'md', 'uzm', 'clinic', 'medical', 'editorial', 'team', 'board', 'committee', 'governance', 'jci'].includes(lw);
+  });
+  if (words.length >= 2) {
+    return (words[0][0] + words[words.length - 1][0]).toUpperCase();
+  }
+  if (words.length === 1) {
+    return words[0].substring(0, 2).toUpperCase();
+  }
+  const rawWords = cleanName.split(/\s+/).filter(Boolean);
+  if (rawWords.length >= 2) {
+    return (rawWords[0][0] + rawWords[rawWords.length - 1][0]).toUpperCase();
+  }
+  return 'MC';
+}
+
 interface MedicalReviewerProps {
   reviewer: any;
   isEn?: boolean;
@@ -50,22 +70,24 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
       <div className="h-1 bg-gradient-to-r from-accent via-yellow-300 to-accent" />
 
       <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-center sm:items-start gap-6">
-        {/* Doctor photo */}
-        <div className="relative shrink-0">
-          <img
-            src={image || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=80&background=0b1626&color=d4af37&bold=true&format=svg`}
-            alt={`${name} — Meva Clinic Medical Specialist`}
-            width="80"
-            height="80"
-            loading="lazy"
-            decoding="async"
-            onError={(e) => {
-              e.currentTarget.onerror = null;
-              e.currentTarget.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=80&background=0b1626&color=d4af37&bold=true&format=svg`;
-            }}
-            className="w-20 h-20 rounded-2xl object-cover shadow-md border-2 border-white"
-            itemProp="image"
-          />
+        {/* Doctor photo or CSS initials avatar */}
+        <div className="relative shrink-0 select-none">
+          {image ? (
+            <img
+              src={image}
+              alt={`${name} — Meva Clinic Medical Specialist`}
+              width="80"
+              height="80"
+              loading="lazy"
+              decoding="async"
+              className="w-20 h-20 rounded-2xl object-cover shadow-md border-2 border-white"
+              itemProp="image"
+            />
+          ) : (
+            <div className="w-20 h-20 rounded-2xl bg-[#0b1626] flex items-center justify-center border-2 border-amber-500/30 text-amber-500 font-serif font-black text-2xl shadow-md">
+              {getInitials(name)}
+            </div>
+          )}
           {/* Verified badge overlay */}
           <div className="absolute -bottom-2 -right-2 w-7 h-7 bg-accent rounded-full flex items-center justify-center shadow-md border-2 border-white">
             <ShieldCheck size={14} className="text-prime" />
