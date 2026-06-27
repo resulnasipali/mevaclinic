@@ -541,15 +541,7 @@ export const treatmentsData = [
     ),
     keywords: t(["vaser liposuction turkey", "best clinic for vaser liposuction", "vaser liposuction Turkey"], ["vaser liposuction turcia", "cea mai buna clinica pentru vaser liposuction", "turism medical istanbul"], ["liposucción vaser pavo", "La mejor clínica para liposucción vaser.", "turismo médico en estambul"], ["tacchino liposuzione vaser", "migliore clinica per liposuzione vaser", "turismo medico di Istanbul"], ["Васер-липосакция в индейке", "Лучшая клиника по вазер-липосакции", "Стамбул медицинский туризм"], ["liposuccion vaser dinde", "meilleure clinique pour la liposuccion Vaser", "tourisme médical à Istanbul"], ["Vaser-Fettabsaugung in der Türkei", "Beste Klinik für Vaser-Liposuktion", "Medizintourismus in Istanbul"]),
     category: 'plastic',
-    expert: t(
-      'Meva Clinic Medical Editorial Team',
-      'Echipa Editorială Medicală Meva Clinic',
-      'Equipo Editorial Médico de Meva Clinic',
-      'Team Editoriale Medico di Meva Clinic',
-      'Медицинская редакционная группа Meva Clinic',
-      'Équipe éditoriale médicale de Meva Clinic',
-      'Medizinisches Redaktionsteam der Meva-Klinik'
-    ),
+    expert: 'Op. Dr. Yunus',
     title: t('Vaser Liposuction (High-Def)', 'Vaser Liposucție (High-Def)', 'Liposucción Vaser (Alta Definición)', 'Liposuzione Vaser (High-Def)', 'Vaser-липосакция (Высокая четкость)', 'Liposuccion Vaser (Haute Définition)', 'Vaser-Fettabsaugung (High-Def)'),
     shortDesc: t('Targeted fat removal with ultrasound. Sculpts athletic contours while tightening the skin.', 'Eliminarea grăsimii cu ultrasunete. Sculptează contururi atletice.', "Eliminación de grasa dirigida con ultrasonido. Esculpe contornos atléticos mientras reafirma la piel.", "Rimozione mirata del grasso con gli ultrasuoni. Scolpisce i contorni atletici rassodando la pelle.", "Целенаправленное удаление жира с помощью ультразвука. Моделирует спортивные контуры и подтягивает кожу.", "Élimination ciblée des graisses par ultrasons. Sculpte les contours athlétiques tout en raffermissant la peau.", "Gezielte Fettentfernung mit Ultraschall. Formt athletische Konturen und strafft die Haut."),
     isThisForMe: t(['Stubborn fat deposits', 'Muscle definition seekers', 'Post-weight loss contouring'], ['Depozite de grăsime încăpățânate', 'Cei care doresc definire musculară', 'Conturare după slăbire'], ["Depósitos de grasa rebeldes", "Buscadoras de definición muscular", "Contorno post-pérdida de peso"], ["Depositi di grasso ostinati", "Cercatori di definizione muscolare", "Rimodellamento post-perdita di peso"], ["Устойчивые жировые отложения", "Искатели четкости мышц", "Контурная пластика после похудения"], ["Amas graisseux tenaces", "Chercheurs de définition musculaire", "Remodelage post-perte de poids"], ["Hartnäckige Fettpolster", "Suchende nach Muskeldefinitionen", "Konturierung nach der Gewichtsabnahme"]),
