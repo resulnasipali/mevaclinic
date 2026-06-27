@@ -5,7 +5,7 @@ import { ShieldCheck, GraduationCap, Star } from 'lucide-react';
 import { REVIEWERS, type Reviewer } from '@/data/reviewersData';
 
 interface MedicalReviewerProps {
-  reviewer: Reviewer;
+  reviewer: any;
   isEn?: boolean;
   lang?: string;
 }
@@ -26,12 +26,18 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
     return revObj[`${field}${suffix}`] || revObj[field] || '';
   };
 
-  const name = getVal('name');
-  const specialty = getVal('specialty');
-  const credentials = getVal('credentials');
-  const bio = getVal('bio');
-  const label = getVal('reviewedLabel');
-  const cases = reviewer.cases || null;
+  const revObj = reviewer as any;
+  const isNewDoctor = !!revObj.displayName;
+
+  const name = isNewDoctor ? revObj.displayName : getVal('name');
+  const specialty = isNewDoctor ? revObj.specialty : getVal('specialty');
+  const credentials = isNewDoctor ? null : getVal('credentials');
+  const bio = isNewDoctor ? revObj.clinicalFocus : getVal('bio');
+  const label = isNewDoctor ? revObj.publicRole : getVal('reviewedLabel');
+  const cases = isNewDoctor ? null : (reviewer.cases || null);
+  const reviewScope = isNewDoctor ? revObj.reviewScope : null;
+  const fullName = isNewDoctor ? revObj.displayName : (reviewer.fullName || name);
+  const image = isNewDoctor ? null : reviewer.image;
 
   return (
     <div
@@ -47,7 +53,7 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
         {/* Doctor photo */}
         <div className="relative shrink-0">
           <img
-            src={reviewer.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=80&background=0b1626&color=d4af37&bold=true&format=svg`}
+            src={image || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&size=80&background=0b1626&color=d4af37&bold=true&format=svg`}
             alt={`${name} — Meva Clinic Medical Specialist`}
             width="80"
             height="80"
@@ -75,7 +81,7 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
           </p>
 
           {/* Doctor name */}
-          <meta itemProp="name" content={reviewer.fullName} />
+          <meta itemProp="name" content={fullName} />
           <h3
             className="font-serif text-xl font-bold text-prime leading-tight mb-1"
           >
@@ -94,43 +100,54 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
             </p>
           )}
 
-          {/* Credentials + Cases row */}
-          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-            <div className="flex items-center gap-1.5 text-[11px] font-bold text-gray-500 bg-gray-100 rounded-full px-3 py-1">
-              <GraduationCap size={12} aria-hidden="true" />
-              <span itemProp="honorificSuffix">{credentials}</span>
-            </div>
-            {cases && (
-              <div className="flex items-center gap-1.5 text-[11px] font-bold text-white bg-prime rounded-full px-3 py-1">
-                <Star size={11} className="text-accent fill-accent" aria-hidden="true" />
-                <span>
-                  {cases} {
-                    safeLang === 'en' ? 'cases' : 
-                    safeLang === 'ro' ? 'cazuri' :
-                    safeLang === 'es' ? 'casos' :
-                    safeLang === 'it' ? 'casi' :
-                    safeLang === 'ru' ? 'случаев' :
-                    safeLang === 'fr' ? 'cas' :
-                    safeLang === 'de' ? 'Fälle' : 'cases'
-                  }
+          {/* reviewScope note for new doctors */}
+          {reviewScope && (
+            <p className="text-[11px] text-gray-400 border-t border-gray-100 pt-3 leading-relaxed mb-3 max-w-prose">
+              {reviewScope}
+            </p>
+          )}
+
+          {/* Credentials + Cases row (only for legacy reviewers) */}
+          {!isNewDoctor && (credentials || cases) && (
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
+              {credentials && (
+                <div className="flex items-center gap-1.5 text-[11px] font-bold text-gray-500 bg-gray-100 rounded-full px-3 py-1">
+                  <GraduationCap size={12} aria-hidden="true" />
+                  <span itemProp="honorificSuffix">{credentials}</span>
+                </div>
+              )}
+              {cases && (
+                <div className="flex items-center gap-1.5 text-[11px] font-bold text-white bg-prime rounded-full px-3 py-1">
+                  <Star size={11} className="text-accent fill-accent" aria-hidden="true" />
+                  <span>
+                    {cases} {
+                      safeLang === 'en' ? 'cases' : 
+                      safeLang === 'ro' ? 'cazuri' :
+                      safeLang === 'es' ? 'casos' :
+                      safeLang === 'it' ? 'casi' :
+                      safeLang === 'ru' ? 'случаев' :
+                      safeLang === 'fr' ? 'cas' :
+                      safeLang === 'de' ? 'Fälle' : 'cases'
+                    }
+                  </span>
+                </div>
+              )}
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} size={11} className="text-accent fill-accent" aria-hidden="true" />
+                ))}
+                <span className="text-[11px] font-bold text-gray-500 ml-1">
+                  {safeLang === 'en' && 'Expert Verified 2026'}
+                  {safeLang === 'ro' && 'Verificat Expert 2026'}
+                  {safeLang === 'es' && 'Verificado por Expertos 2026'}
+                  {safeLang === 'it' && 'Verificato da Esperti 2026'}
+                  {safeLang === 'ru' && 'Проверено экспертами 2026'}
+                  {safeLang === 'fr' && 'Vérifié par des experts 2026'}
+                  {safeLang === 'de' && 'Experten-verifiziert 2026'}
                 </span>
               </div>
-            )}
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} size={11} className="text-accent fill-accent" aria-hidden="true" />
-              ))}
-              <span className="text-[11px] font-bold text-gray-500 ml-1">
-                {safeLang === 'en' && 'Expert Verified 2026'}
-                {safeLang === 'ro' && 'Verificat Expert 2026'}
-                {safeLang === 'es' && 'Verificado por Expertos 2026'}
-                {safeLang === 'it' && 'Verificato da Esperti 2026'}
-                {safeLang === 'ru' && 'Проверено экспертами 2026'}
-                {safeLang === 'fr' && 'Vérifié par des experts 2026'}
-                {safeLang === 'de' && 'Experten-verifiziert 2026'}
-              </span>
             </div>
-          </div>
+          )}
         </div>
 
         {/* Right — Medical disclaimer */}

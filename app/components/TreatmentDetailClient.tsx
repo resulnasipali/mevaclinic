@@ -447,8 +447,8 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                 )}
               </motion.div>
 
-              {reviewerObj && (
-                <MedicalReviewer reviewer={reviewerObj} isEn={isEn} />
+              {(doctorReviewer || reviewerObj) && (
+                <MedicalReviewer reviewer={doctorReviewer || reviewerObj} isEn={isEn} />
               )}
 
               <div className="space-y-16">
