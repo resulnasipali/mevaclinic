@@ -161,7 +161,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
   };
 
   const expertName = tUI(getSafeVal(treatment.expert, lang), lang) || tUI('Meva Clinical Team', lang);
-  const quoteText = tUI('Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.', lang);
+  const quoteText = tUI('Our clinical approach prioritizes patient safety, individualized treatment planning, realistic expectations, and long-term follow-up throughout the international care journey.', lang);
   const doctorTitle = tUI('Chief Medical Officer', lang);
 
   // Resolve reviewer based on category and treatment properties
@@ -183,6 +183,12 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
     }
     if (cat === 'andrology') {
       return REVIEWERS.specialist;
+    }
+    if (
+      cat === 'specialist' &&
+      (id.includes('ivf') || id.includes('fertility'))
+    ) {
+      return REVIEWERS.fertility;
     }
     if (
       cat === 'specialist' &&

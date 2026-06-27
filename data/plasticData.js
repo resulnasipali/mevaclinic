@@ -167,8 +167,8 @@ export const PLASTIC = [
       'Ginecomastie glandulară: excizie periareolară a discului mamar (cicatrice semicirculară 2cm, aproape invizibilă la 12 luni). Componentă lipomaasă: liposucție VASER. Cazuri combinate: ambele tehnici într-o singură sesiune. Clasificarea ecografică (Gradul Simon) determină abordarea.'
     ),
     mevaQuality: t(
-      'Pre-op ultrasound classification. Simon Grade assessment. Compression vest 6 weeks. 98% patient satisfaction rate at Meva.',
-      'Clasificare ecografică preoperatorie. Evaluare Grad Simon. Vestă compresie 6 săptămâni. Rată satisfacție pacienți 98% la Meva.'
+      'Pre-op ultrasound classification. Simon Grade assessment. Compression vest 6 weeks. Structured follow-up, patient satisfaction monitoring, and individualized recovery guidance at Meva.',
+      'Clasificare ecografică preoperatorie. Evaluare Grad Simon. Vestă compresie 6 săptămâni. Urmărire structurată, monitorizare a satisfacției pacienților și ghidare individualizată a recuperării la Meva.'
     ),
     recovery: t('3–5 days', '3–5 zile'),
     stay: t('Day clinic', 'Clinică ambulatorie'),

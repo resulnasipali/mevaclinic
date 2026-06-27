@@ -39,7 +39,7 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
           PxTrack('Lead', { form_location: 'Premium_Modal', ...formData });
           pushToDataLayer('generate_lead', { form_location: 'appointment_modal' });
           pushToDataLayer('form_submission_success', { form_location: 'appointment_modal' });
-          alert(tUI("Request Received! A specialist will contact you.", lang));
+          alert(tUI("Consultation request received! Our patient care coordinator will contact you shortly.", lang));
           onClose();
         });
       } else {
@@ -176,7 +176,7 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
                 type="submit"
                 className="w-full bg-prime text-white font-bold py-5 rounded-2xl shadow-xl flex items-center justify-center gap-3 hover:bg-[#0b1626] transition-all"
               >
-                 {tUI("Activate Evaluation", lang)} <Send size={18} />
+                 {tUI("Request Clinical Evaluation", lang)} <Send size={18} />
               </button>
               <div className="flex flex-col items-center justify-center gap-2 mt-5 border-t border-gray-50 pt-4">
                  <p className="text-[9px] text-center text-gray-400 uppercase tracking-[0.15em] font-bold">

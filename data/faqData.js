@@ -55,7 +55,7 @@ export const faqData = {
         },
         {
           q: "What is Exosome-Enhanced graft survival?",
-          a: "It is a regenerative protocol boosting survival rates to 98%+. <a href='/en/quiz' class='text-accent font-bold'>Check suitability.</a>",
+          a: "It is a regenerative protocol supporting graft preservation and follicular health. <a href='/en/quiz' class='text-accent font-bold'>Check suitability.</a>",
           schema: true
         },
         {
@@ -152,7 +152,7 @@ export const faqData = {
         },
         {
           q: "Ce este supraviețuirea grefelor îmbunătățită cu Exozomi?",
-          a: "Este un protocol regenerativ ce crește rata de supraviețuire la peste 98%. <a href='/ro/quiz' class='text-accent font-bold'>Verifică eligibilitatea.</a>",
+          a: "Este un protocol regenerativ ce susține conservarea grefelor și sănătatea foliculară. <a href='/ro/quiz' class='text-accent font-bold'>Verifică eligibilitatea.</a>",
           schema: true
         },
         {

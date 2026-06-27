@@ -857,13 +857,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Die Premium-Patientenreise"
   },
   "5-Star Accommodation": {
-    "en": "5-Star Accommodation",
-    "ro": "Cazare 5 Stele",
-    "es": "Alojamiento de 5 estrellas",
-    "it": "Alloggio a 5 stelle",
-    "ru": "5-звёздочное размещение",
-    "fr": "Hébergement 5 étoiles",
-    "de": "5-Sterne-Unterkunft"
+    "en": "Premium Partner Accommodation",
+    "ro": "Cazare Premium Partener",
+    "es": "Alojamiento Premium Asociado",
+    "it": "Sistemazione Partner Premium",
+    "ru": "Проживание в партнерском отеле премиум-класса",
+    "fr": "Hébergement Partenaire Premium",
+    "de": "Premium-Partnerunterkunft"
   },
   "Relax in a premium hotel suite chosen specifically for your comfort and recovery.": {
     "en": "Relax in a premium hotel suite chosen specifically for your comfort and recovery.",
@@ -1819,13 +1819,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ru": "Видеоконсультации через 1, 3 и 6 месяцев. Ваш координатор всегда на связи в WhatsApp. Гарантия результатов Meva."
   },
   "VIP Transfer": {
-    "en": "VIP Transfer",
-    "ro": "Transfer VIP",
-    "de": "VIP-Transfer",
-    "es": "Traslado VIP",
-    "it": "Trasferimento VIP",
-    "fr": "Transfert VIP",
-    "ru": "VIP Трансфер"
+    "en": "Private Patient Transfer",
+    "ro": "Transfer Privat Pacient",
+    "de": "Privater Patiententransfer",
+    "es": "Traslado de Paciente Privado",
+    "it": "Trasferimento Privato Paziente",
+    "fr": "Transfert Privé Patient",
+    "ru": "Частный трансфер для пациентов"
   },
   "Mercedes S-Class or premium SUV, bilingual driver, airport greeting with personalized sign.": {
     "en": "Mercedes S-Class or premium SUV, bilingual driver, airport greeting with personalized sign.",
@@ -1837,22 +1837,22 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ru": "Mercedes S-Class или внедорожник премиум-класса, двуязычный водитель, встреча в аэропорту с именной табличкой."
   },
   "5-Star Hotel": {
-    "en": "5-Star Hotel",
-    "ro": "Hotel 5 Stele",
-    "de": "5-Sterne Hotel",
-    "es": "Hotel de 5 Estrellas",
-    "it": "Hotel 5 Stelle",
-    "fr": "Hôtel 5 Étoiles",
-    "ru": "5-звездочный отель"
+    "en": "Premium Partner Hotel",
+    "ro": "Hotel Premium Partener",
+    "de": "Premium-Partnerhotel",
+    "es": "Hotel Asociado Premium",
+    "it": "Hotel Partner Premium",
+    "fr": "Hôtel Partenaire Premium",
+    "ru": "Партнерский отель премиум-класса"
   },
   "Partners: Hilton Istanbul, InterContinental, Conrad Bosphorus. VIP single room included in package.": {
-    "en": "Partners: Hilton Istanbul, InterContinental, Conrad Bosphorus. VIP single room included in package.",
-    "ro": "Parteneri: Hilton Istanbul, InterContinental, Conrad Bosphorus. Camera single VIP inclusă în pachet.",
-    "de": "Partner: Hilton Istanbul, InterContinental, Conrad Bosporus. VIP-Einzelzimmer im Paket enthalten.",
-    "es": "Socios: Hilton Istanbul, InterContinental, Conrad Bosphorus. Habitación individual VIP incluida en el paquete.",
-    "it": "Partner: Hilton Istanbul, InterContinental, Conrad Bosphorus. Camera singola VIP inclusa nel pacchetto.",
-    "fr": "Partenaires : Hilton Istanbul, InterContinental, Conrad Bosphorus. Chambre individuelle VIP incluse dans le forfait.",
-    "ru": "Партнеры: Hilton Istanbul, InterContinental, Conrad Bosphorus. Одноместный VIP-номер включен в пакет."
+    "en": "Partners: Hilton Istanbul, InterContinental, Conrad Bosphorus. Premium single room included in package.",
+    "ro": "Parteneri: Hilton Istanbul, InterContinental, Conrad Bosphorus. Cameră single premium inclusă în pachet.",
+    "de": "Partner: Hilton Istanbul, InterContinental, Conrad Bosporus. Premium-Einzelzimmer im Paket enthalten.",
+    "es": "Socios: Hilton Istanbul, InterContinental, Conrad Bosphorus. Habitación individual premium incluida en el paquete.",
+    "it": "Partner: Hilton Istanbul, InterContinental, Conrad Bosphorus. Camera singola premium inclusa nel pacchetto.",
+    "fr": "Partenaires : Hilton Istanbul, InterContinental, Conrad Bosphorus. Chambre individuelle premium incluse dans le forfait.",
+    "ru": "Партнеры: Hilton Istanbul, InterContinental, Conrad Bosphorus. Одноместный премиум-номер включен в пакет."
   },
   "The Meva Experience": {
     "en": "The Meva Experience",
@@ -1981,13 +1981,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ru": "Личный водитель в вашем распоряжении с момента приземления в Стамбуле и на протяжении всех медицинских визитов."
   },
   "5-Star Hotel Accommodation": {
-    "en": "5-Star Hotel Accommodation",
-    "ro": "Cazare la Hotel de 5 Stele",
-    "de": "5-Sterne-Hotelunterkunft",
-    "es": "Alojamiento en Hotel de 5 Estrellas",
-    "it": "Sistemazione in Hotel a 5 Stelle",
-    "fr": "Hébergement en Hôtel 5 Étoiles",
-    "ru": "Проживание в 5-звездочном отеле"
+    "en": "Premium Partner Hotel Accommodation",
+    "ro": "Cazare la Hotel Partener Premium",
+    "de": "Premium-Partnerhotelunterkunft",
+    "es": "Alojamiento en Hotel Asociado Premium",
+    "it": "Sistemazione in Hotel Partner Premium",
+    "fr": "Hébergement en Hôtel Partenaire Premium",
+    "ru": "Проживание в партнерском отеле премиум-класса"
   },
   "Recovery in luxury conditions. The package fully covers accommodation in one of our prestigious partner hotels.": {
     "en": "Recovery in luxury conditions. The package fully covers accommodation in one of our prestigious partner hotels.",
@@ -2025,14 +2025,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Tests Pré/Postopératoires",
     "ru": "Пре/Постоперационные Тесты"
   },
-  "All medical tests, cardiology and anesthesia consultations required for your procedure are included in the transparent package.": {
-    "en": "All medical tests, cardiology and anesthesia consultations required for your procedure are included in the transparent package.",
-    "ro": "Toate analizele, consulturile (cardiologic, anestezic) și testele necesare sunt acoperite 100%.",
-    "de": "Alle Analysen, Konsultationen (kardiologisch, anästhetisch) und notwendigen Tests sind zu 100% abgedeckt.",
-    "es": "Todos los análisis, consultas (cardiológicas, anestésicas) y pruebas necesarias están cubiertos al 100%.",
-    "it": "Tutte le analisi, consulti (cardiologici, anestesiologici) e gli esami necessari sono coperti al 100%.",
-    "fr": "Toutes les analyses, consultations (cardiologiques, anesthésiques) et tests nécessaires sont couverts à 100%.",
-    "ru": "Все анализы, консультации (кардиологические, анестезиологические) и необходимые тесты покрываются на 100%."
+  "Required medical tests, cardiology review and anesthesia evaluation are coordinated as part of the treatment plan where clinically indicated.": {
+    "en": "Required medical tests, cardiology review and anesthesia evaluation are coordinated as part of the treatment plan where clinically indicated.",
+    "ro": "Analizele medicale necesare, evaluarea cardiologică și anestezică sunt coordonate ca parte a planului de tratament atunci când este indicat clinic.",
+    "de": "Erforderliche medizinische Tests, kardiologische Untersuchungen und Anästhesiebewertungen werden als Teil des Behandlungsplans koordiniert, sofern klinisch indiziert.",
+    "es": "Las pruebas médicas requeridas, la revisión de cardiología y la evaluación de anestesia se coordinan como parte del plan de tratamiento cuando esté clínicamente indicado.",
+    "it": "Gli esami medici richiesti, la valutazione cardiologica e la valutazione anestesiologica sono coordinati como parte del piano di trattamento ove clinicamente indicato.",
+    "fr": "Les examens médicaux requis, le bilan cardiologique et l'évaluation anesthésique sont coordonnés dans le cadre du plan de traitement lorsque cela est cliniquement indiqué.",
+    "ru": "Необходимые медицинские анализы, кардиологическое обследование и оценка анестезиолога координируются как часть плана лечения по клиническим показаниям."
   },
   "The Premium Treatment": {
     "en": "The Premium Treatment",
@@ -2097,14 +2097,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Planification transparente du traitement sans frais de forfait imprévus.",
     "ru": "Прозрачное планирование лечения без неожиданных сборов за пакет услуг."
   },
-  "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.": {
-    "en": "Our clinical approach prioritizes tissue preservation and long-term natural results, ensuring your transformation is both safe and aesthetically superior.",
-    "de": "Unser klinischer Ansatz priorisiert den Gewebeerhalt und langfristig natürliche Ergebnisse, um sicherzustellen, dass Ihre Transformation sowohl sicher als auch ästhetisch erstklassig ist.",
-    "ro": "Abordarea noastră clinică prioritizează conservarea țesuturilor și rezultatele naturale pe termen lung, asigurând că transformarea dumneavoastră este atât sigură, cât și superioară din punct de vedere estetic.",
-    "es": "Nuestro enfoque clínico prioriza la preservación del tejido y los resultados naturales a largo plazo, garantizando que su transformación sea segura y estéticamente superior.",
-    "it": "Il nostro approccio clinico privilegia la conservazione dei tessuti e risultati naturali a lungo termine, garantendo che la vostra trasformazione sia sicura ed esteticamente superiore.",
-    "fr": "Notre approche clinique donne la priorité à la préservation des tissus et aux résultats naturels à long terme, garantissant que votre transformation est à la fois sûre et esthétiquement supérieure.",
-    "ru": "Наш клинический подход ставит в приоритет сохранение тканей и долгосрочные естественные результаты, гарантируя, что ваша трансформация будет безопасной и эстетически безупречной."
+  "Our clinical approach prioritizes patient safety, individualized treatment planning, realistic expectations, and long-term follow-up throughout the international care journey.": {
+    "en": "Our clinical approach prioritizes patient safety, individualized treatment planning, realistic expectations, and long-term follow-up throughout the international care journey.",
+    "ro": "Abordarea noastră clinică prioritizează siguranța pacientului, planificarea individualizată a tratamentului, așteptările realiste și monitorizarea pe termen lung pe parcursul întregului parcurs medical internațional.",
+    "es": "Nuestro enfoque clínico prioriza la seguridad del paciente, la planificación de tratamiento individualizada, las expectativas realistas y el seguimiento a largo plazo a lo largo del viaje de atención internacional.",
+    "it": "Il nostro approccio clinico pone in primo piano la sicurezza del paziente, la pianificazione personalizzata del trattamento, aspettative realistiche e un follow-up a lungo termine lungo l'intero percorso di cura internazionale.",
+    "fr": "Notre approche clinique privilégie la sécurité des patients, la planification personnalisée des traitements, des attentes réalistes et un suivi à long terme tout au long du parcours de soins international.",
+    "de": "Unser klinischer Ansatz legt größten Wert auf Patientensicherheit, individuelle Behandlungsplanung, realistische Erwartungen und eine langfristige Nachsorge während der gesamten internationalen Betreuung.",
+    "ru": "Наш клинический подход ориентирован на безопасность пациентов, индивидуальное планирование лечения, реалистичные ожидания и долгосрочное последующее наблюдение на протяжении всего пути международного лечения."
   },
   "Through specialist doctors and accredited partner hospitals, Meva Clinic supports patients from arrival to follow-up within a premium clinical care network.": {
     "en": "Through specialist doctors and accredited partner hospitals, Meva Clinic supports patients from arrival to follow-up within a premium clinical care network.",
@@ -2261,13 +2261,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Premium-All-inclusive-Pakete in Istanbul: Magen-Sleeve und Bypass mit international renommierten Spezialisten."
   },
   "VIP Transfer Included": {
-    "en": "VIP Transfer Included",
-    "ro": "Transfer VIP Inclus",
-    "es": "Traslado VIP incluido",
-    "it": "Trasferimento VIP Incluso",
-    "ru": "Включен VIP трансфер",
-    "fr": "Transfert VIP inclus",
-    "de": "VIP-Transfer inbegriffen"
+    "en": "Premium Transfer Included",
+    "ro": "Transfer Premium Inclus",
+    "es": "Traslado premium incluido",
+    "it": "Trasferimento Premium Incluso",
+    "ru": "Включен премиум-трансфер",
+    "fr": "Transfert premium inclus",
+    "de": "Premium-Transfer inbegriffen"
   },
 
   "Native Support (EN/RO)": {
@@ -3332,15 +3332,15 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Final Clinical Detail",
       "ro": "Detaliu clinic final"
 },
-  "Activate Evaluation": {
-    "en": "Activate Evaluation",
-    "es": "Activar Evaluación",
-    "it": "Attiva Valutazione",
-    "ru": "Активировать оценку",
-    "fr": "Activer l'évaluation",
-    "de": "Bewertung aktivieren",
-      "ro": "Activează Evaluarea"
-},
+  "Request Clinical Evaluation": {
+    "en": "Request Clinical Evaluation",
+    "es": "Solicitar Evaluación Clínica",
+    "it": "Richiedi Valutazione Clinica",
+    "ru": "Запросить клиническую оценку",
+    "fr": "Demander une Évaluation Clinique",
+    "de": "Klinische Bewertung anfordern",
+    "ro": "Solicită Evaluare Clinică"
+  },
   "€0 Consultation": {
     "en": "€0 Consultation",
     "es": "€0 Consultation",
@@ -4276,14 +4276,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ro": "Întreabă despre urmărire"
 },
   "Private VIP Transfer": {
-    "en": "Private VIP Transfer",
-    "es": "Private VIP Transfer",
-    "it": "Private VIP Transfer",
-    "ru": "Private VIP Transfer",
-    "fr": "Private VIP Transfer",
-    "de": "Private VIP Transfer",
-      "ro": "Transfer privat VIP"
-},
+    "en": "Private Patient Transfer",
+    "ro": "Transfer Privat Pacient",
+    "it": "Trasferimento Privato Paziente",
+    "fr": "Transfert Privé Patient",
+    "es": "Traslado de Paciente Privado",
+    "de": "Privater Patiententransfer",
+    "ru": "Частный трансфер для пациентов"
+  },
   "Mercedes-Benz V-Class fleet with Wi-Fi and premium refreshments.": {
     "en": "Mercedes-Benz V-Class fleet with Wi-Fi and premium refreshments.",
     "es": "Mercedes-Benz V-Class fleet with Wi-Fi and premium refreshments.",
@@ -4787,55 +4787,12 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "*Timeline results are averages based on clinical trials. Individual results vary per case.",
       "ro": "*Rezultatele pe graficul cronologic sunt medii bazate pe studii clinice. Rezultatele individuale variază în funcție de caz."
 },
-  "Ce se întâmplă dacă apare o complicație medicală?": {
-    "en": "Ce se întâmplă dacă apare o complicație medicală?",
-    "es": "Ce se întâmplă dacă apare o complicație medicală?",
-    "it": "Ce se întâmplă dacă apare o complicație medicală?",
-    "ru": "Ce se întâmplă dacă apare o complicație medicală?",
-    "fr": "Ce se întâmplă dacă apare o complicație medicală?",
-    "de": "Ce se întâmplă dacă apare o complicație medicală?"
-  },
-  "Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.": {
-    "en": "Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.",
-    "es": "Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.",
-    "it": "Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.",
-    "ru": "Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.",
-    "fr": "Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor.",
-    "de": "Siguranța ta este prioritatea absolută. Toate intervențiile noastre au loc în spitale acreditate JCI (Joint Commission International) din Turcia. Pachetele includ o asigurare medicală specializată împotriva complicațiilor."
-  },
-  "Cât de sigură este călătoria și șederea în Istanbul?": {
-    "en": "Cât de sigură este călătoria și șederea în Istanbul?",
-    "es": "Cât de sigură este călătoria și șederea în Istanbul?",
-    "it": "Cât de sigură este călătoria și șederea în Istanbul?",
-    "ru": "Cât de sigură este călătoria și șederea în Istanbul?",
-    "fr": "Cât de sigură este călătoria și șederea în Istanbul?",
-    "de": "Cât de sigură este călătoria și șederea în Istanbul?"
-  },
-  "Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium.": {
-    "en": "Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium.",
-    "es": "Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium.",
-    "it": "Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium.",
-    "ru": "Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium.",
-    "fr": "Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium.",
-    "de": "Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium."
-  },
-  "Sunt acoperit de o formă de garanție sau asigurare?": {
-    "en": "Sunt acoperit de o formă de garanție sau asigurare?",
-    "es": "Sunt acoperit de o formă de garanție sau asigurare?",
-    "it": "Sunt acoperit de o formă de garanție sau asigurare?",
-    "ru": "Sunt acoperit de o formă de garanție sau asigurare?",
-    "fr": "Sunt acoperit de o formă de garanție sau asigurare?",
-    "de": "Sunt acoperit de o formă de garanție sau asigurare?"
-  },
-  "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.": {
-    "en": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.",
-    "es": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.",
-    "it": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.",
-    "ru": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.",
-    "fr": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.",
-    "de": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.",
-      "ro": "Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. În plus, beneficiezi de asistența noastră dedicată și de proceduri legale și transparente."
-},
+
+
+
+
+
+
   "Partner Hospital Safety Standards": {
     "en": "Partner Hospital Safety Standards",
     "ro": "Standarde de Siguranță ale Spitalelor Partenere",
@@ -5923,17 +5880,25 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Sapphire blades create V-shaped incisions which result in 40% faster healing. <a href=",
       "ro": "Lamele de safir creează incizii în formă de V, ceea ce duce la o vindecare cu 40% mai rapidă. <a href="
 },
-  "It is a regenerative protocol boosting survival rates to 98%+. <a href=": {
-    "en": "It is a regenerative protocol boosting survival rates to 98%+. <a href=",
-    "es": "It is a regenerative protocol boosting survival rates to 98%+. <a href=",
-    "it": "It is a regenerative protocol boosting survival rates to 98%+. <a href=",
-    "ru": "It is a regenerative protocol boosting survival rates to 98%+. <a href=",
-    "fr": "It is a regenerative protocol boosting survival rates to 98%+. <a href=",
-    "de": "It is a regenerative protocol boosting survival rates to 98%+. <a href=",
-      "ro": "Este un protocol regenerativ care crește ratele de supraviețuire la peste 98%. <a href="
-},
+  "It is a regenerative protocol supporting graft preservation and follicular health. <a href=": {
+    "en": "It is a regenerative protocol supporting graft preservation and follicular health. <a href=",
+    "es": "Es un protocolo regenerativo que apoya la preservación de los injertos y la salud folicular. <a href=",
+    "it": "È un protocollo rigenerativo che supporta la conservazione degli innesti e la salute follicolare. <a href=",
+    "ru": "Это регенеративный протокол, поддерживающий сохранность трансплантатов и здоровье волосяных фолликулов. <a href=",
+    "fr": "Il s'agit d'un protocole régénératif favorisant la préservation des greffons et la santé folliculaire. <a href=",
+    "de": "Es ist ein regeneratives Protokoll, das den Erhalt der Transplantate und die Gesundheit der Follikel unterstützt. <a href=",
+    "ro": "Este un protocol regenerativ care susține conservarea grefelor și sănătatea foliculară. <a href="
+  },
   '4 Nights Premium Hospitalization Stay Included': { it: '4 Notti di Ricovero Premium Incluse', fr: "4 Nuits d'Hospitalisation Premium Incluses", es: '4 Noches de Hospitalización Premium Incluidas', de: '4 Nächte Premium-Krankenhausaufenthalt Inbegriffen', ru: '4 Ночи Премиум-госпитализации Включены', ro: '4 Nopți de Spitalizare Premium Incluse' },
-  'Optional 5-Star Hotel Stay Available': { it: 'Soggiorno Opzionale in Hotel 5 Stelle Disponibile', fr: 'Séjour Optionnel en Hôtel 5 Étoiles Disponible', es: 'Estancia Opcional en Hotel de 5 Estrellas Disponible', de: 'Optionaler 5-Sterne-Hotelaufenthalt Verfügbar', ru: 'Возможность проживания в 5-звездочном отеле', ro: 'Opțional Cazare la Hotel 5 Stele Disponibilă' },
+  'Optional 5-Star Hotel Stay Available': {
+    "en": "Optional Premium Partner Hotel Stay Available",
+    "ro": "Opțional Cazare la Hotel Premium Partener Disponibilă",
+    "it": "Soggiorno Opzionale in Hotel Partner Premium Disponibile",
+    "fr": "Séjour Optionnel en Hôtel Partenaire Premium Disponible",
+    "es": "Estancia Opcional en Hotel Asociado Premium Disponible",
+    "de": "Optionaler Premium-Partnerhotelaufenthalt Verfügbar",
+    "ru": "Возможность проживания в партнерском отеле премиум-класса"
+  },
   'Transparent Package Policy': { it: 'Tariffe Trasparenti Senza Costi Nascosti', fr: 'Tarification Transparente Sans Frais Cachés', es: 'Precios Transparentes Sin Cargos Ocultos', de: 'Transparente Paketpreise Ohne Versteckte Kosten', ru: 'Строгая гарантия БЕЗ СКРЫТЫХ ПЛАТЕЖЕЙ', ro: 'Garanție strictă FĂRĂ COSTURI ASCUNSE' },
   'SUCCESS STORIES': { it: 'STORIE DI SUCCESSO', fr: 'HISTOIRES DE RÉUSSITE', es: 'HISTORIAS DE ÉXITO', de: 'ERFOLGSGESCHICHTEN', ru: 'ИСТОРИИ УСПЕХА',
       "ro": "POVESTI DE SUCCES"
@@ -5965,13 +5930,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     de: 'Wie sicher sind Reisen und Aufenthalte in Istanbul?',
     ru: 'Насколько безопасно путешествовать и останавливаться в Стамбуле?'
   },
-  'Istanbul is a prestigious international hub for medical tourism. From the moment you step off the plane, our VIP assistant will pick you up. Accommodation is provided in five-star hotels located in premium areas.': {
-    ro: 'Istanbul este un hub internațional de prestigiu pentru turismul medical. Încă de la coborârea din avion, asistentul nostru VIP te va prelua direct de la poartă. Cazarea se face în hoteluri de cinci stele, aflate în zone premium.',
-    it: 'Istanbul è un prestigioso hub internazionale per il turismo medico. Fin dal momento in cui scendi dall\'aereo, il nostro assistente VIP verrà a prenderti. L\'alloggio è previsto in hotel a cinque stelle situati in aree premium.',
-    fr: 'Istanbul est une plaque tournante internationale prestigieuse pour le tourisme médical. Dès votre descente de l\'avion, notre assistant VIP viendra vous chercher. L\'hébergement est assuré dans des hôtels cinq étoiles.',
-    es: 'Estambul es un prestigioso centro internacional de turismo médico. Desde el momento en que bajes del avión, nuestro asistente VIP te recogerá. El alojamiento se proporciona en hoteles de cinco estrellas.',
-    de: 'Istanbul ist ein angesehenes internationales Zentrum für Medizintourismus. Sobald Sie aus dem Flugzeug steigen, wird Sie unser VIP-Assistent abholen. Die Unterbringung erfolgt in Fünf-Sterne-Hotels.',
-    ru: 'Стамбул является престижным международным центром медицинского туризма. С того момента, как вы сойдете с самолета, наш VIP-помощник заберет вас. Размещение в пятизвездочных отелях.'
+  'Istanbul is a prestigious international hub for medical care. From the moment you step off the plane, our private patient coordinator will greet you. Accommodation is provided in premium partner hotels located in premium areas.': {
+    "en": "Istanbul is a prestigious international hub for medical care. From the moment you step off the plane, our private patient coordinator will greet you. Accommodation is provided in premium partner hotels located in premium areas.",
+    "ro": "Istanbul este un hub internațional de prestigiu pentru servicii medicale. Încă de la coborârea din avion, coordonatorul nostru privat pentru pacienți te va întâmpina. Cazarea este asigurată în hoteluri partenere premium, situate în zone premium.",
+    "it": "Istanbul è un prestigioso centro internazionale per l'assistenza medica. Fin dal momento in cui scendi dall'aereo, il nostro coordinatore privato dei pazienti ti accoglierà. L'alloggio è previsto in hotel partner premium situati in aree premium.",
+    "fr": "Istanbul est une plaque tournante internationale prestigieuse pour les soins médicaux. Dès votre descente de l'avion, notre coordinateur privé des patients vous accueillera. L'hébergement est assuré dans des hôtels partenaires premium.",
+    "es": "Estambul es un prestigioso centro internacional de atención médica. Desde el momento en que baje del avión, nuestro coordinador privado de pacientes lo recibirá. El alojamiento se proporciona en hoteles asociados premium.",
+    "de": "Istanbul ist ein angesehenes internationales Zentrum für medizinische Versorgung. Sobald Sie aus dem Flugzeug steigen, wird Sie unser privater Patientenkoordinator begrüßen. Die Unterbringung erfolgt in erstklassigen Partnerhotels.",
+    "ru": "Стамбул является престижным международным центром медицинского обслуживания. С того момента, как вы сойдете с самолета, наш персональный координатор встретит вас. Проживание предоставляется в партнерских отелях премиум-класса."
   },
   'Am I covered by a guarantee or insurance?': {
     ro: 'Sunt acoperit de o formă de garanție sau asigurare?',
@@ -5982,12 +5948,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     ru: 'Покрывается ли моя процедура гарантией или страховкой?'
   },
   'Absolutely. We exclusively collaborate with experienced partner doctors selected through credential review. Additionally, you benefit from our dedicated assistance and transparent legal procedures.': {
-    ro: 'Absolut. Colaborăm exclusiv cu medici care au o rată de succes documentată de peste 99%. Suplimentar, beneficiezi de asistența noastră dedicată și proceduri legale și transparente.',
-    it: 'Assolutamente. Collaboriamo esclusivamente con medici che hanno una percentuale di successo documentata superiore al 99%. Inoltre, beneficerai della nostra assistenza dedicata e di procedure legali trasparenti.',
-    fr: 'Absolument. Nous collaborons exclusivement avec des médecins qui ont un taux de réussite documenté de plus de 99 %. De plus, vous bénéficiez de notre assistance dédiée.',
-    es: 'Absolutamente. Colaboramos exclusivamente con médicos que tienen una tasa de éxito documentada de más del 99%. Además, se beneficia de nuestra asistencia dedicada.',
-    de: 'Absolut. Wir arbeiten ausschließlich mit Ärzten zusammen, die eine dokumentierte Erfolgsquote von über 99 % haben. Darüber hinaus profitieren Sie von unserer engagierten Unterstützung.',
-    ru: 'Безусловно. Мы сотрудничаем исключительно с врачами, имеющими документально подтвержденный уровень успеха более 99%. Кроме того, вы получаете выгоду от нашей специализированной поддержки.'
+    "en": "Absolutely. We exclusively collaborate with experienced partner doctors selected through credential review. Additionally, you benefit from our dedicated assistance and transparent legal procedures.",
+    "ro": "Absolut. Colaborăm exclusiv cu medici parteneri experimentați care au o solidă reputație clinică. În plus, beneficiezi de asistența noastră dedicată și de proceduri legale transparente.",
+    "it": "Assolutamente. Collaboriamo esclusivamente con medici partner esperti che vantano una solida storia clinica. Inoltre, beneficerai della nostra assistenza dedicata e di procedure legali trasparenti.",
+    "fr": "Absolument. Nous collaborons exclusivement avec des médecins partenaires expérimentés ayant des antécédents cliniques solides. De plus, vous bénéficiez de notre assistance dédiée et de procédures juridiques transparentes.",
+    "es": "Absolutamente. Colaboramos exclusivamente con médicos asociados experimentados que tienen una sólida trayectoria clínica. Además, se beneficia de nuestra asistencia dedicada y procedimientos legales transparentes.",
+    "de": "Absolut. Wir arbeiten ausschließlich mit erfahrenen Partnerärzten zusammen, die über eine fundierte klinische Erfolgsbilanz verfügen. Darüber hinaus profitieren Sie von unserer engagierten Unterstützung und transparenten rechtlichen Abläufen.",
+    "ru": "Безусловно. Мы сотрудничаем исключительно с опытными врачами-партнерами, имеющими подтвержденный клинический опыт. Кроме того, вы получаете преимущества в виде нашей специализированной поддержки и прозрачных юридических процедур."
   },
   'Meva Clinic changed my life! The care was exceptional.': {
     it: 'Meva Clinic ha cambiato la mia vita! L\'assistenza è stata eccezionale.', fr: 'Meva Clinic a changé ma vie ! Les soins ont été exceptionnels.', es: '¡Meva Clinic cambió mi vida! La atención fue excepcional.', de: 'Die Meva Clinic hat mein Leben verändert! Die Betreuung war außergewöhnlich.', ru: 'Клиника Meva изменила мою жизнь! Уход был исключительным.',
