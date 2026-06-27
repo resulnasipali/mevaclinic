@@ -172,6 +172,12 @@ export default async function TreatmentPage({ params }: Props) {
     }
     if (
       cat === 'specialist' &&
+      (id.includes('ivf') || id.includes('fertility'))
+    ) {
+      return REVIEWERS.fertility;
+    }
+    if (
+      cat === 'specialist' &&
       (id.includes('organ') || id.includes('kidney') || id.includes('liver'))
     ) {
       return REVIEWERS.organ;
