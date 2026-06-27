@@ -602,7 +602,7 @@ export const treatmentsData = [
     procedureSteps: t(
       [
         { title: "Clinical Body Mapping", desc: "Detailed body contour mapping and surgical marking by the specialist plastic surgeon based on BMI and skin elasticity." },
-        { title: "Safety Preparation & Anesthesia", desc: "Administration of general anesthesia or targeted sedation supervised by board-certified anesthesiologists." },
+        { title: "Safety Preparation & Anesthesia", desc: "General anesthesia or targeted sedation is planned after pre-operative anesthesia evaluation within the licensed hospital pathway." },
         { title: "Tumescent Infiltration", desc: "Infusing a specialized saline solution containing local anesthetic to minimize bleeding and ease fat release." },
         { title: "Ultrasonic Emulsification", desc: "Application of Vaser ultrasonic energy to selectively liquefy fat deposits while protecting surrounding tissues." },
         { title: "Precision Cannula Extraction", desc: "Gentle cannula-assisted extraction of the emulsified fat to sculpt defined anatomical contours." },
@@ -610,7 +610,7 @@ export const treatmentsData = [
       ],
       [
         { title: "Cartografiere Corporală", desc: "Marcarea chirurgicală detaliată a contururilor de către chirurgul plastician specialist pe baza IMC și a elasticității pielii." },
-        { title: "Pregătire și Anestezie", desc: "Administrarea anesteziei generale sau a sedării sub supravegherea medicilor anesteziști certificați." },
+        { title: "Pregătire și Anestezie", desc: "Anestezia generală sau sedarea țintită este planificată după evaluarea anestezică preoperatorie în cadrul parcursului spitalicesc autorizat." },
         { title: "Infiltrare Tumescentă", desc: "Infiltrarea unei soluții saline speciale pentru a reduce sângerarea și a facilita desprinderea celulelor adipoase." },
         { title: "Emulsionare Ultrasonică", desc: "Aplicarea energiei cu ultrasunete Vaser pentru a lichefia selectiv grăsimea, protejând vasele de sânge și nervii." },
         { title: "Extracție de Precizie", desc: "Extracția blândă cu canulă a grăsimii emulsionate pentru a sculpta contururile corporale dorite." },
@@ -618,7 +618,7 @@ export const treatmentsData = [
       ],
       [
         { title: "Mapeo Corporal Clínico", desc: "Mapeo detallado del contorno corporal y marcado quirúrgico realizado por el cirujano plástico especialista." },
-        { title: "Anestesia y Seguridad", desc: "Administración de anestesia general o sedación supervisada por anestesiólogos certificados." },
+        { title: "Anestesia y Seguridad", desc: "La anestesia general o la sedación dirigida se planifica después de la evaluación anestésica preoperatoria dentro de la vía hospitalaria autorizada." },
         { title: "Infiltración Tumescente", desc: "Infusión de una solución salina especializada para minimizar el sangrado y facilitar la liberación de grasa." },
         { title: "Emulsificación Ultrasónica", desc: "Aplicación de energía ultrasónica Vaser para licuar selectivamente la grasa y proteger los tejidos." },
         { title: "Extracción de Precisión", desc: "Extracción suave asistida por cánula de la grasa emulsificada para esculpir contornos anatómicos." },
@@ -626,7 +626,7 @@ export const treatmentsData = [
       ],
       [
         { title: "Mappatura Corporea Clinica", desc: "Mappatura dettagliata dei contorni e marcatura chirurgica da parte del chirurgo plastico specialista." },
-        { title: "Anestesia e Sicurezza", desc: "Somministrazione di anestesia generale o sedazione monitorata da anestesisti certificati." },
+        { title: "Anestesia e Sicurezza", desc: "L'anestesia generale o la sedazione mirata sono pianificate dopo la valutazione anestesiologica preoperatoria all'interno del percorso ospedaliero autorizzato." },
         { title: "Infiltrazione Tumescente", desc: "Infiltrazione di una soluzione salina speciale per ridurre il sanguinamento e facilitare il rilascio di grasso." },
         { title: "Emulsificazione ad Ultrasuoni", desc: "Applicazione di energia ultrasonica Vaser per liquefare selettivamente il grasso e preservare i tessuti." },
         { title: "Estrazione di Precisione", desc: "Estrazione delicata tramite cannula del grasso emulsionato per scolpire contorni definiti." },
@@ -634,7 +634,7 @@ export const treatmentsData = [
       ],
       [
         { title: "Картирование тела", desc: "Детальное разметка контуров тела специалистом-пластическим хирургом на основе ИМТ и эластичности кожи." },
-        { title: "Анестезия и подготовка", desc: "Проведение общей анестезии или седации под контролем сертифицированных анестезиологов." },
+        { title: "Анестезия и подготовка", desc: "Общая анестезия или целевая седация планируются после предоперационной анестезиологической оценки в рамках лицензированного госпиталя." },
         { title: "Тумесцентная инфильтрация", desc: "Введение специального раствора для минимизации кровопотери и облегчения удаления жира." },
         { title: "Ультразвуковая эмульгация", desc: "Применение ультразвука Vaser для избирательного разжижения жира с защитой окружающих тканей." },
         { title: "Точное удаление жира", desc: "Мягкое канюльное удаление эмульгированного жира для создания точеных контуров тела." },
@@ -642,7 +642,7 @@ export const treatmentsData = [
       ],
       [
         { title: "Cartographie Corporelle", desc: "Marquage chirurgical des contours corporels par le chirurgien plasticien spécialiste selon l'IMC." },
-        { title: "Anesthésie & Sécurité", desc: "Administration d'une anesthésie générale ou sédation supervisée par des anesthésistes certifiés." },
+        { title: "Anesthésie & Sécurité", desc: "L'anesthésie générale ou la sédation ciblée est planifiée après une évaluation anesthésique préopératoire dans le cadre du parcours hospitalier agréé." },
         { title: "Infiltration Tumescente", desc: "Injection d'une solution saline pour minimiser les saignements et faciliter la libération des graisses." },
         { title: "Émulsification par Ultrasons", desc: "Application de l'énergie ultrasonique Vaser pour liquéfier sélectivement la graisse et protéger les tissus." },
         { title: "Extraction de Précision", desc: "Aspiration douce par canule de la graisse émulsifiée pour sculpter des contours anatomiques définis." },
@@ -650,7 +650,7 @@ export const treatmentsData = [
       ],
       [
         { title: "Körperkartierung", desc: "Detaillierte Einzeichnung der Körperkonturen durch den plastischen Chirurgen basierend auf BMI." },
-        { title: "Anästhesie & Vorbereitung", desc: "Durchführung einer Vollnarkose oder Sedierung unter Aufsicht von Anästhesisten." },
+        { title: "Anästhesie & Vorbereitung", desc: "Eine Vollnarkose oder gezielte Sedierung wird nach einer präoperativen anästhesiologischen Untersuchung im Rahmen des zugelassenen Krankenhauswegs geplant." },
         { title: "Tumeszente Infiltration", desc: "Einbringen einer Kochsalzlösung zur Minimierung von Blutungen und Erleichterung der Fettabsaugung." },
         { title: "Ultraschall-Emulgierung", desc: "Anwendung von Vaser-Ultraschallenergie zur selektiven Verflüssigung von Fettzellen." },
         { title: "Präzisionsabsaugung", desc: "Schonende kanülenassistierte Entnahme des emulgierten Fetts zur Modellierung der Konturen." },

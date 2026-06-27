@@ -88,6 +88,9 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
     if (slug === 'smart-oncology-drugs') {
       return tUI('Meva Clinic coordinates medical record review, tumor board consultation and hospital appointment logistics only. Diagnosis, prescriptions and treatment decisions are made exclusively by authorized oncology specialists and provider institutions.', lang);
     }
+    if (slug === 'vaser-liposuction') {
+      return tUI('Hospital-based procedures are coordinated through accredited partner hospitals, including licensed partner hospital settings.', lang);
+    }
     if (category === 'hair' || category === 'dental' || slug === 'ha-filler-girth' || slug === 'p-shot-prp' || slug === 'botox-girth') {
       return tUI('Treatment pathways are coordinated with selected specialist medical partners and accredited provider institutions, depending on the procedure and doctor assessment.', lang);
     }
@@ -650,7 +653,9 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                           {tUI('Potential Risks & Complications', lang)}
                         </h3>
                         <p className="text-xs text-gray-500 mb-6 leading-relaxed">
-                          {tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under JCI patient safety standards.', lang)}
+                          {treatment?.id === 'vaser-liposuction'
+                            ? tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under structured surgical safety standards.', lang)
+                            : tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under JCI patient safety standards.', lang)}
                         </p>
                         <div className="space-y-4">
                           {risksComplications.map((item: string, i: number) => {
@@ -789,9 +794,29 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                 )}
 
                 {(() => {
-                  const relatedTreatments = treatmentsData
-                    .filter((t: any) => t.category === treatment.category && t.id !== treatment.id)
-                    .slice(0, 4);
+                  let relatedTreatments = treatmentsData
+                    .filter((t: any) => t.category === treatment.category && t.id !== treatment.id);
+
+                  if (treatment.id === 'vaser-liposuction') {
+                    const preferredIds = [
+                      'double-chin-liposuction',
+                      'abdominoplasty-tummy',
+                      'mommy-makeover-full',
+                      'gynecomastia-male',
+                      'breast-augmentation',
+                      'brazilian-butt-lift-bbl',
+                      'arm-thigh-lift'
+                    ];
+                    relatedTreatments = relatedTreatments.sort((a: any, b: any) => {
+                      const idxA = preferredIds.indexOf(a.id);
+                      const idxB = preferredIds.indexOf(b.id);
+                      if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+                      if (idxA !== -1) return -1;
+                      if (idxB !== -1) return 1;
+                      return 0;
+                    });
+                  }
+                  relatedTreatments = relatedTreatments.slice(0, 4);
 
                   const getRelatedBlogs = () => {
                     const cat = (treatment.category || '').toLowerCase();
@@ -807,7 +832,11 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                       return blogPosts.filter((b: any) => b.category === 'Bariatric');
                     }
                     if (cat === 'plastic') {
-                      return blogPosts.filter((b: any) => b.category === 'Safety' || b.category === 'Concierge');
+                      let posts = blogPosts.filter((b: any) => b.category === 'Safety' || b.category === 'Concierge');
+                      if (id === 'vaser-liposuction') {
+                        posts = posts.filter((b: any) => b.slug !== 'jci-standards-importance');
+                      }
+                      return posts;
                     }
                     if (cat === 'specialist') {
                       if (id.includes('cyberknife') || id.includes('oncology') || id.includes('cancer')) {
