@@ -1,6 +1,7 @@
 // src/data/treatmentsData.ts
 import { gastricSleeveClinical } from './clinical/gastric-sleeve';
 import { dhiHairTransplantClinical } from './clinical/dhi-hair-transplant';
+import { vaserLiposuctionClinical } from './clinical/vaser-liposuction';
 
 /**
  * ULTIMATE CLINICAL DATABASE - PROFESSIONAL HOSPITAL HIERARCHY
@@ -519,46 +520,221 @@ export const treatmentsData = [
   },
   {
     id: 'vaser-liposuction',
+    ...vaserLiposuctionClinical,
     metaTitle: t('Premium Vaser Liposuction in Istanbul | Meva Clinic', 'Vaser Liposuction Premium în Istanbul | Meva Clinic', "Liposucción vaser premium en Estambul | Clínica Meva", "Liposuzione vaser premium a Istanbul | Clinica Meva", "Васер-липосакция премиум-класса в Стамбуле | Клиника Мева", "Liposuccion Vaser premium à Istanbul | Clinique Méva", "Premium-Vaser-Fettabsaugung in Istanbul | Meva-Klinik"),
-    metaDesc: t('Discover world-class vaser liposuction at Meva Clinic Turkey. JCI-accredited facilities, top surgeons, and comprehensive care packages.', 'Descoperă vaser liposuction la standarde mondiale la Meva Clinic Turcia. Facilități acreditate JCI, chirurgi de top și planuri premium de îngrijire.', "Descubra la liposucción vaser de clase mundial en Meva Clinic Turquía. Instalaciones acreditadas por la JCI, los mejores cirujanos y paquetes VIP con todo incluido.", "Scopri la liposuzione vaser di livello mondiale presso la Meva Clinic Turkey. Strutture accreditate JCI, chirurghi eccellenti e piani di cura premium.", "Откройте для себя васерную липосакцию мирового класса в клинике Meva в Турции. Учреждения, аккредитованные JCI, лучшие хирурги и VIP-пакеты «все включено».", "Découvrez la liposuccion Vaser de classe mondiale à la Meva Clinic Turquie. Installations accréditées JCI, chirurgiens de haut niveau et programmes de soins premium.", "Entdecken Sie die erstklassige Vaser-Liposuktion in der Meva Clinic Turkey. JCI-akkreditierte Einrichtungen, erstklassige Chirurgen und Premium-Gesundheitsprogramme."),
+    metaDesc: t(
+      'Discover world-class vaser liposuction at Meva Clinic Turkey. Licensed partner hospitals, top surgeons, and comprehensive care packages.',
+      'Descoperă vaser liposuction la standarde mondiale la Meva Clinic Turcia. Spitale partenere autorizate, chirurgi de top și planuri premium de îngrijire.',
+      'Descubra la liposucción vaser de clase mundial en Meva Clinic Turquía. Hospitales asociados autorizados, los mejores cirujanos y paquetes VIP con todo incluido.',
+      'Scopri la liposuzione vaser di livello mondiale presso la Meva Clinic Turkey. Strutture ospedaliere autorizzate, chirurghi eccellenti e piani di cura premium.',
+      'Откройте для себя васерную липосакцию мирового класса в клинике Meva в Турции. Лицензированные партнерские клиники, лучшие хирурги и VIP-пакеты «все включено».',
+      'Découvrez la liposuccion Vaser de classe mondiale à la Meva Clinic Turquie. Hôpitaux partenaires agréés, chirurgiens de haut niveau et programmes de soins premium.',
+      'Entdecken Sie die erstklassige Vaser-Liposuktion in der Meva Clinic Turkey. Lizenzierte Partnerkliniken, erstklassige Chirurgen und Premium-Gesundheitsprogramme.'
+    ),
     keywords: t(["vaser liposuction turkey", "best clinic for vaser liposuction", "vaser liposuction Turkey"], ["vaser liposuction turcia", "cea mai buna clinica pentru vaser liposuction", "turism medical istanbul"], ["liposucción vaser pavo", "La mejor clínica para liposucción vaser.", "turismo médico en estambul"], ["tacchino liposuzione vaser", "migliore clinica per liposuzione vaser", "turismo medico di Istanbul"], ["Васер-липосакция в индейке", "Лучшая клиника по вазер-липосакции", "Стамбул медицинский туризм"], ["liposuccion vaser dinde", "meilleure clinique pour la liposuccion Vaser", "tourisme médical à Istanbul"], ["Vaser-Fettabsaugung in der Türkei", "Beste Klinik für Vaser-Liposuktion", "Medizintourismus in Istanbul"]),
     category: 'plastic',
-    expert: 'Prof. Dr. Yakup Şenel',
+    expert: t(
+      'Meva Clinic Medical Editorial Team',
+      'Echipa Editorială Medicală Meva Clinic',
+      'Equipo Editorial Médico de Meva Clinic',
+      'Team Editoriale Medico di Meva Clinic',
+      'Медицинская редакционная группа Meva Clinic',
+      'Équipe éditoriale médicale de Meva Clinic',
+      'Medizinisches Redaktionsteam der Meva-Klinik'
+    ),
     title: t('Vaser Liposuction (High-Def)', 'Vaser Liposucție (High-Def)', 'Liposucción Vaser (Alta Definición)', 'Liposuzione Vaser (High-Def)', 'Vaser-липосакция (Высокая четкость)', 'Liposuccion Vaser (Haute Définition)', 'Vaser-Fettabsaugung (High-Def)'),
     shortDesc: t('Targeted fat removal with ultrasound. Sculpts athletic contours while tightening the skin.', 'Eliminarea grăsimii cu ultrasunete. Sculptează contururi atletice.', "Eliminación de grasa dirigida con ultrasonido. Esculpe contornos atléticos mientras reafirma la piel.", "Rimozione mirata del grasso con gli ultrasuoni. Scolpisce i contorni atletici rassodando la pelle.", "Целенаправленное удаление жира с помощью ультразвука. Моделирует спортивные контуры и подтягивает кожу.", "Élimination ciblée des graisses par ultrasons. Sculpte les contours athlétiques tout en raffermissant la peau.", "Gezielte Fettentfernung mit Ultraschall. Formt athletische Konturen und strafft die Haut."),
     isThisForMe: t(['Stubborn fat deposits', 'Muscle definition seekers', 'Post-weight loss contouring'], ['Depozite de grăsime încăpățânate', 'Cei care doresc definire musculară', 'Conturare după slăbire'], ["Depósitos de grasa rebeldes", "Buscadoras de definición muscular", "Contorno post-pérdida de peso"], ["Depositi di grasso ostinati", "Cercatori di definizione muscolare", "Rimodellamento post-perdita di peso"], ["Устойчивые жировые отложения", "Искатели четкости мышц", "Контурная пластика после похудения"], ["Amas graisseux tenaces", "Chercheurs de définition musculaire", "Remodelage post-perte de poids"], ["Hartnäckige Fettpolster", "Suchende nach Muskeldefinitionen", "Konturierung nach der Gewichtsabnahme"]),
-    semanticSeoText: t("Plastic and reconstructive surgical procedures at Meva Clinic fuse meticulous medical science with elite structural artistry. From precision Piezo ultrasonic rhinoplasty to high-definition Vaser liposuction, deep plane facelifts, and integrated Mommy Makeovers, our board-certified plastic surgeons leverage 3D-vectored contouring matrices. We prioritize invisible incision placements, multi-layer anatomical re-anchoring (SMAS manipulation), and tissue protection protocols to designed to support efficient recovery downtime while producing elegant, natural-looking, and enduring aesthetic proportions.", "Procedurile chirurgicale plastice și reconstructive de la Clinica Meva îmbină știința medicală meticuloasă cu arta structurală de elită. De la rinoplastie ultra­sonică Piezo de precizie la liposucție Vaser de înaltă definiție, lifting facial pe plan profund și Mommy Makeover integrate, chirurgii noștri plasticieni certificați de bord utilizează matrici de conturare vectorială 3D. Prioritizăm plasarea invizibilă a inciziilor, reancorarea anatomică multi-strat (manipularea SMAS) și protocoalele de protecție a țesuturilor pentru a reduce semnificativ timpul de recuperare, producând în același timp proporții estetice elegante, complet naturale și durabile.", "Los procedimientos quirúrgicos plásticos y reconstructivos en Meva Clinic fusionan una meticulosa ciencia médica con un arte estructural de élite. Desde la rinoplastia ultrasónica Piezo de precisión hasta la liposucción Vaser de alta definición, los estiramientos faciales en plano profundo y los Mommy Makeovers integrados, nuestros cirujanos plásticos certificados utilizan matrices de contorno vectorizadas en 3D. Priorizamos la colocación de incisiones invisibles, la reanclaje anatómica en múltiples capas (manipulación del SMAS) y los protocolos de protección tisular para reducir drásticamente el tiempo de recuperación mientras producimos proporciones estéticas elegantes, completamente naturales y duraderas.", "Le procedure chirurgiche plastiche e ricostruttive presso la Meva Clinic fondono una meticolosa scienza medica con un'arte strutturale di alto livello. Dalla rinoplastica ultrasuona Piezo di precisione alla liposuzione Vaser ad alta definizione, dai lifting facciali a piano profondo ai Mommy Makeover integrati, i nostri chirurghi plastici certificati sfruttano matrici di rimodellamento vettoriale 3D. Diamo priorità alla collocazione invisibile delle incisioni, al riancoraggio anatomico multi-strato (manipolazione SMAS) e ai protocolli di protezione dei tessuti per ridurre drasticamente i tempi di recupero, producendo proporzioni estetiche eleganti, completamente naturali e durature.", "Пластические и реконструктивные хирургические процедуры в клинике Meva совмещают тщательную медицинскую науку с высоким уровнем структурного искусства. От точной ультразвуковой ринопластики Piezo до высокоточной липосакции Vaser, глубокоплановых подтяжек лица и комплексных программ Mommy Makeover, наши сертифицированные пластические хирурги используют 3D-векторные контурные матрицы. Мы придаем приоритет незаметным разрезам, многослойной анатомической фиксации (манипуляции SMAS) и протоколам защиты тканей, чтобы существенно сократить восстановительный период, обеспечивая при этом элегантные, полностью естественные и долговечные эстетические пропорции.", "Les interventions chirurgicales plastiques et reconstructives à la Clinique Meva allient une science médicale minutieuse à un art structurel de haut niveau. De la rhinoplastie ultrasonique Piezo de précision à la liposuccion Vaser haute définition, en passant par les liftings en plan profond et les Mommy Makeovers intégrés, nos chirurgiens plasticiens certifiés exploitent des matrices de modelage vectorisées en 3D. Nous privilégions des placements d’incisions invisibles, le repositionnement anatomique en couches multiples (manipulation du SMAS) et des protocoles de protection des tissus afin de réduire considérablement le temps de récupération tout en produisant des proportions esthétiques élégantes, entièrement naturelles et durables.", "Plastische und rekonstruktive chirurgische Eingriffe in der Meva Klinik verbinden sorgfältige medizinische Wissenschaft mit erstklassiger struktureller Kunstfertigkeit. Von präziser Piezo-Ultraschall-Rhinoplastik über hochauflösende Vaser-Liposuktion, Deep-Plane-Facelifts bis hin zu integrierten Mommy Makeovers nutzen unsere fachärztlich zertifizierten plastischen Chirurgen 3D-gerichtete Konturierungsmatrizen. Wir legen Wert auf unsichtbare Schnittführungen, mehrlagige anatomische Wiederverankerung (SMAS-Manipulation) und Gewebeschutzprotokolle, um die Erholungszeit erheblich zu verkürzen und gleichzeitig elegante, völlig natürliche und dauerhafte ästhetische Proportionen zu erzielen."),
+    semanticSeoText: t(
+      "Meva Clinic's high-definition Vaser Liposuction programs in Istanbul offer an advanced, ultrasound-assisted body contouring pathway for targeted fat removal. Coordinated within licensed partner hospital settings as part of a specialist plastic surgery pathway, this procedure utilizes focused ultrasonic energy to emulsify fat deposits in the abdomen, waist, flanks, back, arms, thighs, or chin before gentle cannula extraction. Every comprehensive international patient plan includes a specialist plastic surgeon assessment, private transfers, premium partner hotel recovery accommodations, structured postoperative aftercare, and detailed compression garment guidelines to support skin tightening and natural tissue retraction.",
+      "Programul de Vaser Liposuction de înaltă definiție al Clinicii Meva din Istanbul oferă o cale avansată de conturare corporală asistată de ultrasunete pentru eliminarea țintită a grăsimii. Coordonată în spitale partenere autorizate ca parte a traseului de chirurgie plastică specializată, această procedură utilizează energie ultrasonică focalizată pentru a emulsiona depozitele de grăsime din zona abdomenului, taliei, spatelui, brațelor, coapselor sau bărbiei, înainte de o extracție blândă prin canulă. Fiecare plan complet pentru pacienții internaționali include evaluarea chirurgului plastician specialist, transferuri private, cazare la hotel partener premium pentru recuperare, asistență postoperatorie structurată și ghiduri detaliate pentru utilizarea corsetului de compresie pentru a sprijini retracția naturală a pielii.",
+      "La liposucción Vaser en Estambul en Meva Clinic ofrece contorno corporal asistido por ultrasonido para eliminación de grasa localizada. Este procedimiento utiliza energía ultrasónica focalizada para emulsificar depósitos de grasa en abdomen, cintura, flancos, espalda, brazos, muslos o papada antes de la extracción con cánula. Cada plan incluye evaluación del cirujano plástico, traslados privados, hotel y pautas de prenda de compresión para apoyar la retracción de la piel.",
+      "La liposuzione Vaser a Istanbul presso Meva Clinic offre rimodellamento corporeo assistito da ultrasuoni per la rimozione del grasso localizzato. Questo trattamento utilizza energia ultrasonica per emulsionare i depositi di grasso in addome, fianchi, schiena, braccia, cosce o doppio mento prima dell'estrazione. Include valutazione del chirurgo plastico, trasferimenti privati, hotel e guaina compressiva per la retrazione cutanea.",
+      "Высокоточная Vaser-липосакция в Стамбуле в Meva Clinic предлагает передовой метод ультразвукового контурирования тела для целенаправленного удаления жира. Процедура использует сфокусированную ультразвуковую энергию для эмульгации жира на животе, талии, боках, спине, руках, бедрах или подбородке перед извлечением канюлей. Включает оценку пластического хирурга, трансферы, отель и компрессионное белье для подтяжки кожи.",
+      "La liposuccion Vaser à Istanbul à la clinique Meva propose un remodelage corporel assisté par ultrasons pour l'élimination ciblée des graisses. Cette procédure utilise l'énergie ultrasonique pour émulsifier les dépôts graisseux de l'abdomen, des flancs, du dos, des bras, des cuisses ou du menton avant l'aspiration par canule. Comprend un bilan par le chirurgien plasticien, transferts privés, hôtel et gaine de compression pour la rétraction de la peau.",
+      "Die Vaser-Liposuktion in Istanbul in der Meva Clinic bietet eine ultraschallgestützte Körperkonturierung zur gezielten Fettabsaugung. Dieses Verfahren nutzt Ultraschallenergie zur Emulgierung von Fettdepots an Bauch, Taille, Flanken, Rücken, Armen, Oberschenkeln oder Kinn vor der Absaugung. Inklusive Untersuchung durch den plastischen Chirurgen, Transfers, Hotel und Kompressionsmieder zur Hautstraffung."
+    ),
     premiumInclusions: t(["Private Airport Transfer", "Premium Partner Hotel Accommodation", "24/7 Dedicated Nursing Support", "Premium Medical Aftercare Kit", "Long-Term Follow-Up Support Documentation"], ["Transfer Privat la Aeroport", "Cazare la Hotel Partener Premium", "Asistență Medicală 24/7", "Kit Premium de Îngrijire Medicală", "Suport de urmărire pe termen lung"], ["Traslado privado al aeropuerto", "Alojamiento en hotel asociado premium", "Soporte de enfermería dedicado 24 horas al día, 7 días a la semana", "Kit de cuidados posteriores médicos premium", "Soporte de seguimiento a largo plazo"], ["Trasferimento aeroportuale privato", "Sistemazione in hotel convenzionato premium", "Supporto infermieristico dedicato 24 ore su 24, 7 giorni su 7", "Kit di assistenza medica premium", "Supporto di follow-up a lungo termine"], ["Частный трансфер из аэропорта", "Размещение в премиальном отеле-партнере", "Круглосуточная медсестринская поддержка", "Премиум-комплект медицинского ухода", "Долгосрочная поддержка и сопровождение"], ["Transfert privé à l'aéroport", "Hébergement en Hôtel partenaire premium", "Soutien infirmier dédié 24h/24 et 7j/7", "Kit de suivi médical haut de gamme", "suport de urmărire pe termen lung"], ["Privater Flughafentransfer", "Premium Partner Hotel Accommodation", "Engagierte Pflegeunterstützung rund um die Uhr", "Hochwertiges medizinisches Nachsorgeset", "Langfristige Nachsorgeunterstützung"]),
-    recoveryTimeline: t([
-                { time: "Phase 1: Immediate", desc: "Clinical observation, initial stabilization, and comfortable partner hotel accommodation." },
-                { time: "Phase 2: Early Recovery", desc: "Mild activities resume, follow-up consultations, and structured aftercare." },
-                { time: "Phase 3: Transformation", desc: "Visible results begin to emerge as tissues integrate and heal." },
-                { time: "Phase 4: Final Result", desc: "Full aesthetic and functional maturation achieved. Lifelong support continues." }
-              ], [
-                { time: "Faza 1: Imediată", desc: "Observație clinică, stabilizare inițială și cazare confortabilă la hotelul partener." },
-                { time: "Faza 2: Recuperare Timpurie", desc: "Reluarea activităților ușoare, consultații de urmărire și îngrijire structurată." },
-                { time: "Faza 3: Transformare", desc: "Rezultatele vizibile încep să apară pe măsură ce țesuturile se integrează și se vindecă." },
-                { time: "Faza 4: Rezultat Final", desc: "Maturare estetică și funcțională completă. Suportul pe viață continuă." }
-              ], [{ time: "Fase 1: Inmediata", desc: "Premium Partner Hotelunterkunft" }, { time: "Fase 2: Recuperación Temprana", desc: "Reanudación de actividades leves, consultas de seguimiento y cuidados posteriores estructurados." }, { time: "Fase 3: Transformación", desc: "Los resultados visibles comienzan a surgir a medida que los tejidos se integran y sanan." }, { time: "Fase 4: Resultado Final", desc: "Se logra una plena maduración estética y funcional. El apoyo de por vida continúa." }], [{ time: "Fase 1: immediata", desc: "Osservazione clinica, stabilizzazione iniziale e riposo in albergo 5 stelle." }, { time: "Fase 2: ripresa anticipata", desc: "Riprendono le attività lievi, consultazioni di follow-up e assistenza post-vendita strutturata." }, { time: "Fase 3: trasformazione", desc: "Risultati visibili iniziano ad emergere man mano che i tessuti si integrano e guariscono." }, { time: "Fase 4: risultato finale", desc: "Piena maturazione estetica e funzionale raggiunta. Il sostegno permanente continua." }], [{ time: "Этап 1: Немедленный", desc: "Клиническое наблюдение, первичная стабилизация и отдых в пятизвездочном отеле." }, { time: "Фаза 2: Раннее восстановление", desc: "Возобновление легкой деятельности, последующие консультации и структурированный последующий уход." }, { time: "Этап 3: Трансформация", desc: "Видимые результаты начинают проявляться по мере интеграции и заживления тканей." }, { time: "Этап 4: Окончательный результат", desc: "Достигнуто полное эстетическое и функциональное созревание. Пожизненная поддержка продолжается." }], [{ time: "Phase 1 : Immédiate", desc: "Observation clinique, stabilisation initiale et repos en hôtel 5 étoiles." }, { time: "Phase 2 : Récupération précoce", desc: "Reprise des activités légères, consultations de suivi et suivi structuré." }, { time: "Phase 3 : Transformation", desc: "Des résultats visibles commencent à apparaître à mesure que les tissus s’intègrent et guérissent." }, { time: "Phase 4 : Résultat final", desc: "Maturation esthétique et fonctionnelle complète atteinte. Le soutien à vie se poursuit." }], [{ time: "Phase 1: Sofort", desc: "Premium Partner Hotel Accommodation" }, { time: "Phase 2: Frühzeitige Genesung", desc: "Wiederaufnahme leichter Aktivitäten, Folgekonsultationen und strukturierte Nachsorge." }, { time: "Phase 3: Transformation", desc: "Sichtbare Ergebnisse zeigen sich, wenn sich das Gewebe integriert und heilt." }, { time: "Phase 4: Endergebnis", desc: "Vollständige ästhetische und funktionelle Reifung erreicht. Die lebenslange Unterstützung wird fortgesetzt." }]),
-    procedureSteps: t([
-                { title: "Pre-Surgical Mapping", desc: "Detailed body mapping and surgical marking using 3D simulation tools." },
-                { title: "General Anesthesia", desc: "Safe sedation administered by specialist anesthesiologists for total comfort." },
-                { title: "Targeted Intervention", desc: "Using advanced techniques (e.g., Vaser, Endoscopic) for precise tissue manipulation." },
-                { title: "Structural Recontouring", desc: "Reshaping underlying muscle and tissue to achieve the desired aesthetic contour." },
-                { title: "Aesthetic Closure", desc: "Applying micro-sutures and hidden incision techniques to ensure discreet scar placement." },
-                { title: "Immediate Aftercare", desc: "Private Airport Transfer" }
-              ], [
-                { title: "Cartografiere Pre-Chirurgicală", desc: "Marcarea chirurgicală detaliată a corpului folosind instrumente de simulare 3D." },
-                { title: "Anestezie Generală", desc: "Sedare sigură administrată de medici anesteziști specialiști pentru un confort total." },
-                { title: "Intervenție Țintită", desc: "Utilizarea tehnicilor avansate (ex: Vaser, Endoscopic) pentru manipularea precisă a țesuturilor." },
-                { title: "Reconturare Structurală", desc: "Remodelarea mușchilor și țesuturilor subiacente pentru a obține conturul estetic dorit." },
-                { title: "Închidere Estetică", desc: "Aplicarea micro-suturilor și tehnicilor de incizie ascunsă pentru a asigura cicatrici invizibile." },
-                { title: "Îngrijire Imediată", desc: "Privater Flughafentransfer" }
-              ], [{ title: "Mapeo prequirúrgico", desc: "Mapeo corporal detallado y marcado quirúrgico mediante herramientas de simulación 3D." }, { title: "Anestesia general", desc: "Sedación segura administrada por anestesiólogos especialistas para total comodidad." }, { title: "Intervención dirigida", desc: "Utilizar técnicas avanzadas (p. ej., Vaser, endoscópica) para una manipulación precisa del tejido." }, { title: "Recontorno estructural", desc: "Remodelar los músculos y tejidos subyacentes para lograr el contorno estético deseado." }, { title: "Cierre Estético", desc: "Aplicando microsuturas y técnicas de incisión oculta para asegurar cicatrices invisibles." }, { title: "Cuidados posteriores inmediatos", desc: "Traslado privado al aeropuerto" }], [{ title: "Mappatura pre-chirurgica", desc: "Mappatura corporea dettagliata e marcatura chirurgica utilizzando strumenti di simulazione 3D." }, { title: "Anestesia generale", desc: "Sedazione sicura somministrata da anestesisti specializzati per un comfort totale." }, { title: "Intervento Mirato", desc: "Utilizzo di tecniche avanzate (ad esempio Vaser, Endoscopico) per una manipolazione precisa dei tessuti." }, { title: "Ricontorno strutturale", desc: "Rimodellamento dei muscoli e dei tessuti sottostanti per ottenere il contorno estetico desiderato." }, { title: "Chiusura estetica", desc: "Applicazione di micro-suture e tecniche di incisione nascosta per garantire cicatrici invisibili." }, { title: "Assistenza post-vendita immediata", desc: "Trasferimento aeroportuale privato" }], [{ title: "Предоперационное картирование", desc: "Детальное картирование тела и хирургическая маркировка с использованием инструментов 3D-моделирования." }, { title: "Общая анестезия", desc: "Безопасная седация, проводимая специалистами-анестезиологами для полного комфорта." }, { title: "Целевое вмешательство", desc: "Использование передовых методов (например, Vaser, эндоскопии) для точных манипуляций с тканями." }, { title: "Структурная реконструкция", desc: "Изменение формы подлежащих мышц и тканей для достижения желаемого эстетического контура." }, { title: "Эстетическое закрытие", desc: "Наложение микрошвов и техники скрытого разреза для обеспечения невидимости рубцов." }, { title: "Немедленный уход", desc: "Наложение специализированного компрессионного белья и перевод в VIP-кабину восстановления." }], [{ title: "Cartographie pré-chirurgicale", desc: "Cartographie corporelle détaillée et marquage chirurgical à l'aide d'outils de simulation 3D." }, { title: "Anesthésie générale", desc: "Sédation sûre administrée par des anesthésistes spécialisés pour un confort total." }, { title: "Intervention ciblée", desc: "Utiliser des techniques avancées (par exemple, Vaser, Endoscopique) pour une manipulation précise des tissus." }, { title: "Remodelage structurel", desc: "Remodeler les muscles et les tissus sous-jacents pour obtenir le contour esthétique souhaité." }, { title: "Fermeture esthétique", desc: "Application de micro-sutures et de techniques d'incision cachée pour garantir des cicatrices invisibles." }, { title: "Suivi immédiat", desc: "Transfert privé à l'aéroport" }], [{ title: "Präoperative Kartierung", desc: "Detaillierte Körperkartierung und chirurgische Markierung mithilfe von 3D-Simulationstools." }, { title: "Vollnarkose", desc: "Sichere Sedierung durch spezialisierte Anästhesisten für absoluten Komfort." }, { title: "Gezielte Intervention", desc: "Verwendung fortschrittlicher Techniken (z. B. Vaser, Endoskopie) zur präzisen Gewebemanipulation." }, { title: "Strukturelle Rekonturierung", desc: "Umformung der darunter liegenden Muskeln und des Gewebes, um die gewünschte ästhetische Kontur zu erreichen." }, { title: "Ästhetischer Verschluss", desc: "Anwendung von Mikronähten und versteckten Schnitttechniken, um eine unsichtbare Narbenbildung zu gewährleisten." }, { title: "Sofortige Nachsorge", desc: "Privater Flughafentransfer" }]),
-    theProcedure: t('Ultrasound fat emulsification and precision extraction.', 'Emulsionarea grăsimii cu ultrasunete și extracție de precizie.', "Emulsificación de grasas por ultrasonido y extracción de precisión.", "Emulsificazione dei grassi ad ultrasuoni ed estrazione di precisione.", "Ультразвуковая эмульгация жира и прецизионная экстракция.", "Émulsification des graisses par ultrasons et extraction de précision.", "Ultraschall-Fettemulgierung und Präzisionsextraktion."),
-    mevaAdvantage: t('Higher skin retraction and less trauma than standard lipo.', 'Retracție mai mare a pielii și traumă redusă.', "Mayor retracción de la piel y menos traumatismo que la liposucción estándar.", "Maggiore retrazione cutanea e meno traumi rispetto alla lipo standard.", "Более высокая ретракция кожи и меньшая травма, чем при стандартной липосакции.", "Rétraction cutanée plus élevée et moins de traumatismes que la lipo standard.", "Höhere Hautretraktion und weniger Trauma als bei Standard-Lipo."),
-    specs: t({ hospitalStay: '1 Night', hotelStay: '5 Nights', returnToWork: '5-7 Days', anesthesia: 'General' }, { hospitalStay: '1 Noapte', hotelStay: '5 Nopți', returnToWork: '5-7 Zile', anesthesia: 'Generală' }, { hospitalStay: "1 Noche", hotelStay: "5 Noches", returnToWork: "5-7 días", anesthesia: "General" }, { hospitalStay: "1 notte", hotelStay: "5 notti", returnToWork: "5-7 giorni", anesthesia: "Generale" }, { hospitalStay: "1 ночь", hotelStay: "5 ночей", returnToWork: "5-7 дней", anesthesia: "Общий" }, { hospitalStay: "1 nuit", hotelStay: "5 nuits", returnToWork: "5-7 jours", anesthesia: "Générale" }, { hospitalStay: "1 Nacht", hotelStay: "5 Nächte", returnToWork: "5-7 Tage", anesthesia: "Allgemein" }),
-    faq: t([{ q: 'Is it permanent?', a: 'Removed fat cells are gone for good. Maintain a stable weight for best results.' }], [{ q: 'Este permanent?', a: 'Celulele adipoase eliminate dispar definitiv.' }], [{ q: "¿Es permanente?", a: "Las células grasas eliminadas desaparecen para siempre. Mantenga un peso estable para obtener mejores resultados." }], [{ q: "È permanente?", a: "Le cellule adipose rimosse scompaiono per sempre. Mantenere un peso stabile per ottenere i migliori risultati." }], [{ q: "Это навсегда?", a: "Удаленные жировые клетки исчезают навсегда. Для достижения наилучших результатов поддерживайте стабильный вес." }], [{ q: "Est-ce permanent ?", a: "Les cellules graisseuses supprimées ont disparu pour de bon. Maintenez un poids stable pour de meilleurs résultats." }], [{ q: "Ist es dauerhaft?", a: "Entfernte Fettzellen sind endgültig verschwunden. Halten Sie ein stabiles Gewicht ein, um optimale Ergebnisse zu erzielen." }])
+    recoveryTimeline: t(
+      [
+        { time: "Phase 1: Immediate Post-Op", desc: "Clinical observation in the accredited partner hospital, post-anesthesia stabilization, and transfer to a premium partner hotel." },
+        { time: "Phase 2: First Week Recovery", desc: "Peak swelling and bruising occur. Continuous use of the medical compression garment is required. Return to light daily activities." },
+        { time: "Phase 3: Weeks 2-6 Integration", desc: "Swelling begins to subside, skin retraction starts, and light exercise can be resumed. Lymphatic drainage sessions may be recommended." },
+        { time: "Phase 4: Months 3-6 Maturation", desc: "Tissues fully heal and stabilize. The final contoured silhouette and muscle definition emerge as residual edema completely resolves." }
+      ],
+      [
+        { time: "Faza 1: Postoperator Imediat", desc: "Observare clinică în spitalul partener acreditat, stabilizare post-anestezie și transfer la hotelul partener premium." },
+        { time: "Faza 2: Prima Săptămână", desc: "Apariția edemului și a vânătăilor. Este obligatorie purtarea continuă a corsetului de compresie medical. Reluarea activităților ușoare." },
+        { time: "Faza 3: Săptămânile 2-6", desc: "Umflăturile încep să scadă, începe retracția pielii și se pot relua activitățile fizice ușoare. Pot fi recomandate masaje de drenaj limfatic." },
+        { time: "Faza 4: Lunile 3-6 Maturare", desc: "Țesuturile se vindecă și se stabilizează complet. Conturul corporal final și definirea musculară devin vizibile după rezoluția edemului." }
+      ],
+      [
+        { time: "Fase 1: Postoperatorio Inmediato", desc: "Observación clínica en el hospital asociado, estabilización post-anestesia y traslado al hotel asociado." },
+        { time: "Fase 2: Primera Semana", desc: "Aparición de inflamación y hematomas. Es obligatorio el uso continuo de la prenda de compresión. Regreso a actividades ligeras." },
+        { time: "Fase 3: Semanas 2 a 6", desc: "La inflamación comienza a disminuir, se inicia la retracción de la piel y se puede retomar el ejercicio ligero. Se recomiendan masajes de drenaje." },
+        { time: "Fase 4: Meses 3 a 6", desc: "Los tejidos se curan por completo. La silueta contorneada final y la definición muscular se hacen visibles al desaparecer el edema." }
+      ],
+      [
+        { time: "Fase 1: Post-Op Immediato", desc: "Osservazione clinica presso l'ospedale convenzionato, stabilizzazione e trasferimento in hotel partner premium." },
+        { time: "Fase 2: Prima Settimana", desc: "Picco di gonfiore e lividi. Uso continuo obbligatorio della guaina compressiva. Ritorno alle attività quotidiane leggere." },
+        { time: "Fase 3: Settimane 2-6", desc: "Il gonfiore inizia a ridursi, si avvia la retrazione cutanea e si può riprendere l'attività fisica leggera. Consigliato il linfodrenaggio." },
+        { time: "Fase 4: Mesi 3-6 Rimodellamento", desc: "I tessuti si stabilizzano e si guariscono completamente. Il contorno corpo definitivo emerge con la risoluzione del gonfiore." }
+      ],
+      [
+        { time: "Фаза 1: Сразу после операции", desc: "Клиническое наблюдение в аккредитованном госпитале, стабилизация и трансфер в партнерский отель." },
+        { time: "Фаза 2: Первая неделя", desc: "Пик отеков и синяков. Обязательно постоянное ношение компрессионного белья. Возврат к легкой активности." },
+        { time: "Фаза 3: Недели 2-6", desc: "Отеки начинают спадать, начинается подтяжка кожи, можно возобновить легкие упражнения. Рекомендуется лимфодренаж." },
+        { time: "Фаза 4: Месяцы 3-6", desc: "Ткани полностью заживают и стабилизируются. Финальный точеный контур и рельеф мышц становятся полностью заметны." }
+      ],
+      [
+        { time: "Phase 1 : Post-Op Immédiat", desc: "Observation clinique à l'hôpital accrédité, stabilisation post-anesthésie et transfert vers l'hôtel partenaire premium." },
+        { time: "Phase 2 : Première Semaine", desc: "Pic de gonflement et ecchymoses. Port continu obligatoire de la gaine de compression. Retour à des activités quotidiennes légères." },
+        { time: "Phase 3 : Semaines 2-6", desc: "Le gonflement diminue, la rétraction de la peau commence et le sport léger est autorisé. Massages de drainage lymphatique recommandés." },
+        { time: "Phase 4 : Mois 3-6 Maturation", desc: "Les tissus guérissent et se stabilisent. Le contour final et la définition musculaire apparaissent après la disparition totale de l'œdème." }
+      ],
+      [
+        { time: "Phase 1: Direkt nach der OP", desc: "Klinische Beobachtung in der Partnerklinik, Stabilisierung und Transfer in das Premium-Partnerhotel." },
+        { time: "Phase 2: Erste Woche", desc: "Schwellungen und Blutergüsse treten auf. Kontinuierliches Tragen des Kompressionsmieders ist erforderlich. Leichte Aktivitäten." },
+        { time: "Phase 3: Wochen 2-6", desc: "Die Schwellung geht zurück, die Hautstraffung beginnt und leichtes Training ist wieder möglich. Lymphdrainage wird empfohlen." },
+        { time: "Phase 4: Monate 3-6", desc: "Das Gewebe heilt und stabilisiert sich vollständig. Die endgültige Silhouette und Definition wird nach Abklingen der Schwellung sichtbar." }
+      ]
+    ),
+    procedureSteps: t(
+      [
+        { title: "Clinical Body Mapping", desc: "Detailed body contour mapping and surgical marking by the specialist plastic surgeon based on BMI and skin elasticity." },
+        { title: "Safety Preparation & Anesthesia", desc: "Administration of general anesthesia or targeted sedation supervised by board-certified anesthesiologists." },
+        { title: "Tumescent Infiltration", desc: "Infusing a specialized saline solution containing local anesthetic to minimize bleeding and ease fat release." },
+        { title: "Ultrasonic Emulsification", desc: "Application of Vaser ultrasonic energy to selectively liquefy fat deposits while protecting surrounding tissues." },
+        { title: "Precision Cannula Extraction", desc: "Gentle cannula-assisted extraction of the emulsified fat to sculpt defined anatomical contours." },
+        { title: "Compression & Post-Op Check", desc: "Fitting the medical compression garment to support skin tightening, followed by clinical observation." }
+      ],
+      [
+        { title: "Cartografiere Corporală", desc: "Marcarea chirurgicală detaliată a contururilor de către chirurgul plastician specialist pe baza IMC și a elasticității pielii." },
+        { title: "Pregătire și Anestezie", desc: "Administrarea anesteziei generale sau a sedării sub supravegherea medicilor anesteziști certificați." },
+        { title: "Infiltrare Tumescentă", desc: "Infiltrarea unei soluții saline speciale pentru a reduce sângerarea și a facilita desprinderea celulelor adipoase." },
+        { title: "Emulsionare Ultrasonică", desc: "Aplicarea energiei cu ultrasunete Vaser pentru a lichefia selectiv grăsimea, protejând vasele de sânge și nervii." },
+        { title: "Extracție de Precizie", desc: "Extracția blândă cu canulă a grăsimii emulsionate pentru a sculpta contururile corporale dorite." },
+        { title: "Compresie și Monitorizare", desc: "Aplicarea corsetului de compresie personalizat pentru a sprijini retracția pielii și verificarea clinică inițială." }
+      ],
+      [
+        { title: "Mapeo Corporal Clínico", desc: "Mapeo detallado del contorno corporal y marcado quirúrgico realizado por el cirujano plástico especialista." },
+        { title: "Anestesia y Seguridad", desc: "Administración de anestesia general o sedación supervisada por anestesiólogos certificados." },
+        { title: "Infiltración Tumescente", desc: "Infusión de una solución salina especializada para minimizar el sangrado y facilitar la liberación de grasa." },
+        { title: "Emulsificación Ultrasónica", desc: "Aplicación de energía ultrasónica Vaser para licuar selectivamente la grasa y proteger los tejidos." },
+        { title: "Extracción de Precisión", desc: "Extracción suave asistida por cánula de la grasa emulsificada para esculpir contornos anatómicos." },
+        { title: "Compresión y Monitoreo", desc: "Colocación de la prenda de compresión médica para apoyar la retracción de la piel y control clínico." }
+      ],
+      [
+        { title: "Mappatura Corporea Clinica", desc: "Mappatura dettagliata dei contorni e marcatura chirurgica da parte del chirurgo plastico specialista." },
+        { title: "Anestesia e Sicurezza", desc: "Somministrazione di anestesia generale o sedazione monitorata da anestesisti certificati." },
+        { title: "Infiltrazione Tumescente", desc: "Infiltrazione di una soluzione salina speciale per ridurre il sanguinamento e facilitare il rilascio di grasso." },
+        { title: "Emulsificazione ad Ultrasuoni", desc: "Applicazione di energia ultrasonica Vaser per liquefare selettivamente il grasso e preservare i tessuti." },
+        { title: "Estrazione di Precisione", desc: "Estrazione delicata tramite cannula del grasso emulsionato per scolpire contorni definiti." },
+        { title: "Compressione e Monitoraggio", desc: "Applicazione della guaina compressiva medica per favorire la retrazione cutanea e controllo post-op." }
+      ],
+      [
+        { title: "Картирование тела", desc: "Детальное разметка контуров тела специалистом-пластическим хирургом на основе ИМТ и эластичности кожи." },
+        { title: "Анестезия и подготовка", desc: "Проведение общей анестезии или седации под контролем сертифицированных анестезиологов." },
+        { title: "Тумесцентная инфильтрация", desc: "Введение специального раствора для минимизации кровопотери и облегчения удаления жира." },
+        { title: "Ультразвуковая эмульгация", desc: "Применение ультразвука Vaser для избирательного разжижения жира с защитой окружающих тканей." },
+        { title: "Точное удаление жира", desc: "Мягкое канюльное удаление эмульгированного жира для создания точеных контуров тела." },
+        { title: "Компрессия и контроль", desc: "Наложение компрессионного белья для поддержки подтяжки кожи и первичное послеоперационное наблюдение." }
+      ],
+      [
+        { title: "Cartographie Corporelle", desc: "Marquage chirurgical des contours corporels par le chirurgien plasticien spécialiste selon l'IMC." },
+        { title: "Anesthésie & Sécurité", desc: "Administration d'une anesthésie générale ou sédation supervisée par des anesthésistes certifiés." },
+        { title: "Infiltration Tumescente", desc: "Injection d'une solution saline pour minimiser les saignements et faciliter la libération des graisses." },
+        { title: "Émulsification par Ultrasons", desc: "Application de l'énergie ultrasonique Vaser pour liquéfier sélectivement la graisse et protéger les tissus." },
+        { title: "Extraction de Précision", desc: "Aspiration douce par canule de la graisse émulsifiée pour sculpter des contours anatomiques définis." },
+        { title: "Compression & Surveillance", desc: "Mise en place de la gaine de compression médicale pour favoriser la rétraction de la peau et suivi." }
+      ],
+      [
+        { title: "Körperkartierung", desc: "Detaillierte Einzeichnung der Körperkonturen durch den plastischen Chirurgen basierend auf BMI." },
+        { title: "Anästhesie & Vorbereitung", desc: "Durchführung einer Vollnarkose oder Sedierung unter Aufsicht von Anästhesisten." },
+        { title: "Tumeszente Infiltration", desc: "Einbringen einer Kochsalzlösung zur Minimierung von Blutungen und Erleichterung der Fettabsaugung." },
+        { title: "Ultraschall-Emulgierung", desc: "Anwendung von Vaser-Ultraschallenergie zur selektiven Verflüssigung von Fettzellen." },
+        { title: "Präzisionsabsaugung", desc: "Schonende kanülenassistierte Entnahme des emulgierten Fetts zur Modellierung der Konturen." },
+        { title: "Kompression & Nachsorge", desc: "Anlegen des medizinischen Kompressionsmieders zur Unterstützung der Hautstraffung und Nachsorge." }
+      ]
+    ),
+    theProcedure: t(
+      'Ultrasound fat emulsification and precision extraction.',
+      'Emulsionarea grăsimii cu ultrasunete și extracție de precizie.',
+      "Emulsificación de grasas por ultrasonido y extracción de precisión.",
+      "Emulsificazione dei grassi ad ultrasuoni ed estrazione di precisione.",
+      "Ультразвуковая эмульгация жира и прецизионная экстракция.",
+      "Émulsification des graisses par ultrasons et extraction de précision.",
+      "Ultraschall-Fettemulgierung und Präzisionsextraktion."
+    ),
+    mevaAdvantage: t(
+      'Ultrasound body contouring with skin tightening support.',
+      'Conturare corporală cu ultrasunete și suport pentru retracția pielii.',
+      "Contorno corporal por ultrasonido con soporte para retracción de piel.",
+      "Rimodellamento corporeo ad ultrasuoni con supporto per la retrazione cutanea.",
+      "Ультразвуковое контурирование тела с поддержкой подтяжки кожи.",
+      "Remodelage corporel par ultrasons avec soutien à la rétraction cutanée.",
+      "Ultraschall-Körperkonturierung mit Unterstützung der Hautstraffung."
+    ),
+    specs: t(
+      { hospitalStay: '1 Night', hotelStay: '5 Nights', returnToWork: '5-7 Days', anesthesia: 'General' },
+      { hospitalStay: '1 Noapte', hotelStay: '5 Nopți', returnToWork: '5-7 Zile', anesthesia: 'Generală' },
+      { hospitalStay: "1 Noche", hotelStay: "5 Noches", returnToWork: "5-7 días", anesthesia: "General" },
+      { hospitalStay: "1 notte", hotelStay: "5 notti", returnToWork: "5-7 giorni", anesthesia: "Generale" },
+      { hospitalStay: "1 ночь", hotelStay: "5 ночей", returnToWork: "5-7 дней", anesthesia: "Общий" },
+      { hospitalStay: "1 nuit", hotelStay: "5 nuits", returnToWork: "5-7 jours", anesthesia: "Générale" },
+      { hospitalStay: "1 Nacht", hotelStay: "5 Nächte", returnToWork: "7 Tage", anesthesia: "Allgemein" }
+    ),
+    faq: t(
+      [
+        { q: "Is Vaser Liposuction a weight-loss surgery?", a: "No, Vaser Liposuction is designed for high-definition body contouring and targeted fat removal, not weight reduction. It is suitable for patients near their ideal weight who want to address stubborn fat deposits." },
+        { q: "Which areas can be treated with Vaser Liposuction?", a: "Vaser Liposuction can treat areas such as the abdomen, waist, flanks (love handles), back, arms, thighs, and chin, helping to define natural muscle outlines." },
+        { q: "How long does swelling last after Vaser Liposuction?", a: "Most visible swelling and bruising peak in the first week and subside significantly within 4 to 6 weeks. Residual microscopic swelling continues to resolve over 3 to 6 months." },
+        { q: "Do I need to wear a compression garment?", a: "Yes, wearing a medical compression garment is required for 4 to 6 weeks. It supports skin retraction, reduces swelling, and helps secure the new body contours." },
+        { q: "Can removed fat come back?", a: "The fat cells removed during Vaser Liposuction are permanently extracted. However, remaining fat cells in the body can still expand. Maintaining a stable weight and lifestyle is essential to preserve your results." }
+      ],
+      [
+        { q: "Este Vaser Liposuction o operație de slăbit?", a: "Nu, Vaser Liposuction este destinată conturării corporale de înaltă definiție și eliminării țintite a grăsimii, nu scăderii în greutate. Este ideală pentru pacienți aproape de greutatea ideală." },
+        { q: "Ce zone pot fi tratate cu Vaser Liposuction?", a: "Procedura poate fi aplicată pe abdomen, talie, șolduri (flancuri), spate, brațe, coapse și bărbie, ajutând la definirea liniilor musculare naturale." },
+        { q: "Cât timp durează umflăturile după Vaser Liposuction?", a: "Majoritatea umflăturilor și a vânătăilor ating un vârf în prima săptămână și scad semnificativ în 4-6 săptămâni. Edemul rezidual se remite complet în 3-6 luni." },
+        { q: "Este necesar să port un corset de compresie?", a: "Da, purtarea corsetului medical de compresie este necesară timp de 4-6 săptămâni pentru a sprijini retracția pielii și a reduce edemul." },
+        { q: "Se poate întoarce grăsimea eliminată?", a: "Celulele adipoase extrase prin Vaser Liposuction sunt îndepărtate definitiv. Totuși, celulele rămase își pot mări volumul. Menținerea unei greutăți stabile este esențială." }
+      ],
+      [
+        { q: "¿Es la liposucción Vaser una cirugía para perder peso?", a: "No, está diseñada para el contorno corporal y la eliminación de grasa localizada, no para perder peso. Se recomienda para personas cercanas a su peso ideal." },
+        { q: "¿Qué áreas se pueden tratar con la liposucción Vaser?", a: "Se puede tratar el abdomen, la cintura, los flancos, la espalda, los brazos, los muslos y la papada, definiendo las líneas musculares." },
+        { q: "¿Cuánto dura la hinchazón después de la liposucción Vaser?", a: "La hinchazón y los hematomas alcanzan su punto máximo en la primera semana y disminuyen notablemente en 4 a 6 semanas. El edema residual se resuelve en 3 a 6 meses." },
+        { q: "¿Tengo que usar una prenda de compresión?", a: "Sí, es obligatorio usar una faja de compresión médica durante 4 a 6 semanas para ayudar a la retracción de la piel y disminuir la hinchazón." },
+        { q: "¿Puede volver la grasa extraída?", a: "Las células grasas extraídas no vuelven a aparecer. Sin embargo, las células grasas restantes pueden expandirse si aumenta de peso. Mantener un estilo de vida saludable es clave." }
+      ],
+      [
+        { q: "La liposuzione Vaser è un intervento per perdere peso?", a: "No, è indicata per il rimodellamento corporeo e la rimozione del grasso localizzato, non per il dimagrimento. È ideale per pazienti vicini al peso forma." },
+        { q: "Quali aree possono essere trattate con la liposuzione Vaser?", a: "Le aree trattabili includono addome, vita, fianchi, schiena, braccia, cosce e sottomento (doppio mento), migliorando la definizione muscolare." },
+        { q: "Quanto dura il gonfiore dopo la liposuzione Vaser?", a: "Il picco di gonfiore e lividi si verifica nella prima settimana e si riduce notevolmente entro 4-6 settimane. Il gonfiore residuo scompare entro 3-6 mesi." },
+        { q: "È necessario indossare una guaina compressiva?", a: "Sì, l'uso di una guaina medica compressiva è richiesto per 4-6 settimane per sostenere la retrazione cutanea e ridurre il gonfiore." },
+        { q: "Il grasso rimosso può riformarsi?", a: "Le cellule di grasso rimosse sono eliminate permanentemente. Tuttavia, le cellule adipose rimanenti possono ingrandirsi in caso di aumento di peso. È essenziale mantenere un peso stabile." }
+      ],
+      [
+        { q: "Является ли Vaser-липосакция операцией для похудения?", a: "Нет, Vaser-липосакция предназначена для контурирования тела и удаления локального жира, а не для снижения веса. Она подходит пациентам с нормальным весом." },
+        { q: "Какие зоны можно обработать с помощью Vaser-липосакции?", a: "Процедура подходит для живота, талии, боков, спины, рук, бедер и второго подбородка, помогая подчеркнуть рельеф мышц." },
+        { q: "Как долго держится отек после Vaser-липосакции?", a: "Основной отек и синяки спадают в течение 4–6 недель. Микроотеки могут сохраняться и постепенно уходить на протяжении 3–6 месяцев." },
+        { q: "Нужно ли носить компрессионное белье?", a: "Да, ношение компрессионного белья обязательно в течение 4–6 недель. Оно помогает подтяжке кожи и формированию новых контуров." },
+        { q: "Может ли удаленный жир вернуться?", a: "Удаленные жировые клетки не восстанавливаются. Однако оставшиеся клетки могут увеличиваться в объеме при наборе веса. Важно поддерживать стабильный вес." }
+      ],
+      [
+        { q: "La liposuccion Vaser est-elle une chirurgie de perte de poids ?", a: "Non, la liposuccion Vaser est conçue pour le remodelage corporel et l'élimination des graisses localisées, et non pour perdre du poids. Elle est idéale pour les patients proches de leur poids idéal." },
+        { q: "Quelles zones peuvent être traitées avec la liposuccion Vaser ?", a: "Il est possible de traiter l'abdomen, la taille, les flancs, le dos, les bras, les cuisses et le menton pour définir les contours musculaires." },
+        { q: "Combien de temps dure le gonflement après une liposuccion Vaser ?", a: "Le gonflement et les ecchymoses culminent la première semaine et diminuent en 4 à 6 semaines. L'œdème résiduel disparaît en 3 à 6 mois." },
+        { q: "Dois-je porter un vêtement de compression ?", a: "Oui, le port d'une gaine de compression médicale est requis pendant 4 à 6 semaines pour favoriser la rétraction de la peau et réduire l'œdème." },
+        { q: "La graisse éliminée peut-elle revenir ?", a: "Les cellules graisseuses extraites sont définitivement éliminées. Cependant, les cellules restantes peuvent grossir en cas de prise de poids. Un mode de vie sain est indispensable." }
+      ],
+      [
+        { q: "Ist Vaser-Liposuktion eine Methode zur Gewichtsabnahme?", a: "Nein, sie dient der Körperkonturierung und gezielten Fettabsaugung, nicht der Gewichtsreduktion. Sie eignet sich für Patienten nahe ihrem Idealgewicht." },
+        { q: "Welche Bereiche können mit Vaser-Liposuktion behandelt werden?", a: "Behandelt werden können Bauch, Taille, Flanken, Rücken, Arme, Oberschenkel und Kinn, um die natürlichen Muskelkonturen zu betonen." },
+        { q: "Wie lange dauert die Schwellung nach der Vaser-Liposuktion?", a: "Schwellungen und Blutergüsse nehmen in der ersten Woche ab und gehen in 4 bis 6 Wochen deutlich zurück. Restschwellungen klingen in 3 bis 6 Monaten ab." },
+        { q: "Muss ich ein Kompressionsmieder tragen?", a: "Ja, das Tragen eines medizinischen Kompressionsmieders ist für 4 bis 6 Wochen erforderlich, um die ausgedehnte Hautstraffung zu unterstützen." },
+        { q: "Kann das abgesaugte Fett wiederkommen?", a: "Die entfernten Fettzellen sind dauerhaft verloren. Die verbleibenden Fettzellen können sich jedoch bei Gewichtszunahme ausdehnen. Ein stabiles Gewicht ist entscheidend." }
+      ]
+    )
   },
   {
     id: 'double-chin-liposuction',

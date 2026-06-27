@@ -179,6 +179,9 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
       return REVIEWERS.bariatric;
     }
     if (cat === 'plastic') {
+      if (id === 'vaser-liposuction') {
+        return REVIEWERS.editorial;
+      }
       return REVIEWERS.plastic;
     }
     if (cat === 'andrology') {
@@ -802,6 +805,9 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                     }
                     if (cat === 'bariatric') {
                       return blogPosts.filter((b: any) => b.category === 'Bariatric');
+                    }
+                    if (cat === 'plastic') {
+                      return blogPosts.filter((b: any) => b.category === 'Safety' || b.category === 'Concierge');
                     }
                     if (cat === 'specialist') {
                       if (id.includes('cyberknife') || id.includes('oncology') || id.includes('cancer')) {

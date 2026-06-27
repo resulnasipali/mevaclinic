@@ -165,6 +165,9 @@ export default async function TreatmentPage({ params }: Props) {
       return REVIEWERS.bariatric;
     }
     if (cat === 'plastic') {
+      if (id === 'vaser-liposuction') {
+        return REVIEWERS.editorial;
+      }
       return REVIEWERS.plastic;
     }
     if (cat === 'andrology') {
