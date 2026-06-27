@@ -79,7 +79,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
   const isEn = lang === 'en';
 
   const getClinicalDisclaimer = () => {
-    const slug = treatment?.slug;
+    const slug = treatment?.slug || treatment?.id;
     const category = treatment?.category;
 
     if (slug === 'organ-transplant-turkey') {
