@@ -3,6 +3,7 @@
 import React from 'react';
 import { ShieldCheck, GraduationCap, Star } from 'lucide-react';
 import { REVIEWERS, type Reviewer } from '@/data/reviewersData';
+import { tUI } from '@/utils/uiTranslations';
 
 function getInitials(name: string): string {
   if (!name) return 'MC';
@@ -55,7 +56,7 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
   const bio = isNewDoctor ? revObj.clinicalFocus : getVal('bio');
   const label = isNewDoctor ? revObj.publicRole : getVal('reviewedLabel');
   const cases = isNewDoctor ? null : (reviewer.cases || null);
-  const reviewScope = isNewDoctor ? revObj.reviewScope : null;
+  const reviewScope = isNewDoctor ? tUI(revObj.reviewScope, safeLang) : null;
   const fullName = isNewDoctor ? revObj.displayName : (reviewer.fullName || name);
   const image = isNewDoctor ? null : reviewer.image;
 

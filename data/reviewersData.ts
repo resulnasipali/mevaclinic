@@ -394,7 +394,7 @@ export const DOCTOR_REGISTRY: Record<string, DoctorReviewer> = {
     specialty: "Plastic, Reconstructive and Aesthetic Surgery Specialist",
     publicRole: "Medical Review",
     clinicalFocus: "Vaser Liposuction & High-Def Body Sculpting",
-    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    reviewScope: "medicalReviewDisclaimer",
     isOrganization: false,
     schemaType: "Physician"
   },
@@ -404,7 +404,7 @@ export const DOCTOR_REGISTRY: Record<string, DoctorReviewer> = {
     specialty: "Obesity & Metabolic Surgery Specialist",
     publicRole: "Medical Review",
     clinicalFocus: "Laparoscopic Bariatric Surgery & Stomach Reduction Pathways",
-    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    reviewScope: "medicalReviewDisclaimer",
     isOrganization: false,
     schemaType: "Physician"
   },
@@ -414,7 +414,7 @@ export const DOCTOR_REGISTRY: Record<string, DoctorReviewer> = {
     specialty: "Hair Restoration & FUE/DHI Micro-Transplant Specialist",
     publicRole: "Medical Review",
     clinicalFocus: "Advanced Hair Follicle Implantation & Trichology",
-    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    reviewScope: "medicalReviewDisclaimer",
     isOrganization: false,
     schemaType: "Physician"
   },
@@ -424,7 +424,7 @@ export const DOCTOR_REGISTRY: Record<string, DoctorReviewer> = {
     specialty: "Implantology & Digital Restorative Dentistry Specialist",
     publicRole: "Medical Review",
     clinicalFocus: "Full-Arch Implant Rehabilitation & Smile Makeover Planning",
-    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    reviewScope: "medicalReviewDisclaimer",
     isOrganization: false,
     schemaType: "Physician"
   },
@@ -434,7 +434,7 @@ export const DOCTOR_REGISTRY: Record<string, DoctorReviewer> = {
     specialty: "Urology & Reconstructive Andrology Specialist",
     publicRole: "Medical Review",
     clinicalFocus: "Male Health, Genitourinary Reconstruction & Non-Surgical Enhancements",
-    reviewScope: "Reviewed for candidacy criteria, treatment pathway, recovery expectations and patient safety language. Final suitability and the operating medical team are confirmed after consultation, test results and availability.",
+    reviewScope: "medicalReviewDisclaimer",
     isOrganization: false,
     schemaType: "Physician"
   },
