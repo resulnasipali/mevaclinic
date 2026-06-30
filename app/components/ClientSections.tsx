@@ -52,7 +52,7 @@ export default function ClientSections({ lang }: ClientSectionsProps) {
             {tUI('Start Your Medical Evaluation', lang)}
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto text-sm md:text-lg mb-6 md:mb-10 leading-relaxed font-light">
-            {tUI('Get a preliminary clinical assessment in 30 seconds.', lang)}
+            {tUI('Get a preliminary suitability check in 30 seconds.', lang)}
           </p>
           <Link
             href={`/${lang}/quiz`}

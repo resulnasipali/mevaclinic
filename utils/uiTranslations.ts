@@ -1108,7 +1108,7 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Commencez votre évaluation médicale",
     "de": "Starten Sie Ihre medizinische Bewertung"
   },
-  "Get a preliminary clinical assessment in 30 seconds.": {
+  "Get a preliminary suitability check in 30 seconds.": {
     "en": "Get a preliminary suitability check in 30 seconds.",
     "ro": "Verifică-ți eligibilitatea preliminară în 30 de secunde.",
     "es": "Verifica tu idoneidad preliminar en 30 segundos.",
