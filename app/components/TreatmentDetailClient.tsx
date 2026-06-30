@@ -83,6 +83,9 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
     const slug = treatment?.slug || treatment?.id;
     const category = treatment?.category;
 
+    if (slug === 'ivf-cyprus-special') {
+      return tUI('Hospital-based procedures and fertility-related coordination are supported through structured clinical safety standards, transparent planning, and medically responsible international patient coordination where clinically appropriate.', lang);
+    }
     if (slug === 'organ-transplant-turkey') {
       return tUI('Meva Clinic provides coordination and second medical opinion support only. Eligibility, donor compatibility, ethics committee review and surgical decisions are made exclusively by authorized transplant centers and licensed transplant specialists.', lang);
     }
@@ -713,8 +716,13 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                           {tUI('Potential Risks & Complications', lang)}
                         </h3>
                         <p className="text-xs text-gray-500 mb-6 leading-relaxed">
-                          {treatment?.id === 'vaser-liposuction'
-                            ? tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under structured surgical safety standards.', lang)
+                          {treatment?.id === 'vaser-liposuction' || treatment?.id === 'ivf-cyprus-special'
+                            ? tUI(
+                                treatment?.id === 'ivf-cyprus-special'
+                                  ? 'In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of fertility-treatment considerations, procedural risks, and patient-specific clinical factors under structured clinical safety standards.'
+                                  : 'In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under structured surgical safety standards.',
+                                lang
+                              )
                             : tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under JCI patient safety standards.', lang)}
                         </p>
                         <div className="space-y-4">
