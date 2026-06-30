@@ -10,47 +10,59 @@ const t = (en: any) => ({
 
 export const gastricSleeveClinical = {
   suitability: t([
-    "Patients with a Body Mass Index (BMI) of 40 or higher, or a BMI of 35 or higher accompanied by serious weight-related medical conditions such as Type 2 diabetes, severe hypertension, or obstructive sleep apnea.",
-    "Individuals who have documented unsuccessful attempts at sustained weight loss through structured dietary, exercise, and behavioral modification programs.",
-    "Patients who are mentally and emotionally prepared to commit to permanent lifestyle adjustments, including lifetime dietary changes and regular post-operative clinical follow-ups."
+    "Patients exploring gastric sleeve in Turkey with a Body Mass Index (BMI) of 40 or higher, or a BMI of 35 or higher accompanied by metabolic weight-related comorbidities.",
+    "Candidates for weight loss surgery Turkey who have struggled to sustain reduction through medically supervised lifestyle, diet, and exercise programs.",
+    "International bariatric patients seeking structured bariatric surgery travel planning and comprehensive Istanbul bariatric surgery coordination.",
+    "Individuals requiring a laparoscopic gastric sleeve as a primary metabolic intervention to support appetite regulation and hormonal changes.",
+    "Patients demonstrating psychological readiness and a firm commitment to long-term bariatric follow-up and dietary adjustment."
   ]),
   contraindications: t([
-    "Severe, uncontrolled psychiatric conditions or active substance abuse/dependence that may impair the patient's capacity to adhere to life-long post-operative nutritional guidelines.",
-    "Active gastrointestinal disease such as untreated severe esophagitis, severe gastroesophageal reflux disease (GERD) with large hiatal hernia, or active peptic ulcer disease.",
-    "Severe coagulation disorders, advanced portal hypertension with gastric varices, or systemic medical conditions that make general anesthesia or laparoscopic surgery high-risk.",
-    "Pregnancy or planning to become pregnant within 18 months post-operatively."
+    "Severe, untreated psychiatric disorders, clinical depression, or active substance dependence that compromises adherence to long-term post-operative guidelines.",
+    "Severe portal hypertension with active gastric varices, severe uncorrected coagulopathy, or advanced cardiovascular/pulmonary disease that precludes safe general anesthesia.",
+    "Active gastrointestinal bleeding, large unreduced hiatal hernias with severe esophagitis, or untreated Barrett’s esophagus where a bypass may be clinically preferred.",
+    "Pregnancy or planning to conceive within the first 12 to 18 months of the rapid post-operative weight-loss phase.",
+    "Inability or unwillingness to commit to permanent nutritional supplementation, liquid/pureed gastric sleeve diet stages, or clinical monitoring."
   ]),
   preOpEvaluation: t([
-    "Complete Laboratory Panels: Complete Blood Count (CBC), liver and kidney function tests, fasting glucose, HbA1c, lipid profile, thyroid panel, and comprehensive vitamin/mineral levels.",
-    "Cardiopulmonary Screening: Electrocardiogram (EKG), chest X-ray, and pulmonary function tests to evaluate anesthesia tolerance.",
-    "Gastrointestinal Diagnostics: Upper GI endoscopy (esophagogastroduodenoscopy or EGD) to assess the stomach lining, check for hiatal hernias, and screen for Helicobacter pylori infection.",
-    "Multidisciplinary Clearance: Mandatory pre-operative consultations and clearance from a cardiologist, pulmonologist, endocrinologist, bariatric dietitian, and clinical psychologist."
+    "Comprehensive Bariatric Consultation: In-depth medical history review and obesity surgery Istanbul planning by the bariatric team.",
+    "Advanced Gastrointestinal Diagnostics: Upper endoscopy (EGD) where appropriate to assess stomach lining, hiatal hernias, and screen for H. pylori.",
+    "Multidisciplinary Medical Assessment for Gastric Sleeve: Specialist evaluations from cardiology, pulmonology, endocrinology, and anesthesiology.",
+    "Clinical Laboratory Profile: Full blood count, metabolic panel, liver/kidney function tests, thyroid profile, HbA1c, lipid panel, and baseline vitamin screenings.",
+    "Psychological & Nutritional Readiness: Nutritional counseling to prepare patients for progressive post-op diet stages and lifestyle change."
   ]),
   risksComplications: t([
-    "Staple Line Leak: A rare clinical complication where gastric fluid leaks from the staple line into the abdominal cavity, requiring urgent medical intervention or surgical revision.",
-    "Hemorrhage: Bleeding along the stapled edge of the stomach, which is monitored closely post-operatively and managed conservatively or surgically if necessary.",
-    "Stenosis or Stricture: Narrowing of the new gastric sleeve due to scar tissue, which may cause persistent nausea, vomiting, and difficulty swallowing, requiring endoscopic dilation.",
-    "Nutritional Deficiencies: Chronic malabsorption of essential micro-nutrients, particularly Vitamin B12, iron, calcium, and Vitamin D, necessitating lifetime daily supplementation.",
-    "New-Onset or Worsened GERD: Persistent acid reflux due to the increased intra-gastric pressure within the narrowed stomach tube."
+    "Staple Line Leak: Gastric fluid leakage into the abdominal cavity, managed via endoscopic stents, drainage, or surgical revision.",
+    "Bleeding & Hemostasis Risks: Post-operative hemorrhage along the stapled edge, monitored closely and managed surgically or conservatively.",
+    "Gastric Sleeve Stricture: Persistent narrowing or twisting of the sleeve tube due to scar tissue, requiring endoscopic balloon dilation.",
+    "Nutritional Deficiencies: Inadequate absorption of iron, calcium, folate, and vitamins (B12, D), requiring structured daily supplementation.",
+    "New-Onset Reflux (GERD): Increased intra-gastric pressure or anatomical changes that may cause or worsen acid reflux symptoms.",
+    "Thromboembolic Complications: Deep vein thrombosis (DVT) or pulmonary embolism, mitigated via early mobilization and anticoagulants."
   ]),
   procedureSteps: t([
-    { title: "Anesthesia & Monitoring", desc: "The patient is placed under general anesthesia, continuously monitored by a board-certified anesthesiologist throughout the procedure." },
-    { title: "Laparoscopic Access", desc: "Multiple small, minimally invasive incisions (typically 5-12mm) are made in the upper abdomen to insert trocars, a laparoscope, and specialized surgical instruments." },
-    { title: "Gastric Mobilization", desc: "The blood vessels and attachments along the greater curvature of the stomach are carefully dissected using ultrasonic energy devices to mobilize the gastric body." },
-    { title: "Stomach Resection", desc: "A calibration tube (bougie, typically 36F to 40F) is inserted into the stomach to guide the resection. The surgeon uses triple-row titanium linear staplers to divide and remove approximately 80% of the stomach." },
-    { title: "Leak Testing and Hemostasis", desc: "An intraoperative leak test (methylene blue or air leak test) is performed to verify staple line integrity. The surgical edge is inspected for absolute hemostasis." },
-    { title: "Closure", desc: "The resected portion of the stomach is extracted, the abdominal cavity is irrigated, trocars are removed, and the small incisions are closed with absorbable sutures." }
+    { title: "Anesthesia & Access", desc: "The patient is placed under general anesthesia. Minimally invasive laparoscopic incisions (5-12mm) are made to introduce camera and specialized tools." },
+    { title: "Gastric Mobilization", desc: "The blood vessels and attachments along the greater curvature of the stomach are mobilized using advanced energy devices from the pylorus to the esophagus." },
+    { title: "Sleeve Resection", desc: "A bougie calibration tube (bougie, typically 36F-40F) is placed. A surgical linear stapler resects approximately 80% of the stomach, creating a narrow sleeve." },
+    { title: "Leak Verification", desc: "An intraoperative leak test (dye or air insufflation) is performed to inspect staple line integrity and verify complete hemostasis." },
+    { title: "Extraction & Closure", desc: "The resected stomach portion is removed, port sites are closed using absorbable sutures, and local anesthetic is applied for pain control." }
   ]),
   recoveryTimeline: t([
-    { time: "Days 1-2 (Hospital)", desc: "Immediate post-op monitoring, pain management using patient-controlled analgesia, early ambulation within hours of surgery to prevent DVT, and initiation of a clear liquid diet." },
-    { time: "Days 3-5 (Hotel)", desc: "Discharge from the hospital to a premium partner hotel. Transition to a full liquid diet (unsweetened protein shakes, strained broths). Patients are advised to walk frequently." },
-    { time: "Weeks 2-4 (Transition)", desc: "Introduction of pureed and soft foods (mashed vegetables, soft eggs, pureed fish). Most patients return to light desk work and resume gentle physical activities." },
-    { time: "Months 3+ (Stability)", desc: "Transition to solid foods in small, protein-rich portions. Rapid weight loss occurs, and patients experience increased energy levels alongside metabolic recovery." }
+    { time: "Days 1-2 (Hospital)", desc: "In-hospital monitoring at our partner facility. Focus on early mobilization, pain control, and introduction of clear liquids." },
+    { time: "Days 3-5 (Hotel)", desc: "Transition to a premium hotel in Istanbul. Initiation of full liquids (strained soups, protein shakes) and regular light walking." },
+    { time: "Weeks 2-4 (Pureed)", desc: "Gradual return home. Transition to pureed/soft foods (eggs, mashed vegetables, fish). Avoid carbonation and drinking with meals." },
+    { time: "Months 2-6 (Solid Food)", desc: "Transition to small, structured solid meals focusing on lean proteins. Continued metabolic improvement and significant excess weight loss." }
   ]),
-  realisticOutcomes: t("On average, patients lose approximately 60% to 70% of their excess body weight within the first 12 to 18 months following a gastric sleeve procedure. Beyond weight reduction, clinical studies demonstrate a high rate of remission or significant improvement in weight-related comorbidities: up to 80% of Type 2 diabetes cases, 70% of hypertension cases, and over 85% of obstructive sleep apnea cases show clinical resolution. Long-term weight stability is highly dependent on adherence to daily nutritional protocols and regular physical activity."),
-  revisionPolicy: t("Meva Clinic provides a comprehensive 12-month post-operative follow-up program, including regular consultations with bariatric surgeons and clinical dietitians. In cases of insufficient weight loss, weight regain, or persistent clinical complications (such as severe strictures or intractable GERD), patients undergo a complete diagnostic workup (barium swallow, endoscopy). Any subsequent revisional procedure, such as conversion of the sleeve to a Roux-en-Y gastric bypass, is proposed only after a multidisciplinary medical board review and individual anatomical evaluation."),
-  doctorNote: t("Bariatric surgery is not an instant cure for obesity; it is a powerful metabolic tool designed to assist you in making permanent lifestyle alterations. The physical restriction of the gastric sleeve must be matched by a conscious, daily commitment to protein-first nutrition, adequate hydration, and behavioral change. Our team is here to support you at every stage of this transformation journey."),
-  medicalDisclaimer: t("The medical information provided on this page is for educational purposes only and should not be used as a substitute for professional medical advice, diagnosis, or treatment. Eligibility for bariatric surgery is determined solely by qualified medical practitioners after a comprehensive, face-to-face clinical evaluation."),
+  realisticOutcomes: t("Weight reduction outcomes vary by patient and depend on lifestyle change, nutrition, and bariatric follow-up. On average, patients can achieve a reduction of 60% to 70% of excess body weight within the first 12 to 18 months. Clinical studies indicate significant improvement or remission of obesity-related comorbidities, including Type 2 diabetes, hypertension, and sleep apnea. No weight-loss amount, cure, or health outcome can be guaranteed."),
+  revisionPolicy: t("In cases of insufficient weight loss, severe reflux, or structural complications, a comprehensive diagnostic workup is performed. Revisional procedures (such as conversion to a gastric bypass) may be considered after multidisciplinary bariatric board review and personalized evaluation."),
+  doctorNote: t("Sleeve gastrectomy is a powerful tool to reset your metabolism, but it is not a shortcut. Long-term weight stability and metabolic health require a lifetime commitment to healthy eating, structural exercise, hydration, and nutritional follow-up support."),
+  medicalDisclaimer: t("The medical information on this page is for educational purposes only. Final eligibility, treatment planning, and surgical decisions are made exclusively after clinical assessment, blood tests, and face-to-face evaluations by the bariatric team."),
+  faq: t([
+    { q: "Who is a candidate for gastric sleeve in Turkey?", a: "Generally, candidates are individuals with a BMI of 40 or higher, or a BMI of 35 or higher with obesity-related health concerns. All candidates undergo a thorough medical assessment for gastric sleeve, including metabolic panels, cardiology clearance, and nutritional reviews, to determine if bariatric surgery is appropriate." },
+    { q: "How is the sleeve gastrectomy Istanbul pathway structured?", a: "Our Istanbul bariatric surgery coordination includes remote document review, pre-op testing (blood panels, cardiology, upper endoscopy), in-person surgeon consultation, a laparoscopic gastric sleeve procedure with 2-3 nights of hospital recovery, and hotel stay before return-home planning." },
+    { q: "What are the primary gastric sleeve risks?", a: "Potential risks include staple-line leak, bleeding, stricture (narrowing of the stomach), gastroesophageal reflux (GERD), and long-term nutritional deficiencies. These risks are minimized through advanced surgical techniques (like triple-row stapling) and post-op guidance." },
+    { q: "What are the gastric sleeve diet stages after surgery?", a: "The diet progresses from clear liquids (first week) to full liquids (second week), followed by pureed and soft foods (weeks 3-4), before transitioning to small, structured solid meals. Patients must focus on high protein, avoid drinking liquids with meals, and take daily vitamin supplements." },
+    { q: "Is long-term bariatric follow-up required?", a: "Yes, regular follow-up is critical. Our coordination programs include 12 months of nutritional support and coaching. Continued medical checks and annual blood panels are recommended to prevent vitamin deficiencies and support weight maintenance." },
+    { q: "How much weight will I lose after weight loss surgery Turkey?", a: "On average, patients can lose 60% to 70% of excess weight in 12-18 months. However, individual weight-loss outcomes vary by patient and depend heavily on post-operative lifestyle modifications, dietary habits, and long-term follow-up adherence. No specific result can be guaranteed." }
+  ]),
   references: t([
     {
       text: "American Society for Metabolic and Bariatric Surgery (ASMBS) and International Federation for the Surgery of Obesity and Metabolic Disorders (IFSO): Joint Consensus Statement on Indications for Bariatric Surgery (2022).",
@@ -66,11 +78,6 @@ export const gastricSleeveClinical = {
       text: "The Lancet Diabetes & Endocrinology: 'Long-term metabolic and weight-loss outcomes of sleeve gastrectomy versus Roux-en-Y gastric bypass' (By-Band-Sleeve Trial, 2025).",
       url: "https://pubmed.ncbi.nlm.nih.gov/40622470/",
       type: "study"
-    },
-    {
-      text: "World Health Organization (WHO): Technical Report Series on the Prevention and Management of the Global Epidemic of Obesity.",
-      url: "https://www.who.int/news-room/fact-sheets/detail/obesity-and-overweight",
-      type: "source"
     }
   ])
 };
