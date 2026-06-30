@@ -117,11 +117,11 @@ const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
       </div>
 
       {/* Mobile Sticky Action Bar */}
-      <div className={`md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-[90] py-3 px-4 flex gap-3 shadow-[0_-5px_20px_rgba(0,0,0,0.05)] transition-transform duration-300 ${isHeroVisible ? 'translate-y-full' : 'translate-y-0'}`} role="complementary" aria-label={tUI("Quick contact actions", lang)}>
+      <div className={`md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-100 z-[90] py-3 px-4 flex gap-3 shadow-[0_-8px_24px_rgba(0,0,0,0.07)] transition-transform duration-300 ${isHeroVisible ? 'translate-y-full' : 'translate-y-0'}`} role="complementary" aria-label={tUI("Quick contact actions", lang)}>
         <button 
           onClick={openWhatsApp}
           aria-label={tUI("Contact us on WhatsApp", lang)}
-          className="flex-1 bg-[#25D366] text-white py-3.5 rounded-xl font-bold flex items-center justify-center text-sm shadow-md"
+          className="flex-1 bg-[#25D366] text-white py-3.5 rounded-2xl font-semibold tracking-wide flex items-center justify-center text-sm shadow-[0_4px_12px_rgba(37,211,102,0.28)]"
         >
           <MessageCircle size={18} className="mr-2" />
           {tUI("Talk to us", lang)}
@@ -130,7 +130,7 @@ const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
           href={`tel:${phoneNumber}`}
           onClick={() => pushToDataLayer('phone_click', { location: 'sticky_bar' })}
           aria-label={tUI("Get a price quote", lang)}
-          className="flex-1 bg-prime text-white py-3.5 rounded-xl font-bold flex items-center justify-center text-sm shadow-md"
+          className="flex-1 bg-prime text-white py-3.5 rounded-2xl font-semibold tracking-wide flex items-center justify-center text-sm shadow-[0_4px_12px_rgba(11,22,38,0.18)]"
         >
           <Phone size={18} className="mr-2" />
           {tUI("Get Quote", lang)}

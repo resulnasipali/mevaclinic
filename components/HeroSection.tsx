@@ -95,6 +95,8 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0b1626] via-[#0b1626]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0b1626] via-transparent to-transparent" />
+        {/* Subtle radial gold glow — quiet luxury depth */}
+        <div className="absolute inset-0" style={{background: 'radial-gradient(ellipse at 18% 52%, rgba(197,160,89,0.045) 0%, transparent 58%)'}} aria-hidden="true" />
       </div>
 
       <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10 w-full pt-4 pb-8 md:py-20">
@@ -102,7 +104,7 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
 
           {/* ── Left: Copy ── */}
           <div className="lg:col-span-7 animate-fade-up">
-            <div className="inline-flex items-center space-x-3 py-1.5 md:py-2 px-4 md:px-5 rounded-full bg-white/5 backdrop-blur-sm text-white/90 text-xs md:text-[13px] font-medium tracking-wide mb-3 md:mb-8 border border-white/10">
+            <div className="inline-flex items-center space-x-3 py-1.5 md:py-2 px-4 md:px-5 rounded-full bg-white/5 backdrop-blur-sm text-white/90 text-xs md:text-[13px] font-medium tracking-wide mb-3 md:mb-8 border border-white/20 shadow-sm">
               <Star size={14} className="text-accent fill-accent/20" aria-hidden="true" />
               <span>{t.badge}</span>
             </div>
@@ -131,7 +133,9 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
                 { text: t.bullet4, hideMobile: false }
               ].map((b, i) => (
                 <div key={i} className={`items-center gap-3 ${b.hideMobile ? 'hidden sm:flex' : 'flex'}`}>
-                  <CheckCircle2 size={16} className="text-accent opacity-80 flex-shrink-0" aria-hidden="true" />
+                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/10 flex items-center justify-center">
+                    <CheckCircle2 size={11} className="text-accent" aria-hidden="true" />
+                  </span>
                   <span>{b.text}</span>
                 </div>
               ))}
@@ -142,7 +146,7 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
               <button
                 type="button"
                 onClick={() => document.getElementById('free-assessment')?.scrollIntoView({ behavior: 'smooth' })}
-                className="w-full bg-accent hover:bg-yellow-500 text-[#0b1626] font-bold py-3.5 px-6 rounded-full shadow-lg transition-all text-center text-sm flex items-center justify-center gap-2"
+                className="w-full bg-accent hover:bg-yellow-500 text-[#0b1626] font-semibold tracking-wide py-3.5 px-6 rounded-full shadow-lg transition-all text-center text-sm flex items-center justify-center gap-2"
               >
                 {tUI("Start Free Assessment", lang)}
               </button>
@@ -160,7 +164,7 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
           {/* ── Right: Lead Form Container with anchor id ── */}
           <div id="free-assessment" className="lg:col-span-5 animate-fade-up [animation-delay:200ms] relative z-10 scroll-mt-24">
             <div className="backdrop-blur-md bg-white/95 rounded-[1.8rem] md:rounded-[2.5rem] p-6 md:p-8 lg:p-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)] border border-white/20 transition-all duration-500 hover:scale-[1.01] relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-full h-2 bg-accent" aria-hidden="true" />
+              <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#B89742] via-accent to-[#C5A059]" aria-hidden="true" />
 
               {isSubmitted ? (
                 <div className="py-10 text-center animate-fade-in">
@@ -262,7 +266,7 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="w-full bg-prime hover:bg-[#112440] disabled:opacity-60 text-white font-medium py-4 rounded-full shadow-lg transition-all hover:-translate-y-1 active:scale-95 flex justify-center items-center gap-2"
+                        className="w-full bg-prime hover:bg-[#112440] disabled:opacity-60 text-white font-medium tracking-wide py-4 rounded-full shadow-lg transition-all hover:-translate-y-1 active:scale-95 flex justify-center items-center gap-2"
                       >
                         {isSubmitting ? (
                           <span className="w-5 h-5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
