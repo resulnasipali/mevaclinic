@@ -12,7 +12,7 @@
     "clinicalSpecialties": "Specialități Clinice",
     "surgicalSpecialist": "Chirurgical & Specialist",
     "mevaExcellence": "Excelența Meva Clinic",
-    "jciDesc": "Meva Clinic susține tratamente premium prin spitale partenere acreditate JCI în Istanbul, Turcia. Toate procedurile includ transferuri private, cazare premium la Bosfor și suport dedicat pentru pacienți, cu o politică transparentă de prețuri."
+    "jciDesc": "Meva Clinic susține tratamente premium prin spitale partenere acreditate JCI în Istanbul, Turcia. Toate procedurile includ transferuri private, cazare premium la Bosfor și suport dedicat pentru pacienți, cu prețuri transparente ale pachetelor."
   },
   "Hero": {
     "title": "Bine ați venit la Meva Clinic",
@@ -90,8 +90,6 @@
     "turanBio": "Expert în Hollywood Smile, implantologie și estetică de reconstrucție 3D. Peste 8.000 implanturi realizate cu succes.",
     "erdemAccred": "Acreditare Internațională",
     "turanAccred": "Membru European EACMFS",
-    "interviewErdem": "Interviu Video Dr. Erdem",
-    "interviewTuran": "Expertiza Dr. Turan",
     "internationalPatients": "Pacienți Internaționali"
   }
 }

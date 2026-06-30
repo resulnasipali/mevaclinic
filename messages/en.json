@@ -12,7 +12,7 @@
     "clinicalSpecialties": "Clinical Specialties",
     "surgicalSpecialist": "Surgical & Specialist",
     "mevaExcellence": "Meva Clinic Excellence",
-    "jciDesc": "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include private transfers, premium Bosphorus accommodation, and dedicated care support with a transparent patient pricing policy."
+    "jciDesc": "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All procedures include private transfers, premium Bosphorus accommodation, and dedicated care support with transparent package pricing."
   },
   "Hero": {
     "title": "Welcome to Meva Clinic",
@@ -90,8 +90,6 @@
     "turanBio": "Hollywood Smile, implantology and 3D reconstruction aesthetics expert. 8000+ implants successfully completed.",
     "erdemAccred": "International Board Accreditation",
     "turanAccred": "EACMFS European Member",
-    "interviewErdem": "Video Interview Dr. Erdem",
-    "interviewTuran": "Dr. Turan's Expertise",
     "internationalPatients": "International Patients"
   }
 }
