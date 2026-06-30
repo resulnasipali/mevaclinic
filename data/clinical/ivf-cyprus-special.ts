@@ -11,7 +11,7 @@ const t = (en: any) => ({
 export const ivfCyprusSpecialClinical = {
   suitability: t([
     "Couples or individuals seeking international fertility treatment abroad with structured care coordination.",
-    "Patients requiring initial fertility assessment, diagnostic reviews, and remote case planning in Istanbul, Turkey.",
+    "Patients exploring initial fertility assessment, diagnostic review, or remote case planning through Istanbul/Turkey coordination where appropriate.",
     "Patients exploring Istanbul and Cyprus IVF coordination pathways to optimize their fertility journey.",
     "Candidates seeking advanced ICSI, egg/sperm donor options, or genetic screening (PGT) where legally and medically indicated.",
     "Patients with previous unsuccessful IVF cycles who require customized stimulation and laboratory protocols."
@@ -51,7 +51,7 @@ export const ivfCyprusSpecialClinical = {
     { time: "Embryo Transfer Day", desc: "A brief, non-surgical outpatient procedure. Followed by a short period of clinical rest before returning to your hotel." },
     { time: "Weeks 1-2 Post-Transfer", desc: "Maintain light activities, avoid strenuous exercise, and continue prescribed progesterone support. A blood pregnancy test is scheduled 10-12 days post-transfer." }
   ]),
-  realisticOutcomes: t("Ovarian stimulation and embryo development outcomes vary significantly. No pregnancy or success outcome can be guaranteed. Long-term performance and success rates depend on maternal age, ovarian reserve, partner or donor semen quality, uterine receptivity, and lifestyle factors. The coordinated pathways in Istanbul and Cyprus provide structured, JCI-standard medical support, but final clinical eligibility and success depend on individual biological factors and specialist medical assessment."),
+  realisticOutcomes: t("Ovarian stimulation and embryo development outcomes vary significantly. No pregnancy or success outcome can be guaranteed. Long-term performance and success rates depend on maternal age, ovarian reserve, partner or donor semen quality, uterine receptivity, and lifestyle factors. The coordinated pathways in Istanbul and Cyprus provide structured clinical safety standards, but final clinical eligibility and success depend on individual biological factors and specialist medical assessment."),
   revisionPolicy: t("If a stimulation cycle yields insufficient follicles, the cycle may be canceled or modified prior to retrieval. In the event of a failed cycle or non-implantation, a clinical review is conducted to adjust future hormone protocols, laboratory techniques, or alternative pathway options."),
   doctorNote: t("Successful IVF planning requires a highly personalized approach. We focus on thorough pre-assessment and optimizing uterine and ovarian health before travel. Our coordination pathway is designed to minimize stress, which is a key clinical factor in reproductive success."),
   medicalDisclaimer: t("The clinical information on this page is for educational purposes only. Final eligibility, legal suitability, and treatment planning for Istanbul and Cyprus IVF pathways are determined exclusively after medical record review and direct clinical evaluation by fertility specialists."),
