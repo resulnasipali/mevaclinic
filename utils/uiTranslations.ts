@@ -892,14 +892,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Procédure de classe mondiale",
     "de": "Weltklasse-Verfahren"
   },
-  "Experience S-Tier medical care in our internationally accredited facilities.": {
-    "en": "Experience S-Tier medical care in our internationally accredited facilities.",
-    "ro": "Experimentați îngrijire medicală de nivel S în facilitățile noastre acreditate internațional.",
-    "es": "Experimenta atención médica de nivel S en nuestras instalaciones acreditadas internacionalmente.",
-    "it": "Vivi cure mediche di livello S nelle nostre strutture accreditate a livello internazionale.",
-    "ru": "Получите медицинское обслуживание уровня S в наших международно аккредитованных учреждениях.",
-    "fr": "Découvrez des soins médicaux de niveau S dans nos établissements accrédités à l'international.",
-    "de": "Erleben Sie medizinische Versorgung der Spitzenklasse in unseren international akkreditierten Einrichtungen."
+  "Experience exceptional medical care in our internationally accredited facilities.": {
+    "en": "Experience exceptional medical care in our internationally accredited facilities.",
+    "ro": "Experimentați îngrijire medicală de excepție în facilitățile noastre acreditate internațional.",
+    "es": "Experimente una atención médica excepcional en nuestras instalaciones acreditadas internacionalmente.",
+    "it": "Vivi cure mediche eccezionali nelle nostre strutture accreditate a livello internazionale.",
+    "ru": "Получите исключительное медицинское обслуживание в наших международно аккредитованных учреждениях.",
+    "fr": "Découvrez des soins médicaux exceptionnels dans nos établissements accrédités à l'international.",
+    "de": "Erleben Sie außergewöhnliche medizinische Versorgung in unseren international akkreditierten Einrichtungen."
   },
   "Tourism & Return": {
     "en": "Tourism & Return",
@@ -955,14 +955,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Diagnostic médical instantané",
     "de": "Sofortige medizinische Diagnose"
   },
-  "Discover your ideal treatment plan in 60 seconds. Our advanced AI maps your needs to our S-Tier surgical protocols.": {
-    "en": "Discover your ideal treatment plan in 60 seconds. Our advanced AI maps your needs to our S-Tier surgical protocols.",
-    "ro": "Descoperiți planul ideal de tratament în 60 de secunde. AI-ul nostru avansat mapează nevoile dvs. la protocoalele noastre chirurgicale.",
-    "es": "Descubre tu plan de tratamiento ideal en 60 segundos. Nuestra avanzada IA adapta tus necesidades a nuestros protocolos quirúrgicos de nivel S.",
-    "it": "Scopri il tuo piano di trattamento ideale in 60 secondi. La nostra avanzata intelligenza artificiale associa le tue esigenze ai nostri protocolli chirurgici di livello S.",
-    "ru": "Откройте для себя идеальный план лечения за 60 секунд. Наш продвинутый ИИ сопоставляет ваши потребности с нашими хирургическими протоколами уровня S-Tier.",
-    "fr": "Découvrez votre plan de traitement idéal en 60 secondes. Notre IA avancée associe vos besoins à nos protocoles chirurgicaux de niveau S.",
-    "de": "Entdecken Sie Ihren idealen Behandlungsplan in 60 Sekunden. Unsere fortschrittliche KI ordnet Ihre Bedürfnisse unseren S-Tier-Chirurgieprotokollen zu."
+  "Discover your ideal treatment plan in 60 seconds. Our advanced AI maps your needs to our expert clinical protocols.": {
+    "en": "Discover your ideal treatment plan in 60 seconds. Our advanced AI maps your needs to our expert clinical protocols.",
+    "ro": "Descoperiți planul ideal de tratament în 60 de secunde. AI-ul nostru avansat mapează nevoile dvs. la protocoalele noastre clinice de specialitate.",
+    "es": "Descubra su plan de tratamiento ideal en 60 segundos. Nuestra avanzada IA adapta sus necesidades a nuestros protocolos clínicos expertos.",
+    "it": "Scopri il tuo piano di trattamento ideale in 60 secondi. La nostra avanzata intelligenza artificiale associa le tue esigenze ai nostri protocolli clinici esperti.",
+    "ru": "Откройте для себя идеальный план лечения за 60 секунд. Наш продвинутый ИИ сопоставляет ваши потребности с нашими экспертными клиническими протоколами.",
+    "fr": "Découvrez votre plan de traitement idéal en 60 secondes. Notre IA avancée associe vos besoins à nos protocoles cliniques experts.",
+    "de": "Entdecken Sie Ihren idealen Behandlungsplan in 60 Sekunden. Unsere fortschrittliche KI ordnet Ihre Bedürfnisse unseren klinischen Fachprotokollen zu."
   },
   "Start Free Analysis": {
     "en": "Start Free Analysis",
@@ -2034,14 +2034,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Tests Pré/Postopératoires",
     "ru": "Пре/Постоперационные Тесты"
   },
-  "Required medical tests, cardiology review and anesthesia evaluation are coordinated as part of the treatment plan where clinically indicated.": {
-    "en": "Required medical tests, cardiology review and anesthesia evaluation are coordinated as part of the treatment plan where clinically indicated.",
-    "ro": "Analizele medicale necesare, evaluarea cardiologică și anestezică sunt coordonate ca parte a planului de tratament atunci când este indicat clinic.",
-    "de": "Erforderliche medizinische Tests, kardiologische Untersuchungen und Anästhesiebewertungen werden als Teil des Behandlungsplans koordiniert, sofern klinisch indiziert.",
-    "es": "Las pruebas médicas requeridas, la revisión de cardiología y la evaluación de anestesia se coordinan como parte del plan de tratamiento cuando esté clínicamente indicado.",
-    "it": "Gli esami medici richiesti, la valutazione cardiologica e la valutazione anestesiologica sono coordinati como parte del piano di trattamento ove clinicamente indicato.",
-    "fr": "Les examens médicaux requis, le bilan cardiologique et l'évaluation anesthésique sont coordonnés dans le cadre du plan de traitement lorsque cela est cliniquement indiqué.",
-    "ru": "Необходимые медицинские анализы, кардиологическое обследование и оценка анестезиолога координируются как часть плана лечения по клиническим показаниям."
+  "Required medical tests and clinical checks are coordinated as part of your care pathway where clinically indicated.": {
+    "en": "Required medical tests and clinical checks are coordinated as part of your care pathway where clinically indicated.",
+    "ro": "Analizele medicale necesare și verificările clinice sunt coordonate ca parte a parcursului de îngrijire atunci când este indicat clinic.",
+    "de": "Erforderliche medizinische Tests und klinische Untersuchungen werden im Rahmen Ihres Behandlungspfads koordiniert, sofern klinisch indiziert.",
+    "es": "Las pruebas médicas requeridas y los controles clínicos se coordinan como parte de su ruta de atención cuando esté clínicamente indicado.",
+    "it": "Gli esami medici richiesti e i controlli clinici sono coordinati all'interno del percorso di cura ove clinicamente indicato.",
+    "fr": "Les examens médicaux requis et les contrôles cliniques sont coordonnés dans le cadre de votre parcours de soins lorsque cela est cliniquement indiqué.",
+    "ru": "Необходимые медицинские анализы и клинические обследования координируются как часть плана лечения по клиническим показаниям."
   },
   "The Premium Treatment": {
     "en": "The Premium Treatment",
@@ -2133,14 +2133,14 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "Votre partenaire de confiance pour l'excellence médicale en Turquie. Soins premium pour patients internationaux pour une planification de traitement sécurisée et un soutien axé sur le confort.",
     "ru": "Ваш надежный партнер в области медицинского передового опыта в Турции. Премиальное обслуживание международных пациентов для безопасного планирования лечения и комфортной поддержки."
   },
-  "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All coordination plans include private patient transfers, premium partner hotel accommodation, and dedicated patient care team support with a transparent patient pricing policy.": {
-    "en": "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All coordination plans include private patient transfers, premium partner hotel accommodation, and dedicated patient care team support with a transparent patient pricing policy.",
-    "de": "Meva Clinic unterstützt erstklassige Behandlungen durch JCI-akkreditierte Partnerkrankenhäuser in Istanbul, Türkei. Alle Koordinationspläne umfassen private Patiententransfers, Hotelunterbringung bei Premium-Partnern und engagierte Unterstützung durch das Patientenbetreuungsteam mit einer transparenten Preispolitik.",
-    "ro": "Meva Clinic sprijină tratamente premium prin spitale partenere acreditate JCI din Istanbul, Turcia. Toate planurile de coordonare includ transferuri private de pacienți, cazare la hoteluri partenere premium și asistență dedicată din partea echipei de îngrijire a pacienților, cu o politică transparentă de prețuri.",
-    "es": "Meva Clinic ofrece soporte para tratamientos premium a través de hospitales asociados acreditados por la JCI en Estambul, Turquía. Todos los planes de coordinación incluyen traslados privados de pacientes, alojamiento en hoteles asociados premium y el apoyo de un equipo dedicado de atención al paciente con una política de precios transparente.",
-    "it": "Meva Clinic supporta trattamenti premium attraverso ospedali partner accreditati JCI a Istanbul, Turchia. Tutti i piani di coordinamento includono trasferimenti privati dei pazienti, sistemazione in hotel partner premium e il supporto di un team dedicato alla cura dei pazienti con una politica dei prezzi trasparente.",
-    "fr": "Meva Clinic prend en charge des traitements premium via des hôpitaux partenaires accrédités JCI à Istanbul, Turquie. Tous les plans de coordination comprennent des transferts privés de patients, un hébergement dans des hôtels partenaires premium et le soutien d'une équipe dédiée aux soins des patients avec une politique tarifaire transparente.",
-    "ru": "Meva Clinic координирует премиальное лечение в партнерских больницах с аккредитацией JCI в Стамбуле, Турция. Все программы включают частные трансферы пациентов, проживание в отелях-партнерах премиум-класса и поддержку выделенной команды по уходу с прозрачной политикой ценообразования."
+  "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All coordination plans include private patient transfers, premium partner hotel accommodation, and dedicated patient care team support with transparent package pricing.": {
+    "en": "Meva Clinic supports premium treatments through JCI-accredited partner hospitals in Istanbul, Turkey. All coordination plans include private patient transfers, premium partner hotel accommodation, and dedicated patient care team support with transparent package pricing.",
+    "de": "Meva Clinic unterstützt erstklassige Behandlungen durch JCI-akkreditierte Partnerkrankenhäuser in Istanbul, Türkei. Alle Koordinationspläne umfassen private Patiententransfers, Hotelunterbringung bei Premium-Partnern und engagierte Unterstützung durch das Patientenbetreuungsteam mit transparenter Paketpreisgestaltung.",
+    "ro": "Meva Clinic sprijină tratamente premium prin spitale partenere acreditate JCI din Istanbul, Turcia. Toate planurile de coordonare includ transferuri private de pacienți, cazare la hoteluri partenere premium și asistență dedicată din partea echipei de îngrijire a pacienților, cu prețuri transparente ale pachetelor.",
+    "es": "Meva Clinic ofrece soporte para tratamientos premium a través de hospitales asociados acreditados por la JCI en Estambul, Turquía. Todos los planes de coordinación incluyen traslados privados de pacientes, alojamiento en hoteles asociados premium y el apoyo de un equipo dedicado de atención al paciente con precios de paquetes transparentes.",
+    "it": "Meva Clinic supporta trattamenti premium attraverso ospedali partner accreditati JCI a Istanbul, Turchia. Tutti i piani di coordinamento includono trasferimenti privati dei pazienti, sistemazione in hotel partner premium e il supporto di un team dedicato alla cura dei pazienti con prezzi dei pacchetti trasparenti.",
+    "fr": "Meva Clinic prend en charge des traitements premium via des hôpitaux partenaires accrédités JCI à Istanbul, Turquie. Tous les plans de coordination comprennent des transferts privés de patients, un hébergement dans des hôtels partenaires premium et le soutien d'une équipe dédiée aux soins des patients avec des tarifs de forfaits transparents.",
+    "ru": "Meva Clinic координирует премиальное лечение в партнерских больницах с аккредитацией JCI в Стамбуле, Турция. Все программы включают частные трансферы пациентов, проживание в отелях-партнерах премиум-класса и поддержку выделенной команды по уходу с прозрачным ценообразованием пакетов услуг."
   },
   "en": {
     "en": "en",
@@ -4865,15 +4865,6 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Play Video Interview",
       "ro": "Redă interviul video"
 },
-  "Video Interview Dr. Erdem": {
-    "en": "Video Interview Dr. Erdem",
-    "es": "Video Interview Dr. Erdem",
-    "it": "Video Interview Dr. Erdem",
-    "ru": "Video Interview Dr. Erdem",
-    "fr": "Video Interview Dr. Erdem",
-    "de": "Video Interview Dr. Erdem",
-      "ro": "Interviu video Dr. Erdem"
-},
   "Bariatric Surgeon": {
     "en": "Bariatric Surgeon",
     "es": "Bariatric Surgeon",
@@ -4900,15 +4891,6 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "fr": "International Board Accreditation",
     "de": "International Board Accreditation",
       "ro": "Acreditare a Consiliului Internațional"
-},
-  "Dr. Turan's Expertise": {
-    "en": "Dr. Turan's Expertise",
-    "es": "Dr. Turan's Expertise",
-    "it": "Dr. Turan's Expertise",
-    "ru": "Dr. Turan's Expertise",
-    "fr": "Dr. Turan's Expertise",
-    "de": "Dr. Turan's Expertise",
-      "ro": "Expertiza Dr. Turan"
 },
   "Hollywood Smile, implantology and 3D reconstruction aesthetics expert. 8000+ implante successfully completed.": {
     "en": "Hollywood Smile, implantology and 3D reconstruction aesthetics expert. 8000+ implante successfully completed.",
@@ -5565,15 +5547,15 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Our Board & Medical Team",
       "ro": "Consiliul nostru și echipa medicală"
 },
-  "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.": {
-    "en": "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.",
-    "es": "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.",
-    "it": "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.",
-    "ru": "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.",
-    "fr": "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.",
-    "de": "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring S-Tier medical excellence to Istanbul.",
-      "ro": "Clinica Meva este condusă de un consiliu de chirurgi și profesioniști în medicină recunoscuți la nivel internațional. Cu decenii de experiență combinată, oferim excelență medicală de nivel S la Istanbul."
-},
+  "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring exceptional clinical standards to Istanbul.": {
+    "en": "Meva Clinic is powered by a board of internationally recognized surgeons and medical professionals. With decades of combined experience, we bring exceptional clinical standards to Istanbul.",
+    "es": "Meva Clinic está respaldada por un consejo de cirujanos y profesionales médicos reconocidos internacionalmente. Con décadas de experiencia combinada, traemos estándares clínicos excepcionales a Estambul.",
+    "it": "Meva Clinic è guidata da un comitato di chirurghi e professionisti medici riconosciuti a livello internazionale. Con decenni di esperienza combinata, portiamo a Istanbul standard clinici eccezionali.",
+    "ru": "Клиника Meva опирается на совет международно признанных хирургов и медицинских специалистов. Благодаря десятилетиям совместного опыта мы привносим в Стамбул исключительные клинические стандарты.",
+    "fr": "Meva Clinic s'appuie sur un comité de chirurgiens et de professionnels de la santé reconnus au niveau international. Forts de plusieurs décennies d'expérience combinée, nous apportons des normes cliniques exceptionnelles à Istanbul.",
+    "de": "Meva Clinic wird von einem Gremium international anerkannter Chirurgen und medizinischer Fachkräfte getragen. Mit jahrzehntelanger kombinierter Erfahrung bringen wir außergewöhnliche klinische Standards nach Istanbul.",
+    "ro": "Clinica Meva este condusă de un consiliu de chirurgi și profesioniști în medicină recunoscuți la nivel internațional. Cu decenii de experiență combinată, oferim standarde clinice excepționale la Istanbul."
+  },
   "Meet the Medical Board": {
     "en": "Meet the Medical Board",
     "es": "Conozca la Junta Médica",
@@ -6654,6 +6636,69 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ru": "Фокус клинического обзора",
       "fr": "Objectif de la revue clinique",
       "de": "Klinischer Prüfungsschwerpunkt"
+    },
+    "Request Received! A specialist will contact you.": {
+      "en": "Request Received! A specialist will contact you.",
+      "ro": "Solicitare primită! Un coordonator medical vă va contacta.",
+      "es": "¡Solicitud recibida! Un especialista se pondrá en contacto con usted.",
+      "it": "Richiesta ricevuta! Un coordinatore medico ti contatterà.",
+      "ru": "Запрос получен! Наш специалист свяжется с вами.",
+      "fr": "Demande reçue ! Un conseiller médical vous contactera.",
+      "de": "Anfrage erhalten! Ein medizinischer Koordinator wird Sie kontaktieren."
+    },
+    "Design Your Care Plan": {
+      "en": "Design Your Care Plan",
+      "ro": "Personalizează planul de îngrijire",
+      "es": "Diseñe su plan de atención",
+      "it": "Progetta il tuo piano di cura",
+      "ru": "Разработайте ваш план лечения",
+      "fr": "Concevez votre plan de soins",
+      "de": "Gestalten Sie Ihren Pflegeplan"
+    },
+    "Activate Evaluation": {
+      "en": "Activate Evaluation",
+      "ro": "Inițiază evaluarea",
+      "es": "Iniciar evaluación",
+      "it": "Inizia valutazione",
+      "ru": "Начать оценку",
+      "fr": "Lancer l'évaluation",
+      "de": "Bewertung starten"
+    },
+    "Private Airport Transfer": {
+      "en": "Private Airport Transfer",
+      "ro": "Transfer Privat Aeroport",
+      "es": "Traslado privado al aeropuerto",
+      "it": "Trasferimento privato dall'aeroporto",
+      "fr": "Transfert aéroport privé",
+      "de": "Privater Flughafentransfer",
+      "ru": "Частный трансфер из аэропорта"
+    },
+    "My Care Journey to Istanbul": {
+      "en": "My Care Journey to Istanbul",
+      "ro": "Călătoria mea pentru tratament la Istanbul",
+      "de": "Meine Behandlungsreise nach Istanbul",
+      "es": "Mi viaje de atención médica a Estambul",
+      "it": "Il mio viaggio di cura a Istanbul",
+      "fr": "Mon parcours de soins à Istanbul",
+      "ru": "Моя поездка на лечение в Стамбул"
+    },
+    "Private Board Access": {
+      "en": "Private Board Access",
+      "ro": "Acces Comisie Privată",
+      "es": "Acceso Privado a la Junta",
+      "it": "Accesso Riservato al Comitato",
+      "ru": "Закрытый доступ к совету",
+      "fr": "Accès Privé au Conseil",
+      "de": "Beiratszugang für Privatpatienten"
+    },
+    "Consultation request received! Our patient care coordinator will contact you shortly.": {
+      "en": "Consultation request received! Our patient care coordinator will contact you shortly.",
+      "ro": "Solicitarea de consultație a fost primită! Coordonatorul nostru de asistență pentru pacienți vă va contacta în cel mai scurt timp.",
+      "de": "Konsultationsanfrage erhalten! Unser Koordinator für die Patientenbetreuung wird sich in Kürze mit Ihnen in Verbindung setzen.",
+      "es": "¡Solicitud de consulta recibida! Nuestro coordinador de atención al paciente se pondrá en contacto con usted en breve.",
+      "it": "Richiesta di consulenza ricevuta! Il nostro coordinatore dell'assistenza ai pazienti ti contatterà a breve.",
+      "fr": "Demande de consultation reçue ! Notre coordinateur des soins aux patients vous contactera sous peu.",
+      "ru": "Запрос на консультацию получен! Наш координатор по уходу за пациентами свяжется с вами в ближайшее время."
     }
 };
 

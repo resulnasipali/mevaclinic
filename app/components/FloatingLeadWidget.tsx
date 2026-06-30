@@ -30,7 +30,7 @@ export default function FloatingLeadWidget() {
           >
             <div className="flex justify-between items-start mb-4">
               <div>
-                <h3 className="font-bold text-[#0b1626] font-serif text-xl">{isEn ? 'Instant VIP Quote' : 'Ofertă VIP Instantă'}</h3>
+                <h3 className="font-bold text-[#0b1626] font-serif text-xl">{isEn ? 'Instant Price Quote' : 'Ofertă de Preț Instantă'}</h3>
                 <p className="text-gray-500 text-sm mt-1">{isEn ? 'Our medical experts reply in 2 mins.' : 'Experții noștri răspund în 2 minute.'}</p>
               </div>
               <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600 bg-gray-50 p-1 rounded-full">

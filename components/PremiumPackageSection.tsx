@@ -97,7 +97,7 @@ const PremiumPackageSection = ({ lang = 'en' }: { lang?: string }) => {
               </div>
               <div className="sm:ml-4 pt-1">
                 <h3 className="text-base sm:text-lg font-bold text-prime mb-1 sm:mb-2">{tUI("Pre/Post-Operative Tests", lang)}</h3>
-                 <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Required medical tests, cardiology review and anesthesia evaluation are coordinated as part of the treatment plan where clinically indicated.", lang)}</p>
+                 <p className="hidden sm:block text-xs text-gray-500 font-sans leading-relaxed">{tUI("Required medical tests and clinical checks are coordinated as part of your care pathway where clinically indicated.", lang)}</p>
               </div>
             </div>
           </div>

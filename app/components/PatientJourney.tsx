@@ -8,7 +8,7 @@ export default function PatientJourney({ lang }: { lang: string }) {
   const steps = [
     {
       icon: <Plane size={32} />,
-      title: tUI("VIP Airport Transfer", lang),
+      title: tUI("Private Airport Transfer", lang),
       desc: tUI("Step off the plane into a private patient transfer. No stress, no waiting.", lang),
       img: "/images/vip-transfer.jpeg"
     },
@@ -21,7 +21,7 @@ export default function PatientJourney({ lang }: { lang: string }) {
     {
       icon: <Stethoscope size={32} />,
       title: tUI("World-Class Procedure", lang),
-      desc: tUI("Experience S-Tier medical care in our internationally accredited facilities.", lang),
+      desc: tUI("Experience exceptional medical care in our internationally accredited facilities.", lang),
       img: "/images/hospital.webp"
     },
     {

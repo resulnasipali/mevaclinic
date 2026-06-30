@@ -43,7 +43,7 @@ export default function AiDiagnosticModal({ lang }: { lang: string }) {
               {tUI("Instant Medical Diagnosis", lang)}
             </h2>
             <p className="text-gray-400 text-lg mb-8 max-w-xl">
-              {tUI("Discover your ideal treatment plan in 60 seconds. Our advanced AI maps your needs to our S-Tier surgical protocols.", lang)}
+              {tUI("Discover your ideal treatment plan in 60 seconds. Our advanced AI maps your needs to our expert clinical protocols.", lang)}
             </p>
 
             {step === 0 && (

@@ -216,7 +216,7 @@ export default function BlogArchiveClient({ lang }: BlogArchiveClientProps) {
                
                <div className="max-w-3xl mx-auto text-center">
                   <div className="inline-flex items-center space-x-2 py-1.5 px-3 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-[10px] font-black tracking-[0.2em] uppercase mb-6">
-                     <span>{tUI("VIP Board Access", lang)}</span>
+                     <span>{tUI("Private Board Access", lang)}</span>
                   </div>
                   
                   <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 tracking-tight leading-tight">

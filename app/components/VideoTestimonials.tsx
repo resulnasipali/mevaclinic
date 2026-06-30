@@ -12,7 +12,7 @@ export default function VideoTestimonials({ isEn, lang = 'en' }: VideoTestimonia
   const videos = [
     {
       img: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&q=80",
-      title: tUI("My VIP Journey to Istanbul", lang),
+      title: tUI("My Care Journey to Istanbul", lang),
       name: "Sarah Jenkins, UK"
     },
     {

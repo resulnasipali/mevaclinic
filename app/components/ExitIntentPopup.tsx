@@ -53,7 +53,7 @@ export default function ExitIntentPopup() {
             <div className="absolute bottom-8 left-8 right-8">
               <div className="text-amber-500 font-serif font-bold text-4xl mb-2">10% OFF</div>
               <p className="text-white font-medium text-lg">
-                {isEn ? 'Your Complete VIP Treatment Package' : 'Pachetul Dvs. VIP de Tratament'}
+                {isEn ? 'Your Premium Care Plan' : 'Planul Dvs. Premium de Îngrijire'}
               </p>
             </div>
           </div>
@@ -65,8 +65,8 @@ export default function ExitIntentPopup() {
             </h2>
             <p className="text-gray-600 mb-8 leading-relaxed">
               {isEn 
-                ? 'Get a free, no-obligation medical consultation with our head surgeon right now and claim your exclusive 10% discount on the entire VIP package.'
-                : 'Obțineți o consultație medicală gratuită, fără obligații, cu chirurgul nostru principal chiar acum și revendicați reducerea exclusivă de 10%.'}
+                ? 'Get a free, no-obligation medical consultation right now and claim your exclusive 10% discount on your premium care plan.'
+                : 'Obțineți o consultație medicală gratuită, fără obligații, chiar acum și revendicați reducerea exclusivă de 10% la planul dvs. premium.'}
             </p>
 
             <ul className="space-y-4 mb-8">
