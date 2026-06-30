@@ -107,7 +107,7 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
               <span>{t.badge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-serif text-white font-medium leading-[1.15] md:leading-[1.05] mb-3 md:mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-serif text-white font-medium leading-[1.15] md:leading-[1.05] mb-3 md:mb-8">
               {t.headline}
               <span className="text-accent relative inline-block whitespace-nowrap">
                 {t.headlineAccent}
@@ -122,8 +122,23 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
               {t.subtext}
             </p>
 
+            {/* Bullets grid (Desktop: shows all 4; Mobile: shows 3 clinical trust badges, hiding bullet2) */}
+            <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 sm:gap-5 text-xs sm:text-sm text-white/70 font-light mt-4 mb-6 sm:mb-0">
+              {[
+                { text: t.bullet1, hideMobile: false },
+                { text: t.bullet2, hideMobile: true },
+                { text: t.bullet3, hideMobile: false },
+                { text: t.bullet4, hideMobile: false }
+              ].map((b, i) => (
+                <div key={i} className={`items-center gap-3 ${b.hideMobile ? 'hidden sm:flex' : 'flex'}`}>
+                  <CheckCircle2 size={16} className="text-accent opacity-80 flex-shrink-0" aria-hidden="true" />
+                  <span>{b.text}</span>
+                </div>
+              ))}
+            </div>
+
             {/* Mobile-only CTA Row */}
-            <div className="flex flex-col sm:hidden gap-3 mb-6">
+            <div className="flex flex-col sm:hidden gap-3 mt-6 mb-6">
               <button
                 type="button"
                 onClick={() => document.getElementById('free-assessment')?.scrollIntoView({ behavior: 'smooth' })}
@@ -139,21 +154,6 @@ const HeroSection = ({ t, lang }: HeroSectionProps) => {
               >
                 {tUI("WhatsApp", lang)}
               </a>
-            </div>
-
-            {/* Bullets grid (Desktop: shows all 4; Mobile: shows 3 clinical trust badges, hiding bullet2) */}
-            <div className="flex flex-col sm:grid sm:grid-cols-2 gap-3 sm:gap-5 text-xs sm:text-sm text-white/70 font-light mt-4 mb-6 sm:mb-0">
-              {[
-                { text: t.bullet1, hideMobile: false },
-                { text: t.bullet2, hideMobile: true },
-                { text: t.bullet3, hideMobile: false },
-                { text: t.bullet4, hideMobile: false }
-              ].map((b, i) => (
-                <div key={i} className={`items-center gap-3 ${b.hideMobile ? 'hidden sm:flex' : 'flex'}`}>
-                  <CheckCircle2 size={16} className="text-accent opacity-80 flex-shrink-0" aria-hidden="true" />
-                  <span>{b.text}</span>
-                </div>
-              ))}
             </div>
           </div>
 

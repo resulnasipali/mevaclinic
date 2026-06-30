@@ -16,6 +16,8 @@ const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
   const pathname = usePathname();
   const isEn = lang === 'en';
 
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -23,10 +25,11 @@ const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
 
     const handleScroll = () => {
       setIsVisible(true);
-      window.removeEventListener('scroll', handleScroll);
+      setIsHeroVisible(window.scrollY < 300);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
 
     return () => {
       clearTimeout(timer);
@@ -114,7 +117,7 @@ const FloatingWhatsApp = ({ lang = 'en' }: { lang?: string }) => {
       </div>
 
       {/* Mobile Sticky Action Bar */}
-      <div className="md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-[90] py-3 px-4 flex gap-3 shadow-[0_-5px_20px_rgba(0,0,0,0.05)]" role="complementary" aria-label={tUI("Quick contact actions", lang)}>
+      <div className={`md:hidden fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 z-[90] py-3 px-4 flex gap-3 shadow-[0_-5px_20px_rgba(0,0,0,0.05)] transition-transform duration-300 ${isHeroVisible ? 'translate-y-full' : 'translate-y-0'}`} role="complementary" aria-label={tUI("Quick contact actions", lang)}>
         <button 
           onClick={openWhatsApp}
           aria-label={tUI("Contact us on WhatsApp", lang)}

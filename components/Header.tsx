@@ -288,9 +288,40 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
 
       {/* Mobile Menu Panel */}
       <div className={`fixed inset-0 top-[68px] md:top-[108px] bg-white z-[3000] transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'} overflow-y-auto lg:hidden`}>
-        <div className="p-8 flex flex-col gap-5">
+        <div className="p-8 flex flex-col gap-6">
+           {simpleLinks.map(link => (
+             <Link key={link.path} href={link.path} onClick={() => setIsOpen(false)} className="block text-xl font-semibold text-prime border-b border-gray-100 pb-4">{link.name}</Link>
+           ))}
+           <div className="mt-4">
+              <p className="text-[11px] font-bold tracking-widest text-accent mb-6 uppercase">{tUI('Treatments', lang)}</p>
+              {[...LEFT_CATEGORIES, ...RIGHT_CATEGORIES].map(catKey => {
+                const cfg = CATEGORY_CONFIG[catKey as keyof typeof CATEGORY_CONFIG] as any;
+                const items = groups[catKey] || [];
+                if (!cfg || items.length === 0) return null;
+                const isMobOpen = mobileAccordion === catKey;
+                return (
+                  <div key={catKey} className="mb-2">
+                     <button onClick={() => setMobileAccordion(isMobOpen ? null : catKey)} className="w-full flex justify-between items-center py-3.5 text-prime font-semibold border-b border-gray-50">
+                        <span className="flex items-center gap-3">
+                           {React.createElement(cfg.icon, { size: 20, className: "text-accent opacity-100" })}
+                           {cfg[lang] || cfg['en']}
+                        </span>
+                        <ChevronDown size={16} className={`transition-transform ${isMobOpen ? 'rotate-180 text-accent' : 'text-gray-300'}`} />
+                     </button>
+                     {isMobOpen && (
+                       <div className="pl-8 flex flex-col gap-3 mt-3 mb-2">
+                         {items.map(t => (
+                           <Link key={t.id} href={`/${lang}/treatments/${t.id}`} onClick={() => setIsOpen(false)} className="text-sm font-semibold text-gray-600 hover:text-prime py-1.5 transition-colors">{getSafeVal(t.title, lang)}</Link>
+                         ))}
+                       </div>
+                     )}
+                  </div>
+                );
+              })}
+           </div>
+
            {/* Premium Mobile Language Selector */}
-           <div className="border-b border-gray-100 pb-6 mb-2">
+           <div className="border-t border-gray-100 pt-6 mt-4">
              <p className="text-[11px] font-bold tracking-widest text-accent uppercase mb-3">
                {tUI('Select Language', lang)}
              </p>
@@ -329,37 +360,7 @@ const Header = ({ lang: propLang }: { lang?: string }) => {
              </div>
            </div>
 
-           {simpleLinks.map(link => (
-             <Link key={link.path} href={link.path} onClick={() => setIsOpen(false)} className="block text-xl font-medium text-prime border-b border-gray-100 pb-4">{link.name}</Link>
-           ))}
-           <div className="mt-4">
-              <p className="text-[11px] font-medium tracking-widest text-accent mb-6">{tUI('Treatments', lang)}</p>
-              {[...LEFT_CATEGORIES, ...RIGHT_CATEGORIES].map(catKey => {
-                const cfg = CATEGORY_CONFIG[catKey as keyof typeof CATEGORY_CONFIG] as any;
-                const items = groups[catKey] || [];
-                if (!cfg || items.length === 0) return null;
-                const isMobOpen = mobileAccordion === catKey;
-                return (
-                  <div key={catKey} className="mb-2">
-                     <button onClick={() => setMobileAccordion(isMobOpen ? null : catKey)} className="w-full flex justify-between items-center py-3.5 text-prime font-medium border-b border-gray-50">
-                        <span className="flex items-center gap-3">
-                           {React.createElement(cfg.icon, { size: 18, className: "text-accent opacity-80" })}
-                           {cfg[lang] || cfg['en']}
-                        </span>
-                        <ChevronDown size={16} className={`transition-transform ${isMobOpen ? 'rotate-180 text-accent' : 'text-gray-300'}`} />
-                     </button>
-                     {isMobOpen && (
-                       <div className="pl-8 flex flex-col gap-3 mt-3 mb-2">
-                         {items.map(t => (
-                           <Link key={t.id} href={`/${lang}/treatments/${t.id}`} onClick={() => setIsOpen(false)} className="text-sm font-light text-gray-500 hover:text-prime">{getSafeVal(t.title, lang)}</Link>
-                         ))}
-                       </div>
-                     )}
-                  </div>
-                );
-              })}
-           </div>
-           <button onClick={() => {setIsOpen(false); setIsModalOpen(true);}} className="mt-8 bg-prime text-white font-medium py-4 rounded-full shadow-lg">
+           <button onClick={() => {setIsOpen(false); setIsModalOpen(true);}} className="mt-8 bg-accent text-[#0b1626] font-bold py-4 rounded-full shadow-lg hover:bg-yellow-500 transition-colors">
              {tUI('Free Consultation', lang)}
            </button>
         </div>

@@ -1109,13 +1109,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Starten Sie Ihre medizinische Bewertung"
   },
   "Get a preliminary clinical assessment in 30 seconds.": {
-    "en": "Get a preliminary clinical assessment in 30 seconds.",
-    "ro": "Obține o evaluare clinică preliminară în 30 de secunde.",
-    "es": "Obtén una evaluación clínica preliminar en 30 segundos.",
-    "it": "Ottieni una valutazione clinica preliminare in 30 secondi.",
-    "ru": "Получите предварительную клиническую оценку за 30 секунд.",
-    "fr": "Obtenez une évaluation clinique préliminaire en 30 secondes.",
-    "de": "Erhalten Sie eine vorläufige klinische Einschätzung in 30 Sekunden."
+    "en": "Get a preliminary suitability check in 30 seconds.",
+    "ro": "Verifică-ți eligibilitatea preliminară în 30 de secunde.",
+    "es": "Verifica tu idoneidad preliminar en 30 segundos.",
+    "it": "Verifica la tua idoneità preliminare in 30 secondi.",
+    "ru": "Проверьте предварительную пригодность за 30 секунд.",
+    "fr": "Vérifiez votre compatibilité préliminaire en 30 secondes.",
+    "de": "Prüfen Sie Ihre vorläufige Eignung in 30 Sekunden."
   },
   "Gastric Sleeve (Sleeve Gastrectomy)": {
     "es": "Manga Gástrica",
@@ -4024,13 +4024,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ro": "Închide panoul de chat"
 },
   "Get a free medical quote today. Fast 5-minute response.": {
-    "en": "Get a free medical quote today. Fast 5-minute response.",
-    "es": "Get a free medical quote today. Fast 5-minute response.",
-    "it": "Get a free medical quote today. Fast 5-minute response.",
-    "ru": "Get a free medical quote today. Fast 5-minute response.",
-    "fr": "Get a free medical quote today. Fast 5-minute response.",
-    "de": "Get a free medical quote today. Fast 5-minute response.",
-      "ro": "Obțineți astăzi o cotație medicală gratuită. Răspuns rapid în 5 minute."
+    "en": "Get a free medical quote today. Fast post-op and care support.",
+    "es": "Obtenga una cotización médica gratuita hoy. Soporte rápido postoperatorio y de atención.",
+    "it": "Ottieni un preventivo medico gratuito oggi. Supporto rapido post-operatorio e di cura.",
+    "ru": "Получите бесплатное медицинское предложение сегодня. Быстрая послеоперационная поддержка.",
+    "fr": "Obtenez un devis médical gratuit aujourd'hui. Assistance postopératoire et de soins rapide.",
+    "de": "Erhalten Sie noch heute einen kostenlosen medizinischen Kostenvoranschlag. Schnelle postoperative Unterstützung.",
+    "ro": "Obțineți astăzi o cotație medicală gratuită. Suport rapid postoperator și de îngrijire."
 },
   "Open WhatsApp chat": {
     "en": "Open WhatsApp chat",
@@ -4051,13 +4051,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ro": "Conversație pe WhatsApp"
 },
   "We are online - ask a doctor": {
-    "en": "We are online - ask a doctor",
-    "es": "We are online - ask a doctor",
-    "it": "We are online - ask a doctor",
-    "ru": "We are online - ask a doctor",
-    "fr": "We are online - ask a doctor",
-    "de": "We are online - ask a doctor",
-      "ro": "Suntem online - întreabă un doctor"
+    "en": "Speak to a Patient Coordinator",
+    "es": "Hable con un coordinador de pacientes",
+    "it": "Parla con un coordinatore di pazienti",
+    "ru": "Связаться с координатором пациентов",
+    "fr": "Parler à un coordinateur de patients",
+    "de": "Sprechen Sie mit einem Patientenkoordinator",
+    "ro": "Discutați cu un coordonator de pacienți"
 },
   "Close consultation widget": {
     "en": "Close consultation widget",
@@ -4105,22 +4105,22 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ro": "Vorbește cu noi"
 },
   "Get a price quote": {
-    "en": "Get a price quote",
-    "es": "Get a price quote",
-    "it": "Get a price quote",
-    "ru": "Get a price quote",
-    "fr": "Get a price quote",
-    "de": "Get a price quote",
-      "ro": "Obțineți o cotație de preț"
+    "en": "Speak to our team",
+    "es": "Hable con nuestro equipo",
+    "it": "Parla con il nostro team",
+    "ru": "Связаться с нашей командой",
+    "fr": "Parler à notre équipe",
+    "de": "Sprechen Sie mit unserem Team",
+    "ro": "Discutați cu echipa noastră"
 },
   "Get Quote": {
-    "en": "Get Quote",
-    "es": "Get Quote",
-    "it": "Get Quote",
-    "ru": "Get Quote",
-    "fr": "Get Quote",
-    "de": "Get Quote",
-      "ro": "Obțineți ofertă"
+    "en": "Call Us",
+    "es": "Llámenos",
+    "it": "Chiamaci",
+    "ru": "Позвонить",
+    "fr": "Appelez-nous",
+    "de": "Rufen Sie uns an",
+    "ro": "Sunați-ne"
 },
   "Medical Aesthetics": {
     "en": "Medical Aesthetics",
