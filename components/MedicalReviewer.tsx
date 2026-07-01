@@ -8,6 +8,10 @@ import { tUI } from '@/utils/uiTranslations';
 function getInitials(name: string): string {
   if (!name) return 'MC';
   const cleanName = name.replace(/\./g, ' ');
+  const lowercaseName = cleanName.toLowerCase();
+  if (lowercaseName.includes('board') || lowercaseName.includes('team') || lowercaseName.includes('committee') || lowercaseName.includes('editorial')) {
+    return 'MC';
+  }
   const words = cleanName.split(/\s+/).filter(w => {
     const lw = w.toLowerCase();
     return lw && !['op', 'dr', 'prof', 'dt', 'md', 'uzm', 'clinic', 'medical', 'editorial', 'team', 'board', 'committee', 'governance', 'jci'].includes(lw);
@@ -65,7 +69,7 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
       className="mt-16 mb-8 border border-gray-100 rounded-[2rem] overflow-hidden shadow-sm bg-gradient-to-r from-gray-50 to-white"
       aria-label={safeLang === 'en' ? `Medical Reviewer: ${name}` : `Recenzent Medical: ${name}`}
       itemScope
-      itemType="https://schema.org/Physician"
+      itemType={(name.includes("Board") || name.includes("Team") || name.includes("Committee") || reviewer.isOrganization || reviewer.schemaType === "MedicalOrganization") ? "https://schema.org/MedicalOrganization" : "https://schema.org/Physician"}
     >
       {/* Top accent bar */}
       <div className="h-1 bg-gradient-to-r from-accent via-yellow-300 to-accent" />
@@ -112,7 +116,7 @@ const MedicalReviewer = ({ reviewer, isEn = false, lang = 'en' }: MedicalReviewe
           </h3>
 
           {/* Specialty */}
-          <p className="text-sm font-semibold text-accent mb-2" itemProp="medicalSpecialty">
+          <p className="text-sm font-semibold text-accent mb-2" {...((name.includes("Board") || name.includes("Team") || name.includes("Committee")) ? {} : { itemProp: "medicalSpecialty" })}>
             {specialty}
           </p>
 

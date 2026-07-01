@@ -38,7 +38,7 @@ const MedicalDossier = ({ data, lang = "en", isUnlocked = false, onUnlock }: { d
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 relative z-10">
          <div className="bg-gray-50 p-6 rounded-2xl border border-gray-100">
             <h3 className="text-[10px] font-bold text-accent uppercase tracking-widest mb-4">{tUI("Specialist & Facility", lang)}</h3>
-            <p className="text-sm mb-2"><strong>{tUI("Specialist", lang)}:</strong> {maskDoctorName(data.doctorName || 'MD Harun')}</p>
+            <p className="text-sm mb-2"><strong>{tUI("Specialist", lang)}:</strong> {maskDoctorName(data.doctorName || 'Meva Clinic Specialist Pathway')}</p>
             <p className="text-sm mb-2"><strong>{tUI("Hospital", lang)}:</strong> {data.hospitalName || 'Istanbul Excellence Hospital'}</p>
             <p className="text-sm"><strong>{tUI("Technology", lang)}:</strong> {data.technology || 'Sapphire FUE / CyberKnife S7'}</p>
          </div>

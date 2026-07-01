@@ -50,8 +50,8 @@ const DynamicSEO = ({
     if (roPath === '/ro') roPath = '/';
   }
 
-  const keywordsRo = "clinica istanbul transplant par, pret gastric sleeve turcia, oncologie moderna bariatrica, transplant par Turcia, chirurgie bariatrica Istanbul, implant dentar pret, oncologie Turcia, CyberKnife Romania, gastric sleeve Istanbul, MD Harun, clinica medicala Istanbul, turism medical Turcia";
-  const keywordsEn = "best hair transplant Istanbul, bariatric surgery Turkey, gastric sleeve costs, MD Harun, dental implants Turkey, CyberKnife oncology Istanbul, medical tourism Turkey, organ transplant Istanbul";
+  const keywordsRo = "clinica istanbul transplant par, pret gastric sleeve turcia, oncologie moderna bariatrica, transplant par Turcia, chirurgie bariatrica Istanbul, implant dentar pret, oncologie Turcia, CyberKnife Romania, gastric sleeve Istanbul, clinica medicala Istanbul, turism medical Turcia";
+  const keywordsEn = "best hair transplant Istanbul, bariatric surgery Turkey, gastric sleeve costs, dental implants Turkey, CyberKnife oncology Istanbul, medical tourism Turkey, organ transplant Istanbul";
 
   const medicalBusinessSchema = {
     "@context": "https://schema.org",
@@ -105,18 +105,7 @@ const DynamicSEO = ({
       "Dental Care",
       "Organ Transplant"
     ],
-    "employee": [
-      {
-        "@type": "Physician",
-        "name": "Dr. Hasan Erdem",
-        "medicalSpecialty": "Bariatric Surgery"
-      },
-      {
-        "@type": "Physician",
-        "name": "MD Harun",
-        "medicalSpecialty": "Hair Restoration"
-      }
-    ],
+
     "priceRange": "$$$$",
     "sameAs": [
       "https://www.facebook.com/mevaclinic",
@@ -137,17 +126,10 @@ const DynamicSEO = ({
 
 
   const reviewedByNode = reviewer ? {
-    "@type": "Physician",
-    "name": reviewer.name,
-    "medicalSpecialty": reviewer.specialty,
+    "@type": "MedicalOrganization",
+    "name": reviewer.fullName || reviewer.name,
     "description": reviewer.bio || reviewer.credentials,
-    "url": reviewer.url || "https://snazzy-palmier-4439dc.netlify.app/en/about-us",
-    ...(reviewer.education ? { "alumniOf": { "@type": "EducationalOrganization", "name": reviewer.education } } : {}),
-    ...(reviewer.institution ? { "affiliation": { "@type": "Hospital", "name": reviewer.institution } } : {}),
-    "worksFor": {
-      "@type": "MedicalOrganization",
-      "name": "Meva Clinic Istanbul"
-    }
+    "url": reviewer.url || "https://www.mevaclinic.com/en/about-us"
   } : undefined;
 
   const genericSchema = {

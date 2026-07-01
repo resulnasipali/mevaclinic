@@ -214,7 +214,7 @@ const [selection, setSelection] = useState({
                          </div>
                          <div>
                             <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-1">
-                               {tUI(`Protocol by ${itinerary.doctorName}`, lang)}
+                               {tUI("Clinical Review Pathway", lang)}: {itinerary.doctorName}
                             </p>
                             <ul className="space-y-2 text-prime font-medium">
                                {Object.entries(itinerary.specifics).filter(([key]) => key !== 'reason').map(([key, val]) => (

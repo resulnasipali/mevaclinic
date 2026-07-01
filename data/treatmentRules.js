@@ -1,44 +1,44 @@
 export const treatmentRules = {
   doctors: [
     {
-      id: "dr-harun",
-      name: "MD Harun A.",
-      specialty: "Hair Restoration",
+      id: "hair_review_board",
+      name: "Hair Restoration Medical Review Board",
+      specialty: "Hair Restoration & Trichology",
       successRate: "98.5%",
       experience: "15+ Years",
       protocols: {
         hair_transplant: {
           firstWash: "Day 2",
           restPeriod: "3 Days",
-          reason: "MD Harun A.'s Sapphire protocol requires early micro-circulation check to ensure graft survival."
+          reason: "The Sapphire protocol requires early micro-circulation check to ensure graft survival under optimal clinical pathways."
         }
       }
     },
     {
-      id: "dr-ayse",
-      name: "Dr. Ayşe K.",
-      specialty: "Plastic Surgery",
+      id: "plastic_review_board",
+      name: "Plastic Surgery Medical Review Board",
+      specialty: "Aesthetic & Reconstructive Surgery",
       successRate: "99.1%",
       experience: "12+ Years",
       protocols: {
         plastic_surgery: {
           recoveryStay: "7 Days",
           drainRemoval: "Day 4",
-          reason: "Vertical vector repositioning requires extended initial stabilization for long-term symmetry."
+          reason: "Vertical vector repositioning requires extended initial stabilization for long-term symmetry under standardized clinical guidelines."
         }
       }
     },
     {
-      id: "prof-mehmet",
-      name: "Prof. Dr. Mehmet Y.",
-      specialty: "Oncology",
+      id: "oncology_review_board",
+      name: "Oncology Coordination Medical Review Board",
+      specialty: "Oncology & Radiosurgery",
       successRate: "97.8%",
       experience: "25+ Years",
       protocols: {
         oncology: {
           simulationTime: "24 Hours",
           fractionInterval: "Daily",
-          reason: "S7 CyberKnife protocols are optimized for biological effective dose (BED) maximization."
+          reason: "CyberKnife S7 protocols are optimized for biological effective dose (BED) maximization within our partner hospital network."
         }
       }
     }

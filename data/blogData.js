@@ -78,8 +78,8 @@ export const blogPosts = [
       "de": "Entdecken Sie, wie Saphirklingen die Dichte und das natürliche Aussehen moderner Haartransplantationen revolutionieren."
     },
     "date": "2026-04-15",
-    "author": "MD Harun A.",
-    "authorFullName": "Dr. Harun A."
+    "author": "Meva Clinic Medical Editorial Team",
+    "authorFullName": "Meva Clinic Medical Editorial Team"
   },
   {
     "id": 2,
@@ -160,8 +160,8 @@ export const blogPosts = [
       "de": "Erkundung der submillimetrischen Präzision des S7-Systems bei der Zielerfassung komplexer Tumore."
     },
     "date": "2026-04-10",
-    "author": "Prof. Dr. Mehmet Y.",
-    "authorFullName": "Prof. Dr. Mehmet A."
+    "author": "Meva Clinic Medical Editorial Team",
+    "authorFullName": "Meva Clinic Medical Editorial Team"
   },
   {
     "id": 3,
@@ -242,8 +242,8 @@ export const blogPosts = [
       "de": "Wie extrazelluläre Vesikel die postoperative Genesung und die Geweberegeneration beschleunigen."
     },
     "date": "2026-04-05",
-    "author": "Dr. Ayşe K.",
-    "authorFullName": "Dr. Ayşe Yılmaz"
+    "author": "Meva Clinic Medical Editorial Team",
+    "authorFullName": "Meva Clinic Medical Editorial Team"
   },
   {
     "id": 4,
@@ -652,8 +652,8 @@ export const blogPosts = [
       "de": "Ein Blick auf die neuesten biologischen Protokolle, die in unseren Partner-Einrichtungen in Istanbul verfügbar sind."
     },
     "date": "2026-03-05",
-    "author": "Prof. Dr. Mehmet Y.",
-    "authorFullName": "Prof. Dr. Mehmet A."
+    "author": "Meva Clinic Medical Editorial Team",
+    "authorFullName": "Meva Clinic Medical Editorial Team"
   },
   {
     "id": 9,

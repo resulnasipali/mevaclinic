@@ -3,22 +3,22 @@
     "slug": "gastric-sleeve",
     "title": "Operația de Gastric Sleeve",
     "title_en": "Gastric Sleeve Surgery",
-    "subtitle": "Slăbire Rapidă și Definitivă cu Dr. Cuma.",
-    "subtitle_en": "Rapid and Permanent Weight Loss with Dr. Cuma.",
-    "description": "Intervenția de Gastric Sleeve presupune îndepărtarea a până la 80% din volumul stomacului prin chirurgie laparoscopică minim invazivă. Pachetul Meva Clinic include consultul complet, operația JCI, traducător român 24/7 și transferuri VIP.",
-    "description_en": "Gastric Sleeve involves removing up to 80% of the stomach volume via minimally invasive laparoscopic surgery. Meva Clinic's package includes full consultation, JCI-accredited surgery, 24/7 English support, and VIP transfers.",
+    "subtitle": "Slăbire Rapidă și Definitivă prin Metoda Gastric Sleeve.",
+    "subtitle_en": "Rapid and Permanent Weight Loss via Gastric Sleeve.",
+    "description": "Intervenția de Gastric Sleeve presupune îndepărtarea a până la 80% din volumul stomacului prin chirurgie laparoscopică minim invazivă. Pachetul Meva Clinic include consultul complet, operația la spitale partenere acreditate, traducător român 24/7 și transferuri VIP.",
+    "description_en": "Gastric Sleeve involves removing up to 80% of the stomach volume via minimally invasive laparoscopic surgery. Meva Clinic's package includes full consultation, surgery at JCI-accredited partner hospitals, 24/7 English support, and VIP transfers.",
     "doctorQuote": {
-      "text_en": "Gastric Sleeve is the most reliable metabolic intervention we have. In over 10,000 procedures, our patients achieve an average of 65–75% excess weight loss within 12 months — with a complication rate below 1%.",
-      "text_ro": "Gastric Sleeve este cea mai fiabilă intervenție metabolică pe care o avem. În peste 10.000 de proceduri, pacienții noștri obțin o pierdere medie de 65–75% din greutatea în exces în 12 luni — cu o rată de complicații sub 1%.",
-      "doctor": "Dr. Cuma",
-      "title_en": "Bariatric & Metabolic Surgery Specialist",
-      "title_ro": "Specialist în Chirurgie Bariatrică și Metabolică"
+      "text_en": "Gastric Sleeve is a highly reliable metabolic intervention. Clinical data indicates that patients achieve an average of 65–75% excess weight loss within 12 months under optimal recovery conditions, with a very low complication rate.",
+      "text_ro": "Gastric Sleeve este o intervenție metabolică extrem de fiabilă. Datele clinice arată că pacienții obțin o pierdere medie de 65-75% din excesul de greutate în 12 luni în condiții optime de recuperare, cu o rată de complicații redusă.",
+      "doctor": "Bariatric Surgery Medical Review Board",
+      "title_en": "Clinical Review Note",
+      "title_ro": "Notă de Evaluare Clinică"
     },
     "steps": [
       { "en": "Pre-operative blood tests and cardiac clearance", "ro": "Analize preoperatorii și evaluare cardiacă" },
       { "en": "General anaesthesia administered by certified anaesthesiologist", "ro": "Anestezie generală administrată de anestezist certificat" },
       { "en": "Laparoscopic resection of 80% stomach volume (45–75 min)", "ro": "Rezecție laparoscopică a 80% din stomac (45–75 min)" },
-      { "en": "2 nights ICU-monitored recovery in JCI hospital", "ro": "2 nopți recuperare monitorizată în spital acreditat JCI" },
+      { "en": "2 nights ICU-monitored recovery in accredited partner hospital", "ro": "2 nopți recuperare monitorizată în spital partener acreditat" },
       { "en": "1-year remote follow-up with Meva nutritionist", "ro": "1 an follow-up la distanță cu nutriționistul Meva" }
     ],
     "advantages": [
@@ -33,7 +33,7 @@
     "heroImage": "https://images.unsplash.com/photo-1551076805-e1869033e561?q=80&w=2070&auto=format&fit=crop",
     "scientificReferences": [
       "Schauer, P. R., et al. (2025). 'Bariatric Surgery versus Intensive Medical Therapy for Diabetes'. NEJM.",
-      "JCI Global Clinical Standards for Metabolic Surgery (2026 Edition)."
+      "Global Clinical Standards for Metabolic Surgery (2026 Edition)."
     ]
   },
   {
@@ -45,11 +45,11 @@
     "description": "Gastric Bypass modifică anatomia tractului digestiv limitând și absorbția caloriilor, nu doar volumul alimentar. Ideal pentru obezitate morbidă sau pentru rezolvarea afecțiunilor metabolice extreme.",
     "description_en": "Gastric Bypass modifies digestive anatomy, limiting both calorie absorption and food volume. Ideal for morbid obesity or extreme metabolic conditions.",
     "doctorQuote": {
-      "text_en": "Gastric Bypass remains the gold standard for patients with BMI above 45 or significant metabolic co-morbidities. The Da Vinci robotic system allows us to perform this with sub-millimetre precision, dramatically reducing recovery time.",
-      "text_ro": "Gastric Bypass rămâne standardul de aur pentru pacienții cu IMC peste 45 sau comorbidități metabolice semnificative. Sistemul robotic Da Vinci ne permite să efectuăm aceasta cu precizie sub-milimetrică, reducând dramatic timpul de recuperare.",
-      "doctor": "Prof. Dr. Hakan S.",
-      "title_en": "Bariatric & Metabolic Surgery Specialist",
-      "title_ro": "Specialist în Chirurgie Bariatrică și Metabolică"
+      "text_en": "Gastric Bypass remains the gold standard for patients with BMI above 45 or significant metabolic co-morbidities. Da Vinci robotic systems allow for sub-millimetre precision, supporting highly efficient recovery pathways.",
+      "text_ro": "Gastric Bypass rămâne standardul de aur pentru pacienții cu IMC peste 45 sau comorbidități metabolice semnificative. Sistemele robotice Da Vinci permit o precizie sub-milimetrică, sprijinind o cale de recuperare foarte eficientă.",
+      "doctor": "Bariatric Surgery Medical Review Board",
+      "title_en": "Clinical Review Note",
+      "title_ro": "Notă de Evaluare Clinică"
     },
     "steps": [
       { "en": "Full metabolic panel and gastroscopy pre-operative", "ro": "Panel metabolic complet și gastroscopie preoperatorie" },
@@ -82,11 +82,11 @@
     "description": "Balonul Gastric (Elipse/Allurion) este o capsulă înghițită sau un balon implantat endoscopic, care induce senzația de sațietate precoce.",
     "description_en": "The Gastric Balloon (Elipse/Allurion) is a swallowable capsule or endoscopically implanted balloon that induces early satiety. No scarring, removed after 6 months.",
     "doctorQuote": {
-      "text_en": "For patients who are not yet surgical candidates, the Elipse balloon is a transformative bridge therapy. We see an average of 15–18kg loss in 6 months — enough to then qualify safely for sleeve if needed.",
-      "text_ro": "Pentru pacienții care nu sunt încă candidați chirurgicali, balonul Elipse este o terapie punte transformatoare. Vedem o pierdere medie de 15–18kg în 6 luni — suficient pentru a se califica apoi în siguranță pentru sleeve dacă este necesar.",
-      "doctor": "Dr. Cuma",
-      "title_en": "Bariatric & Metabolic Surgery Specialist",
-      "title_ro": "Specialist în Chirurgie Bariatrică și Metabolică"
+      "text_en": "For patients who are not yet bariatric surgery candidates, the swallowable balloon serves as an effective bridge therapy. Clinical outcomes show significant initial weight loss within 6 months, promoting long-term metabolic health.",
+      "text_ro": "Pentru pacienții care nu sunt încă candidați la chirurgia bariatrică, balonul înghițibil servește ca o terapie eficientă. Rezultatele clinice arată o pierdere inițială semnificativă în greutate în 6 luni, susținând sănătatea metabolică pe termen lung.",
+      "doctor": "Bariatric Surgery Medical Review Board",
+      "title_en": "Clinical Review Note",
+      "title_ro": "Notă de Evaluare Clinică"
     },
     "steps": [
       { "en": "Swallowable capsule or endoscopic balloon placement (20 min)", "ro": "Capsulă înghițibilă sau plasare endoscopică balon (20 min)" },
@@ -114,16 +114,16 @@
     "slug": "meva-mixed-hair",
     "title": "Transplant de Păr Istanbul",
     "title_en": "Hair Transplant Istanbul",
-    "subtitle": "Tehnica Sapphire FUE & DHI cu Dr. Harun.",
-    "subtitle_en": "Sapphire FUE & DHI Technique with Dr. Harun.",
-    "description": "Transplantul de păr prin tehnica Sapphire FUE și DHI este conceput pentru a oferi rezultate cu aspect natural, fără cicatrici vizibile. Dr. Harun are experiență în peste 12.000 de cazuri de transplant de păr.",
-    "description_en": "Hair transplantation via Sapphire FUE and DHI is designed to deliver natural-looking results without visible scarring. Dr. Harun has experience across more than 12,000 hair transplant cases.",
+    "subtitle": "Tehnica Sapphire FUE & DHI în Istanbul.",
+    "subtitle_en": "Sapphire FUE & DHI Technique in Istanbul.",
+    "description": "Transplantul de păr prin tehnica Sapphire FUE și DHI este conceput pentru a oferi rezultate cu aspect natural, fără cicatrici vizibile, realizat în condiții clinice de siguranță.",
+    "description_en": "Hair transplantation via Sapphire FUE and DHI is designed to deliver natural-looking results without visible scarring, performed under optimal clinical safety standards.",
     "doctorQuote": {
       "text_en": "The Sapphire FUE blade opens micro-channels with less tissue trauma than steel blades. Combined with DHI's direct implantation, clinical literature reports high graft survival rates under optimal conditions — designed for natural hairline growth.",
       "text_ro": "Lama Sapphire FUE deschide micro-canale cu mai puțin traumatism tisular față de lamele de oțel. Combinat cu implantarea directă DHI, literatura clinică raportează rate ridicate de supraviețuire a grefelor în condiții optime — concepute pentru o creștere naturală.",
-      "doctor": "Dr. Harun",
-      "title_en": "Hair & Eyebrow Transplant Specialist · Sapphire FUE · DHI",
-      "title_ro": "Specialist Transplant Păr & Sprâncene · Sapphire FUE · DHI"
+      "doctor": "Hair Restoration Medical Review Board",
+      "title_en": "Clinical Review Note",
+      "title_ro": "Notă de Evaluare Clinică"
     },
     "steps": [
       { "en": "Hairline design and graft count planning session", "ro": "Sesiune de design a liniei părului și planificare grefe" },
@@ -153,14 +153,14 @@
     "title_en": "Premium Dental Implants",
     "subtitle": "Zâmbet Hollywoodian. Straumann & Nobel Biocare.",
     "subtitle_en": "Hollywood Smile. Featuring Straumann & Nobel Biocare.",
-    "description": "Reconstrucția maxilo-facială prin implanturi dentare folosește titan pur pentru siguranță și coroane de zirconiu ultra-rezistente. EACMFS Certified Doctors din Istanbul la o fracțiune din costul european.",
-    "description_en": "Maxillofacial reconstruction using dental implants features pure titanium for safety and ultra-resistant zirconium crowns. EACMFS Certified Doctors in Istanbul at a fraction of European costs.",
+    "description": "Reconstrucția maxilo-facială prin implanturi dentare folosește titan pur pentru siguranță și coroane de zirconiu ultra-rezistente, realizată în clinici partenere de elită din Istanbul.",
+    "description_en": "Maxillofacial reconstruction using dental implants features pure titanium for safety and ultra-resistant zirconium crowns, performed at elite partner clinics in Istanbul.",
     "doctorQuote": {
-      "text_en": "With Straumann BLX implants and full-digital smile design, we can plan your entire reconstruction virtually before a single drill touches the bone. Same-day temporaries mean you leave Istanbul smiling.",
-      "text_ro": "Cu implanturi Straumann BLX și design digital complet al zâmbetului, putem planifica întreaga reconstrucție virtual înainte ca vreo freză să atingă osul. Coroanele temporare în aceeași zi înseamnă că plecați din Istanbul zâmbind.",
-      "doctor": "Dr. Ayşe K.",
-      "title_en": "Implantologist · ITI Fellow · Straumann Certified",
-      "title_ro": "Implantolog · Membră ITI · Certificată Straumann"
+      "text_en": "With Straumann BLX implants and full-digital smile design, virtual planning allows for highly accurate reconstruction before the procedure begins. Same-day temporaries mean you leave Istanbul smiling.",
+      "text_ro": "Cu implanturi Straumann BLX și design digital complet al zâmbetului, planificarea virtuală permite o reconstrucție precisă înainte de începerea procedurii. Coroanele temporare din aceeași zi vă permit să plecați zâmbind.",
+      "doctor": "Dental Medical Review Board",
+      "title_en": "Clinical Review Note",
+      "title_ro": "Notă de Evaluare Clinică"
     },
     "steps": [
       { "en": "3D CBCT scan and digital smile design", "ro": "Scanare 3D CBCT și design digital al zâmbetului" },

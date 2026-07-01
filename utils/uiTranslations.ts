@@ -1,12 +1,12 @@
 export const T: Record<string, { en?: string, ro?: string, es?: string, it?: string, ru?: string, fr?: string, de?: string }> = {
   "medicalReviewDisclaimer": {
-    "en": "The listed medical reviewer reflects the specialist review pathway for this treatment page. The operating physician and final treatment plan are confirmed only after medical consultation, medical history review, test results, anesthesia evaluation, and doctor availability.",
-    "ro": "Recenzentul medical listat reflectă calea de examinare specializată pentru această pagină de tratament. Medicul curant și planul final de tratament sunt confirmați numai după consultul medical, revizuirea istoricului medical, rezultatele testelor, evaluarea anesteziei și disponibilitatea medicului.",
-    "es": "El revisor médico indicado refleja la vía de revisión especializada para esta página de tratamiento. El médico tratante y el plan de tratamiento final se confirman solo después de la consulta médica, la revisión del historial médico, los resultados de las pruebas, la evaluación de la anestesia y la disponibilidad del médico.",
-    "it": "Il revisore medico indicato riflette il percorso di revisione specialistica per questa pagina di trattamento. Il medico operatore e il piano di trattamento finale sono confermati solo dopo consultazione medica, revisione dell'anamnesi, risultati dei test, valutazione dell'anestesia e disponibilità del medico.",
-    "ru": "Указанный медицинский рецензент отражает специализированный путь проверки для этой страницы лечения. Лечащий врач и окончательный план лечения подтверждаются только после медицинской консультации, анализа истории болезни, результатов анализов, оценки анестезии и доступности врача.",
-    "fr": "Le réviseur médical indiqué reflète le parcours d'examen spécialisé pour cette page de traitement. Le médecin traitant et le plan de traitement final ne sont confirmés qu'après consultation médicale, examen des antécédents médicaux, résultats des tests, évaluation de l'anesthésie et disponibilité du médecin.",
-    "de": "Der aufgeführte medizinische Prüfer spiegelt den spezialisierten Überprüfungspfad für diese Behandlungsseite wider. Der behandelnde Arzt und der endgültige Behandlungsplan werden erst nach medizinischer Konsultation, Überprüfung der Krankengeschichte, Testergebnissen, Anästhesiebewertung und Verfügbarkeit des Arztes bestätigt."
+    "en": "This page has been reviewed under Meva Clinic’s specialist medical review pathway. Final treatment suitability, operating physician assignment, surgical planning, and medical decisions are confirmed only after medical history review, in-person consultation, diagnostic tests, anesthesia evaluation, and doctor availability.",
+    "ro": "Această pagină a fost revizuită în cadrul căii specializate de evaluare medicală a Clinicii Meva. Eligibilitatea finală pentru tratament, desemnarea medicului operator, planificarea chirurgicală și deciziile medicale sunt confirmate numai după evaluarea istoricului medical, consultul în persoană, testele de diagnosticare, evaluarea anesteziologică și disponibilitatea medicului.",
+    "es": "Esta página ha sido revisada bajo el trayecto de revisión médica especializada de Meva Clinic. La idoneidad final del tratamiento, la asignación del médico cirujano, la planificación quirúrgica y las decisiones médicas se confirman únicamente después de la revisión del historial médico, la consulta en persona, las pruebas de diagnóstico, la evaluación de la anestesia y la disponibilidad del médico.",
+    "it": "Questa pagina è stata esaminata nell'ambito del percorso di revisione medica specialistica di Meva Clinic. L'idoneità finale al tratamento, l'assegnazione del medico operatore, la pianificazione chirurgica e le decisioni mediche sono confermate solo dopo la revisione dell'anamnesi, la consultazione di persona, i test diagnostici, la valutazione dell'anestesia e la disponibilità del medico.",
+    "ru": "Эта страница была проверена в рамках специализированного медицинского аудита Meva Clinic. Окончательное решение о пригодности лечения, назначении оперирующего врача, хирургическом планировании и медицинских решениях подтверждается только после изучения истории болезни, очной консультации, диагностических тестов, оценки анестезии и доступности врача.",
+    "fr": "Cette page a été révisée dans le cadre du parcours de révision médicale spécialisée de Meva Clinic. L'éligibilité finale au traitement, l'attribution du médecin traitant, la planification chirurgicale et les décisions médicales ne sont confirmées qu'après examen des antécédents médicaux, consultation en personne, examens diagnostiques, évaluation de l'anesthésie et disponibilité du médecin.",
+    "de": "Diese Seite wurde im Rahmen des spezialisierten medizinischen Prüfungspfads der Meva-Klinik überprüft. Die endgültige Eignung für die Behandlung, die Zuweisung des operierenden Arztes, die chirurgische Planung und medizinische Entscheidungen werden erst nach Überprüfung der Krankengeschichte, persönlicher Konsultation, diagnostischen Tests, anästhesiologischer Bewertung und Verfügbarkeit des Arztes bestätigt."
   },
   "jciDesc": {
     "en": "Explore Meva Clinic's premium medical specialties in Turkey: JCI-accredited bariatric surgery, advanced plastic surgery, elite dentistry, and hair restoration.",
@@ -2631,13 +2631,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Wie es funktioniert"
   },
   "Doctor's Clinical Insight": {
-    "en": "Doctor's Clinical Insight",
-    "ro": "Perspectivă Clinică a Medicului",
-    "es": "Perspectiva Clínica de los Doctores",
-    "it": "Approfondimento Clinico dei Medici",
-    "ru": "Клиническое видение врачей",
-    "fr": "Perspicacité clinique des médecins",
-    "de": "Ärztliche klinische Einsicht"
+    "en": "Clinical Review Note",
+    "ro": "Notă de Evaluare Clinică",
+    "es": "Nota de Revisión Clínica",
+    "it": "Nota di Revisione Clinica",
+    "ru": "Примечание к клиническому обзору",
+    "fr": "Note d'évaluation clinique",
+    "de": "Klinischer Überprüfungshinweis"
   },
   "About This Procedure": {
     "en": "About This Procedure",
@@ -6026,13 +6026,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "ro": "Chestionar de Eligibilitate și Tratamente"
   },
   "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.": {
-    "en": "Answer 6 quick questions to discover if you qualify for our JCI-accredited premium procedures in Istanbul.",
-    "es": "Responda 6 preguntas rápidas para descubrir si califica para nuestros procedimientos premium acreditados por la JCI en Estambul.",
-    "it": "Rispondi a 6 semplici domande per scoprire se sei idoneo per le nostre procedure premium accreditate JCI a Istanbul.",
-    "ru": "Ответьте на 6 быстрых вопросов, чтобы узнать, подходите ли вы для наших премиальных процедур, аккредитованных JCI в Стамбуле.",
-    "fr": "Répondez à 6 questions rapides pour savoir si vous êtes éligible à nos procédures premium accréditées par la JCI à Istanbul.",
-    "de": "Beantworten Sie 6 kurze Fragen, um herauszufinden, ob Sie für unsere JCI-akkreditierten Premium-Behandlungen in Istanbul infrage kommen.",
-    "ro": "Răspunde la 6 întrebări rapide pentru a afla dacă ești eligibil pentru procedurile noastre premium din Istanbul."
+    "en": "Answer 6 quick questions to discover if you qualify for premium procedures coordinated through accredited partner hospital pathways in Istanbul.",
+    "es": "Responda 6 preguntas rápidas para descubrir si califica para procedimientos premium coordinados a través de vías hospitalarias asociadas acreditadas en Estambul.",
+    "it": "Rispondi a 6 semplici domande per scoprire se sei idoneo per procedure premium coordinate attraverso percorsi ospedalieri partner accreditati a Istanbul.",
+    "ru": "Ответьте на 6 быстрых вопросов, чтобы узнать, подходите ли вы для премиальных процедур, координируемых через аккредитованные партнерские больницы в Стамбуле.",
+    "fr": "Répondez à 6 questions rapides pour savoir si vous êtes éligible à des procédures premium coordonnées via des réseaux d'hôpitaux partenaires accrédités à Istanbul.",
+    "de": "Beantworten Sie 6 kurze Fragen, um herauszufinden, ob Sie für Premium-Behandlungen, die über akkreditierte Partnerkrankenhäuser in Istanbul koordiniert werden, infrage kommen.",
+    "ro": "Răspunde la 6 întrebări rapide pentru a afla dacă ești eligibil pentru procedurile premium coordonate prin spitale partenere acreditate din Istanbul."
   },
   "Step 1: Gender & Age": {
     "en": "Step 1: Gender & Age",
