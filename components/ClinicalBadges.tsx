@@ -27,53 +27,53 @@ export const CertRow = ({ isEn, lang = 'en' }: any) => (
     <div className="flex flex-wrap justify-center gap-4">
       {[
         { label: {
-            en: 'Accredited Hospital Pathways',
-            ro: 'Căi Spitalicești Acreditate',
-            es: 'Vías Hospitalarias Acreditadas',
-            it: 'Percorsi Ospedalieri Accreditati',
-            fr: 'Parcours Hospitaliers Accrédités',
-            de: 'Akkreditierte Klinikpfade',
-            ru: 'Аккредитованные Госпитальные Сети'
+            en: 'JCI Partner Hospitals',
+            ro: 'Spitale Partenere JCI',
+            es: 'Hospitales Socios JCI',
+            it: 'Ospedali Partner JCI',
+            fr: 'Hôpitaux Partenaires JCI',
+            de: 'JCI-Partnerkliniken',
+            ru: 'Партнерские Больницы JCI'
           }, icon: ShieldCheck, color: 'text-blue-500' },
         { label: {
-            en: 'Clinical Quality Standards',
-            ro: 'Standarde de Calitate Clinică',
-            es: 'Estándares de Calidad Clínica',
-            it: 'Standard di Qualità Clinica',
-            fr: 'Normes de Qualité Clinique',
-            de: 'Klinische Qualitätsstandards',
-            ru: 'Клинические Стандарты Качества'
+            en: 'ISO/TÜV Standards',
+            ro: 'Standarde ISO/TÜV',
+            es: 'Estándares ISO/TÜV',
+            it: 'Standard ISO/TÜV',
+            fr: 'Normes ISO/TÜV',
+            de: 'ISO/TÜV-Standards',
+            ru: 'Стандарты ISO/TÜV'
           }, icon: Award, color: 'text-green-500' },
         { label: {
-            en: 'Licensed Medical Providers',
-            ro: 'Furnizori Medicali Autorizați',
-            es: 'Proveedores Médicos Autorizados',
-            it: 'Fornitori Medici Autorizzati',
-            fr: 'Prestataires Médicaux Agréés',
-            de: 'Lizenzierte Medizinische Anbieter',
-            ru: 'Лицензированные Медпровайдеры'
+            en: 'Licensed Providers',
+            ro: 'Furnizori Autorizați',
+            es: 'Proveedores Autorizados',
+            it: 'Fornitori Autorizzati',
+            fr: 'Prestataires Agréés',
+            de: 'Lizenzierte Anbieter',
+            ru: 'Лицензированные Провайдеры'
           }, icon: CheckCircle, color: 'text-prime' },
         { label: {
-            en: 'Dedicated Patient Coordination',
-            ro: 'Coordonare Dedicată Pacienților',
-            es: 'Coordinación Dedicada del Paciente',
-            it: 'Coordinamento Dedicato del Paziente',
-            fr: 'Coordination Dédiée des Patients',
-            de: 'Engagierte Patientenbetreuung',
-            ru: 'Организованная Поддержка Пациентов'
+            en: 'ISAPS Partner Surgeons',
+            ro: 'Chirurgi Parteneri ISAPS',
+            es: 'Cirujanos Socios ISAPS',
+            it: 'Chirurghi Partner ISAPS',
+            fr: 'Chirurgiens Partenaires ISAPS',
+            de: 'ISAPS-Partnerchirurgen',
+            ru: 'Партнерские Хирурги ISAPS'
           }, icon: HeartPulse, color: 'text-accent' },
         { label: {
             en: 'Confidential File Review',
-            ro: 'Evaluare Confidențială a Dosarului',
-            es: 'Revisión Confidencial de Archivos',
-            it: 'Revisione Riservata dei Fascicoli',
-            fr: 'Examen Confidentiel des Dossiers',
-            de: 'Vertrauliche Aktenprüfung',
-            ru: 'Конфиденциальный Анализ Документов'
+            ro: 'Evaluare Confidențială',
+            es: 'Revisión Confidencial',
+            it: 'Revisione Riservata',
+            fr: 'Examen Confidentiel',
+            de: 'Vertrauliche Prüfung',
+            ru: 'Конфиденциальный Анализ'
           }, icon: Microscope, color: 'text-purple-500' },
       ].map((cert, i) => {
         const Icon = cert.icon;
-        const localizedLabel = (cert.label as any)[lang] || (cert.label as any)['en'];
+        const localizedLabel = (cert.label as Record<string, string>)[lang] || (cert.label as Record<string, string>)['en'];
         return (
           <div key={i} className="flex items-center gap-2 px-4 py-2 bg-gray-50 border border-gray-100 rounded-full">
             <Icon size={14} className={cert.color} />
@@ -82,6 +82,16 @@ export const CertRow = ({ isEn, lang = 'en' }: any) => (
         );
       })}
     </div>
+    <p className="text-[10px] text-gray-400 mt-5 max-w-3xl mx-auto text-center leading-relaxed font-sans px-4">
+      {lang === 'ro' 
+        ? "Notă: Meva Clinic coordonează călătoriile pacienților internaționali. Acreditările clinice (cum ar fi standardele de calitate JCI sau ISO/TÜV) și afilierile la societăți profesionale (cum ar fi ISAPS) sunt deținute în mod individual de spitalele partenere respective, clinicile certificate și chirurgii licențiați care efectuează procedurile."
+        : lang === 'es' ? "Nota: Meva Clinic coordina los viajes de los pacientes internacionales. Las acreditaciones clínicas (como las normas de calidad JCI o ISO/TÜV) y las membresías de sociedades profesionales (como ISAPS) pertenecen individualmente a los respectivos hospitales asociados, clínicas certificadas y cirujanos autorizados que realizan los procedimientos."
+        : lang === 'it' ? "Nota: Meva Clinic coordina i viaggi dei pazienti internazionali. Le accreditazioni cliniche (come gli standard di qualità JCI o ISO/TÜV) e le adesioni a società professionali (come ISAPS) sono detenute individualmente dai rispettivi ospedali partner, cliniche certificate e chirurghi autorizzati che eseguono le procedure."
+        : lang === 'de' ? "Hinweis: Meva Clinic koordiniert internationale Patientenreisen. Klinische Akkreditierungen (wie JCI- oder ISO/TÜV-Qualitätsstandards) und Mitgliedschaften in Berufsverbänden (wie ISAPS) werden individuell von den jeweiligen Partnerkrankenhäusern, zertifizierten Kliniken und lizenzierten Chirurgen gehalten, die die Eingriffe durchführen."
+        : lang === 'fr' ? "Note : Meva Clinic coordonne les parcours des patients internationaux. Les accréditations cliniques (telles que les normes de qualité JCI ou ISO/TÜV) et les adhésions aux sociétés professionnelles (telles que l'ISAPS) sont détenues individuellement par les hôpitaux partenaires, cliniques agréées et chirurgiens certifiés concernés effectuant les interventions."
+        : lang === 'ru' ? "Примечание: Meva Clinic координирует поездки иностранных пациентов. Клинические аккредитации (такие как стандарты качества JCI или ISO/TÜV) и членство в профессиональных сообществах (такие как ISAPS) принадлежат соответствующим партнерским больницам, сертифицированным клиникам и лицензированным хирургам, выполняющим процедуры."
+        : "Note: Meva Clinic coordinates international patient journeys. Clinical accreditations (such as JCI or ISO/TÜV quality standards) and professional society memberships (such as ISAPS) are held individually by the respective partner hospitals, certified clinics, and licensed surgeons performing the procedures."}
+    </p>
   </div>
 );
 
