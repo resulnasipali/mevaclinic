@@ -5,10 +5,10 @@ import { tUI } from '@/utils/uiTranslations';
 export default function TrustBadges({ lang }: { lang: string }) {
   const isEn = lang === 'en';
   const badges = [
-    { icon: <ShieldCheck size={40} />, title: tUI('JCI Accredited', lang), desc: tUI("Global Gold Standard", lang) },
-    { icon: <Globe size={40} />, title: tUI('ISO 9001:2015', lang), desc: tUI("Quality Management", lang) },
-    { icon: <Award size={40} />, title: tUI('15+ Years', lang), desc: tUI("Surgical Excellence", lang) },
-    { icon: <CheckCircle size={40} />, title: tUI('Patient Safety First', lang), desc: tUI("Clinical Care Standards", lang) }
+    { icon: <ShieldCheck size={40} />, title: lang === 'ro' ? "Spitale Partenere JCI" : "JCI Partner Hospitals", desc: lang === 'ro' ? "Căi Spitalicești Acreditate" : "Accredited Pathways" },
+    { icon: <Globe size={40} />, title: lang === 'ro' ? "Standarde ISO/TÜV" : "ISO/TÜV Standards", desc: lang === 'ro' ? "Managementul Calității" : "Quality Management" },
+    { icon: <Award size={40} />, title: lang === 'ro' ? "Specialiști Selectați" : "Selected Specialists", desc: lang === 'ro' ? "Chirurgi Certificați" : "Certified Surgeons" },
+    { icon: <CheckCircle size={40} />, title: lang === 'ro' ? "Siguranța Pacientului" : "Patient Safety First", desc: lang === 'ro' ? "Standarde Clinice" : "Clinical Care Standards" }
   ];
 
   return (
