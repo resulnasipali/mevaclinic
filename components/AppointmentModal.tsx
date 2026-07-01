@@ -183,7 +183,15 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
                     <ShieldCheck size={12} className="inline mr-1 text-accent" /> SSL Secured & GDPR Compliant
                  </p>
                  <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime">
-                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("JCI Accredited", lang)}</span>
+                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {
+                      lang === 'ro' ? "Căi Acreditate" 
+                      : lang === 'es' ? "Vías Acreditadas"
+                      : lang === 'it' ? "Percorsi Accreditati"
+                      : lang === 'de' ? "Akkreditierte Pfade"
+                      : lang === 'fr' ? "Parcours Accrédités"
+                      : lang === 'ru' ? "Аккредитованные Сети"
+                      : "Accredited Pathways"
+                    }</span>
                    <span className="w-1 h-1 rounded-full bg-gray-200"></span>
                    <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("Premium Care", lang)}</span>
                    <span className="w-1 h-1 rounded-full bg-gray-200"></span>

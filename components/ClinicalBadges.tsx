@@ -27,13 +27,13 @@ export const CertRow = ({ isEn, lang = 'en' }: any) => (
     <div className="flex flex-wrap justify-center gap-4">
       {[
         { label: {
-            en: 'JCI Accredited',
-            ro: 'Acreditat JCI',
-            es: 'Acreditado por JCI',
-            it: 'Accreditato JCI',
-            fr: 'Accrédité JCI',
-            de: 'JCI Akkreditiert',
-            ru: 'Аккредитация JCI'
+            en: 'Accredited Hospital Pathways',
+            ro: 'Căi Spitalicești Acreditate',
+            es: 'Vías Hospitalarias Acreditadas',
+            it: 'Percorsi Ospedalieri Accreditati',
+            fr: 'Parcours Hospitaliers Accrédités',
+            de: 'Akkreditierte Klinikpfade',
+            ru: 'Аккредитованные Госпитальные Сети'
           }, icon: ShieldCheck, color: 'text-blue-500' },
         { label: {
             en: 'Clinical Quality Standards',
@@ -54,22 +54,22 @@ export const CertRow = ({ isEn, lang = 'en' }: any) => (
             ru: 'Лицензированные Медпровайдеры'
           }, icon: CheckCircle, color: 'text-prime' },
         { label: {
-            en: 'ISAPS Member',
-            ro: 'Membru ISAPS',
-            es: 'Miembro de ISAPS',
-            it: 'Membro ISAPS',
-            fr: 'Membre ISAPS',
-            de: 'ISAPS Mitglied',
-            ru: 'Член ISAPS'
+            en: 'Dedicated Patient Coordination',
+            ro: 'Coordonare Dedicată Pacienților',
+            es: 'Coordinación Dedicada del Paciente',
+            it: 'Coordinamento Dedicato del Paziente',
+            fr: 'Coordination Dédiée des Patients',
+            de: 'Engagierte Patientenbetreuung',
+            ru: 'Организованная Поддержка Пациентов'
           }, icon: HeartPulse, color: 'text-accent' },
         { label: {
-            en: 'ISO 9001:2015',
-            ro: 'ISO 9001:2015',
-            es: 'ISO 9001:2015',
-            it: 'ISO 9001:2015',
-            fr: 'ISO 9001:2015',
-            de: 'ISO 9001:2015',
-            ru: 'ISO 9001:2015'
+            en: 'Confidential File Review',
+            ro: 'Evaluare Confidențială a Dosarului',
+            es: 'Revisión Confidencial de Archivos',
+            it: 'Revisione Riservata dei Fascicoli',
+            fr: 'Examen Confidentiel des Dossiers',
+            de: 'Vertrauliche Aktenprüfung',
+            ru: 'Конфиденциальный Анализ Документов'
           }, icon: Microscope, color: 'text-purple-500' },
       ].map((cert, i) => {
         const Icon = cert.icon;

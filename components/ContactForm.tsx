@@ -216,13 +216,21 @@ const ContactForm = ({ isEn: isEnProp, lang = 'en' }: any) => {
                    <Globe size={14} /> Worldwide Service
                 </div>
              </div>
-             <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime mt-2">
-               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("JCI Accredited", lang)}</span>
-               <span className="w-1 h-1 rounded-full bg-gray-200"></span>
-               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("Premium Care", lang)}</span>
-               <span className="w-1 h-1 rounded-full bg-gray-200"></span>
-               <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("€0 Consultation", lang)}</span>
-             </div>
+              <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime mt-2">
+                <span className="flex items-center gap-1"><span className="text-accent">✓</span> {
+                  lang === 'ro' ? "Căi Acreditate" 
+                  : lang === 'es' ? "Vías Acreditadas"
+                  : lang === 'it' ? "Percorsi Accreditati"
+                  : lang === 'de' ? "Akkreditierte Pfade"
+                  : lang === 'fr' ? "Parcours Accrédités"
+                  : lang === 'ru' ? "Аккредитованные Сети"
+                  : "Accredited Pathways"
+                }</span>
+                <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+                <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("Premium Care", lang)}</span>
+                <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+                <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("€0 Consultation", lang)}</span>
+              </div>
           </div>
         </form>
       </div>
