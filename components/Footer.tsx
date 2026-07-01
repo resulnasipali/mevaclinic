@@ -1,8 +1,7 @@
-// @ts-nocheck
 'use client';
 
 import React from 'react';
-import { Phone, Mail, MapPin, ChevronRight, ChevronDown, Globe2, ShieldCheck, Award, MessageCircle, Globe } from 'lucide-react';
+import { Phone, Mail, MapPin, ChevronRight, ChevronDown, Globe2, ShieldCheck, MessageCircle, Globe } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { pushToDataLayer } from '../utils/AnalyticsUtils';
@@ -13,34 +12,90 @@ import { MevaLogo } from './MevaLogo';
 const TRUST_BADGES = [
   {
     icon: '🏥',
-    nameEn: 'Ministry of Health Standards',
-    nameRo: 'Standarde Ministerul Sănătății',
-    subEn: 'Türkiye Patient Services',
-    subRo: 'Servicii Pacienți Turcia',
+    name: {
+      en: 'Licensed Medical Providers',
+      ro: 'Furnizori Medicali Autorizați',
+      es: 'Proveedores Médicos Autorizados',
+      it: 'Fornitori Medici Autorizzati',
+      fr: 'Prestataires Médicaux Agréés',
+      de: 'Lizenzierte Medizinische Anbieter',
+      ru: 'Лицензированные Медпровайдеры',
+    },
+    sub: {
+      en: 'Care is planned with selected licensed hospitals and specialist physicians in Türkiye.',
+      ro: 'Îngrijirea este planificată cu spitale licențiate și medici specialiști din Turcia.',
+      es: 'La atención se planifica con hospitales autorizados seleccionados y médicos especialistas en Turquía.',
+      it: 'L\'assistenza è pianificata con ospedali autorizzati selezionati e medici specialisti in Turchia.',
+      fr: 'Les soins sont planifiés avec des hôpitaux agréés sélectionnés et des médecins spécialistes en Turquie.',
+      de: 'Die Betreuung wird mit ausgewählten lizenzierten Krankenhäusern und Fachärzten in der Türkei geplant.',
+      ru: 'Лечение планируется с выбранными лицензированными больницами и врачами-специалистами в Турции.',
+    },
     color: 'text-blue-400',
   },
   {
     icon: '🌐',
-    nameEn: 'JCI Accredited Partners',
-    nameRo: 'Parteneri Acreditați JCI',
-    subEn: 'Global Patient Safety',
-    subRo: 'Siguranță Globală',
+    name: {
+      en: 'JCI-Accredited Hospital Pathways',
+      ro: 'Căi Spitalicești Acreditate JCI',
+      es: 'Vías de Hospitales Acreditados por JCI',
+      it: 'Percorsi Ospedalieri Accreditati JCI',
+      fr: 'Parcours Hospitaliers Accrédités JCI',
+      de: 'JCI-Akkreditierte Klinikpfade',
+      ru: 'Госпитали с Аккредитацией JCI',
+    },
+    sub: {
+      en: 'Treatment journeys can be coordinated through JCI-accredited partner hospitals where clinically appropriate.',
+      ro: 'Tratamentele pot fi coordonate prin spitale partenere acreditate JCI când este adecvat clinic.',
+      es: 'Los viajes de tratamiento se pueden coordinar a través de hospitales asociados acreditados por la JCI cuando sea clínicamente apropiado.',
+      it: 'I viaggi di trattamento possono essere coordinati attraverso ospedali convenzionati accreditati JCI ove clinicamente appropriato.',
+      fr: 'Les parcours de traitement peuvent être coordonnés via des hôpitaux partenaires accrédités JCI si cela est cliniquement approprié.',
+      de: 'Behandlungsreisen können bei klinischer Eignung über JCI-akkreditierte Partnerkliniken koordiniert werden.',
+      ru: 'Лечебные поездки могут координироваться через партнерские больницы с аккредитацией JCI при клинической необходимости.',
+    },
     color: 'text-green-400',
   },
   {
-    icon: '✅',
-    nameEn: 'TÜV SÜD Certified Partners',
-    nameRo: 'Parteneri Certificați TÜV SÜD',
-    subEn: 'Quality Management Standards',
-    subRo: 'Standarde Calitate ISO',
+    icon: '✈️',
+    name: {
+      en: 'International Patient Coordination',
+      ro: 'Coordonare Pacienți Internaționali',
+      es: 'Coordinación Internacional de Pacientes',
+      it: 'Coordinamento Internazionale Pazienti',
+      fr: 'Coordination des Patients Internationaux',
+      de: 'Internationale Patientenkoordination',
+      ru: 'Координация Иностранных Пациентов',
+    },
+    sub: {
+      en: 'Airport transfers, hotel arrangements and appointment planning are coordinated within each confirmed patient package.',
+      ro: 'Transferurile de la aeroport, cazarea și programările sunt coordonate în pachetul confirmat.',
+      es: 'Los traslados al aeropuerto, el hotel y las citas se coordinan dentro de cada paquete confirmado.',
+      it: 'I trasferimenti dall\'aeroporto, le sistemazioni in hotel e gli appuntamenti sono coordinati all\'interno di ogni pacchetto confermato.',
+      fr: 'Les transferts aéroport, l\'hébergement et la planification des rendez-vous sont coordonnés dans chaque forfait corrigé.',
+      de: 'Flughafentransfers, Hotelunterkünfte und Terminplanung werden im Rahmen jedes bestätigten Patientenpakets koordiniert.',
+      ru: 'Трансфер из аэропорта, проживание и планирование встреч координируются в рамках каждого подтвержденного пакета.',
+    },
     color: 'text-purple-400',
   },
   {
-    icon: '🤝',
-    nameEn: 'IMA Partner Network',
-    nameRo: 'Rețea Parteneri IMA',
-    subEn: 'International Patient Care Standards',
-    subRo: 'Standarde Internaționale Pacienți',
+    icon: '🔒',
+    name: {
+      en: 'Confidential Medical File Review',
+      ro: 'Evaluare Confidențială a Dosarului',
+      es: 'Revisión Confidencial de Expediente Médico',
+      it: 'Revisione Riservata del Fascicolo Medico',
+      fr: 'Examen Confidentiel du Dossier Médical',
+      de: 'Vertrauliche Prüfung der Krankenakte',
+      ru: 'Конфиденциальный Анализ Медкарты',
+    },
+    sub: {
+      en: 'Medical history, photos and treatment requests are handled securely for specialist assessment.',
+      ro: 'Istoricul medical, fotografiile și cererile de tratament sunt gestionate în siguranță.',
+      es: 'El historial médico, las fotos y las solicitudes de tratamiento se manejan de forma segura para la evaluación del especialista.',
+      it: 'La storia medica, le foto e le richieste di tratamento sono gestite in modo sicuro per la valutazione dello specialista.',
+      fr: 'Les antécédents médicaux, les photos et les demandes de traitement sont traités en toute sécurité pour évaluation par un spécialiste.',
+      de: 'Krankengeschichte, Fotos und Behandlungsanfragen werden für die fachärztliche Beurteilung sicher behandelt.',
+      ru: 'Медицинский анамнез, фотографии и запросы на лечение обрабатываются безопасно для экспертной оценки.',
+    },
     color: 'text-yellow-400',
   },
 ];
@@ -48,6 +103,25 @@ const TRUST_BADGES = [
 const Footer = ({ lang = 'en' }: { lang?: string }) => {
   const pathname = usePathname();
   const isRo = lang === 'ro';
+  
+  const headingText = isRo 
+    ? "Calitate, Siguranță și Suport pentru Pacienții Internaționali" 
+    : lang === 'es' ? "Calidad, Seguridad y Soporte Internacional al Paciente"
+    : lang === 'it' ? "Qualità, Sicurezza e Supporto Internazionale al Paziente"
+    : lang === 'de' ? "Qualität, Sicherheit und internationale Patientenbetreuung"
+    : lang === 'fr' ? "Qualité, Sécurité et Soutien aux Patients Internationaux"
+    : lang === 'ru' ? "Качество, Безопасность и Международная Поддержка Пациентов"
+    : "Quality, Safety & International Patient Support";
+
+  const subtitleText = isRo 
+    ? "Meva Clinic coordonează călătoriile pacienților internaționali prin furnizori medicali licențiați selectați, căi spitalicești acreditate JCI acolo unde este aplicabil și suport structurat pentru pacienți înainte, în timpul și după tratament." 
+    : lang === 'es' ? "Meva Clinic coordina los viajes de pacientes internacionales a través de proveedores médicos con licencia seleccionados, vías de hospitales acreditados por la JCI cuando corresponda, y apoyo estructurado al paciente antes, durante y después del tratamiento."
+    : lang === 'it' ? "Meva Clinic coordina i viaggi dei pazienti internazionali attraverso fornitori medici autorizzati selezionati, percorsi ospedalieri accreditati JCI ove applicabile e un supporto strutturato al paziente prima, durante e dopo il trattamento."
+    : lang === 'de' ? "Meva Clinic koordiniert internationale Patientenreisen über ausgewählte lizenzierte medizinische Anbieter, JCI-akkreditierte Klinikpfade, wo zutreffend, und strukturierte Patientenbetreuung vor, während und nach der Behandlung."
+    : lang === 'fr' ? "Meva Clinic coordonne les parcours des patients internationaux via des prestataires médicaux agréés sélectionnés, des parcours hospitaliers accrédités JCI le cas échéant, et un soutien structuré aux patients avant, pendant et après le traitement."
+    : lang === 'ru' ? "Meva Clinic координирует поездки иностранных пациентов через выбранных лицензированных медицинских провайдеров, госпитальные сети с аккредитацией JCI, где это применимо, и структурированную поддержку пациентов до, во время и после лечения."
+    : "Meva Clinic coordinates international patient journeys through selected licensed medical providers, JCI-accredited hospital pathways where applicable, and structured patient support before, during and after treatment.";
+
   const [openSection, setOpenSection] = React.useState<string | null>(null);
 
   const toggleSection = (section: string) => {
@@ -94,7 +168,7 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0b1626] via-[#0b1626]/80 to-[#0b1626]/40 pointer-events-none transition-opacity duration-700 group-hover:opacity-80" />
         {loadMap ? (
           <iframe
-            title="Meva Clinic Istanbul Location"
+            title="Meva Clinic Location"
             src={`https://maps.google.com/maps?q=Altunizade,Uskudar,Istanbul,Turkey&t=&z=13&ie=UTF8&iwloc=&output=embed&hl=${lang === 'ro' ? 'ro' : lang}`}
             className="w-full h-[140%] -mt-10 border-0 absolute inset-0 map-filter"
             loading="lazy"
@@ -329,7 +403,14 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
             {tUI("Medical Disclaimer: The clinical information on this website is for educational and informational purposes only. It does not constitute medical advice, diagnosis, or treatment. Always consult with a qualified physician or healthcare provider regarding any medical condition or surgical procedure in Turkey.", lang)}
           </p>
           <p className="text-[10px] text-gray-500 leading-relaxed max-w-4xl mx-auto font-sans mb-6">
-            {tUI("Meva Clinic operates as an international patient service provider. Travel and accommodation services are arranged through licensed TÜRSAB Group-A travel agency partners when required.", lang)}
+            {isRo 
+              ? "Aranjamentele de călătorie și cazare pentru pacienții internaționali pot fi coordonate prin agenții de turism partenere autorizate TÜRSAB de Grupa A, atunci când este necesar."
+              : lang === 'es' ? "Los arreglos de viaje y alojamiento para pacientes internacionales pueden coordinarse a través de agencias de viajes asociadas autorizadas de TÜRSAB Grupo A cuando sea necesario."
+              : lang === 'it' ? "Le modalità di viaggio e alloggio per i pazienti internazionali possono essere coordinate tramite agenzie di viaggio partner autorizzate TÜRSAB Gruppo A quando necessario."
+              : lang === 'de' ? "Reise- und Unterkunftsvereinbarungen für internationale Patienten können bei Bedarf über lizenzierte TÜRSAB-Reisebüropartner der Gruppe A koordiniert werden."
+              : lang === 'fr' ? "Les préparatifs de voyage et d'hébergement pour les patients internationaux peuvent être coordonnés par l'intermédiaire d'agences de voyages partenaires agréées TÜRSAB de Groupe A lorsque cela est requis."
+              : lang === 'ru' ? "Организация поездки и проживания для иностранных пациентов при необходимости может координироваться через лицензированные партнерские туристические агентства TÜRSAB группы А."
+              : "Travel and accommodation arrangements for international patients may be coordinated through licensed TÜRSAB Group-A travel agency partners when required."}
           </p>
         </div>
 
@@ -339,10 +420,10 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
             <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors">
               {tUI('Privacy Policy', lang)}
             </Link>
-            <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors">
+            <Link href={`/${lang}/cookie-policy`} className="hover:text-white transition-colors">
               {tUI('Cookie Policy', lang)}
             </Link>
-            <Link href={`/${lang}/privacy-policy`} className="hover:text-white transition-colors">
+            <Link href={`/${lang}/terms-and-conditions`} className="hover:text-white transition-colors">
               {tUI('Terms', lang)}
             </Link>
           </div>
@@ -352,29 +433,36 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
       {/* ── S-Tier Trust / Accreditation Strip ── */}
       <div className="border-t border-white/5 bg-white/3 backdrop-blur-md py-7">
         <div className="max-w-7xl mx-auto px-4">
-          <p className="text-center text-[9px] font-bold text-gray-600 uppercase tracking-[0.3em] mb-5">
-            {tUI('Accreditations & Official Certifications', lang)}
+          <p className="text-center text-[9px] font-bold text-gray-600 uppercase tracking-[0.3em] mb-3">
+            {headingText}
+          </p>
+          <p className="text-center text-xs text-gray-500 max-w-3xl mx-auto leading-relaxed mb-6 font-sans">
+            {subtitleText}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-            {TRUST_BADGES.map((badge, i) => (
-              <div
-                key={i}
-                className="flex items-center gap-3 px-5 py-3 rounded-2xl border border-white/8 bg-white/5 hover:bg-white/10 transition-all group cursor-default"
-                title={tUI(badge.nameEn, lang)}
-              >
-                <span className="text-2xl" role="img" aria-label={tUI(badge.nameEn, lang)}>
-                  {badge.icon}
-                </span>
-                <div>
-                  <p className={`text-[11px] font-black ${badge.color} uppercase tracking-wider leading-none mb-0.5 group-hover:opacity-100 opacity-80 transition-opacity`}>
-                    {tUI(badge.nameEn, lang)}
-                  </p>
-                  <p className="text-[9px] text-gray-500 font-medium">
-                    {tUI(badge.subEn, lang)}
-                  </p>
+            {TRUST_BADGES.map((badge, i) => {
+              const badgeName = (badge.name as Record<string, string>)[lang] || (badge.name as Record<string, string>)['en'];
+              const badgeSub = (badge.sub as Record<string, string>)[lang] || (badge.sub as Record<string, string>)['en'];
+              return (
+                <div
+                  key={i}
+                  className="flex items-center gap-3 px-5 py-3 rounded-2xl border border-white/8 bg-white/5 hover:bg-white/10 transition-all group cursor-default max-w-sm"
+                  title={badgeName}
+                >
+                  <span className="text-2xl" role="img" aria-label={badgeName}>
+                    {badge.icon}
+                  </span>
+                  <div>
+                    <p className={`text-[11px] font-black ${badge.color} uppercase tracking-wider leading-none mb-0.5 group-hover:opacity-100 opacity-80 transition-opacity`}>
+                      {badgeName}
+                    </p>
+                    <p className="text-[9px] text-gray-500 font-medium leading-relaxed">
+                      {badgeSub}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

@@ -155,9 +155,9 @@ const SuitabilityQuiz = ({ procedure = 'General', lang = 'en' }: { procedure?: s
                    {tUI("Receive Full Clinical Report", lang)}
                    <Send size={18} className="text-accent" />
                 </button>
-                <div className="flex items-center justify-center gap-2 text-[10px] text-gray-400 font-bold uppercase tracking-widest">
-                   <ShieldCheck size={12} /> HIPAA & JCI Compliant
-                </div>
+                  <div className="flex items-center justify-center gap-2 text-[10px] text-gray-400 font-bold uppercase tracking-widest">
+                     <ShieldCheck size={12} /> GDPR & KVKK Privacy
+                  </div>
              </form>
           </div>
         )}

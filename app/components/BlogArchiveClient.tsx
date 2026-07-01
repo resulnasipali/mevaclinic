@@ -272,7 +272,14 @@ export default function BlogArchiveClient({ lang }: BlogArchiveClientProps) {
                   </AnimatePresence>
                   
                   <p className="text-[10px] text-slate-600 mt-8 font-sans">
-                     {tUI("By subscribing, you agree to receive medical updates in compliance with HIPAA and GDPR standards.", lang)}
+                     {lang === 'ro' 
+                       ? "Prin abonare, sunteți de acord să primiți actualizări în conformitate cu politica noastră de confidențialitate." 
+                       : lang === 'es' ? "Al suscribirse, acepta recibir actualizaciones de acuerdo con nuestra política de privacidad."
+                       : lang === 'it' ? "Iscrivendoti, acconsenti a ricevere aggiornamenti in conformità con la nostra informativa sulla privacy."
+                       : lang === 'de' ? "Mit dem Abonnement erklären Sie sich mit unserer Datenschutzerklärung einverstanden."
+                       : lang === 'fr' ? "En vous abonnant, vous acceptez de recevoir des informations conformément à notre politique de confidentialité."
+                       : lang === 'ru' ? "Подписываясь, вы соглашаетесь получать обновления в соответствии с нашей политикой конфиденциальности."
+                       : "By subscribing, you agree to receive updates in compliance with our privacy policy and data protection standards."}
                   </p>
                </div>
             </div>

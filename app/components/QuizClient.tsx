@@ -663,7 +663,7 @@ export default function QuizClient({ lang }: QuizClientProps) {
                           </button>
                         </div>
 
-                        {/* GDPR / HIPAA Badge */}
+                         {/* GDPR / KVKK Badge */}
                         <div className="flex items-center justify-center gap-2 text-[10px] text-gray-500 font-bold uppercase tracking-widest pt-4 border-t border-white/5">
                           <ShieldCheck size={14} className="text-accent" />
                           {tUI('Your data is encrypted and strictly used for medical assessment.', lang)}

@@ -291,7 +291,7 @@ const MedicalFileUpload = ({ isEn = false, onFilesChange }) => {
         </div>
         <div>
           <p className="text-[11px] font-bold text-prime/80 uppercase tracking-wider mb-0.5 flex items-center gap-1">
-            <Lock size={9} /> GDPR · HIPAA · KVKK
+            <Lock size={9} /> GDPR · KVKK Privacy
           </p>
           <p className="text-xs text-gray-500 leading-relaxed">
             {labels.gdpr}

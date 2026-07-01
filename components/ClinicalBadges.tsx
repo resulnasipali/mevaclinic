@@ -26,17 +26,58 @@ export const CertRow = ({ isEn, lang = 'en' }: any) => (
     </p>
     <div className="flex flex-wrap justify-center gap-4">
       {[
-        { label: 'JCI Accredited', icon: ShieldCheck, color: 'text-blue-500' },
-        { label: 'TÜV Certified', icon: Award, color: 'text-green-500' },
-        { label: 'Ministry of Health TR', icon: CheckCircle, color: 'text-prime' },
-        { label: 'ISAPS Member', icon: HeartPulse, color: 'text-accent' },
-        { label: 'ISO 9001:2015', icon: Microscope, color: 'text-purple-500' },
+        { label: {
+            en: 'JCI Accredited',
+            ro: 'Acreditat JCI',
+            es: 'Acreditado por JCI',
+            it: 'Accreditato JCI',
+            fr: 'Accrédité JCI',
+            de: 'JCI Akkreditiert',
+            ru: 'Аккредитация JCI'
+          }, icon: ShieldCheck, color: 'text-blue-500' },
+        { label: {
+            en: 'Clinical Quality Standards',
+            ro: 'Standarde de Calitate Clinică',
+            es: 'Estándares de Calidad Clínica',
+            it: 'Standard di Qualità Clinica',
+            fr: 'Normes de Qualité Clinique',
+            de: 'Klinische Qualitätsstandards',
+            ru: 'Клинические Стандарты Качества'
+          }, icon: Award, color: 'text-green-500' },
+        { label: {
+            en: 'Licensed Medical Providers',
+            ro: 'Furnizori Medicali Autorizați',
+            es: 'Proveedores Médicos Autorizados',
+            it: 'Fornitori Medici Autorizzati',
+            fr: 'Prestataires Médicaux Agréés',
+            de: 'Lizenzierte Medizinische Anbieter',
+            ru: 'Лицензированные Медпровайдеры'
+          }, icon: CheckCircle, color: 'text-prime' },
+        { label: {
+            en: 'ISAPS Member',
+            ro: 'Membru ISAPS',
+            es: 'Miembro de ISAPS',
+            it: 'Membro ISAPS',
+            fr: 'Membre ISAPS',
+            de: 'ISAPS Mitglied',
+            ru: 'Член ISAPS'
+          }, icon: HeartPulse, color: 'text-accent' },
+        { label: {
+            en: 'ISO 9001:2015',
+            ro: 'ISO 9001:2015',
+            es: 'ISO 9001:2015',
+            it: 'ISO 9001:2015',
+            fr: 'ISO 9001:2015',
+            de: 'ISO 9001:2015',
+            ru: 'ISO 9001:2015'
+          }, icon: Microscope, color: 'text-purple-500' },
       ].map((cert, i) => {
         const Icon = cert.icon;
+        const localizedLabel = (cert.label as any)[lang] || (cert.label as any)['en'];
         return (
           <div key={i} className="flex items-center gap-2 px-4 py-2 bg-gray-50 border border-gray-100 rounded-full">
             <Icon size={14} className={cert.color} />
-            <span className="text-xs font-bold text-gray-600">{tUI(cert.label, lang)}</span>
+            <span className="text-xs font-bold text-gray-600">{localizedLabel}</span>
           </div>
         );
       })}

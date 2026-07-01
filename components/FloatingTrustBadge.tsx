@@ -1,16 +1,29 @@
-// @ts-nocheck
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, Award, Globe } from 'lucide-react';
-import { usePathname } from 'next/navigation';
-import { tUI } from '@/utils/uiTranslations';
-
+import { ShieldCheck, Award } from 'lucide-react';
 
 const FloatingTrustBadge = ({ lang = 'en' }: { lang?: string }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const pathname = usePathname();
-  const isEn = (pathname || "/").startsWith('/en');
+  const isRo = lang === 'ro';
+
+  const verifiedText = isRo 
+    ? "CALITATE ȘI SIGURANȚĂ" 
+    : lang === 'es' ? "CALIDAD Y SEGURIDAD"
+    : lang === 'it' ? "QUALITÀ E SICUREZZA"
+    : lang === 'de' ? "QUALITÄT & SICHERHEIT"
+    : lang === 'fr' ? "QUALITÉ & SÉCURITÉ"
+    : lang === 'ru' ? "КАЧЕСТВО И БЕЗОПАСНОСТЬ"
+    : "QUALITY & SAFETY";
+
+  const boardText = isRo 
+    ? "Căi Spitalicești JCI" 
+    : lang === 'es' ? "Vías Hospitalarias JCI"
+    : lang === 'it' ? "Percorsi Ospedalieri JCI"
+    : lang === 'de' ? "JCI-Klinikpfade"
+    : lang === 'fr' ? "Parcours Hospitaliers JCI"
+    : lang === 'ru' ? "Госпитальные Сети JCI"
+    : "JCI Hospital Pathways";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,10 +42,10 @@ const FloatingTrustBadge = ({ lang = 'en' }: { lang?: string }) => {
           <div>
              <div className="flex items-center gap-1.5 mb-0.5 md:mb-1">
                 <Award size={10} className="text-accent md:w-3 md:h-3" />
-                <span className="text-[8px] md:text-[10px] font-bold text-white uppercase tracking-widest">{tUI("Verified Authority", lang)}</span>
+                <span className="text-[8px] md:text-[10px] font-bold text-white uppercase tracking-widest">{verifiedText}</span>
              </div>
              <p className="text-[10px] md:text-xs text-gray-300 font-medium whitespace-nowrap">
-                {tUI("International Medical Board", lang)}
+                {boardText}
              </p>
           </div>
        </div>
