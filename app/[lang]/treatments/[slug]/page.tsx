@@ -252,7 +252,52 @@ export default async function TreatmentPage({ params }: Props) {
     }))
   } : null;
 
-  const schemas: any[] = [medicalProcedureSchema];
+  const homeNames: Record<string, string> = {
+    ro: 'Acasă',
+    es: 'Inicio',
+    it: 'Home',
+    ru: 'Главная',
+    fr: 'Accueil',
+    de: 'Startseite',
+    en: 'Home'
+  };
+
+  const treatmentsNames: Record<string, string> = {
+    ro: 'Tratamente',
+    es: 'Tratamientos',
+    it: 'Trattamenti',
+    ru: 'Лечение',
+    fr: 'Traitements',
+    de: 'Behandlungen',
+    en: 'Treatments'
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': homeNames[safeLang] || 'Home',
+        'item': `https://www.mevaclinic.com/${safeLang}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': treatmentsNames[safeLang] || 'Treatments',
+        'item': `https://www.mevaclinic.com/${safeLang}/treatments`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': title,
+        'item': `https://www.mevaclinic.com/${safeLang}/treatments/${slug}`
+      }
+    ]
+  };
+
+  const schemas: any[] = [medicalProcedureSchema, breadcrumbSchema];
   if (faqSchema) schemas.push(faqSchema);
 
   return (

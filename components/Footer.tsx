@@ -63,14 +63,15 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Build opposite-language path for language switcher
-  const getAltLangPath = () => {
-    const path = pathname || '/';
-    if (path === '/' || path === '/ro') return '/en';
-    if (path === '/en') return '/ro';
-    if (path.startsWith('/ro/')) return path.replace('/ro/', '/en/');
-    if (path.startsWith('/en/')) return path.replace('/en/', '/ro/');
-    return `/${lang === 'en' ? 'ro' : 'en'}`;
+  // Translate current path to target language locale
+  const getTranslatedPath = (currentPath: string, targetLang: string) => {
+    if (!currentPath || currentPath === '/') return `/${targetLang}`;
+    const newParts = currentPath.split('/');
+    if (newParts.length > 1 && ['en', 'ro', 'es', 'it', 'ru', 'fr', 'de'].includes(newParts[1])) {
+      newParts[1] = targetLang;
+      return newParts.join('/');
+    }
+    return `/${targetLang}`;
   };
 
   const handleWhatsApp = () => {
@@ -170,13 +171,13 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
             <div className="flex items-center gap-2 pt-2">
               <Globe size={14} className="text-accent" aria-hidden="true" />
               <Link
-                href={lang === 'en' ? (pathname || '/') : getAltLangPath()}
-                className={`text-xs font-bold px-3 py-1.5 rounded-full transition-all ${lang !== 'en' ? 'bg-accent text-prime' : 'text-gray-400 hover:text-white border border-white/10'}`}
+                href={getTranslatedPath(pathname || '/', 'ro')}
+                className={`text-xs font-bold px-3 py-1.5 rounded-full transition-all ${lang === 'ro' ? 'bg-accent text-prime' : 'text-gray-400 hover:text-white border border-white/10'}`}
               >
-                🇹🇷 RO
+                🇷🇴 RO
               </Link>
               <Link
-                href={lang !== 'en' ? getAltLangPath() : (pathname || '/')}
+                href={getTranslatedPath(pathname || '/', 'en')}
                 className={`text-xs font-bold px-3 py-1.5 rounded-full transition-all ${lang === 'en' ? 'bg-accent text-prime' : 'text-gray-400 hover:text-white border border-white/10'}`}
               >
                 🇬🇧 EN

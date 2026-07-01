@@ -126,7 +126,52 @@ export default async function BlogPostPage({ params }: Props) {
     "reviewedBy": reviewedByNode
   };
 
-  const schemas = [articleSchema, medicalWebPageSchema];
+  const homeNames: Record<string, string> = {
+    ro: 'Acasă',
+    es: 'Inicio',
+    it: 'Home',
+    ru: 'Главная',
+    fr: 'Accueil',
+    de: 'Startseite',
+    en: 'Home'
+  };
+
+  const blogNames: Record<string, string> = {
+    ro: 'Blog',
+    es: 'Blog',
+    it: 'Blog',
+    ru: 'Блог',
+    fr: 'Blog',
+    de: 'Blog',
+    en: 'Blog'
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': homeNames[safeLang] || 'Home',
+        'item': `https://www.mevaclinic.com/${safeLang}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': blogNames[safeLang] || 'Blog',
+        'item': `https://www.mevaclinic.com/${safeLang}/blog`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': currentTitle,
+        'item': `https://www.mevaclinic.com/${safeLang}/blog/${post.slug}`
+      }
+    ]
+  };
+
+  const schemas = [articleSchema, medicalWebPageSchema, breadcrumbSchema];
 
   return (
     <div className="min-h-screen flex flex-col bg-white">

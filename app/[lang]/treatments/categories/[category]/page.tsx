@@ -119,11 +119,60 @@ export default async function CategoryHubPage({ params }: { params: Promise<{ la
     return val;
   };
 
+  const homeNames: Record<string, string> = {
+    ro: 'Acasă',
+    es: 'Inicio',
+    it: 'Home',
+    ru: 'Главная',
+    fr: 'Accueil',
+    de: 'Startseite',
+    en: 'Home'
+  };
+
+  const treatmentsNames: Record<string, string> = {
+    ro: 'Tratamente',
+    es: 'Tratamientos',
+    it: 'Trattamenti',
+    ru: 'Лечение',
+    fr: 'Traitements',
+    de: 'Behandlungen',
+    en: 'Treatments'
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'name': homeNames[lang] || 'Home',
+        'item': `https://www.mevaclinic.com/${lang}`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 2,
+        'name': treatmentsNames[lang] || 'Treatments',
+        'item': `https://www.mevaclinic.com/${lang}/treatments`
+      },
+      {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': catLabel,
+        'item': `https://www.mevaclinic.com/${lang}/treatments/categories/${category}`
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Header lang={lang} />
 
       <main className="flex-1 pt-32 pb-24 font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        />
         
         {/* Header Hero Section */}
         <section className="relative bg-[#0b1626] text-white py-20 md:py-28 overflow-hidden mb-12">
