@@ -829,13 +829,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
     "de": "Quiz wiederholen"
   },
   "JCI-Accredited Partner Hospitals": {
-    "en": "JCI-Accredited Partner Hospitals",
-    "ro": "Spitale Partenere Acreditate JCI",
-    "es": "Hospitales colaboradores acreditados por la JCI",
-    "it": "Ospedali partner accreditati JCI",
-    "ru": "Партнерские больницы, аккредитованные JCI",
-    "fr": "Hôpitaux partenaires accrédités JCI",
-    "de": "JCI-akkreditierte Partnerkliniken"
+    "en": "JCI-Accredited Partner Hospitals Where Applicable",
+    "ro": "Spitale Partenere Acreditate JCI, Acolo Unde Este Cazul",
+    "es": "Hospitales colaboradores acreditados por la JCI donde corresponda",
+    "it": "Ospedali partner accreditati JCI laddove applicabile",
+    "ru": "Партнерские больницы с аккредитацией JCI, где применимо",
+    "fr": "Hôpitaux partenaires accrédités JCI le cas échéant",
+    "de": "JCI-akkreditierte Partnerkliniken, sofern zutreffend"
   },
 
   "VIP Airport Transfer": {
@@ -3378,13 +3378,13 @@ export const T: Record<string, { en?: string, ro?: string, es?: string, it?: str
       "ro": "Acasă"
 },
   "Accreditations & Certifications": {
-    "en": "Accreditations & Certifications",
-    "ro": "Acreditări și Certificări",
-    "es": "Acreditaciones y Certificaciones",
-    "it": "Accreditamenti e Certificazioni",
-    "ru": "Аккредитации и сертификаты",
-    "fr": "Accréditations & Certifications",
-    "de": "Akkreditierungen & Zertifizierungen"
+    "en": "Partner Hospital Quality & Medical Network Standards",
+    "ro": "Standarde de Calitate pentru Spitale Partenere & Rețea Medicală",
+    "es": "Estándares de calidad de hospitales asociados y red médica",
+    "it": "Standard di qualità degli ospedali partner e della rete medica",
+    "ru": "Стандарты качества партнерских больниц и медицинской сети",
+    "fr": "Normes de qualité des hôpitaux partenaires et du réseau médical",
+    "de": "Qualitätsstandards für Partnerkliniken & medizinisches Netzwerk"
   },
   "Recovery Timeline": {
     "en": "Recovery Timeline",
