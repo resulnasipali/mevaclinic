@@ -723,7 +723,7 @@ export default function TreatmentDetailClient({ treatment, lang, images = [], ca
                                   : 'In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under structured surgical safety standards.',
                                 lang
                               )
-                            : tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures under JCI patient safety standards.', lang)}
+                            : tUI('In compliance with transparent clinical reporting, Meva Clinic ensures patients are fully informed of the physiological risks associated with surgical procedures through accredited partner-hospital safety protocols where clinically appropriate.', lang)}
                         </p>
                         <div className="space-y-4">
                           {risksComplications.map((item: string, i: number) => {

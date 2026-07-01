@@ -182,21 +182,37 @@ const AppointmentModal = ({ isOpen, onClose, isEn = false, lang = 'en' }: Appoin
                  <p className="text-[9px] text-center text-gray-400 uppercase tracking-[0.15em] font-bold">
                     <ShieldCheck size={12} className="inline mr-1 text-accent" /> SSL Secured & GDPR Compliant
                  </p>
-                 <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime">
-                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {
-                      lang === 'ro' ? "Căi Acreditate" 
-                      : lang === 'es' ? "Vías Acreditadas"
-                      : lang === 'it' ? "Percorsi Accreditati"
-                      : lang === 'de' ? "Akkreditierte Pfade"
-                      : lang === 'fr' ? "Parcours Accrédités"
-                      : lang === 'ru' ? "Аккредитованные Сети"
-                      : "Accredited Pathways"
+                  <div className="flex flex-wrap justify-center items-center gap-3 text-[10px] font-bold text-prime">
+                    <span className="flex items-center gap-1"><span className="text-accent">✓</span> {
+                      lang === 'ro' ? "Căi Spitalicești Partenere Acreditate" 
+                      : lang === 'es' ? "Vías de Hospitales Socios Acreditados"
+                      : lang === 'it' ? "Percorsi Ospedalieri Partner Accreditati"
+                      : lang === 'de' ? "Akkreditierte Partnerklinikpfade"
+                      : lang === 'fr' ? "Parcours Hospitaliers Partenaires Accrédités"
+                      : lang === 'ru' ? "Аккредитованные Сети Клиник-Партнеров"
+                      : "Accredited Partner Hospital Pathways"
                     }</span>
-                   <span className="w-1 h-1 rounded-full bg-gray-200"></span>
-                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("Premium Care", lang)}</span>
-                   <span className="w-1 h-1 rounded-full bg-gray-200"></span>
-                   <span className="flex items-center gap-1"><span className="text-accent">✓</span> {tUI("€0 Consultation", lang)}</span>
-                 </div>
+                    <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+                    <span className="flex items-center gap-1"><span className="text-accent">✓</span> {
+                      lang === 'ro' ? "Coordonare Premium Pacienți" 
+                      : lang === 'es' ? "Coordinación Premium de Pacientes"
+                      : lang === 'it' ? "Coordinamento Premium dei Pazienti"
+                      : lang === 'de' ? "Premium-Patientenkoordination"
+                      : lang === 'fr' ? "Coordination Premium des Patients"
+                      : lang === 'ru' ? "Премиум-Координация Пациентов"
+                      : "Premium Patient Coordination"
+                    }</span>
+                    <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+                    <span className="flex items-center gap-1"><span className="text-accent">✓</span> {
+                      lang === 'ro' ? "Evaluare Inițială Gratuită" 
+                      : lang === 'es' ? "Evaluación Inicial Gratuita"
+                      : lang === 'it' ? "Valutazione Iniziale Gratuita"
+                      : lang === 'de' ? "Kostenlose Erstbewertung"
+                      : lang === 'fr' ? "Évaluation Initiale Gratuite"
+                      : lang === 'ru' ? "Бесплатная Первичная Оценка"
+                      : "Free Initial Assessment"
+                    }</span>
+                  </div>
               </div>
             </form>
           )}

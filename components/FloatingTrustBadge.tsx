@@ -17,13 +17,13 @@ const FloatingTrustBadge = ({ lang = 'en' }: { lang?: string }) => {
     : "QUALITY & SAFETY";
 
   const boardText = isRo 
-    ? "Căi Spitalicești JCI" 
-    : lang === 'es' ? "Vías Hospitalarias JCI"
-    : lang === 'it' ? "Percorsi Ospedalieri JCI"
-    : lang === 'de' ? "JCI-Klinikpfade"
-    : lang === 'fr' ? "Parcours Hospitaliers JCI"
-    : lang === 'ru' ? "Госпитальные Сети JCI"
-    : "JCI Hospital Pathways";
+    ? "Evaluare Medic Specialist și Spital Partner" 
+    : lang === 'es' ? "Evaluación de Especialistas y Hospitales"
+    : lang === 'it' ? "Valutazione Specialisti e Ospedali Partner"
+    : lang === 'de' ? "Fachärztliche & Partnerklinik-Prüfung"
+    : lang === 'fr' ? "Évaluation Médecins & Hôpitaux Partenaires"
+    : lang === 'ru' ? "Оценка Специалистов и Клиник-Партнеров"
+    : "Specialist Doctor & Partner Hospital Review";
 
   useEffect(() => {
     const handleScroll = () => {

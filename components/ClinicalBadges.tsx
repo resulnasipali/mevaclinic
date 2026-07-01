@@ -36,40 +36,40 @@ export const CertRow = ({ isEn, lang = 'en' }: any) => (
             ru: 'Партнерские Больницы JCI'
           }, icon: ShieldCheck, color: 'text-blue-500' },
         { label: {
-            en: 'ISO/TÜV Standards',
-            ro: 'Standarde ISO/TÜV',
-            es: 'Estándares ISO/TÜV',
-            it: 'Standard ISO/TÜV',
-            fr: 'Normes ISO/TÜV',
-            de: 'ISO/TÜV-Standards',
-            ru: 'Стандарты ISO/TÜV'
+            en: 'ISO / TÜV Quality Standards',
+            ro: 'Standarde de Calitate ISO / TÜV',
+            es: 'Estándares de Calidad ISO / TÜV',
+            it: 'Standard di Qualità ISO / TÜV',
+            fr: 'Normes de Qualité ISO / TÜV',
+            de: 'ISO / TÜV Qualitätsstandards',
+            ru: 'Стандарты Качества ISO / TÜV'
           }, icon: Award, color: 'text-green-500' },
         { label: {
-            en: 'Licensed Providers',
-            ro: 'Furnizori Autorizați',
-            es: 'Proveedores Autorizados',
-            it: 'Fornitori Autorizzati',
-            fr: 'Prestataires Agréés',
-            de: 'Lizenzierte Anbieter',
-            ru: 'Лицензированные Провайдеры'
+            en: 'Licensed Providers in Türkiye',
+            ro: 'Furnizori Autorizați în Turcia',
+            es: 'Proveedores Autorizados en Turquía',
+            it: 'Fornitori Autorizzati in Turchia',
+            fr: 'Prestataires Agréés en Turquie',
+            de: 'Lizenzierte Anbieter in der Türkei',
+            ru: 'Лицензированные Провайдеры в Турции'
           }, icon: CheckCircle, color: 'text-prime' },
         { label: {
-            en: 'ISAPS Partner Surgeons',
-            ro: 'Chirurgi Parteneri ISAPS',
-            es: 'Cirujanos Socios ISAPS',
-            it: 'Chirurghi Partner ISAPS',
-            fr: 'Chirurgiens Partenaires ISAPS',
-            de: 'ISAPS-Partnerchirurgen',
-            ru: 'Партнерские Хирурги ISAPS'
+            en: 'ISAPS-Affiliated Partner Surgeons',
+            ro: 'Chirurgi Parteneri Afiliați ISAPS',
+            es: 'Cirujanos Socios Afiliados a ISAPS',
+            it: 'Chirurghi Partner Affiliati ISAPS',
+            fr: 'Chirurgiens Partenaires Affiliés ISAPS',
+            de: 'ISAPS-assoziierte Partnerchirurgen',
+            ru: 'Партнерские Хирурги-Члены ISAPS'
           }, icon: HeartPulse, color: 'text-accent' },
         { label: {
-            en: 'Confidential File Review',
-            ro: 'Evaluare Confidențială',
-            es: 'Revisión Confidencial',
-            it: 'Revisione Riservata',
-            fr: 'Examen Confidentiel',
-            de: 'Vertrauliche Prüfung',
-            ru: 'Конфиденциальный Анализ'
+            en: 'International Quality Management',
+            ro: 'Management Internațional de Calitate',
+            es: 'Gestión de Calidad Internacional',
+            it: 'Gestione Internazionale della Qualità',
+            fr: 'Gestion de la Qualité Internationale',
+            de: 'Internationales Qualitätsmanagement',
+            ru: 'Международное Управление Качеством'
           }, icon: Microscope, color: 'text-purple-500' },
       ].map((cert, i) => {
         const Icon = cert.icon;
@@ -84,13 +84,13 @@ export const CertRow = ({ isEn, lang = 'en' }: any) => (
     </div>
     <p className="text-[10px] text-gray-400 mt-5 max-w-3xl mx-auto text-center leading-relaxed font-sans px-4">
       {lang === 'ro' 
-        ? "Notă: Meva Clinic coordonează călătoriile pacienților internaționali. Acreditările clinice (cum ar fi standardele de calitate JCI sau ISO/TÜV) și afilierile la societăți profesionale (cum ar fi ISAPS) sunt deținute în mod individual de spitalele partenere respective, clinicile certificate și chirurgii licențiați care efectuează procedurile."
-        : lang === 'es' ? "Nota: Meva Clinic coordina los viajes de los pacientes internacionales. Las acreditaciones clínicas (como las normas de calidad JCI o ISO/TÜV) y las membresías de sociedades profesionales (como ISAPS) pertenecen individualmente a los respectivos hospitales asociados, clínicas certificadas y cirujanos autorizados que realizan los procedimientos."
-        : lang === 'it' ? "Nota: Meva Clinic coordina i viaggi dei pazienti internazionali. Le accreditazioni cliniche (come gli standard di qualità JCI o ISO/TÜV) e le adesioni a società professionali (come ISAPS) sono detenute individualmente dai rispettivi ospedali partner, cliniche certificate e chirurghi autorizzati che eseguono le procedure."
-        : lang === 'de' ? "Hinweis: Meva Clinic koordiniert internationale Patientenreisen. Klinische Akkreditierungen (wie JCI- oder ISO/TÜV-Qualitätsstandards) und Mitgliedschaften in Berufsverbänden (wie ISAPS) werden individuell von den jeweiligen Partnerkrankenhäusern, zertifizierten Kliniken und lizenzierten Chirurgen gehalten, die die Eingriffe durchführen."
-        : lang === 'fr' ? "Note : Meva Clinic coordonne les parcours des patients internationaux. Les accréditations cliniques (telles que les normes de qualité JCI ou ISO/TÜV) et les adhésions aux sociétés professionnelles (telles que l'ISAPS) sont détenues individuellement par les hôpitaux partenaires, cliniques agréées et chirurgiens certifiés concernés effectuant les interventions."
-        : lang === 'ru' ? "Примечание: Meva Clinic координирует поездки иностранных пациентов. Клинические аккредитации (такие как стандарты качества JCI или ISO/TÜV) и членство в профессиональных сообществах (такие как ISAPS) принадлежат соответствующим партнерским больницам, сертифицированным клиникам и лицензированным хирургам, выполняющим процедуры."
-        : "Note: Meva Clinic coordinates international patient journeys. Clinical accreditations (such as JCI or ISO/TÜV quality standards) and professional society memberships (such as ISAPS) are held individually by the respective partner hospitals, certified clinics, and licensed surgeons performing the procedures."}
+        ? "Referințele la acreditări și societăți se referă la spitalele partenere selectate, instituțiile furnizoare sau chirurgii parteneri individuali, acolo unde este cazul. Meva Clinic coordonează îngrijirea pacienților internaționali prin furnizori de servicii medicale autorizați și parteneri medicali specialiști."
+        : lang === 'es' ? "Las referencias a acreditaciones y sociedades se relacionan con hospitales asociados seleccionados, instituciones proveedoras o cirujanos asociados individuales según corresponda. Meva Clinic coordina la atención de pacientes internacionales a través de proveedores de atención médica autorizados y socios médicos especialistas."
+        : lang === 'it' ? "I riferimenti alle accreditazioni e alle società si riferiscono a ospedali partner selezionati, istituzioni fornitrici o singoli chirurghi partner ove applicabile. Meva Clinic coordina l'assistenza ai pazienti internazionali attraverso fornitori sanitari autorizzati e partner medici specialisti."
+        : lang === 'de' ? "Akkreditierungs- und Verbandsreferenzen beziehen sich auf ausgewählte Partnerkrankenhäuser, Anbieterinstitutionen oder einzelne Partnerchirurgen, sofern zutreffend. Meva Clinic koordiniert die internationale Patientenbetreuung über lizenzierte Gesundheitsdienstleister und spezialisierte medizinische Partner."
+        : lang === 'fr' ? "Les références aux accréditations et aux sociétés concernent les hôpitaux partenaires sélectionnés, les établissements prestataires ou les chirurgiens partenaires individuels le cas échéant. Meva Clinic coordonne les soins des patients internationaux par l'intermédiaire de prestataires de soins de santé agréés et de partenaires médicaux spécialisés."
+        : lang === 'ru' ? "Ссылки на аккредитации и сообщества относятся к выбранным партнерским больницам, учреждениям-провайдерам или отдельным партнерским хирургам, где это применимо. Meva Clinic координирует обслуживание иностранных пациентов через лицензированных поставщиков медицинских услуг и специализированных медицинских партнеров."
+        : "Accreditation and society references relate to selected partner hospitals, provider institutions, or individual partner surgeons where applicable. Meva Clinic coordinates international patient care through licensed healthcare providers and specialist medical partners."}
     </p>
   </div>
 );

@@ -13,35 +13,35 @@ const TRUST_BADGES = [
   {
     icon: '🏥',
     name: {
-      en: 'Licensed Medical Providers',
-      ro: 'Furnizori Medicali Autorizați',
-      es: 'Proveedores Médicos Autorizados',
-      it: 'Fornitori Medici Autorizzati',
-      fr: 'Prestataires Médicaux Agréés',
-      de: 'Lizenzierte Medizinische Anbieter',
-      ru: 'Лицензированные Медпровайдеры',
+      en: 'Licensed Healthcare Providers in Türkiye',
+      ro: 'Furnizori de Servicii Medicale Autorizați în Turcia',
+      es: 'Proveedores de Atención Médica Autorizados en Turquía',
+      it: 'Fornitori di Servizi Sanitari Autorizzati in Turchia',
+      fr: 'Prestataires de Soins de Santé Agréés en Turquie',
+      de: 'Lizenzierte Gesundheitsdienstleister in der Türkei',
+      ru: 'Лицензированные Медпровайдеры в Турции',
     },
     sub: {
-      en: 'Care is planned with selected licensed hospitals and specialist physicians in Türkiye.',
-      ro: 'Îngrijirea este planificată cu spitale licențiate și medici specialiști din Turcia.',
-      es: 'La atención se planifica con hospitales autorizados seleccionados y médicos especialistas en Turquía.',
-      it: 'L\'assistenza è pianificata con ospedali autorizzati selezionati e medici specialisti in Turchia.',
-      fr: 'Les soins sont planifiés avec des hôpitaux agréés sélectionnés et des médecins spécialistes en Turquie.',
-      de: 'Die Betreuung wird mit ausgewählten lizenzierten Krankenhäusern und Fachärzten in der Türkei geplant.',
-      ru: 'Лечение планируется с выбранными лицензированными больницами и врачами-специалистами в Турции.',
+      en: 'Care is coordinated with selected licensed clinics and specialist physicians in Türkiye.',
+      ro: 'Îngrijirea este coordonată cu clinici licențiate selectate și medici specialiști din Turcia.',
+      es: 'La atención se coordina con clínicas autorizadas seleccionadas y médicos especialistas en Turquía.',
+      it: 'L\'assistenza è coordinata con cliniche autorizzate selezionate e medici specialisti in Turchia.',
+      fr: 'Les soins sont coordonnés avec des cliniques agréées sélectionnées et des médecins spécialistes en Turquie.',
+      de: 'Die Betreuung wird mit ausgewählten lizenzierten Kliniken und Fachärzten in der Türkei koordiniert.',
+      ru: 'Лечение координируется с выбранными лицензированными клиниками и врачами-специалистами в Турции.',
     },
     color: 'text-blue-400',
   },
   {
     icon: '🌐',
     name: {
-      en: 'JCI-Accredited Hospital Pathways',
-      ro: 'Căi Spitalicești Acreditate JCI',
-      es: 'Vías de Hospitales Acreditados por JCI',
-      it: 'Percorsi Ospedalieri Accreditati JCI',
-      fr: 'Parcours Hospitaliers Accrédités JCI',
-      de: 'JCI-Akkreditierte Klinikpfade',
-      ru: 'Госпитали с Аккредитацией JCI',
+      en: 'JCI-Accredited Partner Hospitals Where Applicable',
+      ro: 'Spitale Partenere Acreditate JCI, Acolo Unde Este Cazul',
+      es: 'Hospitales Socios Acreditados por JCI Donde Corresponda',
+      it: 'Ospedali Partner Accreditati JCI Laddove Applicabile',
+      fr: 'Hôpitaux Partenaires Accrédités JCI le Cas Échéant',
+      de: 'JCI-akkreditierte Partnerkliniken, sofern zutreffend',
+      ru: 'Партнерские Больницы с Аккредитацией JCI, Где Применимо',
     },
     sub: {
       en: 'Treatment journeys can be coordinated through JCI-accredited partner hospitals where clinically appropriate.',
@@ -57,13 +57,35 @@ const TRUST_BADGES = [
   {
     icon: '✈️',
     name: {
-      en: 'International Patient Coordination',
-      ro: 'Coordonare Pacienți Internaționali',
-      es: 'Coordinación Internacional de Pacientes',
-      it: 'Coordinamento Internazionale Pazienti',
-      fr: 'Coordination des Patients Internationaux',
-      de: 'Internationale Patientenkoordination',
-      ru: 'Координация Иностранных Пациентов',
+      en: 'ISO / TÜV Quality Standards at Selected Partner Institutions',
+      ro: 'Standarde de Calitate ISO / TÜV la Instituții Partenere Selectate',
+      es: 'Estándares de Calidad ISO / TÜV en Instituciones Socias Seleccionadas',
+      it: 'Standard di Qualità ISO / TÜV presso Istituzioni Partner Selezionate',
+      fr: 'Normes de Qualité ISO / TÜV dans les Établissements Partenaires Sélectionnés',
+      de: 'ISO / TÜV Qualitätsstandards in ausgewählten Partnereinrichtungen',
+      ru: 'Стандарты Качества ISO / TÜV в Выбранных Партнерских Учреждениях',
+    },
+    sub: {
+      en: 'Selected partner institutions may hold internationally recognized quality certifications such as ISO or TÜV-related standards where applicable.',
+      ro: 'Instituțiile partenere selectate pot deține certificări de calitate recunoscute internațional, precum standarde ISO sau TÜV.',
+      es: 'Las instituciones asociadas seleccionadas pueden tener certificaciones de calidad reconocidas internacionalmente como ISO o TÜV.',
+      it: 'Le istituzioni partner selezionate possono possedere certificazioni di qualità riconosciute a livello internazionale come ISO o TÜV.',
+      fr: 'Les établissements partenaires sélectionnés peuvent détenir des certifications de qualité reconnues internationalement telles que les normes ISO ou TÜV.',
+      de: 'Ausgewählte Partnereinrichtungen können international anerkannte Qualitätszertifizierungen wie ISO- oder TÜV-Standards besitzen.',
+      ru: 'Выбранные партнерские учреждения могут иметь международно признанные сертификаты качества, такие как стандарты ISO или TÜV.',
+    },
+    color: 'text-purple-400',
+  },
+  {
+    icon: '🔒',
+    name: {
+      en: 'International Patient Coordination Network',
+      ro: 'Rețea de Coordonare a Pacienților Internaționali',
+      es: 'Red de Coordinación de Pacientes Internacionales',
+      it: 'Rete di Coordinamento dei Pazienti Internazionali',
+      fr: 'Réseau de Coordination des Patients Internationaux',
+      de: 'Netzwerk für die Koordination Internationaler Patienten',
+      ru: 'Сеть Координации Иностранных Пациентов',
     },
     sub: {
       en: 'Airport transfers, hotel arrangements and appointment planning are coordinated within each confirmed patient package.',
@@ -74,28 +96,6 @@ const TRUST_BADGES = [
       de: 'Flughafentransfers, Hotelunterkünfte und Terminplanung werden im Rahmen jedes bestätigten Patientenpakets koordiniert.',
       ru: 'Трансфер из аэропорта, проживание и планирование встреч координируются в рамках каждого подтвержденного пакета.',
     },
-    color: 'text-purple-400',
-  },
-  {
-    icon: '🔒',
-    name: {
-      en: 'Confidential Medical File Review',
-      ro: 'Evaluare Confidențială a Dosarului',
-      es: 'Revisión Confidencial de Expediente Médico',
-      it: 'Revisione Riservata del Fascicolo Medico',
-      fr: 'Examen Confidentiel du Dossier Médical',
-      de: 'Vertrauliche Prüfung der Krankenakte',
-      ru: 'Конфиденциальный Анализ Медкарты',
-    },
-    sub: {
-      en: 'Medical history, photos and treatment requests are handled securely for specialist assessment.',
-      ro: 'Istoricul medical, fotografiile și cererile de tratament sunt gestionate în siguranță.',
-      es: 'El historial médico, las fotos y las solicitudes de tratamiento se manejan de forma segura para la evaluación del especialista.',
-      it: 'La storia medica, le foto e le richieste di tratamento sono gestite in modo sicuro per la valutazione dello specialista.',
-      fr: 'Les antécédents médicaux, les photos et les demandes de traitement sont traités en toute sécurité pour évaluation par un spécialiste.',
-      de: 'Krankengeschichte, Fotos und Behandlungsanfragen werden für die fachärztliche Beurteilung sicher behandelt.',
-      ru: 'Медицинский анамнез, фотографии и запросы на лечение обрабатываются безопасно для экспертной оценки.',
-    },
     color: 'text-yellow-400',
   },
 ];
@@ -105,13 +105,13 @@ const Footer = ({ lang = 'en' }: { lang?: string }) => {
   const isRo = lang === 'ro';
   
   const headingText = isRo 
-    ? "Calitate, Siguranță și Suport pentru Pacienții Internaționali" 
-    : lang === 'es' ? "Calidad, Seguridad y Soporte Internacional al Paciente"
-    : lang === 'it' ? "Qualità, Sicurezza e Supporto Internazionale al Paziente"
-    : lang === 'de' ? "Qualität, Sicherheit und internationale Patientenbetreuung"
-    : lang === 'fr' ? "Qualité, Sécurité et Soutien aux Patients Internationaux"
-    : lang === 'ru' ? "Качество, Безопасность и Международная Поддержка Пациентов"
-    : "Quality, Safety & International Patient Support";
+    ? "Calitatea Spitalelor Partenere și Asistență pentru Pacienții Internaționali" 
+    : lang === 'es' ? "Calidad de los Hospitales Socios y Soporte a Pacientes Internacionales"
+    : lang === 'it' ? "Qualità degli Ospedali Partner e Supporto ai Pazienti Internazionali"
+    : lang === 'de' ? "Qualität der Partnerkliniken & Unterstützung für Internationale Patienten"
+    : lang === 'fr' ? "Qualité des Hôpitaux Partenaires et Soutien aux Patients Internationaux"
+    : lang === 'ru' ? "Качество Партнерских Больниц и Поддержка Иностранных Пациентов"
+    : "Partner Hospital Quality & International Patient Support";
 
   const subtitleText = isRo 
     ? "Meva Clinic coordonează călătoriile pacienților internaționali prin furnizori medicali licențiați selectați, căi spitalicești acreditate JCI acolo unde este aplicabil și suport structurat pentru pacienți înainte, în timpul și după tratament." 
